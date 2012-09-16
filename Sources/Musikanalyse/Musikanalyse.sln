@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Musikanalyse.Interfaces", "Musikanalyse.Interfaces\Musikanalyse.Interfaces.csproj", "{2500D165-064B-4290-B657-F8FFA9C97A2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Musikanalyse.Services", "Musikanalyse.Services\Musikanalyse.Services.csproj", "{7A750EA3-A17A-4D49-9280-5AA95143C287}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Musikanalyse.Website", "Musikanalyse.Website\Musikanalyse.Website.csproj", "{EC7ACDE5-09E4-41EB-916F-1B73777A159A}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://uli.tfspreview.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Musikanalyse.Interfaces\\Musikanalyse.Interfaces.csproj
+		SccProjectName1 = Musikanalyse.Interfaces
+		SccLocalPath1 = Musikanalyse.Interfaces
+		SccProjectUniqueName2 = Musikanalyse.Services\\Musikanalyse.Services.csproj
+		SccProjectName2 = Musikanalyse.Services
+		SccLocalPath2 = Musikanalyse.Services
+		SccProjectUniqueName3 = Musikanalyse.Website\\Musikanalyse.Website.csproj
+		SccProjectName3 = Musikanalyse.Website
+		SccLocalPath3 = Musikanalyse.Website
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2500D165-064B-4290-B657-F8FFA9C97A2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2500D165-064B-4290-B657-F8FFA9C97A2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2500D165-064B-4290-B657-F8FFA9C97A2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2500D165-064B-4290-B657-F8FFA9C97A2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A750EA3-A17A-4D49-9280-5AA95143C287}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A750EA3-A17A-4D49-9280-5AA95143C287}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A750EA3-A17A-4D49-9280-5AA95143C287}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A750EA3-A17A-4D49-9280-5AA95143C287}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC7ACDE5-09E4-41EB-916F-1B73777A159A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC7ACDE5-09E4-41EB-916F-1B73777A159A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC7ACDE5-09E4-41EB-916F-1B73777A159A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC7ACDE5-09E4-41EB-916F-1B73777A159A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
