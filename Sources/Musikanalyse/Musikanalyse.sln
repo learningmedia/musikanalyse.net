@@ -7,9 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Musikanalyse.Services", "Mu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Musikanalyse.Website", "Musikanalyse.Website\Musikanalyse.Website.csproj", "{EC7ACDE5-09E4-41EB-916F-1B73777A159A}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Musikanalyse.Database", "Musikanalyse.Database\Musikanalyse.Database.sqlproj", "{18500448-669B-4C28-A4DC-531DEA4DAA17}"
+EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 4
+		SccNumberOfProjects = 5
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://uli.tfspreview.com/defaultcollection
 		SccLocalPath0 = .
@@ -22,6 +24,9 @@ Global
 		SccProjectUniqueName3 = Musikanalyse.Website\\Musikanalyse.Website.csproj
 		SccProjectName3 = Musikanalyse.Website
 		SccLocalPath3 = Musikanalyse.Website
+		SccProjectUniqueName4 = Musikanalyse.Database\\Musikanalyse.Database.sqlproj
+		SccProjectName4 = Musikanalyse.Database
+		SccLocalPath4 = Musikanalyse.Database
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +45,12 @@ Global
 		{EC7ACDE5-09E4-41EB-916F-1B73777A159A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC7ACDE5-09E4-41EB-916F-1B73777A159A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC7ACDE5-09E4-41EB-916F-1B73777A159A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18500448-669B-4C28-A4DC-531DEA4DAA17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18500448-669B-4C28-A4DC-531DEA4DAA17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18500448-669B-4C28-A4DC-531DEA4DAA17}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{18500448-669B-4C28-A4DC-531DEA4DAA17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18500448-669B-4C28-A4DC-531DEA4DAA17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18500448-669B-4C28-A4DC-531DEA4DAA17}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
