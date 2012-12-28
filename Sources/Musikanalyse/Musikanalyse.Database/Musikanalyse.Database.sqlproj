@@ -26,8 +26,8 @@
     <SccProvider>SAK</SccProvider>
     <SccAuxPath>SAK</SccAuxPath>
     <SccLocalPath>SAK</SccLocalPath>
-    <GenerateCreateScript>True</GenerateCreateScript>
-    <DacApplicationName>MusikanalyseDB</DacApplicationName>
+    <GenerateCreateScript>False</GenerateCreateScript>
+    <DacApplicationName>MusikanalyseDb</DacApplicationName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -52,7 +52,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <TreatTSqlWarningsAsErrors>True</TreatTSqlWarningsAsErrors>
-    <SqlTargetName>MusikanalyseDB</SqlTargetName>
+    <SqlTargetName>MusikanalyseDb</SqlTargetName>
     <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
   <!-- VS10 without SP1 will not have VisualStudioVersion set, so do that here -->
@@ -68,6 +68,11 @@
     <Build Include="Tables\Tutorials.sql" />
     <Build Include="Tables\Tags.sql" />
     <Build Include="Tables\TagTutorialRelations.sql" />
+    <Build Include="Tables\Comments.sql" />
+    <Build Include="Tables\Ratings.sql" />
+    <Build Include="Tables\UsageStatistics.sql" />
+    <Build Include="Tables\TutorialRevisions.sql" />
+    <Build Include="Tables\Videos.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="Musikanalyse.Database.refactorlog" />

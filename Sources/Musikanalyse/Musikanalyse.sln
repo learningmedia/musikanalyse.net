@@ -9,11 +9,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Musikanalyse.Website", "Mus
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Musikanalyse.Database", "Musikanalyse.Database\Musikanalyse.Database.sqlproj", "{18500448-669B-4C28-A4DC-531DEA4DAA17}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Musikanalyse.Entities", "Musikanalyse.Entities\Musikanalyse.Entities.csproj", "{F53DA11A-4D98-48E7-A16B-422D5750C105}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Musikanalyse.Services.Tests", "Musikanalyse.Services.Tests\Musikanalyse.Services.Tests.csproj", "{215ABEDB-2672-4E99-BA29-E1556CB91103}"
+EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 5
+		SccNumberOfProjects = 7
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://uli.tfspreview.com/defaultcollection
+		SccTeamFoundationServer = https://uli.visualstudio.com/defaultcollection
 		SccLocalPath0 = .
 		SccProjectUniqueName1 = Musikanalyse.Interfaces\\Musikanalyse.Interfaces.csproj
 		SccProjectName1 = Musikanalyse.Interfaces
@@ -27,6 +31,12 @@ Global
 		SccProjectUniqueName4 = Musikanalyse.Database\\Musikanalyse.Database.sqlproj
 		SccProjectName4 = Musikanalyse.Database
 		SccLocalPath4 = Musikanalyse.Database
+		SccProjectUniqueName5 = Musikanalyse.Entities\\Musikanalyse.Entities.csproj
+		SccProjectName5 = Musikanalyse.Entities
+		SccLocalPath5 = Musikanalyse.Entities
+		SccProjectUniqueName6 = Musikanalyse.Services.Tests\\Musikanalyse.Services.Tests.csproj
+		SccProjectName6 = Musikanalyse.Services.Tests
+		SccLocalPath6 = Musikanalyse.Services.Tests
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +61,14 @@ Global
 		{18500448-669B-4C28-A4DC-531DEA4DAA17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18500448-669B-4C28-A4DC-531DEA4DAA17}.Release|Any CPU.Build.0 = Release|Any CPU
 		{18500448-669B-4C28-A4DC-531DEA4DAA17}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{F53DA11A-4D98-48E7-A16B-422D5750C105}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F53DA11A-4D98-48E7-A16B-422D5750C105}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F53DA11A-4D98-48E7-A16B-422D5750C105}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F53DA11A-4D98-48E7-A16B-422D5750C105}.Release|Any CPU.Build.0 = Release|Any CPU
+		{215ABEDB-2672-4E99-BA29-E1556CB91103}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{215ABEDB-2672-4E99-BA29-E1556CB91103}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{215ABEDB-2672-4E99-BA29-E1556CB91103}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{215ABEDB-2672-4E99-BA29-E1556CB91103}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

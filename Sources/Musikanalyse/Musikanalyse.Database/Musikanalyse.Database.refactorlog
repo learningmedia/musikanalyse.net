@@ -14,4 +14,53 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="TutorialId" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="4f6743b6-44ce-4036-ac01-0bdb744845e8" ChangeDateTime="12/28/2012 21:05:01">
+    <Property Name="ElementName" Value="[dbo].[TutorialRevisions].[Content]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[TutorialRevisions]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ContentType" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="751670ca-75e6-4d42-b5f6-6471af4f7b74" ChangeDateTime="12/28/2012 21:07:13">
+    <Property Name="ElementName" Value="[dbo].[TutorialRevisions].[Content]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[TutorialRevisions]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="VAlue" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="66ff3a83-016b-4c8b-97f7-d8ca46a3a982" ChangeDateTime="12/28/2012 21:07:20">
+    <Property Name="ElementName" Value="[dbo].[TutorialRevisions].[VAlue]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[TutorialRevisions]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Value" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="10f81d4a-eaa2-4108-b9bb-d4a3150c8450" ChangeDateTime="12/28/2012 21:07:35">
+    <Property Name="ElementName" Value="[dbo].[TutorialRevisions].[Value]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[TutorialRevisions]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Content" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="024656ed-fca4-4bf6-b1ad-ab40336e12f9" ChangeDateTime="12/28/2012 21:08:04">
+    <Property Name="ElementName" Value="[dbo].[TutorialRevisions].[Content]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[TutorialRevisions]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Text" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="7330018d-0021-496a-a409-d122f9c066e2" ChangeDateTime="12/28/2012 21:09:18">
+    <Property Name="ElementName" Value="[dbo].[TutorialRevisions].[Video]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[TutorialRevisions]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="VideoId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="9298dcb3-cb77-43d4-8a38-65c4766b276c" ChangeDateTime="12/28/2012 21:41:35">
+    <Property Name="ElementName" Value="[dbo].[Tutorials].[ReleaseState]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Tutorials]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="IsPublic" />
+  </Operation>
 </Operations>
