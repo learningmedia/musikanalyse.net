@@ -1,4 +1,0 @@
-﻿CREATE TABLE [dbo].[Videos]
-(
-  [Id] INT NOT NULL PRIMARY KEY IDENTITY
-)
