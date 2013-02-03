@@ -1,0 +1,8 @@
+﻿@model Musikanalyse.Services.Contracts.Content
+@using MarkdownDeep
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@Html.Raw(new Markdown().Transform(@Model.Value))

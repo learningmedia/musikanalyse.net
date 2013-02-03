@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Musikanalyse.Website", "Musikanalyse.Website\Musikanalyse.Website.csproj", "{3E576B3F-BC03-4EA6-A91A-A8B231B8C8A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Musikanalyse.Services.Contracts", "Musikanalyse.Services.Contracts\Musikanalyse.Services.Contracts.csproj", "{2F71E7F4-6651-40FF-882E-309DB1DA5DDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Musikanalyse.Services", "Musikanalyse.Services\Musikanalyse.Services.csproj", "{8868BAEF-2B69-4B6F-B3C5-8A20EA323E0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Musikanalyse.DataAccess", "Musikanalyse.DataAccess\Musikanalyse.DataAccess.csproj", "{3BBA2676-0A7F-4B67-BE1A-9E830C8F7B58}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://uli.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Musikanalyse.Website\\Musikanalyse.Website.csproj
+		SccProjectName1 = Musikanalyse.Website
+		SccLocalPath1 = Musikanalyse.Website
+		SccProjectUniqueName2 = Musikanalyse.Services.Contracts\\Musikanalyse.Services.Contracts.csproj
+		SccProjectName2 = Musikanalyse.Services.Contracts
+		SccLocalPath2 = Musikanalyse.Services.Contracts
+		SccProjectUniqueName3 = Musikanalyse.Services\\Musikanalyse.Services.csproj
+		SccProjectName3 = Musikanalyse.Services
+		SccLocalPath3 = Musikanalyse.Services
+		SccProjectUniqueName4 = Musikanalyse.DataAccess\\Musikanalyse.DataAccess.csproj
+		SccProjectName4 = Musikanalyse.DataAccess
+		SccLocalPath4 = Musikanalyse.DataAccess
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E576B3F-BC03-4EA6-A91A-A8B231B8C8A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E576B3F-BC03-4EA6-A91A-A8B231B8C8A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E576B3F-BC03-4EA6-A91A-A8B231B8C8A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E576B3F-BC03-4EA6-A91A-A8B231B8C8A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F71E7F4-6651-40FF-882E-309DB1DA5DDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F71E7F4-6651-40FF-882E-309DB1DA5DDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F71E7F4-6651-40FF-882E-309DB1DA5DDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F71E7F4-6651-40FF-882E-309DB1DA5DDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8868BAEF-2B69-4B6F-B3C5-8A20EA323E0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8868BAEF-2B69-4B6F-B3C5-8A20EA323E0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8868BAEF-2B69-4B6F-B3C5-8A20EA323E0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8868BAEF-2B69-4B6F-B3C5-8A20EA323E0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BBA2676-0A7F-4B67-BE1A-9E830C8F7B58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BBA2676-0A7F-4B67-BE1A-9E830C8F7B58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BBA2676-0A7F-4B67-BE1A-9E830C8F7B58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BBA2676-0A7F-4B67-BE1A-9E830C8F7B58}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
