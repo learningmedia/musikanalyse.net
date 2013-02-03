@@ -1,0 +1,36 @@
+﻿@model Musikanalyse.Services.Contracts.Content
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Content</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CreationDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CreationDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LastModifiedDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LastModifiedDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Value)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Value)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

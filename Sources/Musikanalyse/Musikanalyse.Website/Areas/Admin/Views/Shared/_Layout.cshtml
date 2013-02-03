@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
+    <link href="~/Scripts/mdd_styles.css" rel="stylesheet" />
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -11,6 +12,12 @@
     @RenderBody()
 
     @Scripts.Render("~/bundles/jquery")
+    <script src="~/Scripts/MarkdownDeepLib.min.js"></script>
     @RenderSection("Scripts", required: false)
+    <script>
+      jQuery(function() {
+        jQuery(".MarkdownEditor").MarkdownDeep();
+      });
+    </script>
 </body>
 </html>
