@@ -1,4 +1,4 @@
-﻿@model Musikanalyse.Services.Contracts.Content
+﻿@model Musikanalyse.Services.Contracts.ContentPage
 
 @{
     ViewBag.Title = "Details";
@@ -10,27 +10,34 @@
     <legend>Content</legend>
 
     <div class="display-label">
-         @Html.DisplayNameFor(model => model.CreationDate)
+        @Html.DisplayNameFor(model => model.CreationDate)
     </div>
     <div class="display-field">
         @Html.DisplayFor(model => model.CreationDate)
     </div>
 
     <div class="display-label">
-         @Html.DisplayNameFor(model => model.LastModifiedDate)
+        @Html.DisplayNameFor(model => model.LastModifiedDate)
     </div>
     <div class="display-field">
         @Html.DisplayFor(model => model.LastModifiedDate)
     </div>
 
     <div class="display-label">
-         @Html.DisplayNameFor(model => model.Value)
+        @Html.DisplayNameFor(model => model.Value)
     </div>
     <div class="display-field">
         @Html.DisplayFor(model => model.Value)
     </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Url)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Url)
+    </div>
 </fieldset>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PageId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

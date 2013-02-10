@@ -10,6 +10,8 @@
     {
         protected void Application_Start()
         {
+            //System.Data.Entity.Database.Delete("MusikanalyseDb");
+
             AreaRegistration.RegisterAllAreas();
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);

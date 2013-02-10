@@ -6,6 +6,8 @@
     {
         public DbSet<Content> Contents { get; set; }
 
+        public DbSet<Page> Pages { get; set; }
+
         public MusikanalyseDataContext() : base("MusikanalyseDb")
         {
         }

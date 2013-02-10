@@ -2,17 +2,27 @@
 
 namespace Musikanalyse.Website.Controllers
 {
+    using System;
+    using System.Web;
+
     using Musikanalyse.Services;
     using Musikanalyse.Services.Contracts;
 
     public class HomeController : Controller
     {
-        public ActionResult Index(int id)
+        public ActionResult Index(string url)
         {
-            IContentService service = new ContentService();
+            IPageService pageService = new PageService();
 
-            return View(service.GetContent(id));
+            try
+            {
+                ContentPage contentPage = pageService.GetPage(url);
+                return View(contentPage);
+            }
+            catch (Exception e)
+            {
+                 throw new HttpException(404, "Page not found.");
+            }
         }
-
     }
 }

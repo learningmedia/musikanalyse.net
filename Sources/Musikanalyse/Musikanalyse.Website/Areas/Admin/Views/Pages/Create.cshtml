@@ -1,4 +1,4 @@
-﻿@model Musikanalyse.Services.Contracts.Content
+﻿@model Musikanalyse.Services.Contracts.ContentPage
 
 @{
     ViewBag.Title = "Create";
@@ -6,7 +6,8 @@
 
 <h2>Create</h2>
 
-@using (Html.BeginForm()) {
+@using (Html.BeginForm())
+{
     @Html.ValidationSummary(true)
 
     <fieldset>
@@ -18,6 +19,14 @@
         <div class="editor-field">
             @Html.TextAreaFor(model => model.Value, new { style = "width: 100%; height: 25em;", @class = "MarkdownEditor" })
             @Html.ValidationMessageFor(model => model.Value)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Url)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Url)
+            @Html.ValidationMessageFor(model => model.Url)
         </div>
 
         <p>

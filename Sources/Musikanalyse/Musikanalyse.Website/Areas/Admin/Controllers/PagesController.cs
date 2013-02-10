@@ -1,5 +1,4 @@
-﻿using System.Data;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using Musikanalyse.Services.Contracts;
 
 namespace Musikanalyse.Website.Areas.Admin.Controllers
@@ -9,18 +8,18 @@ namespace Musikanalyse.Website.Areas.Admin.Controllers
 
     using Musikanalyse.Services;
 
-    public class ContentController : Controller
+    public class PagesController : Controller
     {
-        private readonly IContentService contentService;
+        private readonly IPageService pageService;
 
-        public ContentController()
+        public PagesController()
         {
-            this.contentService = new ContentService();
+            this.pageService = new PageService();
         }
 
         public ActionResult Index()
         {
-            IList<Content> contents = contentService.GetAll();
+            IList<ContentPage> contents = this.pageService.GetAll();
             return View(contents);
         }
 
@@ -28,10 +27,10 @@ namespace Musikanalyse.Website.Areas.Admin.Controllers
         {
             try
             {
-                Content content = contentService.GetContent(id);
-                return View(content);
+                ContentPage page = this.pageService.GetPage(id);
+                return View(page);
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return HttpNotFound();
             }
@@ -44,28 +43,28 @@ namespace Musikanalyse.Website.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateInput(false)]
-        public ActionResult Create(Content content)
+        public ActionResult Create(ContentPage page)
         {
-            content.CreationDate = DateTime.UtcNow;
-            content.LastModifiedDate = content.CreationDate;
+            page.CreationDate = DateTime.UtcNow;
+            page.LastModifiedDate = page.CreationDate;
 
             if (ModelState.IsValid)
             {
-                contentService.CreateContent(content);
+                this.pageService.CreatePage(page);
                 return RedirectToAction("Index");
             }
 
-            return View(content);
+            return View(page);
         }
 
         public ActionResult Edit(int id)
         {
             try
             {
-                Content content = contentService.GetContent(id);
-                return View(content);
+                ContentPage page = this.pageService.GetPage(id);
+                return View(page);
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return HttpNotFound();
             }
@@ -73,28 +72,28 @@ namespace Musikanalyse.Website.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateInput(false)]
-        public ActionResult Edit(Content content)
+        public ActionResult Edit(ContentPage page)
         {
             if (ModelState.IsValid)
             {
-                Content originalContent = contentService.GetContent(content.Id);
-                originalContent.Value = content.Value;
-                originalContent.LastModifiedDate = DateTime.UtcNow;
-                contentService.UpdateContent(originalContent);
+                ContentPage originalPage = this.pageService.GetPage(page.PageId);
+                originalPage.Value = page.Value;
+                originalPage.LastModifiedDate = DateTime.UtcNow;
+                this.pageService.UpdatePage(originalPage);
 
                 return RedirectToAction("Index");
             }
-            return View(content);
+            return View(page);
         }
 
         public ActionResult Delete(int id)
         {
             try
             {
-                Content content = contentService.GetContent(id);
-                return View(content);
+                ContentPage page = this.pageService.GetPage(id);
+                return View(page);
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return HttpNotFound();
             }
@@ -103,13 +102,8 @@ namespace Musikanalyse.Website.Areas.Admin.Controllers
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
-            contentService.Delete(id);
+            this.pageService.DeletePage(id);
             return RedirectToAction("Index");
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            base.Dispose(disposing);
         }
     }
 }

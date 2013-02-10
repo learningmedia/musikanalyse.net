@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Content.cs" />
     <Compile Include="MusikanalyseDataContext.cs" />
+    <Compile Include="Page.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
