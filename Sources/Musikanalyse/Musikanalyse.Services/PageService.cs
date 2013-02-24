@@ -1,6 +1,5 @@
 ﻿namespace Musikanalyse.Services
 {
-    using System;
     using System.Collections.Generic;
     using System.Linq;
     using Musikanalyse.DataAccess;
@@ -8,66 +7,32 @@
 
     public class PageService : IPageService
     {
-        public void CreatePage(ContentPage page)
+        public void CreatePage<T>(T page) where T : Contracts.Page
         {
             using (MusikanalyseDataContext context = new MusikanalyseDataContext())
             {
-                Content contentEntity = Mapper.MapToContent(page);
-                context.Contents.Add(contentEntity);
+                DataAccess.Page entity = Mapper.MapToEntity(page);
+                context.Pages.Add(entity);
                 context.SaveChanges();
-                page.ContentId = contentEntity.Id;
-
-                Page pageEntity = Mapper.MapToPage(page);
-                context.Pages.Add(pageEntity);
-                context.SaveChanges();
-                page.PageId = pageEntity.Id;
+                page.Id = entity.Id;
             }
         }
 
-        public void UpdatePage(ContentPage page)
+        public void UpdatePage<T>(T page) where T : Contracts.Page
         {
             using (MusikanalyseDataContext context = new MusikanalyseDataContext())
             {
-                Content entity = context.Contents.First(x => x.Id == page.ContentId);
-                if (entity.CreationDate != page.CreationDate)
-                {
-                    throw new InvalidOperationException("CreationDate must not be modified.");
-                }
-
-                entity.LastModifiedDate = page.LastModifiedDate;
-                entity.Value = page.Value;
-
-                Page pageEntity = context.Pages.First(x => x.Id == page.PageId);
-                pageEntity.Url = page.Url;
-
+                DataAccess.Page entity = context.Pages.Single(x => x.Id == page.Id);
+                Mapper.MapToExistingEntity(page, entity);
                 context.SaveChanges();
             }
         }
 
-        public IList<ContentPage> GetAll()
+        public IList<Contracts.Page> GetAll()
         {
             using (MusikanalyseDataContext context = new MusikanalyseDataContext())
             {
-                List<Content> contentEntities = context.Contents.ToList();
-                List<Page> pageEntities = context.Pages.ToList();
-                List<ContentPage> contentPages = new List<ContentPage>();
-
-                foreach (Content contentEntity in contentEntities)
-                {
-                    ContentPage page = new ContentPage
-                                           {
-                                               ContentId = contentEntity.Id,
-                                               CreationDate = contentEntity.CreationDate,
-                                               LastModifiedDate = contentEntity.LastModifiedDate,
-                                               Value = contentEntity.Value
-                                           };
-                    Page pageEntity = pageEntities.Single(x => x.ContentId == contentEntity.Id);
-                    page.Url = pageEntity.Url;
-                    page.PageId = pageEntity.Id;
-                    contentPages.Add(page);
-                }
-
-                return contentPages;
+                return context.Pages.ToList().Select(Mapper.MapToContract).ToList();
             }
         }
 
@@ -75,31 +40,36 @@
         {
             using (MusikanalyseDataContext context = new MusikanalyseDataContext())
             {
-                Page pageEntity = context.Pages.First(x => x.Id == pageId);
-                Content contentEntity = context.Contents.First(x => x.Id == pageEntity.ContentId);
+                DataAccess.Page pageEntity = context.Pages.First(x => x.Id == pageId);
                 context.Pages.Remove(pageEntity);
-                context.Contents.Remove(contentEntity);
                 context.SaveChanges();
             }
         }
 
-        public ContentPage GetPage(string url)
+        public Contracts.ContentPage GetContentPage(string url)
         {
             using (MusikanalyseDataContext context = new MusikanalyseDataContext())
             {
-                Page pageEntity = context.Pages.First(x => x.Url == url);
-                Content contentEntity = context.Contents.First(x => x.Id == pageEntity.ContentId);
-                return Mapper.MapToContentPage(pageEntity, contentEntity);
+                DataAccess.ContentPage pageEntity = context.Pages.OfType<DataAccess.ContentPage>().Single(x => x.Url == url);
+                return Mapper.MapToContract(pageEntity);
             }
         }
 
-        public ContentPage GetPage(int pageId)
+        public Contracts.Page GetPage(int pageId)
         {
             using (MusikanalyseDataContext context = new MusikanalyseDataContext())
             {
-                Page pageEntity = context.Pages.First(x => x.Id == pageId);
-                Content contentEntity = context.Contents.First(x => x.Id == pageEntity.ContentId);
-                return Mapper.MapToContentPage(pageEntity, contentEntity);
+                DataAccess.Page pageEntity = context.Pages.First(x => x.Id == pageId);
+                return Mapper.MapToContract(pageEntity);
+            }
+        }
+
+        public Contracts.TutorialPage GetTutorialPage(string urlKey)
+        {
+            using (MusikanalyseDataContext context = new MusikanalyseDataContext())
+            {
+                DataAccess.TutorialPage pageEntity = context.Pages.OfType<DataAccess.TutorialPage>().Single(x => x.UrlKey == urlKey);
+                return Mapper.MapToContract(pageEntity);
             }
         }
     }

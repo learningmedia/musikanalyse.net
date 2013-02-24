@@ -7,6 +7,7 @@ namespace Musikanalyse.Website.Areas.Admin.Controllers
     using System.Collections.Generic;
 
     using Musikanalyse.Services;
+    using Musikanalyse.Website.Helpers;
 
     public class PagesController : Controller
     {
@@ -19,7 +20,7 @@ namespace Musikanalyse.Website.Areas.Admin.Controllers
 
         public ActionResult Index()
         {
-            IList<ContentPage> contents = this.pageService.GetAll();
+            IList<Page> contents = this.pageService.GetAll();
             return View(contents);
         }
 
@@ -27,7 +28,7 @@ namespace Musikanalyse.Website.Areas.Admin.Controllers
         {
             try
             {
-                ContentPage page = this.pageService.GetPage(id);
+                Page page = this.pageService.GetPage(id);
                 return View(page);
             }
             catch (Exception)
@@ -36,14 +37,22 @@ namespace Musikanalyse.Website.Areas.Admin.Controllers
             }
         }
 
-        public ActionResult Create()
+        public ActionResult Create(PageType type)
         {
-            return View();
+            switch (type)
+            {
+                case PageType.Content:
+                    return this.View("CreateContent");
+                case PageType.Tutoial:
+                    return this.View("CreateTutorial");
+                default:
+                    throw new InvalidOperationException("Unknown page type.");
+            }
         }
 
         [HttpPost]
         [ValidateInput(false)]
-        public ActionResult Create(ContentPage page)
+        public ActionResult Create([ModelBinder(typeof(PageModelBinder))] Page page, PageType type)
         {
             page.CreationDate = DateTime.UtcNow;
             page.LastModifiedDate = page.CreationDate;
@@ -54,14 +63,22 @@ namespace Musikanalyse.Website.Areas.Admin.Controllers
                 return RedirectToAction("Index");
             }
 
-            return View(page);
+            switch (type)
+            {
+                case PageType.Content:
+                    return this.View("CreateContent");
+                case PageType.Tutoial:
+                    return this.View("CreateTutorial");
+                default:
+                    throw new InvalidOperationException("Unknown page type.");
+            }
         }
 
         public ActionResult Edit(int id)
         {
             try
             {
-                ContentPage page = this.pageService.GetPage(id);
+                Page page = this.pageService.GetPage(id);
                 return View(page);
             }
             catch (Exception)
@@ -72,17 +89,16 @@ namespace Musikanalyse.Website.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateInput(false)]
-        public ActionResult Edit(ContentPage page)
+        public ActionResult Edit([ModelBinder(typeof(PageModelBinder))] Page page)
         {
+            page.LastModifiedDate = DateTime.UtcNow;
+
             if (ModelState.IsValid)
             {
-                ContentPage originalPage = this.pageService.GetPage(page.PageId);
-                originalPage.Value = page.Value;
-                originalPage.LastModifiedDate = DateTime.UtcNow;
-                this.pageService.UpdatePage(originalPage);
-
+                this.pageService.UpdatePage(page);
                 return RedirectToAction("Index");
             }
+
             return View(page);
         }
 
@@ -90,7 +106,7 @@ namespace Musikanalyse.Website.Areas.Admin.Controllers
         {
             try
             {
-                ContentPage page = this.pageService.GetPage(id);
+                Page page = this.pageService.GetPage(id);
                 return View(page);
             }
             catch (Exception)

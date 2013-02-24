@@ -1,11 +1,17 @@
 ﻿namespace Musikanalyse.DataAccess
 {
-    public class Page
+    using System;
+
+    public abstract class Page
     {
         public int Id { get; set; }
 
-        public int ContentId { get; set; }
+        public string Title { get; set; }
 
-        public string Url { get; set; }
+        public DateTime CreationDate { get; set; }
+
+        public DateTime LastModifiedDate { get; set; }
+
+        public string Value { get; set; }
     }
 }

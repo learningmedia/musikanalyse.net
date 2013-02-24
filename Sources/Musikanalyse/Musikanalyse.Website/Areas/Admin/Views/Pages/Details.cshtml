@@ -1,4 +1,5 @@
-﻿@model Musikanalyse.Services.Contracts.ContentPage
+﻿@using Musikanalyse.Services.Contracts
+@model Musikanalyse.Services.Contracts.Page
 
 @{
     ViewBag.Title = "Details";
@@ -30,14 +31,38 @@
         @Html.DisplayFor(model => model.Value)
     </div>
 
+    @if (Model.GetType() == typeof(ContentPage))
+    {
+        <div class="display-label">
+            @Html.DisplayName("Url")
+        </div>
+        <div class="display-field">
+            @Html.Display("Url")
+        </div>
+    }
+    else if (Model.GetType() == typeof(TutorialPage))
+    {
+        <div class="display-label">
+            @Html.DisplayName("UrlKey")
+        </div>
+        <div class="display-field">
+            @Html.Display("UrlKey")
+        </div>
+    }
+    else
+    {
+        throw new InvalidOperationException();
+    }
+
     <div class="display-label">
-        @Html.DisplayNameFor(model => model.Url)
+        @Html.DisplayNameFor(model => model.Title)
     </div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.Url)
+        @Html.DisplayFor(model => model.Title)
     </div>
+
 </fieldset>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.PageId }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

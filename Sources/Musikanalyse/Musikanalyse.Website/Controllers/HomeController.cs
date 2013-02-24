@@ -16,7 +16,7 @@ namespace Musikanalyse.Website.Controllers
 
             try
             {
-                ContentPage contentPage = pageService.GetPage(url);
+                ContentPage contentPage = pageService.GetContentPage(url);
                 return View(contentPage);
             }
             catch (Exception e)

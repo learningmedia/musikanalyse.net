@@ -1,4 +1,4 @@
-﻿namespace Musikanalyse.Services.Contracts
+﻿namespace Musikanalyse.DataAccess
 {
     public class ContentPage : Page
     {

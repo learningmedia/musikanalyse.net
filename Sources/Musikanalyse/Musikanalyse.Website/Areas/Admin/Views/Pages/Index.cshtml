@@ -1,4 +1,6 @@
-﻿@model IEnumerable<Musikanalyse.Services.Contracts.ContentPage>
+﻿@using Musikanalyse.Services.Contracts
+@using Musikanalyse.Website.Helpers
+@model IList<Musikanalyse.Services.Contracts.Page>
 
 @{
     ViewBag.Title = "Index";
@@ -7,27 +9,30 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New Content", "Create", new { type=PageType.Content })
+    @Html.ActionLink("Create New Tutorial", "Create", new { type=PageType.Tutoial })
 </p>
 <table>
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.CreationDate)
+            @Html.DisplayName("CreationDate")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.LastModifiedDate)
+            @Html.DisplayName("LastModifiedDate")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Url)
+            @Html.DisplayName("Url")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Value)
+            @Html.DisplayName("Title")
         </th>
         <th></th>
     </tr>
 
     @foreach (var item in Model)
     {
+        ContentPage contentPage = item as ContentPage;
+        TutorialPage tutorialPage = item as TutorialPage;
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.CreationDate)
@@ -36,15 +41,26 @@
                 @Html.DisplayFor(modelItem => item.LastModifiedDate)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Url)
+                @if (contentPage != null)
+                {
+                    @Html.DisplayFor(modelItem => contentPage.Url)
+                }
+                else if (tutorialPage != null)
+                {
+                    @Html.DisplayFor(modelItem => tutorialPage.UrlKey)
+                }
+                else
+                {
+                    throw new InvalidOperationException("Unknown page type.");
+                }
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Value)
+                @Html.DisplayFor(modelItem => item.Title)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.PageId }) |
-            @Html.ActionLink("Details", "Details", new { id = item.PageId }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.PageId })
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
             </td>
         </tr>
     }

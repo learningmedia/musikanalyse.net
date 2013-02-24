@@ -4,16 +4,18 @@
 
     public interface IPageService
     {
-        ContentPage GetPage(int pageId);
+        Page GetPage(int pageId);
 
-        void CreatePage(ContentPage page);
+        void CreatePage<T>(T page) where T : Page;
 
-        void UpdatePage(ContentPage page);
+        void UpdatePage<T>(T page) where T : Page;
 
-        IList<ContentPage> GetAll();
+        IList<Page> GetAll();
 
         void DeletePage(int pageId);
 
-        ContentPage GetPage(string url);
+        ContentPage GetContentPage(string url);
+
+        TutorialPage GetTutorialPage(string urlKey);
     }
 }

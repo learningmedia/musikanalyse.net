@@ -1,12 +1,14 @@
-﻿namespace Musikanalyse.DataAccess
+﻿namespace Musikanalyse.Services.Contracts
 {
     using System;
 
-    public class Content
+    public abstract class Page
     {
-        public DateTime CreationDate { get; set; }
-
         public int Id { get; set; }
+
+        public string Title { get; set; }
+
+        public DateTime CreationDate { get; set; }
 
         public DateTime LastModifiedDate { get; set; }
 
