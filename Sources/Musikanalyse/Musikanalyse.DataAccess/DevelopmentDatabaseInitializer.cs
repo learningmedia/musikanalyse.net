@@ -2,7 +2,7 @@
 {
     using System.Data.Entity;
 
-    public class DevelopmentDatabaseInitializer : DropCreateDatabaseIfModelChanges<MusikanalyseDataContext>
+    public class DevelopmentDatabaseInitializer : DropCreateDatabaseAlways<MusikanalyseDataContext>
     {
         protected override void Seed(MusikanalyseDataContext context)
         {
