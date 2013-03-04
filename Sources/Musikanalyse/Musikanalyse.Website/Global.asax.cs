@@ -13,8 +13,7 @@
     {
         protected void Application_Start()
         {
-            // TODO: DO NOT COPY TO PRODUCTION SERVER :-)
-            Database.SetInitializer(new DevelopmentDatabaseInitializer());
+            Database.SetInitializer<MusikanalyseDataContext>(null);
 
             AreaRegistration.RegisterAllAreas();
 

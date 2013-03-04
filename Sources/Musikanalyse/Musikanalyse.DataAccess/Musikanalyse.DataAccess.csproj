@@ -48,7 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ContentPage.cs" />
-    <Compile Include="DevelopmentDatabaseInitializer.cs" />
     <Compile Include="MusikanalyseDataContext.cs" />
     <Compile Include="Page.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

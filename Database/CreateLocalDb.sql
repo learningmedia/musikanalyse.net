@@ -3,11 +3,11 @@ GO
 
 -- Hier wird die Datenbank, wenn Sie existiert gelöscht.
 IF  EXISTS (SELECT name FROM sys.databases WHERE name = N'MusikanalyseDb')
-DROP DATABASE [MusikanalyseDb]
+    DROP DATABASE [MusikanalyseDb]
 GO
 -- Hier wird die Anmeldung gelöscht, falls sie existiert.
 IF  EXISTS (SELECT * FROM sys.server_principals WHERE name = N'MusikanalyseUser')
-DROP LOGIN [MusikanalyseUser]
+    DROP LOGIN [MusikanalyseUser]
 GO
 
 -- Hier wird nun die Datenbank neu angelegt.
