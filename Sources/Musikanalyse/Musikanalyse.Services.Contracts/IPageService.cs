@@ -17,5 +17,7 @@
         ContentPage GetContentPage(string url);
 
         TutorialPage GetTutorialPage(string urlKey);
+
+        IList<TutorialInfo> GetAllTutorialInfos();
     }
 }

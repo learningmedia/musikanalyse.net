@@ -15,3 +15,17 @@ CREATE TABLE [dbo].[Pages] (
     CONSTRAINT [PK_Pages] PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 GO
+
+CREATE TABLE [dbo].[Settings] (
+    [Name]              NVARCHAR(256)       NOT NULL,
+    [Value]             NVARCHAR(MAX)       NULL,
+    CONSTRAINT [PK_Settings] PRIMARY KEY CLUSTERED ([Name] ASC)
+);
+GO
+
+INSERT INTO [dbo].[Settings] (
+    [Name],[Value]
+) VALUES (
+    N'AppVersion', N'0'
+);
+GO

@@ -1,8 +1,15 @@
-﻿@model Musikanalyse.Services.Contracts.ContentPage
-@using MarkdownDeep
+﻿@using Musikanalyse.Services.Contracts
+@model Musikanalyse.Website.ViewModels.HomeViewModel
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Willkommen auf musikanalyse.net";
 }
 
-@Html.Raw(new Markdown().Transform(@Model.Value))
+<h2>Wählen Sie ein Tutorial:</h2>
+
+<ul>
+    @foreach (TutorialInfo info in this.Model.TutorialInfos)
+    {
+        <li>@Html.ActionLink(info.Title, "TutorialPage", new { urlKey = info.UrlKey })</li>
+    }
+</ul>

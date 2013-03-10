@@ -1,8 +1,7 @@
-﻿using System.Web;
-using System.Web.Optimization;
-
-namespace Musikanalyse.Website
+﻿namespace Musikanalyse.Website.App_Start
 {
+    using System.Web.Optimization;
+
     public class BundleConfig
     {
         // Weitere Informationen zu Bundling finden Sie unter "http://go.microsoft.com/fwlink/?LinkId=254725".

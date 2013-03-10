@@ -36,6 +36,18 @@
             }
         }
 
+        public IList<TutorialInfo> GetAllTutorialInfos()
+        {
+            using (MusikanalyseDataContext context = new MusikanalyseDataContext())
+            {
+                return context
+                    .Pages
+                    .OfType<DataAccess.TutorialPage>()
+                    .Select(x => new TutorialInfo { Abstract = x.Abstract, Title = x.Title, UrlKey = x.UrlKey })
+                    .ToList();
+            }
+        }
+
         public void DeletePage(int pageId)
         {
             using (MusikanalyseDataContext context = new MusikanalyseDataContext())

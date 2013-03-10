@@ -37,6 +37,6 @@ GO
 EXEC sp_addrolemember N'db_datawriter', N'MusikanalyseUser'
 GO
 
--- Hier werden die Rechte gesetzt, um Konfigurationen und Wartungen durchzuführen, also all di Dinge, die Andreas auch nicht so recht weiß.
+-- Hier werden die Rechte gesetzt, um Konfigurationen und Wartungen durchzuführen, also all die Dinge, die Andreas auch nicht so recht weiß.
 EXEC sp_addrolemember N'db_owner', N'MusikanalyseUser'
 GO
