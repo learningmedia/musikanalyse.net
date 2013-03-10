@@ -45,6 +45,14 @@
                 @Html.Editor("UrlKey")
                 @Html.ValidationMessage("UrlKey")
             </div>
+            
+            <div class="editor-label">
+                @Html.Label("Abstract")
+            </div>
+            <div class="editor-field">
+                @Html.TextArea("Abstract", new { style = "width: 100%; height: 25em;", @class = "MarkdownEditor" })
+                @Html.ValidationMessage("Abstract")
+            </div>
         }
         else
         {

@@ -1,8 +1,10 @@
-﻿@using Musikanalyse.Services.Contracts
+﻿@using MarkdownDeep
+@using Musikanalyse.Services.Contracts
 @model Musikanalyse.Services.Contracts.Page
 
 @{
     ViewBag.Title = "Delete";
+    Markdown md = new Markdown { ExtraMode = true, SafeMode = true };
 }
 
 <h2>Delete</h2>
@@ -29,7 +31,7 @@
         @Html.DisplayNameFor(model => model.Value)
     </div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.Value)
+        <div>@Html.Raw(md.Transform(Model.Value))</div>
     </div>
     @if (Model.GetType() == typeof(ContentPage))
     {
@@ -47,6 +49,13 @@
         </div>
         <div class="display-field">
             @Html.Display("UrlKey")
+        </div>
+    
+        <div class="display-label">
+            @Html.DisplayName("Abstract")
+        </div>
+        <div class="display-field">
+            <div>@Html.Raw(md.Transform(((TutorialPage)Model).Abstract))</div>
         </div>
     }
     else

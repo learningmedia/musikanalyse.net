@@ -22,6 +22,14 @@
         </div>
 
         <div class="editor-label">
+            @Html.LabelFor(model => model.Abstract)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.Abstract, new { style = "width: 100%; height: 15em;", @class = "MarkdownEditor" })
+            @Html.ValidationMessageFor(model => model.Abstract)
+        </div>
+
+        <div class="editor-label">
             @Html.LabelFor(model => model.UrlKey)
         </div>
         <div class="editor-field">
