@@ -25,7 +25,8 @@ namespace Musikanalyse.Website.Controllers
         public ActionResult Index()
         {
             HomeViewModel model = new HomeViewModel();
-            model.TutorialInfos = this.pageService.GetAllTutorialInfos();
+            model.TutorialInfos = this.pageService.GetRandomTutorials(4);
+
             return this.View(model);
         }
 

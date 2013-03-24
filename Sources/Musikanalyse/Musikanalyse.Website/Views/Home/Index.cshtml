@@ -1,15 +1,51 @@
-﻿@using Musikanalyse.Services.Contracts
+﻿@using MarkdownDeep
+@using Musikanalyse.Services.Contracts
 @model Musikanalyse.Website.ViewModels.HomeViewModel
 
 @{
     ViewBag.Title = "Willkommen auf musikanalyse.net";
+    IList<TutorialInfo> tutorialInfos = Model.TutorialInfos;
+    Markdown md = new Markdown { ExtraMode = true, SafeMode = true };
 }
 
-<h2>Wählen Sie ein Tutorial:</h2>
+<div class="hero-unit">
+    <h1>@ViewBag.Title</h1>
+    <p>Profiwissen zur Musiktheorie und zur musikalischen Analyse</p>
+    <p><a href="#" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+</div>
 
-<ul>
-    @foreach (TutorialInfo info in this.Model.TutorialInfos)
-    {
-        <li>@Html.ActionLink(info.Title, "TutorialPage", new { urlKey = info.UrlKey })</li>
-    }
-</ul>
+<div class="row">
+    <div class="span12">
+        <h2>Schon gelesen?</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="span6">
+        @if (tutorialInfos.Count > 0)
+        {
+            <h3>@tutorialInfos[0].Title</h3>
+            <p>@Html.Raw(md.Transform(tutorialInfos[0].Abstract))</p>
+            <p><a class="btn" href="@Url.Action("TutorialPage", new { urlKey = tutorialInfos[0].UrlKey })">Zum Tutorial &raquo;</a></p>
+        }
+        @if (tutorialInfos.Count > 2)
+        {
+            <h3>@tutorialInfos[2].Title</h3>
+            <p>@Html.Raw(md.Transform(tutorialInfos[2].Abstract))</p>
+            <p><a class="btn" href="@Url.Action("TutorialPage", new { urlKey = tutorialInfos[2].UrlKey })">Zum Tutorial &raquo;</a></p>
+        }
+    </div>
+    <div class="span6">
+        @if (tutorialInfos.Count > 1)
+        {
+            <h3>@tutorialInfos[1].Title</h3>
+            <p>@Html.Raw(md.Transform(tutorialInfos[1].Abstract))</p>
+            <p><a class="btn" href="@Url.Action("TutorialPage", new { urlKey = tutorialInfos[1].UrlKey })">Zum Tutorial &raquo;</a></p>
+        }
+        @if (tutorialInfos.Count > 3)
+        {
+            <h3>@tutorialInfos[3].Title</h3>
+            <p>@Html.Raw(md.Transform(tutorialInfos[3].Abstract))</p>
+            <p><a class="btn" href="@Url.Action("TutorialPage", new { urlKey = tutorialInfos[3].UrlKey })">Zum Tutorial &raquo;</a></p>
+        }
+    </div>
+</div>

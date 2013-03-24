@@ -1,5 +1,6 @@
 ﻿namespace Musikanalyse.Services
 {
+    using System;
     using System.Collections.Generic;
     using System.Linq;
     using Musikanalyse.DataAccess;
@@ -43,6 +44,27 @@
                 return context
                     .Pages
                     .OfType<DataAccess.TutorialPage>()
+                    .Select(x => new TutorialInfo { Abstract = x.Abstract, Title = x.Title, UrlKey = x.UrlKey })
+                    .ToList();
+            }
+        }
+
+        public IList<TutorialInfo> GetRandomTutorials(int maxCount)
+        {
+            using (MusikanalyseDataContext context = new MusikanalyseDataContext())
+            {
+                List<int> randomIds = context
+                    .Pages
+                    .OfType<DataAccess.TutorialPage>()
+                    .Select(x => x.Id)
+                    .ToList()
+                    .TakeAny(4)
+                    .ToList();
+
+                return context
+                    .Pages
+                    .OfType<DataAccess.TutorialPage>()
+                    .Where(x => randomIds.Contains(x.Id))
                     .Select(x => new TutorialInfo { Abstract = x.Abstract, Title = x.Title, UrlKey = x.UrlKey })
                     .ToList();
             }

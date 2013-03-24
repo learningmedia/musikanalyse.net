@@ -19,5 +19,7 @@
         TutorialPage GetTutorialPage(string urlKey);
 
         IList<TutorialInfo> GetAllTutorialInfos();
+
+        IList<TutorialInfo> GetRandomTutorials(int maxCount);
     }
 }
