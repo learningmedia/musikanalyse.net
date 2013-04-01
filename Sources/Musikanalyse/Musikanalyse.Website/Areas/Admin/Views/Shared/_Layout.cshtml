@@ -4,20 +4,24 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-    <link href="~/Scripts/mdd_styles.css" rel="stylesheet" />
-    @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/bootstrap")
+    @Styles.Render("~/Content/css")
+    <link href="~/Scripts/mdd_styles.css" rel="stylesheet" />
+    @RenderSection("Styles", required: false)
 </head>
 <body>
-    @RenderBody()
+    <div class="container">
+        @RenderBody()
+    </div>
 
     @Scripts.Render("~/bundles/jquery")
     <script src="~/Scripts/MarkdownDeepLib.min.js"></script>
     @RenderSection("Scripts", required: false)
     <script>
-      jQuery(function() {
-          jQuery(".MarkdownEditor").MarkdownDeep({ ExtraMode: true, SafeMode: false, MarkdownInHtml: true });
-      });
+        jQuery(function () {
+            jQuery(".MarkdownEditor").MarkdownDeep({ ExtraMode: true, SafeMode: false, MarkdownInHtml: true });
+        });
     </script>
 </body>
 </html>

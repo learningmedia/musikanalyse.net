@@ -6,39 +6,45 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+@section Styles {
+    <style>
+        th { text-align: left; }
+    </style>
+}
 
-<p>
-    @Html.ActionLink("Create New Content", "Create", new { type=PageType.Content })
-    @Html.ActionLink("Create New Tutorial", "Create", new { type=PageType.Tutoial })
-</p>
-<table>
+<h2>Seitenübersicht</h2>
+
+<table class="table-condensed table-bordered table-striped bt" style="width: 100%; margin: 25px 0;">
     <tr>
         <th>
-            @Html.DisplayName("CreationDate")
+            Aktion
         </th>
         <th>
-            @Html.DisplayName("LastModifiedDate")
+            Titel
         </th>
         <th>
-            @Html.DisplayName("Url")
+            Url(bestandteil)
         </th>
         <th>
-            @Html.DisplayName("Title")
+            Erstellt
         </th>
-        <th></th>
+        <th>
+            Zuletzt geändert
+        </th>
     </tr>
 
-    @foreach (var item in Model)
+    @foreach (Musikanalyse.Services.Contracts.Page item in Model)
     {
         ContentPage contentPage = item as ContentPage;
         TutorialPage tutorialPage = item as TutorialPage;
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.CreationDate)
+                @Html.ActionLink("Bearbeiten", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Löschen", "Delete", new { id = item.Id })
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.LastModifiedDate)
+                @Html.DisplayFor(modelItem => item.Title)
             </td>
             <td>
                 @if (contentPage != null)
@@ -55,14 +61,17 @@
                 }
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Title)
+                @Html.DisplayFor(modelItem => item.CreationDate)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                @Html.DisplayFor(modelItem => item.LastModifiedDate)
             </td>
         </tr>
     }
 
 </table>
+
+<p>
+    @Html.ActionLink("Neue Inhaltsseite", "Create", new { type = PageType.Content }, new { @class = "btn btn-small" })
+    @Html.ActionLink("Neue Tutorialseite", "Create", new { type = PageType.Tutoial }, new { @class = "btn btn-small" })
+</p>
