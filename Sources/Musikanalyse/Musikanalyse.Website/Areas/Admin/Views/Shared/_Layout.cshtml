@@ -16,7 +16,7 @@
     @RenderSection("Scripts", required: false)
     <script>
       jQuery(function() {
-        jQuery(".MarkdownEditor").MarkdownDeep();
+          jQuery(".MarkdownEditor").MarkdownDeep({ ExtraMode: true, SafeMode: true, MarkdownInHtml: true });
       });
     </script>
 </body>

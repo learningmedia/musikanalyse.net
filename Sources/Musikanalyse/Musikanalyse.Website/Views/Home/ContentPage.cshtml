@@ -5,4 +5,4 @@
     ViewBag.Title = this.Model.Title;
 }
 
-@Html.Raw((new Markdown() { ExtraMode = true, SaveMode = true }).Transform(@Model.Value))
+@Html.Raw((new Markdown { ExtraMode = true, SafeMode = true, MarkdownInHtml = true }).Transform(@Model.Value))
