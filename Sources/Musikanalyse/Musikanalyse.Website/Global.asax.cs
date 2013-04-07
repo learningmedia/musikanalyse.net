@@ -9,7 +9,6 @@
     using System.Web.Routing;
 
     using Musikanalyse.DataAccess;
-    using Musikanalyse.Website.App_Start;
     using Musikanalyse.Website.Helpers;
 
     public class MvcApplication : HttpApplication

@@ -1,0 +1,29 @@
+﻿@using MarkdownDeep
+@using Musikanalyse.Services.Contracts
+@using Musikanalyse.Website.ViewModels
+@model TutorialsViewModel
+
+@{
+    ViewBag.Title = "Tutorials";
+    Markdown markdown = new Markdown { ExtraMode = true, SafeMode = false, MarkdownInHtml = true };
+}
+
+<h2>Tutorials</h2>
+
+<div class="container">
+    <ul class="media-list">
+        @foreach (TutorialInfo tutorial in this.Model.TutorialInfos)
+        {
+            <li class="media">
+                <a class="pull-left" href="@this.Url.Action("TutorialPage", new { urlKey = tutorial.UrlKey })">
+                    <img class="media-object" data-src="@tutorial.ThumbnailUrl">
+                </a>
+                <div class="media-body">
+                    <h4 class="media-heading">@tutorial.Title</h4>
+                    <p>@Html.Raw(markdown.Transform(tutorial.Abstract))</p>
+                    <p><a class="btn btn-mini" href="@this.Url.Action("TutorialPage", new { urlKey = tutorial.UrlKey })">Zum Tutorial &raquo;</a></p>
+                </div>
+            </li>
+        }
+    </ul>
+</div>

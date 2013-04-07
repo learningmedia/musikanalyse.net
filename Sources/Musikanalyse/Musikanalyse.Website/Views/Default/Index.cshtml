@@ -1,0 +1,50 @@
+﻿@using MarkdownDeep
+@using Musikanalyse.Website.ViewModels
+@model TutorialsViewModel
+
+@{
+    ViewBag.Title = "musikanalyse.net";
+    Markdown markdown = new Markdown { ExtraMode = true, SafeMode = false, MarkdownInHtml = true };
+}
+
+<div class="hero-unit">
+    <h1>@ViewBag.Title</h1>
+    <p>Profiwissen zur Musiktheorie und zur musikalischen Analyse</p>
+    <p><a href="/about" class="btn btn-primary btn-large">Erfahren Sie mehr &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="span12">
+        <h2>Schon gelesen?</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="span6">
+        @if (this.Model.TutorialInfos.Count > 0)
+        {
+            <h3>@this.Model.TutorialInfos[0].Title</h3>
+            <p>@this.Html.Raw(markdown.Transform(this.Model.TutorialInfos[0].Abstract))</p>
+            <p><a class="btn" href="@this.Url.Action("TutorialPage", new { urlKey = this.Model.TutorialInfos[0].UrlKey })">Zum Tutorial &raquo;</a></p>
+        }
+        @if (this.Model.TutorialInfos.Count > 2)
+        {
+            <h3>@this.Model.TutorialInfos[2].Title</h3>
+            <p>@this.Html.Raw(markdown.Transform(this.Model.TutorialInfos[2].Abstract))</p>
+            <p><a class="btn" href="@this.Url.Action("TutorialPage", new { urlKey = this.Model.TutorialInfos[2].UrlKey })">Zum Tutorial &raquo;</a></p>
+        }
+    </div>
+    <div class="span6">
+        @if (this.Model.TutorialInfos.Count > 1)
+        {
+            <h3>@this.Model.TutorialInfos[1].Title</h3>
+            <p>@this.Html.Raw(markdown.Transform(this.Model.TutorialInfos[1].Abstract))</p>
+            <p><a class="btn" href="@this.Url.Action("TutorialPage", new { urlKey = this.Model.TutorialInfos[1].UrlKey })">Zum Tutorial &raquo;</a></p>
+        }
+        @if (this.Model.TutorialInfos.Count > 3)
+        {
+            <h3>@this.Model.TutorialInfos[3].Title</h3>
+            <p>@this.Html.Raw(markdown.Transform(this.Model.TutorialInfos[3].Abstract))</p>
+            <p><a class="btn" href="@this.Url.Action("TutorialPage", new { urlKey = this.Model.TutorialInfos[3].UrlKey })">Zum Tutorial &raquo;</a></p>
+        }
+    </div>
+</div>

@@ -1,8 +1,8 @@
-﻿namespace Musikanalyse.Website.App_Start
+﻿namespace Musikanalyse.Website
 {
     using System.Web.Mvc;
 
-    public class FilterConfig
+    public static class FilterConfig
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {

@@ -5,5 +5,7 @@
         public string UrlKey { get; set; }
 
         public string Abstract { get; set; }
+
+        public string ThumbnailUrl { get; set; }
     }
 }

@@ -26,6 +26,9 @@
             Url(bestandteil)
         </th>
         <th>
+            Vorschaubild
+        </th>
+        <th>
             Erstellt
         </th>
         <th>
@@ -58,6 +61,16 @@
                 else
                 {
                     throw new InvalidOperationException("Unknown page type.");
+                }
+            </td>
+            <td>
+                @if (tutorialPage != null)
+                {
+                    @Html.DisplayFor(modelItem => tutorialPage.ThumbnailUrl)
+                }
+                else
+                {
+                    <text>&nbsp;</text>
                 }
             </td>
             <td>

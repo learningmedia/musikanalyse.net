@@ -1,4 +1,4 @@
-﻿namespace Musikanalyse.Website.App_Start
+﻿namespace Musikanalyse.Website
 {
     using System.Web.Http;
 

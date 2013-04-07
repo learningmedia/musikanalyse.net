@@ -4,7 +4,7 @@
 
     using Musikanalyse.Services.Contracts;
 
-    public class HomeViewModel
+    public class TutorialsViewModel
     {
         public IList<TutorialInfo> TutorialInfos { get; set; }
     }

@@ -9,22 +9,22 @@ namespace Musikanalyse.Website.Controllers
     using Musikanalyse.Services.Contracts;
     using Musikanalyse.Website.ViewModels;
 
-    public class HomeController : Controller
+    public class DefaultController : Controller
     {
         private readonly IPageService pageService;
 
-        public HomeController() : this(new PageService())
+        public DefaultController() : this(new PageService())
         {
         }
 
-        public HomeController(IPageService pageService)
+        public DefaultController(IPageService pageService)
         {
             this.pageService = pageService;
         }
 
         public ActionResult Index()
         {
-            HomeViewModel model = new HomeViewModel();
+            TutorialsViewModel model = new TutorialsViewModel();
             model.TutorialInfos = this.pageService.GetRandomTutorials(4);
 
             return this.View(model);
@@ -37,7 +37,22 @@ namespace Musikanalyse.Website.Controllers
                 TutorialPage tutorialPage = this.pageService.GetTutorialPage(urlKey);
                 return View(tutorialPage);
             }
-            catch (Exception e)
+            catch (Exception)
+            {
+                throw new HttpException(404, "Page not found.");
+            }
+        }
+
+        public ActionResult TutorialIndex()
+        {
+            try
+            {
+                TutorialsViewModel model = new TutorialsViewModel();
+                model.TutorialInfos = this.pageService.GetAllTutorialInfos();
+
+                return this.View(model);
+            }
+            catch (Exception)
             {
                 throw new HttpException(404, "Page not found.");
             }

@@ -44,7 +44,7 @@
                 return context
                     .Pages
                     .OfType<DataAccess.TutorialPage>()
-                    .Select(x => new TutorialInfo { Abstract = x.Abstract, Title = x.Title, UrlKey = x.UrlKey })
+                    .Select(x => new TutorialInfo { Abstract = x.Abstract, Title = x.Title, UrlKey = x.UrlKey, ThumbnailUrl = x.ThumbnailUrl})
                     .ToList();
             }
         }
@@ -65,7 +65,7 @@
                     .Pages
                     .OfType<DataAccess.TutorialPage>()
                     .Where(x => randomIds.Contains(x.Id))
-                    .Select(x => new TutorialInfo { Abstract = x.Abstract, Title = x.Title, UrlKey = x.UrlKey })
+                    .Select(x => new TutorialInfo { Abstract = x.Abstract, Title = x.Title, UrlKey = x.UrlKey, ThumbnailUrl = x.ThumbnailUrl })
                     .ToList();
             }
         }

@@ -1,8 +1,8 @@
-﻿namespace Musikanalyse.Website.App_Start
+﻿namespace Musikanalyse.Website
 {
     using System.Web.Optimization;
 
-    public class BundleConfig
+    public static class BundleConfig
     {
         // Weitere Informationen zu Bundling finden Sie unter "http://go.microsoft.com/fwlink/?LinkId=254725".
         public static void RegisterBundles(BundleCollection bundles)
@@ -22,7 +22,8 @@
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css"));
+            bundles.Add(new StyleBundle("~/Content/css").Include(
+                        "~/Content/site.css"));
 
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
                         "~/Content/themes/base/jquery.ui.core.css",
@@ -37,6 +38,12 @@
                         "~/Content/themes/base/jquery.ui.datepicker.css",
                         "~/Content/themes/base/jquery.ui.progressbar.css",
                         "~/Content/themes/base/jquery.ui.theme.css"));
+
+            // BOOTSTRAP:
+            // Add @Styles.Render("~/Content/bootstrap") in the <head/> of your _Layout.cshtml view
+            // Add @Scripts.Render("~/bundles/bootstrap") after jQuery in your _Layout.cshtml view
+            BundleTable.Bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include("~/Scripts/bootstrap*"));
+            BundleTable.Bundles.Add(new StyleBundle("~/Content/bootstrap").Include("~/Content/bootstrap.css", "~/Content/bootstrap-responsive.css"));
         }
     }
 }
