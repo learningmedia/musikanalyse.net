@@ -223,6 +223,7 @@
     <None Include="Properties\PublishProfiles\Uli.pubxml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\AudioPlayer\css\audioplayer.css" />
+    <Content Include="Scripts\AudioPlayer\css\audioplayer-ma.css" />
     <Content Include="Scripts\AudioPlayer\Info.txt" />
     <Content Include="Scripts\AudioPlayer\js\audioplayer.js" />
     <Content Include="Scripts\AudioPlayer\js\audioplayer.min.js" />
