@@ -8,15 +8,14 @@
 
 @Html.Raw((new Markdown { ExtraMode = true, SafeMode = false, MarkdownInHtml = true }).Transform(@Model.Value))
 
-@section Styles {
-    <link href="/scripts/jplayer/blue.monday/jplayer.blue.monday.css" rel="stylesheet" />
-}
-
 @section Scripts {
-    <script src="/scripts/jplayer/jquery.jplayer.min.js"></script>
+    <script src="/scripts/audiojs/audio.min.js"></script>
     <script>
-        $(function() {
-            $("audio").audioPlayer();
+        $(function () {
+            var audiojs = window.audiojs;
+            audiojs.events.ready(function() {
+                audiojs.createAll();
+            });
         });
     </script>
 }

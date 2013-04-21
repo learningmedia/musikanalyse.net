@@ -222,6 +222,9 @@
     </None>
     <None Include="Properties\PublishProfiles\Uli.pubxml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\audiojs\audio.min.js" />
+    <Content Include="Scripts\audiojs\audiojs.swf" />
+    <Content Include="Scripts\audiojs\player-graphics.gif" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
