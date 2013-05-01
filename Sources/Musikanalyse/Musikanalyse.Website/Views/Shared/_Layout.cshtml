@@ -13,24 +13,28 @@
     <div class="navbar navbar-static-top navbar-inverse">
         <div class="navbar-inner">
             <div class="container">
-                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="brand" href="/">musikanalyse.net</a>
-                <div class="nav-collapse collapse">
-                    <ul class="nav">
-                        <li class="active"><a href="/">Home</a></li>
-                        <li><a href="/tutorials">Tutorials</a></li>
-                        <li><a href="/about">Über uns</a></li>
-                    </ul>
-                </div>
+                <a class="brand" href="@this.Url.Action("Index", "Default", new { area = string.Empty })">musikanalyse.net</a>
+                <ul class="nav">
+                    <li>@this.Html.ActionLink("Home", "Index", "Default", new { area = string.Empty }, null)</li>
+                    <li>@this.Html.ActionLink("Tutorials", "TutorialIndex", "Default", new { area = string.Empty }, null)</li>
+                    <li><a href="/about">Über uns</a></li>
+                </ul>
+                <ul class="nav pull-right">
+                    @if (this.User.Identity.IsAuthenticated)
+                    {
+                        <li class="navbar-text">Hallo,&nbsp;<b>@this.User.Identity.Name</b>!</li>
+                        <li>@this.Html.ActionLink("Seitenübersicht", "Index", "Pages", new { area = "Admin" }, null)</li>
+                        <li>@this.Html.ActionLink("Abmelden", "Logout", "Default", new { area = string.Empty }, null)</li>
+                    }
+                    else
+                    {
+                        <li>@this.Html.ActionLink("Anmelden", "Login", "Default", new { area = string.Empty }, null)</li>
+                    }
+                </ul>
             </div>
         </div>
     </div>
-
-    <div class="container">
+    <div class="container" style="margin-top: 2.5em;">
         @RenderBody()
         <hr/>
         <footer>

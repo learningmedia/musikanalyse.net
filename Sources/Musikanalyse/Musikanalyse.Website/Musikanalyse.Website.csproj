@@ -134,6 +134,9 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\PagesController.cs" />
+    <Compile Include="Helpers\AdminRoleProvider.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="Helpers\MembershipProvider.cs" />
     <Compile Include="Helpers\PageType.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Global.asax.cs">
@@ -268,6 +271,7 @@
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Views\Default\TutorialPage.cshtml" />
     <Content Include="Views\Default\TutorialIndex.cshtml" />
+    <Content Include="Views\Default\Login.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

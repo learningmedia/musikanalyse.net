@@ -9,6 +9,7 @@ namespace Musikanalyse.Website.Areas.Admin.Controllers
     using Musikanalyse.Services;
     using Musikanalyse.Website.Helpers;
 
+    [Authorize(Roles = "Administrator")]
     public class PagesController : Controller
     {
         private readonly IPageService pageService;

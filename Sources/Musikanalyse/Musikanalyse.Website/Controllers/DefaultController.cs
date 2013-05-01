@@ -4,6 +4,8 @@ namespace Musikanalyse.Website.Controllers
 {
     using System;
     using System.Web;
+    using System.Web.ModelBinding;
+    using System.Web.Security;
 
     using Musikanalyse.Services;
     using Musikanalyse.Services.Contracts;
@@ -20,6 +22,36 @@ namespace Musikanalyse.Website.Controllers
         public DefaultController(IPageService pageService)
         {
             this.pageService = pageService;
+        }
+
+        public ActionResult Login()
+        {
+            return this.View(new LoginViewModel());
+        }
+
+        [HttpPost]
+        public ActionResult Login(LoginViewModel model, [QueryString("ReturnUrl")] string returnUrl)
+        {
+            if (!this.ModelState.IsValid)
+            {
+                return this.View(model);
+            }
+
+            if (!Membership.ValidateUser(model.UserName, model.Password))
+            {
+                this.ModelState.AddModelError("Password", "Das angegebene Kennwort ist ungültig.");
+                return this.View(model);
+            }
+
+            FormsAuthentication.SetAuthCookie(model.UserName, false);
+            string url = returnUrl ?? FormsAuthentication.DefaultUrl;
+            return this.Redirect(url);
+        }
+
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();
+            return this.Redirect(FormsAuthentication.DefaultUrl);
         }
 
         public ActionResult Index()
