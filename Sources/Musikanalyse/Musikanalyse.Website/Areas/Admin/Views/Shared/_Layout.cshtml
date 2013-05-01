@@ -11,16 +11,14 @@
     @RenderSection("Styles", required: false)
 </head>
 <body>
-    <div class="navbar navbar-static-top navbar-inverse">
+    <div class="navbar navbar-static-top navbar-inverse main-menu">
         <div class="navbar-inner">
             <div class="container">
-                <a class="brand" href="@this.Url.Action("Index", "Default", new { area = string.Empty })">musikanalyse.net</a>
                 <ul class="nav">
                     <li>@this.Html.ActionLink("Home", "Index", "Default", new { area = string.Empty }, null)</li>
                     <li>@this.Html.ActionLink("Tutorials", "TutorialIndex", "Default", new { area = string.Empty }, null)</li>
                     <li><a href="/about">Über uns</a></li>
-                </ul>
-                <ul class="nav pull-right">
+                    <li><a href="/imprint">Impressum</a></li>
                     @if (this.User.Identity.IsAuthenticated)
                     {
                         <li class="navbar-text">Hallo,&nbsp;<b>@this.User.Identity.Name</b>!</li>
@@ -32,10 +30,13 @@
                         <li>@this.Html.ActionLink("Anmelden", "Login", "Default", new { area = string.Empty }, null)</li>
                     }
                 </ul>
+                <div class="nav pull-right">
+                    <span class="brand">musikanalyse.net</span>
+                </div>
             </div>
         </div>
     </div>
-    <div class="container" style="margin-top: 2.5em;">
+    <div class="container content" style="margin-top: 2.5em;">
         @RenderBody()
     </div>
     @Scripts.Render("~/bundles/jquery")

@@ -6,7 +6,9 @@
     ViewBag.Title = this.Model.Title;
 }
 
-@Html.Raw((new Markdown { ExtraMode = true, SafeMode = false, MarkdownInHtml = true }).Transform(@Model.Value))
+<div class="tutorial">
+    @Html.Raw((new Markdown { ExtraMode = true, SafeMode = false, MarkdownInHtml = true }).Transform(@Model.Value))
+</div>
 
 @section Scripts {
     <script src="/scripts/audiojs/audio.min.js"></script>

@@ -9,9 +9,71 @@ header, footer, nav, section {
     display: block;
 }
 
-.audiojs {
-    font-size: .85em !important;
-    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif !important;
+.main-menu {
+    background-color: #1b1b1b;
+    background-image: linear-gradient(#222, #111);
+    border-bottom: 4px solid #b90e1d;
+}
+
+.main-menu a:hover {
+    background-color: #111 !important;
+    background-image: linear-gradient(#181818, #070707) !important;
+}
+
+.main-menu .brand {
+    font-style: italic;
+    color: #fff;
+}
+
+.content a, .content a:link, .content a:visited {
+    color: #b90e1d;
+}
+
+.content a:hover, .content a:active {
+    color: #8a0e1d;
+}
+
+.tutorial img {
+    display: block;
+    margin: 2em auto;
+}
+
+.tutorial .audiojs {
+    width: 440px;
+    margin: 2em auto;
+    font-size: .8em;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    line-height: normal;
+}
+
+.tutorial .audiojs .progress {
+    border-radius: 0;
+}
+
+.tutorial .accordion {
+    margin: 2em 0;
+}
+
+.tutorial .audiojs,
+.tutorial .audiojs .play-pause,
+.tutorial .audiojs .scrubber,
+.tutorial .audiojs .time,
+.tutorial .audiojs .error-message {
+    height: 28px;
+    line-height: 28px;
+}
+
+.tutorial .audiojs .play-pause {
+    padding: 1px 3px;
+}
+
+.tutorial .audiojs .time {
+    padding: 0 16px;
+}
+
+.tutorial .audiojs .scrubber {
+    height: 14px;
+    margin: 6px 10px;
 }
 
 /* Styles for basic forms
