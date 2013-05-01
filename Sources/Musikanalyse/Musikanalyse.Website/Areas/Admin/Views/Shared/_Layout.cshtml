@@ -21,7 +21,6 @@
                     <li><a href="/imprint">Impressum</a></li>
                     @if (this.User.Identity.IsAuthenticated)
                     {
-                        <li class="navbar-text">Hallo,&nbsp;<b>@this.User.Identity.Name</b>!</li>
                         <li>@this.Html.ActionLink("Seitenübersicht", "Index", "Pages", new { area = "Admin" }, null)</li>
                         <li>@this.Html.ActionLink("Abmelden", "Logout", "Default", new { area = string.Empty }, null)</li>
                     }
