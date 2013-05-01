@@ -9,6 +9,10 @@ header, footer, nav, section {
     display: block;
 }
 
+.audiojs {
+    font-size: .85em !important;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif !important;
+}
 
 /* Styles for basic forms
 -----------------------------------------------------------*/

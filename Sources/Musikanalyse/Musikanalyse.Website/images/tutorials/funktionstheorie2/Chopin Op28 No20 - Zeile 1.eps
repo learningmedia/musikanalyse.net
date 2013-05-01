@@ -1,0 +1,712 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%BoundingBox: 60 669 540 777
+%%Creator: Sibelius for Windows version 4.1.1 on Windows XP
+%%CreationDate: Sat May 20 03:59:34 2006
+%%Title: Chopin Op28 No20 - Zeile 1.eps
+%%DocumentFonts:
+%%+ AmadeusSpecial
+%%+ Amadeus
+%%DocumentNeededFonts:
+%%+ AmadeusSpecial
+%%+ Amadeus
+%%EndComments
+%%BeginProlog
+/ScaledChar { % string angle xscale yscale xpos ypos fontsize fontname
+	gsave
+		findfont
+		exch
+		scalefont
+		setfont
+		moveto
+		scale
+		rotate
+		show
+	grestore
+} bind def
+/TextBegin { % string angle xpos ypos fontsize fontname
+	findfont
+	exch
+	scalefont
+	setfont
+	moveto
+	gsave
+		rotate
+		show
+} bind def
+/TextEnd {grestore} bind def
+/Line { % xto yto xfrom yfrom width dasharray
+	gsave
+		0 setdash
+		setlinewidth
+		newpath
+		moveto
+		lineto
+		stroke
+	grestore
+} bind def 
+/Poly { % array-of-points xfrom yfrom 
+	newpath
+	moveto
+	{
+		dup
+		0 get
+		exch
+		1 get
+		lineto
+	}
+	forall
+	closepath
+} bind def 
+/PolyFilled { % array-of-points xfrom yfrom
+	Poly
+	fill
+} bind def
+/PolyStroke { % array-of-points xfrom yfrom linewidth 
+	setlinewidth
+	Poly
+	stroke
+} bind def
+/Bezier { % <Xm1 Ym1 Xm2 Ym2 Xm3 Ym3>m = (num-curves-1)...0 num-curves x0 y0 
+	newpath
+	moveto
+	{curveto} repeat
+} bind def
+/BezierFilled {
+	Bezier
+	closepath
+	fill
+} bind def
+/BezierStroke { % <Xm1 Ym1 Xm2 Ym2 Xm3 Ym3>m=num-cuves...0 num-curves x0 y0 width
+	setlinewidth
+	Bezier
+	stroke
+} bind def
+/Circle { % x y r 
+	newpath
+	0 360 arc
+} bind def
+/CircleStroke { % x y r w
+	setlinewidth
+	Circle
+	stroke
+} bind def
+/CircleFilled { % x y r
+	Circle
+	fill
+} bind def
+/Clip { % x3 y3 x2 y2 x1 y1 x0 y0 
+	gsave
+	newpath
+	moveto
+	lineto
+	lineto
+	lineto
+	closepath
+	clip
+	newpath
+} bind def
+/SetupSibeliusEncoding { % font-name
+	findfont
+	dup
+	length
+	dict
+	begin
+		{
+			1 index /FID ne
+			{ def }
+			{pop pop}
+			ifelse
+		} forall
+		/Encoding SibeliusLatinEncoding def
+		currentdict
+	end
+} bind def
+/FontExists { % font-name, leaves true or false in stack
+	lang_level 2 ge
+	{
+		/Font resourcestatus
+		{pop pop false}
+		{true}
+		ifelse
+	}
+	{
+		true
+	}
+	ifelse
+} bind def
+/SkipBitmapIfWrongLangLevel {
+	lang_level 2 lt
+	{
+		/line_string 1024 string def
+		{currentfile line_string readline pop (%_SkippedBitmapToThisPoint) eq {exit} if} loop
+	} if
+} bind def
+/ShowBitmap { % parameters: src_width src_height dst_width dst_height left bottom
+	5 index 3 mul /row_string exch string def % 3 times width for each row
+	gsave
+	translate % x y translate
+	neg scale % dst_width -dst_height scale
+	8 [3 index 0 0 5 index neg 0 0] % src_width src_height 8 [src_width 0 0 -src_height 0 0]
+	{currentfile row_string readhexstring pop} false 3
+	colorimage
+} bind def
+/SibeliusLatinEncoding [
+/.notdef
+/.notdef
+/Euro
+/Scaron
+/guilsinglleft
+/Zcaron
+/scaron
+/guilsinglright
+/zcaron
+/brokenbar
+/overscore
+/twosuperior
+/threesuperior
+/onesuperior
+/onequarter
+/onehalf
+/threequarters
+/Eth
+/multiply
+/Yacute
+/Thorn
+/eth
+/yacute
+/thorn
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/space
+/exclam
+/quotedbl
+/numbersign
+/dollar
+/percent
+/ampersand
+/quotesingle
+/parenleft
+/parenright
+/asterisk
+/plus
+/comma
+/hyphen
+/period
+/slash
+/zero
+/one
+/two
+/three
+/four
+/five
+/six
+/seven
+/eight
+/nine
+/colon
+/semicolon
+/less
+/equal
+/greater
+/question
+/at
+/A
+/B
+/C
+/D
+/E
+/F
+/G
+/H
+/I
+/J
+/K
+/L
+/M
+/N
+/O
+/P
+/Q
+/R
+/S
+/T
+/U
+/V
+/W
+/X
+/Y
+/Z
+/bracketleft
+/backslash
+/bracketright
+/asciicircum
+/underscore
+/grave
+/a
+/b
+/c
+/d
+/e
+/f
+/g
+/h
+/i
+/j
+/k
+/l
+/m
+/n
+/o
+/p
+/q
+/r
+/s
+/t
+/u
+/v
+/w
+/x
+/y
+/z
+/braceleft
+/bar
+/braceright
+/asciitilde
+/.notdef
+/Adieresis			% Mac 128
+/Aring				% Mac 129
+/Ccedilla			% Mac 130
+/Eacute				% Mac 131
+/Ntilde				% Mac 132  
+/Odieresis			% Mac 133  
+/Udieresis			% Mac 134  
+/aacute				% Mac 135  
+/agrave				% Mac 136  
+/acircumflex		% Mac 137  
+/adieresis			% Mac 138  
+/atilde				% Mac 139  
+/aring				% Mac 140  
+/ccedilla			% Mac 141  
+/eacute				% Mac 142  
+/egrave				% Mac 143  
+/ecircumflex		% Mac 144  
+/edieresis			% Mac 145  
+/iacute				% Mac 146  
+/igrave				% Mac 147  
+/icircumflex		% Mac 148  
+/idieresis			% Mac 149  
+/ntilde				% Mac 150  
+/oacute				% Mac 151  
+/ograve				% Mac 152  
+/ocircumflex		% Mac 153  
+/odieresis			% Mac 154  
+/otilde				% Mac 155  
+/uacute				% Mac 156  
+/ugrave				% Mac 157  
+/ucircumflex		% Mac 158  
+/udieresis			% Mac 159  
+/dagger				% Mac 160  
+/degree				% Mac 161  
+/cent				% Mac 162  
+/sterling			% Mac 163  
+/section			% Mac 164  
+/bullet				% Mac 165  
+/paragraph			% Mac 166  
+/germandbls			% Mac 167  
+/registered			% Mac 168  
+/copyright			% Mac 169  
+/trademark			% Mac 170  
+/acute				% Mac 171  
+/dieresis			% Mac 172  
+/notequal			% Mac 173  
+/AE					% Mac 174  
+/Oslash				% Mac 175  
+/infinity			% Mac 176  
+/plusminus			% Mac 177  
+/lessequal			% Mac 178  
+/greaterequal		% Mac 179  
+/yen				% Mac 180  
+/mu					% Mac 181  
+/partialdiff		% Mac 182  
+/summation			% Mac 183  
+/product			% Mac 184  
+/pi					% Mac 185  
+/integral			% Mac 186  
+/ordfeminine		% Mac 187  
+/ordmasculine		% Mac 188  
+/Omega				% Mac 189  
+/ae					% Mac 190  
+/oslash				% Mac 191  
+/questiondown		% Mac 192  
+/exclamdown			% Mac 193  
+/logicalnot			% Mac 194  
+/radical			% Mac 195  
+/florin				% Mac 196  
+/approxequal		% Mac 197  
+/Delta				% Mac 198  
+/guillemotleft		% Mac 199  
+/guillemotright		% Mac 200  
+/ellipsis			% Mac 201  
+/space				% non-breaking space	Mac 202  
+/Agrave				% Mac 203  
+/Atilde				% Mac 204  
+/Otilde				% Mac 205  
+/OE					% Mac 206  
+/oe					% Mac 207  
+/endash				% Mac 208  
+/emdash				% Mac 209  
+/quotedblleft		% Mac 210  
+/quotedblright		% Mac 211  
+/quoteleft			% Mac 212  
+/quoteright			% Mac 213  
+/divide				% Mac 214  
+/lozenge			% Mac 215  
+/ydieresis			% Mac 216  
+/Ydieresis			% Mac 217  
+/fraction			% Mac 218  
+/currency			% Mac 219  
+/guilsinglleft		% Mac 220  
+/guilsinglright		% Mac 221  
+/fi					% Mac 222  
+/fl					% Mac 223  
+/daggerdbl			% Mac 224  
+/periodcentered		% Mac 225  
+/quotesinglbase		% Mac 226  
+/quotedblbase		% Mac 227  
+/perthousand		% Mac 228  
+/Acircumflex		% Mac 229  
+/Ecircumflex		% Mac 230  
+/Aacute				% Mac 231  
+/Edieresis			% Mac 232  
+/Egrave				% Mac 233  
+/Iacute				% Mac 234  
+/Icircumflex		% Mac 235  
+/Idieresis			% Mac 236  
+/Igrave				% Mac 237  
+/Oacute				% Mac 238  
+/Ocircumflex		% Mac 239  
+/apple				% Mac 240  
+/Ograve				% Mac 241  
+/Uacute				% Mac 242  
+/Ucircumflex		% Mac 243  
+/Ugrave				% Mac 244  
+/dotlessi			% Mac 245  
+/circumflex			% Mac 246  
+/tilde				% Mac 247  
+/macron				% Mac 248  
+/breve				% Mac 249  
+/dotaccent			% Mac 250  
+/ring				% Mac 251  
+/cedilla			% Mac 252  
+/hungarumlaut		% Mac 253  
+/ogonek				% Mac 254  
+/caron				% Mac 255
+] bind def
+%%EndProlog
+%%BeginSetup
+/UniGlyphName (      ) def
+/ReadingMSB true def
+/MSBCharCode 0 def
+/languagelevel where
+	{
+		pop
+		/lang_level languagelevel def
+	}
+	{
+		/lang_level 1 def
+	}
+	ifelse
+%%EndSetup
+0.138398 0.138377 scale
+0 0 translate
+1494 5550 1494 5118 5 [] Line
+2265 5550 2265 5118 5 [] Line
+3040 5550 3040 5118 5 [] Line
+3872 5550 3872 5118 5 [] Line
+3889 5550 3889 5118 5 [] Line
+494 5550 494 5118 5 [] Line
+({) 0 4 3.375 455 5118 128 /AmadeusSpecial ScaledChar
+492 5422 3891 5422 4 [] Line
+492 5454 3891 5454 4 [] Line
+492 5486 3891 5486 4 [] Line
+492 5518 3891 5518 4 [] Line
+492 5550 3891 5550 4 [] Line
+(&) 0 1 1 516 5454 128 /Amadeus ScaledChar
+(b) 0 1 1 628 5486 128 /Amadeus ScaledChar
+(b) 0 1 1 660 5534 128 /Amadeus ScaledChar
+(b) 0 1 1 692 5470 128 /Amadeus ScaledChar
+771 5390 834 5390 5 [] Line
+821 5395 821 5566 4 [] Line
+(\317) 0 1 1 782 5390 128 /Amadeus ScaledChar
+(\317) 0 1 1 782 5422 128 /Amadeus ScaledChar
+(\317) 0 1 1 782 5454 128 /Amadeus ScaledChar
+933 5390 996 5390 5 [] Line
+983 5395 983 5582 4 [] Line
+(\317) 0 1 1 944 5390 128 /Amadeus ScaledChar
+(\317) 0 1 1 944 5422 128 /Amadeus ScaledChar
+(\317) 0 1 1 944 5470 128 /Amadeus ScaledChar
+[ [1243 5530] [1283 5526] [1283 5510] [1243 5514] ] 1243 5514  PolyFilled
+[ [1145 5566] [1283 5550] [1283 5534] [1145 5550] ] 1145 5550  PolyFilled
+1145 5427 1145 5565 4 [] Line
+(\317) 0 1 1 1106 5422 128 /Amadeus ScaledChar
+(\317) 0 1 1 1106 5454 128 /Amadeus ScaledChar
+(\252) 0 1 1 1168 5470 128 /AmadeusSpecial ScaledChar
+(\252) 0 1 1 1168 5438 128 /AmadeusSpecial ScaledChar
+1283 5411 1283 5549 4 [] Line
+(\317) 0 1 1 1244 5406 128 /Amadeus ScaledChar
+(\317) 0 1 1 1244 5438 128 /Amadeus ScaledChar
+1323 5390 1386 5390 5 [] Line
+1373 5395 1373 5534 4 [] Line
+(\317) 0 1 1 1334 5390 128 /Amadeus ScaledChar
+(\317) 0 1 1 1334 5422 128 /Amadeus ScaledChar
+1543 5390 1606 5390 5 [] Line
+1593 5395 1593 5534 4 [] Line
+(\317) 0 1 1 1554 5390 128 /Amadeus ScaledChar
+(\317) 0 1 1 1554 5422 128 /Amadeus ScaledChar
+1755 5411 1755 5550 4 [] Line
+(\317) 0 1 1 1716 5406 128 /Amadeus ScaledChar
+(\317) 0 1 1 1716 5438 128 /Amadeus ScaledChar
+(b) 0 1 1 1680 5406 128 /Amadeus ScaledChar
+[ [2015 5498] [2055 5494] [2055 5478] [2015 5482] ] 2015 5482  PolyFilled
+[ [1916 5534] [2055 5518] [2055 5502] [1916 5518] ] 1916 5518  PolyFilled
+1866 5390 1929 5390 5 [] Line
+1916 5395 1916 5533 4 [] Line
+(\317) 0 1 1 1877 5390 128 /Amadeus ScaledChar
+(\317) 0 1 1 1877 5422 128 /Amadeus ScaledChar
+(\252) 0 1 1 1939 5438 128 /AmadeusSpecial ScaledChar
+(\252) 0 1 1 1939 5406 128 /AmadeusSpecial ScaledChar
+2005 5390 2068 5390 5 [] Line
+2055 5379 2055 5517 4 [] Line
+(\317) 0 1 1 2016 5374 128 /Amadeus ScaledChar
+(\317) 0 1 1 2016 5406 128 /Amadeus ScaledChar
+2364 5411 2364 5518 4 [] Line
+1494 5550 1494 5550 3 [] Line
+(\317) 0 1 1 2325 5406 128 /Amadeus ScaledChar
+1494 5550 1494 5550 3 [] Line
+(n) 0 1 1 2296 5406 128 /Amadeus ScaledChar
+2529 5427 2529 5534 4 [] Line
+(\317) 0 1 1 2490 5422 128 /Amadeus ScaledChar
+1494 5550 1494 5550 3 [] Line
+(n) 0 1 1 2461 5422 128 /Amadeus ScaledChar
+[ [2790 5530] [2830 5526] [2830 5510] [2790 5514] ] 2790 5514  PolyFilled
+[ [2691 5566] [2830 5550] [2830 5534] [2691 5550] ] 2691 5550  PolyFilled
+2691 5459 2691 5565 4 [] Line
+(\317) 0 1 1 2652 5454 128 /Amadeus ScaledChar
+(\252) 0 1 1 2714 5470 128 /AmadeusSpecial ScaledChar
+2830 5443 2830 5549 4 [] Line
+(\317) 0 1 1 2791 5438 128 /Amadeus ScaledChar
+2869 5390 2932 5390 5 [] Line
+2919 5395 2919 5534 4 [] Line
+(\317) 0 1 1 2880 5390 128 /Amadeus ScaledChar
+(\317) 0 1 1 2880 5422 128 /Amadeus ScaledChar
+1494 5550 1494 5550 3 [] Line
+(b) 0 1 1 2844 5422 128 /Amadeus ScaledChar
+3329 5411 3329 5566 4 [] Line
+(\317) 0 1 1 3290 5406 128 /Amadeus ScaledChar
+(\317) 0 1 1 3290 5454 128 /Amadeus ScaledChar
+(n) 0 1 1 3423 5486 128 /Amadeus ScaledChar
+(#) 0 1 1 3371 5438 128 /Amadeus ScaledChar
+3404 5390 3467 5390 5 [] Line
+3454 5433 3454 5302 4 [] Line
+1494 5550 1494 5550 3 [] Line
+(\317) 0 1 1 3452 5438 128 /Amadeus ScaledChar
+(\317) 0 1 1 3452 5406 128 /Amadeus ScaledChar
+(\317) 0 1 1 3415 5390 128 /Amadeus ScaledChar
+[ [3590 5562] [3630 5558] [3630 5542] [3590 5546] ] 3590 5546  PolyFilled
+[ [3491 5598] [3630 5582] [3630 5566] [3491 5582] ] 3491 5582  PolyFilled
+3491 5491 3491 5597 4 [] Line
+(\317) 0 1 1 3452 5486 128 /Amadeus ScaledChar
+(\252) 0 1 1 3514 5502 128 /AmadeusSpecial ScaledChar
+3630 5475 3630 5581 4 [] Line
+(\317) 0 1 1 3591 5470 128 /Amadeus ScaledChar
+1494 5550 1494 5550 3 [] Line
+(n) 0 1 1 3562 5470 128 /Amadeus ScaledChar
+3669 5390 3732 5390 5 [] Line
+3719 5379 3719 5566 4 [] Line
+(\317) 0 1 1 3680 5374 128 /Amadeus ScaledChar
+(\317) 0 1 1 3680 5406 128 /Amadeus ScaledChar
+(\317) 0 1 1 3680 5454 128 /Amadeus ScaledChar
+(n) 0 1 1 3644 5374 128 /Amadeus ScaledChar
+492 5118 3891 5118 4 [] Line
+492 5150 3891 5150 4 [] Line
+492 5182 3891 5182 4 [] Line
+492 5214 3891 5214 4 [] Line
+492 5246 3891 5246 4 [] Line
+(?) 0 1 1 516 5214 128 /Amadeus ScaledChar
+(b) 0 1 1 628 5150 128 /Amadeus ScaledChar
+(b) 0 1 1 660 5198 128 /Amadeus ScaledChar
+(b) 0 1 1 692 5134 128 /Amadeus ScaledChar
+821 5235 821 5476 4 [] Line
+(\317) 0 1 1 782 5230 128 /Amadeus ScaledChar
+771 5086 834 5086 5 [] Line
+771 5054 834 5054 5 [] Line
+784 5161 784 4966 4 [] Line
+(\317) 0 1 1 782 5166 128 /Amadeus ScaledChar
+(\317) 0 1 1 782 5054 128 /Amadeus ScaledChar
+933 5086 996 5086 5 [] Line
+933 5054 996 5054 5 [] Line
+933 5022 996 5022 5 [] Line
+933 4990 996 4990 5 [] Line
+946 5097 946 4902 4 [] Line
+(\317) 0 1 1 944 5102 128 /Amadeus ScaledChar
+(\317) 0 1 1 944 4990 128 /Amadeus ScaledChar
+983 5251 983 5487 4 [] Line
+(\317) 0 1 1 944 5246 128 /Amadeus ScaledChar
+1095 5086 1158 5086 5 [] Line
+1095 5054 1158 5054 5 [] Line
+1095 5022 1158 5022 5 [] Line
+1108 5113 1108 4918 4 [] Line
+(\317) 0 1 1 1106 5118 128 /Amadeus ScaledChar
+(\317) 0 1 1 1106 5006 128 /Amadeus ScaledChar
+1145 5235 1145 5350 4 [] Line
+(\317) 0 1 1 1106 5230 128 /Amadeus ScaledChar
+(\317) 0 1 1 1106 5262 128 /Amadeus ScaledChar
+1494 5550 1494 5550 3 [] Line
+(n) 0 1 1 1077 5262 128 /Amadeus ScaledChar
+1373 5203 1373 5471 4 [] Line
+(\317) 0 1 1 1334 5198 128 /Amadeus ScaledChar
+(\317) 0 1 1 1334 5230 128 /Amadeus ScaledChar
+1323 5086 1386 5086 5 [] Line
+1323 5054 1386 5054 5 [] Line
+1336 5161 1336 4966 4 [] Line
+(\317) 0 1 1 1334 5166 128 /Amadeus ScaledChar
+(\317) 0 1 1 1334 5118 128 /Amadeus ScaledChar
+(\317) 0 1 1 1334 5054 128 /Amadeus ScaledChar
+1593 5203 1593 5481 4 [] Line
+(\317) 0 1 1 1554 5198 128 /Amadeus ScaledChar
+(\317) 0 1 1 1554 5246 128 /Amadeus ScaledChar
+1543 5086 1606 5086 5 [] Line
+1543 5054 1606 5054 5 [] Line
+1543 5022 1606 5022 5 [] Line
+1556 5129 1556 4934 4 [] Line
+(\317) 0 1 1 1554 5134 128 /Amadeus ScaledChar
+(\317) 0 1 1 1554 5022 128 /Amadeus ScaledChar
+1705 5086 1768 5086 5 [] Line
+1705 5054 1768 5054 5 [] Line
+1705 5022 1768 5022 5 [] Line
+1705 4990 1768 4990 5 [] Line
+1705 4958 1768 4958 5 [] Line
+1718 5065 1718 4870 4 [] Line
+(\317) 0 1 1 1716 5070 128 /Amadeus ScaledChar
+(\317) 0 1 1 1716 4958 128 /Amadeus ScaledChar
+(b) 0 1 1 1673 5070 128 /Amadeus ScaledChar
+(b) 0 1 1 1673 4958 128 /Amadeus ScaledChar
+1755 5219 1755 5481 4 [] Line
+(\317) 0 1 1 1716 5214 128 /Amadeus ScaledChar
+(\317) 0 1 1 1716 5246 128 /Amadeus ScaledChar
+(b) 0 1 1 1841 5182 128 /Amadeus ScaledChar
+1916 5187 1916 5318 4 [] Line
+1494 5550 1494 5550 3 [] Line
+(\317) 0 1 1 1877 5182 128 /Amadeus ScaledChar
+(\317) 0 1 1 1914 5198 128 /Amadeus ScaledChar
+(\317) 0 1 1 1877 5230 128 /Amadeus ScaledChar
+1866 5086 1929 5086 5 [] Line
+1866 5054 1929 5054 5 [] Line
+1866 5022 1929 5022 5 [] Line
+1866 4990 1929 4990 5 [] Line
+1879 5081 1879 4886 4 [] Line
+(\317) 0 1 1 1877 5086 128 /Amadeus ScaledChar
+(\317) 0 1 1 1877 4974 128 /Amadeus ScaledChar
+2095 5278 2158 5278 5 [] Line
+2145 5171 2145 5366 4 [] Line
+(\317) 0 1 1 2106 5166 128 /Amadeus ScaledChar
+(\317) 0 1 1 2106 5198 128 /Amadeus ScaledChar
+(\317) 0 1 1 2106 5246 128 /Amadeus ScaledChar
+(\317) 0 1 1 2106 5278 128 /Amadeus ScaledChar
+2095 5086 2158 5086 5 [] Line
+2095 5054 2158 5054 5 [] Line
+2095 5022 2158 5022 5 [] Line
+2108 5129 2108 4934 4 [] Line
+(\317) 0 1 1 2106 5134 128 /Amadeus ScaledChar
+(\317) 0 1 1 2106 5022 128 /Amadeus ScaledChar
+(n) 0 1 1 2296 5262 128 /Amadeus ScaledChar
+2364 5187 2364 5482 4 [] Line
+(\317) 0 1 1 2325 5182 128 /Amadeus ScaledChar
+(\317) 0 1 1 2325 5214 128 /Amadeus ScaledChar
+(\317) 0 1 1 2325 5262 128 /Amadeus ScaledChar
+2314 5086 2377 5086 5 [] Line
+2314 5054 2377 5054 5 [] Line
+2314 5022 2377 5022 5 [] Line
+2327 5113 2327 4918 4 [] Line
+(\317) 0 1 1 2325 5118 128 /Amadeus ScaledChar
+(\317) 0 1 1 2325 5006 128 /Amadeus ScaledChar
+2479 5086 2542 5086 5 [] Line
+2479 5054 2542 5054 5 [] Line
+2479 5022 2542 5022 5 [] Line
+2479 4990 2542 4990 5 [] Line
+2479 4958 2542 4958 5 [] Line
+2492 5049 2492 4854 4 [] Line
+(\317) 0 1 1 2490 5054 128 /Amadeus ScaledChar
+(\317) 0 1 1 2490 4942 128 /Amadeus ScaledChar
+2516 5278 2579 5278 5 [] Line
+2529 5203 2529 5498 4 [] Line
+(\317) 0 1 1 2490 5198 128 /Amadeus ScaledChar
+(\317) 0 1 1 2490 5230 128 /Amadeus ScaledChar
+(\317) 0 1 1 2490 5262 128 /Amadeus ScaledChar
+(\317) 0 1 1 2527 5278 128 /Amadeus ScaledChar
+(b) 0 1 1 2454 5262 128 /Amadeus ScaledChar
+(n) 0 1 1 2430 5198 128 /Amadeus ScaledChar
+2641 5086 2704 5086 5 [] Line
+2641 5054 2704 5054 5 [] Line
+2641 5022 2704 5022 5 [] Line
+2641 4990 2704 4990 5 [] Line
+2654 5097 2654 4902 4 [] Line
+(\317) 0 1 1 2652 5102 128 /Amadeus ScaledChar
+(\317) 0 1 1 2652 4990 128 /Amadeus ScaledChar
+2641 5278 2704 5278 5 [] Line
+2691 5251 2691 5530 4 [] Line
+(\317) 0 1 1 2652 5246 128 /Amadeus ScaledChar
+(\317) 0 1 1 2652 5278 128 /Amadeus ScaledChar
+2919 5235 2919 5450 4 [] Line
+(\317) 0 1 1 2880 5230 128 /Amadeus ScaledChar
+2869 5086 2932 5086 5 [] Line
+2869 5054 2932 5054 5 [] Line
+2882 5161 2882 4966 4 [] Line
+(\317) 0 1 1 2880 5166 128 /Amadeus ScaledChar
+(\317) 0 1 1 2880 5054 128 /Amadeus ScaledChar
+(n) 0 1 1 3075 5134 128 /Amadeus ScaledChar
+(#) 0 1 1 3096 5214 128 /Amadeus ScaledChar
+3117 5278 3180 5278 5 [] Line
+3154 5278 3217 5278 5 [] Line
+3167 5219 3167 5382 4 [] Line
+1494 5550 1494 5550 3 [] Line
+(\317) 0 1 1 3128 5214 128 /Amadeus ScaledChar
+(\317) 0 1 1 3128 5278 128 /Amadeus ScaledChar
+(\317) 0 1 1 3165 5294 128 /Amadeus ScaledChar
+3117 5086 3180 5086 5 [] Line
+3130 5177 3130 4982 4 [] Line
+(\317) 0 1 1 3128 5182 128 /Amadeus ScaledChar
+(\317) 0 1 1 3128 5134 128 /Amadeus ScaledChar
+(\317) 0 1 1 3128 5070 128 /Amadeus ScaledChar
+3279 5086 3342 5086 5 [] Line
+3279 5054 3342 5054 5 [] Line
+3279 5022 3342 5022 5 [] Line
+3292 5113 3292 4918 4 [] Line
+(\317) 0 1 1 3290 5118 128 /Amadeus ScaledChar
+(\317) 0 1 1 3290 5006 128 /Amadeus ScaledChar
+3329 5235 3329 5478 4 [] Line
+(\317) 0 1 1 3290 5230 128 /Amadeus ScaledChar
+(\317) 0 1 1 3290 5262 128 /Amadeus ScaledChar
+1494 5550 1494 5550 3 [] Line
+(n) 0 1 1 3261 5262 128 /Amadeus ScaledChar
+3441 5086 3504 5086 5 [] Line
+3441 5054 3504 5054 5 [] Line
+3441 5022 3504 5022 5 [] Line
+3441 4990 3504 4990 5 [] Line
+3441 4958 3504 4958 5 [] Line
+3454 5065 3454 4870 4 [] Line
+(\317) 0 1 1 3452 5070 128 /Amadeus ScaledChar
+(\317) 0 1 1 3452 4958 128 /Amadeus ScaledChar
+3669 5086 3732 5086 5 [] Line
+3669 5054 3732 5054 5 [] Line
+3669 5022 3732 5022 5 [] Line
+3682 5113 3682 4918 4 [] Line
+(\317) 0 1 1 3680 5118 128 /Amadeus ScaledChar
+(\317) 0 1 1 3680 5006 128 /Amadeus ScaledChar
+%%EOF
