@@ -6,4 +6,6 @@
     ViewBag.Title = this.Model.Title;
 }
 
-@Html.Raw((new Markdown { ExtraMode = true, SafeMode = false, MarkdownInHtml = true }).Transform(@Model.Value))
+<div class="text">
+    @Html.Raw((new Markdown { ExtraMode = true, SafeMode = false, MarkdownInHtml = true }).Transform(@Model.Value))
+</div>

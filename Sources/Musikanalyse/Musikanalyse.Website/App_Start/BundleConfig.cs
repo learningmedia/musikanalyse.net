@@ -1,6 +1,8 @@
 ﻿namespace Musikanalyse.Website
 {
     using System.Web.Optimization;
+    using BundleTransformer.Core.Orderers;
+    using BundleTransformer.Core.Transformers;
 
     public static class BundleConfig
     {
@@ -17,33 +19,23 @@
                         "~/Scripts/jquery.unobtrusive*",
                         "~/Scripts/jquery.validate*"));
 
+            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+                        "~/Scripts/bootstrap.js"));
+
             // Verwenden Sie die Entwicklungsversion von Modernizr zum Entwickeln und Erweitern Ihrer Kenntnisse. Wenn Sie dann
             // für die Produktion bereit sind, verwenden Sie das Buildtool unter "http://modernizr.com", um nur die benötigten Tests auszuwählen.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include(
-                        "~/Content/site.css"));
+            Bundle styles = new Bundle("~/bundles/styles");
+            styles.Include(
+               "~/Content/less/bootstrap.less",
+               "~/Content/less/responsive.less",
+               "~/Content/site.css");
+            styles.Transforms.Add(new CssTransformer());
+            styles.Orderer = new NullOrderer();
 
-            bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
-                        "~/Content/themes/base/jquery.ui.core.css",
-                        "~/Content/themes/base/jquery.ui.resizable.css",
-                        "~/Content/themes/base/jquery.ui.selectable.css",
-                        "~/Content/themes/base/jquery.ui.accordion.css",
-                        "~/Content/themes/base/jquery.ui.autocomplete.css",
-                        "~/Content/themes/base/jquery.ui.button.css",
-                        "~/Content/themes/base/jquery.ui.dialog.css",
-                        "~/Content/themes/base/jquery.ui.slider.css",
-                        "~/Content/themes/base/jquery.ui.tabs.css",
-                        "~/Content/themes/base/jquery.ui.datepicker.css",
-                        "~/Content/themes/base/jquery.ui.progressbar.css",
-                        "~/Content/themes/base/jquery.ui.theme.css"));
-
-            // BOOTSTRAP:
-            // Add @Styles.Render("~/Content/bootstrap") in the <head/> of your _Layout.cshtml view
-            // Add @Scripts.Render("~/bundles/bootstrap") after jQuery in your _Layout.cshtml view
-            BundleTable.Bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include("~/Scripts/bootstrap*"));
-            BundleTable.Bundles.Add(new StyleBundle("~/Content/bootstrap").Include("~/Content/bootstrap.css", "~/Content/bootstrap-responsive.css"));
+            bundles.Add(styles);
         }
     }
 }
