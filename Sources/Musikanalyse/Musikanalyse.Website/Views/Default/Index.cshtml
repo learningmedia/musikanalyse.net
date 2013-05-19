@@ -7,11 +7,15 @@
     Markdown markdown = new Markdown { ExtraMode = true, SafeMode = false, MarkdownInHtml = true };
 }
 
-<div class="hero-unit">
-    <h1>@ViewBag.Title</h1>
-    <p>Profiwissen zur Musiktheorie und zur musikalischen Analyse</p>
-    <p><a href="/about" class="btn btn-large">Erfahren Sie mehr &raquo;</a></p>
-</div>
+@section IndexHeader
+{
+    <div style="height: 170px; background-color: #eee; margin-top: 0; padding-top: 40px;">
+        <div class="container" style="background-image: url('/images/MainImage.png'); background-position: 100%; background-repeat: no-repeat; height: 140px;">
+            <h1 style="font-size: 52px; margin-top: 24px; color:rgb(35,35,35); margin-top: 36px;">@ViewBag.Title</h1>
+            <p style="font-size: 16px; color:rgb(35,35,35);">Profiwissen zur Musiktheories und zur musikalischen Analyse</p>
+        </div>
+    </div>
+}
 
 <div class="row">
     <div class="span12">

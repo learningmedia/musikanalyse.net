@@ -226,6 +226,7 @@
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Admin\Views\Pages\CreateTutorial.cshtml" />
+    <Content Include="images\MainImage.png" />
     <Content Include="images\tutorials\fragetopos\PhrygischeWendung.cap" />
     <Content Include="images\tutorials\funktionstheorie2\Chopin Op28 No20 - Takt 1-2.eps" />
     <Content Include="images\tutorials\funktionstheorie2\Chopin Op28 No20 - Takt 1-2.psd" />
