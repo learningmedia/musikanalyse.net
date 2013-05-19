@@ -14,18 +14,19 @@
         <div class="navbar-inner">
             <div class="container">
                 <ul class="nav">
-                    <li>@this.Html.ActionLink("Home", "Index", "Default", new { area = string.Empty }, null)</li>
-                    <li>@this.Html.ActionLink("Tutorials", "TutorialIndex", "Default", new { area = string.Empty }, null)</li>
+                    <li>@this.Html.ActionLink("Home", "index", "default", new { area = string.Empty }, null)</li>
+                    <li>@this.Html.ActionLink("Tutorials", "tutorialindex", "default", new { area = string.Empty }, null)</li>
+                    <li>@this.Html.ActionLink("Spiele", "index", "games", new { gameName = string.Empty, levelName = string.Empty, area = string.Empty }, null)</li>
                     <li><a href="/about">Über uns</a></li>
                     <li><a href="/imprint">Impressum</a></li>
                     @if (this.User.Identity.IsAuthenticated)
                     {
-                        <li>@this.Html.ActionLink("Seitenübersicht", "Index", "Pages", new { area = "Admin" }, null)</li>
-                        <li>@this.Html.ActionLink("Abmelden", "Logout", "Default", new { area = string.Empty }, null)</li>
+                        <li>@this.Html.ActionLink("Seitenübersicht", "index", "pages", new { area = "admin" }, null)</li>
+                        <li>@this.Html.ActionLink("Abmelden", "logout", "default", new { area = string.Empty }, null)</li>
                     }
                     else
                     {
-                        <li>@this.Html.ActionLink("Anmelden", "Login", "Default", new { area = string.Empty }, null)</li>
+                        <li>@this.Html.ActionLink("Anmelden", "login", "default", new { area = string.Empty }, null)</li>
                     }
                 </ul>
                 <div class="nav pull-right">

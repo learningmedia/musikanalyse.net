@@ -14,6 +14,7 @@
             routes.MapRoute("Logout", "logout", new { controller = "Default", action = "Logout" });
             routes.MapRoute("TutorialIndex", "tutorials", new { controller = "Default", action = "TutorialIndex" });
             routes.MapRoute("TutorialPage", "tutorials/{urlKey}", new { controller = "Default", action = "TutorialPage" });
+            routes.MapRoute("Games", "games/{gameName}/{levelName}", new { controller = "Games", action = "Index", gameName = UrlParameter.Optional, levelName = UrlParameter.Optional });
             routes.MapRoute("ContentPage", "{*url}", new { controller = "Default", action = "ContentPage" });
         }
     }

@@ -1,0 +1,28 @@
+﻿@using Musikanalyse.Services.Contracts
+@model IList<Level>
+
+@{
+    ViewBag.Title = this.ViewBag.GameTitle;
+}
+
+<div class="page-header">
+    <h1>@this.ViewBag.GameTitle</h1>
+</div>
+
+<div class="container">
+    <ul class="media-list">
+    @foreach (Level level in this.Model)
+    {
+        <li class="media">
+            <a class="pull-left" href="@this.Url.Action("index", new { gameName = this.ViewBag.GameName, levelName = level.Name })">
+                <img class="media-object" src="@this.Url.Content(level.Thumbnail)">
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading">@level.Title</h4>
+                <p>@level.Description</p>
+                <p><a class="btn btn-mini" href="@this.Url.Action("index", new { gameName = this.ViewBag.GameName, levelName = level.Name })">Zum Spiel &raquo;</a></p>
+            </div>
+        </li>
+    }
+    </ul>
+</div>

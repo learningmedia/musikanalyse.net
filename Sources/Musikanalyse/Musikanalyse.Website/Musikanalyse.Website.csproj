@@ -143,6 +143,9 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\PagesController.cs" />
+    <Compile Include="Controllers\GamesController.cs" />
+    <Compile Include="GameLevels\Extensions.cs" />
+    <Compile Include="GameLevels\MemoryGameLevel.cs" />
     <Compile Include="Helpers\AdminRoleProvider.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="Helpers\MembershipProvider.cs" />
@@ -157,9 +160,70 @@
     <Compile Include="ViewModels\TutorialsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\games\memory\js\jquery.flip.js" />
+    <Content Include="Content\games\memory\media\form\01a.png" />
+    <Content Include="Content\games\memory\media\form\01b.png" />
+    <Content Include="Content\games\memory\media\form\02a.png" />
+    <Content Include="Content\games\memory\media\form\02b.png" />
+    <Content Include="Content\games\memory\media\form\03a.png" />
+    <Content Include="Content\games\memory\media\form\03b.png" />
+    <Content Include="Content\games\memory\media\form\04a.png" />
+    <Content Include="Content\games\memory\media\form\04b.png" />
+    <Content Include="Content\games\memory\media\form\05a.png" />
+    <Content Include="Content\games\memory\media\form\05b.png" />
+    <Content Include="Content\games\memory\media\form\06a.png" />
+    <Content Include="Content\games\memory\media\form\06b.png" />
+    <Content Include="Content\games\memory\media\form\07a.png" />
+    <Content Include="Content\games\memory\media\form\07b.png" />
+    <Content Include="Content\games\memory\media\form\08a.png" />
+    <Content Include="Content\games\memory\media\form\08b.png" />
+    <Content Include="Content\games\memory\media\form\09a.png" />
+    <Content Include="Content\games\memory\media\form\09b.png" />
+    <Content Include="Content\games\memory\media\form\10a.png" />
+    <Content Include="Content\games\memory\media\form\10b.png" />
+    <Content Include="Content\games\memory\media\functions\01a.png" />
+    <Content Include="Content\games\memory\media\functions\01b.png" />
+    <Content Include="Content\games\memory\media\functions\02a.png" />
+    <Content Include="Content\games\memory\media\functions\02b.png" />
+    <Content Include="Content\games\memory\media\functions\03a.png" />
+    <Content Include="Content\games\memory\media\functions\03b.png" />
+    <Content Include="Content\games\memory\media\functions\04a.png" />
+    <Content Include="Content\games\memory\media\functions\04b.png" />
+    <Content Include="Content\games\memory\media\functions\05a.png" />
+    <Content Include="Content\games\memory\media\functions\05b.png" />
+    <Content Include="Content\games\memory\media\functions\06a.png" />
+    <Content Include="Content\games\memory\media\functions\06b.png" />
+    <Content Include="Content\games\memory\media\functions\07a.png" />
+    <Content Include="Content\games\memory\media\functions\07b.png" />
+    <Content Include="Content\games\memory\media\functions\08a.png" />
+    <Content Include="Content\games\memory\media\functions\08b.png" />
+    <Content Include="Content\games\memory\media\functions\09a.png" />
+    <Content Include="Content\games\memory\media\functions\09b.png" />
+    <Content Include="Content\games\memory\media\functions\10a.png" />
+    <Content Include="Content\games\memory\media\functions\10b.png" />
+    <Content Include="Content\games\memory\media\models\01a.png" />
+    <Content Include="Content\games\memory\media\models\01b.png" />
+    <Content Include="Content\games\memory\media\models\02a.png" />
+    <Content Include="Content\games\memory\media\models\02b.png" />
+    <Content Include="Content\games\memory\media\models\03a.png" />
+    <Content Include="Content\games\memory\media\models\03b.png" />
+    <Content Include="Content\games\memory\media\models\04a.png" />
+    <Content Include="Content\games\memory\media\models\04b.png" />
+    <Content Include="Content\games\memory\media\models\05a.png" />
+    <Content Include="Content\games\memory\media\models\05b.png" />
     <Content Include="Content\images\glyphicons-halflings-white.png" />
     <Content Include="Content\images\glyphicons-halflings.png" />
     <Content Include="Content\images\university-icon-96.png" />
+    <Content Include="Content\games\memory\css\img\mg-clickicon.png" />
+    <Content Include="Content\games\memory\css\img\mg-mcard.jpg" />
+    <Content Include="Content\games\memory\css\img\mg-mcard.png" />
+    <Content Include="Content\games\memory\css\img\mg-timeicon.png" />
+    <Content Include="Content\games\memory\css\img\quizy-mg-item-top.png" />
+    <Content Include="Content\games\memory\css\img\quizy-mg-notif-neg.png" />
+    <Content Include="Content\games\memory\css\img\quizy-mg-notif-pos.png" />
+    <Content Include="Content\games\memory\css\quizymemorygame.css" />
+    <Content Include="Content\games\memory\js\jquery.quizymemorygame.js" />
+    <Content Include="Content\themes\base\images\animated-overlay.gif" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -182,12 +246,16 @@
     <Content Include="Content\themes\base\jquery.ui.core.css" />
     <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
     <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.menu.css" />
     <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
     <Content Include="Content\themes\base\jquery.ui.resizable.css" />
     <Content Include="Content\themes\base\jquery.ui.selectable.css" />
     <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.spinner.css" />
     <Content Include="Content\themes\base\jquery.ui.tabs.css" />
     <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\jquery.ui.tooltip.css" />
+    <Content Include="Content\themes\base\minified\images\animated-overlay.gif" />
     <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -208,12 +276,15 @@
     <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.menu.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.spinner.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Areas\Admin\Views\Web.config" />
@@ -305,11 +376,12 @@
     <None Include="BundleTransformer.Configuration.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Content\games\memory\README.md" />
+    <Content Include="Content\games\index.json" />
     <None Include="Properties\PublishProfiles\Andi.pubxml">
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\PublishProfiles\Uli.pubxml" />
-    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="images\tutorials\fragetopos\Beispiel_01.png" />
     <Content Include="images\tutorials\fragetopos\Beispiel_02.png" />
     <Content Include="images\tutorials\fragetopos\Beispiel_03.png" />
@@ -903,14 +975,15 @@
     <Content Include="Scripts\audiojs\player-graphics.gif" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\jquery-1.9.1.js" />
-    <Content Include="Scripts\jquery-1.9.1.min.js" />
-    <Content Include="Scripts\jquery-1.9.1.min.map" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery-ui-1.8.20.js" />
-    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <None Include="Scripts\jquery-2.0.0.intellisense.js" />
+    <Content Include="Scripts\jquery-2.0.0.js" />
+    <Content Include="Scripts\jquery-2.0.0.min.js" />
+    <Content Include="Scripts\jquery-2.0.0.min.map" />
+    <Content Include="Scripts\jquery-ui-1.10.2.js" />
+    <Content Include="Scripts\jquery-ui-1.10.2.min.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -945,6 +1018,9 @@
     <Content Include="Views\Default\TutorialPage.cshtml" />
     <Content Include="Views\Default\TutorialIndex.cshtml" />
     <Content Include="Views\Default\Login.cshtml" />
+    <Content Include="Views\Games\GameIndex.cshtml" />
+    <Content Include="Views\Games\LevelIndex.cshtml" />
+    <Content Include="Views\Games\MemoryGameLevel.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="images\tutorials\funktionstheorie\examples\sound\" />
@@ -982,12 +1058,11 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>False</UseIIS>
+          <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>53849</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>
-          </IISUrl>
+          <IISUrl>http://localhost:53849/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
