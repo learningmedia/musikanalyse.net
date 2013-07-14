@@ -11,9 +11,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Musikanalyse.DataAccess", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusiktheorieAktuell", "MusiktheorieAktuell\MusiktheorieAktuell.csproj", "{9BF310AC-DD4E-4AE6-AE70-FF09B7332ACB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoteLex", "NoteLex\NoteLex.csproj", "{4D357C07-9C99-4306-AFCF-6E73E9444AED}"
+EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 6
+		SccNumberOfProjects = 7
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://uli.visualstudio.com/defaultcollection
 		SccLocalPath0 = .
@@ -32,6 +34,9 @@ Global
 		SccProjectUniqueName5 = MusiktheorieAktuell\\MusiktheorieAktuell.csproj
 		SccProjectName5 = MusiktheorieAktuell
 		SccLocalPath5 = MusiktheorieAktuell
+		SccProjectUniqueName6 = NoteLex\\NoteLex.csproj
+		SccProjectName6 = NoteLex
+		SccLocalPath6 = NoteLex
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,6 +63,10 @@ Global
 		{9BF310AC-DD4E-4AE6-AE70-FF09B7332ACB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9BF310AC-DD4E-4AE6-AE70-FF09B7332ACB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9BF310AC-DD4E-4AE6-AE70-FF09B7332ACB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D357C07-9C99-4306-AFCF-6E73E9444AED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D357C07-9C99-4306-AFCF-6E73E9444AED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D357C07-9C99-4306-AFCF-6E73E9444AED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D357C07-9C99-4306-AFCF-6E73E9444AED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
