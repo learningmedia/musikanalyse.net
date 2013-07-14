@@ -62,7 +62,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\qunit.css" />
+    <TypeScriptCompile Include="Interfaces\INoteScript.d.ts" />
+    <TypeScriptCompile Include="NoteSet.ts" />
+    <Content Include="NoteSet.js">
+      <DependentUpon>NoteSet.ts</DependentUpon>
+    </Content>
+    <Content Include="NoteSet.min.js">
+      <DependentUpon>NoteSet.ts</DependentUpon>
+    </Content>
     <Content Include="packages.config" />
+    <Content Include="NoteSet.js.map">
+      <DependentUpon>NoteSet.ts</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-2.0.2.intellisense.js" />
     <Content Include="Scripts\jquery-2.0.2.js" />
     <Content Include="Scripts\jquery-2.0.2.min.js" />
