@@ -61,9 +61,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\qunit.css" />
     <TypeScriptCompile Include="Interfaces\INoteScript.d.ts" />
     <TypeScriptCompile Include="NoteSet.ts" />
+    <Content Include="Content\qunit-1.12.0.css" />
     <Content Include="NoteSet.js">
       <DependentUpon>NoteSet.ts</DependentUpon>
     </Content>
@@ -77,13 +77,21 @@
     <None Include="Scripts\jquery-2.0.2.intellisense.js" />
     <Content Include="Scripts\jquery-2.0.2.js" />
     <Content Include="Scripts\jquery-2.0.2.min.js" />
-    <Content Include="Scripts\qunit.js" />
+    <Content Include="Scripts\qunit-1.12.0.js" />
     <Content Include="Scripts\typings\jquery\jquery.d.ts" />
     <Content Include="Scripts\typings\qunit\qunit.d.ts" />
     <Content Include="Scripts\typings\underscore\underscore-typed.d.ts" />
     <Content Include="Scripts\typings\underscore\underscore.d.ts" />
     <Content Include="Scripts\underscore.js" />
     <Content Include="Scripts\underscore.min.js" />
+    <TypeScriptCompile Include="UnitTests\NoteSetTests.ts" />
+    <Content Include="UnitTests\NoteSetTests.js">
+      <DependentUpon>NoteSetTests.ts</DependentUpon>
+    </Content>
+    <Content Include="UnitTests\NoteSetTests.min.js">
+      <DependentUpon>NoteSetTests.ts</DependentUpon>
+    </Content>
+    <Content Include="UnitTests\tests.html" />
     <Content Include="Web.config" />
     <Content Include="Scripts\jquery-2.0.2.min.map" />
     <Content Include="Scripts\underscore.min.map" />
@@ -92,6 +100,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="UnitTests\NoteSetTests.js.map">
+      <DependentUpon>NoteSetTests.ts</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
