@@ -29,6 +29,6 @@ module NoteLex {
     }
 
     function mod(x1: number, x2: number) {
-        return ((x1 % x2) - x2) % x2;
+        return ((x1 % x2) + x2) % x2;
     }
 }
