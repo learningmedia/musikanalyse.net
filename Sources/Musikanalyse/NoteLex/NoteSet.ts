@@ -1,5 +1,5 @@
 /// <reference path="Scripts/typings/underscore/underscore-typed.d.ts" />
-/// <reference path="Interfaces/INoteScript.d.ts" />
+/// <reference path="Interfaces/INoteSet.d.ts" />
 
 module NoteLex {
     export class NoteSet implements INoteSet {
@@ -28,6 +28,7 @@ module NoteLex {
         }
     }
 
+    // Modulo that transposes negative values into positive range:
     function mod(x1: number, x2: number) {
         return ((x1 % x2) + x2) % x2;
     }
