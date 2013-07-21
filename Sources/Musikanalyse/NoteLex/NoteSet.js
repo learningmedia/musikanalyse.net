@@ -16,7 +16,7 @@ var NoteLex;
                     return x;
                 });
                 values = _.map(values, function (x) {
-                    return x % 12;
+                    return mod(x, 12);
                 });
                 values = _.unique(values);
                 this.base = values[0];
@@ -28,5 +28,9 @@ var NoteLex;
         return NoteSet;
     })();
     NoteLex.NoteSet = NoteSet;
+
+    function mod(x1, x2) {
+        return ((x1 % x2) - x2) % x2;
+    }
 })(NoteLex || (NoteLex = {}));
 //@ sourceMappingURL=NoteSet.js.map

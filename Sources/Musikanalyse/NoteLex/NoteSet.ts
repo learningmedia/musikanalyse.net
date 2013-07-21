@@ -20,11 +20,15 @@ module NoteLex {
             }
             else {
                 values = _.sortBy(values, x => x);
-                values = _.map(values, x => x % 12);
+                values = _.map(values, x => mod(x, 12));
                 values = _.unique(values);
                 this.base = values[0];
                 this.intervals =_.map(values, x => x - this.base);  
             }        
         }
+    }
+
+    function mod(x1: number, x2: number) {
+        return ((x1 % x2) - x2) % x2;
     }
 }
