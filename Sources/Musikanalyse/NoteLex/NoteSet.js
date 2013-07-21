@@ -5,11 +5,13 @@ var NoteLex;
     var NoteSet = (function () {
         function NoteSet(values) {
             if (!values) {
-                this.intervals = [];
                 this.base = NaN;
+                this.intervals = [];
+            } else if (values.length === 0) {
+                this.base = NaN;
+                this.intervals = values;
             } else {
                 this.intervals = normalize(values);
-                this.base = this.intervals.length === 0 ? NaN : this.intervals[0];
             }
         }
         return NoteSet;
@@ -17,6 +19,7 @@ var NoteLex;
     NoteLex.NoteSet = NoteSet;
 
     function normalize(values) {
+        var _this = this;
         values = _.sortBy(values, function (x) {
             return x;
         });
@@ -24,6 +27,10 @@ var NoteLex;
             return x % 12;
         });
         values = _.unique(values);
+        this.base = values[0];
+        values = _.map(values, function (x) {
+            return x - _this.base;
+        });
         return values;
     }
 })(NoteLex || (NoteLex = {}));

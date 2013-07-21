@@ -10,12 +10,16 @@ module NoteLex {
         constructor(values?: number[]) {
             
             if (!values) {
-                this.intervals = [];
                 this.base = NaN;
+                this.intervals = [];
+            }
+            else if (values.length === 0)
+            {
+                this.base = NaN;
+                this.intervals = values;                
             }
             else {
                 this.intervals = normalize(values);
-                this.base = this.intervals.length === 0 ? NaN : this.intervals[0];
             }        
         }
     }
@@ -24,6 +28,8 @@ module NoteLex {
         values = _.sortBy(values, x => x);
         values = _.map(values, x => x % 12);
         values = _.unique(values);
+        this.base = values[0]; 
+        values = _.map(values, x => x - this.base); 
         return values;
     }
 }
