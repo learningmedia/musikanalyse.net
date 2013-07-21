@@ -4,6 +4,7 @@ var NoteLex;
 (function (NoteLex) {
     var NoteSet = (function () {
         function NoteSet(values) {
+            var _this = this;
             if (!values) {
                 this.base = NaN;
                 this.intervals = [];
@@ -11,27 +12,21 @@ var NoteLex;
                 this.base = NaN;
                 this.intervals = values;
             } else {
-                this.intervals = normalize(values);
+                values = _.sortBy(values, function (x) {
+                    return x;
+                });
+                values = _.map(values, function (x) {
+                    return x % 12;
+                });
+                values = _.unique(values);
+                this.base = values[0];
+                this.intervals = _.map(values, function (x) {
+                    return x - _this.base;
+                });
             }
         }
         return NoteSet;
     })();
     NoteLex.NoteSet = NoteSet;
-
-    function normalize(values) {
-        var _this = this;
-        values = _.sortBy(values, function (x) {
-            return x;
-        });
-        values = _.map(values, function (x) {
-            return x % 12;
-        });
-        values = _.unique(values);
-        this.base = values[0];
-        values = _.map(values, function (x) {
-            return x - _this.base;
-        });
-        return values;
-    }
 })(NoteLex || (NoteLex = {}));
 //@ sourceMappingURL=NoteSet.js.map

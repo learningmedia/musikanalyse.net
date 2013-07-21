@@ -19,17 +19,12 @@ module NoteLex {
                 this.intervals = values;                
             }
             else {
-                this.intervals = normalize(values);
+                values = _.sortBy(values, x => x);
+                values = _.map(values, x => x % 12);
+                values = _.unique(values);
+                this.base = values[0];
+                this.intervals =_.map(values, x => x - this.base);  
             }        
         }
-    }
-
-    function normalize(values: number[]): number[]{
-        values = _.sortBy(values, x => x);
-        values = _.map(values, x => x % 12);
-        values = _.unique(values);
-        this.base = values[0]; 
-        values = _.map(values, x => x - this.base); 
-        return values;
     }
 }
