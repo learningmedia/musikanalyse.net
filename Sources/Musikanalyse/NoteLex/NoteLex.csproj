@@ -61,7 +61,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="Interfaces\INoteScript.d.ts" />
+    <TypeScriptCompile Include="Interfaces\INoteSet.d.ts" />
     <TypeScriptCompile Include="NoteSet.ts" />
     <Content Include="Content\qunit-1.12.0.css" />
     <Content Include="NoteSet.js">
