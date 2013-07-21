@@ -3,39 +3,15 @@
 var NoteLex;
 (function (NoteLex) {
     var NoteSet = (function () {
-        function NoteSet(base, intervals) {
-            this.base = base;
-            this.intervals = intervals;
-            if (base !== parseInt(base)) {
-                throw new Error("Base value is not a integer.");
+        function NoteSet(values) {
+            if (!values) {
+                this.intervals = [];
+                this.base = NaN;
+            } else {
+                this.intervals = normalize(values);
+                this.base = this.intervals.length === 0 ? NaN : this.intervals[0];
             }
-            if (base < 0 || base > 11) {
-                throw new Error("Base value is out of range.");
-            }
-
-            intervals = normalize(intervals);
-
-            if (intervals.length !== 0 && intervals[0] !== 0) {
-                throw new Error("Intervals have to contain the value 0.");
-            }
-            if (_.some(intervals, function (x) {
-                return x !== parseInt(x);
-            })) {
-                throw new Error("Some of the intervals value is not an integer.");
-            }
-            if (_.some(intervals, function (x) {
-                return x < 0 || x > 11;
-            })) {
-                throw new Error("Some of the interval values are out of range.");
-            }
-
-            this.intervals = intervals;
         }
-        NoteSet.fromMidiValues = function (midiValues) {
-            midiValues = normalize(midiValues);
-            var base = midiValues.length == 0 ? 0 : midiValues[0];
-            return new NoteSet(base, midiValues);
-        };
         return NoteSet;
     })();
     NoteLex.NoteSet = NoteSet;
