@@ -5,63 +5,56 @@
 
 module NoteLex.PcSetTable {
 
-    export function getPcSet(noteSet: INoteSet):number[] {
-        var length = noteSet.intervals.length;
-        var intervallArr: number[][] = [];
-        intervallArr[0] = noteSet.intervals;
+    export function getPcSet(noteSet: INoteSet): number[] {
 
+        debugger;
+
+        // get all permutations of the input array:
+        var intervallArr: number[][] = getAllNormalOrders(noteSet.intervals);
+
+        // from all last items in each permutation: the smallest number:
+        var allLastValues = _.map(intervallArr, x => _.last(x));
+        var minInterval: number = _.min(allLastValues);
+
+        // all permutations where the last item equals 'minInterval' (= most compact form):
+        var selection: number[][] = _.filter(intervallArr, x => _.last(x) === minInterval);
+
+        // all most compact forms and their inversions:
+        var selectionInclInversions = selection.concat(_.map(selection, x => createInversion(x)));
+
+        // the best one (= smallest intervals at the left side == PRIME FORM):
+        return getBestNormalOrder(selectionInclInversions);
+    }
+
+    function getAllNormalOrders(orderedSet: number[]): number[][] {
+        var length = orderedSet.length;
+        var result: number[][] = [orderedSet];
         for (var i = 1; i < length; i++) {
-            intervallArr[i] = GetNextNormalOrder(noteSet.intervals);
+            var first = _.first(orderedSet);
+            var rest = _.rest(orderedSet);
+            var newInitialValue = _.first(rest);
+            var nextPermutation = _.map(rest, x => x - newInitialValue).concat(first - newInitialValue + 12);
+            result.push(nextPermutation);
+            orderedSet = nextPermutation;
         }
 
-        var minInterval: number = GetMinInterval(intervallArr);
-        var selection: number[][] = GetMinRange(intervallArr, minInterval);
-        return GetPrimeForm(selection);        
+        return result;
     }
 
-    function GetNextNormalOrder(intervals: number[]): number[] {
-        var first: number = intervals[0];
-        var originalLength: number = intervals.length;
-        intervals = intervals.slice(1);
-        for (var i = 0; i < intervals.length; i++) {
-            var n = intervals[0];
-            intervals[0] = n - first;
-        }
-        intervals[originalLength] = first;
-        intervals = _.map(intervals, x => NoteLex.CalculationHelper.mod(x, 12));
-        return intervals;
+    function createInversion(orderedSet: number[]): number[] {
+        var biggestValue = _.last(orderedSet);
+        return _.map(orderedSet.reverse(), x => biggestValue - x);
     }
 
-    function GetMinInterval(intervalArrCol: number[][]): number{
-        var minInterval: number = 12;
-        for (var i = 0; i < intervalArrCol.length; i++) {
-            var interval = intervalArrCol[i][intervalArrCol[i].length - 1];
-            if (minInterval > interval) {
-                minInterval = interval;
-            }
-        }
-        return minInterval;
-    }
-
-    function GetMinRange(selection: number[][], minRange: number): number[][]{
-        var minRangeIntervals: number[][] = [];
-        var counter: number = 0;
-
+    function getBestNormalOrder(selection: number[][]): number[] {
+        var valuesToCompare: string[] = [];
         for (var i = 0; i < selection.length; i++) {
-            if (selection[i][selection[i].length - 1] === minRange) {
-                minRangeIntervals[counter] = selection[i];
-                counter += 1;
-            }
+            valuesToCompare.push(_.map(selection[i], x => x < 10 ? "0" + x : "" + x).toString());
         }
-        return minRangeIntervals;
-    }
 
-    function GetPrimeForm(selection: number[][]): number[]{
-        var helperArr: string[] = [];
-        for (var i = 0; i < selection.length; i++) {
-            helperArr[i] = _.map(selection[i], x => x < 10 ? "0" + x : "" + x).toString();
-        }
-        var s = helperArr.sort()[0];
-        return _.map(s.split(','), x => parseInt(x));
+        debugger;
+        var best = valuesToCompare.sort()[0];
+        console.log(best);
+        return _.map(best.split(","), x => parseInt(x));
     }
 }

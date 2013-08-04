@@ -1,5 +1,3 @@
-/// <reference path="../Scripts/typings/qunit/qunit.d.ts" />
-/// <reference path="../NoteSet.ts" />
 QUnit.module("NoteSetTests");
 
 test("Constructor should create an empty set if no argument is supplied.", function () {

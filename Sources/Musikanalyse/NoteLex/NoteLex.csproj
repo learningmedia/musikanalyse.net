@@ -102,6 +102,20 @@
     <Content Include="UnitTests\NoteSetTests.min.js">
       <DependentUpon>NoteSetTests.ts</DependentUpon>
     </Content>
+    <TypeScriptCompile Include="CalculationHelper.ts" />
+    <Content Include="CalculationHelper.js">
+      <DependentUpon>CalculationHelper.ts</DependentUpon>
+    </Content>
+    <Content Include="CalculationHelper.min.js">
+      <DependentUpon>CalculationHelper.ts</DependentUpon>
+    </Content>
+    <TypeScriptCompile Include="UnitTests\PcSetTests.ts" />
+    <Content Include="UnitTests\PcSetTests.js">
+      <DependentUpon>PcSetTests.ts</DependentUpon>
+    </Content>
+    <Content Include="UnitTests\PcSetTests.min.js">
+      <DependentUpon>PcSetTests.ts</DependentUpon>
+    </Content>
     <Content Include="UnitTests\tests.html" />
     <Content Include="Web.config" />
     <Content Include="Scripts\jquery-2.0.2.min.map" />
@@ -113,6 +127,12 @@
   <ItemGroup>
     <Content Include="UnitTests\NoteSetTests.js.map">
       <DependentUpon>NoteSetTests.ts</DependentUpon>
+    </Content>
+    <Content Include="UnitTests\PcSetTests.js.map">
+      <DependentUpon>PcSetTests.ts</DependentUpon>
+    </Content>
+    <Content Include="CalculationHelper.js.map">
+      <DependentUpon>CalculationHelper.ts</DependentUpon>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
