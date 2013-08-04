@@ -1,3 +1,4 @@
+/// <reference path="CalculationHelper.ts" />
 /// <reference path="Scripts/typings/underscore/underscore-typed.d.ts" />
 /// <reference path="Interfaces/INoteSet.d.ts" />
 
@@ -20,16 +21,11 @@ module NoteLex {
             }
             else {
                 values = _.sortBy(values, x => x);
-                values = _.map(values, x => mod(x, 12));
+                values = _.map(values, x => NoteLex.CalculationHelper.mod(x, 12));
                 values = _.unique(values);
                 this.base = values[0];
                 this.intervals =_.map(values, x => x - this.base);  
             }        
         }
-    }
-
-    // Modulo that transposes negative values into positive range:
-    function mod(x1: number, x2: number) {
-        return ((x1 % x2) + x2) % x2;
     }
 }

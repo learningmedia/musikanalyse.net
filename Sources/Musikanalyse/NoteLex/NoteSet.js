@@ -1,5 +1,3 @@
-/// <reference path="Scripts/typings/underscore/underscore-typed.d.ts" />
-/// <reference path="Interfaces/INoteSet.d.ts" />
 var NoteLex;
 (function (NoteLex) {
     var NoteSet = (function () {
@@ -16,7 +14,7 @@ var NoteLex;
                     return x;
                 });
                 values = _.map(values, function (x) {
-                    return mod(x, 12);
+                    return NoteLex.CalculationHelper.mod(x, 12);
                 });
                 values = _.unique(values);
                 this.base = values[0];
@@ -28,10 +26,5 @@ var NoteLex;
         return NoteSet;
     })();
     NoteLex.NoteSet = NoteSet;
-
-    // Modulo that transposes negative values into positive range:
-    function mod(x1, x2) {
-        return ((x1 % x2) + x2) % x2;
-    }
 })(NoteLex || (NoteLex = {}));
 //@ sourceMappingURL=NoteSet.js.map
