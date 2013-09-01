@@ -68,22 +68,10 @@
     <Content Include="NoteSet.js">
       <DependentUpon>NoteSet.ts</DependentUpon>
     </Content>
-    <Content Include="NoteSet.min.js">
-      <DependentUpon>NoteSet.ts</DependentUpon>
-    </Content>
     <Content Include="packages.config" />
-    <Content Include="NoteSet.js.map">
-      <DependentUpon>NoteSet.ts</DependentUpon>
-    </Content>
-    <Content Include="PcSetTable.js.map">
-      <DependentUpon>PcSetTable.ts</DependentUpon>
-    </Content>
     <None Include="Scripts\jquery-2.0.2.intellisense.js" />
     <TypeScriptCompile Include="PcSetTable.ts" />
     <Content Include="PcSetTable.js">
-      <DependentUpon>PcSetTable.ts</DependentUpon>
-    </Content>
-    <Content Include="PcSetTable.min.js">
       <DependentUpon>PcSetTable.ts</DependentUpon>
     </Content>
     <Content Include="Scripts\jquery-2.0.2.js" />
@@ -99,21 +87,12 @@
     <Content Include="UnitTests\NoteSetTests.js">
       <DependentUpon>NoteSetTests.ts</DependentUpon>
     </Content>
-    <Content Include="UnitTests\NoteSetTests.min.js">
-      <DependentUpon>NoteSetTests.ts</DependentUpon>
-    </Content>
     <TypeScriptCompile Include="CalculationHelper.ts" />
     <Content Include="CalculationHelper.js">
       <DependentUpon>CalculationHelper.ts</DependentUpon>
     </Content>
-    <Content Include="CalculationHelper.min.js">
-      <DependentUpon>CalculationHelper.ts</DependentUpon>
-    </Content>
     <TypeScriptCompile Include="UnitTests\PcSetTests.ts" />
     <Content Include="UnitTests\PcSetTests.js">
-      <DependentUpon>PcSetTests.ts</DependentUpon>
-    </Content>
-    <Content Include="UnitTests\PcSetTests.min.js">
       <DependentUpon>PcSetTests.ts</DependentUpon>
     </Content>
     <Content Include="UnitTests\tests.html" />
@@ -125,15 +104,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="UnitTests\NoteSetTests.js.map">
-      <DependentUpon>NoteSetTests.ts</DependentUpon>
-    </Content>
-    <Content Include="UnitTests\PcSetTests.js.map">
-      <DependentUpon>PcSetTests.ts</DependentUpon>
-    </Content>
-    <Content Include="CalculationHelper.js.map">
-      <DependentUpon>CalculationHelper.ts</DependentUpon>
-    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -145,6 +115,17 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptIncludeComments>true</TypeScriptIncludeComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptIncludeComments>false</TypeScriptIncludeComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
