@@ -6,8 +6,8 @@ declare module NoteLex {
         intervalVector: number[];
         forteName: string;
         cardinality: number;
-        zMate: IPcSet;
-        superSets: IPcSet[];
-        subSets: IPcSet[];
+        zMate: string;
+        superSets: string[];
+        subSets: string[];
     }
 }
