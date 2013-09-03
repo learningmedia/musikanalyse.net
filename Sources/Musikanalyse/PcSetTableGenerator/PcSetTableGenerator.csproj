@@ -44,7 +44,11 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CombinationHelper.cs" />
     <Compile Include="DestinationStructure.cs" />
+    <Compile Include="MathHelper.cs" />
+    <Compile Include="PcSet.cs" />
+    <Compile Include="PcSetHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SerializationHelper.cs" />
