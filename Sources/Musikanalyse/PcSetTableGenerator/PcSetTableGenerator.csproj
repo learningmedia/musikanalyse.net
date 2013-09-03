@@ -46,11 +46,13 @@
   <ItemGroup>
     <Compile Include="CombinationHelper.cs" />
     <Compile Include="DestinationStructure.cs" />
+    <Compile Include="LeftCompactComparer.cs" />
     <Compile Include="MathHelper.cs" />
     <Compile Include="PcSet.cs" />
     <Compile Include="PcSetHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RightCompactComparer.cs" />
     <Compile Include="SerializationHelper.cs" />
   </ItemGroup>
   <ItemGroup>

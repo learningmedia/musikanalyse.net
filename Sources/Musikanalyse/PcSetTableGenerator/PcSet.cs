@@ -1,5 +1,6 @@
 ﻿namespace PcSetTableGenerator
 {
+    using System;
     using System.Collections;
     using System.Collections.Generic;
     using System.Linq;
@@ -22,6 +23,27 @@
             }
 
             return new PcSet(Enumerable.Empty<int>());
+        }
+
+        public int Count
+        {
+            get
+            {
+                return this.set.Count;
+            }
+        }
+
+        public int this[int index]
+        {
+            get
+            {
+                if (index < 0 || index >= this.Count)
+                {
+                    throw new ArgumentOutOfRangeException("index");
+                }
+
+                return this.set.ElementAt(index);
+            }
         }
 
         public IEnumerator<int> GetEnumerator()

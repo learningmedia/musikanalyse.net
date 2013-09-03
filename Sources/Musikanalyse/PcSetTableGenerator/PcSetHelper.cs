@@ -13,14 +13,12 @@
 
         public static PcSet FindFortePrimeForm(IEnumerable<PcSet> allNormalOrders)
         {
-            // TODO: Implement:
-            return null;
+            return allNormalOrders.OrderBy(x => x, new LeftCompactComparer()).First();
         }
 
         public static PcSet FindRahnPrimeForm(IEnumerable<PcSet> allNormalOrders)
         {
-            // TODO: Implement:
-            return null;
+            return allNormalOrders.OrderBy(x => x, new RightCompactComparer()).First();
         }
 
         public static int[] GetIntervalVector(PcSet primeForm)
