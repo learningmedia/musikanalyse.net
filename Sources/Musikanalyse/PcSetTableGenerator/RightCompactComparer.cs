@@ -13,6 +13,11 @@
                 throw new InvalidOperationException("The set lengths have to match.");
             }
 
+            if (x.Count == 0)
+            {
+                return 0;
+            }
+
             if (x.First() != y.First())
             {
                 throw new InvalidOperationException("The sets have to start with the same value.");

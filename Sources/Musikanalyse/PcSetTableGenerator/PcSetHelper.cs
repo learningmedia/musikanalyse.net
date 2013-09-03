@@ -7,8 +7,17 @@
     {
         public static IEnumerable<PcSet> GetAllNormalOrders(PcSet set)
         {
-            // TODO: Implement:
-            return Enumerable.Empty<PcSet>();
+            if (set.Count < 2)
+            {
+                return new[] { new PcSet(set) };
+            }
+
+            ILookup<int, PcSet> lookup = set
+                .Select((x, i) => set.Shift(i))
+                .ToLookup(x => x.Count != 0 ? x.Last() : 0);
+
+            List<PcSet> setsWithSmallestRange = lookup[lookup.Min(x => x.Key)].ToList();
+            return setsWithSmallestRange.Concat(setsWithSmallestRange.Select(x => x.Invert()));
         }
 
         public static PcSet FindFortePrimeForm(IEnumerable<PcSet> allNormalOrders)

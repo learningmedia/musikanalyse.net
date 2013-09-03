@@ -25,6 +25,34 @@
             return new PcSet(Enumerable.Empty<int>());
         }
 
+        public PcSet Invert()
+        {
+            if (this.Any())
+            {
+                int greatestValue = this.Max();
+                return new PcSet(this.set.Reverse().Select(x => greatestValue - x));
+            }
+
+            return new PcSet(Enumerable.Empty<int>());
+        }
+
+        public PcSet Shift(int amount)
+        {
+            if (amount > this.Count)
+            {
+                throw new ArgumentOutOfRangeException("amount");
+            }
+
+            if (amount == 0)
+            {
+                return new PcSet(this.set);
+            }
+
+            int[] original = this.ToArray();
+            int firstOriginalValue = original.Length != 0 ? original.First() : 0;
+            return new PcSet(original.Skip(amount).Select(x => x - firstOriginalValue).Concat(original.Take(amount).Select(x => x - firstOriginalValue)));
+        }
+
         public int Count
         {
             get
