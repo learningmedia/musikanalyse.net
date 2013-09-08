@@ -5,13 +5,22 @@
     using System.Collections.Generic;
     using System.Linq;
 
-    public sealed class PcSet : IEnumerable<int>
+    public sealed class PcSet : IEnumerable<int>, IEquatable<PcSet>
     {
         private readonly HashSet<int> set;
+
+        private readonly Lazy<PcSet> fortePrimeForm;
+
+        private readonly Lazy<PcSet> rahnPrimeForm;
+
+        private readonly Lazy<int[]> intervalVector;
 
         public PcSet(IEnumerable<int> collection)
         {
             this.set = new HashSet<int>(collection.Select(x => MathHelper.Mod(x, 12)).Distinct().OrderBy(x => x));
+            this.fortePrimeForm = new Lazy<PcSet>(() => PcSetHelper.FindFortePrimeForm(PcSetHelper.GetAllNormalOrders(this)));
+            this.rahnPrimeForm = new Lazy<PcSet>(() => PcSetHelper.FindRahnPrimeForm(PcSetHelper.GetAllNormalOrders(this)));
+            this.intervalVector = new Lazy<int[]>(() => PcSetHelper.GetIntervalVector(this));
         }
 
         public PcSet TranslateToZero()
@@ -43,14 +52,42 @@
                 throw new ArgumentOutOfRangeException("amount");
             }
 
-            if (amount == 0)
+            if (amount == 0 || this.Count == 1)
             {
                 return new PcSet(this.set);
             }
 
-            int[] original = this.ToArray();
-            int firstOriginalValue = original.Length != 0 ? original.First() : 0;
-            return new PcSet(original.Skip(amount).Select(x => x - firstOriginalValue).Concat(original.Take(amount).Select(x => x - firstOriginalValue)));
+            int[] originalPitches = this.ToArray();
+            int delta = originalPitches[amount] - originalPitches[0];
+            IEnumerable<int> firstPart = originalPitches.Skip(amount).Select(x => x - delta);
+            IEnumerable<int> lastPart = originalPitches.Take(amount).Select(x => x - delta);
+            List<int> allPitches = firstPart.Concat(lastPart).ToList();
+
+            return new PcSet(allPitches);
+        }
+
+        public PcSet FortePrimeForm
+        {
+            get
+            {
+                return this.fortePrimeForm.Value;
+            }
+        }
+
+        public PcSet RahnPrimeForm
+        {
+            get
+            {
+                return this.rahnPrimeForm.Value;
+            }
+        }
+
+        public int[] IntervalVector
+        {
+            get
+            {
+                return this.intervalVector.Value;
+            }
         }
 
         public int Count
@@ -82,6 +119,26 @@
         IEnumerator IEnumerable.GetEnumerator()
         {
             return this.set.GetEnumerator();
+        }
+
+        public bool Equals(PcSet other)
+        {
+            return PcSetHelper.ArraysAreEqual(this.ToArray(), other.ToArray());
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null || this.GetType() != obj.GetType())
+            {
+                return false;
+            }
+
+            return this.Equals((PcSet)obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return this.set.GetHashCode();
         }
 
         public override string ToString()

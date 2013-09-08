@@ -55,6 +55,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="PcSetHelperTests.cs" />
+    <Compile Include="PcSetTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,15 +1,28 @@
 ﻿namespace PcSetTableGenerator
 {
+    using System;
     using System.Collections.Generic;
     using System.Linq;
+
+    using PcSetTableGenerator.Combinatorics;
 
     public static class PcSetHelper
     {
         public static IEnumerable<PcSet> GetAllNormalOrders(PcSet set)
         {
-            if (set.Count < 2)
+            if (set.Count == 0)
             {
-                return new[] { new PcSet(set) };
+                return new[] { new PcSet(new int[0]) };
+            }
+
+            if (set.Count == 1)
+            {
+                return new[] { new PcSet(new[] { 0 }) };
+            }
+
+            if (set.Count == 12)
+            {
+                return new[] { new PcSet(new[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 }) };
             }
 
             ILookup<int, PcSet> lookup = set
@@ -64,6 +77,33 @@
             int tritone = values.FindAll(x => x == 6).Count; 
 
             return new[] { smallSecond, greatSecund, smallThird, greatThird, quart, tritone };
+        }
+
+        public static IEnumerable<PcSet> GetAllPossibleSets(int minValue, int maxValue, int length)
+        {
+            if (minValue > maxValue)
+            {
+                throw new ArgumentException("minValue has to be less or equal than maxvalue", "minValue");
+            }
+
+            if (length > (maxValue - minValue + 1))
+            {
+                throw new ArgumentException("length has to be less or equal than (maxvalue - minValue + 1)", "length");
+            }
+
+            List<int> values = Enumerable.Range(minValue, maxValue - minValue + 1).ToList();
+            Combinations<int> combinations = new Combinations<int>(values, length, GenerateOption.WithoutRepetition);
+            return combinations.Select(x => new PcSet(x.OrderBy(y => y)));
+        }
+
+        public static bool ArraysAreEqual<T>(T[] set1, T[] set2)
+        {
+            if (set1.Length != set2.Length)
+            {
+                return false;
+            }
+
+            return !set1.Where((t, i) => !t.Equals(set2[i])).Any();
         }
     }
 }

@@ -2,9 +2,11 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Diagnostics;
     using System.IO;
     using System.Linq;
     using System.Text;
+    using System.Xml.Linq;
 
     using Newtonsoft.Json;
     using Newtonsoft.Json.Serialization;
@@ -15,35 +17,41 @@
         {
             Dictionary<int, List<DestinationStructure>> table = new Dictionary<int, List<DestinationStructure>>();
 
-            IEnumerable<int> allSetLengths = Enumerable.Range(0, 13);
-            foreach (int length in allSetLengths)
+            for (int length = 0; length <= 12; length++)
             {
                 List<DestinationStructure> list = new List<DestinationStructure>();
                 table[length] = list;
 
-                IEnumerable<PcSet> allPossibleSets = CombinationHelper.GetAllPossibleCombinations(0, 11, length).Where(x => x.Count == 0 || x.First() == 0);
+                IEnumerable<PcSet> allPossibleSets = PcSetHelper.GetAllPossibleSets(0, 11, length).Where(x => x.Count == 0 || x.First() == 0);
                 foreach (PcSet possibleSet in allPossibleSets)
                 {
-                    List<PcSet> allNormalOrders = PcSetHelper.GetAllNormalOrders(possibleSet).ToList();
-                    PcSet fortePrimeForm = PcSetHelper.FindFortePrimeForm(allNormalOrders);
-                    PcSet rahnPrimeForm = PcSetHelper.FindRahnPrimeForm(allNormalOrders);
-                    int[] intervalVector = PcSetHelper.GetIntervalVector(fortePrimeForm);
+                    if (!list.Any(x => PcSetHelper.ArraysAreEqual(x.FortePrimeForm, possibleSet.FortePrimeForm.ToArray())))
+                    {
+                        list.Add(
+                            new DestinationStructure
+                            {
+                                Cardinality = length,
+                                IntervalVector = possibleSet.IntervalVector,
+                                RahnPrimeForm = possibleSet.RahnPrimeForm.ToArray(),
+                                FortePrimeForm = possibleSet.FortePrimeForm.ToArray()
+                            });
+                    }
+                }
+            }
 
-                    list.Add(
-                        new DestinationStructure
-                        {
-                            Cardinality = length,
-                            IntervalVector = intervalVector,
-                            RahnPrimeForm = rahnPrimeForm.ToArray(),
-                            FortePrimeForm = fortePrimeForm.ToArray()
-                        });
+            for (int length = 0; length <= 12; length++)
+            {
+                List<DestinationStructure> list = table[length].OrderByDescending(x => SerializationHelper.SerializeHex(x.IntervalVector)).ToList();
+                for (int i = 0; i < list.Count; i++)
+                {
+                    DestinationStructure element = list[i];
+                    DestinationStructure zMate = table.SelectMany(x => x.Value).FirstOrDefault(x => !x.Equals(element) && PcSetHelper.ArraysAreEqual(x.IntervalVector, element.IntervalVector));
+                    if (zMate != null)
+                    {
+                        element.ZMate = SerializationHelper.SerializeHex(zMate.FortePrimeForm);
+                    }
 
-                    Console.WriteLine(
-                        "Set with length: {0}: Forte: {1} Rahn: {2} IV: {3}",
-                        length,
-                        fortePrimeForm,
-                        rahnPrimeForm,
-                        SerializationHelper.SerializeHex(intervalVector));
+                    element.ForteName = string.Format("{0}-{1}{2}", length, element.ZMate != null ? "Z" : null, i + 1);
                 }
             }
 
@@ -60,11 +68,38 @@
                 JsonConvert.SerializeObject(table, serializerSettings),
                 Encoding.UTF8);
 
+            ShowHtml(table);
 
             Console.WriteLine("Press any key to exit...");
             Console.ReadKey(true);
         }
 
+        private static void ShowHtml(Dictionary<int, List<DestinationStructure>> table)
+        {
+            string tempFileName = Path.Combine(Path.GetTempPath(), string.Format("{0}.html", Guid.NewGuid()));
+            new XElement("html", new XElement("table", CreateRows(table))).Save(tempFileName);
+            Process.Start(tempFileName);
+        }
+
+        private static IEnumerable<XElement> CreateRows(Dictionary<int, List<DestinationStructure>> table)
+        {
+            yield return new XElement(
+                "tr",
+                new XElement("th", "Forte Name"),
+                new XElement("th", "Forte Prime"),
+                new XElement("th", "Rahn Prime"),
+                new XElement("th", "Interval Vector"));
+
+            foreach (DestinationStructure result in table.SelectMany(x => x.Value))
+            {
+                yield return new XElement(
+                    "tr",
+                    new XElement("td", result.ForteName),
+                    new XElement("td", SerializationHelper.SerializeHex(result.FortePrimeForm)),
+                    new XElement("td", SerializationHelper.SerializeHex(result.RahnPrimeForm)),
+                    new XElement("td", SerializationHelper.SerializeHex(result.IntervalVector)));
+            }
+        }
 
         //private static string[] GetSubSetIds(PcSet pcSet, IEnumerable<PcSet> allSets)
         //{
