@@ -63,6 +63,8 @@
     <Compile Include="SerializationHelper.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Files\Forte Pc-Set-Table.csv" />
+    <None Include="Files\Forte Pc-Set-Table.xlsx" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

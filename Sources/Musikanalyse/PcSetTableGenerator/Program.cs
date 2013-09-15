@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Diagnostics;
+    using System.Globalization;
     using System.IO;
     using System.Linq;
     using System.Text;
@@ -55,6 +56,57 @@
                 }
             }
 
+            string fileName = Path.Combine(
+                Environment.GetFolderPath(Environment.SpecialFolder.Desktop),
+                "Forte Pc-Set-Table.csv");
+            
+            List<string> primeFormFromFortesTheStructureOfAtonalMusic = ImportPrimeFormFromCsv(fileName).ToList();
+            List<string> primeFormFromTable =
+                table.Values.SelectMany(x => x)
+                    .Where(x => x.Cardinality > 2 && x.Cardinality < 10)
+                    .Select(x => SerializationHelper.SerializeHex(x.FortePrimeForm).Replace(",", ""))
+                    .ToList();
+
+            
+            //List<string> result1 = primeFormFromFortesTheStructureOfAtonalMusic.Except(primeFormFromTable).ToList();
+            //foreach (string s in result1)
+            //{
+            //    Console.WriteLine(s);
+            //}
+            //Console.WriteLine("=======================");
+            //List<string> result2 = primeFormFromTable.Except(primeFormFromFortesTheStructureOfAtonalMusic).ToList();
+            //foreach (string s in result2)
+            //{
+            //    Console.WriteLine(s);
+            //} 
+            
+            //Console.WriteLine("=======================");
+            var testFromBook = ImportZtestFromCsv(fileName).ToList();
+            var testFromTable = GenerateZtestFromTable(table).ToList();
+            List<string> result3 = testFromBook.Except(testFromTable).ToList();
+            foreach (string s in result3)
+            {
+                Console.WriteLine(s);
+            } 
+            Console.WriteLine("===========================");
+            List<string> result4 = testFromTable.Except(testFromBook).ToList();
+            foreach (string s in result4)
+            {
+                Console.WriteLine(s);
+            }
+
+
+            Console.WriteLine("===========================");
+            Console.WriteLine("{0}{1}", "Forte-Primeform".PadRight(24), "Rahn-Primeform".PadRight(24));
+            Console.WriteLine(new string('-', 48));
+
+            Console.WriteLine("Forte-Primeform    Rahn-Primeform");
+            foreach (DestinationStructure bla in table.Values.SelectMany(x => x).Where(x => !PcSetHelper.ArraysAreEqual(x.FortePrimeForm, x.RahnPrimeForm)))
+            {
+                Console.WriteLine("{0}{1}", SerializationHelper.SerializeHex(bla.FortePrimeForm).PadRight(24), SerializationHelper.SerializeHex(bla.RahnPrimeForm).PadRight(24));
+            }
+
+
             JsonSerializerSettings serializerSettings = new JsonSerializerSettings
                 {
                     ContractResolver = new CamelCasePropertyNamesContractResolver(),
@@ -68,10 +120,48 @@
                 JsonConvert.SerializeObject(table, serializerSettings),
                 Encoding.UTF8);
 
+            ExportToCsv(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "pcsettable.csv"), table);
+
             ShowHtml(table);
 
             Console.WriteLine("Press any key to exit...");
             Console.ReadKey(true);
+        }
+
+        private static IEnumerable<string> GenerateZtestFromTable(Dictionary<int, List<DestinationStructure>> table)
+        {
+            return table.Values.SelectMany(x => x).Where(x => x.Cardinality > 2 && x.Cardinality < 10).Select(
+                value => string.Format(
+                    "{0}{1}",
+                    SerializationHelper.SerializeHex(value.FortePrimeForm).Replace(",", ""),
+                    string.IsNullOrEmpty(value.ZMate) ? "" : "-z"));
+        }
+
+        private static IEnumerable<string> ImportPrimeFormFromCsv(string fileName)
+        {
+            IEnumerable<string> lines = File.ReadLines(fileName);
+            return lines.Select(line => line.Split(';')).Select(parts => parts[1]);
+        }
+
+        private static void ExportToCsv(string fileName, Dictionary<int, List<DestinationStructure>> table)
+        {
+            using (StreamWriter streamWriter = new StreamWriter(fileName, false, Encoding.UTF8))
+            {
+                foreach (DestinationStructure destinationStructure in table.Values.SelectMany(x=> x))
+                {
+                    streamWriter.WriteLine(
+                        "{0};{1};{2}",
+                        (destinationStructure.ForteName?? string.Empty).Replace("Z", ""),
+                        SerializationHelper.SerializeHex(destinationStructure.FortePrimeForm).Replace(",", ""),
+                        string.IsNullOrEmpty(destinationStructure.ZMate) ? "" : "z");
+                }
+            }
+        }
+
+        private static IEnumerable<string> ImportZtestFromCsv(string fileName)
+        {
+            IEnumerable<string> lines = File.ReadLines(fileName);
+            return lines.Select(line => line.Split(';')).Select(chars => string.Format("{0}{1}", chars[1], string.IsNullOrEmpty(chars[2]) ? "" : "-z"));
         }
 
         private static void ShowHtml(Dictionary<int, List<DestinationStructure>> table)
