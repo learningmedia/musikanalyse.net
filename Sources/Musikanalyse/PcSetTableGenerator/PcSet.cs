@@ -98,6 +98,8 @@
             }
         }
 
+        public string ForteName { get; set; }
+
         public int this[int index]
         {
             get
@@ -144,6 +146,16 @@
         public override string ToString()
         {
             return SerializationHelper.SerializeHex(this);
+        }
+
+        public bool IsSubsetOf(PcSet pcSet)
+        {
+            return this.set.IsSubsetOf(pcSet.set);
+        }
+
+        public bool IsSupersetOf(PcSet pcSet)
+        {
+            return this.set.IsSupersetOf(pcSet.set);
         }
     }
 }

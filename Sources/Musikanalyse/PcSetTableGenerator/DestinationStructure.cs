@@ -2,10 +2,9 @@
 {
     public class DestinationStructure
     {
-        public string Id { get; set; }
-        public int[] RahnPrimeForm { get; set; }
-        public int[] FortePrimeForm { get; set; }
-        public int[] IntervalVector { get; set; }
+        public string RahnPrimeForm { get; set; }
+        public string FortePrimeForm { get; set; }
+        public string IntervalVector { get; set; }
         public string ForteName { get; set; }
         public int Cardinality { get; set; }
         public string ZMate { get; set; }

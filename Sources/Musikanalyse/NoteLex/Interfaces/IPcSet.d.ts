@@ -1,9 +1,9 @@
 // Provides an Encapsulation for pitch class sets.
 declare module NoteLex {
     export interface IPcSet {
-        rahnPrimeForm: number[];
-        fortePrimeForm: number[];
-        intervalVector: number[];
+        rahnPrimeForm: string;
+        fortePrimeForm: string;
+        intervalVector: string;
         forteName: string;
         cardinality: number;
         zMate: string;
