@@ -14,6 +14,11 @@
 
     var KEY_DATA_KEY = "PIANO_KEY_DATA_KEY";
 
+    var selectionMode = {      
+        NONE: "none",
+        MULTIPLE: "multiple"
+    };
+
     var noop = function() {
     };
 
@@ -27,6 +32,7 @@
         pressedKeyClass: "pn-pressed-key",
         selectedKeyClass: "pn-selected-key",
         keyCreatedCallback: noop,
+        selectionMode: selectionMode.NONE,
         selectionChangedCallback: noop
     };
 
@@ -43,6 +49,8 @@
             return this.data(CONTAINER_DATA_KEY);
         }
     };
+
+    $.fn.piano.selectionMode = selectionMode;
 
     function createPiano(container, options) {
         validateOptions(options);
@@ -91,10 +99,12 @@
             keyDiv.appendTo(container);
         }
         
-        $("." + options.keyClass, container).on("click", function () {
-            $(this).toggleClass(options.selectedKeyClass);
-            options.selectionChangedCallback();
-        });
+        if (options.selectionMode !== selectionMode.NONE) {
+            $("." + options.keyClass, container).on("click", function () {
+                $(this).toggleClass(options.selectedKeyClass);
+                options.selectionChangedCallback();
+            });
+        }
 
         var pianoObject = {
             getSelectedKeys: function() {

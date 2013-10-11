@@ -15898,7 +15898,7 @@ module NoteLex.PcSetTable {
     }
 
     function lookupPcSet(primeForm: number[]): IPcSet {
-        var numbersAsStrings = _.map(primeForm, x => x.toString(16));
+        var numbersAsStrings = _.map(primeForm, x => x.toString(16).toUpperCase());
         var setAsString = _.reduce(numbersAsStrings, (x, y) => x + y, "");
         return <IPcSet> primeFormTable[setAsString] || null;
     }
@@ -15920,7 +15920,7 @@ module NoteLex.PcSetTable {
 
     function createInversion(orderedSet: number[]): number[] {
         var biggestValue = _.last(orderedSet);
-        return _.map(orderedSet.reverse(), x => biggestValue - x);
+        return _.map(orderedSet.slice(0).reverse(), x => biggestValue - x);
     }
 
     function getBestNormalOrder(selection: number[][]): number[] {

@@ -13,14 +13,16 @@
         <script src="piano.js"></script>
         <script>
             $(function () {
-                var optionsFuerSpaeter = {
+               var optionsFuerSpaeter = {
                     startKey: 60,
                     endKey: 83,
                     keyCreatedCallback: function(keyElement, keyValue) {
                         $("<div/>").text(keyValue).appendTo(keyElement);
                     },
+                    selectionMode: $.fn.piano.selectionMode.MULTIPLE,
                     selectionChangedCallback: onSelectionChanged
                 };
+
                 
                 $("#pianoContainer").piano(optionsFuerSpaeter);
 

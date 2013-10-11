@@ -24,7 +24,7 @@ module NoteLex {
                 values = _.map(values, x => NoteLex.CalculationHelper.mod(x, 12));
                 values = _.unique(values);
                 this.base = values[0];
-                this.intervals =_.map(values, x => x - this.base);  
+                this.intervals = _.sortBy(_.map(values, x => NoteLex.CalculationHelper.mod(x - this.base, 12)), x => x);
             }        
         }
     }

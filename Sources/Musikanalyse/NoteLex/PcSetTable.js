@@ -15905,7 +15905,7 @@ var NoteLex;
 
         function lookupPcSet(primeForm) {
             var numbersAsStrings = _.map(primeForm, function (x) {
-                return x.toString(16);
+                return x.toString(16).toUpperCase();
             });
             var setAsString = _.reduce(numbersAsStrings, function (x, y) {
                 return x + y;
@@ -15932,7 +15932,7 @@ var NoteLex;
 
         function createInversion(orderedSet) {
             var biggestValue = _.last(orderedSet);
-            return _.map(orderedSet.reverse(), function (x) {
+            return _.map(orderedSet.slice(0).reverse(), function (x) {
                 return biggestValue - x;
             });
         }

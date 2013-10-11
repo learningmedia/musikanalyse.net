@@ -1,3 +1,6 @@
+/// <reference path="CalculationHelper.ts" />
+/// <reference path="Scripts/typings/underscore/underscore-typed.d.ts" />
+/// <reference path="Interfaces/INoteSet.d.ts" />
 var NoteLex;
 (function (NoteLex) {
     var NoteSet = (function () {
@@ -18,8 +21,10 @@ var NoteLex;
                 });
                 values = _.unique(values);
                 this.base = values[0];
-                this.intervals = _.map(values, function (x) {
-                    return x - _this.base;
+                this.intervals = _.sortBy(_.map(values, function (x) {
+                    return NoteLex.CalculationHelper.mod(x - _this.base, 12);
+                }), function (x) {
+                    return x;
                 });
             }
         }
@@ -27,4 +32,3 @@ var NoteLex;
     })();
     NoteLex.NoteSet = NoteSet;
 })(NoteLex || (NoteLex = {}));
-//@ sourceMappingURL=NoteSet.js.map
