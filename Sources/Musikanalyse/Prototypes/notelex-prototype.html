@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Prototype</title>
+    <script src="../NoteLex/scripts/jquery-2.0.2.min.js"></script>
+    <script src="../NoteLex/scripts/underscore.min.js"></script>
+    <script src="../NoteLex/calculationhelper.js"></script>
+    <script src="../NoteLex/noteset.js"></script>
+    <script src="../NoteLex/pcsettable.js"></script>
+    <script src="../piano.js/piano.js"></script>
+    <script src="http://vexflow.com/vextab/support/vexflow-min.js"></script>
+    <link href="../piano.js/styles.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+        }
+
+        #header, #piano, #score, #displayOptions {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #header {
+            margin-top: 50px;
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        #header-note {
+            color: #008000;
+        }
+
+        #header-lex {
+            color: #8b0000;
+        }
+
+        #nav {
+            font-size: 80%;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            text-align: right;
+        }
+
+        #nav ul {
+            margin: 0;
+        }
+
+        #nav li {
+            display: inline;
+        }
+
+        #score {
+            background-color: #fff;
+        }
+
+        #displayOptions {
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+
+        #results {
+            margin-left: auto;
+            margin-right: auto;
+            width: 400px;
+        }
+
+        #results > section {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            margin-left: auto;
+            margin-right: auto;
+            float: left;
+            padding: 10px;
+            width: 400px;
+        }
+
+        @media (min-width: 1600px) {
+            #results {
+                margin-left: auto;
+                margin-right: auto;
+                width: 1600px;
+            }
+
+            #results > section {
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 10px;
+                width: 400px;
+            }
+        }
+
+        #results > section > header {
+            background-color: rgb(232, 232, 232);
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            display: table;
+            width: 100%;
+        }
+
+        #results > section > header > span {
+            display: table-cell;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            border: 2px solid rgb(232, 232, 232);
+            text-align: center;
+        }
+
+        #results > section > header > span:first-child {
+            width: 24px;
+        }
+
+        #results > section > header > span:last-child {
+            width: 24px;
+        }
+
+        #results > section > article {
+            background-color: rgb(242, 242, 242);
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <header id="header"><span id="header-note">NOTE</span><span id="header-lex">LEX</span></header>
+    <nav id="nav">
+        <ul>
+            <li><label><input type="checkbox" />&nbsp;PC Set</label></li>
+            <li><label><input type="checkbox" />&nbsp;Funktionstheorie</label></li>
+            <li><label><input type="checkbox" />&nbsp;Messiaen</label></li>
+            <li><label><input type="checkbox" />&nbsp;Musiklehre</label></li>
+        </ul>
+    </nav>
+    <div id="score" style="height: 150px; width: 600px;">
+        <canvas width="600px;"></canvas>
+    </div>
+    <div id="piano" style="height: 150px; width: 600px;"></div>
+    <div id="displayOptions">
+        <label><input type="radio" name="displayOption" />&nbsp;Skala</label>
+        <label><input type="radio" name="displayOption" checked="checked" />&nbsp;Akkord</label>
+    </div>
+    <div id="results">
+        <section>
+            <header>
+                <span style="background-color: maroon;"></span>
+                <span>PC Set</span>
+                <span>x</span>
+            </header>
+            <article>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit fusce vel sapien elit in malesuada semper mi, id sollicitudin urna fermentum ut fusce varius nisl ac ipsum gravida vel pretium tellus.
+            </article>
+        </section>
+        <section>
+            <header>
+                <span style="background-color: greenyellow;"></span>
+                <span>PC Set</span>
+                <span>x</span>
+            </header>
+            <article>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit fusce vel sapien elit in malesuada semper mi, id sollicitudin urna fermentum ut fusce varius nisl ac ipsum gravida vel pretium tellus.
+            </article>
+        </section>
+        <section>
+            <header>
+                <span style="background-color: steelblue;"></span>
+                <span>PC Set</span>
+                <span>x</span>
+            </header>
+            <article>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit fusce vel sapien elit in malesuada semper mi, id sollicitudin urna fermentum ut fusce varius nisl ac ipsum gravida vel pretium tellus.
+            </article>
+        </section>
+        <section>
+            <header>
+                <span style="background-color: goldenrod;"></span>
+                <span>PC Set</span>
+                <span>x</span>
+            </header>
+            <article>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit fusce vel sapien elit in malesuada semper mi, id sollicitudin urna fermentum ut fusce varius nisl ac ipsum gravida vel pretium tellus.
+            </article>
+        </section>
+    </div>
+    <script>
+        $(function () {
+            $("#piano").piano({ startKey: 48, endKey: 72, selectionMode: $.fn.piano.selectionMode.MULTIPLE, selectionChangedCallback: cb });
+
+            function cb() {
+                var keys = $("#piano").piano().getSelectedKeys();
+                var noteSet = new NoteLex.NoteSet(keys);
+                drawNoteSet(noteSet);
+                // POP UP!!!
+            }
+
+            function drawNoteSet(noteSet) {
+                var canvas = $("#score canvas")[0];
+
+                var renderer = new Vex.Flow.Renderer(canvas, Vex.Flow.Renderer.Backends.CANVAS);
+                var ctx = renderer.getContext();
+                ctx.clear();
+
+                var stave = new Vex.Flow.Stave(10, 0, 580);
+                stave.addClef("treble").setContext(ctx).draw();
+
+                // Create the notes
+                var notes = [
+                    // A quarter-note C.
+                    new Vex.Flow.StaveNote({ keys: ["c/4"], duration: "q" }),
+                    // A quarter-note D.
+                    new Vex.Flow.StaveNote({ keys: ["d/4"], duration: "q" }),
+                    // A quarter-note rest. Note that the key (b/4) specifies the vertical position of the rest.
+                    new Vex.Flow.StaveNote({ keys: ["b/4"], duration: "qr" }),
+                    // A C-Major chord.
+                    new Vex.Flow.StaveNote({ keys: ["c/4", "e/4", "g/4"], duration: "q" })
+                ];
+
+                // Create a voice in 4/4
+                var voice = new Vex.Flow.Voice({
+                    num_beats: 4,
+                    beat_value: 4,
+                    resolution: Vex.Flow.RESOLUTION
+                });
+
+                // Add notes to voice
+                voice.addTickables(notes);
+
+                // Format and justify the notes to 580 pixels
+                new Vex.Flow.Formatter().joinVoices([voice]).format([voice], 580);
+
+                // Render voice
+                voice.draw(ctx, stave);
+            }
+        });
+    </script>
+</body>
+</html>
