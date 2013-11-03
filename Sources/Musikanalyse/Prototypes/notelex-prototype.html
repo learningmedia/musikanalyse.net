@@ -57,76 +57,41 @@
             background-color: #fff;
         }
 
-        #displayOptions {
-            margin-top: 25px;
-            margin-bottom: 25px;
-        }
-
         #results {
-            margin-left: auto;
-            margin-right: auto;
+            margin: 50px auto 25px auto;
             width: 400px;
         }
 
-        #results > section {
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-            margin-left: auto;
-            margin-right: auto;
-            float: left;
-            padding: 10px;
-            width: 400px;
-        }
-
-        @media (min-width: 1600px) {
-            #results {
-                margin-left: auto;
-                margin-right: auto;
-                width: 1600px;
-            }
-
-            #results > section {
-                -webkit-box-sizing: border-box;
-                -moz-box-sizing: border-box;
-                box-sizing: border-box;
-                padding: 10px;
-                width: 400px;
-            }
-        }
-
-        #results > section > header {
-            background-color: rgb(232, 232, 232);
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
+        #results > ul {
+            list-style-type: none;
             display: table;
-            width: 100%;
+            margin: 0;
+            padding: 0;
         }
-
-        #results > section > header > span {
+        
+        #results > ul > li {
             display: table-cell;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-            border: 2px solid rgb(232, 232, 232);
+            padding: 5px;
+        }
+        
+        #results > ul > li.disabled > a {
+            cursor: inherit;
+        }
+        
+        #results > ul > li > a {
+            display: block;
+            padding: 5px;
+            cursor: pointer;
+            color: white;
+            width: 50px;
             text-align: center;
         }
 
-        #results > section > header > span:first-child {
-            width: 24px;
-        }
-
-        #results > section > header > span:last-child {
-            width: 24px;
-        }
-
-        #results > section > article {
-            background-color: rgb(242, 242, 242);
+        #results > article {
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
             box-sizing: border-box;
-            padding: 5px;
+            padding: 10px;
         }
 
     </style>
@@ -135,61 +100,28 @@
     <header id="header"><span id="header-note">NOTE</span><span id="header-lex">LEX</span></header>
     <nav id="nav">
         <ul>
-            <li><label><input type="checkbox" />&nbsp;PC Set</label></li>
-            <li><label><input type="checkbox" />&nbsp;Funktionstheorie</label></li>
-            <li><label><input type="checkbox" />&nbsp;Messiaen</label></li>
-            <li><label><input type="checkbox" />&nbsp;Musiklehre</label></li>
+            <li><label><input type="radio" name="language" />&nbsp;English</label></li>
+            <li><label><input type="radio" name="language" checked="checked" />&nbsp;Deutsch</label></li>
         </ul>
     </nav>
     <div id="score" style="height: 150px; width: 600px;">
-        <canvas width="600px;"></canvas>
+        <canvas width="600"></canvas>
     </div>
     <div id="piano" style="height: 150px; width: 600px;"></div>
-    <div id="displayOptions">
-        <label><input type="radio" name="displayOption" />&nbsp;Skala</label>
-        <label><input type="radio" name="displayOption" checked="checked" />&nbsp;Akkord</label>
-    </div>
-    <div id="results">
-        <section>
-            <header>
-                <span style="background-color: maroon;"></span>
-                <span>PC Set</span>
-                <span>x</span>
-            </header>
-            <article>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit fusce vel sapien elit in malesuada semper mi, id sollicitudin urna fermentum ut fusce varius nisl ac ipsum gravida vel pretium tellus.
-            </article>
-        </section>
-        <section>
-            <header>
-                <span style="background-color: greenyellow;"></span>
-                <span>PC Set</span>
-                <span>x</span>
-            </header>
-            <article>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit fusce vel sapien elit in malesuada semper mi, id sollicitudin urna fermentum ut fusce varius nisl ac ipsum gravida vel pretium tellus.
-            </article>
-        </section>
-        <section>
-            <header>
-                <span style="background-color: steelblue;"></span>
-                <span>PC Set</span>
-                <span>x</span>
-            </header>
-            <article>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit fusce vel sapien elit in malesuada semper mi, id sollicitudin urna fermentum ut fusce varius nisl ac ipsum gravida vel pretium tellus.
-            </article>
-        </section>
-        <section>
-            <header>
-                <span style="background-color: goldenrod;"></span>
-                <span>PC Set</span>
-                <span>x</span>
-            </header>
-            <article>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit fusce vel sapien elit in malesuada semper mi, id sollicitudin urna fermentum ut fusce varius nisl ac ipsum gravida vel pretium tellus.
-            </article>
-        </section>
+    <div id="results" style="width: 600px;">
+        <ul>
+            <li><a style="background-color: steelblue;">MM</a></li>
+            <li class="selected" style="background-color: rgba(255, 165, 0, 0.2);"><a style="background-color: rgb(255, 165, 0);">FT</a></li>
+            <li><a style="background-color: darkgreen;">AM</a></li>
+            <li class="disabled"><a style="background-color: rgb(200, 200, 200); color: grey;">X1</a></li>
+            <li><a style="background-color: maroon;">PC</a></li>
+            <li class="disabled"><a style="background-color: rgb(200, 200, 200); color: grey;">X2</a></li>
+            <li class="disabled"><a style="background-color: rgb(200, 200, 200); color: grey;">X3</a></li>
+        </ul>
+        <article style="background-color: rgba(255, 165, 0, 0.2);">
+            <h3>Funktionstheorie</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit fusce vel sapien elit in malesuada semper mi, id sollicitudin urna fermentum ut fusce varius nisl ac ipsum gravida vel pretium tellus.</p>
+        </article>
     </div>
     <script>
         $(function () {
@@ -199,48 +131,67 @@
                 var keys = $("#piano").piano().getSelectedKeys();
                 var noteSet = new NoteLex.NoteSet(keys);
                 drawNoteSet(noteSet);
-                // POP UP!!!
+                showTheory(noteSet, "de");
             }
 
             function drawNoteSet(noteSet) {
+                var WIDTH = 600;
                 var canvas = $("#score canvas")[0];
 
                 var renderer = new Vex.Flow.Renderer(canvas, Vex.Flow.Renderer.Backends.CANVAS);
                 var ctx = renderer.getContext();
                 ctx.clear();
 
-                var stave = new Vex.Flow.Stave(10, 0, 580);
+                var stave = new Vex.Flow.Stave(0, 0, WIDTH - 2); // Subtract 2 to ensure we see the bar line at the end...
                 stave.addClef("treble").setContext(ctx).draw();
 
                 // Create the notes
-                var notes = [
-                    // A quarter-note C.
-                    new Vex.Flow.StaveNote({ keys: ["c/4"], duration: "q" }),
-                    // A quarter-note D.
-                    new Vex.Flow.StaveNote({ keys: ["d/4"], duration: "q" }),
-                    // A quarter-note rest. Note that the key (b/4) specifies the vertical position of the rest.
-                    new Vex.Flow.StaveNote({ keys: ["b/4"], duration: "qr" }),
-                    // A C-Major chord.
-                    new Vex.Flow.StaveNote({ keys: ["c/4", "e/4", "g/4"], duration: "q" })
+                var notes2 = [
+                    new Vex.Flow.StaveNote({ keys: ["c/4", "d/4", "g/4", "b/4"], duration: "w" }),
+                    new Vex.Flow.StaveNote({ keys: ["c/4"], duration: "w" }),
+                    new Vex.Flow.StaveNote({ keys: ["d/4"], duration: "w" }),
+                    new Vex.Flow.StaveNote({ keys: ["g/4"], duration: "w" }),
+                    new Vex.Flow.StaveNote({ keys: ["b/4"], duration: "w" })
                 ];
 
                 // Create a voice in 4/4
                 var voice = new Vex.Flow.Voice({
-                    num_beats: 4,
-                    beat_value: 4,
+                    num_beats: 5,
+                    beat_value: 1,
                     resolution: Vex.Flow.RESOLUTION
                 });
 
                 // Add notes to voice
-                voice.addTickables(notes);
+                voice.addTickables(notes2);
 
-                // Format and justify the notes to 580 pixels
-                new Vex.Flow.Formatter().joinVoices([voice]).format([voice], 580);
+                // Format and justify the notes to 600 pixels
+                new Vex.Flow.Formatter().joinVoices([voice]).format([voice], WIDTH);
 
                 // Render voice
                 voice.draw(ctx, stave);
             }
+
+            function showTheory(noteSet, language) {
+                // Show theories!!!
+                var content = getContent(noteSet, language);
+                $("#results > article").html(content);
+            }
+
+            // This function exists for each theory:
+            function getContent(noteSet, language) {
+                var tmplHtml = $("#ft-de-template").html();
+                var compiled = _.template(tmplHtml);
+                var instance = compiled({ name: 'Uli' });
+
+                return instance;
+            }
         });
+    </script>
+
+    <!-- Templates -->
+    <script id="ft-de-template" type="text/template">
+        <h3>Funktionstheorie</h3>
+        <div>Hallo <%= name %></div>
     </script>
 </body>
 </html>
