@@ -13,6 +13,17 @@
     <script src="http://vexflow.com/vextab/support/vexflow-min.js"></script>
     <link href="../piano.js/styles.css" rel="stylesheet" />
     <style>
+        @font-face {
+            font-family: 'bebas_neueregular';
+            src: url('bebas-neue-fontfacekit/web fonts/bebasneue_regular_macroman/BebasNeue-webfont.eot');
+            src: url('bebas-neue-fontfacekit/web fonts/bebasneue_regular_macroman/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+                 url('bebas-neue-fontfacekit/web fonts/bebasneue_regular_macroman/BebasNeue-webfont.woff') format('woff'),
+                 url('bebas-neue-fontfacekit/web fonts/bebasneue_regular_macroman/BebasNeue-webfont.ttf') format('truetype'),
+                 url('bebas-neue-fontfacekit/web fonts/bebasneue_regular_macroman/BebasNeue-webfont.svg#bebas_neueregular') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         body {
             font-family: "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
         }
@@ -25,16 +36,17 @@
 
         #header {
             margin-top: 50px;
-            font-size: 48px;
+            font-size: 96px;
             font-weight: bold;
+            font-family: bebas_neueregular;
         }
 
         #header-note {
-            color: #008000;
+            color: steelblue;
         }
 
         #header-lex {
-            color: #8b0000;
+            color: maroon;
         }
 
         #nav {
@@ -68,16 +80,16 @@
             margin: 0;
             padding: 0;
         }
-        
+
         #results > ul > li {
             display: table-cell;
             padding: 5px;
         }
-        
+
         #results > ul > li.disabled > a {
             cursor: inherit;
         }
-        
+
         #results > ul > li > a {
             display: block;
             padding: 5px;
@@ -93,7 +105,6 @@
             box-sizing: border-box;
             padding: 10px;
         }
-
     </style>
 </head>
 <body>
