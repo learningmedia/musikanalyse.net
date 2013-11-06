@@ -1,25 +1,32 @@
-﻿(function($) {
+﻿// Uses AMD or browser globals to create a jQuery plugin.
+// See https://github.com/umdjs/umd
+
+(function (factory) {
+    if (typeof define === "function" && define.amd) {
+        // AMD. Register as an anonymous module.
+        define(["jquery"], factory);
+    } else {
+        // Browser globals
+        factory(jQuery);
+    }
+}(function ($) {
+
+    "use strict";
 
     var MIN_KEY = 0;
-
     var MAX_KEY = 120;
-
     var DEFAULT_HEIGHT = 200;
-
     var BLACK_KEY_WIDTH_FACTOR = 0.6;
-
     var BLACK_KEY_HEIGHT_FACTOR = 0.6;
-
     var CONTAINER_DATA_KEY = "PIANO_CONTAINER_DATA_KEY";
-
     var KEY_DATA_KEY = "PIANO_KEY_DATA_KEY";
 
-    var selectionMode = {      
+    var selectionMode = {
         NONE: "none",
         MULTIPLE: "multiple"
     };
 
-    var noop = function() {
+    var noop = function () {
     };
 
     var defaultOptions = {
@@ -36,13 +43,13 @@
         selectionChangedCallback: noop
     };
 
-    $.fn.piano = function(options) {
+    $.fn.piano = function (options) {
 
         var pno = this.data(CONTAINER_DATA_KEY);
         if (pno) {
             return pno;
         } else {
-            this.each(function() {
+            this.each(function () {
                 createPiano($(this), $.extend(defaultOptions, options));
             });
 
@@ -57,8 +64,8 @@
         container.css({
             position: "relative"
         });
-      
-        var availableHeight = container.innerHeight() || DEFAULT_HEIGHT;        
+
+        var availableHeight = container.innerHeight() || DEFAULT_HEIGHT;
         var availableWidth = container.innerWidth() || 1;
 
         var whiteKeyCount = getWhiteKeyCount(options.startKey, options.endKey);
@@ -98,7 +105,7 @@
             options.keyCreatedCallback(keyDiv, key);
             keyDiv.appendTo(container);
         }
-        
+
         if (options.selectionMode !== selectionMode.NONE) {
             $("." + options.keyClass, container).on("click", function () {
                 $(this).toggleClass(options.selectedKeyClass);
@@ -107,7 +114,7 @@
         }
 
         var pianoObject = {
-            getSelectedKeys: function() {
+            getSelectedKeys: function () {
                 return getSelectedKeys(container, options);
             }
         };
@@ -117,7 +124,7 @@
 
     function getSelectedKeys(element, options) {
         return $("." + options.selectedKeyClass, element)
-            .map(function(index, keyDiv) {
+            .map(function (index, keyDiv) {
                 return $(keyDiv).data(KEY_DATA_KEY);
             })
             .get();
@@ -157,4 +164,4 @@
         return whiteKeys;
     }
 
-})(window.jQuery);
+}));
