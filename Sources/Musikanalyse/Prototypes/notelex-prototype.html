@@ -10,6 +10,7 @@
     <script src="../NoteLex/noteset.js"></script>
     <script src="../NoteLex/pcsettable.js"></script>
     <script src="../piano.js/piano.js"></script>
+    <script src="hash.js"></script>
     <script src="http://vexflow.com/vextab/support/vexflow-min.js"></script>
     <link href="../piano.js/styles.css" rel="stylesheet" />
     <style>
@@ -129,20 +130,37 @@
             <li class="disabled"><a style="background-color: rgb(200, 200, 200); color: grey;">X2</a></li>
             <li class="disabled"><a style="background-color: rgb(200, 200, 200); color: grey;">X3</a></li>
         </ul>
-        <article style="background-color: rgba(255, 165, 0, 0.2);">
+        <article style="background-color: #ffebc6; background-color: rgba(255, 165, 0, 0.2);">
             <h3>Funktionstheorie</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit fusce vel sapien elit in malesuada semper mi, id sollicitudin urna fermentum ut fusce varius nisl ac ipsum gravida vel pretium tellus.</p>
         </article>
     </div>
     <script>
         $(function () {
-            $("#piano").piano({ startKey: 48, endKey: 72, selectionMode: $.fn.piano.selectionMode.MULTIPLE, selectionChangedCallback: cb });
+            $("#piano").piano({ startKey: 48, endKey: 72, selectionMode: $.fn.piano.selectionMode.MULTIPLE, selectionChangedCallback: onSelectionChanged });
 
-            function cb() {
+            Hash.addListener(onHashChanged);
+            Hash.startListening();
+
+            function onSelectionChanged() {
                 var keys = $("#piano").piano().getSelectedKeys();
+                Hash.replaceHash(createHashFromKeys(keys));
+            }
+
+            function onHashChanged(newHash) {
+                var keys = createKeysFromHash(newHash);
+                $("#piano").piano().setSelectedKeys(keys);
                 var noteSet = new NoteLex.NoteSet(keys);
                 drawNoteSet(noteSet);
                 showTheory(noteSet, "de");
+            }
+
+            function createHashFromKeys(keys) {
+                return keys.length != 0 ? JSON.stringify(keys) : "";
+            }
+
+            function createKeysFromHash(hash) {
+                return hash ? JSON.parse(hash) : [];
             }
 
             function drawNoteSet(noteSet) {

@@ -116,6 +116,12 @@
         var pianoObject = {
             getSelectedKeys: function () {
                 return getSelectedKeys(container, options);
+            },
+            setSelectedKeys: function(keys, executeCallback) {
+                setSelectedKeys(container, options, keys);
+                if (executeCallback) {
+                    options.selectionChangedCallback();
+                }
             }
         };
 
@@ -128,6 +134,14 @@
                 return $(keyDiv).data(KEY_DATA_KEY);
             })
             .get();
+    }
+
+    function setSelectedKeys(element, options, keys) {
+        $("." + options.keyClass, element).each(function (index, keyDiv) {
+            var $keyDiv = $(keyDiv);
+            var key = $keyDiv.data(KEY_DATA_KEY);
+            $keyDiv.toggleClass(options.selectedKeyClass, keys.indexOf(key) !== -1);
+        });
     }
 
     function validateOptions(options) {
