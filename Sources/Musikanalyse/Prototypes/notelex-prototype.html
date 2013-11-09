@@ -43,11 +43,11 @@
         }
 
         #header-note {
-            color: steelblue;
+            color: maroon;
         }
 
         #header-lex {
-            color: maroon;
+            color: steelblue;
         }
 
         #nav {
@@ -116,8 +116,8 @@
             <li><label><input type="radio" name="language" checked="checked" />&nbsp;Deutsch</label></li>
         </ul>
     </nav>
-    <div id="score" style="height: 150px; width: 600px;">
-        <canvas width="600"></canvas>
+    <div id="score" style="height: 150px; width: 760px;">
+        <canvas width="760" style="-webkit-transform: scale(0.8); -moz-transform: scale(0.8); -ms-transform: scale(0.8); -o-transform: scale(0.8); transform: scale(0.8);"></canvas>
     </div>
     <div id="piano" style="height: 150px; width: 600px;"></div>
     <div id="results" style="width: 600px;">
@@ -151,53 +151,146 @@
                 var keys = createKeysFromHash(newHash);
                 $("#piano").piano().setSelectedKeys(keys);
                 var noteSet = new NoteLex.NoteSet(keys);
-                drawNoteSet(noteSet);
+                drawKeys(keys);
                 showTheory(noteSet, "de");
             }
 
             function createHashFromKeys(keys) {
-                return keys.length != 0 ? JSON.stringify(keys) : "";
+                var key = "",
+                    i;
+                for (i = 0; i < keys.length; i++) {
+                    key = key + (keys[i] < 10 ? "0" + keys[i] : "" + keys[i]);
+                }
+                return key;
             }
 
             function createKeysFromHash(hash) {
-                return hash ? JSON.parse(hash) : [];
+                var keys = [],
+                    i;
+                if (!hash) {
+                    hash = "";
+                }
+                for (i = 0; i < hash.length; i += 2) {
+                    var keyStr = hash.substring(i, i + 2);
+                    keys.push(+keyStr);
+                }
+                return keys;
             }
 
-            function drawNoteSet(noteSet) {
-                var WIDTH = 600;
+            function drawKeys(keys) {
                 var canvas = $("#score canvas")[0];
+                var WIDTH = canvas.width;
+                var noteRenderer = createNoteRenderer(canvas, WIDTH, Vex.Flow);
+                noteRenderer.renderKeys(keys);
+            }
 
-                var renderer = new Vex.Flow.Renderer(canvas, Vex.Flow.Renderer.Backends.CANVAS);
-                var ctx = renderer.getContext();
-                ctx.clear();
+            function createNoteRenderer(canvas, width, vexFlow) {
+                var noteNames = ["c", "c#", "d", "eb", "e", "f", "f#", "g", "g#", "a", "bb", "b"];
 
-                var stave = new Vex.Flow.Stave(0, 0, WIDTH - 2); // Subtract 2 to ensure we see the bar line at the end...
-                stave.addClef("treble").setContext(ctx).draw();
+                function renderNotesAsScale(staveNotes) {
+                    var vexFlowStaveNotes = [],
+                        staveNote,
+                        i;
 
-                // Create the notes
-                var notes2 = [
-                    new Vex.Flow.StaveNote({ keys: ["c/4", "d/4", "g/4", "b/4"], duration: "w" }),
-                    new Vex.Flow.StaveNote({ keys: ["c/4"], duration: "w" }),
-                    new Vex.Flow.StaveNote({ keys: ["d/4"], duration: "w" }),
-                    new Vex.Flow.StaveNote({ keys: ["g/4"], duration: "w" }),
-                    new Vex.Flow.StaveNote({ keys: ["b/4"], duration: "w" })
-                ];
+                    for (i = 0; i < staveNotes.length; i++) {
+                        staveNote = new vexFlow.StaveNote({ keys: [staveNotes[i].noteName + "/" + staveNotes[i].octave], duration: "w" });
+                        if (staveNotes[i].accidental) {
+                            staveNote = staveNote.addAccidental(0, new vexFlow.Accidental(staveNotes[i].accidental));
+                        }
+                        vexFlowStaveNotes.push(staveNote);
+                    }
 
-                // Create a voice in 4/4
-                var voice = new Vex.Flow.Voice({
-                    num_beats: 5,
-                    beat_value: 1,
-                    resolution: Vex.Flow.RESOLUTION
-                });
+                    return vexFlowStaveNotes;
+                }
 
-                // Add notes to voice
-                voice.addTickables(notes2);
+                function renderNotesAsChord(staveNotes) {
+                    var staveNote,
+                        i,
+                        staveNoteKeys = staveNotes.map(function (x) {
+                            return x.noteName + "/" + x.octave;
+                        });
 
-                // Format and justify the notes to 600 pixels
-                new Vex.Flow.Formatter().joinVoices([voice]).format([voice], WIDTH);
+                    staveNote = new vexFlow.StaveNote({ keys: staveNoteKeys, duration: "w" });
+                    for (i = 0; i < staveNotes.length; i++) {
+                        if (staveNotes[i].accidental) {
+                            staveNote = staveNote.addAccidental(i, new vexFlow.Accidental(staveNotes[i].accidental));
+                        }
+                    }
 
-                // Render voice
-                voice.draw(ctx, stave);
+                    return [staveNote];
+                }
+
+                function createStaveNotes(keys) {
+                    var staveNotes = [],
+                        staveNote,
+                        noteName,
+                        previousNoteName,
+                        previousOctave,
+                        octave,
+                        key,
+                        mod,
+                        i,
+                        hasRootNoteCollisions = false;
+
+                    for (i = 0; i < keys.length; i++) {
+                        key = keys[i];
+                        mod = key % 12,
+                        noteName = noteNames[mod],
+                        octave = (key - mod) / 12,
+                        staveNote = { noteName: noteName, octave: octave, accidental: null };
+
+                        if (noteName.length === 2) {
+                            staveNote.accidental = noteName[1];
+                        }
+
+                        if (typeof previousNoteName !== "undefined" && previousNoteName[0] === noteName[0]) {
+                            hasRootNoteCollisions = true;
+                            if (noteName.length === 1 && previousOctave === octave) {
+                                staveNote.accidental = "n";
+                            }
+                        }
+
+                        staveNotes.push(staveNote);
+                        previousNoteName = noteName;
+                        previousOctave = octave;
+                    }
+
+                    if (hasRootNoteCollisions || staveNotes.length > 7) {
+                        return renderNotesAsScale(staveNotes);
+                    } else {
+                        return renderNotesAsChord(staveNotes);
+                    }
+                }
+
+                return {
+                    renderKeys: function(keys) {
+                        var renderer = new vexFlow.Renderer(canvas, vexFlow.Renderer.Backends.CANVAS);
+                        var ctx = renderer.getContext();
+                        ctx.clear();
+
+                        var stave = new vexFlow.Stave(0, 0, width - 2); // Subtract 2 to ensure we see the bar line at the end...
+                        stave.addClef("treble").setContext(ctx).draw();
+
+                        // Create the notes
+                        var notes = createStaveNotes(keys);
+
+                        // Create a voice
+                        var voice = new vexFlow.Voice({
+                            num_beats: notes.length,
+                            beat_value: 1,
+                            resolution: vexFlow.RESOLUTION
+                        });
+
+                        // Add notes to voice
+                        voice.addTickables(notes);
+
+                        // Format and justify the notes
+                        new vexFlow.Formatter().joinVoices([voice]).format([voice], width - 40);
+
+                        // Render voice
+                        voice.draw(ctx, stave);
+                    }
+                };
             }
 
             function showTheory(noteSet, language) {
