@@ -9,111 +9,19 @@
     <script src="../NoteLex/calculationhelper.js"></script>
     <script src="../NoteLex/noteset.js"></script>
     <script src="../NoteLex/pcsettable.js"></script>
+    <script src="http://vexflow.com/vextab/support/vexflow-min.js"></script>
     <script src="../piano.js/piano.js"></script>
     <script src="hash.js"></script>
-    <script src="http://vexflow.com/vextab/support/vexflow-min.js"></script>
+    <script src="notation.js"></script>
     <link href="../piano.js/styles.css" rel="stylesheet" />
-    <style>
-        @font-face {
-            font-family: 'bebas_neueregular';
-            src: url('bebas-neue-fontfacekit/web fonts/bebasneue_regular_macroman/BebasNeue-webfont.eot');
-            src: url('bebas-neue-fontfacekit/web fonts/bebasneue_regular_macroman/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
-                 url('bebas-neue-fontfacekit/web fonts/bebasneue_regular_macroman/BebasNeue-webfont.woff') format('woff'),
-                 url('bebas-neue-fontfacekit/web fonts/bebasneue_regular_macroman/BebasNeue-webfont.ttf') format('truetype'),
-                 url('bebas-neue-fontfacekit/web fonts/bebasneue_regular_macroman/BebasNeue-webfont.svg#bebas_neueregular') format('svg');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        body {
-            font-family: "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
-        }
-
-        #header, #piano, #score, #displayOptions {
-            text-align: center;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        #header {
-            margin-top: 50px;
-            font-size: 96px;
-            font-weight: bold;
-            font-family: bebas_neueregular;
-        }
-
-        #header-note {
-            color: maroon;
-        }
-
-        #header-lex {
-            color: steelblue;
-        }
-
-        #nav {
-            font-size: 80%;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            text-align: right;
-        }
-
-        #nav ul {
-            margin: 0;
-        }
-
-        #nav li {
-            display: inline;
-        }
-
-        #score {
-            background-color: #fff;
-        }
-
-        #results {
-            margin: 50px auto 25px auto;
-            width: 400px;
-        }
-
-        #results > ul {
-            list-style-type: none;
-            display: table;
-            margin: 0;
-            padding: 0;
-        }
-
-        #results > ul > li {
-            display: table-cell;
-            padding: 5px;
-        }
-
-        #results > ul > li.disabled > a {
-            cursor: inherit;
-        }
-
-        #results > ul > li > a {
-            display: block;
-            padding: 5px;
-            cursor: pointer;
-            color: white;
-            width: 50px;
-            text-align: center;
-        }
-
-        #results > article {
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-            padding: 10px;
-        }
-    </style>
+    <link href="styles.css" rel="stylesheet" />
 </head>
 <body>
     <header id="header"><span id="header-note">NOTE</span><span id="header-lex">LEX</span></header>
     <nav id="nav">
-        <ul>
-            <li><label><input type="radio" name="language" />&nbsp;English</label></li>
-            <li><label><input type="radio" name="language" checked="checked" />&nbsp;Deutsch</label></li>
+        <ul id="languagePicker">
+            <li><label><input type="radio" name="language" value="en" />&nbsp;English</label></li>
+            <li><label><input type="radio" name="language" value="de" checked="checked" />&nbsp;Deutsch</label></li>
         </ul>
     </nav>
     <div id="score" style="height: 150px; width: 760px;">
@@ -121,23 +29,56 @@
     </div>
     <div id="piano" style="height: 150px; width: 600px;"></div>
     <div id="results" style="width: 600px;">
-        <ul>
-            <li><a style="background-color: steelblue;">MM</a></li>
-            <li class="selected" style="background-color: rgba(255, 165, 0, 0.2);"><a style="background-color: rgb(255, 165, 0);">FT</a></li>
-            <li><a style="background-color: darkgreen;">AM</a></li>
-            <li class="disabled"><a style="background-color: rgb(200, 200, 200); color: grey;">X1</a></li>
-            <li><a style="background-color: maroon;">PC</a></li>
-            <li class="disabled"><a style="background-color: rgb(200, 200, 200); color: grey;">X2</a></li>
-            <li class="disabled"><a style="background-color: rgb(200, 200, 200); color: grey;">X3</a></li>
-        </ul>
-        <article style="background-color: #ffebc6; background-color: rgba(255, 165, 0, 0.2);">
-            <h3>Funktionstheorie</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit fusce vel sapien elit in malesuada semper mi, id sollicitudin urna fermentum ut fusce varius nisl ac ipsum gravida vel pretium tellus.</p>
-        </article>
+        <ul id="theoryHeaders"></ul>
+        <article class="theory-1"></article>
     </div>
     <script>
         $(function () {
-            $("#piano").piano({ startKey: 48, endKey: 72, selectionMode: $.fn.piano.selectionMode.MULTIPLE, selectionChangedCallback: onSelectionChanged });
+
+            // Allgemeine Musiklehre:
+            var amProvider = {
+                getName: function (language) { return "Allgemeine Musiklehre"; },
+                getHeader: function (language) { return "AM"; },
+                getContent: function (noteSet, language) { return language === "de" ? "<div>Hallo von der Allgemeine Musiklehre!</div>" : "<div>Hello from Allgemeine Musiklehre!</div>"; }
+            };
+
+            // Funktionstheorie:
+            var ftProvider = {
+                getName: function (language) { return "Funktionstheorie"; },
+                getHeader: function (language) { return "FT"; },
+                getContent: function (noteSet, language) { return language === "de" ? "<div>Hello from Funktionstheorie!</div>" : null; }
+            };
+
+            // Pitch Class Set:
+            var pcProvider = {
+                getName: function (language) { return "Pitch Class Set"; },
+                getHeader: function (language) { return "PC"; },
+                getContent: function (noteSet, language) { return "<div>Hello from Pitch Class Set!</div>"; }
+            };
+
+            var theoryProviders = [amProvider, ftProvider, pcProvider],
+                currentProvider = 0,
+                currentLanguage = "de",
+                currentResults = calculateResults(theoryProviders, currentProvider, currentLanguage);
+
+            $("#piano").piano({
+                startKey: 48,
+                endKey: 72,
+                selectionMode: $.fn.piano.selectionMode.MULTIPLE,
+                selectionChangedCallback: onSelectionChanged
+            });
+
+            $("#languagePicker input:radio").on("click", function() {
+                currentLanguage = $("#languagePicker input:checked").val();
+                refresh();
+            });
+
+            $("#theoryHeaders").on("click", ".header", function (ev) {
+                var $element = $(ev.target);
+                var newIndex = +$element.attr("data-index");
+                currentProvider = newIndex;
+                refresh();
+            });
 
             Hash.addListener(onHashChanged);
             Hash.startListening();
@@ -147,12 +88,8 @@
                 Hash.replaceHash(createHashFromKeys(keys));
             }
 
-            function onHashChanged(newHash) {
-                var keys = createKeysFromHash(newHash);
-                $("#piano").piano().setSelectedKeys(keys);
-                var noteSet = new NoteLex.NoteSet(keys);
-                drawKeys(keys);
-                showTheory(noteSet, "de");
+            function onHashChanged() {
+                refresh();
             }
 
             function createHashFromKeys(keys) {
@@ -177,143 +114,61 @@
                 return keys;
             }
 
-            function drawKeys(keys) {
-                var canvas = $("#score canvas")[0];
-                var WIDTH = canvas.width;
-                var noteRenderer = createNoteRenderer(canvas, WIDTH, Vex.Flow);
-                noteRenderer.renderKeys(keys);
+            function refresh() {
+                var keys = createKeysFromHash(Hash.getCurrentHash());
+                $("#piano").piano().setSelectedKeys(keys);
+                Notation.createNoteRenderer($("#score canvas")[0]).renderKeys(keys);
+
+                currentResults = calculateResults(theoryProviders, currentProvider, new NoteLex.NoteSet(keys), currentLanguage);
+                showHeaders("#theoryHeaders", "#header-template", currentResults, currentLanguage);
+                $("#results article").removeClass().addClass("theory-" + currentProvider).addClass(currentResults[currentProvider].content ? "enabled" : "disabled");
+                showContent(currentResults);
             }
 
-            function createNoteRenderer(canvas, width, vexFlow) {
-                var noteNames = ["c", "c#", "d", "eb", "e", "f", "f#", "g", "g#", "a", "bb", "b"];
+            function calculateResults(providers, selectedProviderIndex, noteSet, language) {
+                var results = [],
+                    provider,
+                    i;
 
-                function renderNotesAsScale(staveNotes) {
-                    var vexFlowStaveNotes = [],
-                        staveNote,
-                        i;
-
-                    for (i = 0; i < staveNotes.length; i++) {
-                        staveNote = new vexFlow.StaveNote({ keys: [staveNotes[i].noteName + "/" + staveNotes[i].octave], duration: "w" });
-                        if (staveNotes[i].accidental) {
-                            staveNote = staveNote.addAccidental(0, new vexFlow.Accidental(staveNotes[i].accidental));
-                        }
-                        vexFlowStaveNotes.push(staveNote);
-                    }
-
-                    return vexFlowStaveNotes;
+                for (i = 0; i < providers.length; i++) {
+                    provider = providers[i];
+                    results.push({
+                        index: i,
+                        name: provider.getName(language),
+                        header: provider.getHeader(language),
+                        content: provider.getContent(noteSet, language),
+                        selected: i === selectedProviderIndex
+                    });
                 }
+                return results;
+            }
 
-                function renderNotesAsChord(staveNotes) {
-                    var staveNote,
-                        i,
-                        staveNoteKeys = staveNotes.map(function (x) {
-                            return x.noteName + "/" + x.octave;
-                        });
+            function showHeaders(parentElementId, headerTemplateId, results) {
+                var headerContainer = $(parentElementId),
+                    headerTemplate = $(headerTemplateId).html(),
+                    instantiateHeader = _.template(headerTemplate);
 
-                    staveNote = new vexFlow.StaveNote({ keys: staveNoteKeys, duration: "w" });
-                    for (i = 0; i < staveNotes.length; i++) {
-                        if (staveNotes[i].accidental) {
-                            staveNote = staveNote.addAccidental(i, new vexFlow.Accidental(staveNotes[i].accidental));
-                        }
-                    }
+                headerContainer.empty();
+                results.forEach(function(result) {
+                    headerContainer.append(instantiateHeader(result));
+                });
+            }
 
-                    return [staveNote];
-                }
-
-                function createStaveNotes(keys) {
-                    var staveNotes = [],
-                        staveNote,
-                        noteName,
-                        previousNoteName,
-                        previousOctave,
-                        octave,
-                        key,
-                        mod,
-                        i,
-                        hasRootNoteCollisions = false;
-
-                    for (i = 0; i < keys.length; i++) {
-                        key = keys[i];
-                        mod = key % 12,
-                        noteName = noteNames[mod],
-                        octave = (key - mod) / 12,
-                        staveNote = { noteName: noteName, octave: octave, accidental: null };
-
-                        if (noteName.length === 2) {
-                            staveNote.accidental = noteName[1];
-                        }
-
-                        if (typeof previousNoteName !== "undefined" && previousNoteName[0] === noteName[0]) {
-                            hasRootNoteCollisions = true;
-                            if (noteName.length === 1 && previousOctave === octave) {
-                                staveNote.accidental = "n";
-                            }
-                        }
-
-                        staveNotes.push(staveNote);
-                        previousNoteName = noteName;
-                        previousOctave = octave;
-                    }
-
-                    if (hasRootNoteCollisions || staveNotes.length > 7) {
-                        return renderNotesAsScale(staveNotes);
-                    } else {
-                        return renderNotesAsChord(staveNotes);
+            function showContent(results) {
+                for (var i = 0; i < results.length; i++) {
+                    if (results[i].selected) {
+                        $("#results > article").html(results[i].content || "<div></div>");
                     }
                 }
-
-                return {
-                    renderKeys: function(keys) {
-                        var renderer = new vexFlow.Renderer(canvas, vexFlow.Renderer.Backends.CANVAS);
-                        var ctx = renderer.getContext();
-                        ctx.clear();
-
-                        var stave = new vexFlow.Stave(0, 0, width - 2); // Subtract 2 to ensure we see the bar line at the end...
-                        stave.addClef("treble").setContext(ctx).draw();
-
-                        // Create the notes
-                        var notes = createStaveNotes(keys);
-
-                        // Create a voice
-                        var voice = new vexFlow.Voice({
-                            num_beats: notes.length,
-                            beat_value: 1,
-                            resolution: vexFlow.RESOLUTION
-                        });
-
-                        // Add notes to voice
-                        voice.addTickables(notes);
-
-                        // Format and justify the notes
-                        new vexFlow.Formatter().joinVoices([voice]).format([voice], width - 40);
-
-                        // Render voice
-                        voice.draw(ctx, stave);
-                    }
-                };
             }
 
-            function showTheory(noteSet, language) {
-                // Show theories!!!
-                var content = getContent(noteSet, language);
-                $("#results > article").html(content);
-            }
-
-            // This function exists for each theory:
-            function getContent(noteSet, language) {
-                var tmplHtml = $("#ft-de-template").html();
-                var compiled = _.template(tmplHtml);
-                var instance = compiled({ name: 'Uli' });
-
-                return instance;
-            }
         });
     </script>
 
     <!-- Templates -->
-    <script id="ft-de-template" type="text/template">
-        <h3>Funktionstheorie</h3>
-        <div>Hallo <%= name %></div>
+    <script id="header-template" type="text/template">
+        <li class="<%= 'theory-' + index + ' ' + (content ? 'enabled' : 'disabled') + ' ' + (selected ? 'selected' : 'unselected') %>"><a class="header" title="<%= name %>" data-index="<%= index %>"><%= header %></a></li>
     </script>
+
 </body>
 </html>

@@ -40,14 +40,15 @@ var Hash = (function () {
                 isListening = true;
             }
         },
+        getCurrentHash: getCurrentHash,
         pushHash: function(newHash) {
             var url = window.location,
-                nh = newHash ? "#" + window.encodeURIComponent(newHash) : "";
+                nh = "#" + (newHash ? window.encodeURIComponent(newHash) : "");
             window.location.href = url.protocol + "//" + url.host + url.pathname + url.search + nh;
         },
         replaceHash: function(newHash) {
             var url = window.location,
-                nh = newHash ? "#" + window.encodeURIComponent(newHash) : "";
+                nh = "#" + (newHash ? window.encodeURIComponent(newHash) : "");
             window.location.replace(url.protocol + "//" + url.host + url.pathname + url.search + nh);
         }
     };
