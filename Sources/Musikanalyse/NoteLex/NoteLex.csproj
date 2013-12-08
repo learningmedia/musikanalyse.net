@@ -63,12 +63,27 @@
   <ItemGroup>
     <TypeScriptCompile Include="Interfaces\INoteSet.d.ts" />
     <TypeScriptCompile Include="NoteSet.ts" />
+    <Content Include="bebas-neue-fontfacekit\Dharma Type Font License.txt" />
+    <Content Include="bebas-neue-fontfacekit\How_to_use_webfonts.html" />
+    <Content Include="bebas-neue-fontfacekit\web fonts\bebasneue_regular_macroman\BebasNeue-demo.html" />
+    <Content Include="bebas-neue-fontfacekit\web fonts\bebasneue_regular_macroman\BebasNeue-webfont.svg" />
+    <Content Include="bebas-neue-fontfacekit\web fonts\bebasneue_regular_macroman\specimen_files\BebasNeue-cleartype.png" />
+    <Content Include="bebas-neue-fontfacekit\web fonts\bebasneue_regular_macroman\specimen_files\easytabs.js" />
+    <Content Include="bebas-neue-fontfacekit\web fonts\bebasneue_regular_macroman\specimen_files\grid_12-825-55-15.css" />
+    <Content Include="bebas-neue-fontfacekit\web fonts\bebasneue_regular_macroman\specimen_files\specimen_stylesheet.css" />
+    <Content Include="bebas-neue-fontfacekit\web fonts\bebasneue_regular_macroman\stylesheet.css" />
     <Content Include="Content\qunit-1.12.0.css" />
     <TypeScriptCompile Include="Interfaces\IPcSet.d.ts" />
+    <Content Include="hash.js" />
+    <Content Include="index.html" />
+    <Content Include="notation.js" />
     <Content Include="NoteSet.js">
       <DependentUpon>NoteSet.ts</DependentUpon>
     </Content>
     <Content Include="packages.config" />
+    <Content Include="bebas-neue-fontfacekit\web fonts\bebasneue_regular_macroman\BebasNeue-webfont.eot" />
+    <Content Include="bebas-neue-fontfacekit\web fonts\bebasneue_regular_macroman\BebasNeue-webfont.ttf" />
+    <Content Include="bebas-neue-fontfacekit\web fonts\bebasneue_regular_macroman\BebasNeue-webfont.woff" />
     <None Include="Scripts\jquery-2.0.2.intellisense.js" />
     <TypeScriptCompile Include="PcSetTable.ts" />
     <Content Include="PcSetTable.js">
@@ -84,6 +99,7 @@
     <Content Include="Scripts\underscore.js" />
     <Content Include="Scripts\underscore.min.js" />
     <TypeScriptCompile Include="UnitTests\NoteSetTests.ts" />
+    <Content Include="styles.css" />
     <Content Include="UnitTests\NoteSetTests.js">
       <DependentUpon>NoteSetTests.ts</DependentUpon>
     </Content>
