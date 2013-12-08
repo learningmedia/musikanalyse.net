@@ -76,6 +76,7 @@
     <TypeScriptCompile Include="Interfaces\IPcSet.d.ts" />
     <Content Include="hash.js" />
     <Content Include="index.html" />
+    <Content Include="index.js" />
     <Content Include="notation.js" />
     <Content Include="NoteSet.js">
       <DependentUpon>NoteSet.ts</DependentUpon>
