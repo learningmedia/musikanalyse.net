@@ -61,8 +61,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="Interfaces\INoteSet.d.ts" />
-    <TypeScriptCompile Include="NoteSet.ts" />
     <Content Include="bebas-neue-fontfacekit\Dharma Type Font License.txt" />
     <Content Include="bebas-neue-fontfacekit\web fonts\bebasneue_regular_macroman\BebasNeue-demo.html" />
     <Content Include="bebas-neue-fontfacekit\web fonts\bebasneue_regular_macroman\BebasNeue-webfont.svg" />
@@ -72,46 +70,27 @@
     <Content Include="bebas-neue-fontfacekit\web fonts\bebasneue_regular_macroman\specimen_files\specimen_stylesheet.css" />
     <Content Include="bebas-neue-fontfacekit\web fonts\bebasneue_regular_macroman\stylesheet.css" />
     <Content Include="Content\qunit-1.12.0.css" />
-    <TypeScriptCompile Include="Interfaces\IPcSet.d.ts" />
     <Content Include="hash.js" />
     <Content Include="index.html" />
     <Content Include="index.js" />
     <Content Include="jquery.klavier.min.js" />
     <Content Include="notation.js" />
-    <Content Include="NoteSet.js">
-      <DependentUpon>NoteSet.ts</DependentUpon>
-    </Content>
+    <Content Include="NoteSet.js" />
     <Content Include="packages.config" />
     <Content Include="bebas-neue-fontfacekit\web fonts\bebasneue_regular_macroman\BebasNeue-webfont.eot" />
     <Content Include="bebas-neue-fontfacekit\web fonts\bebasneue_regular_macroman\BebasNeue-webfont.ttf" />
     <Content Include="bebas-neue-fontfacekit\web fonts\bebasneue_regular_macroman\BebasNeue-webfont.woff" />
     <None Include="Scripts\jquery-2.0.2.intellisense.js" />
-    <TypeScriptCompile Include="PcSetTable.ts" />
-    <Content Include="PcSetTable.js">
-      <DependentUpon>PcSetTable.ts</DependentUpon>
-    </Content>
+    <Content Include="PcSetTable.js" />
     <Content Include="Scripts\jquery-2.0.2.js" />
     <Content Include="Scripts\jquery-2.0.2.min.js" />
     <Content Include="Scripts\qunit-1.12.0.js" />
-    <Content Include="Scripts\typings\jquery\jquery.d.ts" />
-    <Content Include="Scripts\typings\qunit\qunit.d.ts" />
-    <Content Include="Scripts\typings\underscore\underscore-typed.d.ts" />
-    <Content Include="Scripts\typings\underscore\underscore.d.ts" />
     <Content Include="Scripts\underscore.js" />
     <Content Include="Scripts\underscore.min.js" />
-    <TypeScriptCompile Include="UnitTests\NoteSetTests.ts" />
     <Content Include="styles.css" />
-    <Content Include="UnitTests\NoteSetTests.js">
-      <DependentUpon>NoteSetTests.ts</DependentUpon>
-    </Content>
-    <TypeScriptCompile Include="CalculationHelper.ts" />
-    <Content Include="CalculationHelper.js">
-      <DependentUpon>CalculationHelper.ts</DependentUpon>
-    </Content>
-    <TypeScriptCompile Include="UnitTests\PcSetTests.ts" />
-    <Content Include="UnitTests\PcSetTests.js">
-      <DependentUpon>PcSetTests.ts</DependentUpon>
-    </Content>
+    <Content Include="UnitTests\NoteSetTests.js" />
+    <Content Include="CalculationHelper.js" />
+    <Content Include="UnitTests\PcSetTests.js" />
     <Content Include="UnitTests\tests.html" />
     <Content Include="Web.config" />
     <Content Include="Scripts\jquery-2.0.2.min.map" />
@@ -132,17 +111,6 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
-    <TypeScriptTarget>ES5</TypeScriptTarget>
-    <TypeScriptIncludeComments>true</TypeScriptIncludeComments>
-    <TypeScriptSourceMap>true</TypeScriptSourceMap>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
-    <TypeScriptTarget>ES5</TypeScriptTarget>
-    <TypeScriptIncludeComments>false</TypeScriptIncludeComments>
-    <TypeScriptSourceMap>false</TypeScriptSourceMap>
-  </PropertyGroup>
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
