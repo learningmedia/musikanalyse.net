@@ -64,7 +64,6 @@
     <TypeScriptCompile Include="Interfaces\INoteSet.d.ts" />
     <TypeScriptCompile Include="NoteSet.ts" />
     <Content Include="bebas-neue-fontfacekit\Dharma Type Font License.txt" />
-    <Content Include="bebas-neue-fontfacekit\How_to_use_webfonts.html" />
     <Content Include="bebas-neue-fontfacekit\web fonts\bebasneue_regular_macroman\BebasNeue-demo.html" />
     <Content Include="bebas-neue-fontfacekit\web fonts\bebasneue_regular_macroman\BebasNeue-webfont.svg" />
     <Content Include="bebas-neue-fontfacekit\web fonts\bebasneue_regular_macroman\specimen_files\BebasNeue-cleartype.png" />
@@ -77,6 +76,7 @@
     <Content Include="hash.js" />
     <Content Include="index.html" />
     <Content Include="index.js" />
+    <Content Include="jquery.klavier.min.js" />
     <Content Include="notation.js" />
     <Content Include="NoteSet.js">
       <DependentUpon>NoteSet.ts</DependentUpon>

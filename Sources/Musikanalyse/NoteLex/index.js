@@ -26,11 +26,11 @@
         currentLanguage = "de",
         currentResults = calculateResults(theoryProviders, currentProvider, currentLanguage);
 
-    $("#piano").piano({
+    $("#piano").klavier({
         startKey: 48,
         endKey: 72,
-        selectionMode: $.fn.piano.selectionMode.MULTIPLE,
-        selectionChangedCallback: onSelectionChanged
+        selectionMode: "multiple",
+        onSelectedValuesChanged: onSelectionChanged
     });
 
     $("#languagePicker input:radio").on("click", function () {
@@ -49,7 +49,7 @@
     Hash.startListening();
 
     function onSelectionChanged() {
-        var keys = $("#piano").piano().getSelectedKeys();
+        var keys = $("#piano").klavier("getSelectedValues");
         Hash.replaceHash(createHashFromKeys(keys));
     }
 
@@ -81,7 +81,7 @@
 
     function refresh() {
         var keys = createKeysFromHash(Hash.getCurrentHash());
-        $("#piano").piano().setSelectedKeys(keys);
+        $("#piano").klavier("setSelectedValues", keys);
         Notation.createNoteRenderer($("#score canvas")[0]).renderKeys(keys);
 
         currentResults = calculateResults(theoryProviders, currentProvider, new NoteLex.NoteSet(keys), currentLanguage);

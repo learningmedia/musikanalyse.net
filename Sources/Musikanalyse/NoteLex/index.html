@@ -4,7 +4,6 @@
 <head>
     <meta charset="utf-8" />
     <title>NoteLex</title>
-    <link href="../piano.js/styles.css" rel="stylesheet" />
     <link href="styles.css" rel="stylesheet" />
 </head>
 <body>
@@ -18,7 +17,7 @@
     <div id="score" style="height: 150px; width: 760px;">
         <canvas width="760" style="-webkit-transform: scale(0.8); -moz-transform: scale(0.8); -ms-transform: scale(0.8); -o-transform: scale(0.8); transform: scale(0.8);"></canvas>
     </div>
-    <div id="piano" style="height: 150px; width: 600px;"></div>
+    <div id="piano"></div>
     <div id="results" style="width: 600px;">
         <ul id="theoryHeaders"></ul>
         <article class="theory-1"></article>
@@ -35,10 +34,9 @@
     <script src="noteset.js"></script>
     <script src="pcsettable.js"></script>
     <script src="http://vexflow.com/vextab/support/vexflow-min.js"></script>
-    <script src="../piano.js/piano.js"></script>
+    <script src="jquery.klavier.min.js"></script>
     <script src="hash.js"></script>
     <script src="notation.js"></script>
     <script src="index.js"></script>
-
 </body>
 </html>

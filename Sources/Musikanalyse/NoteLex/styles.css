@@ -141,3 +141,27 @@ body {
     box-sizing: border-box;
     padding: 10px;
 }
+
+
+
+
+/* klavier */
+#piano {
+    height: 150px;
+    width: 600px;
+}
+.klavier-key {
+    border: 1px solid black;
+}
+.klavier-black-key {
+    background-color:  black;
+}
+.klavier-white-key {
+    background-color:  white;
+}
+.klavier-white-key.klavier-selected-key {
+    background-color:  #CCCCCC;
+}
+.klavier-black-key.klavier-selected-key {
+    background-color:  #333333;
+}
