@@ -1,9 +1,6 @@
-(function (window, vexFlow) {
+define(["vex"], function (Vex) {
 
-    if (typeof vexFlow === "undefined") {
-        throw new Error("VexFlow is not available.");
-    }
-    
+    var vexFlow = Vex.Flow;
     var noteNames = ["c", "c#", "d", "eb", "e", "f", "f#", "g", "g#", "a", "bb", "b"];
 
     function createNoteRenderer(canvas) {
@@ -27,7 +24,7 @@
         function renderNotesAsChord(staveNotes) {
             var staveNote,
                 i,
-                staveNoteKeys = staveNotes.map(function (x) {
+                staveNoteKeys = staveNotes.map(function(x) {
                     return x.noteName + "/" + x.octave;
                 });
 
@@ -84,7 +81,7 @@
         }
 
         return {
-            renderKeys: function (keys) {
+            renderKeys: function(keys) {
                 var renderer = new vexFlow.Renderer(canvas, vexFlow.Renderer.Backends.CANVAS);
                 var ctx = renderer.getContext();
                 ctx.clear();
@@ -118,8 +115,7 @@
         };
     }
 
-    window.Notation = {
+    return {
         createNoteRenderer: createNoteRenderer
     };
-
-})(window, window.Vex.Flow);
+});

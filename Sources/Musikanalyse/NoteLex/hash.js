@@ -1,4 +1,4 @@
-var Hash = (function () {
+define([], function() {
 
     var listeners = [],
         getCurrentHash = function() {
@@ -12,11 +12,11 @@ var Hash = (function () {
                 listeners[i](currentHash);
             }
         },
-        observeHashChange = function () {
+        observeHashChange = function() {
             if (window.addEventListener) {
                 window.addEventListener("hashchange", notifyListeners, false);
             } else if (window.attachEvent) {
-                window.attachEvent("hashchange", notifyListeners);
+                window.attachEvent("onhashchange", notifyListeners);
             } else {
                 throw new Error("Adding an event listener is not supported by the current browser.");
             }
@@ -53,4 +53,4 @@ var Hash = (function () {
         }
     };
 
-})();
+});

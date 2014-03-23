@@ -1,6 +1,3 @@
-/// <reference path="../Scripts/typings/qunit/qunit.d.ts" />
-/// <reference path="../NoteSet.ts" />
-/// <reference path="../PcSetTable.ts" />
 QUnit.module("PcSetTests");
 
 test("getPcSet should calculate 0,3,7 for a d major chord.", function () {

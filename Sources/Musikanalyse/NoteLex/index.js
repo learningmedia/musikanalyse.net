@@ -1,130 +1,134 @@
-﻿$(function () {
+﻿define(["jquery", "lodash", "hash", "notation", "noteSet", "jquery.klavier"], function ($, _, hash, notation, NoteSet) {
 
-    // Allgemeine Musiklehre:
-    var amProvider = {
-        getName: function (language) { return "Allgemeine Musiklehre"; },
-        getHeader: function (language) { return "AM"; },
-        getContent: function (noteSet, language) { return language === "de" ? "<div>Hallo von der Allgemeine Musiklehre!</div>" : "<div>Hello from Allgemeine Musiklehre!</div>"; }
-    };
+    $(function() {
 
-    // Funktionstheorie:
-    var ftProvider = {
-        getName: function (language) { return "Funktionstheorie"; },
-        getHeader: function (language) { return "FT"; },
-        getContent: function (noteSet, language) { return language === "de" ? "<div>Hello from Funktionstheorie!</div>" : null; }
-    };
+        // Allgemeine Musiklehre:
+        var amProvider = {
+            getName: function(language) { return "Allgemeine Musiklehre"; },
+            getHeader: function(language) { return "AM"; },
+            getContent: function(noteSet, language) { return language === "de" ? "<div>Hallo von der Allgemeine Musiklehre!</div>" : "<div>Hello from Allgemeine Musiklehre!</div>"; }
+        };
 
-    // Pitch Class Set:
-    var pcProvider = {
-        getName: function (language) { return "Pitch Class Set"; },
-        getHeader: function (language) { return "PC"; },
-        getContent: function (noteSet, language) { return "<div>Hello from Pitch Class Set!</div>"; }
-    };
+        // Funktionstheorie:
+        var ftProvider = {
+            getName: function(language) { return "Funktionstheorie"; },
+            getHeader: function(language) { return "FT"; },
+            getContent: function(noteSet, language) { return language === "de" ? "<div>Hello from Funktionstheorie!</div>" : null; }
+        };
 
-    var theoryProviders = [amProvider, ftProvider, pcProvider],
-        currentProvider = 0,
-        currentLanguage = "de",
-        currentResults = calculateResults(theoryProviders, currentProvider, currentLanguage);
+        // Pitch Class Set:
+        var pcProvider = {
+            getName: function(language) { return "Pitch Class Set"; },
+            getHeader: function(language) { return "PC"; },
+            getContent: function(noteSet, language) { return "<div>Hello from Pitch Class Set!</div>"; }
+        };
 
-    $("#piano").klavier({
-        startKey: 48,
-        endKey: 72,
-        selectionMode: "multiple",
-        onSelectedValuesChanged: onSelectionChanged
-    });
+        var theoryProviders = [amProvider, ftProvider, pcProvider],
+            currentProvider = 0,
+            currentLanguage = "de",
+            currentResults = calculateResults(theoryProviders, currentProvider, currentLanguage);
 
-    $("#languagePicker input:radio").on("click", function () {
-        currentLanguage = $("#languagePicker input:checked").val();
-        refresh();
-    });
+        $("#piano").klavier({
+            startKey: 48,
+            endKey: 72,
+            selectionMode: "multiple",
+            onSelectedValuesChanged: onSelectionChanged
+        });
 
-    $("#theoryHeaders").on("click", ".header", function (ev) {
-        var $element = $(ev.target);
-        var newIndex = +$element.attr("data-index");
-        currentProvider = newIndex;
-        refresh();
-    });
+        $("#languagePicker input:radio").on("click", function() {
+            currentLanguage = $("#languagePicker input:checked").val();
+            refresh();
+        });
 
-    Hash.addListener(onHashChanged);
-    Hash.startListening();
+        $("#theoryHeaders").on("click", ".header", function(ev) {
+            var $element = $(ev.target);
+            var newIndex = +$element.attr("data-index");
+            currentProvider = newIndex;
+            refresh();
+        });
 
-    function onSelectionChanged() {
-        var keys = $("#piano").klavier("getSelectedValues");
-        Hash.replaceHash(createHashFromKeys(keys));
-    }
+        hash.addListener(onHashChanged);
+        hash.startListening();
 
-    function onHashChanged() {
-        refresh();
-    }
-
-    function createHashFromKeys(keys) {
-        var key = "",
-            i;
-        for (i = 0; i < keys.length; i++) {
-            key = key + (keys[i] < 10 ? "0" + keys[i] : "" + keys[i]);
+        function onSelectionChanged() {
+            var keys = $("#piano").klavier("getSelectedValues");
+            hash.replaceHash(createHashFromKeys(keys));
         }
-        return key;
-    }
 
-    function createKeysFromHash(hash) {
-        var keys = [],
-            i;
-        if (!hash) {
-            hash = "";
+        function onHashChanged() {
+            refresh();
         }
-        for (i = 0; i < hash.length; i += 2) {
-            var keyStr = hash.substring(i, i + 2);
-            keys.push(+keyStr);
+
+        function createHashFromKeys(keys) {
+            var key = "",
+                i;
+            for (i = 0; i < keys.length; i++) {
+                key = key + (keys[i] < 10 ? "0" + keys[i] : "" + keys[i]);
+            }
+            return key;
         }
-        return keys;
-    }
 
-    function refresh() {
-        var keys = createKeysFromHash(Hash.getCurrentHash());
-        $("#piano").klavier("setSelectedValues", keys);
-        Notation.createNoteRenderer($("#score canvas")[0]).renderKeys(keys);
+        function createKeysFromHash(hash) {
+            var keys = [],
+                i;
+            if (!hash) {
+                hash = "";
+            }
+            for (i = 0; i < hash.length; i += 2) {
+                var keyStr = hash.substring(i, i + 2);
+                keys.push(+keyStr);
+            }
+            return keys;
+        }
 
-        currentResults = calculateResults(theoryProviders, currentProvider, new NoteLex.NoteSet(keys), currentLanguage);
-        showHeaders("#theoryHeaders", "#header-template", currentResults, currentLanguage);
-        $("#results article").removeClass().addClass("theory-" + currentProvider).addClass(currentResults[currentProvider].content ? "enabled" : "disabled");
-        showContent(currentResults);
-    }
+        function refresh() {
+            var keys = createKeysFromHash(hash.getCurrentHash());
+            $("#piano").klavier("setSelectedValues", keys);
+            notation.createNoteRenderer($("#score canvas")[0]).renderKeys(keys);
 
-    function calculateResults(providers, selectedProviderIndex, noteSet, language) {
-        var results = [],
-            provider,
-            i;
+            currentResults = calculateResults(theoryProviders, currentProvider, new NoteSet(keys), currentLanguage);
+            showHeaders("#theoryHeaders", "#header-template", currentResults, currentLanguage);
+            $("#results article").removeClass().addClass("theory-" + currentProvider).addClass(currentResults[currentProvider].content ? "enabled" : "disabled");
+            showContent(currentResults);
+        }
 
-        for (i = 0; i < providers.length; i++) {
-            provider = providers[i];
-            results.push({
-                index: i,
-                name: provider.getName(language),
-                header: provider.getHeader(language),
-                content: provider.getContent(noteSet, language),
-                selected: i === selectedProviderIndex
+        function calculateResults(providers, selectedProviderIndex, noteSet, language) {
+            var results = [],
+                provider,
+                i;
+
+            for (i = 0; i < providers.length; i++) {
+                provider = providers[i];
+                results.push({
+                    index: i,
+                    name: provider.getName(language),
+                    header: provider.getHeader(language),
+                    content: provider.getContent(noteSet, language),
+                    selected: i === selectedProviderIndex
+                });
+            }
+            return results;
+        }
+
+        function showHeaders(parentElementId, headerTemplateId, results) {
+            var headerContainer = $(parentElementId),
+                headerTemplate = $(headerTemplateId).html(),
+                instantiateHeader = _.template(headerTemplate);
+
+            headerContainer.empty();
+            results.forEach(function(result) {
+                headerContainer.append(instantiateHeader(result));
             });
         }
-        return results;
-    }
 
-    function showHeaders(parentElementId, headerTemplateId, results) {
-        var headerContainer = $(parentElementId),
-            headerTemplate = $(headerTemplateId).html(),
-            instantiateHeader = _.template(headerTemplate);
-
-        headerContainer.empty();
-        results.forEach(function (result) {
-            headerContainer.append(instantiateHeader(result));
-        });
-    }
-
-    function showContent(results) {
-        for (var i = 0; i < results.length; i++) {
-            if (results[i].selected) {
-                $("#results > article").html(results[i].content || "<div></div>");
+        function showContent(results) {
+            for (var i = 0; i < results.length; i++) {
+                if (results[i].selected) {
+                    $("#results > article").html(results[i].content || "<div></div>");
+                }
             }
         }
-    }
+
+    });
 
 });

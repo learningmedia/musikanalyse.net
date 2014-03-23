@@ -31,4 +31,3 @@ test("Constructor should normalize and order all values.", function () {
     var noteSet = new NoteLex.NoteSet([9, 5, 7, 17, 5]);
     deepEqual(noteSet.intervals, [0, 2, 4]);
 });
-//@ sourceMappingURL=NoteSetTests.js.map

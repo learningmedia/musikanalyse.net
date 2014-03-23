@@ -28,15 +28,24 @@
         <li class="<%= 'theory-' + index + ' ' + (content ? 'enabled' : 'disabled') + ' ' + (selected ? 'selected' : 'unselected') %>"><a class="header" title="<%= name %>" data-index="<%= index %>"><%= header %></a></li>
     </script>
     
-    <script src="scripts/jquery-2.0.2.min.js"></script>
-    <script src="scripts/underscore.min.js"></script>
-    <script src="calculationhelper.js"></script>
-    <script src="noteset.js"></script>
-    <script src="pcsettable.js"></script>
-    <script src="http://vexflow.com/vextab/support/vexflow-min.js"></script>
-    <script src="jquery.klavier.min.js"></script>
-    <script src="hash.js"></script>
-    <script src="notation.js"></script>
-    <script src="index.js"></script>
+    <script src="vexflow-min.js"></script>
+    <script src="scripts/require.js"></script>
+    <script>
+        require.config({
+            shim: {
+                "vex": {
+                    exports: "Vex"
+                }
+            },
+            paths: {
+                "jquery": "scripts/jquery-2.0.2.min",
+                "jquery.klavier": "jquery.klavier.min",
+                "lodash": "scripts/lodash",
+                "vex": "vexflow-min"
+            }
+        });
+
+        require(["index"], function () {});
+    </script>
 </body>
 </html>
