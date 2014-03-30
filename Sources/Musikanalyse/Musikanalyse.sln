@@ -13,13 +13,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusiktheorieAktuell", "Musi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoteLex", "NoteLex\NoteLex.csproj", "{4D357C07-9C99-4306-AFCF-6E73E9444AED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PcSetTableGenerator", "PcSetTableGenerator\PcSetTableGenerator.csproj", "{AC0C3F00-8B91-4B12-A76F-448DB5670F85}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PcSetTableGenerator.Tests", "PcSetTableGenerator.Tests\PcSetTableGenerator.Tests.csproj", "{622A9B7C-840B-45CC-869E-BC2F67B2853C}"
-EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 9
+		SccNumberOfProjects = 7
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://uli.visualstudio.com/defaultcollection
 		SccLocalPath0 = .
@@ -41,12 +37,6 @@ Global
 		SccProjectUniqueName6 = NoteLex\\NoteLex.csproj
 		SccProjectName6 = NoteLex
 		SccLocalPath6 = NoteLex
-		SccProjectUniqueName7 = PcSetTableGenerator\\PcSetTableGenerator.csproj
-		SccProjectName7 = PcSetTableGenerator
-		SccLocalPath7 = PcSetTableGenerator
-		SccProjectUniqueName8 = PcSetTableGenerator.Tests\\PcSetTableGenerator.Tests.csproj
-		SccProjectName8 = PcSetTableGenerator.Tests
-		SccLocalPath8 = PcSetTableGenerator.Tests
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,14 +67,6 @@ Global
 		{4D357C07-9C99-4306-AFCF-6E73E9444AED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D357C07-9C99-4306-AFCF-6E73E9444AED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D357C07-9C99-4306-AFCF-6E73E9444AED}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AC0C3F00-8B91-4B12-A76F-448DB5670F85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AC0C3F00-8B91-4B12-A76F-448DB5670F85}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AC0C3F00-8B91-4B12-A76F-448DB5670F85}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AC0C3F00-8B91-4B12-A76F-448DB5670F85}.Release|Any CPU.Build.0 = Release|Any CPU
-		{622A9B7C-840B-45CC-869E-BC2F67B2853C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{622A9B7C-840B-45CC-869E-BC2F67B2853C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{622A9B7C-840B-45CC-869E-BC2F67B2853C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{622A9B7C-840B-45CC-869E-BC2F67B2853C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
