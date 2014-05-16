@@ -327,6 +327,8 @@
     <Content Include="images\tutorials\lamentobass\Lamento.cap" />
     <Content Include="images\tutorials\motivo\BWV876-2.pdf" />
     <Content Include="images\tutorials\neapolitaner\neapolitaner.cap" />
+    <Content Include="images\tutorials\oberquintmodulation\01_Vaet_1-5.png" />
+    <Content Include="images\tutorials\oberquintmodulation\sound\01_Vaet_1-5.mp3" />
     <Content Include="images\tutorials\regola\Analyse_HaydnThema.pdf" />
     <Content Include="images\tutorials\regola\Analyse_Matthaeuspassion.pdf" />
     <Content Include="images\tutorials\regola\Analyse_SonateInC.pdf" />
@@ -378,6 +380,8 @@
     </None>
     <Content Include="Content\games\memory\README.md" />
     <Content Include="Content\games\index.json" />
+    <Content Include="images\tutorials\oberquintmodulation\documents\Oberquintmodulation.docx" />
+    <Content Include="images\tutorials\oberquintmodulation\documents\01_Vaet_1-5.sib" />
     <None Include="Properties\PublishProfiles\Andi.pubxml">
       <SubType>Designer</SubType>
     </None>
@@ -1058,11 +1062,12 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>53849</DevelopmentServerPort>
+          <DevelopmentServerPort>64561</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:53849/</IISUrl>
+          <IISUrl>
+          </IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
