@@ -328,7 +328,13 @@
     <Content Include="images\tutorials\motivo\BWV876-2.pdf" />
     <Content Include="images\tutorials\neapolitaner\neapolitaner.cap" />
     <Content Include="images\tutorials\oberquintmodulation\01_Vaet_1-5.png" />
+    <Content Include="images\tutorials\oberquintmodulation\02_Corelli_1-5.png" />
+    <Content Include="images\tutorials\oberquintmodulation\04_Regola_Klausel.png" />
+    <Content Include="images\tutorials\oberquintmodulation\03_Regola_1-5.png" />
     <Content Include="images\tutorials\oberquintmodulation\sound\01_Vaet_1-5.mp3" />
+    <Content Include="images\tutorials\oberquintmodulation\sound\02_Corelli_1-5.mp3" />
+    <Content Include="images\tutorials\oberquintmodulation\sound\03_Regola_1-5.mp3" />
+    <Content Include="images\tutorials\oberquintmodulation\sound\04_Regola_Klausel.mp3" />
     <Content Include="images\tutorials\regola\Analyse_HaydnThema.pdf" />
     <Content Include="images\tutorials\regola\Analyse_Matthaeuspassion.pdf" />
     <Content Include="images\tutorials\regola\Analyse_SonateInC.pdf" />
@@ -382,6 +388,9 @@
     <Content Include="Content\games\index.json" />
     <Content Include="images\tutorials\oberquintmodulation\documents\Oberquintmodulation.docx" />
     <Content Include="images\tutorials\oberquintmodulation\documents\01_Vaet_1-5.sib" />
+    <Content Include="images\tutorials\oberquintmodulation\documents\02_Corelli_1-5.sib" />
+    <Content Include="images\tutorials\oberquintmodulation\documents\03_Regola_1-5.sib" />
+    <Content Include="images\tutorials\oberquintmodulation\documents\04_Regola_Klausel.sib" />
     <None Include="Properties\PublishProfiles\Andi.pubxml">
       <SubType>Designer</SubType>
     </None>
