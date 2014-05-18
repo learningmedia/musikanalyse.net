@@ -331,10 +331,23 @@
     <Content Include="images\tutorials\oberquintmodulation\02_Corelli_1-5.png" />
     <Content Include="images\tutorials\oberquintmodulation\04_Regola_Klausel.png" />
     <Content Include="images\tutorials\oberquintmodulation\03_Regola_1-5.png" />
+    <Content Include="images\tutorials\oberquintmodulation\05_Corelli_4.png" />
+    <Content Include="images\tutorials\oberquintmodulation\06_Regola_KlauselnIn5.png" />
+    <Content Include="images\tutorials\oberquintmodulation\07_Regola_KlauselnIn5-2.png" />
+    <Content Include="images\tutorials\oberquintmodulation\08_CorelliInF_1-5.png" />
+    <Content Include="images\tutorials\oberquintmodulation\08_CorelliInF_1-5.png" />
+    <Content Include="images\tutorials\oberquintmodulation\09_CorelliInB_1-5.png" />
+    <Content Include="images\tutorials\oberquintmodulation\10_BWV939_PraeludiumInCtransoniert.png" />
+    <Content Include="images\tutorials\oberquintmodulation\11_Bach-PraeludiumInC.png" />
     <Content Include="images\tutorials\oberquintmodulation\sound\01_Vaet_1-5.mp3" />
     <Content Include="images\tutorials\oberquintmodulation\sound\02_Corelli_1-5.mp3" />
     <Content Include="images\tutorials\oberquintmodulation\sound\03_Regola_1-5.mp3" />
     <Content Include="images\tutorials\oberquintmodulation\sound\04_Regola_Klausel.mp3" />
+    <Content Include="images\tutorials\oberquintmodulation\sound\05_Corelli_4.mp3" />
+    <Content Include="images\tutorials\oberquintmodulation\sound\06_Regola_KlauselnIn5.mp3" />
+    <Content Include="images\tutorials\oberquintmodulation\sound\07_Regola_KlauselnIn5-2.mp3" />
+    <Content Include="images\tutorials\oberquintmodulation\sound\08b_CorelliInB_1-5.mp3" />
+    <Content Include="images\tutorials\oberquintmodulation\sound\09_BWV939_PraeludiumInCtransoniert.mp3" />
     <Content Include="images\tutorials\regola\Analyse_HaydnThema.pdf" />
     <Content Include="images\tutorials\regola\Analyse_Matthaeuspassion.pdf" />
     <Content Include="images\tutorials\regola\Analyse_SonateInC.pdf" />
@@ -391,6 +404,12 @@
     <Content Include="images\tutorials\oberquintmodulation\documents\02_Corelli_1-5.sib" />
     <Content Include="images\tutorials\oberquintmodulation\documents\03_Regola_1-5.sib" />
     <Content Include="images\tutorials\oberquintmodulation\documents\04_Regola_Klausel.sib" />
+    <Content Include="images\tutorials\oberquintmodulation\documents\05_Corelli_4.sib" />
+    <Content Include="images\tutorials\oberquintmodulation\documents\06_Regola_KlauselnIn5.sib" />
+    <Content Include="images\tutorials\oberquintmodulation\documents\07_Regola_KlauselnIn5-2.sib" />
+    <Content Include="images\tutorials\oberquintmodulation\documents\08_CorelliInB_1-5.sib" />
+    <Content Include="images\tutorials\oberquintmodulation\documents\08_CorelliInF_1-5.sib" />
+    <Content Include="images\tutorials\oberquintmodulation\documents\10_BWV939_PraeludiumInCtransoniert.sib" />
     <None Include="Properties\PublishProfiles\Andi.pubxml">
       <SubType>Designer</SubType>
     </None>

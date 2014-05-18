@@ -36,7 +36,7 @@
         </th>
     </tr>
 
-    @foreach (Musikanalyse.Services.Contracts.Page item in Model)
+    @foreach (Musikanalyse.Services.Contracts.Page item in Model.Reverse())
     {
         ContentPage contentPage = item as ContentPage;
         TutorialPage tutorialPage = item as TutorialPage;
