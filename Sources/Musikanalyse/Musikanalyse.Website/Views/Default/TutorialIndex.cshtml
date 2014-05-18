@@ -14,7 +14,7 @@
 
 <div class="container" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; -moz-column-gap: 2.5em; -webkit-column-gap: 2.5em; column-gap: 2.5em;">
     <ul class="media-list">
-        @foreach (TutorialInfo tutorial in this.Model.TutorialInfos)
+        @foreach (TutorialInfo tutorial in this.Model.TutorialInfos.OrderBy(x => x.Title))
         {
             <li class="media" style="-webkit-column-break-inside: avoid; break-inside: avoid;">
                 <a class="pull-left" href="@this.Url.Action("TutorialPage", new { urlKey = tutorial.UrlKey })">

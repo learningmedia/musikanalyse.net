@@ -298,6 +298,7 @@
     <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Admin\Views\Pages\CreateTutorial.cshtml" />
     <Content Include="images\MainImage.png" />
+    <Content Include="images\new.png" />
     <Content Include="images\tutorials\fragetopos\PhrygischeWendung.cap" />
     <Content Include="images\tutorials\funktionstheorie2\Chopin Op28 No20 - Takt 1-2.eps" />
     <Content Include="images\tutorials\funktionstheorie2\Chopin Op28 No20 - Takt 1-2.psd" />
@@ -1053,6 +1054,7 @@
     <Content Include="Views\Games\GameIndex.cshtml" />
     <Content Include="Views\Games\LevelIndex.cshtml" />
     <Content Include="Views\Games\MemoryGameLevel.cshtml" />
+    <Content Include="Views\Default\Index.cshtml.save" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="images\tutorials\funktionstheorie\examples\sound\" />

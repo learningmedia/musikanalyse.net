@@ -1,5 +1,4 @@
 ﻿@using MarkdownDeep
-@using Musikanalyse.Services.Contracts
 @using Musikanalyse.Website.ViewModels
 @model TutorialsViewModel
 
@@ -31,23 +30,6 @@
 </div>
 <div class="row">
     <div class="span6">
-        @if (true)
-        {
-            <img src="/images/new.png" style="position: absolute; width: 100px; margin-left: -7em; margin-top: -1em;" />
-            <h3>Die Oberquintmodulation</h3>
-            <p>Die Oberquintmodulation ist für abendländische Kompositionen des 17. bis 19. Jahrhunderts von besonderer Bedeutung: Sie gehört zur 
-                harmonischen Standardbewegung aller größeren und kleineren Kompositionen in Dur. In diesem Tutorial werden die geschichtlichen Hintergründe 
-                für die Entstehung des Modells beleuchtet und Techniken für die Analyse und die Stilübungen erläutert.</p>
-            <p><a class="btn" href="@this.Url.Action("TutorialPage", new { urlKey = "oberquintmodulation" })">Zum Tutorial &raquo;</a></p>
-        }
-        @if (this.Model.TutorialInfos.Count > 1)
-        {
-            <h3>@this.Model.TutorialInfos[1].Title</h3>
-            <p>@this.Html.Raw(markdown.Transform(this.Model.TutorialInfos[1].Abstract))</p>
-            <p><a class="btn" href="@this.Url.Action("TutorialPage", new { urlKey = this.Model.TutorialInfos[1].UrlKey })">Zum Tutorial &raquo;</a></p>
-        }
-    </div>
-    <div class="span6">
         @if (this.Model.TutorialInfos.Count > 0)
         {
             <h3>@this.Model.TutorialInfos[0].Title</h3>
@@ -59,6 +41,20 @@
             <h3>@this.Model.TutorialInfos[2].Title</h3>
             <p>@this.Html.Raw(markdown.Transform(this.Model.TutorialInfos[2].Abstract))</p>
             <p><a class="btn" href="@this.Url.Action("TutorialPage", new { urlKey = this.Model.TutorialInfos[2].UrlKey })">Zum Tutorial &raquo;</a></p>
+        }
+    </div>
+    <div class="span6">
+        @if (this.Model.TutorialInfos.Count > 1)
+        {
+            <h3>@this.Model.TutorialInfos[1].Title</h3>
+            <p>@this.Html.Raw(markdown.Transform(this.Model.TutorialInfos[1].Abstract))</p>
+            <p><a class="btn" href="@this.Url.Action("TutorialPage", new { urlKey = this.Model.TutorialInfos[1].UrlKey })">Zum Tutorial &raquo;</a></p>
+        }
+        @if (this.Model.TutorialInfos.Count > 3)
+        {
+            <h3>@this.Model.TutorialInfos[3].Title</h3>
+            <p>@this.Html.Raw(markdown.Transform(this.Model.TutorialInfos[3].Abstract))</p>
+            <p><a class="btn" href="@this.Url.Action("TutorialPage", new { urlKey = this.Model.TutorialInfos[3].UrlKey })">Zum Tutorial &raquo;</a></p>
         }
     </div>
 </div>
