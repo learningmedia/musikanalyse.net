@@ -343,7 +343,12 @@
     <Content Include="images\tutorials\oberquintmodulation\11_Bach-PraeludiumInC.png" />
     <Content Include="images\tutorials\oberquintmodulation\13_Mozart-Standards.png" />
     <Content Include="images\tutorials\oberquintmodulation\14_Mozart-KV545-III.png" />
+    <Content Include="images\tutorials\oberquintmodulation\15_Mozart-KV311-III.png" />
     <Content Include="images\tutorials\oberquintmodulation\16_Mozart-Moll.png" />
+    <Content Include="images\tutorials\oberquintmodulation\17_Mozart-KV280-III.png" />
+    <Content Include="images\tutorials\oberquintmodulation\18_Mozart-Moll2.png" />
+    <Content Include="images\tutorials\oberquintmodulation\19_Mozart-332.png" />
+    <Content Include="images\tutorials\oberquintmodulation\20_Beethoven-12.1.png" />
     <Content Include="images\tutorials\oberquintmodulation\sound\01_Vaet_1-5.mp3" />
     <Content Include="images\tutorials\oberquintmodulation\sound\02_Corelli_1-5.mp3" />
     <Content Include="images\tutorials\oberquintmodulation\sound\03_Regola_1-5.mp3" />
@@ -356,6 +361,12 @@
     <Content Include="images\tutorials\oberquintmodulation\sound\10_Mozart_Streichquartett-156-3.mp3" />
     <Content Include="images\tutorials\oberquintmodulation\sound\13_Mozart-Standards.mp3" />
     <Content Include="images\tutorials\oberquintmodulation\sound\14_Mozart-KV545-III.mp3" />
+    <Content Include="images\tutorials\oberquintmodulation\sound\15_Mozart-KV311-III.mp3" />
+    <Content Include="images\tutorials\oberquintmodulation\sound\16_Mozart-Moll.mp3" />
+    <Content Include="images\tutorials\oberquintmodulation\sound\17_Mozart-KV280-III.mp3" />
+    <Content Include="images\tutorials\oberquintmodulation\sound\18_Mozart-Moll2.mp3" />
+    <Content Include="images\tutorials\oberquintmodulation\sound\19_Mozart-332.mp3" />
+    <Content Include="images\tutorials\oberquintmodulation\sound\20_Beethoven-12.1.mp3" />
     <Content Include="images\tutorials\regola\Analyse_HaydnThema.pdf" />
     <Content Include="images\tutorials\regola\Analyse_Matthaeuspassion.pdf" />
     <Content Include="images\tutorials\regola\Analyse_SonateInC.pdf" />
@@ -423,6 +434,10 @@
     <Content Include="images\tutorials\oberquintmodulation\documents\16_Mozart-Moll.sib" />
     <Content Include="images\tutorials\oberquintmodulation\documents\14_Mozart-KV545-III.sib" />
     <Content Include="images\tutorials\oberquintmodulation\documents\17_Mozart-KV280-III.sib" />
+    <Content Include="images\tutorials\oberquintmodulation\documents\18_Mozart-Moll2.sib" />
+    <Content Include="images\tutorials\oberquintmodulation\documents\15_Mozart-KV311-III.sib" />
+    <Content Include="images\tutorials\oberquintmodulation\documents\19_Mozart-332.sib" />
+    <Content Include="images\tutorials\oberquintmodulation\documents\20_Beethoven-12.1.sib" />
     <None Include="Properties\PublishProfiles\Andi.pubxml">
       <SubType>Designer</SubType>
     </None>
