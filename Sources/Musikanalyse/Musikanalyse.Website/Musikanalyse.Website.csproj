@@ -351,6 +351,7 @@
     <Content Include="images\tutorials\oberquintmodulation\20_Beethoven-12.1.png" />
     <Content Include="images\tutorials\oberquintmodulation\21_Schumann-Landmann.png" />
     <Content Include="images\tutorials\oberquintmodulation\22_Brahms-op39-2.png" />
+    <Content Include="images\tutorials\oberquintmodulation\23_Rachmaninoff-Op4.1.png" />
     <Content Include="images\tutorials\oberquintmodulation\sound\01_Vaet_1-5.mp3" />
     <Content Include="images\tutorials\oberquintmodulation\sound\02_Corelli_1-5.mp3" />
     <Content Include="images\tutorials\oberquintmodulation\sound\03_Regola_1-5.mp3" />
@@ -371,6 +372,7 @@
     <Content Include="images\tutorials\oberquintmodulation\sound\20_Beethoven-12.1.mp3" />
     <Content Include="images\tutorials\oberquintmodulation\sound\21_Schumann-Landmann.mp3" />
     <Content Include="images\tutorials\oberquintmodulation\sound\22_Brahms-op39-2.mp3" />
+    <Content Include="images\tutorials\oberquintmodulation\sound\23_Rachmaninoff-Op4.1.mp3" />
     <Content Include="images\tutorials\regola\Analyse_HaydnThema.pdf" />
     <Content Include="images\tutorials\regola\Analyse_Matthaeuspassion.pdf" />
     <Content Include="images\tutorials\regola\Analyse_SonateInC.pdf" />
@@ -444,6 +446,7 @@
     <Content Include="images\tutorials\oberquintmodulation\documents\20_Beethoven-12.1.sib" />
     <Content Include="images\tutorials\oberquintmodulation\documents\21_Schumann-Landmann.sib" />
     <Content Include="images\tutorials\oberquintmodulation\documents\22_Brahms-op39-2.sib" />
+    <Content Include="images\tutorials\oberquintmodulation\documents\23_Rachmaninoff-Op4.1.sib" />
     <None Include="Properties\PublishProfiles\Andi.pubxml">
       <SubType>Designer</SubType>
     </None>
