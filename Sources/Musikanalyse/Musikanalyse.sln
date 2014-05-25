@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Musikanalyse.DataAccess", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusiktheorieAktuell", "MusiktheorieAktuell\MusiktheorieAktuell.csproj", "{9BF310AC-DD4E-4AE6-AE70-FF09B7332ACB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoteLex", "NoteLex\NoteLex.csproj", "{4D357C07-9C99-4306-AFCF-6E73E9444AED}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,10 +37,6 @@ Global
 		{9BF310AC-DD4E-4AE6-AE70-FF09B7332ACB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9BF310AC-DD4E-4AE6-AE70-FF09B7332ACB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9BF310AC-DD4E-4AE6-AE70-FF09B7332ACB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4D357C07-9C99-4306-AFCF-6E73E9444AED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4D357C07-9C99-4306-AFCF-6E73E9444AED}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4D357C07-9C99-4306-AFCF-6E73E9444AED}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4D357C07-9C99-4306-AFCF-6E73E9444AED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
