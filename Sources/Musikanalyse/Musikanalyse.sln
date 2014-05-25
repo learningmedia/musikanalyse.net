@@ -14,30 +14,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoteLex", "NoteLex\NoteLex.csproj", "{4D357C07-9C99-4306-AFCF-6E73E9444AED}"
 EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 7
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://uli.visualstudio.com/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = Musikanalyse.Website\\Musikanalyse.Website.csproj
-		SccProjectName1 = Musikanalyse.Website
-		SccLocalPath1 = Musikanalyse.Website
-		SccProjectUniqueName2 = Musikanalyse.Services.Contracts\\Musikanalyse.Services.Contracts.csproj
-		SccProjectName2 = Musikanalyse.Services.Contracts
-		SccLocalPath2 = Musikanalyse.Services.Contracts
-		SccProjectUniqueName3 = Musikanalyse.Services\\Musikanalyse.Services.csproj
-		SccProjectName3 = Musikanalyse.Services
-		SccLocalPath3 = Musikanalyse.Services
-		SccProjectUniqueName4 = Musikanalyse.DataAccess\\Musikanalyse.DataAccess.csproj
-		SccProjectName4 = Musikanalyse.DataAccess
-		SccLocalPath4 = Musikanalyse.DataAccess
-		SccProjectUniqueName5 = MusiktheorieAktuell\\MusiktheorieAktuell.csproj
-		SccProjectName5 = MusiktheorieAktuell
-		SccLocalPath5 = MusiktheorieAktuell
-		SccProjectUniqueName6 = NoteLex\\NoteLex.csproj
-		SccProjectName6 = NoteLex
-		SccLocalPath6 = NoteLex
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
