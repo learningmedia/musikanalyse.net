@@ -1,7 +1,6 @@
 ﻿namespace Musikanalyse.Services
 {
     using System;
-
     using Musikanalyse.DataAccess;
 
     public static class Mapper
@@ -12,6 +11,8 @@
             AutoMapper.Mapper.CreateMap<Contracts.ContentPage, DataAccess.ContentPage>();
             AutoMapper.Mapper.CreateMap<DataAccess.TutorialPage, Contracts.TutorialPage>();
             AutoMapper.Mapper.CreateMap<Contracts.TutorialPage, DataAccess.TutorialPage>();
+            AutoMapper.Mapper.CreateMap<DataAccess.Category, Contracts.Category>();
+            AutoMapper.Mapper.CreateMap<Contracts.Category, DataAccess.Category>();
         }
 
         public static Contracts.Page MapToContract(DataAccess.Page pageEntity)
@@ -56,7 +57,17 @@
             return AutoMapper.Mapper.Map<Contracts.ContentPage>(pageEntity);
         }
 
-        public static Page MapToEntity(Contracts.Page pageContract)
+        public static Contracts.Category MapToContract(DataAccess.Category categoryEntity)
+        {
+            if (categoryEntity == null)
+            {
+                throw new ArgumentNullException("categoryEntity");
+            }
+
+            return AutoMapper.Mapper.Map<Contracts.Category>(categoryEntity);
+        }
+
+        public static DataAccess.Page MapToEntity(Contracts.Page pageContract)
         {
             if (pageContract == null)
             {
@@ -78,27 +89,37 @@
             throw new NotImplementedException();
         }
 
-        public static TutorialPage MapToEntity(Contracts.TutorialPage pageContract)
+        public static DataAccess.TutorialPage MapToEntity(Contracts.TutorialPage pageContract)
         {
             if (pageContract == null)
             {
                 throw new ArgumentNullException("pageContract");
             }
 
-            return AutoMapper.Mapper.Map<TutorialPage>(pageContract);
+            return AutoMapper.Mapper.Map<DataAccess.TutorialPage>(pageContract);
         }
 
-        public static ContentPage MapToEntity(Contracts.ContentPage pageContract)
+        public static DataAccess.ContentPage MapToEntity(Contracts.ContentPage pageContract)
         {
             if (pageContract == null)
             {
                 throw new ArgumentNullException("pageContract");
             }
 
-            return AutoMapper.Mapper.Map<ContentPage>(pageContract);
+            return AutoMapper.Mapper.Map<DataAccess.ContentPage>(pageContract);
         }
 
-        public static void MapToExistingEntity(Contracts.Page pageContract, Page pageEntity)
+        public static DataAccess.Category MapToEntity(Contracts.Category categoryContract)
+        {
+            if (categoryContract == null)
+            {
+                throw new ArgumentNullException("categoryContract");
+            }
+
+            return AutoMapper.Mapper.Map<DataAccess.Category>(categoryContract);
+        }
+
+        public static void MapToExistingEntity(Contracts.Page pageContract, DataAccess.Page pageEntity)
         {
             if (pageContract == null)
             {
@@ -129,7 +150,7 @@
             throw new NotImplementedException();
         }
 
-        public static void MapToExistingEntity(Contracts.ContentPage pageContract, ContentPage pageEntity)
+        public static void MapToExistingEntity(Contracts.ContentPage pageContract, DataAccess.ContentPage pageEntity)
         {
             if (pageContract == null)
             {
@@ -144,7 +165,7 @@
             AutoMapper.Mapper.Map(pageContract, pageEntity);
         }
 
-        public static void MapToExistingEntity(Contracts.TutorialPage pageContract, TutorialPage pageEntity)
+        public static void MapToExistingEntity(Contracts.TutorialPage pageContract, DataAccess.TutorialPage pageEntity)
         {
             if (pageContract == null)
             {
@@ -157,6 +178,21 @@
             }
 
             AutoMapper.Mapper.Map(pageContract, pageEntity);
+        }
+
+        public static void MapToExistingEntity(Contracts.Category categoryContract, Category categoryEntity)
+        {
+            if (categoryContract == null)
+            {
+                throw new ArgumentNullException("categoryContract");
+            }
+
+            if (categoryEntity == null)
+            {
+                throw new ArgumentNullException("categoryEntity");
+            }
+
+            AutoMapper.Mapper.Map(categoryContract, categoryEntity);
         }
     }
 }

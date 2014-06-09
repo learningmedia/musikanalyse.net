@@ -3,6 +3,7 @@ GO
 
 -- Hier wird die Datenbank, wenn Sie existiert gelöscht.
 IF  EXISTS (SELECT name FROM sys.databases WHERE name = N'MusikanalyseDb')
+    ALTER DATABASE [MusikanalyseDb] SET SINGLE_USER
     DROP DATABASE [MusikanalyseDb]
 GO
 -- Hier wird die Anmeldung gelöscht, falls sie existiert.

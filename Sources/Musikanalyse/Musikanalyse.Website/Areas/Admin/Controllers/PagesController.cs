@@ -13,10 +13,12 @@ namespace Musikanalyse.Website.Areas.Admin.Controllers
     public class PagesController : Controller
     {
         private readonly IPageService pageService;
+        private readonly CategoryService categoryService;
 
         public PagesController()
         {
             this.pageService = new PageService();
+            this.categoryService = new CategoryService();
         }
 
         public ActionResult Index()
@@ -45,6 +47,7 @@ namespace Musikanalyse.Website.Areas.Admin.Controllers
                 case PageType.Content:
                     return this.View("CreateContent");
                 case PageType.Tutoial:
+                    this.ViewBag.AvailableCategories = this.categoryService.GetAll();
                     return this.View("CreateTutorial");
                 default:
                     throw new InvalidOperationException("Unknown page type.");
@@ -69,6 +72,7 @@ namespace Musikanalyse.Website.Areas.Admin.Controllers
                 case PageType.Content:
                     return this.View("CreateContent");
                 case PageType.Tutoial:
+                    this.ViewBag.AvailableCategories = this.categoryService.GetAll();
                     return this.View("CreateTutorial");
                 default:
                     throw new InvalidOperationException("Unknown page type.");
@@ -79,6 +83,7 @@ namespace Musikanalyse.Website.Areas.Admin.Controllers
         {
             try
             {
+                this.ViewBag.AvailableCategories = this.categoryService.GetAll();
                 Page page = this.pageService.GetPage(id);
                 return View(page);
             }
@@ -100,6 +105,7 @@ namespace Musikanalyse.Website.Areas.Admin.Controllers
                 return RedirectToAction("Index");
             }
 
+            this.ViewBag.AvailableCategories = this.categoryService.GetAll();
             return View(page);
         }
 

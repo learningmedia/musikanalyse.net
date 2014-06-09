@@ -1,8 +1,12 @@
-﻿@using Musikanalyse.Services.Contracts
+﻿@using System.Globalization
+@using Musikanalyse.Services.Contracts
 @model Musikanalyse.Services.Contracts.Page
 
 @{
     ViewBag.Title = "Edit";
+    IList<Category> availableCategories = (IList<Category>)ViewBag.AvailableCategories;
+    List<SelectListItem> categoryItems = new List<SelectListItem> { new SelectListItem { Text = "(Keine)", Value = string.Empty } };
+    categoryItems.AddRange(availableCategories.Select(x => new SelectListItem { Text = x.Name, Value = x.Id.ToString(CultureInfo.InvariantCulture) }));
 }
 
 <h2>Edit</h2>
@@ -13,16 +17,24 @@
 
     <fieldset>
         <legend>Content</legend>
-        
-        <p>
-            <input type="submit" value="Save" />
-        </p>
-        
-        <hr/>
 
         @Html.HiddenFor(model => model.Id)
         @Html.HiddenFor(model => model.CreationDate)
         @Html.HiddenFor(model => model.LastModifiedDate)
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+
+        <hr/>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Title)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Title)
+            @Html.ValidationMessageFor(model => model.Title)
+        </div>
 
         <div class="editor-label">
             @Html.LabelFor(model => model.Value)
@@ -53,6 +65,14 @@
             </div>
 
             <div class="editor-label">
+                @Html.Label("Category")
+            </div>
+            <div class="editor-field">
+                @Html.DropDownList("CategoryId", categoryItems)
+                @Html.ValidationMessage("CategoryId")
+            </div>
+
+            <div class="editor-label">
                 @Html.Label("ThumbnailUrl")
             </div>
             <div class="editor-field">
@@ -73,13 +93,6 @@
             throw new InvalidOperationException();
         }
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Title)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Title)
-            @Html.ValidationMessageFor(model => model.Title)
-        </div>
     </fieldset>
 }
 
