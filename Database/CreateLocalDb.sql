@@ -12,9 +12,9 @@ GO
 
 -- Hier wird nun die Datenbank neu angelegt.
 CREATE DATABASE [MusikanalyseDb] ON PRIMARY
-( NAME = N'MusikanalyseDb', FILENAME = N'C:\musikanalyse.net\MusikanalyseDb.mdf' , SIZE = 102400KB , FILEGROWTH = 10240KB )
+( NAME = N'MusikanalyseDb', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\DATA\MusikanalyseDb.mdf' , SIZE = 102400KB , FILEGROWTH = 10240KB )
  LOG ON 
-( NAME = N'MusikanalyseDb_log', FILENAME = N'C:\musikanalyse.net\MusikanalyseDb_log.ldf' , SIZE = 20480KB , FILEGROWTH = 10240KB )
+( NAME = N'MusikanalyseDb_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\DATA\MusikanalyseDb_log.ldf' , SIZE = 20480KB , FILEGROWTH = 10240KB )
 GO
 
 -- Hier wird die Anmeldung erzeugt.
