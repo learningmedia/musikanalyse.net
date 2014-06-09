@@ -41,11 +41,30 @@
         {
             using (MusikanalyseDataContext context = new MusikanalyseDataContext())
             {
-                return context
+                Dictionary<int, Contracts.Category> allCategories = context.Categories.ToList().Select(Mapper.MapToContract).ToDictionary(x => x.Id, x => x);
+
+                List<TutorialInfo> allTutorialInfos = context
                     .Pages
                     .OfType<DataAccess.TutorialPage>()
-                    .Select(x => new TutorialInfo { Abstract = x.Abstract, Title = x.Title, UrlKey = x.UrlKey, ThumbnailUrl = x.ThumbnailUrl})
+                    .Select(x => new TutorialInfo
+                    {
+                        Abstract = x.Abstract,
+                        Title = x.Title,
+                        UrlKey = x.UrlKey,
+                        ThumbnailUrl = x.ThumbnailUrl,
+                        CategoryId = x.CategoryId
+                    })
                     .ToList();
+
+                allTutorialInfos.ForEach(x =>
+                {
+                    if (x.CategoryId != null)
+                    {
+                        x.Category = allCategories[x.CategoryId.Value];
+                    }
+                });
+
+                return allTutorialInfos;
             }
         }
 

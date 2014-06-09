@@ -3,29 +3,41 @@
 @using Musikanalyse.Website.ViewModels
 @model TutorialsViewModel
 
+@functions {
+    private class CategoryComparer : IComparer<Category>
+    {
+        public int Compare(Category x, Category y)
+        {
+            int xval = x != null ? x.Rank : int.MaxValue;
+            int yval = y != null ? y.Rank : int.MaxValue;
+            return Comparer<int>.Default.Compare(xval, yval);
+        }
+    }
+}
+
 @{
     ViewBag.Title = "Tutorials";
-    Markdown markdown = new Markdown { ExtraMode = true, SafeMode = false, MarkdownInHtml = true };
+    // Markdown markdown = new Markdown { ExtraMode = true, SafeMode = false, MarkdownInHtml = true }; // TODO: display description on hover
+    List<IGrouping<Category, TutorialInfo>> tutorialGroupings = this.Model.TutorialInfos.GroupBy(x => x.Category).OrderBy(x => x.Key, new CategoryComparer()).ToList();
 }
 
 <div class="page-header">
     <h1>Tutorials</h1>
 </div>
 
-<div class="container" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; -moz-column-gap: 2.5em; -webkit-column-gap: 2.5em; column-gap: 2.5em;">
-    <ul class="media-list">
-        @foreach (TutorialInfo tutorial in this.Model.TutorialInfos.OrderBy(x => x.Title))
-        {
-            <li class="media" style="-webkit-column-break-inside: avoid; break-inside: avoid;">
-                <a class="pull-left" href="@this.Url.Action("TutorialPage", new { urlKey = tutorial.UrlKey })">
-                    <img class="media-object" src="@(tutorial.ThumbnailUrl ?? "/content/images/university-icon-96.png")">
-                </a>
-                <div class="media-body">
-                    <h4 class="media-heading">@tutorial.Title</h4>
-                    <p>@Html.Raw(markdown.Transform(tutorial.Abstract))</p>
-                    <p><a class="btn btn-mini" href="@this.Url.Action("TutorialPage", new { urlKey = tutorial.UrlKey })">Zum Tutorial &raquo;</a></p>
-                </div>
-            </li>
-        }
-    </ul>
+<div class="container" style="-moz-column-width: 30em; -webkit-column-width: 30em; -ms-column-width: 30em; -o-column-width: 30em; column-width: 30em; -moz-column-gap: 2.5em; -webkit-column-gap: 2.5em; -ms-column-gap: 2.5em; -o-column-gap: 2.5em; column-gap: 2.5em;">
+    @foreach (var grouping in tutorialGroupings)
+    {
+        <div style="-webkit-column-break-inside: avoid; -webkit-break-inside: avoid; -moz-break-inside: avoid; -ms-break-inside: avoid; -o-break-inside: avoid; break-inside: avoid;">
+            <h4>@(grouping.Key != null ? grouping.Key.Name : "Ohne Kategorie")</h4>
+            <ul>
+                @foreach (TutorialInfo tutorial in grouping)
+                {
+                    <li>
+                        <a href="@this.Url.Action("TutorialPage", new { urlKey = tutorial.UrlKey })">@tutorial.Title</a>
+                    </li>
+                }
+            </ul>
+        </div>
+    }
 </div>
