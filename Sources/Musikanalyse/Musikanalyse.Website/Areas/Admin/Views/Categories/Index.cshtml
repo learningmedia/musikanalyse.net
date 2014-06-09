@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Musikanalyse.DataAccess.Category>
+﻿@model IList<Musikanalyse.Services.Contracts.Category>
 
 @{
     ViewBag.Title = "Index";
@@ -11,12 +11,8 @@
 </p>
 <table>
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Rank)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
+        <th>Rank</th>
+        <th>Name</th>
         <th></th>
     </tr>
 

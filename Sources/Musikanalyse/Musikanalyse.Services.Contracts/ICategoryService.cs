@@ -12,5 +12,6 @@
 
         void DeleteCategory(int categoryId);
 
+        Category GetCategory(int categoryId);
     }
 }

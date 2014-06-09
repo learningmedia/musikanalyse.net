@@ -290,7 +290,6 @@
     <Content Include="Content\Site.css" />
     <Content Include="Areas\Admin\Views\Web.config" />
     <Content Include="Areas\Admin\Views\Pages\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Pages\Details.cshtml" />
     <Content Include="Areas\Admin\Views\Pages\CreateContent.cshtml" />
     <Content Include="Areas\Admin\Views\Pages\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Pages\Delete.cshtml" />
@@ -421,7 +420,6 @@
     <Content Include="Content\less\alerts.less" />
     <Content Include="Content\less\accordion.less" />
     <Content Include="Areas\Admin\Views\Categories\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Categories\Details.cshtml" />
     <Content Include="Areas\Admin\Views\Categories\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Categories\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Categories\Delete.cshtml" />

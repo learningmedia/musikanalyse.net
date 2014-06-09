@@ -30,6 +30,14 @@ namespace Musikanalyse.Services
             }
         }
 
+        public Contracts.Category GetCategory(int categoryId)
+        {
+            using (MusikanalyseDataContext context = new MusikanalyseDataContext())
+            {
+                return Mapper.MapToContract(context.Categories.Single(x => x.Id == categoryId));
+            }
+        }
+
         public IList<Contracts.Category> GetAll()
         {
             using (MusikanalyseDataContext context = new MusikanalyseDataContext())

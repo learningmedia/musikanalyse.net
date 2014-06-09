@@ -27,19 +27,6 @@ namespace Musikanalyse.Website.Areas.Admin.Controllers
             return View(contents);
         }
 
-        public ActionResult Details(int id)
-        {
-            try
-            {
-                Page page = this.pageService.GetPage(id);
-                return View(page);
-            }
-            catch (Exception)
-            {
-                return HttpNotFound();
-            }
-        }
-
         public ActionResult Create(PageType type)
         {
             switch (type)

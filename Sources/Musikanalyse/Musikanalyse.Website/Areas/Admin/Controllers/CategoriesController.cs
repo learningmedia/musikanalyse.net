@@ -1,37 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using Musikanalyse.DataAccess;
+﻿using System.Web.Mvc;
+
+using Musikanalyse.Services;
+using Musikanalyse.Services.Contracts;
 
 namespace Musikanalyse.Website.Areas.Admin.Controllers
 {
     public class CategoriesController : Controller
     {
-        private MusikanalyseDataContext db = new MusikanalyseDataContext();
+        private readonly ICategoryService categoryService;
+
+        public CategoriesController()
+        {
+            this.categoryService = new CategoryService();
+        }
 
         //
         // GET: /Admin/Category/
 
         public ActionResult Index()
         {
-            return View(db.Categories.ToList());
-        }
-
-        //
-        // GET: /Admin/Category/Details/5
-
-        public ActionResult Details(int id = 0)
-        {
-            Category category = db.Categories.Find(id);
-            if (category == null)
-            {
-                return HttpNotFound();
-            }
-            return View(category);
+            return View(this.categoryService.GetAll());
         }
 
         //
@@ -51,8 +39,7 @@ namespace Musikanalyse.Website.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Categories.Add(category);
-                db.SaveChanges();
+                this.categoryService.CreateCategory(category);
                 return RedirectToAction("Index");
             }
 
@@ -64,7 +51,7 @@ namespace Musikanalyse.Website.Areas.Admin.Controllers
 
         public ActionResult Edit(int id = 0)
         {
-            Category category = db.Categories.Find(id);
+            Category category = this.categoryService.GetCategory(id);
             if (category == null)
             {
                 return HttpNotFound();
@@ -81,8 +68,7 @@ namespace Musikanalyse.Website.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(category).State = EntityState.Modified;
-                db.SaveChanges();
+                this.categoryService.UpdateCategory(category);
                 return RedirectToAction("Index");
             }
             return View(category);
@@ -93,7 +79,7 @@ namespace Musikanalyse.Website.Areas.Admin.Controllers
 
         public ActionResult Delete(int id = 0)
         {
-            Category category = db.Categories.Find(id);
+            Category category = categoryService.GetCategory(id);
             if (category == null)
             {
                 return HttpNotFound();
@@ -108,16 +94,8 @@ namespace Musikanalyse.Website.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Category category = db.Categories.Find(id);
-            db.Categories.Remove(category);
-            db.SaveChanges();
+            this.categoryService.DeleteCategory(id);
             return RedirectToAction("Index");
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            db.Dispose();
-            base.Dispose(disposing);
         }
     }
 }
