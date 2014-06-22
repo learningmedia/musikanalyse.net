@@ -128,3 +128,17 @@ textarea {
 .exercise-toggle {
     cursor: pointer;
 }
+
+/* Styles for titleBar
+-----------------------------------------------------------*/
+@media (min-width: 1200px) {
+    #titleBar {
+        background-image: url('/images/MainImage.png');
+        background-position: 100%;
+        background-repeat: no-repeat;
+    }
+}
+
+#titleBar {
+    height: 170px;
+}
