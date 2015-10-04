@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{{ title }}</title>
+    <link href="/content/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    {{> navbar }}
+    {{# if showHero }}{{> hero }}{{/ if }}
+    <div class="container content" style="margin-top: 2.5em;">
+        {{{ contents }}}
+    </div>
+    <script src="/content/scripts.js"></script>
+</body>
+
+</html>

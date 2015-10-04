@@ -1,0 +1,27 @@
+{
+  "name": "musikanalyse.net",
+  "version": "1.0.0",
+  "description": "Profiwissen zur Musiktheorie und zur musikalischen Analyse",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build"
+  },
+  "author": "Andreas Helmberger and Ulrich Kaiser",
+  "license": "CC BY-NC-ND",
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/learningmedia/musikanalyse.net.git"
+  },
+  "private": true,
+  "devDependencies": {
+    "browser-sync": "~2.9.8",
+    "gulp": "~3.9.0",
+    "handlebars": "~4.0.3",
+    "metalsmith": "~2.1.0",
+    "metalsmith-collections": "~0.7.0",
+    "metalsmith-concat": "~3.0.3",
+    "metalsmith-in-place": "~1.3.1",
+    "metalsmith-layouts": "~1.4.1",
+    "metalsmith-permalinks": "~0.4.0"
+  }
+}
