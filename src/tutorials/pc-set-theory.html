@@ -1,0 +1,274 @@
+﻿---
+title: Eine Einführung in die Musical set theory.
+date: 2013-04-07
+modified: 2014-06-10
+layout: tutorial.html
+category: Theorien
+categoryTheories: true
+abstract: Die Musical set theory (engl. set theory = Mengenlehre) ist eine Methode zur Kategorisierung simultaner oder sukzessiver erklingender Töne des abendländischen Zwölftonsystems. Viele Begriffe der set theory wurden von Howard Hanson (1960) im Zusammenhang mit tonaler Musik entwickelt, später und im Zusammenhang mit freitonaler Musik sind vor allem Theoretiker wie [Allen Forte](http://de.wikipedia.org/wiki/Allen_Forte) (1973) und [Larry Solomon](http://solomonsmusic.net/setheory.htm) (1998).
+---
+
+<h1>Musical set theory</h1>
+<p><em>Musical set theory</em> (engl. set theory = Mengenlehre) bezeichnet den
+Versuch, die mathematische Mengenlehre bzw. auch die Informatik für die
+musikalische Analyse nutzbar zu machen. Herausragende Vertreter dieses
+Ansatzes sind unter anderen Allen Forte<a href="#remark1">[1]</a> und John
+Rahn<a href="#remark2">[2]</a> mit dem System der <em>pitch class sets</em> (engl. pitch =
+Tonhöhe, Stimmung, engl. class = Klasse, Kategorie, engl. set = Menge,
+Sammlung). Sie bietet ein universelles Werkzeug, Zusammenklänge, oder
+auch eine sukzessive Reihe von Tonhöhen zu einer Menge zusammenzufassen
+und diese eindeutig zu benennen. Wenngleich diese Benennung auch sehr
+technisch und abstrakt anmutet, so hat sie doch den Vorteil der
+Universalität: Sie lässt sich auch auf Musik anwenden, die sich der
+konventionellen, auf tonale Musik hin ausgelegten Harmonielehre
+entzieht, wie z. B. Zwölftonkompositionen.</p>
+<h2>pitch class (p.c.)</h2>
+<p>Eine <em>pitch class</em> ist die abstrakte Zusammenfassung aller Töne mit
+einem bestimmten „Tonhöhencharakter“, wie z. B. alle Töne, denen wir den
+Namen „c“ geben würden. Dabei spielt die Notation keine funktionale
+Rolle, d. h. auch jedes „his“ und jedes „deses“ fallen in diese
+Kategorie. Die Theorie geht also davon aus, dass Oktavversetzungen und
+enharmonische Umnotierungen eines Tones äquivalent sind. Demnach
+repräsentiert eine <em>pitch class</em> unendlich viele Töne. Folgende Töne
+sind zum Beispiel nur einige der <em>Instanzen</em> (=Repräsentanten) einer
+einzigen <em>pitch class</em>:</p>
+<p><img src="/content/tutorials/pitchclasssettheory/image1.png" alt="Töne einer einzigen pitch class" /></p>
+<h2>pitch interval (ip) und interval class (i. c.)</h2>
+<p>Der Abstand zweier <em>pitches</em>, das <em>pitch interval</em> wird der Einfachheit
+halber in Halbtönen gemessen. So beträgt der Abstand zwischen <em>c</em> und
+<em>e</em> 4 Halbtonschritte und kann demnach als ip4 angegeben werden. Auch
+Intervalle lassen sich in Klassen einteilen, wobei hier jeweils
+Komplementärintervalle samt ihrer Oktavversetzungen zusammengefasst
+werden, d. h.: Kleine Septime und große Sekunde (aber auch große None)
+sind Mitglieder derselben <em>interval class</em>. Diese <em>interval classes</em>
+werden einfach durchnummeriert, und es gibt ihrer logischerweise genau
+sechs verschiedene:</p>
+<table>
+<thead>
+<tr>
+	<th>i. c.</th>
+	<th>1</th>
+	<th>2</th>
+	<th>3</th>
+	<th>4</th>
+	<th>5</th>
+	<th>6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td>enthält:</td>
+	<td>kleine Sekunde, große Septime, kleine None, usw.</td>
+	<td>große Sekunde, kleine Septime, große None, usw.</td>
+	<td>kleine Terz, große Sexte, verminderte Septime, usw.</td>
+	<td>große Terz, kleine Sexte, verminderte Quarte, usw.</td>
+	<td>reine Quarte, reine Quinte, reine Undezime, usw.</td>
+	<td>Tritonus, verminderte Quinte, übermäßige Undezime, usw.</td>
+</tr>
+</tbody>
+</table>
+<h2>pitch class set (p. c. set)</h2>
+<p>Als <em>pitch class set</em> bezeichnet man die konkrete Zusammenfassung
+verschiedener <em>pitch classes</em> zu einer Menge. Eine solche Sammlung kann
+aus gleichzeitig oder auch nacheinander erklingenden Tönen gebildet
+werden. Sie entspricht im Wesentlichen dem Begriff „Akkord“ oder besser
+„Harmonie“ der herkömmlichen Harmonielehre. Ein <em>Set</em> beinhaltet also
+sinnvollerweise die Klassen von <em>pitches</em>, die als zusammengehörig
+betrachtet werden. Manchmal begegnet man auch dem synonym gebrauchten
+Begriff <em>pitch class collection</em>. Ein Set kann aus 2 bis 12 <em>pitch
+classes</em> bestehen (mehr gibt es ja nicht in der chromatischen Skala),
+wobei letzteres Set auch als <em>aggregate</em> (=dt. Menge, Gesamtheit)
+bezeichnet wird, da es alle der Theorie nach existenten <em>pitches</em>
+(nämlich die chromatischen Halbtöne) enthält.</p>
+<p>Für die schriftliche Darstellung eines <em>p. c. sets</em> gibt es, um eine
+optimale Vergleichbarkeit zu gewährleisten, bestimmte Konventionen. Eine
+davon, die sogenannte <em>integer notation</em>, besagt, dass jedes <em>pitch</em>
+durch eine Ganzzahl dargestellt werden soll, indem man einem Referenzton
+(in der Regel ist dies das <em>c</em>, theoretisch ist aber jeder andere Ton
+genauso möglich!) den Wert „0“ zuweist und alle folgenden Halbtöne der
+chromatischen Skala einfach ab „1“ aufsteigend durchnummeriert. Die
+Werte der <em>pitches</em> eines <em>Sets</em> werden dann, durch Kommata getrennt, in
+runden Klammern angegeben. So ließe sich z. B. ein c-Moll-Dreiklang
+durch das <em>Set</em> (0,3,7) darstellen. „0“ für das <em>c</em>, „3“ für das <em>es</em> (3
+Halbtöne über dem <em>c</em>), „7“ für das <em>g</em> (7 Halbtöne über dem <em>c</em>). Aber
+auch ein f-Moll-Dreiklang könnte durch (0,3,7) ausgedrückt werden, da
+jedes <em>Set</em> zur besseren Vergleichbarkeit auf den Ursprung „0“ (in
+unserem Falle also das <em>c</em>) transponiert werden sollte. Eine weitere
+Konvention besagt, dass ein <em>Set</em> die enthaltenen <em>pitches</em> auch von
+oben nach unten gelesen darstellen kann. Schreitet man vom <em>c</em> nun
+einmal 3 und einmal 7 Halbtöne abwärts, ist das Resultat ein
+F-Dur-Dreiklang, und man wird sehr schnell feststellen, dass durch das
+<em>Set</em> (0,3,7) nicht nur der grundstellige c-Moll-Dreiklang, sondern
+sämtliche Dur- und Moll-Dreiklänge in allen Lagen und – wie im Folgenden
+noch gezeigt werden wird – Umkehrungen repräsentiert werden. Das <em>Set</em>
+gibt also lediglich an, dass es sich um 3 verschiedene <em>pitch classes</em>
+handelt, die, in eine beliebige Richtung gelesen, die Intervallabstände
+von ip3 (von „0“ zu „3“) und ip4 (von „3“ zu „7“) haben. Um nun vom
+Notentext auf ein zugrunde liegendes <em>Set</em> zu gelangen, das noch dazu so
+eindeutig dargestellt werden kann, dass ein Vergleich mit anderen Sets
+nicht zu mühevoller mathematischer Knochenarbeit wird, gibt es mehrere
+Wege, sowohl mathematischer Natur, als auch durch Überlegungen am
+Notentext. Im Folgenden wird eine mögliche Verfahrensweise vorgestellt,
+die sich sehr schnell bewerkstelligen lässt und relativ fehlerunanfällig
+ist.</p>
+<h2>normal order</h2>
+<p>Unter <em>normal order</em> versteht man diejenige Anordnung eines <em>p. c.
+sets</em>, bei der die äußeren beiden Vertreter das kleinstmögliche
+Intervall bilden. Dies lässt sich am bequemsten durch folgende drei
+Arbeitsschritte bewerkstelligen (als Beispiel dient hier ein Ausschnitt
+aus der Stimme der ersten Klarinette zu Beginn von A. Schönbergs Op.
+6,5):</p>
+<p><img src="/content/tutorials/pitchclasssettheory/image2.png" alt="Ermittlung der normal order" /></p>
+<p>In manchen Fällen kommt dieses größte Intervall mehr als einmal vor,
+dann gibt es zwei oder mehr Varianten der <em>normal order</em>, die alle bei
+den weiteren Berechnungen berücksichtigt werden müssen.</p>
+<p>Um das Schönberg-<em>Set</em> mit „0“ beginnen zu lassen, gibt es jetzt zwei
+Möglichkeiten: man transponiert alle Töne so, dass der erste ein <em>c</em>
+ist, was jedoch leicht zu Fehlern führen könnte. Besser ist vielleicht,
+den Referenzton vom <em>c</em> auf das <em>ais</em> zu verlegen, dann beginnt die
+obige normal order bereits mit „0“. Wenn man sich nun noch zwischen zwei
+Noten die jeweiligen <em>pitch intervals</em> notiert, braucht man diese nur
+noch der Reihe nach aufzuaddieren und nach der Null in die Mengenklammer
+einzutragen:</p>
+<p><img src="/content/tutorials/pitchclasssettheory/image3.png" alt="normal order, bei &quot;0&quot; beginnend" /></p>
+<h2>best normal order und prime form</h2>
+<p>Die oben ermittelte <em>normal order</em> ist nicht der alleinige Repräsentant
+dieses <em>Sets</em>, denn, wie bereits erwähnt, kann ein Set auch rückwärts
+gelesen, bzw. die Intervalle des Sets vom Referenzton abwärts gebildet
+werden. Dieser Vorgang heißt Umkehrung oder <em>inversion</em>. Um die
+<em>inversion</em> dieses Sets zu bilden, können nun die <em>pitch intervals</em> von
+rechts nach links aufaddiert werden, ausgehend von <em>fis</em> als <em>pitch</em> mit
+dem Wert „0“, oder aber man löst dies auf mathematischen Wege, indem man
+einfach die Menge der <em>normal order</em> rückwärts schreibt und von der
+höchsten Zahl (also der letzten Zahl der <em>normal order</em>) subtrahiert:</p>
+<p><em>inversion</em> von ( 0 , 1 , 4 , 6 , 7 , 8 ) = ( 8 – 8 , 8 – 7 , 8 – 6 , 8
+– 4 , 8 – 1 , 8 – 0 ) = ( 0 , 1 , 2 , 4 , 7 , 8 )</p>
+<p>Als <em>best normal order</em> bezeichnet man die Version eines <em>Sets</em>
+(inklusive aller möglichen Transpositionen und Umkehrungen), das von dem
+kleinstmöglichen Intervall umschlossen wird und mit den kleinstmöglichen
+Intervallen beginnt. Das heißt: Die oben gebildete Umkehrung
+(0,1,2,4,7,8) hat – von links nach rechts gelesen – kleinere Intervalle
+zu Beginn als die ursprüngliche <em>normal order</em> (0,1,4,6,7,8) und ist
+somit eine <em>better normal order</em> oder, da es in diesem Falle nur zwei
+<em>normal orders</em> gibt, die <em>best normal order</em>. Die <em>best normal order</em>
+repräsentiert zugleich immer auch die <em>prime form</em> (=dt.
+„Primärgestalt“) eines <em>pitch class sets</em>. Der Unterschied zwischen den
+Begriffen <em>best normal order</em> und <em>prime form</em> besteht eigentlich nur
+darin, dass erster die Gestalt des Sets in <em>pitches</em> oder Tönen
+ausdrückt, während letzter die Gestalt in Zahlen verkörpert. Allan Forte
+hat die für die musikalische Analyse relevanten <em>prime forms</em>
+zusammengestellt und systematisiert. Das Schönberg-<em>Set</em> hat demnach den
+Namen „6-Z17“, welcher in folgende Bestandteile zerlegt werden kann: Die
+erste Zahl („6“) gibt die <em>Kardinalität</em> des <em>Sets</em>, d. h. die Anzahl
+der Elemente (sprich: <em>pitch classes</em>) in dieser Menge an; die zweite
+Zahl („17“) ist die Ordnungszahl, die bei der Nummerierung auf dieses
+Set gefallen ist, und das vorangestellte „Z“, welches bei den meisten
+<em>Set</em>-Namen fehlt, deutet auf eine Besonderheit dieses <em>Sets</em> hin, auf
+die im folgenden Abschnitt noch näher eingegangen wird.</p>
+<h2>interval vector oder interval class vector (i. c. vector)</h2>
+<p>Die weiter oben angesprochenen 6 <em>interval classes</em> finden nun, da die
+<em>prime form</em> des <em>Sets</em> ermittelt ist, endlich ihre Anwendung: Von jeder
+<em>prime form</em> lässt sich ein so genannter <em>interval (class) vector</em>
+ableiten, der anzeigt, wie oft jede dieser 6 <em>interval classes</em> in einem
+<em>Set</em> vorkommt. Aus diesem Grund beinhaltet der Intervallvektor auch
+genau 6 Werte, umschlossen von eckigen Klammern. Um den <em>interval
+vector</em> zu ermitteln, muss jedes Element eines <em>Sets</em> auf Basis der
+<em>interval classes</em> miteinander verglichen werden. In einem Set aus sechs
+Elementen müssen also 5 + 4 + 3 + 2 + 1 = 15 Intervalle berechnet
+werden. Diese alle am Notentext zu ermitteln, wäre sehr aufwändig und
+unübersichtlich, sodass auch hier wieder der mathematische Weg als der
+sinnvollere erscheint: Man subtrahiert von jedem Element eines <em>Sets</em>
+sämtliche kleineren Werte, ausgehend vom größten Wert. In anderen
+Worten: Man fängt mit der Zahl ganz rechts an, subtrahiert von ihr alle
+Zahlen, die links von ihr stehen, und schreibt das Ergebnis in eine
+Tabelle mit den Spalten von 1 bis 11. Da das größte Intervall des
+Schönberg-<em>Sets</em> aus 8 Halbtönen besteht, bleiben die letzten drei
+Spalten leer. Das Intervall mit 6 Halbtonschritten ist der Tritonus und
+somit die Teilung der Oktave, demnach sind alle Intervalle mit mehr als
+6 Halbtonschritten Komplementärintervalle der ersten fünf, und zwar in
+spiegelverkehrter Reihenfolge. In anderen Worten: Wenn ein Intervall <em>n</em>
+Halbtonschritte umfasst, hat sein Komplementärintervall 12 – <em>n</em>
+Halbtonschritte, und beide sind <em>Instanzen</em> derselben Intervallklasse:</p>
+<p><img src="/content/tutorials/pitchclasssettheory/image4.png" alt="Ermittlung des interval vectors" /></p>
+<p>Der diesem <em>Set</em> zu Grunde liegende <em>interval vector</em> ist also [322332],
+das bedeutet, es sind 3 <em>Instanzen</em> der <em>i. c.</em> 1 im <em>Set</em> enthalten, 2
+<em>Instanzen</em> der <em>i. c.</em> 2, usw.</p>
+<p>Viele <em>pitch class sets</em> haben einen ihnen eigenen, einmaligen <em>interval
+vector</em>. Es gibt jedoch <em>Sets</em>, die sich in ihrer <em>prime form</em> zwar
+voneinander unterscheiden, jedoch einen identischen Intervallvektor
+besitzen. Diese Art der Verwandtschaft wird <em>Z-relation</em> genannt, man
+spricht von <em>Z-related p. c. sets</em> oder <em>Z-mates</em>. Allan Forte arbeitete
+diese Besonderheit in seine Nomenklatur ein, indem er in den <em>Set<em>-Namen
+ein „Z“ vor die Ordinalzahl stellte. Das Beispiel-</em>Set</em> von Schönberg
+(6-Z17) z. B. ist <em>Z-related</em> mit dem <em>Set</em> 6-Z43, welches zwar eine
+andere <em>prime form</em>, nämlich (0,1,2,5,6,8), aber denselben <em>interval
+vector</em> [322332] hat.</p>
+<h2>Hinweise</h2>
+<p>Anschließend sei noch bemerkt, dass die Schreibweisen in der <em>p. c. set
+theory</em> bei verschiedenen Autoren zum Teil von einander abweichen. Statt
+der Literale „10“ oder „11“ in der <em>prime form</em> findet man bisweilen „T“
+(„ten“) bzw. „E“ („eleven“), oder auch „A“ bzw. „B“ als Anlehnung an die
+Schreibweise im hexadezimalen Zahlensystem. Außerdem begegnet man
+mitunter statt runder auch eckigen Klammern bei Angaben einer <em>normal
+order</em> bzw. <em>prime form</em>, und Intervallvektoren werden gelegentlich auch
+mit Kommata zwischen den Zahlen geschrieben.<a href="#remark3">[3]</a></p>
+<p>Auch zur Ermittlung der <em>prime form</em> gibt es verschiedene Verfahrensweisen.
+Rahn berechnet, im Gegensatz zu Forte, die prime form derart, dass
+die kleineren Intervalle von rechts gelesen erscheinen. Dies wirkt
+sich allerdings nur in insgesamt sechs <em>Sets</em> aus:</p>
+<table>
+<thead>
+<tr>
+	<th>Forte-Name</th>
+	<th><em>prime form</em> nach Forte</th>
+	<th><em>prime form</em> nach Rahn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td>5-20</td>
+	<td>(0,1,3,7,8)</td>
+	<td>(0,1,5,6,8)</td>
+</tr>
+<tr>
+	<td>6-31</td>
+	<td>(0,1,3,5,8,9)</td>
+	<td>(0,1,4,5,7,9)</td>
+</tr>
+<tr>
+	<td>6-Z29</td>
+	<td>(0,1,3,6,8,9)</td>
+	<td>(0,2,3,6,7,9)</td>
+</tr>
+<tr>
+	<td>7-Z18</td>
+	<td>(0,1,2,3,5,8,9)</td>
+	<td>(0,1,4,5,6,7,9)</td>
+</tr>
+<tr>
+	<td>7-20</td>
+	<td>(0,1,2,4,7,8,9)</td>
+	<td>(0,1,2,5,6,7,9)</td>
+</tr>
+<tr>
+	<td>8-26</td>
+	<td>(0,1,2,4,5,7,9,A)</td>
+	<td>(0,1,3,4,5,7,8,A)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<div class="remarks">
+<p><a id="remark1" class="remarkDigit">[1]</a>&nbsp;<span>Forte, Allan (1973),
+<em>The Structure Of Atonal Music</em>, New Haven: Yale University
+Press.</span></p>
+<p><a id="remark2" class="remarkDigit">[2]</a>&nbsp;<span>Rahn, John (1980),
+<em>Basic Atonal Theory</em>, MacMillan Publishing Company.</span></p>
+<p><a id="remark3" class="remarkDigit">[3]</a>&nbsp;<span>Der Gebrauch von
+Kommata ist vor allem dann sinnvoll, wenn zweistellige Ziffern in
+Intervallvektoren notiert werden müssen. Dies ist bei lediglich zwei
+<em>Sets</em> der Fall, nämlich dem elftönigen und zwölftönigen <em>Set</em>
+(<em>Aggregat</em>). Hier verwendet man jedoch eher die Buchstaben „A“, „B“ und
+„C“ statt der Zahlen „10“, „11“ und „12“.</span></p>
+</div>
+

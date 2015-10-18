@@ -1,0 +1,75 @@
+---
+title: Tutorials
+date: 2015-10-04
+layout: index.html
+---
+
+<div class="page-header">
+  <h1>Tutorials</h1>
+</div>
+
+<nav class="Tutorials-CategoryMenu">
+  <a data-role="category-button" data-category="all" class="Tutorials-CategoryMenuItem" href="#all">Alle</a>
+  <a data-role="category-button" data-category="basics" class="Tutorials-CategoryMenuItem" href="#basics">Grundlagen</a>
+  <a data-role="category-button" data-category="form" class="Tutorials-CategoryMenuItem" href="#form">Form</a>
+  <a data-role="category-button" data-category="style-exercises" class="Tutorials-CategoryMenuItem" href="#style-exercises">Stilübungen (Tonsatz)</a>
+  <a data-role="category-button" data-category="models" class="Tutorials-CategoryMenuItem" href="#models">Satzmodelle</a>
+  <a data-role="category-button" data-category="analysis" class="Tutorials-CategoryMenuItem" href="#analysis">Analyse</a>
+  <a data-role="category-button" data-category="theories" class="Tutorials-CategoryMenuItem" href="#theories">Theorien</a>
+  <a data-role="category-button" data-category="solutions-and-remarks" class="Tutorials-CategoryMenuItem" href="#solutions-and-remarks">Lösungen und Anmerkungen</a>
+</nav>
+
+<section data-role="category-section" data-category="basics" class="Tutorials-CategorySection">
+{{# each collections.tutorials }}
+{{# if categoryBasics }}
+  <a class="Tutorials-CategorySectionItem" href="/{{ path }}" title="{{ abstract }}">{{ title }}</a>
+{{/ if }}
+{{/ each }}
+</section>
+<section data-role="category-section" data-category="form" class="Tutorials-CategorySection">
+{{# each collections.tutorials }}
+{{# if categoryForm }}
+  <a class="Tutorials-CategorySectionItem" href="/{{ path }}" title="{{ abstract }}">{{ title }}</a>
+{{/ if }}
+{{/ each }}
+</section>
+<section data-role="category-section" data-category="style-exercises" class="Tutorials-CategorySection">
+{{# each collections.tutorials }}
+{{# if categoryStyleExercises }}
+  <a class="Tutorials-CategorySectionItem" href="/{{ path }}" title="{{ abstract }}">{{ title }}</a>
+{{/ if }}
+{{/ each }}
+</section>
+<section data-role="category-section" data-category="models" class="Tutorials-CategorySection">
+{{# each collections.tutorials }}
+{{# if categoryModels }}
+  <a class="Tutorials-CategorySectionItem" href="/{{ path }}" title="{{ abstract }}">{{ title }}</a>
+{{/ if }}
+{{/ each }}
+</section>
+<section data-role="category-section" data-category="analysis" class="Tutorials-CategorySection">
+{{# each collections.tutorials }}
+{{# if categoryAnalysis }}
+  <a class="Tutorials-CategorySectionItem" href="/{{ path }}" title="{{ abstract }}">{{ title }}</a>
+{{/ if }}
+{{/ each }}
+</section>
+<section data-role="category-section" data-category="theories" class="Tutorials-CategorySection">
+{{# each collections.tutorials }}
+{{# if categoryTheories }}
+  <a class="Tutorials-CategorySectionItem" href="/{{ path }}" title="{{ abstract }}">{{ title }}</a>
+{{/ if }}
+{{/ each }}
+</section>
+<section data-role="category-section" data-category="solutions-and-remarks" class="Tutorials-CategorySection">
+{{# each collections.tutorials }}
+{{# if categorySolutionsAndRemarks }}
+  <a class="Tutorials-CategorySectionItem" href="/{{ path }}" title="{{ abstract }}">{{ title }}</a>
+{{/ if }}
+{{/ each }}
+</section>
+<section data-role="category-section" data-category="all" class="Tutorials-CategorySection is-active">
+{{# each collections.tutorials }}
+  <a class="Tutorials-CategorySectionItem" href="/{{ path }}" title="{{ abstract }}">{{ title }}</a>
+{{/ each }}
+</section>

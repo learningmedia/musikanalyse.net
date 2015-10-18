@@ -1,12 +1,2 @@
-# Visual Studio files and folders
-*.suo
-*.user
-[Oo]bj/
-[Bb]in
-
-# Tooling
-_ReSharper*/
-*.resharper
-
-# NuGetPackages
-packages/
+node_modules/
+build/
