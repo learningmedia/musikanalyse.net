@@ -5,16 +5,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>{{ title }}</title>
-    <link href="/content/styles.css" rel="stylesheet" />
+    <link href="/styles/main.css" rel="stylesheet" />
 </head>
 
 <body>
     {{> navbar }}
-    {{# if showHero }}{{> hero }}{{/ if }}
-    <div class="container content" style="margin-top: 2.5em;">
+    <main class="Page">
         {{{ contents }}}
-    </div>
-    <script src="/content/scripts.js"></script>
+    </main>
+    <script src="/scripts/main.js"></script>
 </body>
 
 </html>
