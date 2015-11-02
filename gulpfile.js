@@ -19,7 +19,7 @@ gulp.task('build', function (done) {
     .use(less({ pattern: 'styles/main.less', render: { paths: ['src/styles'] } }))
     .use(autoprefixer())
     .use(ignore('**/*.less'))
-    .use(concat({ files: ['scripts/jquery.js', 'scripts/main.js'], output: 'scripts/main.js' }))
+    .use(concat({ files: ['scripts/jquery.js', 'scripts/site.js'], output: 'scripts/main.js' }))
     .build(done);
 });
 
