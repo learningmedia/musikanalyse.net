@@ -9,6 +9,7 @@ var less         = require('metalsmith-less');
 var autoprefixer = require('metalsmith-autoprefixer');
 var ignore       = require('metalsmith-ignore');
 var concat       = require('metalsmith-concat');
+var static       = require('metalsmith-static');
 
 gulp.task('build', function (done) {
   metalsmith(__dirname)
@@ -20,6 +21,7 @@ gulp.task('build', function (done) {
     .use(autoprefixer())
     .use(ignore('**/*.less'))
     .use(concat({ files: ['scripts/jquery.js', 'scripts/site.js'], output: 'scripts/main.js' }))
+    .use(static({ src: 'node_modules/mediaelement/build', dest: 'vendor/mediaelement' }))
     .build(done);
 });
 
