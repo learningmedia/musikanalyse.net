@@ -4,14 +4,14 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>{{ title }}</title>
+    <title><%= title %></title>
     <link href="/styles/main.css" rel="stylesheet" />
 </head>
 
 <body>
-    {{> navbar }}
+    <% include partials/navbar %>
     <main class="Page">
-        {{{ contents }}}
+        <%- contents %>
     </main>
     <script src="/scripts/main.js"></script>
 </body>

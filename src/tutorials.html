@@ -1,7 +1,7 @@
 ---
 title: Tutorials
 date: 2015-10-04
-layout: index.html
+layout: index.ejs
 ---
 
 <section class="Tutorials">
@@ -20,95 +20,81 @@ layout: index.html
   <section data-role="category-section" data-category="basics" class="Tutorials-categorySection">
     <h2 class="Tutorials-categoryTitle">Grundlagen</h2>
     <ul class="Tutorials-tutorialList">
-      {{# each collections.tutorials }}
-      {{# if categoryBasics }}
+      <% collections.tutorials.filter(function (tutorial) { return tutorial.category === 'Grundlagen'; }).forEach(function (tutorial) { %>
       <li class="Tutorials-tutorialListItem">
-        <a href="/{{ path }}" title="{{ abstract }}">{{ title }}</a>
+        <a href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
       </li>
-      {{/ if }}
-      {{/ each }}
+      <% }); %>
     </ul>
   </section>
   <section data-role="category-section" data-category="form" class="Tutorials-categorySection">
     <h2 class="Tutorials-categoryTitle">Form</h2>
     <ul class="Tutorials-tutorialList">
-      {{# each collections.tutorials }}
-      {{# if categoryForm }}
+      <% collections.tutorials.filter(function (tutorial) { return tutorial.category === 'Form'; }).forEach(function (tutorial) { %>
       <li class="Tutorials-tutorialListItem">
-        <a href="/{{ path }}" title="{{ abstract }}">{{ title }}</a>
+        <a href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
       </li>
-      {{/ if }}
-      {{/ each }}
+      <% }); %>
     </ul>
   </section>
   <section data-role="category-section" data-category="style-exercises" class="Tutorials-categorySection">
     <h2 class="Tutorials-categoryTitle">Stilübungen</h2>
     <ul class="Tutorials-tutorialList">
-      {{# each collections.tutorials }}
-      {{# if categoryStyleExercises }}
+      <% collections.tutorials.filter(function (tutorial) { return tutorial.category === 'Stilübungen (Tonsatz)'; }).forEach(function (tutorial) { %>
       <li class="Tutorials-tutorialListItem">
-        <a href="/{{ path }}" title="{{ abstract }}">{{ title }}</a>
+        <a href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
       </li>
-      {{/ if }}
-      {{/ each }}
+      <% }); %>
     </ul>
   </section>
   <section data-role="category-section" data-category="models" class="Tutorials-categorySection">
     <h2 class="Tutorials-categoryTitle">Satzmodelle</h2>
     <ul class="Tutorials-tutorialList">
-      {{# each collections.tutorials }}
-      {{# if categoryModels }}
+      <% collections.tutorials.filter(function (tutorial) { return tutorial.category === 'Satzmodelle'; }).forEach(function (tutorial) { %>
       <li class="Tutorials-tutorialListItem">
-        <a href="/{{ path }}" title="{{ abstract }}">{{ title }}</a>
+        <a href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
       </li>
-      {{/ if }}
-      {{/ each }}
+      <% }); %>
     </ul>
   </section>
   <section data-role="category-section" data-category="analysis" class="Tutorials-categorySection">
     <h2 class="Tutorials-categoryTitle">Analyse</h2>
     <ul class="Tutorials-tutorialList">
-      {{# each collections.tutorials }}
-      {{# if categoryAnalysis }}
+      <% collections.tutorials.filter(function (tutorial) { return tutorial.category === 'Analyse'; }).forEach(function (tutorial) { %>
       <li class="Tutorials-tutorialListItem">
-        <a href="/{{ path }}" title="{{ abstract }}">{{ title }}</a>
+        <a href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
       </li>
-      {{/ if }}
-      {{/ each }}
+      <% }); %>
     </ul>
   </section>
   <section data-role="category-section" data-category="theories" class="Tutorials-categorySection">
     <h2 class="Tutorials-categoryTitle">Theorien</h2>
     <ul class="Tutorials-tutorialList">
-      {{# each collections.tutorials }}
-      {{# if categoryTheories }}
+      <% collections.tutorials.filter(function (tutorial) { return tutorial.category === 'Theorien'; }).forEach(function (tutorial) { %>
       <li class="Tutorials-tutorialListItem">
-        <a href="/{{ path }}" title="{{ abstract }}">{{ title }}</a>
+        <a href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
       </li>
-      {{/ if }}
-      {{/ each }}
+      <% }); %>
     </ul>
   </section>
   <section data-role="category-section" data-category="solutions-and-remarks" class="Tutorials-categorySection">
     <h2 class="Tutorials-categoryTitle">Lösungen und Anmerkungen</h2>
     <ul class="Tutorials-tutorialList">
-      {{# each collections.tutorials }}
-      {{# if categorySolutionsAndRemarks }}
+      <% collections.tutorials.filter(function (tutorial) { return tutorial.category === 'Lösungen und Anmerkungen'; }).forEach(function (tutorial) { %>
       <li class="Tutorials-tutorialListItem">
-        <a href="/{{ path }}" title="{{ abstract }}">{{ title }}</a>
+        <a href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
       </li>
-      {{/ if }}
-      {{/ each }}
+      <% }); %>
     </ul>
   </section>
   <section data-role="category-section" data-category="all" class="Tutorials-categorySection">
     <h2 class="Tutorials-categoryTitle">Vorhandene Tutorials</h2>
     <ul class="Tutorials-tutorialList">
-      {{# each collections.tutorials }}
+      <% collections.tutorials.forEach(function (tutorial) { %>
       <li class="Tutorials-tutorialListItem">
-        <a href="/{{ path }}" title="{{ abstract }}">{{ title }}</a>
+        <a href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
       </li>
-      {{/ each }}
+      <% }); %>
     </ul>
   </section>
 </section>
