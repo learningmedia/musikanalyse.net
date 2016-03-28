@@ -4,15 +4,15 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>{{ title }}</title>
+    <title><%= title %></title>
     <link href="/styles/main.css" rel="stylesheet" />
     <link href="/vendor/mediaelement/mediaelementplayer.css" rel="stylesheet" />
 </head>
 
 <body>
-    {{> navbar }}
+    <% include partials/navbar %>
     <main class="Tutorial">
-        {{{ contents }}}
+        <%- contents %>
     </main>
     <script src="/scripts/main.js"></script>
     <script src="/vendor/mediaelement/mediaelement-and-player.min.js"></script>
