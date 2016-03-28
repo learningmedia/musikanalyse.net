@@ -10,7 +10,7 @@
   "license": "CC BY-NC-ND",
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/learningmedia/musikanalyse.net.git"
+    "url": "https://github.com/learningmedia/musikanalyse.net.git"
   },
   "private": true,
   "devDependencies": {
