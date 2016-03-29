@@ -15,7 +15,7 @@
   </head>
 
 
-  <body class="size-1140">
+  <body class="size-960">
 
     <!-- HEADER -->
     <% include partials/header %>
@@ -23,7 +23,15 @@
     <!-- MAIN -->
     <main role="main">
       <!-- Content -->
-      <%- contents %>
+      <article>
+        <div class="section background-white">
+          <div class="line">
+            <div class="s-12 m-12 center margin-m-bottom-30">
+              <%- contents %>
+            </div>
+          </div>
+        </div>
+      </article>
     </main>
 
     <!-- FOOTER -->

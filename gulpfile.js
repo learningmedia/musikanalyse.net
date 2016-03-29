@@ -20,7 +20,7 @@ gulp.task('build', function (done) {
     .use(less({ pattern: 'styles/main.less', render: { paths: ['src/styles'] } }))
     .use(autoprefixer())
     .use(ignore('**/*.less'))
-    .use(concat({ files: ['scripts/jquery.js', 'scripts/site.js'], output: 'scripts/main.js' }))
+    .use(concat({ files: ['scripts/responsee.js', 'scripts/owl.carousel.js', 'scripts/template-scripts.js', 'scripts/site.js'], output: 'scripts/main.js' }))
     .use(static({ src: 'node_modules/mediaelement/build', dest: 'vendor/mediaelement' }))
     .build(done);
 });
@@ -31,7 +31,7 @@ gulp.task('reload', ['build'], function () {
 
 gulp.task('watch', ['build'], function () {
   browserSync({ server: { baseDir: 'build' }, port: 3000 });
-  gulp.watch(['src/**', 'layouts/**', 'partials/**'], ['reload']);
+  gulp.watch(['src/**', 'layouts/**'], ['reload']);
 });
 
 gulp.task('default', ['watch']);
