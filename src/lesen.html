@@ -1,20 +1,12 @@
 ---
 title: Tutorials
 date: 2015-10-04
-layout: wide.ejs
+layout: narrow.ejs
 ---
 
-<section class="Tutorials">
-  <h1 class="Tutorials-header">
-    <span class="Tutorials-headerCharacter u-multicolor-01">T</span>
-    <span class="Tutorials-headerCharacter u-multicolor-02">u</span>
-    <span class="Tutorials-headerCharacter u-multicolor-03">t</span>
-    <span class="Tutorials-headerCharacter u-multicolor-04">o</span>
-    <span class="Tutorials-headerCharacter u-multicolor-01">r</span>
-    <span class="Tutorials-headerCharacter u-multicolor-02">i</span>
-    <span class="Tutorials-headerCharacter u-multicolor-03">a</span>
-    <span class="Tutorials-headerCharacter u-multicolor-04">l</span>
-    <span class="Tutorials-headerCharacter u-multicolor-01">s</span>
+<div class="line">
+  <h1 class="text-size-40">
+    Tutorials <!-- Hier noch eine if-Abfrage einfügen -->
   </h1>
   <noscript>Diese Seite funktioniert ohne Javascript nicht.</noscript>
   <section data-role="category-section" data-category="basics" class="Tutorials-categorySection">
@@ -88,7 +80,6 @@ layout: wide.ejs
     </ul>
   </section>
   <section data-role="category-section" data-category="all" class="Tutorials-categorySection">
-    <h2 class="Tutorials-categoryTitle">Vorhandene Tutorials</h2>
     <ul class="Tutorials-tutorialList">
       <% collections.tutorials.forEach(function (tutorial) { %>
       <li class="Tutorials-tutorialListItem">
@@ -97,4 +88,4 @@ layout: wide.ejs
       <% }); %>
     </ul>
   </section>
-</section>
+</div>
