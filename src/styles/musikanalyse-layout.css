@@ -9,6 +9,11 @@
     margin-top: -400px !important;
   }
 
+  .highlighted {
+    font-weight: bold;
+    color: maroon;
+  }
+
 /* -768px version */
 @media screen and (max-width:768px) {
   #greenLine {
