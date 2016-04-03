@@ -1,0 +1,4 @@
+Blau: #00526e
+Rot: #520d00
+Braun: #523a00
+Grün: #49BF4C

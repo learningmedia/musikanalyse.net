@@ -1,0 +1,29 @@
+---
+title: Grundlagen
+date: 2016-03-29
+layout: narrow.ejs
+---
+
+<div class="background-white">
+  <div class="line">
+    <section class="margin-top-20">
+      <h2>Grundlagen</h2>
+      <ul>
+        <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Grundlagen') > -1; }).forEach(function (tutorial) { %>
+        <li>
+          <a href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
+        </li>
+        <% }); %>
+      </ul>
+    </section>
+  </div>
+</div>
+
+<div class="line margin-top-bottom-40">
+  <div class="s-12 m-6 l-4">
+    <a class="greenbutton" href="" onclick="javascript:history.back();" >Zurück</a>
+  </div>
+  <div class="s-12 m-6 l-8">
+    &nbsp;
+  </div>
+</div>
