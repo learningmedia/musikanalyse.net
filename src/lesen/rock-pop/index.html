@@ -9,7 +9,7 @@ layout: narrow.ejs
     <section class="margin-top-20">
       <h2>Pop &amp; Rock</h2>
       <ul>
-        <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Rock & Pop') > -1; }).forEach(function (tutorial) { %>
+        <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Popularmusik') > -1; }).forEach(function (tutorial) { %>
         <li>
           <a href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
         </li>
