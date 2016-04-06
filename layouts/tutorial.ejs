@@ -22,16 +22,25 @@
 
     <!-- MAIN -->
     <main role="main">
+
+    <!-- Backbutton -->
+      <div class="line margin-top-bottom-40">
+       <div class="s-12 m-8 l-10">
+         &nbsp;
+       </div>
+       <div class="s-12 m-4 l-2">
+         <a class="bluebutton" href="" onclick="javascript:history.back();" style="width: auto;">Zurück...</a>
+       </div>
+      </div>
+
       <!-- Content -->
-      <div class="section background-white">
-        <div class="line">
-          <div class="s-12 m-12 center margin-m-bottom-30">
-            <article class="Tutorial">
-              <h1 class="Tutorial-title"><%= title %></h1>
-              <p class="Tutorial-author">von <%= author %></p>
-              <%- contents %>
-            </article>
-          </div>
+      <div class="line">
+        <div class="s-12 m-12 center margin-m-bottom-30">
+          <article class="Tutorial">
+            <h1 class="Tutorial-title"><%= title %></h1>
+            <p class="Tutorial-author">von <%= author %></p>
+            <%- contents %>
+          </article>
         </div>
       </div>
     </main>
