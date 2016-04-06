@@ -50,9 +50,9 @@ layout: narrow.ejs
     </ul>
   </section>
   <section class="margin-top-20">
-    <h2>Geschichte</h2>
+    <h2>Musik und Kontext</h2>
     <ul>
-      <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Geschichte') > -1; }).forEach(function (tutorial) { %>
+      <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Musikgeschichte') > -1; }).forEach(function (tutorial) { %>
       <li>
         <a href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
       </li>
