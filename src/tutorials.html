@@ -1,11 +1,13 @@
 ---
 title: Lesen
 date: 2015-10-04
-layout: narrow.ejs
+layout: wide.ejs
 ---
 
 <div class="line">
-  <h1 class="text-size-40">
+  <div class="s12 m-2 l4">&nbsp;</div>
+  <div class="s12 m-10 l8">
+      <h1 class="text-size-40">
     Tutorials
   </h1>
   <noscript>Diese Seite funktioniert nicht ohne Javascript.</noscript>
@@ -30,9 +32,9 @@ layout: narrow.ejs
     </ul>
   </section>
   <section class="margin-top-20">
-    <h2>Stilübungen</h2>
+    <h2>Stilübungen &amp; Improvisation</h2>
     <ul>
-      <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Stilübungen (Tonsatz)') > -1; }).forEach(function (tutorial) { %>
+      <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Stilübungen (Tonsatz)') > -1 || tutorial.category.indexOf('Improvisation') > -1; }).forEach(function (tutorial) { %>
       <li>
         <a href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
       </li>
@@ -89,4 +91,5 @@ layout: narrow.ejs
       <% }); %>
     </ul>
   </section>
+  </div>
 </div>
