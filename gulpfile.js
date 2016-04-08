@@ -14,6 +14,7 @@ var static       = require('metalsmith-static');
 gulp.task('build', function (done) {
   metalsmith(__dirname)
     .use(collections({ tutorials: { pattern: 'tutorials/**', sortBy: 'title' } }))
+    .use(collections({ downloads: { pattern: 'downloads/**', sortBy: 'tag' } }))
     .use(permalinks({ pattern: ':slug', relative: false }))
     .use(layouts({ engine: 'ejs' }))
     .use(inPlace({ engine: 'ejs', pattern: '**/*.html' }))

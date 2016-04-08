@@ -1,0 +1,8 @@
+---
+title: Die Kadenz als Schlusswendung und Formmodell
+author: Ulrich Kaiser
+category: aufgaben
+abstract: Lernsetting zum Thema für den Instrumentalunterricht. (Wenn möglich, bitte auf Din-A-3 beidseitig ausdrucken.)
+thumbnail: /img/thumbnails/003_Kadenz-Klangverbindungn.jpg
+link: /downloadfiles/Kadenz-Klangverbindungen.pdf
+---
