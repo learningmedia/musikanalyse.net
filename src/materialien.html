@@ -4,33 +4,60 @@ date: 2016-03-29
 layout: wide.ejs
 ---
 
+<link rel="stylesheet" href="/styles/accordion.css" />
+<script src="/scripts/accordion.js"></script>
+
+
+
 <div class="line">
   <h1 class="text-size-40">Materialien zum Download</h1>
   <noscript>Diese Seite funktioniert nicht ohne Javascript.</noscript>
-  <h2 class="margin-bottom-40">Materialien zu Themen der Musiktheorie und Analyse</h2>
-  <% collections.downloads.filter(function (downloadfile) { return downloadfile.category.indexOf('themen') > -1; }).forEach(function (downloadfile) { %>
-    <div class="line margin-top-bottom-20" style="border-bottom: 1px solid gray; padding-bottom: 20px;">
-      <div class="s-12 m-2 l-2 ">
-        <a href="<%= downloadfile.link %>"><img src="<%= downloadfile.thumbnail %>" /></a>
-      </div>
-      <div class="s-12 m-10 l-10">
-      <h3><%= downloadfile.title %></h3>
-      <p class="text-size-12">von <%= downloadfile.author %></p>
-      <p><%= downloadfile.abstract %></p>
-      </div>
-    </div>
-  <% }); %>
-  <h2 class="margin-top-bottom-40">Materialien zum Üben und Unterrichten</h2>
-  <% collections.downloads.filter(function (downloadfile) { return downloadfile.category.indexOf('aufgaben') > -1; }).forEach(function (downloadfile) { %>
-    <div class="line margin-top-bottom-20">
-      <div class="s-12 m-2 l-2 ">
-        <a href="<%= downloadfile.link %>"><img src="<%= downloadfile.thumbnail %>" /></a>
-      </div>
-      <div class="s-12 m-10 l-10">
-      <h3><%= downloadfile.title %></h3>
-      <p class="text-size-12">von <%= downloadfile.author %></p>
-      <p><%= downloadfile.abstract %></p>
-      </div>
-    </div>
-  <% }); %>
+
+  <div id="accordion">
+    <dl class="accordion" id="slider1">
+      <dt>Materialien zu Themen der Musiktheorie und Analyse</dt>
+      <dd>
+        <% collections.downloads.filter(function (downloadfile) { return downloadfile.category.indexOf('themen') > -1; }).forEach(function (downloadfile) { %>
+        <div class="line margin-top-bottom-20" style="border-bottom: 1px solid gray; padding-bottom: 20px;">
+          <div class="s-12 m-2 l-2 ">
+            <a href="<%= downloadfile.link %>"><img src="<%= downloadfile.thumbnail %>" /></a>
+          </div>
+          <div class="s-12 m-10 l-10">
+            <h3><%= downloadfile.title %></h3>
+            <p class="text-size-12">von <%= downloadfile.author %></p>
+            <p><%= downloadfile.abstract %></p>
+          </div>
+        </div>
+        <% }); %>
+      </dd>
+    </dl>
+  </div>
+
+  <div id="accordion">
+    <dl class="accordion" id="slider2">
+      <dt>Materialien zum Üben und Unterrichten</dt>
+      <dd>
+        <% collections.downloads.filter(function (downloadfile) { return downloadfile.category.indexOf('aufgaben') > -1; }).forEach(function (downloadfile) { %>
+        <div class="line margin-top-bottom-20" style="border-bottom: 1px solid gray; padding-bottom: 20px;">
+          <div class="s-12 m-2 l-2 ">
+            <a href="<%= downloadfile.link %>"><img src="<%= downloadfile.thumbnail %>" /></a>
+          </div>
+          <div class="s-12 m-10 l-10">
+            <h3><%= downloadfile.title %></h3>
+            <p class="text-size-12">von <%= downloadfile.author %></p>
+            <p><%= downloadfile.abstract %></p>
+          </div>
+        </div>
+        <% }); %>
+      </dd>
+    </dl>
+  </div>
+
 </div>
+
+<script type="text/javascript">
+  var slider1 = new accordion.slider("slider1");
+  slider1.init("slider1");
+  var slider2 = new accordion.slider("slider2");
+  slider2.init("slider2");
+</script>
