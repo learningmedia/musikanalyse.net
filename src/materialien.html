@@ -4,55 +4,42 @@ date: 2016-03-29
 layout: wide.ejs
 ---
 
-<div class="line margin-bottom-40">
-  <div class="s-12 m-6 l-4">
-    <a class="greenbutton" href="/tutorials">Suchen ohne Schnickschnack...</a>
-  </div>
-  <div class="s-12 m-6 l-8">
-    &nbsp;
-  </div>
-</div>
-
 <div class="line">
-  <div class="margin">
-    <div class="s-12 m-6 l-3">
-      <a href="/lesen/grundlagen" class="image-with-hover-overlay image-hover-zoom margin-bottom">
-        <div class="image-hover-overlay background-primary">
-          <div class="image-hover-overlay-content text-center padding-2x">
-            <p><span class="highlighted">Tutorials</span><br>Hier können Sie sich Tutorials und Anleitungen als PDF-Datei herunterladen.</p>
-          </div>
-        </div>
-        <img src="/img/portfolio/thumb-09.jpg" alt="" title="Portfolio Image 1" />
-      </a>
-    </div>
-    <div class="s-12 m-6 l-3">
-      <a href="/lesen/form" class="image-with-hover-overlay image-hover-zoom margin-bottom">
-        <div class="image-hover-overlay background-primary">
-          <div class="image-hover-overlay-content text-center padding-2x">
-            <p><span class="highlighted">Arbeitsbögen</span><br>Hier können Sie sich Arbeitsbögen und Aufgabenstellungen zur schriftlichen Ausarbeitung herunterladen.</p>
-          </div>
-        </div>
-        <img src="/img/portfolio/thumb-09.jpg" alt="" title="Portfolio Image 2" />
-      </a>
-    </div>
-    <div class="s-12 m-6 l-3">
-      <a href="/lesen/methoden" class="image-with-hover-overlay image-hover-zoom margin-bottom">
-        <div class="image-hover-overlay background-primary">
-          <div class="image-hover-overlay-content text-center padding-2x">
-            <p><span class="highlighted">Improvisationsaufgaben</span><br>Hier finden Sie Aufgaben zum Improvisieren am Klavier.</p>
-          </div>
-        </div>
-        <img src="/img/portfolio/thumb-09.jpg" alt="" title="Portfolio Image 3" />
-      </a>
-    </div>
-    <div class="s-12 m-6 l-3">
-      <a href="/lesen/satzmodelle" class="image-with-hover-overlay image-hover-zoom margin-bottom">
-        <div class="image-hover-overlay background-primary">
-          <div class="image-hover-overlay-content text-center padding-2x">
-            <p><span class="highlighted">Weitere Downloads</span><br>Schauen Sie einfach immer wieder einmal nach, ob sich hier vielleicht noch etwas nützliches für Sie findet...</p>
-          </div>
-        </div>
-        <img src="/img/portfolio/thumb-09.jpg" alt="" title="Portfolio Image 4" />
-      </a>
-    </div>
+  <div class="s12 m-2 l4">&nbsp;</div>
+  <div class="s12 m-10 l8">
+    <h1 class="text-size-40">
+    Materialien zum Downlaod
+  </h1>
+  <noscript>Diese Seite funktioniert nicht ohne Javascript.</noscript>
+  <section class="margin-top-20">
+    <h2>Themenbögen</h2>
+    <ul>
+      <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Grundlagen') > -1; }).forEach(function (tutorial) { %>
+      <li>
+        <a href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
+      </li>
+      <% }); %>
+    </ul>
+  </section>
+  <section class="margin-top-20">
+    <h2>Aufgaben</h2>
+    <ul>
+      <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Form') > -1; }).forEach(function (tutorial) { %>
+      <li>
+        <a href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
+      </li>
+      <% }); %>
+    </ul>
+  </section>
+  <section class="margin-top-20">
+    <h2>Tutorials (als PDF-Datei)</h2>
+    <ul>
+      <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Form') > -1; }).forEach(function (tutorial) { %>
+      <li>
+        <a href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
+      </li>
+      <% }); %>
+    </ul>
+  </section>
+  </div>
 </div>
