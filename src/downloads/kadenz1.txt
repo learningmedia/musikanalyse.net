@@ -3,6 +3,6 @@ title: Die Kadenz als Schlusswendung und Formmodell
 author: Ulrich Kaiser
 category: themen
 abstract: Materialien zum Verständnis von Kadenzen in tonaler Musik und zur Analyse.
-thumbnail: /img/thumbnails/004_Kadenz.jpg
+thumbnail: /img/thumbnails/Kadenz.jpg
 link: /downloadfiles/Kadenz.pdf
 ---

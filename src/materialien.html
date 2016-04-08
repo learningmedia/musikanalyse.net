@@ -13,6 +13,7 @@ layout: wide.ejs
   <h1 class="text-size-40">Materialien zum Download</h1>
   <noscript>Diese Seite funktioniert nicht ohne Javascript.</noscript>
 
+  <p>Hier finden Sie <b>Materialien zu Themen der Musiktheorie und Analyse</b>, die Sie zum Kompetenzerwerb im Selbststudium oder im Unterricht als Anleitung verwenden können.</p>
   <div id="accordion">
     <dl class="accordion" id="slider1">
       <dt>Materialien zu Themen der Musiktheorie und Analyse</dt>
@@ -20,11 +21,11 @@ layout: wide.ejs
         <% collections.downloads.filter(function (downloadfile) { return downloadfile.category.indexOf('themen') > -1; }).forEach(function (downloadfile) { %>
         <div class="line margin-top-bottom-20" style="border-bottom: 1px solid gray; padding-bottom: 20px;">
           <div class="s-12 m-2 l-2 ">
-            <a href="<%= downloadfile.link %>"><img src="<%= downloadfile.thumbnail %>" /></a>
+            <a href="<%= downloadfile.link %>"><img src="<%= downloadfile.thumbnail %>" class="shadow" /></a>
           </div>
           <div class="s-12 m-10 l-10">
             <h3><%= downloadfile.title %></h3>
-            <p class="text-size-12">von <%= downloadfile.author %></p>
+            <span class="text-size-12">von <%= downloadfile.author %></span>
             <p><%= downloadfile.abstract %></p>
           </div>
         </div>
@@ -32,19 +33,19 @@ layout: wide.ejs
       </dd>
     </dl>
   </div>
-
+  <p class="margin-top-40">In diesem Bereich werden <b>Materialien zum Üben</b> angeboten, die Übungsaufgaben enthalten, die Sie im Unterricht einsetzen oder auch für für Selbststudium verwenden können.</p>
   <div id="accordion">
     <dl class="accordion" id="slider2">
-      <dt>Materialien zum Üben und Unterrichten</dt>
+      <dt>Materialien zum Üben</dt>
       <dd>
         <% collections.downloads.filter(function (downloadfile) { return downloadfile.category.indexOf('aufgaben') > -1; }).forEach(function (downloadfile) { %>
         <div class="line margin-top-bottom-20" style="border-bottom: 1px solid gray; padding-bottom: 20px;">
           <div class="s-12 m-2 l-2 ">
-            <a href="<%= downloadfile.link %>"><img src="<%= downloadfile.thumbnail %>" /></a>
+            <a href="<%= downloadfile.link %>"><img src="<%= downloadfile.thumbnail %>" class="shadow" /></a>
           </div>
           <div class="s-12 m-10 l-10">
             <h3><%= downloadfile.title %></h3>
-            <p class="text-size-12">von <%= downloadfile.author %></p>
+            <span class="text-size-12">von <%= downloadfile.author %></span>
             <p><%= downloadfile.abstract %></p>
           </div>
         </div>

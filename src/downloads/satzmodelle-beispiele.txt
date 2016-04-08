@@ -1,0 +1,8 @@
+---
+title: Satzmodelle Beispielheft
+author: Ulrich Kaiser
+category: aufgaben
+abstract: In diesem Heft finden Sie eine Übersicht über die gebräuchclichsten Satzmodelle und für jedes Satzmodelle eine Beispiel aus der Literatur. Darüber hinaus bieten leere Notensystemen die Möglichkeit, weitere Vorkommen in der Musik zu notieren.
+thumbnail: /img/thumbnails/Satzmodelle-Beispielsammlung.jpg
+link: /downloadfiles/Satzmodelle-Beispielsammlung.pdf
+---

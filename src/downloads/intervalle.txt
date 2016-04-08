@@ -3,6 +3,6 @@ title: Intervalle
 author: Ulrich Kaiser
 category: themen
 abstract: Eine differenzierte Beschreibung von Intervallgrößen und eine Erörterung der Schwierigkeiten, Intervalle als konsonant oder dissonant zu bestimmen.
-thumbnail: /img/thumbnails/001_Intervalle-1.jpg
+thumbnail: /img/thumbnails/Intervalle-1.jpg
 link: /downloadfiles/Intervalle.pdf
 ---
