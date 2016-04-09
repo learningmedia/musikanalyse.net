@@ -4,61 +4,46 @@ date: 2016-03-29
 layout: wide.ejs
 ---
 
-<link rel="stylesheet" href="/styles/accordion.css" />
-<script src="/scripts/accordion.js"></script>
-
-
-
-<div class="line">
-  <h1 class="text-size-40">Materialien zum Download</h1>
-  <noscript>Diese Seite funktioniert nicht ohne Javascript.</noscript>
-
-  <p>Hier finden Sie <b>Materialien zu Themen der Musiktheorie und Analyse</b>, die Sie zum Kompetenzerwerb im Selbststudium oder im Unterricht als Anleitung verwenden können.</p>
-  <div id="accordion">
-    <dl class="accordion" id="slider1">
-      <dt>Materialien zu Themen der Musiktheorie und Analyse</dt>
-      <dd>
-        <% collections.downloads.filter(function (downloadfile) { return downloadfile.category.indexOf('themen') > -1; }).forEach(function (downloadfile) { %>
-        <div class="line margin-top-bottom-20" style="border-bottom: 1px solid gray; padding-bottom: 20px;">
-          <div class="s-12 m-2 l-2 ">
-            <a href="<%= downloadfile.link %>"><img src="<%= downloadfile.thumbnail %>" class="shadow" /></a>
-          </div>
-          <div class="s-12 m-10 l-10">
-            <h3><%= downloadfile.title %></h3>
-            <span class="text-size-12">von <%= downloadfile.author %></span>
-            <p><%= downloadfile.abstract %></p>
-          </div>
-        </div>
-        <% }); %>
-      </dd>
-    </dl>
+<div class="line margin-bottom-40">
+  <div class="s-12 m-6 l-4">
+    <a class="greenbutton" href="/downloadfiles">Suchen ohne Schnickschnack...</a>
   </div>
-  <p class="margin-top-40">In diesem Bereich werden <b>Materialien zum Üben</b> angeboten, die Übungsaufgaben enthalten, die Sie im Unterricht einsetzen oder auch für für Selbststudium verwenden können.</p>
-  <div id="accordion">
-    <dl class="accordion" id="slider2">
-      <dt>Materialien zum Üben</dt>
-      <dd>
-        <% collections.downloads.filter(function (downloadfile) { return downloadfile.category.indexOf('aufgaben') > -1; }).forEach(function (downloadfile) { %>
-        <div class="line margin-top-bottom-20" style="border-bottom: 1px solid gray; padding-bottom: 20px;">
-          <div class="s-12 m-2 l-2 ">
-            <a href="<%= downloadfile.link %>"><img src="<%= downloadfile.thumbnail %>" class="shadow" /></a>
-          </div>
-          <div class="s-12 m-10 l-10">
-            <h3><%= downloadfile.title %></h3>
-            <span class="text-size-12">von <%= downloadfile.author %></span>
-            <p><%= downloadfile.abstract %></p>
-          </div>
-        </div>
-        <% }); %>
-      </dd>
-    </dl>
+  <div class="s-12 m-6 l-8">
+    &nbsp;
   </div>
-
 </div>
 
-<script type="text/javascript">
-  var slider1 = new accordion.slider("slider1");
-  slider1.init("slider1");
-  var slider2 = new accordion.slider("slider2");
-  slider2.init("slider2");
-</script>
+<div class="line">
+  <div class="margin">
+    <div class="s-12 m-6 l-3">
+      <a href="/materialien/themen" class="image-with-hover-overlay image-hover-zoom margin-bottom">
+        <div class="image-hover-overlay background-primary">
+          <div class="image-hover-overlay-content text-center padding-2x">
+            <p><span class="highlighted">Themen</span><br>Dateien zum Herunterladen zu Themen der Musiktheorie und zur Analyse</p>
+          </div>
+        </div>
+        <img src="/img/portfolio/thumb-09.jpg" alt="" title="Portfolio Image 1" />
+      </a>
+    </div>
+    <div class="s-12 m-6 l-3">
+      <a href="/materialien/ueben" class="image-with-hover-overlay image-hover-zoom margin-bottom">
+        <div class="image-hover-overlay background-primary">
+          <div class="image-hover-overlay-content text-center padding-2x">
+            <p><span class="highlighted">Üben</span><br>Arbeitsbögen zum Herunterladen für den Unterricht oder zum Selbststudium.</p>
+          </div>
+        </div>
+        <img src="/img/portfolio/thumb-09.jpg" alt="" title="Portfolio Image 2" />
+      </a>
+    </div>
+    <div class="s-12 m-6 l-3">
+      <a href="/materialien/tutorials" class="image-with-hover-overlay image-hover-zoom margin-bottom">
+        <div class="image-hover-overlay background-primary">
+          <div class="image-hover-overlay-content text-center padding-2x">
+            <p><span class="highlighted">Tutorials</span><br>Laden Sie sich hier Tutorials im PDF-Format herunter.</p>
+          </div>
+        </div>
+        <img src="/img/portfolio/thumb-09.jpg" alt="" title="Portfolio Image 3" />
+      </a>
+    </div>
+  </div>
+</div>
