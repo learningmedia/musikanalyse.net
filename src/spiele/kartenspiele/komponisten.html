@@ -1,0 +1,59 @@
+---
+title: Form
+date: 2016-03-29
+layout: narrow.ejs
+---
+
+<link href="/styles/memory/quizymemorygame.css" rel="stylesheet" />
+<style>
+ #ekse-game {
+    width: 664px;
+ }
+</style>
+
+
+<div id="header">
+    <h1>Wer kennt den Komponisten?</h1>
+</div>
+<div id="ekse-game" class="quizy-memorygame">
+  <ul>
+    <li class="match1"><img src="/img/spiele/karten-komponisten/Komponisten-Pairspiel-Seite001.png" /></li>
+    <li class="match1"><img src="/img/spiele/karten-komponisten/Komponisten-Pairspiel-Seite002.png" /></li>
+    <li class="match2"><img src="/img/spiele/karten-komponisten/Komponisten-Pairspiel-Seite003.png" /></li>
+    <li class="match2"><img src="/img/spiele/karten-komponisten/Komponisten-Pairspiel-Seite004.png" /></li>
+    <li class="match3"><img src="/img/spiele/karten-komponisten/Komponisten-Pairspiel-Seite005.png" /></li>
+    <li class="match3"><img src="/img/spiele/karten-komponisten/Komponisten-Pairspiel-Seite006.png" /></li>
+    <li class="match4"><img src="/img/spiele/karten-komponisten/Komponisten-Pairspiel-Seite007.png" /></li>
+    <li class="match4"><img src="/img/spiele/karten-komponisten/Komponisten-Pairspiel-Seite008.png" /></li>
+    <li class="match5"><img src="/img/spiele/karten-komponisten/Komponisten-Pairspiel-Seite009.png" /></li>
+    <li class="match5"><img src="/img/spiele/karten-komponisten/Komponisten-Pairspiel-Seite010.png" /></li>
+    <li class="match6"><img src="/img/spiele/karten-komponisten/Komponisten-Pairspiel-Seite011.png" /></li>
+    <li class="match6"><img src="/img/spiele/karten-komponisten/Komponisten-Pairspiel-Seite012.png" /></li>
+    <li class="match7"><img src="/img/spiele/karten-komponisten/Komponisten-Pairspiel-Seite013.png" /></li>
+    <li class="match7"><img src="/img/spiele/karten-komponisten/Komponisten-Pairspiel-Seite014.png" /></li>
+    <li class="match8"><img src="/img/spiele/karten-komponisten/Komponisten-Pairspiel-Seite015.png" /></li>
+    <li class="match8"><img src="/img/spiele/karten-komponisten/Komponisten-Pairspiel-Seite016.png" /></li>
+  </ul>
+</div>
+
+<script src="/scripts/memory/jquery-1.7.1.min.js"></script>
+<script src="/scripts/memory/jquery-ui-1.8.17.custom.min.js"></script>
+<script src="/scripts/memory/jquery.flip.min.js"></script>
+<script src="/scripts/memory/jquery.quizymemorygame.min.js"></script>
+<script>
+    $('#ekse-game').quizyMemoryGame({
+        itemWidth: 156,
+        itemHeight: 156,
+        itemsMargin: 10,
+        colCount: 4,
+        animType: 'flip',
+        flipAnim: 'tb',
+        animSpeed: 250,
+        resultIcons: true,
+        gameSummary: true,
+        textSummaryTitle: 'Spielergebnis:',
+        textSummaryClicks: 'Klicks',
+        textSummaryTime: 'Sekunden',
+        onFinishCall: ''
+    });
+</script>
