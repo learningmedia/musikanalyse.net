@@ -4,7 +4,7 @@ $(function () {
 
     $('.exercise').each(function () {
     var exercise = $(this);
-    $('<a href="#">Übung anzeigen</a>').on('click', function () {
+    $('<a class="exercise-link" href="#">Übung anzeigen</a>').on('click', function () {
       openExercise(exercise.get(0).innerHTML);
     }).insertBefore(exercise);
   });
