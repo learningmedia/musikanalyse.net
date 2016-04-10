@@ -8,9 +8,6 @@ category: Form, Popularmusik, Terminologie
 abstract: Hier finden Sie Aufsätze zur Termoniologie der Formanalyse von Pop- und Rockmusik von John Covach (2005), Ulrich Kaiser (2011) und Ralf von Appen/Markus Hauenschild (2015, dt. Fassung 2012).
 ---
 
-<link rel="stylesheet" href="/styles/accordion.css" />
-<script src="/scripts/accordion.js"></script>
-
 <p>
   Hier finden Sie Beiträge zur Erklärung und Verwendung von Formbegriffen sowie zur Formgeschichte der Pop- und Rockmusik. Wenn Sie die Beiträge lesen wollen, klicken Sie auf den Balken mit dem entsprechenden Titel.
 </p>
@@ -75,10 +72,12 @@ abstract: Hier finden Sie Aufsätze zur Termoniologie der Formanalyse von Pop- u
 </div>
 
 <script type="text/javascript">
-  var slider1 = new accordion.slider("slider1");
-  slider1.init("slider1");
-  var slider2 = new accordion.slider("slider2");
-  slider2.init("slider2");
-  var slider3 = new accordion.slider("slider3");
-  slider3.init("slider3");
+  $(function () {
+    window.slider1 = new accordion.slider("slider1");
+    slider1.init("slider1");
+    window.slider2 = new accordion.slider("slider2");
+    slider2.init("slider2");
+    window.slider3 = new accordion.slider("slider3");
+    slider3.init("slider3");
+  });
 </script>

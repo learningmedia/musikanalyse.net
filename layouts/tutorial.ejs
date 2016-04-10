@@ -6,6 +6,7 @@
     <title><%= title %></title>
     <link rel="stylesheet" href="/styles/main.css" />
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800&subset=latin,latin-ext">
+    <link rel="stylesheet" href="/vendor/mediaelement/mediaelementplayer.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <!--<script src="js/responsee.js"></script>-->
     <!--[if lt IE 9]>
@@ -29,7 +30,7 @@
          &nbsp;
        </div>
        <div class="s-12 m-4 l-2">
-         <a class="redbutton" href="" onclick="javascript:history.back();" style="width: auto;">Zurück...</a>
+         <a class="Button Button--red" href="" onclick="javascript:history.back();" style="width: auto;">Zurück...</a>
        </div>
       </div>
 
@@ -49,5 +50,11 @@
     <% include partials/footer %>
 
     <script src="/scripts/main.js"></script>
-   </body>
+    <script src="/vendor/mediaelement/mediaelement-and-player.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('video').mediaelementplayer();
+      });
+    </script>
+  </body>
 </html>

@@ -1,6 +1,3 @@
-* {margin:0; padding:0}
-
-#accordion { width:100%; }
 .accordion { width:100%; color:#033 }
 .accordion dt { width:100%; border:2px solid #9ac1c9; padding:8px; font-weight:bold; margin-top:5px; cursor:pointer; }
 .accordion dt:hover { background-color: lightgray; }
