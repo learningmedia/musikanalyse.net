@@ -1,0 +1,8 @@
+---
+title: Materialien zur Passacaglia
+author: Ulrich Kaiser
+category: themen
+abstract: Hier finden Sie Materialien zur Passacaglia und zu passacaglia-nahen Kompositionen und Beispiele von Philipps, Bieber, Monteverdi, Bach, Mozart und Brahms.
+thumbnail: /img/thumbnails/passacaglia.jpg
+link: /downloadfiles/passacaglia.pdf
+---

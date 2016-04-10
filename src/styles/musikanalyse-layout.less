@@ -1,0 +1,54 @@
+#greenLine {
+  display: block !important;
+  height: 300px !important;
+  width: 100%;
+
+  /* -768px version */
+  @media screen and (max-width:768px) {
+    height: 200px !important;
+  }
+
+  /* -480px version */
+  @media screen and (max-width:480px) {
+    height: 100px !important;
+  }
+}
+
+.highlighted {
+  font-weight: bold;
+  color: maroon;
+}
+
+.Button {
+  color: white !important;
+  display: block;
+  padding: 0.625em;
+  text-align: center;
+  text-decoration:none;
+  transition: background 0.20s linear 0s;
+
+  &.Button--blue {
+    background-color: #00526e;
+    &:hover {
+      background-color: lighten(#00526e, 10%);
+    }
+  }
+  &.Button--red {
+    background-color: #520d00;
+    &:hover {
+      background-color: lighten(#520d00, 10%);
+    }
+  }
+  &.Button--brown {
+    background-color: #523a00;
+    &:hover {
+      background-color: lighten(#523a00, 10%);
+    }
+  }
+  &.Button--green {
+    background-color: #49BF4C;
+    &:hover {
+      background-color: darken(#49BF4C, 10%);
+    }
+  }
+}

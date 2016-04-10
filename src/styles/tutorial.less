@@ -1,20 +1,61 @@
 .Tutorial {
-  width: 60%;
-  min-width: 768px;
-  margin: 25px auto 25px auto;
-  background-color: white;
-  padding: 20px;
-  border: 1px solid @palette-gray-200;
-  box-shadow: 6px 6px 10px @palette-gray-400;
+}
 
-  // HACKS:
+.Tutorial-title {
+  margin-bottom: .25em;
+}
+
+.Tutorial-author {
+  font-size: 90%;
+  margin-bottom: 2.5em;
+}
+
+.Tutorial {
+  color: #777;
+  p {
+    .margin-top-bottom-20;
+  }
+  .beforeSmalltext{
+    margin-bottom: 0;
+  }
+  .smalltext {
+    font-size: 12px;
+  }
+  i {
+    color: #777;
+    font-family: inherit;
+    font-size: 1em;
+    font-style: italic;
+  }
+  hr {
+    margin: 20px 0;
+  }
   img {
-    display: block;
-    margin: 0 auto;
+    .center;
+    margin: 30px auto 20px auto;
+  }
+  img.shadow {
+    box-shadow: 6px 6px 6px #a6a6a6;
   }
   audio {
+    .center;
+    .margin-top-bottom-20;
+  }
+  iframe {
+    width: 100%;
+    height: 800px;
+  }
+  iframe.yt-iframe {
+     margin: 40px auto;
+     display: block;
+     max-width: 420px;
+     max-height: 315px;
+  }
+  .exercise-link {
     display: block;
-    margin: 16px auto;
+    font-size: 85%;
+    font-style: italic;
+    margin: 20px 0;
   }
   .exercise {
     display: none;

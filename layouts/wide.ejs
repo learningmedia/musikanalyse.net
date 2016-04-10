@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800&subset=latin,latin-ext">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <!--<script src="js/responsee.js"></script>-->
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+
+
+  <body class="size-1140">
+
+    <!-- HEADER -->
+    <% include partials/header %>
+
+    <!-- MAIN -->
+    <main role="main">
+      <!-- Content -->
+      <div class="section-small-padding background-white">
+        <div class="line">
+          <div class="s-12 m-12 center margin-m-bottom-30">
+            <%- contents %>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <% include partials/footer %>
+
+    <script src="/scripts/main.js"></script>
+   </body>
+</html>

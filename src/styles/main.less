@@ -1,21 +1,15 @@
-// Normalize browser differences:
-@import (less) './../../node_modules/normalize.css/normalize.css';
+// 3rd party styles
+@import (less) './components.css';
+@import (less) './responsee.css';
+@import (less) './owl.carousel.css';
+@import (less) './owl.theme.css';
+@import (less) './template-style.css';
+@import (less) './accordion.css';
 
-// Variables:
-@import './typography.less';
-@import './colors.less';
+// Override 3rd party styles:
+@import './overrides.less';
 
-// Our baseline styles:
-@import './baseline.less';
-
-// Our utilities:
-@import './utilities.less';
-
-// Style components:
-@import './navbar.less';
-@import './page.less';
+// Our own styles
+@import './musikanalyse-layout.less';
 @import './tutorial.less';
 
-// Individual pages:
-@import './index.less';
-@import './tutorials.less';

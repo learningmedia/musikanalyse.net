@@ -1,0 +1,25 @@
+---
+title: Materialien zum Üben
+date: 2016-03-29
+layout: wide.ejs
+---
+
+<div class="line">
+  <noscript>Diese Seite funktioniert nicht ohne Javascript.</noscript>
+
+  <h2 class="margin-bottom-40">Materialien zum Üben</h2>
+
+  <% collections.downloads.filter(function (downloadfile) { return downloadfile.category.indexOf('aufgaben') > -1; }).forEach(function (downloadfile) { %>
+    <div class="line margin-top-bottom-20" style="border-bottom: 1px solid gray; padding-bottom: 20px;">
+      <div class="s-12 m-2 l-2">
+        <a href="<%= downloadfile.link %>"><img src="<%= downloadfile.thumbnail %>" class="shadow" /></a>
+      </div>
+      <div class="s-12 m-10 l-10">
+        <h3 class="beforeSmalltext"><%= downloadfile.title %></h3>
+        <span class="smalltext">von <%= downloadfile.author %></span>
+        <p><%= downloadfile.abstract %></p>
+      </div>
+    </div>
+  <% }); %>
+
+</div>
