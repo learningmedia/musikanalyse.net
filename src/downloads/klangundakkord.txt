@@ -2,6 +2,7 @@
 title: Klang und Akkord
 author: Ulrich Kaiser
 category: themen
+subCategory: grundlagen
 abstract: Erfahren Sie hier mehr über die exakte Bestimmung der Begriffe ›Klang‹ und ›Akkord‹ in Anlehnung an den großen Musikwissenschaftler Carl Dahlhaus.
 thumbnail: /img/thumbnails/KlangUndAkkord.jpg
 link: /downloadfiles/KlangUndAkkord.pdf

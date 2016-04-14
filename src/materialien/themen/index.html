@@ -7,10 +7,45 @@ layout: wide.ejs
 <div class="line">
   <noscript>Diese Seite funktioniert nicht ohne Javascript.</noscript>
 
-  <h2 class="margin-bottom-40">Materialien zu Themen der Musiktheorie und zur Analyse</h2>
+  <h1 class="margin-bottom-40">Download-Materialien</h1>
 
-  <% collections.downloads.filter(function (downloadfile) { return downloadfile.category.indexOf('themen') > -1; }).forEach(function (downloadfile) { %>
-  <div class="line margin-top-bottom-20" style="border-bottom: 1px solid gray; padding-bottom: 20px;">
+  <section class="margin-top-20">
+    <h2>Grundlagen</h2>
+    <ul>
+       <% collections.downloads.filter(function (downloadfile) { return downloadfile.category.indexOf('themen') > -1 && downloadfile.subCategory.indexOf('grundlagen') > -1; }).forEach(function (downloadfile) { %>
+      <li>
+        <a href="#" title="<%= downloadfile.abstract %>" onclick="javascript:showContainer(this);"><%= downloadfile.title %></a>
+      </li>
+      <% }); %>
+    </ul>
+  </section>
+  <hr class="margin-top-20" />
+  <% collections.downloads.filter(function (downloadfile) { return downloadfile.category.indexOf('themen') > -1 && downloadfile.subCategory.indexOf('grundlagen') > -1; }).forEach(function (downloadfile) { %>
+  <div id="<%= downloadfile.title %>" class="line margin-top-bottom-20" style="border-bottom: 1px solid gray; padding-bottom: 20px; display: none;">
+    <div class="s-12 m-2 l-2 ">
+      <a href="<%= downloadfile.link %>"><img src="<%= downloadfile.thumbnail %>" class="shadow" /></a>
+    </div>
+    <div class="s-12 m-10 l-10">
+      <h3 class="beforeSmalltext"><%= downloadfile.title %></h3>
+      <span class="smalltext">von <%= downloadfile.author %></span>
+      <p><%= downloadfile.abstract %></p>
+    </div>
+  </div>
+  <% }); %>
+
+  <section class="margin-top-40">
+    <h2>Gattungen (Fuge, Sonate etc.)</h2>
+    <ul>
+       <% collections.downloads.filter(function (downloadfile) { return downloadfile.category.indexOf('themen') > -1 && downloadfile.subCategory.indexOf('gattungen') > -1; }).forEach(function (downloadfile) { %>
+      <li>
+        <a href="#" title="<%= downloadfile.abstract %>" onclick="javascript:showContainer(this);"><%= downloadfile.title %></a>
+      </li>
+      <% }); %>
+    </ul>
+  </section>
+  <hr class="margin-top-20" />
+  <% collections.downloads.filter(function (downloadfile) { return downloadfile.category.indexOf('themen') > -1 && downloadfile.subCategory.indexOf('gattungen') > -1; }).forEach(function (downloadfile) { %>
+  <div id="<%= downloadfile.title %>" class="line margin-top-bottom-20" style="border-bottom: 1px solid gray; padding-bottom: 20px; display: none;">
     <div class="s-12 m-2 l-2 ">
       <a href="<%= downloadfile.link %>"><img src="<%= downloadfile.thumbnail %>" class="shadow" /></a>
     </div>
@@ -23,3 +58,16 @@ layout: wide.ejs
   <% }); %>
 
 </div>
+
+
+<script>
+  function showContainer(elem){
+    var title = elem.innerHTML;
+    var div = document.getElementById(title)
+    if (div.style.display == "none") {
+      div.style.display = "block";
+    } else {
+      div.style.display = "none";
+    }
+  }
+</script>
