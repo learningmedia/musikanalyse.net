@@ -1,0 +1,9 @@
+---
+title: Sonate ›facile‹ KV 545 (W. A. Mozart). Die Exposition aus Sicht der graphischen Analyse Heinrich Schenkers
+author: Ulrich Kaiser
+category: themen
+subCategory: gattungen
+abstract: Materialien zur Methoden der Analyse und zur Sonatenhauptsatzform. Eine Analyse der Exposition der ›Sonate Facile‹ KV 545 aus Sicht der graphischen Analyse Heinrich Schenkers.
+thumbnail: /img/thumbnails/kv545_heinrich-schenker.png
+link: /downloadfiles/KV545_Heinrich-Schenker.pdf
+---

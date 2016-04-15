@@ -1,0 +1,9 @@
+---
+title: Sonate ›facile‹ KV 545 (W. A. Mozart). Die Exposition aus der Sicht von Satzmodellen und Modellen
+author: Ulrich Kaiser
+category: themen
+subCategory: gattungen
+abstract: Materialien zur Methoden der Analyse und zur Sonatenhauptsatzform. Eine Analyse der Exposition der ›Sonate Facile‹ KV 545 aus Sicht von Satzmodellen und Modellen.
+thumbnail: /img/thumbnails/kv545_satzmodelle-modell.png
+link: /downloadfiles/KV545_Satzmodelle-Modell.pdf
+---
