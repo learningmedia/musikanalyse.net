@@ -7,11 +7,10 @@ layout: wide.ejs
 <div class="line">
   <noscript>Diese Seite funktioniert nicht ohne Javascript.</noscript>
 
-  <h2 class="margin-bottom-40">Materialien zum Üben</h2>
+  <h1 class="margin-bottom-40">Materialien zum Üben</h1>
 
 
   <section class="margin-top-20">
-    <h2>Grundlagen</h2>
     <ul>
        <% collections.downloads.filter(function (downloadfile) { return downloadfile.category.indexOf('aufgaben') > -1; }).forEach(function (downloadfile) { %>
       <li>
