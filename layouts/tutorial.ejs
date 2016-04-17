@@ -6,7 +6,7 @@
     <title><%= title %></title>
     <link rel="stylesheet" href="/styles/main.css" />
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800&subset=latin,latin-ext">
-    <link rel="stylesheet" href="/vendor/mediaelement/mediaelementplayer.css">
+    <link rel="stylesheet" href="/vendor/video.js/video-js.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <!--<script src="js/responsee.js"></script>-->
     <!--[if lt IE 9]>
@@ -50,11 +50,7 @@
     <% include partials/footer %>
 
     <script src="/scripts/main.js"></script>
-    <script src="/vendor/mediaelement/mediaelement-and-player.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        $('video').mediaelementplayer();
-      });
-    </script>
+    <script src="/vendor/video.js/video.min.js"></script>
+    <script src="/vendor/videojs-youtube/Youtube.min.js"></script>
   </body>
 </html>

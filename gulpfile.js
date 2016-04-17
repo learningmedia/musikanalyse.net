@@ -23,7 +23,8 @@ gulp.task('build', function (done) {
     .use(autoprefixer())
     .use(ignore('**/*.less'))
     .use(concat({ files: ['scripts/responsee.js', 'scripts/owl.carousel.js', 'scripts/accordion.js', 'scripts/template-scripts.js', 'scripts/site.js'], output: 'scripts/main.js' }))
-    .use(static({ src: 'node_modules/mediaelement/build', dest: 'vendor/mediaelement' }))
+    .use(static({ src: 'node_modules/video.js/dist', dest: 'vendor/video.js' }))
+    .use(static({ src: 'node_modules/videojs-youtube/dist', dest: 'vendor/videojs-youtube' }))
     .build(done);
 });
 
