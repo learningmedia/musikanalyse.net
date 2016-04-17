@@ -1,0 +1,65 @@
+---
+title: Themen der Musiktheorie und zur Analyse
+date: 2016-03-29
+layout: material.ejs
+---
+
+<div class="line">
+  <noscript>Diese Seite funktioniert nicht ohne Javascript.</noscript>
+
+  <h1 class="margin-bottom-40">Download-Materialien</h1>
+
+  <section class="margin-top-20">
+    <h2>Grundlagen</h2>
+    <ul>
+       <% collections.downloads.filter(function (downloadfile) { return downloadfile.category.indexOf('themen') > -1 && downloadfile.subCategory.indexOf('grundlagen') > -1; }).forEach(function (downloadfile) { %>
+      <li>
+        <a title="<%= downloadfile.abstract %>" data-toggle="<%= downloadfile.title %>"><%= downloadfile.title %></a>
+      </li>
+      <% }); %>
+    </ul>
+  </section>
+  <hr class="margin-top-20" />
+  <% collections.downloads.filter(function (downloadfile) { return downloadfile.category.indexOf('themen') > -1 && downloadfile.subCategory.indexOf('grundlagen') > -1; }).forEach(function (downloadfile) { %>
+  <div id="<%= downloadfile.title %>" class="line margin-top-bottom-20" style="border-bottom: 1px solid gray; padding-bottom: 20px; display: none;">
+    <div class="s-12 m-2 l-2 ">
+      <a href="<%= downloadfile.link %>"><img src="<%= downloadfile.thumbnail %>" class="shadow" /></a>
+    </div>
+    <div class="s-12 m-10 l-10">
+      <a data-toggle="<%= downloadfile.title %>" class="Material-closeLink">X</a>
+      <h3 class="beforeSmalltext"><%= downloadfile.title %></h3>
+      <span class="smalltext">von <%= downloadfile.author %></span>
+      <p><%= downloadfile.abstract %></p>
+    </div>
+  </div>
+  <% }); %>
+
+  <section class="margin-top-40">
+    <h2>Gattungen (Fuge, Sonate etc.)</h2>
+    <ul>
+       <% collections.downloads.filter(function (downloadfile) { return downloadfile.category.indexOf('themen') > -1 && downloadfile.subCategory.indexOf('gattungen') > -1; }).forEach(function (downloadfile) { %>
+      <li>
+        <a title="<%= downloadfile.abstract %>" data-toggle="<%= downloadfile.title %>"><%= downloadfile.title %></a>
+      </li>
+      <% }); %>
+    </ul>
+  </section>
+  <hr class="margin-top-20" />
+  <% collections.downloads.filter(function (downloadfile) { return downloadfile.category.indexOf('themen') > -1 && downloadfile.subCategory.indexOf('gattungen') > -1; }).forEach(function (downloadfile) { %>
+  <div id="<%= downloadfile.title %>" class="line margin-top-bottom-20" style="border-bottom: 1px solid gray; padding-bottom: 20px; display: none;">
+    <div class="s-12 m-2 l-2 ">
+      <a href="<%= downloadfile.link %>"><img src="<%= downloadfile.thumbnail %>" class="shadow" /></a>
+    </div>
+    <div class="s-12 m-10 l-10">
+      <a data-toggle="<%= downloadfile.title %>" class="Material-closeLink">X</a>
+      <h3 class="beforeSmalltext"><%= downloadfile.title %></h3>
+      <span class="smalltext">von <%= downloadfile.author %></span>
+      <p><%= downloadfile.abstract %></p>
+    </div>
+  </div>
+  <% }); %>
+
+</div>
+
+
+

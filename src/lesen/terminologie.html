@@ -1,0 +1,20 @@
+---
+title: Terminologie
+date: 2016-03-29
+layout: narrow.ejs
+---
+
+<div class="background-white">
+  <div class="line">
+    <section class="margin-top-20">
+      <h2>Terminologie</h2>
+      <ul>
+        <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Terminologie') > -1; }).forEach(function (tutorial) { %>
+        <li>
+          <a href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
+        </li>
+        <% }); %>
+      </ul>
+    </section>
+  </div>
+</div>
