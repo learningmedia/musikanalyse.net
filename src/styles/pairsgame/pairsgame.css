@@ -46,7 +46,8 @@ img#wait{
    display: block;
  }
 .textline {
-   display: block;
+  padding-top: 6px;
+  display: block;
  }
 
  @media screen and (max-width: 768px) {

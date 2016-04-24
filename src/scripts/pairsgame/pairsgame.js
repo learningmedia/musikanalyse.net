@@ -99,6 +99,7 @@
     //Create and show a formated text output
     function formatText(name, numberOfPairs, text) {
       if(images.length !== 0){
+        debugger;
         var messageContainer = document.getElementById("messageContainer");
         messageContainer.style.textAlign = "center";
         var message = "<span class='infoline'>" + op.language.gamer + ": " + name + " / " + op.language.result + ": " + numberOfPairs + "</span>";
