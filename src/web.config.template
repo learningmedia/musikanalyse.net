@@ -1,0 +1,18 @@
+<configuration>
+    <system.web>
+        <customErrors mode="Off"/>
+    </system.web>
+    <system.net>
+        <mailSettings>
+            <smtp from="$FROM_EMAIL">
+                <network
+                    host="$SMTP_HOST"
+                    port="$SMTP_PORT"
+                    userName="$SMTP_USER"
+                    password="$SMTP_PASSWORD"
+                    enableSsl="$SMTP_ENABLE_SSL"
+                    />
+            </smtp>
+        </mailSettings>
+    </system.net>
+</configuration>

@@ -65,20 +65,16 @@ public class FormHandler : IHttpHandler
     {
         using (SmtpClient smtpClient = new SmtpClient())
         {
-            smtpClient.Host = "smtp.1und1.de";
-            smtpClient.Port = 587;
-            smtpClient.EnableSsl = true;
-            smtpClient.Credentials = new NetworkCredential("contact@musikanalyse.net", "Ildswdm!63");
             try
             {
-              MailMessage mm = new MailMessage(new MailAddress("formular@musikanalyse.net"), new MailAddress("contact@musikanalyse.net"))
+                MailMessage mm = new MailMessage(new MailAddress("formular@musikanalyse.net"), new MailAddress("formular@musikanalyse.net"))
                 {
                     Subject = "Formularnachricht musikanalyse.net",
                     Body = message
                 };
-              smtpClient.Send(mm);
-              errorMessage = string.Empty;
-              return true;
+                smtpClient.Send(mm);
+                errorMessage = string.Empty;
+                return true;
             }
             catch (Exception ex)
             {
