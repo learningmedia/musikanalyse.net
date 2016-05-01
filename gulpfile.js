@@ -22,7 +22,25 @@ gulp.task('build', function (done) {
     .use(less({ pattern: 'styles/main.less', render: { paths: ['src/styles'] } }))
     .use(autoprefixer())
     .use(ignore('**/*.less'))
-    .use(concat({ files: ['scripts/responsee.js', 'scripts/owl.carousel.js', 'scripts/accordion.js', 'scripts/template-scripts.js', 'scripts/site.js'], output: 'scripts/main.js' }))
+    .use(concat({
+      files: [
+        'scripts/responsee.js',
+        'scripts/owl.carousel.js',
+        'scripts/accordion.js',
+        'scripts/template-scripts.js',
+        'scripts/site.js'
+      ],
+      output: 'scripts/main.js'
+    }))
+    .use(concat({
+      files: [
+        'jquery.klavier/dist/jquery.klavier.min.js',
+        'vexflow/releases/vexflow-min.js',
+        'notelex/dist/notelex.min.js'
+      ],
+      output: 'scripts/notelex-bundle.js',
+      searchPaths: ['node_modules']
+    }))
     .use(static({ src: 'node_modules/video.js/dist', dest: 'vendor/video.js' }))
     .use(static({ src: 'node_modules/videojs-youtube/dist', dest: 'vendor/videojs-youtube' }))
     .build(done);
