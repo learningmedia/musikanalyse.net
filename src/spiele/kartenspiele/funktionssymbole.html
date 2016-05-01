@@ -1,0 +1,92 @@
+---
+title: Das berühmte Erinnerungs-Kartenspiel zu Symbolen der Funktionstheorie
+date: 2016-04-30
+layout: cardGames.ejs
+---
+
+<div class="gameOptions">
+  <select onchange="createTextInputs(this)">
+    <option value="1" selected>alleine</option>
+    <option value="2">zu zweit</option>
+    <option value="3">zu dritt</option>
+    <option value="4">zu viert</option>
+  </select>
+  <span id="textfields"><input type="text" placeholder="1. <Name>"></input></span>
+  <select onchange="setTimespan(this)">
+    <option value="4.5">leicht</option>
+    <option value="3">mittel</option>
+    <option value="1.5" selected>schwer</option>
+  </select>
+  <select onchange="setLanguage(this)">
+    <option value="en">Englisch</option>
+    <option value="de" selected>Deutsch</option>
+  </select>
+  <input type="button" onclick="onBeginClick()" value="Anfangen"></input>
+  <input type="button" onclick="onResetClick()" value="Nochmal?"></input>
+</div>
+<div class="container">
+  <ul id="memory">
+     <li>
+       <img src="/img/games/karten-funktionssymbole/01a.png">
+     </li>
+     <li>
+       <img src="/img/games/karten-funktionssymbole/01b.png">
+     </li>
+     <li>
+       <img src="/img/games/karten-funktionssymbole/02a.png">
+     </li>
+     <li>
+       <img src="/img/games/karten-funktionssymbole/02b.png">
+     </li>
+     <li>
+       <img src="/img/games/karten-funktionssymbole/03a.png">
+     </li>
+     <li>
+       <img src="/img/games/karten-funktionssymbole/03b.png">
+     </li>
+     <li>
+       <img src="/img/games/karten-funktionssymbole/04a.png">
+     </li>
+     <li>
+       <img src="/img/games/karten-funktionssymbole/04b.png">
+     </li>
+     <li>
+       <img src="/img/games/karten-funktionssymbole/05a.png">
+     </li>
+     <li>
+       <img src="/img/games/karten-funktionssymbole/05b.png">
+     </li>
+     <li>
+       <img src="/img/games/karten-funktionssymbole/06a.png">
+     </li>
+     <li>
+       <img src="/img/games/karten-funktionssymbole/06b.png">
+     </li>
+     <li>
+       <img src="/img/games/karten-funktionssymbole/07a.png">
+     </li>
+     <li>
+       <img src="/img/games/karten-funktionssymbole/07b.png">
+     </li>
+     <li>
+       <img src="/img/games/karten-funktionssymbole/08a.png">
+     </li>
+     <li>
+       <img src="/img/games/karten-funktionssymbole/08b.png">
+     </li>
+     <li>
+       <img src="/img/games/karten-funktionssymbole/09a.png">
+     </li>
+     <li>
+       <img src="/img/games/karten-funktionssymbole/09b.png">
+     </li>
+     <li>
+       <img src="/img/games/karten-funktionssymbole/10a.png">
+     </li>
+     <li>
+       <img src="/img/games/karten-funktionssymbole/10b.png">
+     </li>
+  </ul>
+</div>
+
+

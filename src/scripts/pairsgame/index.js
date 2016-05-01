@@ -1,6 +1,6 @@
 var numberOfPlayers = 1;
-  var timespan = 3;
-  var language = "en";
+  var timespan = 1.5;
+  var language = "de";
   var names = [];
 
   function createTextInputs(elem){
@@ -20,7 +20,7 @@ var numberOfPlayers = 1;
         var node = span.children[span.children.length - 1];
         span.removeChild(node);
       }
-    }    
+    }
   }
 
   function setTimespan(elem){
