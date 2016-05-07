@@ -1,0 +1,9 @@
+---
+title: Satzmodelle
+author: Ulrich Kaiser
+category: themen
+subCategory: grundlagen
+abstract: In diesem Heft finden Sie eine Übersicht über die gebräuchlichsten Satzmodelle sowie für jedes Satzmodell ein Beispiel aus der Literatur. Darüber hinaus bieten leere Notensysteme die Möglichkeit, weitere Vorkommen in Kompositionen zu notieren und so eine eigene Beispielsammlung interessanter Satzmodellausarbeitungen anzulegen.
+thumbnail: /img/thumbnails/Satzmodelle.jpg
+link: /downloadfiles/Satzmodelle.pdf
+---
