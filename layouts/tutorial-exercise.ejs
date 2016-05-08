@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800&subset=latin,latin-ext">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body class="size-960">
+
+    <!-- MAIN -->
+    <main role="main">
+
+    <!-- Backbutton -->
+    <div class="line margin-top-bottom-40">
+      <div class="s-12 m-8 l-10">
+        &nbsp;
+      </div>
+      <div class="s-12 m-4 l-2">
+        <a class="Button Button--red" href="" onclick="javascript:window.print();" style="width: auto;">Drucken</a>
+      </div>
+    </div>
+
+      <!-- Content -->
+      <div class="line">
+        <div class="s-12 m-12 center margin-m-bottom-30">
+          <article class="Tutorial">
+            <%- contents %>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <script src="/scripts/main.js"></script>
+    <script src="/vendor/video.js/video.min.js"></script>
+    <script src="/vendor/videojs-youtube/Youtube.min.js"></script>
+  </body>
+</html>
