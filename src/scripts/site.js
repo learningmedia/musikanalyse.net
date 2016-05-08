@@ -1,34 +1,20 @@
-$(function () {
-  var buttons = $('[data-role=category-button]');
-  var sections = $('[data-role=category-section]');
+window.addEventListener('DOMContentLoaded', function () {
 
-    $('.exercise').each(function () {
-    var exercise = $(this);
-    $('<a class="exercise-link" href="#">Übung anzeigen</a>').on('click', function () {
-      openExercise(exercise.get(0).innerHTML);
-    }).insertBefore(exercise);
+  [].slice.call(window.document.querySelectorAll('.exercise')).forEach(function (exercise) {
+    var link = document.createElement('a');
+    link.classList.add('exercise-link');
+    link.textContent = 'Übung anzeigen';
+    link.addEventListener('click', function () {
+      openExercise(exercise.innerHTML);
+    });
+    exercise.parentNode.insertBefore(link, exercise);
   });
 
   function openExercise(content) {
-    var doc = '<!DOCTYPE html>'
-            + '<html>'
-            + '<head>'
-            + '    <meta charset="utf-8" />'
-            + '    <meta name="viewport" content="width=device-width" />'
-            + '    <style>'
-            + '      body { background-color: white; font-family: Arial, Helvetica, Verdana, sans-serif; }'
-            + '      img { display: block; margin: 0 auto; }'
-            + '    </style>'
-            + '</head>'
-
-            + '<body>'
-            + content
-            + '</body>'
-            + '</html>';
-
-    var win = window.open(null, Date.now().toString(), 'height=600, width=800');
-    win.document.write(doc);
-    win.document.close();
+    var win = window.open('/tutorial-exercise', Date.now().toString(), 'height=600, width=800');
+    win.addEventListener('DOMContentLoaded', function () {
+      win.document.getElementById('content').innerHTML = content;
+    });
   }
 
 });
