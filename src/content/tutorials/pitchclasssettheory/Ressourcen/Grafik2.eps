@@ -1,0 +1,520 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%BoundingBox: 60 714 540 758
+%%Creator: Sibelius for Windows version 4.1.1 on Windows XP
+%%CreationDate: Sat May 20 03:39:12 2006
+%%Title: Grafik2.eps
+%%DocumentFonts:
+%%+ Amadeus
+%%DocumentNeededFonts:
+%%+ Amadeus
+%%EndComments
+%%BeginProlog
+/ScaledChar { % string angle xscale yscale xpos ypos fontsize fontname
+	gsave
+		findfont
+		exch
+		scalefont
+		setfont
+		moveto
+		scale
+		rotate
+		show
+	grestore
+} bind def
+/TextBegin { % string angle xpos ypos fontsize fontname
+	findfont
+	exch
+	scalefont
+	setfont
+	moveto
+	gsave
+		rotate
+		show
+} bind def
+/TextEnd {grestore} bind def
+/Line { % xto yto xfrom yfrom width dasharray
+	gsave
+		0 setdash
+		setlinewidth
+		newpath
+		moveto
+		lineto
+		stroke
+	grestore
+} bind def 
+/Poly { % array-of-points xfrom yfrom 
+	newpath
+	moveto
+	{
+		dup
+		0 get
+		exch
+		1 get
+		lineto
+	}
+	forall
+	closepath
+} bind def 
+/PolyFilled { % array-of-points xfrom yfrom
+	Poly
+	fill
+} bind def
+/PolyStroke { % array-of-points xfrom yfrom linewidth 
+	setlinewidth
+	Poly
+	stroke
+} bind def
+/Bezier { % <Xm1 Ym1 Xm2 Ym2 Xm3 Ym3>m = (num-curves-1)...0 num-curves x0 y0 
+	newpath
+	moveto
+	{curveto} repeat
+} bind def
+/BezierFilled {
+	Bezier
+	closepath
+	fill
+} bind def
+/BezierStroke { % <Xm1 Ym1 Xm2 Ym2 Xm3 Ym3>m=num-cuves...0 num-curves x0 y0 width
+	setlinewidth
+	Bezier
+	stroke
+} bind def
+/Circle { % x y r 
+	newpath
+	0 360 arc
+} bind def
+/CircleStroke { % x y r w
+	setlinewidth
+	Circle
+	stroke
+} bind def
+/CircleFilled { % x y r
+	Circle
+	fill
+} bind def
+/Clip { % x3 y3 x2 y2 x1 y1 x0 y0 
+	gsave
+	newpath
+	moveto
+	lineto
+	lineto
+	lineto
+	closepath
+	clip
+	newpath
+} bind def
+/SetupSibeliusEncoding { % font-name
+	findfont
+	dup
+	length
+	dict
+	begin
+		{
+			1 index /FID ne
+			{ def }
+			{pop pop}
+			ifelse
+		} forall
+		/Encoding SibeliusLatinEncoding def
+		currentdict
+	end
+} bind def
+/FontExists { % font-name, leaves true or false in stack
+	lang_level 2 ge
+	{
+		/Font resourcestatus
+		{pop pop false}
+		{true}
+		ifelse
+	}
+	{
+		true
+	}
+	ifelse
+} bind def
+/SkipBitmapIfWrongLangLevel {
+	lang_level 2 lt
+	{
+		/line_string 1024 string def
+		{currentfile line_string readline pop (%_SkippedBitmapToThisPoint) eq {exit} if} loop
+	} if
+} bind def
+/ShowBitmap { % parameters: src_width src_height dst_width dst_height left bottom
+	5 index 3 mul /row_string exch string def % 3 times width for each row
+	gsave
+	translate % x y translate
+	neg scale % dst_width -dst_height scale
+	8 [3 index 0 0 5 index neg 0 0] % src_width src_height 8 [src_width 0 0 -src_height 0 0]
+	{currentfile row_string readhexstring pop} false 3
+	colorimage
+} bind def
+/SibeliusLatinEncoding [
+/.notdef
+/.notdef
+/Euro
+/Scaron
+/guilsinglleft
+/Zcaron
+/scaron
+/guilsinglright
+/zcaron
+/brokenbar
+/overscore
+/twosuperior
+/threesuperior
+/onesuperior
+/onequarter
+/onehalf
+/threequarters
+/Eth
+/multiply
+/Yacute
+/Thorn
+/eth
+/yacute
+/thorn
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/.notdef
+/space
+/exclam
+/quotedbl
+/numbersign
+/dollar
+/percent
+/ampersand
+/quotesingle
+/parenleft
+/parenright
+/asterisk
+/plus
+/comma
+/hyphen
+/period
+/slash
+/zero
+/one
+/two
+/three
+/four
+/five
+/six
+/seven
+/eight
+/nine
+/colon
+/semicolon
+/less
+/equal
+/greater
+/question
+/at
+/A
+/B
+/C
+/D
+/E
+/F
+/G
+/H
+/I
+/J
+/K
+/L
+/M
+/N
+/O
+/P
+/Q
+/R
+/S
+/T
+/U
+/V
+/W
+/X
+/Y
+/Z
+/bracketleft
+/backslash
+/bracketright
+/asciicircum
+/underscore
+/grave
+/a
+/b
+/c
+/d
+/e
+/f
+/g
+/h
+/i
+/j
+/k
+/l
+/m
+/n
+/o
+/p
+/q
+/r
+/s
+/t
+/u
+/v
+/w
+/x
+/y
+/z
+/braceleft
+/bar
+/braceright
+/asciitilde
+/.notdef
+/Adieresis			% Mac 128
+/Aring				% Mac 129
+/Ccedilla			% Mac 130
+/Eacute				% Mac 131
+/Ntilde				% Mac 132  
+/Odieresis			% Mac 133  
+/Udieresis			% Mac 134  
+/aacute				% Mac 135  
+/agrave				% Mac 136  
+/acircumflex		% Mac 137  
+/adieresis			% Mac 138  
+/atilde				% Mac 139  
+/aring				% Mac 140  
+/ccedilla			% Mac 141  
+/eacute				% Mac 142  
+/egrave				% Mac 143  
+/ecircumflex		% Mac 144  
+/edieresis			% Mac 145  
+/iacute				% Mac 146  
+/igrave				% Mac 147  
+/icircumflex		% Mac 148  
+/idieresis			% Mac 149  
+/ntilde				% Mac 150  
+/oacute				% Mac 151  
+/ograve				% Mac 152  
+/ocircumflex		% Mac 153  
+/odieresis			% Mac 154  
+/otilde				% Mac 155  
+/uacute				% Mac 156  
+/ugrave				% Mac 157  
+/ucircumflex		% Mac 158  
+/udieresis			% Mac 159  
+/dagger				% Mac 160  
+/degree				% Mac 161  
+/cent				% Mac 162  
+/sterling			% Mac 163  
+/section			% Mac 164  
+/bullet				% Mac 165  
+/paragraph			% Mac 166  
+/germandbls			% Mac 167  
+/registered			% Mac 168  
+/copyright			% Mac 169  
+/trademark			% Mac 170  
+/acute				% Mac 171  
+/dieresis			% Mac 172  
+/notequal			% Mac 173  
+/AE					% Mac 174  
+/Oslash				% Mac 175  
+/infinity			% Mac 176  
+/plusminus			% Mac 177  
+/lessequal			% Mac 178  
+/greaterequal		% Mac 179  
+/yen				% Mac 180  
+/mu					% Mac 181  
+/partialdiff		% Mac 182  
+/summation			% Mac 183  
+/product			% Mac 184  
+/pi					% Mac 185  
+/integral			% Mac 186  
+/ordfeminine		% Mac 187  
+/ordmasculine		% Mac 188  
+/Omega				% Mac 189  
+/ae					% Mac 190  
+/oslash				% Mac 191  
+/questiondown		% Mac 192  
+/exclamdown			% Mac 193  
+/logicalnot			% Mac 194  
+/radical			% Mac 195  
+/florin				% Mac 196  
+/approxequal		% Mac 197  
+/Delta				% Mac 198  
+/guillemotleft		% Mac 199  
+/guillemotright		% Mac 200  
+/ellipsis			% Mac 201  
+/space				% non-breaking space	Mac 202  
+/Agrave				% Mac 203  
+/Atilde				% Mac 204  
+/Otilde				% Mac 205  
+/OE					% Mac 206  
+/oe					% Mac 207  
+/endash				% Mac 208  
+/emdash				% Mac 209  
+/quotedblleft		% Mac 210  
+/quotedblright		% Mac 211  
+/quoteleft			% Mac 212  
+/quoteright			% Mac 213  
+/divide				% Mac 214  
+/lozenge			% Mac 215  
+/ydieresis			% Mac 216  
+/Ydieresis			% Mac 217  
+/fraction			% Mac 218  
+/currency			% Mac 219  
+/guilsinglleft		% Mac 220  
+/guilsinglright		% Mac 221  
+/fi					% Mac 222  
+/fl					% Mac 223  
+/daggerdbl			% Mac 224  
+/periodcentered		% Mac 225  
+/quotesinglbase		% Mac 226  
+/quotedblbase		% Mac 227  
+/perthousand		% Mac 228  
+/Acircumflex		% Mac 229  
+/Ecircumflex		% Mac 230  
+/Aacute				% Mac 231  
+/Edieresis			% Mac 232  
+/Egrave				% Mac 233  
+/Iacute				% Mac 234  
+/Icircumflex		% Mac 235  
+/Idieresis			% Mac 236  
+/Igrave				% Mac 237  
+/Oacute				% Mac 238  
+/Ocircumflex		% Mac 239  
+/apple				% Mac 240  
+/Ograve				% Mac 241  
+/Uacute				% Mac 242  
+/Ucircumflex		% Mac 243  
+/Ugrave				% Mac 244  
+/dotlessi			% Mac 245  
+/circumflex			% Mac 246  
+/tilde				% Mac 247  
+/macron				% Mac 248  
+/breve				% Mac 249  
+/dotaccent			% Mac 250  
+/ring				% Mac 251  
+/cedilla			% Mac 252  
+/hungarumlaut		% Mac 253  
+/ogonek				% Mac 254  
+/caron				% Mac 255
+] bind def
+%%EndProlog
+%%BeginSetup
+/UniGlyphName (      ) def
+/ReadingMSB true def
+/MSBCharCode 0 def
+/languagelevel where
+	{
+		pop
+		/lang_level languagelevel def
+	}
+	{
+		/lang_level 1 def
+	}
+	ifelse
+%%EndSetup
+0.132868 0.132852 scale
+0 0 translate
+(3) 0 638 5547 129 /Amadeus TextBegin
+TextEnd
+(8) 0 638 5483 129 /Amadeus TextBegin
+TextEnd
+1073 5579 1073 5451 5 [] Line
+1346 5579 1346 5451 5 [] Line
+1534 5579 1534 5451 5 [] Line
+1551 5579 1551 5451 5 [] Line
+2347 5579 2347 5451 5 [] Line
+2364 5579 2364 5451 5 [] Line
+3256 5579 3256 5451 5 [] Line
+3273 5579 3273 5451 5 [] Line
+4034 5579 4034 5451 5 [] Line
+4051 5579 4051 5451 5 [] Line
+469 5451 4053 5451 3 [] Line
+469 5483 4053 5483 3 [] Line
+469 5515 4053 5515 3 [] Line
+469 5547 4053 5547 3 [] Line
+469 5579 4053 5579 3 [] Line
+(&) 0 1 1 493 5483 128 /Amadeus ScaledChar
+[ [785 5523] [867 5531] [867 5515] [785 5507] ] 785 5507  PolyFilled
+[ [785 5547] [867 5555] [867 5539] [785 5531] ] 785 5531  PolyFilled
+785 5440 785 5546 3 [] Line
+(\317) 0 1 1 745 5435 128 /Amadeus ScaledChar
+867 5456 867 5554 3 [] Line
+(\317) 0 1 1 827 5451 128 /Amadeus ScaledChar
+[ [949 5587] [1031 5595] [1031 5579] [949 5571] ] 949 5571  PolyFilled
+[ [949 5611] [1031 5619] [1031 5603] [949 5595] ] 949 5595  PolyFilled
+949 5472 949 5610 3 [] Line
+(\317) 0 1 1 909 5467 128 /Amadeus ScaledChar
+1031 5520 1031 5618 3 [] Line
+(\317) 0 1 1 991 5515 128 /Amadeus ScaledChar
+1134 5574 1134 5467 3 [] Line
+(\317) 0 1 1 1133 5579 128 /Amadeus ScaledChar
+1073 5579 1073 5579 3 [] Line
+(#) 0 1 1 1093 5579 128 /Amadeus ScaledChar
+(J) 0 1 1 1133 5499 128 /Amadeus ScaledChar
+1254 5611 1317 5611 5 [] Line
+1266 5606 1266 5499 3 [] Line
+(\317) 0 1 1 1265 5611 128 /Amadeus ScaledChar
+1073 5579 1073 5579 3 [] Line
+(#) 0 1 1 1218 5611 128 /Amadeus ScaledChar
+% pushing bezier parameters on the stack
+	1315 5661 1395 5661 1422 5635
+	1 1289 5635 2 BezierStroke
+% pushing bezier parameters on the stack
+	1395 5656 1315 5656 1289 5635
+	1315 5666 1395 5666 1422 5635
+	2 1289 5635 BezierFilled
+1395 5611 1458 5611 5 [] Line
+1407 5606 1407 5499 3 [] Line
+1073 5579 1073 5579 3 [] Line
+(\317) 0 1 1 1406 5611 128 /Amadeus ScaledChar
+(J) 0 1 1 1406 5531 128 /Amadeus ScaledChar
+(w) 0 1 1 1611 5435 128 /Amadeus ScaledChar
+(w) 0 1 1 1717 5451 128 /Amadeus ScaledChar
+(w) 0 1 1 1823 5467 128 /Amadeus ScaledChar
+(w) 0 1 1 1929 5515 128 /Amadeus ScaledChar
+(w) 0 1 1 2071 5467 128 /Amadeus ScaledChar
+1073 5579 1073 5579 3 [] Line
+(#) 0 1 1 2031 5467 128 /Amadeus ScaledChar
+(w) 0 1 1 2212 5499 128 /Amadeus ScaledChar
+1073 5579 1073 5579 3 [] Line
+(#) 0 1 1 2172 5499 128 /Amadeus ScaledChar
+(w) 0 1 1 2424 5435 128 /Amadeus ScaledChar
+(w) 0 1 1 2528 5451 128 /Amadeus ScaledChar
+(w) 0 1 1 2633 5467 128 /Amadeus ScaledChar
+1073 5579 1073 5579 3 [] Line
+(w) 0 1 1 2773 5467 128 /Amadeus ScaledChar
+1073 5579 1073 5579 3 [] Line
+(#) 0 1 1 2733 5467 128 /Amadeus ScaledChar
+(w) 0 1 1 2913 5499 128 /Amadeus ScaledChar
+1073 5579 1073 5579 3 [] Line
+(#) 0 1 1 2873 5499 128 /Amadeus ScaledChar
+(w) 0 1 1 3017 5515 128 /Amadeus ScaledChar
+(w) 0 1 1 3122 5547 128 /Amadeus ScaledChar
+(w) 0 1 1 3333 5499 128 /Amadeus ScaledChar
+1073 5579 1073 5579 3 [] Line
+(#) 0 1 1 3293 5499 128 /Amadeus ScaledChar
+(w) 0 1 1 3440 5515 128 /Amadeus ScaledChar
+(w) 0 1 1 3546 5547 128 /Amadeus ScaledChar
+(w) 0 1 1 3652 5563 128 /Amadeus ScaledChar
+(w) 0 1 1 3758 5579 128 /Amadeus ScaledChar
+1073 5579 1073 5579 3 [] Line
+(w) 0 1 1 3899 5579 128 /Amadeus ScaledChar
+1073 5579 1073 5579 3 [] Line
+(#) 0 1 1 3859 5579 128 /Amadeus ScaledChar
+% pushing bezier parameters on the stack
+	863 5669 1327 5736 1421 5653
+	1 801 5562 2 BezierStroke
+% pushing bezier parameters on the stack
+	1327 5731 863 5664 801 5562
+	863 5674 1327 5741 1421 5653
+	2 801 5562 BezierFilled
+%%EOF
