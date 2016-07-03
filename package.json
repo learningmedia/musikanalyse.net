@@ -32,8 +32,8 @@
   "dependencies": {
     "jquery.klavier": "~1.1.1",
     "normalize.css": "~3.0.3",
-    "notelex": "~2.0.0",
-    "vexflow": "~1.2.45",
+    "notelex": "~2.1.0",
+    "vexflow": "~1.2.53",
     "video.js": "~5.8.8",
     "videojs-youtube": "~2.0.8"
   }
