@@ -57,6 +57,9 @@
             <div class="s-12">
               <textarea name="message" class="required message border-radius" placeholder="Ihre Nachricht" rows="3"></textarea>
             </div>
+            <div class="s-12">
+              <input type="text" name="first" id="first" style="width:10%;">&nbsp;+&nbsp;<input type="text" name="second" id="second" style="width:10%;">&nbsp;=&nbsp;<input type="text" name="result" id="result" style="width:30%;" placeholder="Ergebnis?">
+            </div>
             <div class="s-12"><button class="submit-form button background-primary border-radius text-white" type="submit">Absenden</button></div>
           </form>
         </div>
@@ -90,3 +93,12 @@
     </div>
   </section>
 </footer>
+
+<script>
+    var firstValue = Math.floor((Math.random() * 10) + 1);
+    var secondValue = Math.floor((Math.random() * 10) + 1);
+    var first = window.document.getElementById("first");
+    var second = window.document.getElementById("second");
+    first.value = firstValue;
+    second.value = secondValue;
+</script>
