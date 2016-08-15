@@ -9,8 +9,8 @@ using System.Web;
 
 public class FormHandler : IHttpHandler
 {
-    const string success = "Vielen Dank für Ihre Anfrage, Sie erhalten von WebDoc in Kürze eine Antwort.";
-    const string error = "Der Versand der Anfrage ist leider fehlgeschlagen. Bitte informieren Sie WebDoc über die im <a href='/impressum'>Impressum</a> angegeben Kontakt-Möglichkeiten.";
+    const string success = "Vielen Dank für Ihre Anfrage, Sie erhalten von uns in Kürze eine Antwort.";
+    const string error = "Der Versand der Anfrage ist leider fehlgeschlagen. Bitte informieren Sie den Administrator über die im <a href='/impressum'>Impressum</a> angegeben Kontakt-Möglichkeiten.";
 
     public void ProcessRequest(HttpContext context)
     {
@@ -18,6 +18,10 @@ public class FormHandler : IHttpHandler
         StringBuilder sb = new StringBuilder();
         string doubleLine = Environment.NewLine + Environment.NewLine;
         string line = Environment.NewLine;
+        int first;
+        int second;
+        int result;
+        bool isValid;
 
         foreach (string key in keys)
         {
@@ -42,8 +46,13 @@ public class FormHandler : IHttpHandler
             }
         }
 
-        string errorMessage;
-        bool isSuccess = this.SendMessage(sb.ToString(), out errorMessage);
+        if(Int32.TryParse(context.Request.Form["first"], out first) &&
+            Int32.TryParse(context.Request.Form["second"], out second) &&
+            Int32.TryParse(context.Request.Form["result"], out result) &&
+            (first + second) == result) {
+            string errorMessage;
+            bool isSuccess = this.SendMessage(sb.ToString(), out errorMessage);
+        }
         HttpContext.Current.Response.Redirect("/");
     }
 
