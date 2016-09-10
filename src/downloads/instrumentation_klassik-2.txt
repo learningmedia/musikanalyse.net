@@ -1,0 +1,9 @@
+﻿---
+title: Instrumentationsübung zur klassischen Sinfonie (Beethoven)
+author: Ulrich Kaiser
+category: themen
+subCategory: instrumentation
+abstract: Arbeitsbogen zur Instrumentation des Anfangs der Sonate in C-Dur Op. 2, Nr. 3 von Ludwig v. Beethoven.
+thumbnail: /img/thumbnails/instrumentation_klassik-2.jpg
+link: /downloadfiles/instrumentation_klassik-2.pdf
+---

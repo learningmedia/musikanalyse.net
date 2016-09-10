@@ -109,6 +109,31 @@ layout: material.ejs
   </div>
   <% }); %>
 
+   <section class="margin-top-40">
+    <h2>Instrumentation</h2>
+    <ul>
+       <% collections.downloads.filter(function (downloadfile) { return downloadfile.category.indexOf('themen') > -1 && downloadfile.subCategory.indexOf('instrumentation') > -1; }).forEach(function (downloadfile) { %>
+      <li>
+        <a title="<%= downloadfile.abstract %>" data-toggle="<%= downloadfile.title %>"><%= downloadfile.title %></a>
+      </li>
+      <% }); %>
+    </ul>
+  </section>
+  <hr class="margin-top-20" />
+  <% collections.downloads.filter(function (downloadfile) { return downloadfile.category.indexOf('themen') > -1 && downloadfile.subCategory.indexOf('instrumentation') > -1; }).forEach(function (downloadfile) { %>
+  <div id="<%= downloadfile.title %>" class="line margin-top-bottom-20" style="border-bottom: 1px solid gray; padding-bottom: 20px; display: none;">
+    <div class="s-12 m-2 l-2 ">
+      <a href="<%= downloadfile.link %>"><img src="<%= downloadfile.thumbnail %>" class="shadow" /></a>
+    </div>
+    <div class="s-12 m-10 l-10">
+      <a data-toggle="<%= downloadfile.title %>" class="Material-closeLink"><img src="/img/cross.png"></a>
+      <h3 class="beforeSmalltext"><%= downloadfile.title %></h3>
+      <span class="smalltext">von <%= downloadfile.author %></span>
+      <p><%= downloadfile.abstract %></p>
+    </div>
+  </div>
+  <% }); %>
+
 </div>
 
 

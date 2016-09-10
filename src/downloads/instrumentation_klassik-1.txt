@@ -1,0 +1,9 @@
+﻿---
+title: Instrumentationsübung zur klassischen Sinfonie (Mozart)
+author: Ulrich Kaiser
+category: themen
+subCategory: instrumentation
+abstract: Arbeitsbogen zur Instrumentation des Anfangs der ›Pariser‹ Sinfonie KV 297 (Klavierauszug) von Wolfgang Amadé Mozart.
+thumbnail: /img/thumbnails/instrumentation_klassik-1.jpg
+link: /downloadfiles/instrumentation_klassik-1.pdf
+---
