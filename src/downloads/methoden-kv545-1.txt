@@ -2,7 +2,7 @@
 title: Methoden der musikalischen Analyse. Eine Einführung anhand der Sonate in C-Dur KV 545, 1. Satz, Exposition von Wolfgang Amadé Mozart
 author: Ulrich Kaiser
 category: themen
-subCategory: gattungen
+subCategory: methoden
 abstract: Die hier zusammengestellten Materialien zu Methoden der musikalischen Analyse sollen veranschaulichen helfen, dass es nicht ›die‹ richtige Analyse gibt, sondern dass verschiedene, angemessene Sichtweisen auf Musik nebeneinander existieren können. Dabei stellen sich die Fragen, warum man überhaupt Musik mit Modellen analysiert und wenn man es tut, welche Modelle man dabei am besten verwenden sollte.
 thumbnail: /img/thumbnails/methoden_kv545-1-exposition.png
 link: /downloadfiles/methoden_kv545-1-exposition.pdf
