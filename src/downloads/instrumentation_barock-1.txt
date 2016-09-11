@@ -1,7 +1,7 @@
-﻿---
+---
 title: Instrumentationsübung zu Bachs Italienischem Konzert BWV 971
 author: Ulrich Kaiser
-category: themen
+category: aufgaben
 subCategory: instrumentation
 abstract: Arbeitsbogen zur Instrumentation des Anfangs des Italienischen Konzerts BWV 971 von Johann Sebastian Bach.
 thumbnail: /img/thumbnails/instrumentation_barock-1.jpg
