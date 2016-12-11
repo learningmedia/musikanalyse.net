@@ -17,17 +17,45 @@ window.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  var copyrightNote = 'Zitatrecht nach § 51 S. 2 Nr. 1 UrhG\n\n' +
-             'Für das Angebot von musikanalyse.net gilt das Zitatrecht § 51 S. 2 Nr. 1 UrhG, weil die Beiträge ›wissenschaftliche Werke‹ sind, deren Inhalt der Vermittlung von Erkenntnissen dient bzw. bei denen das Vorliegen eines Erkenntnisbezuges gegeben ist. Nach der 2008 gültigen Neufassung des § 51 erstreckt sich das Zitatrecht auch auf Multimediawerke.\n\n' +
-             'Für geschützte Werke befindet sich der Quellennachweis direkt unter dem Beispiel. Die Verbreitung der Dateien dieser Beispiele ist verboten. Rechte und Pflichten der unter Creative-Common publizierten Dateien sind der jeweiligen Lizenz zu entnehmen. Soundbeispiele ohne Quellenangabe werden unter CC0 (= Public Domain) zur Verfügung gestellt.\n\n' +
-             'Wenn Sie das Verbot der Verbreitung urheberrechtsgeschützter Dateien zur Kenntnis genommen haben und sich damit einverstanden erklären, klicken Sie bitte "ok". ' +
-             'Wenn Sie den Dialog mit "ok" beenden, werden für diese Besuch der Website keine weiteren Dialoge mehr angezeigt.'
+  var copyrightNote = [
+    'Zitatrecht nach § 51 S. 2 Nr. 1 UrhG',
+    'Für das Angebot von musikanalyse.net gilt das Zitatrecht § 51 S. 2 Nr. 1 UrhG, weil die Beiträge ›wissenschaftliche Werke‹ sind, deren Inhalt der Vermittlung von Erkenntnissen dient bzw. bei denen das Vorliegen eines Erkenntnisbezuges gegeben ist. Nach der 2008 gültigen Neufassung des § 51 erstreckt sich das Zitatrecht auch auf Multimediawerke.',
+    'Für geschützte Werke befindet sich der Quellennachweis direkt unter dem Beispiel. Die Verbreitung der Dateien dieser Beispiele ist verboten. Rechte und Pflichten der unter Creative-Common publizierten Dateien sind der jeweiligen Lizenz zu entnehmen. Soundbeispiele ohne Quellenangabe werden unter CC0 (= Public Domain) zur Verfügung gestellt.',
+    'Wenn Sie das Verbot der Verbreitung urheberrechtsgeschützter Dateien zur Kenntnis genommen haben und sich damit einverstanden erklären, klicken Sie bitte "ok".',
+    'Videos von Youtube werden als Deep-Link angeboten und sind laut BGH-Urteil vom 17.07.2003 legal.',
+    'Wenn Sie den Dialog mit "ok" beenden, werden für diesen Besuch der Website keine weiteren Dialoge mehr angezeigt.'
+  ].join('\n\n');
 
-  jQuery('audio').on('mouseenter', function() { 
+  jQuery('audio').on('mouseenter', function() {
     var accepted = Cookies.get('copyright-note-accepted');
     if (accepted === 'true') return;
-    accepted = confirm(copyrightNote); 
+    accepted = confirm(copyrightNote);
     Cookies.set('copyright-note-accepted', accepted ? 'true' : 'false');
+  });
+
+  var firstValue = Math.floor((Math.random() * 10) + 1);
+  var secondValue = Math.floor((Math.random() * 10) + 1);
+  var first = window.document.getElementById('first');
+  var second = window.document.getElementById('second');
+  first.value = firstValue;
+  second.value = secondValue;
+  $('#contact-form').on('submit', function (event) {
+    $('#contact-button').attr('disabled', true);
+    $.ajax({
+      url: this.action,
+      type: 'POST',
+      dataType: 'text',
+      data: $(this).serialize(),
+      success: function (data) {
+        $('#contact-button').text('Vielen Dank!')
+        alert(data.responseText || data);
+      },
+      error: function (error) {
+        alert(error.responseText || error.statusText || error.message || error);
+        $('#contact-button').attr('disabled', null);
+      }
+    });
+    event.preventDefault();
   });
 
 });

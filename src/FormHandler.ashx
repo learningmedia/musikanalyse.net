@@ -47,7 +47,7 @@ public class FormHandler : IHttpHandler
         }
 
         bool isSuccess = false;
-        
+
         if(Int32.TryParse(context.Request.Form["first"], out first) &&
             Int32.TryParse(context.Request.Form["second"], out second) &&
             Int32.TryParse(context.Request.Form["result"], out result) &&
@@ -55,7 +55,11 @@ public class FormHandler : IHttpHandler
             string errorMessage;
             isSuccess = this.SendMessage(sb.ToString(), out errorMessage);
         }
+
+        context.Response.ContentType = "text/plain";
+        context.Response.Charset = Encoding.UTF8.WebName;
         context.Response.Write(isSuccess ? success : error);
+        context.Response.Flush();
         context.Response.End();
     }
 

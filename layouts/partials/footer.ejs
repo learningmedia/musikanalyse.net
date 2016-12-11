@@ -105,29 +105,3 @@
     </div>
   </section>
 </footer>
-
-<script>
-    var firstValue = Math.floor((Math.random() * 10) + 1);
-    var secondValue = Math.floor((Math.random() * 10) + 1);
-    var first = window.document.getElementById('first');
-    var second = window.document.getElementById('second');
-    first.value = firstValue;
-    second.value = secondValue;
-    $('#contact-form').on('submit', function (event) {
-      $('#contact-button').attr('disabled', true);
-      $.ajax({
-        url: this.action,
-        type: 'POST',
-        dataType: 'text',
-        data: $(this).serialize(),
-        success: function (data) {
-          alert(data.responseText || data);
-        },
-        error: function (error) {
-          alert(error.responseText || error.statusText || error.message || error);
-          $('#contact-button').attr('disabled', null);
-        }
-      });
-      event.preventDefault();
-    });
-</script>
