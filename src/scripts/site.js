@@ -46,9 +46,9 @@ window.addEventListener('DOMContentLoaded', function () {
       type: 'POST',
       dataType: 'text',
       data: $(this).serialize(),
-      success: function (data) {
+      success: function (text) {
         $('#contact-button').text('Vielen Dank!')
-        alert(data.responseText || data);
+        alert(text);
       },
       error: function (error) {
         alert(error.responseText || error.statusText || error.message || error);
