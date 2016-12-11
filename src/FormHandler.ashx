@@ -10,7 +10,7 @@ using System.Web;
 public class FormHandler : IHttpHandler
 {
     const string success = "Vielen Dank für Ihre Anfrage, Sie erhalten von uns in Kürze eine Antwort.";
-    const string error = "Der Versand der Anfrage ist leider fehlgeschlagen. Bitte informieren Sie den Administrator über die im <a href='/impressum'>Impressum</a> angegeben Kontakt-Möglichkeiten.";
+    const string error = "Der Versand der Anfrage ist leider fehlgeschlagen. Bitte informieren Sie den Administrator über die im Impressum angegeben Kontakt-Möglichkeiten.";
 
     public void ProcessRequest(HttpContext context)
     {
@@ -52,8 +52,9 @@ public class FormHandler : IHttpHandler
             (first + second) == result) {
             string errorMessage;
             bool isSuccess = this.SendMessage(sb.ToString(), out errorMessage);
+            context.Response.Write(isSuccess ? success : error);
+            context.Response.End();
         }
-        HttpContext.Current.Response.Redirect("/");
     }
 
     public bool IsReusable
