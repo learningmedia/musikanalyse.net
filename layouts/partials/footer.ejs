@@ -57,7 +57,7 @@
         <!-- Collumn 3 -->
         <div class="s-12 m-12 l-4">
           <h4 class="text-uppercase text-strong">Senden Sie uns eine Nachricht</h4>
-          <form class="customform text-white" method="POST" action="/formHandler.ashx" >
+          <form id="contact-form" class="customform text-white" method="POST" action="/formHandler.ashx" >
             <div class="line">
               <div class="margin">
                 <div class="s-12 m-12 l-6">
@@ -74,7 +74,7 @@
             <div class="s-12">
               <input type="text" name="first" id="first" style="width:10%;">&nbsp;+&nbsp;<input type="text" name="second" id="second" style="width:10%;">&nbsp;=&nbsp;<input type="text" name="result" id="result" style="width:30%;" placeholder="Ergebnis?">
             </div>
-            <div class="s-12"><button class="submit-form button background-primary border-radius text-white" type="submit">Absenden</button></div>
+            <div class="s-12"><button id="contact-button" class="submit-form button background-primary border-radius text-white" type="submit">Absenden</button></div>
           </form>
         </div>
       </div>
@@ -109,8 +109,25 @@
 <script>
     var firstValue = Math.floor((Math.random() * 10) + 1);
     var secondValue = Math.floor((Math.random() * 10) + 1);
-    var first = window.document.getElementById("first");
-    var second = window.document.getElementById("second");
+    var first = window.document.getElementById('first');
+    var second = window.document.getElementById('second');
     first.value = firstValue;
     second.value = secondValue;
+    $('#contact-form').on('submit', function (event) {
+      $('#contact-button').attr('disabled', true);
+      $.ajax({
+        url: this.action,
+        type: 'POST',
+        dataType: 'text',
+        data: $(this).serialize(),
+        success: function (data) {
+          alert(data.responseText || data);
+        },
+        error: function (error) {
+          alert(error.responseText || error.statusText || error.message || error);
+          $('#contact-button').attr('disabled', null);
+        }
+      });
+      event.preventDefault();
+    });
 </script>
