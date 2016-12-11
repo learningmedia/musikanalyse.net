@@ -56,8 +56,9 @@ public class FormHandler : IHttpHandler
             isSuccess = this.SendMessage(sb.ToString(), out errorMessage);
         }
 
-        context.Response.ContentType = "text/plain";
+        context.Response.ContentEncoding = Encoding.UTF8;
         context.Response.Charset = Encoding.UTF8.WebName;
+        context.Response.ContentType = "text/plain";
         context.Response.Write(isSuccess ? success : error);
         context.Response.Flush();
         context.Response.End();
