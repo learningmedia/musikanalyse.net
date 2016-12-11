@@ -46,15 +46,17 @@ public class FormHandler : IHttpHandler
             }
         }
 
+        bool isSuccess = false;
+        
         if(Int32.TryParse(context.Request.Form["first"], out first) &&
             Int32.TryParse(context.Request.Form["second"], out second) &&
             Int32.TryParse(context.Request.Form["result"], out result) &&
             (first + second) == result) {
             string errorMessage;
-            bool isSuccess = this.SendMessage(sb.ToString(), out errorMessage);
-            context.Response.Write(isSuccess ? success : error);
-            context.Response.End();
+            isSuccess = this.SendMessage(sb.ToString(), out errorMessage);
         }
+        context.Response.Write(isSuccess ? success : error);
+        context.Response.End();
     }
 
     public bool IsReusable
