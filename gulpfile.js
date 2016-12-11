@@ -28,8 +28,10 @@ gulp.task('build', function (done) {
         'scripts/owl.carousel.js',
         'scripts/accordion.js',
         'scripts/template-scripts.js',
+        'js-cookie/src/js.cookie.js',
         'scripts/site.js'
       ],
+      searchPaths: ['node_modules', 'src'],
       output: 'scripts/main.js'
     }))
     .use(concat({

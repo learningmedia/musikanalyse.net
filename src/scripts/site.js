@@ -17,4 +17,16 @@ window.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  var copyrightNote = 'Zitatrecht nach § 51 S. 2 Nr. 1 UrhG\n\n' +
+             'Für das Angebot von musikanalyse.net gilt das Zitatrecht § 51 S. 2 Nr. 1 UrhG, weil die Beiträge ›wissenschaftliche Werke‹ sind, deren Inhalt der Vermittlung von Erkenntnissen dient bzw. bei denen das Vorliegen eines Erkenntnisbezuges gegeben ist. Nach der 2008 gültigen Neufassung des § 51 erstreckt sich das Zitatrecht auch auf Multimediawerke.\n\n' +
+             'Für geschützte Werke befindet sich der Quellennachweis direkt unter dem Beispiel. Die Verbreitung der Dateien dieser Beispiele ist verboten. Rechte und Pflichten der unter Creative-Common publizierten Dateien sind der jeweiligen Lizenz zu entnehmen. Soundbeispiele ohne Quellenangabe werden unter CC0 (= Public Domain) zur Verfügung gestellt.\n\n' +
+             'Wenn Sie das Verbot der Verbreitung urheberrechtsgeschützter Dateien zur Kenntnis genommen haben und sich damit einverstanden erklären, klicken Sie bitte "ok".'
+
+  jQuery('audio').on('mouseenter', function() { 
+    var accepted = Cookies.get('copyright-note-accepted');
+    if (accepted === 'true') return;
+    accepted = confirm(copyrightNote); 
+    Cookies.set('copyright-note-accepted', accepted ? 'true' : 'false');
+  });
+
 });
