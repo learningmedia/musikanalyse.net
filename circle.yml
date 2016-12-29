@@ -1,0 +1,21 @@
+machine:
+  node:
+    version: 4.2.6
+
+checkout:
+  post:
+    - git submodule sync
+    - git submodule update --init
+
+compile:
+  override:
+    - npm run build
+
+test:
+  override: []
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - ./deploy.sh
