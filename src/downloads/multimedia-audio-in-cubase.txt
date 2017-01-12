@@ -1,0 +1,9 @@
+---
+title: Informationen zu Audio und Audiospuren (in Samplern)
+author: Ulrich Kaiser
+category: themen
+subCategory: multimedia
+abstract: Grundlegende Informationen zu Audio und Audiospuren (in Samplern).
+thumbnail: /img/thumbnails/multimedia-audio-in-cubase.jpg
+link: /downloadfiles/Multimedia-Audio-in-Cubase.pdf
+---
