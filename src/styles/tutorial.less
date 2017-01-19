@@ -93,13 +93,20 @@
   hr {
     margin: 20px 0;
   }
+
   img {
-    .center;
     margin: 30px auto 20px auto;
   }
   img.shadow {
     box-shadow: 6px 6px 6px #a6a6a6;
   }
+  img.image-off, a.imageChange:hover .image-on {
+    display: none !important;
+  }
+  img.image-on, a.imageChange:hover .image-off {
+   display: block !important;
+  }
+  
   audio {
     .center;
     .margin-top-bottom-20;
