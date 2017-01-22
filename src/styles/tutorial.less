@@ -36,21 +36,30 @@
   .copyright > p {
     line-height: 1.2em;
   }
+
   .citation {
-    width: 90%;
+    width: 80%;
     font-size: 90%;
     font-style: italic;
     margin-right: auto;
     margin-left: auto;
     text-align: left;
+    padding: 10px 20px !important;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    background-color: #E6E6E6;
+    border: 1px solid silver;
+    color: black;
   }
   .reference {
     width: 100%;
-    padding-right: 15%;
-    margin-top: -15px !important;
+    padding-right: 10%;
+    margin-top: 10px !important;
     text-align: right;
     .smalltext;
   }
+
   .board {
     width: 80%;
     margin-left: auto;
@@ -139,12 +148,23 @@
       opacity: 1 !important;
     }
   }
+
+  @media(max-width:770px) {
+    #Duale-Begriffe {
+        display: none !important;
+    }
+  }
+
   @media(max-width:480px) {
     .maxWith75 {
       width: 100% !important;
     }
     .maxWith50 {
       width: 100% !important;
+    }
+
+    #Duale-Begriffe {
+      display: none;
     }
   }
 }
