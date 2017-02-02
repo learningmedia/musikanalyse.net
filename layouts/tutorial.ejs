@@ -17,7 +17,6 @@
 
 
   <body class="size-960">
-
     <!-- HEADER -->
     <% include partials/header %>
 
@@ -41,7 +40,13 @@
             <h1 class="Tutorial-title"><%= title %></h1>
             <p class="Tutorial-author">von <%= author %></p>
             <%- contents %>
-          </article>
+            <div class="copyright">
+              <p>
+                <small>Erstellung des Beitrags: <span id="creationDate""><%= date %></span><br>
+                Letzte Änderung des Beitrags am <span id="lastChangesDate"><%= modified %></span></small>
+              </p>
+            </div>      
+          </article>    
         </div>
       </div>
     </main>

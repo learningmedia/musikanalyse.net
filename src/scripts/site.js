@@ -56,4 +56,18 @@ window.addEventListener('DOMContentLoaded', function () {
     event.preventDefault();
   });
 
+  var creationDateElem = document.getElementById("creationDate");
+  var lastChangeDateElem = document.getElementById("lastChangesDate");
+  var creationDate = new Date(creationDateElem.innerHTML);
+  var lastChangesDate = new Date(lastChangeDateElem.innerHTML);
+  var monthNames = ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"];
+  creationDateElem.innerHTML = formatDate(creationDate);
+  lastChangeDateElem.innerHTML = formatDate(lastChangesDate);
+  function formatDate(date) {
+    var day = date.getDate();
+    var monthIndex = date.getMonth();
+    var year = date.getFullYear();
+    return day + ". " + monthNames[monthIndex] + " " + year;
+  }
+  
 });
