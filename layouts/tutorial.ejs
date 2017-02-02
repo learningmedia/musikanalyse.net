@@ -1,3 +1,7 @@
+<%
+  const monthNames = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
+  const formatDate = date => `${date.getDate()}. ${monthNames[date.getMonth()]} ${date.getFullYear()}`;
+%>
 <!DOCTYPE html>
 <html lang="de-DE">
   <head>
@@ -42,8 +46,8 @@
             <%- contents %>
             <div class="copyright">
               <p>
-                <small>Erstellung des Beitrags: <span id="creationDate""><%= date %></span><br>
-                Letzte Änderung des Beitrags am <span id="lastChangesDate"><%= modified %></span></small>
+                <small>Erstellung des Beitrags: <%= formatDate(date) %><br>
+                Letzte Änderung des Beitrags am <%= formatDate(modified) %></small>
               </p>
             </div>      
           </article>    
