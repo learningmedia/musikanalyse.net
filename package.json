@@ -4,6 +4,7 @@
   "description": "Profiwissen zur Musiktheorie und zur musikalischen Analyse",
   "scripts": {
     "start": "gulp",
+    "test": "gulp test",
     "build": "gulp build"
   },
   "author": "Andreas Helmberger and Ulrich Kaiser",

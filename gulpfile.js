@@ -15,7 +15,8 @@ gulp.task('build', function (done) {
   metalsmith(__dirname)
     .use(collections({
       tutorials: { pattern: 'tutorials/**', sortBy: 'title' },
-      downloads: { pattern: 'downloads/**', sortBy: 'title' } }))
+      downloads: { pattern: 'downloads/**', sortBy: 'title' }
+    }))
     .use(permalinks({ pattern: ':slug', relative: false }))
     .use(layouts({ engine: 'ejs' }))
     .use(inPlace({ engine: 'ejs', pattern: '**/*.html' }))
@@ -56,5 +57,7 @@ gulp.task('watch', ['build'], function () {
   browserSync({ server: { baseDir: 'build' }, port: 3000 });
   gulp.watch(['src/**', 'layouts/**'], ['reload']);
 });
+
+gulp.task('test', function () {});
 
 gulp.task('default', ['watch']);
