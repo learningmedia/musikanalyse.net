@@ -1,0 +1,9 @@
+---
+title: Übersichtstafel - Die Anfänge des 'Neuen Deutschen Liedes' (NDL)
+author: Ulrich Kaiser
+category: themen
+subCategory: popRock
+abstract: Übersichtstafel über die ersten Bands des 'Neuen Deutschen Liedes' (z.B. Thomas Natschinski und seine Gruppe, Ton Steine Scherben, Udo Lindenberg u.a.)
+thumbnail: /img/thumbnails/Tafel-AnfaengeDesNDL.jpg
+link: /downloadfiles/Tafel-AnfaengeDesNDL.pdf
+---

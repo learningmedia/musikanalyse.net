@@ -1,0 +1,9 @@
+---
+title: Übersichtstafel - Die Anfänge des Punk
+author: Ulrich Kaiser
+category: themen
+subCategory: popRock
+abstract: Übersichtstafel über die ersten Bands des Punk (z.B. The Ramones, Sex Pistols, Big Balls and the great white Idiot u.a.)
+thumbnail: /img/thumbnails/Tafel-AnfaengeDesPunk.jpg
+link: /downloadfiles/Tafel-AnfaengeDesPunk.pdf
+---

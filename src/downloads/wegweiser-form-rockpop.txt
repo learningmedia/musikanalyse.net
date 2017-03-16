@@ -2,7 +2,7 @@
 title: Wegweiser zur Formanalyse von Rock- und Pomusik
 author: Ulrich Kaiser
 category: themen
-subCategory: form
+subCategory: form, popRock
 abstract: In dieser Übersicht finden Sie einen Wegweiser zur Analyse von Standardformen der Rock- und Popmusik.
 thumbnail: /img/thumbnails/wegweiser-form-rockpop.jpg
 link: /downloadfiles/wegweiser-form-rockpop.pdf
