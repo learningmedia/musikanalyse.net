@@ -46,6 +46,8 @@ gulp.task('build', function (done) {
     }))
     .use(static({ src: 'node_modules/video.js/dist', dest: 'vendor/video.js' }))
     .use(static({ src: 'node_modules/videojs-youtube/dist', dest: 'vendor/videojs-youtube' }))
+    .use(static({ src: 'scripts/jquery.klavier.js', dest: 'scripts/jquery.klavier.js' }))
+    .use(static({ src: 'scripts/gbExercises.js', dest: 'scripts/gbExercises.js' }))
     .build(done);
 });
 

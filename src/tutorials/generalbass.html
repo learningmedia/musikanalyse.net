@@ -1,0 +1,157 @@
+---
+title: Der Generalbass. Eine interaktive Einführung.
+author: Ulrich Kaiser
+date: 2017-05-13
+modified: 2017-05-13
+layout: tutorial.ejs
+category: Methoden
+abstract: In diesem erhalten Sie eine interaktive Einführung in das Thema Generabass. Hier können Sie die Akkordgriffe kennen lernen und üben, die sich hinter den gebräuchlichen Ziffern verbergen.  
+---
+<script src='/scripts/jquery.klavier.js'></script>
+<script src='/scripts/gbExercises.js'></script>
+<style type="text/css">
+	.pianoContainer {
+    height: 250px;
+    width: 750px;
+    margin-bottom: 20px;
+	}
+	.klavier-key {
+	    border: 1px solid black;
+	}
+	.klavier-black-key {
+	    background-color:  black;
+	}
+	.klavier-white-key {
+	    background-color:  white;
+	}
+	.klavier-white-key.klavier-selected-key {
+		background-color:  #CCCCCC;
+	}
+	.klavier-black-key.klavier-selected-key {
+		background-color:  #CCCCCC;
+	}
+	.createExercise {
+		margin-bottom: 6px;
+	}
+	.attantionText {
+		color: red; 
+		font-weight: bold; 
+		display: none
+	}
+	.showContainer {
+	}
+	.hide {
+		display: none;
+		height: 270px;
+	}
+	.exerciseImage { }
+</style>
+
+<p>
+	Unter Generalbass versteht man eine im 17. und 18. Jahrhundert verbreitete und heute noch in der Musikausbildung gepflegte Praxis. In dieser Praxis zeigen Generalbassziffern an, welche Töne zu einem gegebenen Basston, der mit der linken Hand gespielt wird, mit der rechten Hand auf einem Klavier zu greifen sind. Eine Schwierigkeit beim Generalbassspielen liegt darin, dass die Stimmführung zwischen den Griffen vom Generalbassspieler improvisiert werden muss. Obwohl also das Ausrechnen der Ziffern für ein gutes Generalbassspiel keineswegs ausreichend ist, muss die Bedeutung der Ziffern bekannt sein, um die entsprechenden Akkorde greifen zu können. In dem folgenden Tutorial werden die gebäuchlichsten Ziffern erkläutert und geübt.           
+</p>
+<p>
+	Wenn unter einem Basston keine Ziffer steht, müssen die Ziffern <i>3</i> und <i>5</i> gedacht bzw. Terz und Quinte zu dem gegebenen Basston gespielt werden.
+</p>
+
+
+<button style="margin-bottom: 20px;" onclick="toggleExerciseContainer(this, 1, 2, lastIds)">Übung einblenden...</button>
+<div id="exercise-1-container">
+	<div class="hide" id="exercise-1a-container">
+		<span>Was greifen Sie mit der rechten Hand?</span>
+		<image class="exerciseImage" src="/content/tutorials/generalbass/GbAufgabe_0001.png">
+		<div class="pianoContainer" id="exercise-1a"></div>
+		<button onclick="showValue('1a')">Überprüfen</button>
+		<button style="margin-left: 6px;" onclick="resetExercise('exercise-1a', true)">Zurücksetzen</button>
+		<button style="margin-left: 6px;" onclick="createNewExercise('exercise-1a', 1, 2, lastIds)">Neu</button>
+		<span class="attantionText" id="exercise-1a-unplayable">Dieser Griff galt als unspielbar und wurde nicht verwendet (größer als eine Oktave).</span>
+		<span class="attantionText" id="exercise-1a-doubleLeadingTone">In diesem Griff wird leider ein Leitton verdoppelt.</span>	
+	</div>
+	<div class="hide" id="exercise-1b-container">
+		<span>Was greifen Sie mit der rechten Hand?</span>
+		<image class="exerciseImage" src="/content/tutorials/generalbass/GbAufgabe_0002.png">
+		<div class="pianoContainer" id="exercise-1b"></div>
+		<button onclick="showValue('1b')">Überprüfen</button>
+		<button style="margin-left: 6px;" onclick="resetExercise('exercise-1b', true)">Zurücksetzen</button>
+		<button style="margin-left: 6px;" onclick="createNewExercise('exercise-1b', 1, 2, lastIds)">Neu</button>
+		<span class="attantionText" id="exercise-1b-unplayable">Dieser Griff galt als unspielbar und wurde nicht verwendet (größer als eine Oktave).</span>
+		<span class="attantionText" id="exercise-1b-doubleLeadingTone">In diesem Griff wird leider ein Leitton verdoppelt.</span>	
+	</div>
+</div>
+
+<p>
+	<p>Bitte haben Sie einen Moment Geduld, hier entsteht in Kürze ein neues Tutorial...</p>
+	<img src="http://animationswelt.de/images/baustelle/_baustelle-018.gif" />
+</p>
+
+<script> 
+	function toggleExerciseContainer(elem, exerciseNumber, numberOfExercises, lastIds) {
+	  // Hier wird der Text des Button geändert
+	  var $button = $(elem);
+	  $button.toggleClass('showContainer');
+    if($button.hasClass('showContainer')) { 
+    	$button.text('Übung ausblenden...');  
+    	createRandomExercise(exerciseNumber, numberOfExercises, lastIds);
+    } else { 
+    	$button.text('Übung einblenden...');
+    	for (var i = 0; i < lastIds.length; i++) {
+    		destroyPiano(lastIds[i])
+    		$('#' + lastIds[i] + "-container").hide();
+    	}
+    	lastIds = [];
+    }
+	}
+
+	function createRandomExercise(exerciseNumber, numberOfExercises, lastIds) {	
+		var currentId = createPianoId(exerciseNumber, numberOfExercises);
+		$("#" + currentId + '-container').toggle(); //blendet den Container der Aufgabe ein
+		lastIds.push(currentId); //speichert die aktuelle Aufgabe
+		createPiano(currentId);
+	}
+
+	function createNewExercise(id, exerciseNumber, numberOfExercises, lastIds) {	
+		var tempId = createNewPianoId(exerciseNumber, numberOfExercises, lastIds);	
+		resetExercise(lastIds[lastIds.length - 1], false);
+		$('#' + id + "-container").hide();
+		createPiano(tempId);
+		$('#' + tempId + "-container").show();
+		lastIds.push(tempId);
+	}
+
+	function resetExercise(id, create) {
+		$('#' + id + "-unplayable").hide();
+		$('#' + id + "-doubleLeadingTone").hide();
+		destroyPiano(id);
+		if (create) createPiano(id);
+	}
+
+	//Helpers
+	function createPianoId(exerciseNumber, numberOfExercises) {
+		var randomNumber = Math.floor((Math.random() * numberOfExercises) + 1);
+		return "exercise-" + exerciseNumber + getLetter(randomNumber - 1); //z.B. "exercise-1a"
+	}
+
+	function createNewPianoId(exerciseNumber, numberOfExercises, lastIds) {
+		var temId = "";
+		do {
+			temId = createPianoId(exerciseNumber, numberOfExercises);
+		} while(lastIds[lastIds.length - 1] === temId);
+		return temId;
+	}
+
+  function createPiano(id) {
+  	$("#" + id).klavier({ startKey: 60, endKey: 95 });
+		$("#" + id).klavier('setSelectedValues', [gbExercises[id].startKey]);	
+  }
+
+  function destroyPiano(id) {
+  	var $klavierId = $('#' + id);
+  	if (!$klavierId) return;
+  	$klavierId.klavier('destroy');
+  }
+
+  function getLetter(number) {
+  	var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i"];
+  	return letters[number];
+  }
+</script>
