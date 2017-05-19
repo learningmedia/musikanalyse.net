@@ -1,12 +1,13 @@
-var images = ["0_c.png", "1_cis.png", "1_des.png", "2_d.png", "3_dis.png", "3_es.png", "4_e.png", "5_f.png", "6_fis.png", "7_g.png", "8_as.png", "8_gis.png", "9_a.png", "10_b.png", "11_h.png"]
-// var images = ["62_d.png"]
-var gbChiffres = ["0.png", "3-5.png", "3-6.png", "4.png", "4-6.png", "3-4-6.png"]
+var images, gbChiffres;
 var exercises = [];
 
 class Exercise {
 
-  constructor(startMidiValue, startKey, keyName, chiffre, folderName, noteImagePath, chiffreImagePath) {
-  	// collections to avaluate the right ps set values 
+  constructor(id, startMidiValue, startKey, keyName, chiffre, folderName, noteImagePath, chiffreImagePath) {
+
+  	this.id = id;
+  	this.options = options;
+  	// collections to evaluate the right ps set values 
   	this.specialSharpCases = ['cis', 'dis', 'fis', 'gis', 'ais'];
   	this.specialFlatCases = ['des', 'es', 'ges', 'as', 'b'];
 		this.majorThird = ['c', 'f', 'g'];
@@ -16,14 +17,13 @@ class Exercise {
 		this.folderName = folderName; 
 		this.noteImagePath = this.folderName + noteImagePath;
     this.chiffreImagePath = this.folderName + chiffreImagePath;
-    this.startKey = this.startMidiValue + startKey; // the first part of note image name
+    this.startKey = this.startMidiValue + startKey; // the name of the note (first part of note image name)
     this.keyName = keyName; // the second part of note image name
     this.chiffre = this._createArray(chiffre); // an array from the gbChiffre image name
     this.pcSetValues = this._createSpecialArray(chiffre);    
     this.rightValues = [];
     this.wrongValues = [];
   }
-
   _createArray(value) {
 		var parts = value.split('-');
 		var arr = [];
@@ -33,8 +33,7 @@ class Exercise {
 		}
 		return arr;
 	}
-
-_createSpecialArray(value) {
+	_createSpecialArray(value) {
 	  if (this.specialSharpCases.indexOf(this.keyName) >= 0) {
 	  	this.chiffreImagePath = this.folderName + "0.png";
 	  	this.chiffre = [3, 6];
@@ -47,6 +46,7 @@ _createSpecialArray(value) {
 		} 
 		switch(value) {
 			case '3-5':
+			case '5':
 			case '0':
 				if(this.keyName === 'h' || this.keyName === 'e') return [0 + this.startKey, 3 + this.startKey, 8 + this.startKey];
 				return this.majorThird.indexOf(this.keyName) >= 0 ? 
@@ -81,35 +81,39 @@ _createSpecialArray(value) {
 	}
 }
 
-function createExercise(id) {
+function createExercise(id, options) {
+	hideAttentions();
+	images = options.images;
+	gbChiffres = options.gbChiffres;
+
 	var randomImageNumber = Math.floor((Math.random() * images.length));
 	var noteImageName = images[randomImageNumber];
 
-	var imageNameParts = noteImageName.split("_");
-	var startKey = parseInt(imageNameParts[0], 10);
-	var keyName = imageNameParts[1].replace('.png', '');
+	var noteImageNameParts = noteImageName.split("_");
+	var startKey = parseInt(noteImageNameParts[0], 10);
+	var keyName = noteImageNameParts[1].replace('.png', '');
 
 	var randomGbNumber = Math.floor((Math.random() * gbChiffres.length));
 	var chiffreImageName = gbChiffres[randomGbNumber];
 	var chiffre = chiffreImageName.replace('.png', '');
 
-	var exercise = new Exercise(60, startKey, keyName, chiffre, "/content/tutorials/generalbass/", noteImageName, chiffreImageName);
+	var exercise = new Exercise(id, options.startMidiValue, startKey, keyName, chiffre, options.folderName, noteImageName, chiffreImageName);
 
 	createPiano(id, exercise.startKey)
 	exercises.push(exercise);
+	resetColors();
 	return exercise;
 }
 
 function createPiano(id, startKey) {
-	$('#exercise').klavier({ startKey: 60, endKey: 95, onSelectedValuesChanged: onValueChanged });
-  $('#exercise').klavier('setSelectedValues', startKey + '');
+	$(id).klavier({ startKey: 60, endKey: 95 });
+  $(id).klavier('setSelectedValues', startKey + '');
 }
-var onValueChanged = function() { }
 
 // evaluate the right keys
 function showValue() {
 	var exercise = exercises[exercises.length -1];
-	var selectedKeys = $('#exercise').klavier('getSelectedValues');
+	var selectedKeys = $(exercise.id).klavier('getSelectedValues');
 
 	// delete the bass tone from the selection
 	var startKey = exercise.startKey;
@@ -135,6 +139,9 @@ function showValue() {
 
 	// check the playability
 	checkPlayability(selectedKeys);
+
+	// check for doubled leading tones
+	checkFordoubledLeadingTones(selectedKeys)
 }
 
 // detect right keys in diffrent octave spaces
@@ -148,14 +155,14 @@ function evaluateValue(value, pcSetValues, startkey) {
 // set right an wrong colors on the JQuery-Piano
 function setColors(exercise) {
 	exercise.wrongValues.forEach(function(element, index, array) {
-		var searchId = "exercise > .klavier-key[data-value=" + element + "]";
-		var wrongKey = $('#' + searchId);
+		var searchId = " > .klavier-key[data-value=" + element + "]";
+		var wrongKey = $(exercise.id + searchId);
 		wrongKey.removeClass('klavier-selected-key');
 		wrongKey.addClass('wrongColor');
 	});
 	exercise.rightValues.forEach(function(element, index, array) {
-		var searchId = "exercise > .klavier-key[data-value=" + element + "]";
-		var rightKey = $('#' + searchId);
+		var searchId = " > .klavier-key[data-value=" + element + "]";
+		var rightKey = $(exercise.id + searchId);
 		rightKey.removeClass('klavier-selected-key');
 		rightKey.addClass('rightColor');
 	});
@@ -165,15 +172,21 @@ function setColors(exercise) {
 function resetColors() {
 	$('.wrongColor').removeClass('wrongColor');
 	$('.rightColor').removeClass('rightColor');
+	hideAttentions()
+}
+
+function hideAttentions() {
+	$('#exercise-doubleLeadingTone').hide();
+	$('#exercise-unplayable').hide();
 }
 
 // check the playability of sets
-function checkPlayability(selectedValues) {
-	if (selectedValues.length < 2) return;
-	var first = selectedValues[0];
-	var last = selectedValues[selectedValues.length - 1];
+function checkPlayability(selectedKeys) {
+	if (selectedKeys.length < 2) return;
+	var first = selectedKeys[0];
+	var last = selectedKeys[selectedKeys.length - 1];
 	var result = last - first;
-	var unplayableId = "#exercise-unplayable";
+	var unplayableId = '#exercise-unplayable';
 	if (result > 12) { 
 		$(unplayableId).show();
 	} else {
@@ -182,20 +195,31 @@ function checkPlayability(selectedValues) {
 }
 
 // Check the playability of sets
-function checkFordoubledLeadingTones(selectedValues) {
-	var exercise = gbExercises[id];
+function checkFordoubledLeadingTones(selectedKeys) {
+	var exercise = exercises[exercises.length - 1];
+	var sharpNote = exercise.specialSharpCases.indexOf(exercise.keyName) >= 0;
+	var isDominant = checkDominant(exercise);
+	if(!sharpNote && !isDominant) return;
+	var hasdoubledSharpNote = false;
+	var hValue = exercise.startMidiValue + 11;
 	var counter = 0;
-	for (var i = 0; i < selectedValues.length; i++) {
-		var tempValue = selectedValues[i];
+	for (var i = 0; i < selectedKeys.length; i++) {
+		var tempValue = selectedKeys[i];
 		while (tempValue >= exercise.startKey) {			
-			if(tempValue === exercise.leadingTone) counter++;	
-			tempValue = tempValue - 12;
+			if(tempValue === hValue) counter++;
+			if(tempValue === exercise.startKey) hasdoubledSharpNote = true;
+			tempValue = tempValue - 12;			
 		}
 	}
-	var leadingToneId = "#exercise-doubleLeadingTone";
-	if (counter > 1) { 
+	hasdoubledSharpNote = (hasdoubledSharpNote || (isDominant && counter > 1))
+	var leadingToneId = '#exercise-doubleLeadingTone';
+	if (hasdoubledSharpNote) { 
 		$(leadingToneId).show();
 	} else {
 		$(leadingToneId).hide();
 	}
+}
+
+function checkDominant(exercise) {
+	return false;
 }

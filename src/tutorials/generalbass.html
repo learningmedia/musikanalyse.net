@@ -43,7 +43,6 @@ abstract: In diesem erhalten Sie eine interaktive Einführung in das Thema Gener
 	}
 	.containerIsVisible {
 	}
-
 	.wrongColor {
 		background-color: #FF3C3C;
 	}
@@ -55,6 +54,10 @@ abstract: In diesem erhalten Sie eine interaktive Einführung in das Thema Gener
 	}
 	.flexItem {
 		margin-right: 10px;
+	}
+	.isDisabled {
+	    opacity: .1;
+	    pointer-events: none;
 	}
 </style>
 
@@ -73,29 +76,37 @@ abstract: In diesem erhalten Sie eine interaktive Einführung in das Thema Gener
 		<image style="margin: 0;" id="imageNote">
 		<image style="margin: 0; margin-left: 2px;" id="imageChiffre">
 	</div>		
-	<div class="pianoContainer" id="exercise"></div>
-	<div class="flexContainer">
-		<button class="flexItem" style="border: 2px solid green;" onclick="show()">Überprüfen</button>
-		<button class="flexItem" onclick="reset()">Zurücksetzen</button>
-		<button class="flexItem" onclick="createNewExercise()">Neue Übung</button>
-	</div>
-	<div class="attantionText" >
-		<p id="exercise-unplayable">Dieser Griff galt als unspielbar und wurde nicht verwendet (größer als eine Oktave).</p>
-		<p id="exercise-doubleLeadingTone">In diesem Griff wird leider ein Leitton verdoppelt.</p>		
+	<div>
+		<div class="pianoContainer" id="exercise"></div>
+		<div class="flexContainer">
+			<button class="flexItem" style="border: 2px solid green;" onclick="show()">Überprüfen</button>
+			<button class="flexItem" onclick="reset()">Zurücksetzen</button>
+			<button class="flexItem" onclick="createNewExercise()">Neue Übung</button>
+		</div>
+		<div class="attantionText" >
+			<p id="exercise-unplayable">Dieser Griff galt als unspielbar und wurde nicht verwendet (größer als eine Oktave).</p>
+			<p id="exercise-doubleLeadingTone">In diesem Griff wird leider ein Leitton verdoppelt.</p>		
+		</div>
 	</div>
 </div>
 
 <script> 
-
+	var options = {
+		'startMidiValue': 60,
+		'folderName': '/content/tutorials/generalbass/',
+		'images': ['0_c.png', '1_cis.png', '1_des.png', '2_d.png', '3_dis.png', '3_es.png', '4_e.png', '5_f.png', '6_fis.png', '7_g.png', '8_as.png', '8_gis.png', '9_a.png', '10_b.png', '11_h.png'],
+		'gbChiffres': ["0.png", "3-5.png", "3-6.png", "4.png", "4-6.png", "3-4-6.png"]
+	} 
+	
 	$(document).ready(function() {
-		var exercise = createExercise('#exercise');
+		var exercise = createExercise('#exercise', options);
   	$("#imageNote").attr("src", exercise.noteImagePath);
   	$("#imageChiffre").attr("src", exercise.chiffreImagePath);
 	});
 
 	function createNewExercise() {
 		$('#exercise').klavier('destroy');
-		var exercise = createExercise('#exercise');
+		var exercise = createExercise('#exercise', options);
   	$("#imageNote").attr("src", exercise.noteImagePath);
   	$("#imageChiffre").attr("src", exercise.chiffreImagePath);
 	}
