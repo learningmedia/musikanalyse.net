@@ -106,17 +106,18 @@ function createPiano(id, startKey) {
 }
 var onValueChanged = function() { }
 
+// evaluate the right keys
 function showValue() {
 	var exercise = exercises[exercises.length -1];
 	var selectedKeys = $('#exercise').klavier('getSelectedValues');
 
-	//Hier wird der vorgegebene Ton aus den Selektion entfernt
+	// delete the bass tone from the selection
 	var startKey = exercise.startKey;
 	var pcSetValues = exercise.pcSetValues;
 	var index = selectedKeys.indexOf(startKey);
 	selectedKeys.splice(index, 1);
 
-	//Hier werden die falschen Tasten ermittelt und die Farben gesetzt
+	// detect right and wrong keys
 	var rightValues = [];
 	var wrongValues = [];
 	for (var i = 0; i < selectedKeys.length; i++) {
@@ -129,18 +130,22 @@ function showValue() {
 	exercise.rightValues = rightValues;
 	exercise.wrongValues = wrongValues;
 
-	//Hier werden die Farben gesetzt
+	// set colors fpr right and wrong keys
 	setColors(exercise);
+
+	// check the playability
+	checkPlayability(selectedKeys);
 }
 
+// detect right keys in diffrent octave spaces
 function evaluateValue(value, pcSetValues, startkey) {
-	//Hilfsfunktion zum Ermitteln der richtigen Tasten in den verschiedenen Oktavlagen
 	while ((value - 12) >= startkey) {				
 		value = value - 12;
 	}
 	return pcSetValues.indexOf(value) >= 0;
 }
 
+// set right an wrong colors on the JQuery-Piano
 function setColors(exercise) {
 	exercise.wrongValues.forEach(function(element, index, array) {
 		var searchId = "exercise > .klavier-key[data-value=" + element + "]";
@@ -156,23 +161,28 @@ function setColors(exercise) {
 	});
 }
 
+// reset right and false colors
 function resetColors() {
 	$('.wrongColor').removeClass('wrongColor');
 	$('.rightColor').removeClass('rightColor');
 }
 
-function checkPlayability(id, rightValues, selectedValues) {
-	if (rightValues.length < 2) return;
-	var first = rightValues[0];
-	var last = rightValues[rightValues.length - 1];
+// check the playability of sets
+function checkPlayability(selectedValues) {
+	if (selectedValues.length < 2) return;
+	var first = selectedValues[0];
+	var last = selectedValues[selectedValues.length - 1];
 	var result = last - first;
-	var unplayableId = id + "-unplayable";
+	var unplayableId = "#exercise-unplayable";
 	if (result > 12) { 
-		$('#' + unplayableId).show();
+		$(unplayableId).show();
 	} else {
-		$('#' + unplayableId).hide();
+		$(unplayableId).hide();
 	}
+}
 
+// Check the playability of sets
+function checkFordoubledLeadingTones(selectedValues) {
 	var exercise = gbExercises[id];
 	var counter = 0;
 	for (var i = 0; i < selectedValues.length; i++) {
@@ -182,10 +192,10 @@ function checkPlayability(id, rightValues, selectedValues) {
 			tempValue = tempValue - 12;
 		}
 	}
-	var leadingToneId = id + "-doubleLeadingTone";
+	var leadingToneId = "#exercise-doubleLeadingTone";
 	if (counter > 1) { 
-		$('#' + leadingToneId).show();
+		$(leadingToneId).show();
 	} else {
-		$('#' + leadingToneId + "-doubleLeadingTone").hide();
+		$(leadingToneId).hide();
 	}
 }

@@ -33,10 +33,13 @@ abstract: In diesem erhalten Sie eine interaktive Einführung in das Thema Gener
 	.createExercise {
 		margin-bottom: 6px;
 	}
-	.attantionText {
+	.attantionText { 
+		margin-top: 20px;
+	}
+	#exercise-unplayable, #exercise-doubleLeadingTone {
 		color: red; 
-		font-weight: bold; 
-		display: none
+		font-weight: bold;
+		display: none;
 	}
 	.containerIsVisible {
 	}
@@ -75,9 +78,11 @@ abstract: In diesem erhalten Sie eine interaktive Einführung in das Thema Gener
 		<button class="flexItem" style="border: 2px solid green;" onclick="show()">Überprüfen</button>
 		<button class="flexItem" onclick="reset()">Zurücksetzen</button>
 		<button class="flexItem" onclick="createNewExercise()">Neue Übung</button>
-	</div>	
-	<span class="attantionText" id="exercise-unplayable">Dieser Griff galt als unspielbar und wurde nicht verwendet (größer als eine Oktave).</span>
-	<span class="attantionText" id="exercise-doubleLeadingTone">In diesem Griff wird leider ein Leitton verdoppelt.</span>	
+	</div>
+	<div class="attantionText" >
+		<p id="exercise-unplayable">Dieser Griff galt als unspielbar und wurde nicht verwendet (größer als eine Oktave).</p>
+		<p id="exercise-doubleLeadingTone">In diesem Griff wird leider ein Leitton verdoppelt.</p>		
+	</div>
 </div>
 
 <script> 
