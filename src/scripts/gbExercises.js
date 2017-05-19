@@ -1,30 +1,67 @@
-var images = ["60_c.png", "61_cis.png", "61_des.png", "62_d.png", "63_dis.png", "63_es.png", "64_64.png", "65_f.png", "66_fis.png", "66_ges.png", "67_g.png", "68_as.png", "68_gis.png", "69_a.png", "70_ais.png", "70_b.png", "71_h.png"]
-var gbChiffres = ["4_0-5-7.png", "6_0-3-8.png"]
+var images = ["60_c.png", "61_cis.png", "61_des.png", "62_d.png", "63_dis.png", "63_es.png", "64_e.png", "65_f.png", "66_fis.png", "66_ges.png", "67_g.png", "68_as.png", "68_gis.png", "69_a.png", "70_ais.png", "70_b.png", "71_h.png"]
+// var images = ["62_d.png"]
+var gbChiffres = ["6_0-3-8.png", "4_0-5-7.png"]
 var exercises = [];
 
 class Exercise {
 
   constructor(startKey, keyName, chiffre, chiffreValues, noteImagePath, chiffreImagePath) {
-    this.startKey = startKey;
-    this.keyName = keyName;
-    this.chiffre = chiffre;
-    this.chiffreValues = chiffreValues;
-    this.originalValues = this._getOriginalValues();
+    this.startKey = startKey; // the first part of note image name 
+    this.keyName = keyName; // the second part of note image name
+    this.chiffre = this._createArray(chiffre); // the first part of the gbChiffre image name 
+    this.chiffreValues = this._createArray(chiffreValues); // the second part the gbChiffre image name 
+    this.manipulatedChiffreValues = [];
     this.noteImagePath = noteImagePath;
-    this.chiffreImagePath = chiffreImagePath
+    this.chiffreImagePath = chiffreImagePath;
     this.rightValues = [];
-    this.wrongValues = [];
+    this.wrongValues = []; 
+    this._getManipulatedChiffreValues();
   }
 
-  _getOriginalValues() {
-    var keys = [];
-    keys.push(this.startKey);
-    for (var i = 0; i < this.chiffreValues.length; i++) {
-    if(this.chiffreValues[i] == 0) continue;
-    keys.push(this.startKey + this.chiffreValues[i])
-    }
-    return keys;
+  _getManipulatedChiffreValues() {
+    this.manipulatedChiffreValues.push(this.startKey);   
+    // set the right value for every item in the manipulatedChiffreValues collection
+		for (var i = 0; i < this.chiffreValues.length; i++) {
+		  if(this.chiffreValues[i] === 0) continue;		  
+		  if (this.chiffre.indexOf(6) != -1 && this.chiffre.length === 1) { // Sextakkorde
+		  	this._getTheRightSixtAccordValues(this.chiffreValues[i]); 
+		  } // hier noch else id einfügen
+		  else {
+		  	this.manipulatedChiffreValues.push(this.startKey + this.chiffreValues[i]);
+		  }
+	  }
   }
+
+	_getTheRightSixtAccordValues(value) {
+		var manipulatedValue = value;
+		switch(this.keyName) {
+		  	case 'c':
+		  	case 'es':
+		  	case 'des':
+		  	case 'f':
+		  	case 'ges':
+		  	case 'g':
+		  	case 'as':
+		  	case 'b':
+		  		manipulatedValue = value + 1;
+		  		break;
+		  	case 'd':
+		  		if (value === 8) manipulatedValue = value + 1;
+		  		break;
+		  	default:
+		  }
+		  this.manipulatedChiffreValues.push(this.startKey + manipulatedValue);
+	}
+
+  _createArray(value){
+	var parts = value.split('-');
+	var arr = [];
+	for (var i = 0; i < parts.length; i++) {
+		var part = parts[i];
+		arr.push(parseInt(part, 10));
+	}
+	return arr;
+	}
 }
 
 function createExercise(id) {
@@ -42,11 +79,7 @@ function createExercise(id) {
 	var chiffre = chiffreParts[0];
 	var chiffreValues = chiffreParts[1].replace('.png', '');
 
-	var exercise = new Exercise(startKey, keyName, 
-		createArray(chiffre), 
-		createArray(chiffreValues), 
-		folderName + noteImageName, 
-		folderName + chiffreImageName);
+	var exercise = new Exercise(startKey, keyName, chiffre, chiffreValues, folderName + noteImageName, folderName + chiffreImageName);
 
 	createPiano(id, exercise.startKey)
 	exercises.push(exercise);
@@ -57,20 +90,7 @@ function createPiano(id, startKey) {
 	$('#exercise').klavier({ startKey: 60, endKey: 95, onSelectedValuesChanged: onValueChanged });
   $('#exercise').klavier('setSelectedValues', startKey + '');
 }
-
-function createArray(value){
-	var parts = value.split('-');
-	var arr = [];
-	for (var i = 0; i < parts.length; i++) {
-		var part = parts[i];
-		arr.push(parseInt(part, 10));
-	}
-	return arr;
-}
-
-var onValueChanged = function() {
-
-}
+var onValueChanged = function() { }
 
 function showValue() {
 	var exercise = exercises[exercises.length -1];
@@ -78,7 +98,7 @@ function showValue() {
 
 	//Hier wird der vorgegebene Ton aus den Selektion entfernt
 	var startKey = exercise.startKey;
-	var originValues = exercise.originalValues;
+	var manipulatedChiffreValues = exercise.manipulatedChiffreValues;
 	var index = selectedKeys.indexOf(startKey);
 	selectedKeys.splice(index, 1);
 
@@ -86,8 +106,8 @@ function showValue() {
 	var rightValues = [];
 	var wrongValues = [];
 	for (var i = 0; i < selectedKeys.length; i++) {
-		if(evaluateValue(selectedKeys[i], originValues, startKey)){
-			rightValues.push(selectedKeys[i]);			
+		if(evaluateValue(selectedKeys[i], manipulatedChiffreValues, startKey)){
+			rightValues.push(selectedKeys[i]);
 		} else {
 			wrongValues.push(selectedKeys[i]);
 		}
@@ -99,12 +119,12 @@ function showValue() {
 	setColors(exercise);
 }
 
-function evaluateValue(value, originValues, startkey) {
+function evaluateValue(value, manipulatedChiffreValues, startkey) {
 	//Hilfsfunktion zum Ermitteln der richtigen Tasten in den verschiedenen Oktavlagen
 	while ((value - 12) >= startkey) {				
 		value = value - 12;
 	}
-	return originValues.indexOf(value) >= 0;
+	return manipulatedChiffreValues.indexOf(value) >= 0;
 }
 
 function setColors(exercise) {
