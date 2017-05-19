@@ -1,71 +1,87 @@
-var images = ["60_c.png", "61_cis.png", "61_des.png", "62_d.png", "63_dis.png", "63_es.png", "64_e.png", "65_f.png", "66_fis.png", "66_ges.png", "67_g.png", "68_as.png", "68_gis.png", "69_a.png", "70_ais.png", "70_b.png", "71_h.png"]
+var images = ["0_c.png", "1_cis.png", "1_des.png", "2_d.png", "3_dis.png", "3_es.png", "4_e.png", "5_f.png", "6_fis.png", "7_g.png", "8_as.png", "8_gis.png", "9_a.png", "10_b.png", "11_h.png"]
 // var images = ["62_d.png"]
-var gbChiffres = ["6_0-3-8.png", "4_0-5-7.png"]
+var gbChiffres = ["0.png", "3-5.png", "3-6.png", "4.png", "4-6.png", "3-4-6.png"]
 var exercises = [];
 
 class Exercise {
 
-  constructor(startKey, keyName, chiffre, chiffreValues, noteImagePath, chiffreImagePath) {
-    this.startKey = startKey; // the first part of note image name 
+  constructor(startMidiValue, startKey, keyName, chiffre, folderName, noteImagePath, chiffreImagePath) {
+  	// collections to avaluate the right ps set values 
+  	this.specialSharpCases = ['cis', 'dis', 'fis', 'gis', 'ais'];
+  	this.specialFlatCases = ['des', 'es', 'ges', 'as', 'b'];
+		this.majorThird = ['c', 'f', 'g'];
+		this.minorThird = ['d', 'e', 'a', 'h'];
+
+		this.startMidiValue = startMidiValue;
+		this.folderName = folderName; 
+		this.noteImagePath = this.folderName + noteImagePath;
+    this.chiffreImagePath = this.folderName + chiffreImagePath;
+    this.startKey = this.startMidiValue + startKey; // the first part of note image name
     this.keyName = keyName; // the second part of note image name
-    this.chiffre = this._createArray(chiffre); // the first part of the gbChiffre image name 
-    this.chiffreValues = this._createArray(chiffreValues); // the second part the gbChiffre image name 
-    this.manipulatedChiffreValues = [];
-    this.noteImagePath = noteImagePath;
-    this.chiffreImagePath = chiffreImagePath;
+    this.chiffre = this._createArray(chiffre); // an array from the gbChiffre image name
+    this.pcSetValues = this._createSpecialArray(chiffre);    
     this.rightValues = [];
-    this.wrongValues = []; 
-    this._getManipulatedChiffreValues();
+    this.wrongValues = [];
   }
 
-  _getManipulatedChiffreValues() {
-    this.manipulatedChiffreValues.push(this.startKey);   
-    // set the right value for every item in the manipulatedChiffreValues collection
-		for (var i = 0; i < this.chiffreValues.length; i++) {
-		  if(this.chiffreValues[i] === 0) continue;		  
-		  if (this.chiffre.indexOf(6) != -1 && this.chiffre.length === 1) { // Sextakkorde
-		  	this._getTheRightSixtAccordValues(this.chiffreValues[i]); 
-		  } // hier noch else id einfügen
-		  else {
-		  	this.manipulatedChiffreValues.push(this.startKey + this.chiffreValues[i]);
-		  }
+  _createArray(value) {
+		var parts = value.split('-');
+		var arr = [];
+		for (var i = 0; i < parts.length; i++) {
+			var part = parts[i];
+			arr.push(parseInt(part, 10));
+		}
+		return arr;
+	}
+
+_createSpecialArray(value) {
+	  if (this.specialSharpCases.indexOf(this.keyName) >= 0) {
+	  	this.chiffreImagePath = this.folderName + "0.png";
+	  	this.chiffre = [3, 6];
+	  	return [0 + this.startKey, 3 + this.startKey, 8 + this.startKey];
 	  }
-  }
-
-	_getTheRightSixtAccordValues(value) {
-		var manipulatedValue = value;
-		switch(this.keyName) {
-		  	case 'c':
-		  	case 'es':
-		  	case 'des':
-		  	case 'f':
-		  	case 'ges':
-		  	case 'g':
-		  	case 'as':
-		  	case 'b':
-		  		manipulatedValue = value + 1;
-		  		break;
-		  	case 'd':
-		  		if (value === 8) manipulatedValue = value + 1;
-		  		break;
-		  	default:
-		  }
-		  this.manipulatedChiffreValues.push(this.startKey + manipulatedValue);
-	}
-
-  _createArray(value){
-	var parts = value.split('-');
-	var arr = [];
-	for (var i = 0; i < parts.length; i++) {
-		var part = parts[i];
-		arr.push(parseInt(part, 10));
-	}
-	return arr;
+		if (this.specialFlatCases.indexOf(this.keyName) >= 0) {
+			this.chiffreImagePath = this.folderName + "0.png";
+			this.chiffre = [3, 6];
+			return [0 + this.startKey, 4 + this.startKey, 9 + this.startKey];
+		} 
+		switch(value) {
+			case '3-5':
+			case '0':
+				if(this.keyName === 'h' || this.keyName === 'e') return [0 + this.startKey, 3 + this.startKey, 8 + this.startKey];
+				return this.majorThird.indexOf(this.keyName) >= 0 ? 
+				[0 + this.startKey, 4 + this.startKey, 7 + this.startKey] : 
+				[0 + this.startKey, 3 + this.startKey, 7 + this.startKey];
+			case '3-6':
+				if(this.keyName === 'd') return [0 + this.startKey, 3 + this.startKey, 9 + this.startKey];
+				return this.majorThird.indexOf(this.keyName) >= 0  ? 
+				[0 + this.startKey, 4 + this.startKey, 9 + this.startKey] : 
+				[0 + this.startKey, 3 + this.startKey, 8 + this.startKey];
+			case '4': 
+			case '4-5': 
+				return [0 + this.startKey, 5 + this.startKey, 7 + this.startKey];
+			case '4-6':
+				if(this.keyName === 'f' || this.keyName === 'b') 
+					return [0 + this.startKey, 6 + this.startKey, 9 + this.startKey];
+				if(this.keyName === 'd') return [0 + this.startKey, 5 + this.startKey, 9 + this.startKey];
+				return this.majorThird.indexOf(this.keyName) >= 0 ? 
+				[0 + this.startKey, 5 + this.startKey, 9 + this.startKey] : 
+				[0 + this.startKey, 5 + this.startKey, 8 + this.startKey];
+			case '3-4-6':
+				if(this.keyName === 'f' || this.keyName === 'b') 
+					return [0 + this.startKey, 4 + this.startKey, 6 + this.startKey, 9 + this.startKey];
+				if(this.keyName === 'd') return [0 + this.startKey, 3 + this.startKey, 5 + this.startKey, 9 + this.startKey];
+				return this.minorThird.indexOf(this.keyName) >= 0 ? 
+				[0 + this.startKey, 3 + this.startKey, 5 + this.startKey, 8 + this.startKey] : 
+				[0 + this.startKey, 4 + this.startKey, 5 + this.startKey, 9 + this.startKey];
+			default:
+				this._createArray(value);
+				break;
+		}
 	}
 }
 
 function createExercise(id) {
-	const folderName = "/content/tutorials/generalbass/";
 	var randomImageNumber = Math.floor((Math.random() * images.length));
 	var noteImageName = images[randomImageNumber];
 
@@ -75,11 +91,9 @@ function createExercise(id) {
 
 	var randomGbNumber = Math.floor((Math.random() * gbChiffres.length));
 	var chiffreImageName = gbChiffres[randomGbNumber];
-	var chiffreParts = chiffreImageName.split("_");
-	var chiffre = chiffreParts[0];
-	var chiffreValues = chiffreParts[1].replace('.png', '');
+	var chiffre = chiffreImageName.replace('.png', '');
 
-	var exercise = new Exercise(startKey, keyName, chiffre, chiffreValues, folderName + noteImageName, folderName + chiffreImageName);
+	var exercise = new Exercise(60, startKey, keyName, chiffre, "/content/tutorials/generalbass/", noteImageName, chiffreImageName);
 
 	createPiano(id, exercise.startKey)
 	exercises.push(exercise);
@@ -98,7 +112,7 @@ function showValue() {
 
 	//Hier wird der vorgegebene Ton aus den Selektion entfernt
 	var startKey = exercise.startKey;
-	var manipulatedChiffreValues = exercise.manipulatedChiffreValues;
+	var pcSetValues = exercise.pcSetValues;
 	var index = selectedKeys.indexOf(startKey);
 	selectedKeys.splice(index, 1);
 
@@ -106,7 +120,7 @@ function showValue() {
 	var rightValues = [];
 	var wrongValues = [];
 	for (var i = 0; i < selectedKeys.length; i++) {
-		if(evaluateValue(selectedKeys[i], manipulatedChiffreValues, startKey)){
+		if(evaluateValue(selectedKeys[i], pcSetValues, startKey)){
 			rightValues.push(selectedKeys[i]);
 		} else {
 			wrongValues.push(selectedKeys[i]);
@@ -119,12 +133,12 @@ function showValue() {
 	setColors(exercise);
 }
 
-function evaluateValue(value, manipulatedChiffreValues, startkey) {
+function evaluateValue(value, pcSetValues, startkey) {
 	//Hilfsfunktion zum Ermitteln der richtigen Tasten in den verschiedenen Oktavlagen
 	while ((value - 12) >= startkey) {				
 		value = value - 12;
 	}
-	return manipulatedChiffreValues.indexOf(value) >= 0;
+	return pcSetValues.indexOf(value) >= 0;
 }
 
 function setColors(exercise) {

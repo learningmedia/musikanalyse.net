@@ -65,8 +65,8 @@ abstract: In diesem erhalten Sie eine interaktive Einführung in das Thema Gener
 <h3>Üben Sie das Lesen der Generalbassziffern:</h3>
 
 <div style="height: 500px;" id="exercise-container">
-	<span>Welche Töne greifen Sie mit der rechten Hand?</span>
-	<div style="height: 100px; margin-left: 40%;">
+	<span>Welche Töne greifen Sie mit der rechten Hand in C-Dur oder a-Moll?</span>
+	<div style="height: 120px; margin-left: 40%; margin-top: 20px;">
 		<image style="margin: 0;" id="imageNote">
 		<image style="margin: 0; margin-left: 2px;" id="imageChiffre">
 	</div>		
@@ -84,8 +84,8 @@ abstract: In diesem erhalten Sie eine interaktive Einführung in das Thema Gener
 
 	$(document).ready(function() {
 		var exercise = createExercise('#exercise');
-    	$("#imageNote").attr("src", exercise.noteImagePath);
-    	$("#imageChiffre").attr("src", exercise.chiffreImagePath);
+  	$("#imageNote").attr("src", exercise.noteImagePath);
+  	$("#imageChiffre").attr("src", exercise.chiffreImagePath);
 	});
 
 	function createNewExercise() {
