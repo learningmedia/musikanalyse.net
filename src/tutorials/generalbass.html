@@ -9,69 +9,38 @@ abstract: In diesem erhalten Sie eine interaktive Einführung in das Thema Gener
 ---
 <script src='/scripts/jquery.klavier.js'></script>
 <script src='/scripts/gbExercises.js'></script>
-<style type="text/css">
-	.pianoContainer {
-    height: 250px;
-    width: 750px;
-    margin-bottom: 20px;
-	}
-	.klavier-key {
-	    border: 1px solid black;
-	}
-	.klavier-black-key {
-	    background-color:  black;
-	}
-	.klavier-white-key {
-	    background-color:  white;
-	}
-	.klavier-white-key.klavier-selected-key {
-		background-color:  #CCCCCC;
-	}
-	.klavier-black-key.klavier-selected-key {
-		background-color:  #CCCCCC;
-	}
-	.createExercise {
-		margin-bottom: 6px;
-	}
-	.attantionText { 
-		margin-top: 20px;
-	}
-	#exercise-unplayable, #exercise-doubleLeadingTone, #exercise-incomplete {
-		color: red; 
-		font-weight: bold;
-		display: none;
-	}
-	.containerIsVisible {
-	}
-	.wrongColor {
-		background-color: #FF3C3C;
-	}
-	.rightColor {
-		background-color: lightgreen;
-	}
-	.flexContainer {
-		display: flex; 
-	}
-	.flexItem {
-		margin-right: 10px;
-	}
-	.isDisabled {
-	    opacity: .1;
-	    pointer-events: none;
-	}
-</style>
+<link rel="stylesheet" href="/styles/generalbass.css">
 
 <p>
-	Unter Generalbass versteht man eine im 17. und 18. Jahrhundert verbreitete und heute noch in der Musikausbildung gepflegte Praxis. In dieser Praxis werden die Basstöne mit der linken Hand gespielt. Sogenannte Generalbassziffern unter (früher auch über) den Basstönen zeigen an, welche Töne dazu mit der linken Hand gespielt werden müssen. In diesem Tutorial werden die gebäuchlichsten Ziffern erkläutert. Anschließend können Sie ihr Wissen testen und das Umsetzen von Generalbassziffern interaktiv üben.           
+	Unter Generalbass versteht man eine im 17. und 18. Jahrhundert verbreitete und heute noch in der Musikausbildung gepflegte Praxis. In dieser Praxis werden die Basstöne mit der linken Hand gespielt, während sogenannte Generalbassziffern unter (früher auch über) den Basstönen anzeigen, welche Töne mit der linken Hand dazu gegriffen werden müssen. In diesem Tutorial lernen Sie die gebäuchlichsten Ziffern kennen. Anschließend können Sie ihr Wissen testen und das Umsetzen von Generalbassziffern interaktiv üben.           
 </p>
+<h4>Wann muss ein Dreiklang gespielt werden?</h4>
 <p>
-	Wenn unter einem Basston keine Ziffer steht, müssen die Ziffern <i>3</i> und <i>5</i> gedacht bzw. Terz und Quinte zu dem gegebenen Basston gespielt werden.
+	Wenn unter einem Basston keine Ziffer steht, müssen die Ziffern <i>3</i> und <i>5</i> gedacht bzw. Terz und Quinte zu dem gegebenen Basston gespielt werden. In dem nachstehenden Beispiel müssen also die Töne <i>e</i> und <i>g</i> ergänzt werden. Wenn sie den Leeraum unter den Notenbeispiel berühren, können Sie die zu ergänzenden Ziffern sehen): 
+</p>
+<div style="height: 120px;">
+		<img style="margin-left: auto; margin-right: auto; margin-bottom: 0;" src="/content/tutorials/generalbass/0_c.png">
+		<a class="imageChange">
+		  <img class="image-on" style="margin-top: 0;" src="/content/tutorials/generalbass/0.png" alt="Lamentobass chromatisiert" />
+		  <img class="image-off" style="margin-top: 0;" src="/content/tutorials/generalbass/3-5.png" alt="Lamentobass chromatisiert" />
+		</a>
+</div>	
+<p>
+	Ein einfacher Dreiklang wird auch gespielt, wenn unter einer Note ein <i>#</i>- oder <i>b</i>-Vorzeichen steht. Dieses Vorzeichen ohne eine weitere Ziffer bezieht sich immer auf die Terz des Dreiklangs. Dabei ist allerdings zu beachten, dass mit dem <i>#</i> nicht unbedingt eine Erhöhung und mit einem <i>b</i> nicht immer eine Erniedrigung gemeint ist. Die Vorzeichen sind eher in einem älteren Sinne zu verstehen und bezeichen einen mi-Charakter bzw. einen fa-Charakter des Terztones. Ein m-Charakter heißt dabei so viel wie »habe über dir einen Halbton und unter dir einen Ganzton« und ein fa-Charakter »habe unter dir einen Halbton und über dir einen Ganzton«. Modern gesprochen heißt das also nur, ein <i>#</i>-Vorzeichen gibt einen Dur-Dreiklang an, ein <i>b</i>-Vorzeichen kennzeichnet einen Molldreiklang. In dem folgenden Beipsiel müssten daher in der rechten Hand die Töne <i>f</i> und <i>a</i> gespielt werden:  
+</p>
+<div style="height: 120px;">
+		<img style="margin-left: auto; margin-right: auto; margin-bottom: 0;" src="/content/tutorials/generalbass/2_d.png">
+		<img style="margin-left: auto; margin-right: auto; margin-top: 0; margin-bottom: 0;" src="/content/tutorials/generalbass/flat.png">
+</div>
+<h4>Wann muss ein Sextakkord gespielt werden?</h4>
+<p>
+	Bitte haben Sie noch ein wenig Geduld, bald geht es hier weiter...
 </p>
 
-<h3>Üben Sie das Lesen der Generalbassziffern:</h3>
-
+<hr>
+<h3>Testen Sie Ihr Wissen</h3>
 <div style="height: 500px;" id="exercise-container">
-	<span>Welche Töne greifen Sie mit der rechten Hand in C-Dur oder a-Moll?</span>
+	<span>Welche Töne greifen Sie mit der rechten Hand in der Tonart C-Dur oder a-Moll?</span>
 	<div style="height: 120px; margin-left: 40%; margin-top: 20px;">
 		<image style="margin: 0;" id="imageNote">
 		<image style="margin: 0; margin-left: 2px;" id="imageChiffre">
@@ -84,18 +53,17 @@ abstract: In diesem erhalten Sie eine interaktive Einführung in das Thema Gener
 			<button id="new" class="flexItem" style="border: 1px solid green;" onclick="createNewExercise()">Neue Übung</button>
 		</div>
 		<div class="attantionText" >
-			<p id="exercise-unplayable">Dieser Griff galt als unspielbar und wurde nicht verwendet (größer als eine Oktave).</p>
-			<p id="exercise-incomplete">Diese Eingabe ist unvollständig (es fehlt midestens ein Ton).</p>
-			<p id="exercise-doubleLeadingTone">In diesem Griff wird leider ein Leitton verdoppelt.</p>		
+			<span style="display: block;" id="exercise-unplayable">Dieser Griff galt als unspielbar und wurde nicht verwendet (größer als eine Oktave).</span>
+			<span style="display: block;" id="exercise-incomplete">Diese Eingabe ist unvollständig (es fehlt midestens ein Ton).</span>
+			<span style="display: block;" id="exercise-doubleLeadingTone">In diesem Griff wird leider ein Leitton verdoppelt.</span>		
 		</div>
 	</div>
 </div>
-<hr>
-<div class="smalltext">
+<div class="smalltext" style="margin-top: 40px;">
 	<b>Anmerkungen:</b><br>
-	Mit der Schaltfläche <span style="font-size: 10px; font-weight: bold; border: 1px solid gray; padding: 1px; color: maroon; display: inline-block; background-color: lightgray;">Überprüfen</span> können Sie überprüfen, ob Ihre Eingabe richtig ist. Erscheint kein roter Text und sind nur grüne Tasten zu sehen, ist Ihre Eingabe korrekt, Gratulation! Die Schaltfläche <span style="font-size: 10px; font-weight: bold; border: 1px solid gray; padding: 1px; color: navy; display: inline-block; background-color: lightgray;">Zurücksetzen</span> wird ihre Eingabe zurückgesetzt, aber keine neue Übung erstellt. Dadurch können richtige Eingaben in anderen Lagen wiederholt und fehlerhafte Eingaben korrigiert werden. Mit der Schlatfläche <span style="font-size: 10px; font-weight: bold; border: 1px solid gray; padding: 1px; color: green; display: inline-block; background-color: lightgray;">Neue Übung</span> können Sie eine neue Übung erzeugen.
+	Mit der Schaltfläche <span class="textButton textButtonRed">Überprüfen</span> können Sie überprüfen, ob Ihre Eingabe richtig ist. Erscheint kein roter Text und sind nur grüne Tasten zu sehen, ist Ihre Eingabe korrekt, Gratulation! Die Schaltfläche <span class="textButton textButtonBlue">Zurücksetzen</span> wird ihre Eingabe zurückgesetzt, aber keine neue Übung erstellt. Dadurch können richtige Eingaben in anderen Lagen wiederholt und fehlerhafte Eingaben korrigiert werden. Mit der Schlatfläche <span class="textButton textButtonGreen">Neue Übung</span> können Sie eine neue Übung erzeugen.
 </div>
-
+<hr>
 <script> 
 	var options = {
 		'startMidiValue': 60,
