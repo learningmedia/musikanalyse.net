@@ -72,7 +72,7 @@ class Exercise {
 				if(this.keyName === 'h') { this._setDefaultValues(); return [0 + this.startKey, 3 + this.startKey, 8 + this.startKey]; }
 				return [0 + this.startKey, 5 + this.startKey, 7 + this.startKey];
 			case '4-6':
-				if(this.keyName === 'f' || this.keyName === 'b') 
+				if(this.keyName === 'f' || this.keyName === 'b')
 					return [0 + this.startKey, 6 + this.startKey, 9 + this.startKey];
 				if(this.keyName === 'd') return [0 + this.startKey, 5 + this.startKey, 9 + this.startKey];
 				return this.majorThird.indexOf(this.keyName) >= 0 ? 
@@ -98,7 +98,6 @@ class Exercise {
 				if(this.keyName === 'a') 
 					return [0 + this.startKey, 2 + this.startKey, 5 + this.startKey, 8 + this.startKey];
 			default:
-				this._createArray(value);
 				break;
 		}
 	}
@@ -161,6 +160,9 @@ function showValue() {
 	exercise.rightValues = rightValues;
 	exercise.wrongValues = wrongValues;
 
+	if (rightValues.length < exercise.pcSetValues.length - 1)
+			$('#exercise-incomplete').show();
+
 	// set colors fpr right and wrong keys
 	setColors(exercise);
 
@@ -169,6 +171,9 @@ function showValue() {
 
 	// check for doubled leading tones
 	checkFordoubledLeadingTones(selectedKeys)
+
+	setButtonsVisibility(false, true, true);
+
 }
 
 // detect right keys in diffrent octave spaces
@@ -199,12 +204,23 @@ function setColors(exercise) {
 function resetColors() {
 	$('.wrongColor').removeClass('wrongColor');
 	$('.rightColor').removeClass('rightColor');
-	hideAttentions()
+	hideAttentions();
 }
 
 function hideAttentions() {
 	$('#exercise-doubleLeadingTone').hide();
 	$('#exercise-unplayable').hide();
+	$('#exercise-incomplete').hide();	
+	setButtonsVisibility(true, true, true);
+}
+
+function setButtonsVisibility(buttonCheck, buttonReset, buttonNew) {
+	if (buttonCheck) $('#check').show();
+	else $('#check').hide();
+	if (buttonReset) $('#reset').show();
+	else $('#reset').hide();
+	if (buttonNew) $('#new').show();
+	else $('#new').hide();
 }
 
 // check the playability of sets
@@ -213,11 +229,10 @@ function checkPlayability(selectedKeys) {
 	var first = selectedKeys[0];
 	var last = selectedKeys[selectedKeys.length - 1];
 	var result = last - first;
-	var unplayableId = '#exercise-unplayable';
 	if (result > 12) { 
-		$(unplayableId).show();
+		$('#exercise-unplayable').show();
 	} else {
-		$(unplayableId).hide();
+		$('#exercise-unplayable').hide();
 	}
 }
 
