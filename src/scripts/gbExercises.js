@@ -9,10 +9,9 @@ class Exercise {
   	this.options = options;
   	// collections to evaluate the right ps set values 
   	this.specialSharpCases = ['cis', 'dis', 'fis', 'gis', 'ais'];
-  	this.specialFlatCases = ['des', 'es', 'ges', 'as', 'b'];
-		this.majorThird = ['c', 'f', 'g'];
+  	this.specialFlatCases = ['des', 'es', 'ges', 'as'];
+		this.majorThird = ['c', 'f', 'g', 'b'];
 		this.minorThird = ['d', 'e', 'a', 'h'];
-
 		this.startMidiValue = startMidiValue;
 		this.folderName = folderName; 
 		this.noteImagePath = this.folderName + noteImagePath;
@@ -26,32 +25,42 @@ class Exercise {
   }
   _createArray(value) {
 		var parts = value.split('-');
-		var arr = [];
+		var arr = []; 
 		for (var i = 0; i < parts.length; i++) {
-			var part = parts[i];
-			arr.push(parseInt(part, 10));
+			arr.push(parts[i]);
 		}
 		return arr;
 	}
 	_createSpecialArray(value) {
+		if ('sharp' === value) {
+			if (this.majorThird.indexOf(this.keyName) >= 0 || this.minorThird.indexOf(this.keyName) >= 0) return [0 + this.startKey, 4 + this.startKey, 7 + this.startKey]			
+			else { value = this._setDefaultValues(); }
+		}
+		if ('flat' === value) {
+			if ((this.majorThird.indexOf(this.keyName) >= 0 || this.minorThird.indexOf(this.keyName) >= 0) && this.keyName !== 'b' && this.keyName !== 'h')
+				return [0 + this.startKey, 3 + this.startKey, 7 + this.startKey]			
+			else { value = this._setDefaultValues(); }
+		}
 	  if (this.specialSharpCases.indexOf(this.keyName) >= 0) {
 	  	this.chiffreImagePath = this.folderName + "0.png";
-	  	this.chiffre = [3, 6];
+	  	this.chiffre = ['3', '6'];
 	  	return [0 + this.startKey, 3 + this.startKey, 8 + this.startKey];
 	  }
 		if (this.specialFlatCases.indexOf(this.keyName) >= 0) {
 			this.chiffreImagePath = this.folderName + "0.png";
-			this.chiffre = [3, 6];
+			this.chiffre = ['3', '6'];
 			return [0 + this.startKey, 4 + this.startKey, 9 + this.startKey];
 		} 
 		switch(value) {
-			case '3-5':
-			case '5':
 			case '0':
-				if(this.keyName === 'h' || this.keyName === 'e') return [0 + this.startKey, 3 + this.startKey, 8 + this.startKey];
-				return this.majorThird.indexOf(this.keyName) >= 0 ? 
+			case '5':
+			case '3-5':
+				if(this.keyName === 'h' || this.keyName === 'e') { this._setDefaultValues(); return [0 + this.startKey, 3 + this.startKey, 8 + this.startKey] };
+				if(this.keyName === 'b') { this._setDefaultValues(); return [0 + this.startKey, 4 + this.startKey, 9 + this.startKey]; }
+				return this.majorThird.indexOf(this.keyName) >= 0 ?
 				[0 + this.startKey, 4 + this.startKey, 7 + this.startKey] : 
 				[0 + this.startKey, 3 + this.startKey, 7 + this.startKey];
+			case '6':
 			case '3-6':
 				if(this.keyName === 'd') return [0 + this.startKey, 3 + this.startKey, 9 + this.startKey];
 				return this.majorThird.indexOf(this.keyName) >= 0  ? 
@@ -59,6 +68,8 @@ class Exercise {
 				[0 + this.startKey, 3 + this.startKey, 8 + this.startKey];
 			case '4': 
 			case '4-5': 
+				if(this.keyName === 'b') { this._setDefaultValues(); return [0 + this.startKey, 4 + this.startKey, 9 + this.startKey]; }
+				if(this.keyName === 'h') { this._setDefaultValues(); return [0 + this.startKey, 3 + this.startKey, 8 + this.startKey]; }
 				return [0 + this.startKey, 5 + this.startKey, 7 + this.startKey];
 			case '4-6':
 				if(this.keyName === 'f' || this.keyName === 'b') 
@@ -70,14 +81,30 @@ class Exercise {
 			case '3-4-6':
 				if(this.keyName === 'f' || this.keyName === 'b') 
 					return [0 + this.startKey, 4 + this.startKey, 6 + this.startKey, 9 + this.startKey];
-				if(this.keyName === 'd') return [0 + this.startKey, 3 + this.startKey, 5 + this.startKey, 9 + this.startKey];
+				if(this.keyName === 'd') 
+					return [0 + this.startKey, 3 + this.startKey, 5 + this.startKey, 9 + this.startKey];
 				return this.minorThird.indexOf(this.keyName) >= 0 ? 
 				[0 + this.startKey, 3 + this.startKey, 5 + this.startKey, 8 + this.startKey] : 
 				[0 + this.startKey, 4 + this.startKey, 5 + this.startKey, 9 + this.startKey];
+			case '2':
+			case '2-4':
+			case '2-4-6':
+				if(this.keyName === 'f' || this.keyName === 'b') 
+					return [0 + this.startKey, 2 + this.startKey, 6 + this.startKey, 9 + this.startKey];
+				if(this.keyName === 'c' || this.keyName === 'd' || this.keyName === 'g') 
+					return [0 + this.startKey, 2 + this.startKey, 5 + this.startKey, 9 + this.startKey];
+				if(this.keyName === 'e' || this.keyName === 'h') 
+					return [0 + this.startKey, 1 + this.startKey, 5 + this.startKey, 8 + this.startKey];
+				if(this.keyName === 'a') 
+					return [0 + this.startKey, 2 + this.startKey, 5 + this.startKey, 8 + this.startKey];
 			default:
 				this._createArray(value);
 				break;
 		}
+	}
+	_setDefaultValues() {
+		this.chiffreImagePath = this.folderName + "0.png";
+		return '0';
 	}
 }
 
