@@ -9,70 +9,47 @@ class Exercise {
 
   	this.id = id;
   	this.options = options;
-  	// helper collections to evaluate the right ps set values 
+  	// helper collections to evaluate the right ps set values
   	this.specialSharpCases = ['cis', 'dis', 'fis', 'gis', 'ais'];
   	this.specialFlatCases = ['des', 'es', 'ges', 'as'];
 		this.majorThird = ['c', 'f', 'g', 'b'];
 		this.minorThird = ['d', 'e', 'a', 'h'];
 		// class attributes
 		this.startMidiValue = startMidiValue;
-		this.folderName = folderName; 
+		this.folderName = folderName;
 		this.noteImagePath = this.folderName + noteImagePath;
     this.chiffreImagePath = this.folderName + chiffreImagePath;
     this.startKey = this.startMidiValue + startKey; // the name of the note (first part of note image name)
     this.keyName = keyName; // the second part of note image name
     this.chiffre = this._createArray(chiffre); // an array from the gbChiffre image name
-    this.pcSetValues = this._createSpecialArray(chiffre);    
+    this.pcSetValues = this._createSpecialArray(chiffre);
     this.rightValues = [];
     this.wrongValues = [];
   }
   _createArray(value) {
 		var parts = value.split('-');
-		var arr = []; 
+		var arr = [];
 		for (var i = 0; i < parts.length; i++) {
 			arr.push(parts[i]);
 		}
 		return arr;
 	}
 	_createSpecialArray(value) {
-		// cases only for # and b 
+		// cases only for # and b
 		if ('sharp' === value) {
-			if (this.majorThird.indexOf(this.keyName) >= 0 || this.minorThird.indexOf(this.keyName) >= 0) return this._setMidiValues([0, 4, 7]);		
+			if (this.majorThird.indexOf(this.keyName) >= 0 || this.minorThird.indexOf(this.keyName) >= 0) return this._setMidiValues([0, 4, 7]);
 			else { value = 0; this._setChiffreAndImagePath('0') }
 		}
 		if ('flat' === value) {
 			if ((this.majorThird.indexOf(this.keyName) >= 0 || this.minorThird.indexOf(this.keyName) >= 0) && this.keyName !== 'b' && this.keyName !== 'h')
-				return this._setMidiValues([0, 3, 7]);		
+				return this._setMidiValues([0, 3, 7]);
 			else { value = 0; this._setChiffreAndImagePath('0'); }
 		}
 		// cases for chromatic mi- od fa-character
 	  if (this.specialSharpCases.indexOf(this.keyName) >= 0) { this._setChiffreAndImagePath('0'); this.chiffre = ['3', '6']; return this._setMidiValues([0, 3, 8]); }
-		if (this.specialFlatCases.indexOf(this.keyName) >= 0) { this._setChiffreAndImagePath('0'); this.chiffre = ['3', '6']; return this._setMidiValues([0, 4, 9]); } 
+		if (this.specialFlatCases.indexOf(this.keyName) >= 0) { this._setChiffreAndImagePath('0'); this.chiffre = ['3', '6']; return this._setMidiValues([0, 4, 9]); }
 		// set b-flat values
-		if('b' === this.keyName) { 
-			switch(value) {
-			case '4-6':
-				return this._setMidiValues([0, 6, 9]);
-			case '2':
-			case '4sharp':
-			case '2-4':
-			case '2-4sharp':
-			case '2-4-6':
-			case '2-4sharp-6':
-				return this._setMidiValues([0, 2, 6, 9])
-			case '3-4-6':
-				return this._setMidiValues([0, 4, 6, 9]); 
-			case '2-5-7':
-				return this._setMidiValues([0, 2, 7, 11]); 
-			case '2-4-7':
-			case '2-4-7sharp':
-				this._setChiffreAndImagePath('2-4flat-7');
-				return this._setMidiValues([0, 2, 5, 11]);
-			default: 
-				this._setChiffreAndImagePath('0'); 
-				return this._setMidiValues([0, 4, 9]);
-			}
-		}
+		this._setBflatValues();
 		// set values for gb chiffres
 		switch(value) {
 			case '0':
@@ -84,7 +61,7 @@ class Exercise {
 			case '3-6':
 				if(this._isKeyNameInCollection(['d'])) return [0 + this.startKey, 3 + this.startKey, 9 + this.startKey];
 				return this.majorThird.indexOf(this.keyName) >= 0  ? this._setMidiValues([0, 4, 9]) : this._setMidiValues([0, 3, 8]);
-			case '4': 
+			case '4':
 			case '4-5':
 				if(this._isKeyNameInCollection(['h'])) { this._setChiffreAndImagePath('0'); return this._setMidiValues([0, 3, 8]); }
 				if(this._isKeyNameInCollection(['f'])) { this._setChiffreAndImagePath('4sharp'); return this._setMidiValues([0, 2, 6, 9]) }
@@ -104,7 +81,7 @@ class Exercise {
 			case '2-4sharp':
 			case '2-4sharp-6':
 				if(this._isKeyNameInCollection(['e', 'h'])) { this._setChiffreAndImagePath('2'); return this._setMidiValues([0, 1, 4, 8]); }
-				return this._setMidiValues([0, 2, 6, 9]);			
+				return this._setMidiValues([0, 2, 6, 9]);
 			case '3-4-6':
 				if(this._isKeyNameInCollection(['f'])) return this._setMidiValues([0, 4, 6, 9]);
 				if(this._isKeyNameInCollection(['d'])) return this._setMidiValues([0, 3, 5, 9]);
@@ -124,7 +101,7 @@ class Exercise {
 				return this._setMidiValues([0, 2, 5, 10]);
 			case '2-4-7sharp':
 				if (this._isKeyNameInCollection(['e'])) { this._setChiffreAndImagePath('2-4-7'); return this._setMidiValues([0, 1, 5, 10]); }
-				if (this._isKeyNameInCollection(['f'])) { this._setChiffreAndImagePath('3flat-4-7'); return this._setMidiValues([0, 1, 5, 10]); } 
+				if (this._isKeyNameInCollection(['f'])) { this._setChiffreAndImagePath('3flat-4-7'); return this._setMidiValues([0, 1, 5, 10]); }
 				return this._setMidiValues([0, 2, 5, 11]);
 			case '2-5-7':
 				if (this._isKeyNameInCollection(['e'])) return this._setMidiValues([0, 1, 7, 10]);
@@ -137,7 +114,30 @@ class Exercise {
 	}
 
 	_setBflatValues(value) {
-		
+		if('b' === this.keyName) {
+      switch(value) {
+      case '4-6':
+        return this._setMidiValues([0, 6, 9]);
+      case '2':
+      case '4sharp':
+      case '2-4':
+      case '2-4sharp':
+      case '2-4-6':
+      case '2-4sharp-6':
+        return this._setMidiValues([0, 2, 6, 9])
+      case '3-4-6':
+        return this._setMidiValues([0, 4, 6, 9]);
+      case '2-5-7':
+        return this._setMidiValues([0, 2, 7, 11]);
+      case '2-4-7':
+      case '2-4-7sharp':
+        this._setChiffreAndImagePath('2-4flat-7');
+        return this._setMidiValues([0, 2, 5, 11]);
+      default:
+        this._setChiffreAndImagePath('0');
+        return this._setMidiValues([0, 4, 9]);
+      }
+    }
 	}
 
 	_setMidiValues(values) {
@@ -150,7 +150,7 @@ class Exercise {
 
 	_isKeyNameInCollection(keyNameCollection) {
 		for (var i = 0; i < keyNameCollection.length; i++) {
-			if(keyNameCollection[i] === this.keyName) return true; 
+			if(keyNameCollection[i] === this.keyName) return true;
 		}
 		return false;
 	}
@@ -215,11 +215,11 @@ function showValue() {
 	exercise.rightValues = rightValues;
 	exercise.wrongValues = wrongValues;
 
-	if (exercise.wrongValues.length === 0 && isFirstTry) { 
+	if (exercise.wrongValues.length === 0 && isFirstTry) {
 		rightAnswers++;
 	}
 	var percent = Math.round((rightAnswers / exercises.length) * 100);
-	$('#statistic').text("Mit dem ersten Versuch haben Sie bisher " + percent + "% der Aufgaben richtig gelöst.");		
+	$('#statistic').text("Mit dem ersten Versuch haben Sie bisher " + percent + "% der Aufgaben richtig gelöst.");
 
 	if (rightValues.length < exercise.pcSetValues.length - 1)
 			$('#exercise-incomplete').show();
@@ -239,7 +239,7 @@ function showValue() {
 
 // detect right keys in diffrent octave spaces
 function evaluateValue(value, pcSetValues, startkey) {
-	while ((value - 12) >= startkey) {				
+	while ((value - 12) >= startkey) {
 		value = value - 12;
 	}
 	return pcSetValues.indexOf(value) >= 0;
@@ -272,7 +272,7 @@ function resetColors() {
 function hideAttentions() {
 	$('#exercise-doubleLeadingTone').hide();
 	$('#exercise-unplayable').hide();
-	$('#exercise-incomplete').hide();	
+	$('#exercise-incomplete').hide();
 	setButtonsVisibility(true, true, true);
 }
 
@@ -291,7 +291,7 @@ function checkPlayability(selectedKeys) {
 	var first = selectedKeys[0];
 	var last = selectedKeys[selectedKeys.length - 1];
 	var result = last - first;
-	if (result > 12) { 
+	if (result > 12) {
 		$('#exercise-unplayable').show();
 	} else {
 		$('#exercise-unplayable').hide();
@@ -309,15 +309,15 @@ function checkFordoubledLeadingTones(selectedKeys) {
 	var counter = 0;
 	for (var i = 0; i < selectedKeys.length; i++) {
 		var tempValue = selectedKeys[i];
-		while (tempValue >= exercise.startKey) {			
+		while (tempValue >= exercise.startKey) {
 			if(tempValue === hValue) counter++;
 			if(tempValue === exercise.startKey) hasdoubledSharpNote = true;
-			tempValue = tempValue - 12;			
+			tempValue = tempValue - 12;
 		}
 	}
 	hasdoubledSharpNote = (hasdoubledSharpNote || (isDominant && counter > 1))
 	var leadingToneId = '#exercise-doubleLeadingTone';
-	if (hasdoubledSharpNote) { 
+	if (hasdoubledSharpNote) {
 		$(leadingToneId).show();
 	} else {
 		$(leadingToneId).hide();
