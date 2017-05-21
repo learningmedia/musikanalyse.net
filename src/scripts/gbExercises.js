@@ -3,163 +3,163 @@ var exercises = [];
 var rightAnswers = 0;
 var isFirstTry;
 
-class Exercise {
-
-  constructor(id, startMidiValue, startKey, keyName, chiffre, folderName, noteImagePath, chiffreImagePath) {
-
-  	this.id = id;
-  	this.options = options;
-  	// helper collections to evaluate the right ps set values
-  	this.specialSharpCases = ['cis', 'dis', 'fis', 'gis', 'ais'];
-  	this.specialFlatCases = ['des', 'es', 'ges', 'as'];
-		this.majorThird = ['c', 'f', 'g', 'b'];
-		this.minorThird = ['d', 'e', 'a', 'h'];
-		// class attributes
-		this.startMidiValue = startMidiValue;
-		this.folderName = folderName;
-		this.noteImagePath = this.folderName + noteImagePath;
-    this.chiffreImagePath = this.folderName + chiffreImagePath;
-    this.startKey = this.startMidiValue + startKey; // the name of the note (first part of note image name)
-    this.keyName = keyName; // the second part of note image name
-    this.chiffre = this._createArray(chiffre); // an array from the gbChiffre image name
-    this.pcSetValues = this._createSpecialArray(chiffre);
-    this.rightValues = [];
-    this.wrongValues = [];
-  }
-  _createArray(value) {
-		var parts = value.split('-');
-		var arr = [];
-		for (var i = 0; i < parts.length; i++) {
-			arr.push(parts[i]);
-		}
-		return arr;
-	}
-	_createSpecialArray(value) {
-		// cases only for # and b
-		if ('sharp' === value) {
-			if (this.majorThird.indexOf(this.keyName) >= 0 || this.minorThird.indexOf(this.keyName) >= 0) return this._setMidiValues([0, 4, 7]);
-			else { value = 0; this._setChiffreAndImagePath('0') }
-		}
-		if ('flat' === value) {
-			if ((this.majorThird.indexOf(this.keyName) >= 0 || this.minorThird.indexOf(this.keyName) >= 0) && this.keyName !== 'b' && this.keyName !== 'h')
-				return this._setMidiValues([0, 3, 7]);
-			else { value = 0; this._setChiffreAndImagePath('0'); }
-		}
-		// cases for chromatic mi- od fa-character
-	  if (this.specialSharpCases.indexOf(this.keyName) >= 0) { this._setChiffreAndImagePath('0'); this.chiffre = ['3', '6']; return this._setMidiValues([0, 3, 8]); }
-		if (this.specialFlatCases.indexOf(this.keyName) >= 0) { this._setChiffreAndImagePath('0'); this.chiffre = ['3', '6']; return this._setMidiValues([0, 4, 9]); }
-		// set b-flat values
-		this._setBflatValues();
-		// set values for gb chiffres
-		switch(value) {
-			case '0':
-			case '5':
-			case '3-5':
-				if(this._isKeyNameInCollection(['h', 'e'])) { this._setChiffreAndImagePath('0'); return [0 + this.startKey, 3 + this.startKey, 8 + this.startKey] };
-				return this.majorThird.indexOf(this.keyName) >= 0 ? this._setMidiValues([0, 4, 7]) : this._setMidiValues([0, 3, 7]);
-			case '6':
-			case '3-6':
-				if(this._isKeyNameInCollection(['d'])) return [0 + this.startKey, 3 + this.startKey, 9 + this.startKey];
-				return this.majorThird.indexOf(this.keyName) >= 0  ? this._setMidiValues([0, 4, 9]) : this._setMidiValues([0, 3, 8]);
-			case '4':
-			case '4-5':
-				if(this._isKeyNameInCollection(['h'])) { this._setChiffreAndImagePath('0'); return this._setMidiValues([0, 3, 8]); }
-				if(this._isKeyNameInCollection(['f'])) { this._setChiffreAndImagePath('4sharp'); return this._setMidiValues([0, 2, 6, 9]) }
-				return this._setMidiValues([0, 5, 7]);
-			case '4-6':
-				if(this._isKeyNameInCollection(['f'])) return this._setMidiValues([0, 6, 9]);
-				if(this._isKeyNameInCollection(['d'])) return this._setMidiValues([0, 5, 9]);
-				return this.majorThird.indexOf(this.keyName) >= 0 ?  this._setMidiValues([0, 5, 9]) : this._setMidiValues([0, 5, 8]);
-			case '2':
-			case '2-4':
-			case '2-4-6':
-				if(this._isKeyNameInCollection(['c', 'd', 'g'])) return this._setMidiValues([0, 2, 5, 9]);
-				if(this._isKeyNameInCollection(['e', 'h'])) return this._setMidiValues([0, 1, 5, 8]);
-				if(this._isKeyNameInCollection(['f'])) return this._setMidiValues([0, 2, 6, 9]);
-				if(this._isKeyNameInCollection(['a'])) return this._setMidiValues([0, 2, 5, 8]);
-			case '4sharp':
-			case '2-4sharp':
-			case '2-4sharp-6':
-				if(this._isKeyNameInCollection(['e', 'h'])) { this._setChiffreAndImagePath('2'); return this._setMidiValues([0, 1, 4, 8]); }
-				return this._setMidiValues([0, 2, 6, 9]);
-			case '3-4-6':
-				if(this._isKeyNameInCollection(['f'])) return this._setMidiValues([0, 4, 6, 9]);
-				if(this._isKeyNameInCollection(['d'])) return this._setMidiValues([0, 3, 5, 9]);
-				return this.minorThird.indexOf(this.keyName) >= 0 ? this._setMidiValues([0, 3, 5, 8]) : this._setMidiValues([0, 4, 5, 9]);
-			case '6sharp':
-			case '3-6sharp':
-				if(this._isKeyNameInCollection(['c', 'g'])) { this._setChiffreAndImagePath('3-6'); return  this._setMidiValues([0, 4, 9]); }
-				if(this._isKeyNameInCollection(['d', 'f'])) { this._setChiffreAndImagePath('3-6'); return  this._setMidiValues([0, 3, 9]); }
-				return this._setMidiValues([0, 3, 9])
-			case '3-4-6sharp':
-				if(this._isKeyNameInCollection(['d'])) { this._setChiffreAndImagePath('3-4-6'); return this._setMidiValues([0, 3, 5, 9]);  }
-				if(this._isKeyNameInCollection(['f'])) { this._setChiffreAndImagePath('3-4-6'); return this._setMidiValues([0, 4, 6, 9]);  }
-				return this._setMidiValues([0, 3, 5, 9])
-			case '2-4-7':
-				if (this._isKeyNameInCollection(['e', 'h'])) return this._setMidiValues([0, 1, 5, 10]);
-				if (this._isKeyNameInCollection(['c', 'f'])) { this._setChiffreAndImagePath('3-6'); return this._setMidiValues([0, 4, 9]); }
-				return this._setMidiValues([0, 2, 5, 10]);
-			case '2-4-7sharp':
-				if (this._isKeyNameInCollection(['e'])) { this._setChiffreAndImagePath('2-4-7'); return this._setMidiValues([0, 1, 5, 10]); }
-				if (this._isKeyNameInCollection(['f'])) { this._setChiffreAndImagePath('3flat-4-7'); return this._setMidiValues([0, 1, 5, 10]); }
-				return this._setMidiValues([0, 2, 5, 11]);
-			case '2-5-7':
-				if (this._isKeyNameInCollection(['e'])) return this._setMidiValues([0, 1, 7, 10]);
-				if (this._isKeyNameInCollection(['h'])) return this._setMidiValues([0, 1, 6, 10]);
-				if (this._isKeyNameInCollection(['c', 'f'])) return this._setMidiValues([0, 2, 7, 11]);
-				return this._setMidiValues([0, 2, 7, 10]);
-			default:
-				break;
-		}
-	}
-
-	_setBflatValues(value) {
-		if('b' === this.keyName) {
-      switch(value) {
-      case '4-6':
-        return this._setMidiValues([0, 6, 9]);
-      case '2':
-      case '4sharp':
-      case '2-4':
-      case '2-4sharp':
-      case '2-4-6':
-      case '2-4sharp-6':
-        return this._setMidiValues([0, 2, 6, 9])
-      case '3-4-6':
-        return this._setMidiValues([0, 4, 6, 9]);
-      case '2-5-7':
-        return this._setMidiValues([0, 2, 7, 11]);
-      case '2-4-7':
-      case '2-4-7sharp':
-        this._setChiffreAndImagePath('2-4flat-7');
-        return this._setMidiValues([0, 2, 5, 11]);
-      default:
-        this._setChiffreAndImagePath('0');
-        return this._setMidiValues([0, 4, 9]);
-      }
-    }
-	}
-
-	_setMidiValues(values) {
-		var newValues = [];
-		for (var i = 0; i < values.length; i++) {
-			newValues.push(this.startKey + values[i]);
-		}
-		return newValues;
-	}
-
-	_isKeyNameInCollection(keyNameCollection) {
-		for (var i = 0; i < keyNameCollection.length; i++) {
-			if(keyNameCollection[i] === this.keyName) return true;
-		}
-		return false;
-	}
-
-	_setChiffreAndImagePath(imageName) {
-		this.chiffre = imageName.split('-');
-		this.chiffreImagePath = this.folderName + imageName + '.png';
-	}
+function Exercise(id, startMidiValue, startKey, keyName, chiffre, folderName, noteImagePath, chiffreImagePath) {
+	this.id = id;
+	this.options = options;
+	// helper collections to evaluate the right ps set values
+	this.specialSharpCases = ['cis', 'dis', 'fis', 'gis', 'ais'];
+	this.specialFlatCases = ['des', 'es', 'ges', 'as'];
+	this.majorThird = ['c', 'f', 'g', 'b'];
+	this.minorThird = ['d', 'e', 'a', 'h'];
+	// class attributes
+	this.startMidiValue = startMidiValue;
+	this.folderName = folderName;
+	this.noteImagePath = this.folderName + noteImagePath;
+  this.chiffreImagePath = this.folderName + chiffreImagePath;
+  this.startKey = this.startMidiValue + startKey; // the name of the note (first part of note image name)
+  this.keyName = keyName; // the second part of note image name
+  this.chiffre = this._createArray(chiffre); // an array from the gbChiffre image name
+  this.pcSetValues = this._createSpecialArray(chiffre);
+  this.rightValues = [];
+  this.wrongValues = [];
 }
+
+Exercise.prototype._createArray = function(value) {
+	var parts = value.split('-');
+	var arr = [];
+	for (var i = 0; i < parts.length; i++) {
+		arr.push(parts[i]);
+	}
+	return arr;
+};
+
+Exercise.prototype._createSpecialArray = function(value) {
+	// cases only for # and b
+	if ('sharp' === value) {
+		if (this.majorThird.indexOf(this.keyName) >= 0 || this.minorThird.indexOf(this.keyName) >= 0) return this._setMidiValues([0, 4, 7]);
+		else { value = 0; this._setChiffreAndImagePath('0') }
+	}
+	if ('flat' === value) {
+		if ((this.majorThird.indexOf(this.keyName) >= 0 || this.minorThird.indexOf(this.keyName) >= 0) && this.keyName !== 'b' && this.keyName !== 'h')
+			return this._setMidiValues([0, 3, 7]);
+		else { value = 0; this._setChiffreAndImagePath('0'); }
+	}
+	// cases for chromatic mi- od fa-character
+  if (this.specialSharpCases.indexOf(this.keyName) >= 0) { this._setChiffreAndImagePath('0'); this.chiffre = ['3', '6']; return this._setMidiValues([0, 3, 8]); }
+	if (this.specialFlatCases.indexOf(this.keyName) >= 0) { this._setChiffreAndImagePath('0'); this.chiffre = ['3', '6']; return this._setMidiValues([0, 4, 9]); }
+	// set b-flat values
+	if('b' === this.keyName) return this._setBflatValues(value);
+	// set values for gb chiffres
+	switch(value) {
+		case '0':
+		case '5':
+		case '3-5':
+			if(this._isKeyNameInCollection(['h', 'e'])) { this._setChiffreAndImagePath('0'); return [0 + this.startKey, 3 + this.startKey, 8 + this.startKey] };
+			return this.majorThird.indexOf(this.keyName) >= 0 ? this._setMidiValues([0, 4, 7]) : this._setMidiValues([0, 3, 7]);
+		case '6':
+		case '3-6':
+			if(this._isKeyNameInCollection(['d'])) return [0 + this.startKey, 3 + this.startKey, 9 + this.startKey];
+			return this.majorThird.indexOf(this.keyName) >= 0  ? this._setMidiValues([0, 4, 9]) : this._setMidiValues([0, 3, 8]);
+		case '4':
+		case '4-5':
+			if(this._isKeyNameInCollection(['h'])) { this._setChiffreAndImagePath('0'); return this._setMidiValues([0, 3, 8]); }
+			if(this._isKeyNameInCollection(['f'])) { this._setChiffreAndImagePath('4sharp'); return this._setMidiValues([0, 2, 6, 9]) }
+			return this._setMidiValues([0, 5, 7]);
+		case '4-6':
+			if(this._isKeyNameInCollection(['f'])) return this._setMidiValues([0, 6, 9]);
+			if(this._isKeyNameInCollection(['d'])) return this._setMidiValues([0, 5, 9]);
+			return this.majorThird.indexOf(this.keyName) >= 0 ?  this._setMidiValues([0, 5, 9]) : this._setMidiValues([0, 5, 8]);
+		case '2':
+		case '2-4':
+		case '2-4-6':
+			if(this._isKeyNameInCollection(['c', 'd', 'g'])) return this._setMidiValues([0, 2, 5, 9]);
+			if(this._isKeyNameInCollection(['e', 'h'])) return this._setMidiValues([0, 1, 5, 8]);
+			if(this._isKeyNameInCollection(['f'])) return this._setMidiValues([0, 2, 6, 9]);
+			if(this._isKeyNameInCollection(['a'])) return this._setMidiValues([0, 2, 5, 8]);
+		case '4sharp':
+		case '2-4sharp':
+		case '2-4sharp-6':
+			if(this._isKeyNameInCollection(['e', 'h'])) { this._setChiffreAndImagePath('2'); return this._setMidiValues([0, 1, 4, 8]); }
+			return this._setMidiValues([0, 2, 6, 9]);
+		case '3-4-6':
+			if(this._isKeyNameInCollection(['f'])) return this._setMidiValues([0, 4, 6, 9]);
+			if(this._isKeyNameInCollection(['d'])) return this._setMidiValues([0, 3, 5, 9]);
+			return this.minorThird.indexOf(this.keyName) >= 0 ? this._setMidiValues([0, 3, 5, 8]) : this._setMidiValues([0, 4, 5, 9]);
+		case '6sharp':
+		case '3-6sharp':
+			if(this._isKeyNameInCollection(['c', 'g'])) { this._setChiffreAndImagePath('3-6'); return  this._setMidiValues([0, 4, 9]); }
+			if(this._isKeyNameInCollection(['d', 'f'])) { this._setChiffreAndImagePath('3-6'); return  this._setMidiValues([0, 3, 9]); }
+			return this._setMidiValues([0, 3, 9])
+		case '3-4-6sharp':
+			if(this._isKeyNameInCollection(['d'])) { this._setChiffreAndImagePath('3-4-6'); return this._setMidiValues([0, 3, 5, 9]);  }
+			if(this._isKeyNameInCollection(['f'])) { this._setChiffreAndImagePath('3-4-6'); return this._setMidiValues([0, 4, 6, 9]);  }
+			return this._setMidiValues([0, 3, 5, 9])
+		case '2-4-7':
+			if (this._isKeyNameInCollection(['e', 'h'])) return this._setMidiValues([0, 1, 5, 10]);
+			if (this._isKeyNameInCollection(['c'])) return this._setMidiValues([0, 2, 5, 11]);
+			if (this._isKeyNameInCollection(['f'])) { this._setChiffreAndImagePath('2-4flat-7'); return this._setMidiValues([0, 2, 5, 11]); }
+			return this._setMidiValues([0, 2, 5, 10]);
+		case '2-4-7sharp':
+			if (this._isKeyNameInCollection(['e', 'h'])) { this._setChiffreAndImagePath('2-4-7'); return this._setMidiValues([0, 1, 5, 10]); }
+			if (this._isKeyNameInCollection(['f'])) { this._setChiffreAndImagePath('2-4flat-7'); return this._setMidiValues([0, 2, 5, 11]); }
+			return this._setMidiValues([0, 2, 5, 11]);
+		case '2-5-7':
+			if (this._isKeyNameInCollection(['e'])) return this._setMidiValues([0, 1, 7, 10]);
+			if (this._isKeyNameInCollection(['h'])) return this._setMidiValues([0, 1, 6, 10]);
+			if (this._isKeyNameInCollection(['c', 'f'])) return this._setMidiValues([0, 2, 7, 11]);
+			return this._setMidiValues([0, 2, 7, 10]);
+		default:
+			break;
+	}
+};
+
+Exercise.prototype._setBflatValues = function(value) {
+	if('b' === this.keyName) {
+    switch(value) {
+    case '4-6':
+      this._setChiffreAndImagePath('2-4sharp');
+      return this._setMidiValues([0, 2, 6, 9]);
+    case '2':
+    case '2-4':
+    case '2-4-6':
+    case '4sharp':
+    case '2-4sharp':
+    case '2-4sharp-6':
+      return this._setMidiValues([0, 2, 6, 9])
+    case '3-4-6':
+      return this._setMidiValues([0, 4, 6, 9]);
+    case '2-5-7':
+      return this._setMidiValues([0, 2, 7, 11]);
+    case '2-4-7':
+    case '2-4-7sharp':
+      this._setChiffreAndImagePath('2-4flat-7');
+      return this._setMidiValues([0, 2, 5, 11]);
+    default:
+      this._setChiffreAndImagePath('0');
+      return this._setMidiValues([0, 4, 9]);
+    }
+  }	
+};
+
+Exercise.prototype._setMidiValues = function(values) {
+	var newValues = [];
+	for (var i = 0; i < values.length; i++) {
+		newValues.push(this.startKey + values[i]);
+	}
+	return newValues;
+};
+
+Exercise.prototype._isKeyNameInCollection = function(keyNameCollection) {
+	for (var i = 0; i < keyNameCollection.length; i++) {
+		if(keyNameCollection[i] === this.keyName) return true;
+	}
+	return false;
+};
+
+Exercise.prototype._setChiffreAndImagePath = function(imageName) {
+	this.chiffre = imageName.split('-');
+	this.chiffreImagePath = this.folderName + imageName + '.png';
+};
 
 function createExercise(id, options) {
 	hideAttentions();
