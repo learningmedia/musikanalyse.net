@@ -45,9 +45,8 @@
 .flexItem {
 	margin-right: 10px;
 }
-.isDisabled {
-    opacity: .1;
-    pointer-events: none;
+.isNotVisible {
+    display: none;
 }
 
 
