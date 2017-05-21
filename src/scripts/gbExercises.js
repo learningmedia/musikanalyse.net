@@ -33,23 +33,24 @@ class Exercise {
 	}
 	_createSpecialArray(value) {
 		if ('sharp' === value) {
-			if (this.majorThird.indexOf(this.keyName) >= 0 || this.minorThird.indexOf(this.keyName) >= 0) return [0 + this.startKey, 4 + this.startKey, 7 + this.startKey]			
+			if (this.majorThird.indexOf(this.keyName) >= 0 || this.minorThird.indexOf(this.keyName) >= 0) 
+				return this._setMidiValues(this.startKey, [0, 4, 7]);		
 			else { value = this._setDefaultValues(); }
 		}
 		if ('flat' === value) {
 			if ((this.majorThird.indexOf(this.keyName) >= 0 || this.minorThird.indexOf(this.keyName) >= 0) && this.keyName !== 'b' && this.keyName !== 'h')
-				return [0 + this.startKey, 3 + this.startKey, 7 + this.startKey]			
+				return this._setMidiValues(this.startKey, [0, 3, 7]);		
 			else { value = this._setDefaultValues(); }
 		}
 	  if (this.specialSharpCases.indexOf(this.keyName) >= 0) {
-	  	this.chiffreImagePath = this.folderName + "0.png";
+	  	this._setDefaultValues();
 	  	this.chiffre = ['3', '6'];
-	  	return [0 + this.startKey, 3 + this.startKey, 8 + this.startKey];
+	  	return this._setMidiValues(this.startKey, [0, 3, 8]);
 	  }
 		if (this.specialFlatCases.indexOf(this.keyName) >= 0) {
-			this.chiffreImagePath = this.folderName + "0.png";
+			this._setDefaultValues();
 			this.chiffre = ['3', '6'];
-			return [0 + this.startKey, 4 + this.startKey, 9 + this.startKey];
+			return this._setMidiValues(this.startKey, [0, 4, 9]);
 		} 
 		switch(value) {
 			case '0':
@@ -57,50 +58,59 @@ class Exercise {
 			case '3-5':
 				if(this.keyName === 'h' || this.keyName === 'e') { this._setDefaultValues(); return [0 + this.startKey, 3 + this.startKey, 8 + this.startKey] };
 				if(this.keyName === 'b') { this._setDefaultValues(); return [0 + this.startKey, 4 + this.startKey, 9 + this.startKey]; }
-				return this.majorThird.indexOf(this.keyName) >= 0 ?
-				[0 + this.startKey, 4 + this.startKey, 7 + this.startKey] : 
-				[0 + this.startKey, 3 + this.startKey, 7 + this.startKey];
+				return this.majorThird.indexOf(this.keyName) >= 0 ? this._setMidiValues(this.startKey, [0, 4, 7]) : this._setMidiValues(this.startKey, [0, 3, 7]);
 			case '6':
 			case '3-6':
 				if(this.keyName === 'd') return [0 + this.startKey, 3 + this.startKey, 9 + this.startKey];
-				return this.majorThird.indexOf(this.keyName) >= 0  ? 
-				[0 + this.startKey, 4 + this.startKey, 9 + this.startKey] : 
-				[0 + this.startKey, 3 + this.startKey, 8 + this.startKey];
+				return this.majorThird.indexOf(this.keyName) >= 0  ? this._setMidiValues(this.startKey, [0, 4, 9]) : this._setMidiValues(this.startKey, [0, 3, 8]);
 			case '4': 
 			case '4-5': 
-				if(this.keyName === 'b') { this._setDefaultValues(); return [0 + this.startKey, 4 + this.startKey, 9 + this.startKey]; }
-				if(this.keyName === 'h') { this._setDefaultValues(); return [0 + this.startKey, 3 + this.startKey, 8 + this.startKey]; }
-				return [0 + this.startKey, 5 + this.startKey, 7 + this.startKey];
+				if(this.keyName === 'b') { this._setDefaultValues(); return this._setMidiValues(this.startKey, [0, 4, 9]); }
+				if(this.keyName === 'h') { this._setDefaultValues(); return this._setMidiValues(this.startKey, [0, 3, 8]); }
+				if(this.keyName === 'f') { 
+					this.chiffre = [ "4sharp" ];
+					this.chiffreImagePath = this.folderName + "4sharp.png";
+					return this._setMidiValues(this.startKey, [0, 2, 6, 9]) 
+				}
+				return this._setMidiValues(this.startKey, [0, 5, 7]);
 			case '4-6':
 				if(this.keyName === 'f' || this.keyName === 'b')
-					return [0 + this.startKey, 6 + this.startKey, 9 + this.startKey];
-				if(this.keyName === 'd') return [0 + this.startKey, 5 + this.startKey, 9 + this.startKey];
-				return this.majorThird.indexOf(this.keyName) >= 0 ? 
-				[0 + this.startKey, 5 + this.startKey, 9 + this.startKey] : 
-				[0 + this.startKey, 5 + this.startKey, 8 + this.startKey];
+					return this._setMidiValues(this.startKey, [0, 6, 9]);
+				if(this.keyName === 'd') 
+					return this._setMidiValues(this.startKey, [0, 5, 9]);
+				return this.majorThird.indexOf(this.keyName) >= 0 ?  this._setMidiValues(this.startKey, [0, 5, 9]) : this._setMidiValues(this.startKey, [0, 5, 8]);
 			case '3-4-6':
 				if(this.keyName === 'f' || this.keyName === 'b') 
-					return [0 + this.startKey, 4 + this.startKey, 6 + this.startKey, 9 + this.startKey];
+					return this._setMidiValues(this.startKey, [0, 4, 6, 9]);
 				if(this.keyName === 'd') 
-					return [0 + this.startKey, 3 + this.startKey, 5 + this.startKey, 9 + this.startKey];
-				return this.minorThird.indexOf(this.keyName) >= 0 ? 
-				[0 + this.startKey, 3 + this.startKey, 5 + this.startKey, 8 + this.startKey] : 
-				[0 + this.startKey, 4 + this.startKey, 5 + this.startKey, 9 + this.startKey];
+					return this._setMidiValues(this.startKey, [0, 3, 5, 9]);
+				return this.minorThird.indexOf(this.keyName) >= 0 ? this._setMidiValues(this.startKey, [0, 3, 5, 8]) : this._setMidiValues(this.startKey, [0, 4, 5, 9]);
 			case '2':
 			case '2-4':
 			case '2-4-6':
 				if(this.keyName === 'f' || this.keyName === 'b') 
-					return [0 + this.startKey, 2 + this.startKey, 6 + this.startKey, 9 + this.startKey];
+					return this._setMidiValues(this.startKey, [0, 2, 6, 9]);
 				if(this.keyName === 'c' || this.keyName === 'd' || this.keyName === 'g') 
-					return [0 + this.startKey, 2 + this.startKey, 5 + this.startKey, 9 + this.startKey];
+					return this._setMidiValues(this.startKey, [0, 2, 5, 9]);
 				if(this.keyName === 'e' || this.keyName === 'h') 
-					return [0 + this.startKey, 1 + this.startKey, 5 + this.startKey, 8 + this.startKey];
+					return this._setMidiValues(this.startKey, [0, 1, 5, 8]);
 				if(this.keyName === 'a') 
-					return [0 + this.startKey, 2 + this.startKey, 5 + this.startKey, 8 + this.startKey];
+					return this._setMidiValues(this.startKey, [0, 2, 5, 8]);
+			case '4sharp':
+				alert("Bitte wählen Sie eine andere Übung, dieser Fall ist leider noch nicht implementiert.");
 			default:
 				break;
 		}
 	}
+
+	_setMidiValues(startKey, values) {
+		var newValues = [];
+		for (var i = 0; i < values.length; i++) {
+			newValues.push(startKey + values[i]);
+		}
+		return newValues;
+	}
+
 	_setDefaultValues() {
 		this.chiffreImagePath = this.folderName + "0.png";
 		return '0';
