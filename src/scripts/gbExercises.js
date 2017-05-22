@@ -79,7 +79,7 @@ Exercise.prototype._createSpecialArray = function(value) {
 		case '4sharp':
 		case '2-4sharp':
 		case '2-4sharp-6':
-			if(this._isKeyNameInCollection(['e', 'h'])) { this._setChiffreAndImagePath('2'); return this._setMidiValues([0, 1, 4, 8]); }
+			if(this._isKeyNameInCollection(['e', 'h'])) { this._setChiffreAndImagePath('2'); return this._setMidiValues([0, 1, 5, 8]); }
 			return this._setMidiValues([0, 2, 6, 9]);
 		case '3-4-6':
 			if(this._isKeyNameInCollection(['f'])) return this._setMidiValues([0, 4, 6, 9]);
@@ -108,6 +108,22 @@ Exercise.prototype._createSpecialArray = function(value) {
 			if (this._isKeyNameInCollection(['h'])) return this._setMidiValues([0, 1, 6, 10]);
 			if (this._isKeyNameInCollection(['c', 'f'])) return this._setMidiValues([0, 2, 7, 11]);
 			return this._setMidiValues([0, 2, 7, 10]);
+		case '7':
+		case '5-7':
+		case '3-5-7':
+			if (this._isKeyNameInCollection(['c', 'f'])) return this._setMidiValues([0, 4, 7, 11]);
+			if (this._isKeyNameInCollection(['h'])) return this._setMidiValues([0, 3, 6, 10]);
+			if (this._isKeyNameInCollection(['g'])) return this._setMidiValues([0, 4, 7, 10]);
+			if (this._isKeyNameInCollection(['c', 'f'])) return this._setMidiValues([0, 2, 7, 11]);
+			return this._setMidiValues([0, 3, 7, 10]);
+		case 'sharp-7flat':
+			if (this._isKeyNameInCollection(['f'])) { this._setChiffreAndImagePath('7'); return this._setMidiValues([0, 4, 7, 11]); }
+			if (this._isKeyNameInCollection(['h'])) { this._setChiffreAndImagePath('7'); return this._setMidiValues([0, 3, 6, 10]); }
+			return this._setMidiValues([0, 4, 7, 10]);
+		case 'flat-7':
+			if (this._isKeyNameInCollection(['c', 'f'])) { this._setChiffreAndImagePath('7'); return this._setMidiValues([0, 3, 7, 11]); }
+			if (this._isKeyNameInCollection(['h'])) { this._setChiffreAndImagePath('7'); return this._setMidiValues([0, 3, 6, 10]); }
+			return this._setMidiValues([0, 3, 7, 10]);
 		default:
 			break;
 	}
@@ -134,6 +150,15 @@ Exercise.prototype._setBflatValues = function(value) {
     case '2-4-7sharp':
       this._setChiffreAndImagePath('2-4flat-7');
       return this._setMidiValues([0, 2, 5, 11]);
+    case '7':
+    case '5-7':
+    case '3-5-7':
+    	return this._setMidiValues([0, 4, 7, 11]);
+    case 'sharp-7flat':
+    	return this._setMidiValues([0, 4, 7, 10]);    
+    case 'flat-7':
+    	this._setChiffreAndImagePath('sharp-7flat');
+    	return this._setMidiValues([0, 4, 7, 10]);
     default:
       this._setChiffreAndImagePath('0');
       return this._setMidiValues([0, 4, 9]);
@@ -218,8 +243,8 @@ function showValue() {
 	if (exercise.wrongValues.length === 0 && isFirstTry) {
 		rightAnswers++;
 	}
-	var percent = Math.round((rightAnswers / exercises.length) * 100);
-	$('#statistic').text("Mit dem ersten Versuch haben Sie bisher " + percent + "% der Aufgaben richtig gelöst.");
+	
+	$('#statistic').text(getFeedBack(rightAnswers, exercises));
 
 	if (rightValues.length < exercise.pcSetValues.length - 1)
 			$('#exercise-incomplete').show();
@@ -234,7 +259,20 @@ function showValue() {
 	checkFordoubledLeadingTones(selectedKeys)
 
 	setButtonsVisibility(false, true, true);
+}
 
+function getFeedBack(rightAnswers, exercises) {
+	var number = exercises.length;
+	var percent = Math.round((rightAnswers / number) * 100);	
+	var question = number === 1 ? "Aufgabe" : "Aufgaben";
+	var evaluation;
+	if(percent >= 80) evaluation = "Gratulation!";
+	else if (percent < 80 && percent >= 60 && exercises.length > 5) evaluation = "Üben Sie lieber noch ein bisschen!";
+	else if (percent < 60 && percent >= 40 && exercises.length > 5) evaluation = "Sie haben noch einiges zu tun!";
+	else if (percent < 40 && exercises.length === 1) evaluation = "Kann mal passieren. Probieren Sie es einfach noch einmal!";
+	else if(percent < 40 && exercises.length > 5) evaluation = "Ich glaube, Sie sollten lieber die Anleitung oben noch einmal lesen :)";
+	else evaluation = "Versuchen Sie es noch einmal...";
+	return percent + "% richtig von " + number + " " + question + ": " + evaluation;
 }
 
 // detect right keys in diffrent octave spaces
