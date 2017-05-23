@@ -44,6 +44,9 @@ Exercise.prototype._createSpecialArray = function(value) {
 			return this._setMidiValues([0, 3, 7]);
 		else { value = 0; this._setChiffreAndImagePath('0'); }
 	}
+	// case for neapolitaner
+	if ('3flat-6flat' === value || '3-5flat' === value) return this._setNeapolitanerCases(value);
+
 	// cases for chromatic mi- od fa-character
   if (this.specialSharpCases.indexOf(this.keyName) >= 0) { this._setChiffreAndImagePath('0'); this.chiffre = ['3', '6']; return this._setMidiValues([0, 3, 8]); }
 	if (this.specialFlatCases.indexOf(this.keyName) >= 0) { this._setChiffreAndImagePath('0'); this.chiffre = ['3', '6']; return this._setMidiValues([0, 4, 9]); }
@@ -164,6 +167,21 @@ Exercise.prototype._setBflatValues = function(value) {
       return this._setMidiValues([0, 4, 9]);
     }
   }	
+};
+
+Exercise.prototype._setNeapolitanerCases = function(value) {
+	if ('3flat-6flat' === value) { 
+		this.noteImagePath = this.folderName + '5_f.png'; 
+		this.startKey = 65;
+		this.keyName = 'f';
+		return this._setMidiValues([0, 3, 8]); 
+	}
+	if ('3-5flat' === value) { 
+		this.noteImagePath = this.folderName + '1_des.png'; 
+		this.startKey = 61;
+		this.keyName = '';
+		return this._setMidiValues([0, 4, 7]);  
+	}
 };
 
 Exercise.prototype._setMidiValues = function(values) {
