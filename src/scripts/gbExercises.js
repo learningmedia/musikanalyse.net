@@ -44,6 +44,9 @@ Exercise.prototype._createSpecialArray = function(value) {
 			return this._setMidiValues([0, 3, 7]);
 		else { value = 0; this._setChiffreAndImagePath('0'); }
 	}
+	// case for neapolitaner
+	if ('3flat-6flat' === value || '3-5flat' === value) return this._setNeapolitanerCases(value);
+
 	// cases for chromatic mi- od fa-character
   if (this.specialSharpCases.indexOf(this.keyName) >= 0) { this._setChiffreAndImagePath('0'); this.chiffre = ['3', '6']; return this._setMidiValues([0, 3, 8]); }
 	if (this.specialFlatCases.indexOf(this.keyName) >= 0) { this._setChiffreAndImagePath('0'); this.chiffre = ['3', '6']; return this._setMidiValues([0, 4, 9]); }
@@ -116,8 +119,8 @@ Exercise.prototype._createSpecialArray = function(value) {
 			if (this._isKeyNameInCollection(['g'])) return this._setMidiValues([0, 4, 7, 10]);
 			if (this._isKeyNameInCollection(['c', 'f'])) return this._setMidiValues([0, 2, 7, 11]);
 			return this._setMidiValues([0, 3, 7, 10]);
-		case 'sharp-7flat':
-			if (this._isKeyNameInCollection(['f'])) { this._setChiffreAndImagePath('7'); return this._setMidiValues([0, 4, 7, 11]); }
+		case 'sharp-7':
+			if (this._isKeyNameInCollection(['c', 'f'])) { this._setChiffreAndImagePath('7'); return this._setMidiValues([0, 4, 7, 11]); }
 			if (this._isKeyNameInCollection(['h'])) { this._setChiffreAndImagePath('7'); return this._setMidiValues([0, 3, 6, 10]); }
 			return this._setMidiValues([0, 4, 7, 10]);
 		case 'flat-7':
@@ -155,7 +158,7 @@ Exercise.prototype._setBflatValues = function(value) {
     case '3-5-7':
     	return this._setMidiValues([0, 4, 7, 11]);
     case 'sharp-7flat':
-    	return this._setMidiValues([0, 4, 7, 10]);    
+    	return this._setMidiValues([0, 4, 7, 10]);
     case 'flat-7':
     	this._setChiffreAndImagePath('sharp-7flat');
     	return this._setMidiValues([0, 4, 7, 10]);
@@ -163,7 +166,22 @@ Exercise.prototype._setBflatValues = function(value) {
       this._setChiffreAndImagePath('0');
       return this._setMidiValues([0, 4, 9]);
     }
-  }	
+  }
+};
+
+Exercise.prototype._setNeapolitanerCases = function(value) {
+	if ('3flat-6flat' === value) {
+		this.noteImagePath = this.folderName + '5_f.png';
+		this.startKey = 65;
+		this.keyName = 'f';
+		return this._setMidiValues([0, 3, 8]);
+	}
+	if ('3-5flat' === value) {
+		this.noteImagePath = this.folderName + '1_des.png';
+		this.startKey = 61;
+		this.keyName = '';
+		return this._setMidiValues([0, 4, 7]);
+	}
 };
 
 Exercise.prototype._setMidiValues = function(values) {
@@ -243,7 +261,7 @@ function showValue() {
 	if (exercise.wrongValues.length === 0 && isFirstTry) {
 		rightAnswers++;
 	}
-	
+
 	$('#statistic').text(getFeedBack(rightAnswers, exercises));
 
 	if (rightValues.length < exercise.pcSetValues.length - 1)
@@ -263,7 +281,7 @@ function showValue() {
 
 function getFeedBack(rightAnswers, exercises) {
 	var number = exercises.length;
-	var percent = Math.round((rightAnswers / number) * 100);	
+	var percent = Math.round((rightAnswers / number) * 100);
 	var question = number === 1 ? "Aufgabe" : "Aufgaben";
 	var evaluation;
 	if(percent >= 80) evaluation = "Gratulation!";
