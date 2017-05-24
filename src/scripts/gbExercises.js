@@ -34,25 +34,6 @@ Exercise.prototype._createArray = function(value) {
 };
 
 Exercise.prototype._createSpecialArray = function(value) {
-<<<<<<< HEAD
-	// cases only for # and b
-	if ('sharp' === value) {
-		if (this.majorThird.indexOf(this.keyName) >= 0 || this.minorThird.indexOf(this.keyName) >= 0) return this._setMidiValues([0, 4, 7]);
-		else { value = 0; this._setChiffreAndImagePath('0') }
-	}
-	if ('flat' === value) {
-		if ((this.majorThird.indexOf(this.keyName) >= 0 || this.minorThird.indexOf(this.keyName) >= 0) && this.keyName !== 'b' && this.keyName !== 'h')
-			return this._setMidiValues([0, 3, 7]);
-		else { value = 0; this._setChiffreAndImagePath('0'); }
-	}
-	// case for neapolitaner
-	if ('3flat-6flat' === value || '3-5flat' === value) return this._setNeapolitanerCases(value);
-
-	// cases for chromatic mi- od fa-character
-  if (this.specialSharpCases.indexOf(this.keyName) >= 0) { this._setChiffreAndImagePath('0'); this.chiffre = ['3', '6']; return this._setMidiValues([0, 3, 8]); }
-	if (this.specialFlatCases.indexOf(this.keyName) >= 0) { this._setChiffreAndImagePath('0'); this.chiffre = ['3', '6']; return this._setMidiValues([0, 4, 9]); }
-	// set b-flat values
-=======
 
   // set some flags
   var keyNameIsSharp = this.specialSharpCases.indexOf(this.keyName) >= 0; // 'cis', 'dis', 'fis', 'gis'
@@ -81,10 +62,11 @@ Exercise.prototype._createSpecialArray = function(value) {
   }
 
   // only for # and b
-  if ('sharp' === value && firstThirdIsMajor && !keyNameIsSharp && !keyNameIsFlat) {
+  if ('sharp' === value && !keyNameIsSharp && !keyNameIsFlat) {
     return this._setMidiValues([0, 4, 7]);
   }
-  if ('flat' === value && firstThirdIsMinor && !keyNameIsSharp && !keyNameIsFlat) {
+  if ('flat' === value && !keyNameIsSharp && !keyNameIsFlat) {
+  	if(this._isKeyNameInCollection(['h'])) { this._setChiffreAndChiffreImagePath('6'); return this._setMidiValues([0, 3, 8]) }; 
     return this._setMidiValues([0, 3, 7]);
   }
 
@@ -92,7 +74,6 @@ Exercise.prototype._createSpecialArray = function(value) {
   if ('3flat-6flat' === value || '3-5flat' === value) return this._setNeapolitanerCases(value);
 
   // set b-flat values
->>>>>>> f8c1fd6ef04e98902ee73a7a284d9fc79f83a18b
 	if('b' === this.keyName) return this._setBflatValues(value);
 
   // set other chiffre values
