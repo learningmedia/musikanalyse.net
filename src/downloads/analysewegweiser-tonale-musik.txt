@@ -1,0 +1,9 @@
+---
+title: Analysewegweiser für tonale Musik
+author: Ulrich Kaiser
+category: themen
+subCategory: methoden
+abstract: In dieser Übersicht finden Sie einen Wegweiser, wie Sie - z.B. in schriftlichen Prüfungssituationen - vorgehen können, wenn Sie vor der Aufgabe stehen, in einem festgelegten Zeitraum ein unbekanntes Stück analysieren zu müssen.
+thumbnail: /img/thumbnails/analysewegweiser-tonale-musik.jpg
+link: /downloadfiles/analysewegweiser-tonale-musik.pdf
+---
