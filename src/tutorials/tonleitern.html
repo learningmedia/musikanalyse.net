@@ -1,0 +1,153 @@
+---
+title: Tonleitern
+author: Ulrich Kaiser
+date: 2017-07-18
+modified: 2017-07-18
+layout: tutorial.ejs
+category: Grundlagen
+abstract: In diesem Tutorial erhalten Sie Erklärungen sowie interaktive Übungsmöglichkeiten zum Thema Tonleitern. Dieses Tutorial ist zur Vorbereitung auf die entsprechende Aufgabe in Klausuren (›Allgemeine Musiklehre‹ an Musikhochschulen) geeignet. 
+---
+<script src='/scripts/jquery.klavier.js'></script>
+<script src='/scripts/scaleExercises.js'></script>
+<link rel="stylesheet" href="/styles/scale.css">
+
+<button onclick="onAnnotationsClick(this)">Erläuterungen zu den Tonleitern ausblenden</button>
+<br><br>
+<div id="showScaleAnnotations">
+  <p>
+    In Musiklehren findet man die hüfig die folgenden Tonleiterbezeichnungen. Klicken Sie auf ein Namen, um weitere Informationen zum Aufbau und zur Besonderheit der jeweiligen Tonleiter zu erhalten: 
+  </p>
+  <ul>
+    <li><a href="#dur">Dur-Tonleiter</a></li>
+    <li><a href="#moll">Moll-Tonleitern</a>
+      <ul>
+        <li>Die natürliche Molltonleiter</li>
+        <li>Die melodische Modlltonleiter</li>
+        <li>Die harmonische Molltonleiter</li>
+      </ul>
+    </li>
+    <li>Kirchentonleitern
+      <ul>
+        <li><a href="#dorisch">dorische Tonleiter</a></li>
+        <li><a href="#phyrgisch">phrygische Tonleiter</a></li>
+        <li><a href="#lydisch">lydische Tonleiter</a></li>
+        <li><a href="#micolydisch">mixolydische Tonleiter</a></li>
+        <li><a href="#ionisch">ionische Tonleiter</a></li>
+        <li><a href="#äolisch">äolische Tonleiter</a></li>
+        <li><a href="#lokrisch">lokrische Tonleiter</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#zigeuner">›Zigeuner‹-Tonleitern</a>
+      <ul>
+        <li>Zigeuner-Moll</li>
+        <li>Zigeuner-Dur</li>
+      </ul>
+    </li>
+    <li><a href="#blues">Bluestonleiter</a></li>
+    <li>Symmetrische Tonleitern (Skalen, Modi)
+      <ul>
+        <li><a href="#ganzton">Ganztonleiter</a> (Messiaens 1. Modus)</li>
+        <li><a href="#ganzton-halbton">Halbton-Ganzton-Skala</a> (Messiaens 2. Modus)</li></ul>
+        <li><a href="#modus3">3. Modus (Messiaen)</a></li>
+        <li><a href="#modus47">4.&minus; 7. Modus (Messiaen)</a></li>
+      </ul>
+    </li>
+  </ul>
+  <br>
+  <h4 id="dur"><a href="#tutorialTitle">Dur-Tonleiter</a></h4>
+  <p>
+   Die Dur-Tonleiter lässt sich auf verschiedene Weise erklären. Zum einen sind die Töne einer Durtonleiter identisch mit einem Ausschnitt (6 Quinten) aus dem Quintenturm: 
+  </p>
+  <div>
+    <a class="imageChange">
+      <img class="image-on" style="margin-top: 0;" src="/content/tutorials/tonleiter/.png" alt="Quintenturm" />
+      <img class="image-off" style="margin-top: 0; padding-left: 6px;" src="/content/tutorials/tonleiter/.png" alt="Quintenturm" />
+    </a>
+  </div>
+  <p>
+    
+  </p>
+
+  <!-- <img src="/content/tutorials/fuge-1/.png" alt="" />
+  <audio controls src="/content/tutorials/fuge-1/sound/.mp3" preload="auto"></audio> -->
+<!--   <div>
+    <img style="margin-left: auto; margin-right: auto; margin-bottom: 0;" src="/content/tutorials/generalbass/2_d.png">
+    <img style="margin: 0 auto; padding-left: 6px;" src="/content/tutorials/generalbass/flat.png">
+  </div> -->
+<p>
+  Bitte haben Sie noch ein wenig Geduld, bald geht es hier weiter...
+</p>
+<img src="http://animationswelt.de/images/baustelle/_baustelle-018.gif" />
+
+  <hr>
+  <hr style="margin-top: -18px;">
+</div>
+
+<h3>Testen Sie Ihr Tonleiter-Wissen</h3>
+<div style="height: 500px;" id="exercise-container">
+  <span>Geben Sie vom gegebenen Anfangston die Töne der geforderten Tonleiter an.</span>
+  <div style="height: 120px; margin-left: 40%; margin-top: 20px;">
+    <image style="margin: 0;" id="imageNote">
+    <image style="margin: 0; padding-left: 4px;" id="imageChiffre">
+  </div>
+  <div>
+    <div class="pianoContainer" id="exercise"></div>
+    <div class="flexContainer">
+      <button id="check" class="flexItem" style="border: 1px solid maroon;" onclick="show()">Überprüfen</button>
+      <button id="reset" class="flexItem" style="border: 1px solid navy;" onclick="reset()">Zurücksetzen</button>
+      <button id="new" class="flexItem" style="border: 1px solid green;" onclick="createNewExercise()">Neue Übung</button>
+    </div>
+    <div class="attantionText" >
+      <span style="display: block;" id="exercise-unplayable">Dieser Griff galt als unspielbar und wurde nicht verwendet (größer als eine Oktave).</span>
+      <span style="display: block;" id="exercise-incomplete">Diese Eingabe ist unvollständig, es fehlt mindestens ein richtiger Ton.</span>
+      <span style="display: block;" id="exercise-doubleLeadingTone">In diesem Griff wird leider ein Leitton verdoppelt.</span>
+    </div>
+  </div>
+</div>
+<div id="statistic" style="margin: 40px 0;"></div>
+<div class="smalltext" style="margin-top: 10px;">
+  <b>Anmerkungen:</b><br>
+  Mit der Schaltfläche <span class="textButton textButtonRed">Überprüfen</span> können Sie überprüfen, ob Ihre Eingabe richtig ist. Erscheint kein roter Text und sind nur grüne Tasten zu sehen, ist Ihre Eingabe korrekt, Gratulation! Die Schaltfläche <span class="textButton textButtonBlue">Zurücksetzen</span> wird Ihre Eingabe zurücksetzen, aber keine neue Übung erstellen. Dadurch können richtige Eingaben in anderen Lagen ausprobiert und fehlerhafte Eingaben korrigiert werden. Mit der Schaltfläche <span class="textButton textButtonGreen">Neue Übung</span> erzeugen Sie eine neue Übung.
+</div>
+<hr>
+<script>
+  var options = {
+    'startMidiValue': 60,
+    'folderName': '/content/tutorials/generalbass/',
+    'images': ['0_c.png', '0_c.png', '0_c.png', '1_cis.png', '1_des.png', '2_d.png', '2_d.png', '2_d.png', '3_dis.png', '3_es.png', '4_e.png', '4_e.png', '4_e.png', '5_f.png', '5_f.png', '5_f.png', '6_fis.png', '7_g.png', '7_g.png', '7_g.png', '8_as.png', '8_gis.png', '9_a.png', '9_a.png', '9_a.png', '10_b.png', '11_h.png', '11_h.png', '11_h.png' ],
+    // 'images': [],
+    'gbChiffres': ['0.png', 'sharp.png', 'flat.png', '2.png', '2-4.png', '2-4-6.png', '2-4-7.png', '2-4-7sharp.png', '2-4sharp.png', '2-4sharp-6.png', '2-5-7.png', '3-4-6.png', '3-4-6sharp.png', '3-5.png', '3-6.png', '3-6sharp.png', '4.png', '4-5.png', '4-6.png', '4sharp.png', '5.png', '5flat.png', '6.png', '6sharp.png', '7.png', '5-7.png', '3-5-7.png', 'flat-7.png', '3-5flat.png', '3flat-6flat.png' ]
+    // 'gbChiffres': [ 'flat.png' ]
+    // noch nicht implementiert: "3flat-4-6.png", "3flat-4-7.png", "3flat-6.png",
+  }
+
+  function onAnnotationsClick(elem) {
+    var button = $(elem);
+    var annotationcontainer = $('#showScaleAnnotations');
+    annotationcontainer.toggleClass('isNotVisible');
+    if (annotationcontainer.hasClass('isNotVisible')) button.text('Erklärungen zum Generalbass einblenden');
+    else button.text('Erklärungen zum Generalbass ausblenden');
+  }
+
+  $(document).ready(function() {
+    var exercise = createExercise('#exercise', options);
+    $("#imageNote").attr("src", exercise.noteImagePath);
+    $("#imageChiffre").attr("src", exercise.chiffreImagePath);
+  });
+
+  function createNewExercise() {
+    $('#exercise').klavier('destroy');
+    var exercise = createExercise('#exercise', options);
+    $("#imageNote").attr("src", exercise.noteImagePath);
+    $("#imageChiffre").attr("src", exercise.chiffreImagePath);
+  }
+
+  function show() {
+    showValue();
+  }
+
+  function reset() {
+    resetColors();
+  }
+</script>
