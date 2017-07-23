@@ -11,11 +11,11 @@ abstract: In diesem Tutorial erhalten Sie Erklärungen sowie interaktive Übungs
 <script src='/scripts/scaleExercises.js'></script>
 <link rel="stylesheet" href="/styles/scale.css">
 
-<button onclick="onAnnotationsClick(this)">Erläuterungen zu den Tonleitern ausblenden</button>
+<!-- <button onclick="onAnnotationsClick(this)">Erläuterungen zu den Tonleitern ausblenden</button> -->
 <br><br>
 <div id="showScaleAnnotations">
   <p>
-    In Musiklehren findet man die hüfig die folgenden Tonleiterbezeichnungen. Klicken Sie auf ein Namen, um weitere Informationen zum Aufbau und zur Besonderheit der jeweiligen Tonleiter zu erhalten: 
+    In Musiklehren findet man die häufig die folgenden Tonleiterbezeichnungen. Klicken Sie auf ein Namen, um weitere Informationen zum Aufbau und zur Besonderheit der jeweiligen Tonleiter zu erhalten: 
   </p>
   <ul>
     <li><a href="#dur">Dur-Tonleiter</a></li>
@@ -59,24 +59,6 @@ abstract: In diesem Tutorial erhalten Sie Erklärungen sowie interaktive Übungs
   <p>
    Die Dur-Tonleiter ist eine Ordung von 7 verschiedenen Tönen. 
 
-   Das Verhältnis der Töne, die zur C-Dur-Tonleiter gehören, lassen  auf verschiedene Weise erklären. Zum einen sind die Töne einer Durtonleiter identisch mit einem Ausschnitt (6 Quinten) aus einer Quintenkette: 
-  </p>
-  <img src="/content/tutorials/tonleitern/Quintenkette-1.png" alt="Quintenturm" />
-  <p>
-    Oftmals hilfreicher als die Vorstellung einer Kette ist die Vorstellung eines Quintenturms. Denn mit diesem Bild verbinden sich die Vorstellung von <i>Höhe</i> und <i>hell</i> bzw. <i>Tiefe</i> und <i>dunkel</i>. In diesem Bild ist <i>h</i> ein hoher Ton und H-Dur eine helle Tonart z.B. gegenüber <i>f</i> dass gegenüber <i>h</i> einen tiefen Ton darstellt und F-Dur gegenüber H-Dur auch als dunklere Tonart gilt.
-
-  </p>
-  <img src="/content/tutorials/tonleitern/Quintenturm-1.png" alt="Quintenturm" />
-
-  <div>
-    <a class="imageChange">
-      <img class="image-on" style="margin-top: 0;" src="/content/tutorials/tonleitern/.png" alt="Quintenturm" />
-      <img class="image-off" style="margin-top: 0; padding-left: 6px;" src="/content/tutorials/tonleitern/.png" alt="Quintenturm" />
-    </a>
-  </div>
-  <p>
-    
-  </p>
 
   <!-- <img src="/content/tutorials/fuge-1/.png" alt="" />
   <audio controls src="/content/tutorials/fuge-1/sound/.mp3" preload="auto"></audio> -->
@@ -93,7 +75,7 @@ abstract: In diesem Tutorial erhalten Sie Erklärungen sowie interaktive Übungs
   <hr style="margin-top: -18px;">
 </div>
 
-<h3>Testen Sie Ihr Tonleiter-Wissen</h3>
+<!-- <h3>Testen Sie Ihr Tonleiter-Wissen</h3>
 <div style="height: 500px;" id="exercise-container">
   <span>Geben Sie vom gegebenen Anfangston die Töne der geforderten Tonleiter an.</span>
   <div style="height: 120px; margin-left: 40%; margin-top: 20px;">
@@ -119,7 +101,9 @@ abstract: In diesem Tutorial erhalten Sie Erklärungen sowie interaktive Übungs
   <b>Anmerkungen:</b><br>
   Mit der Schaltfläche <span class="textButton textButtonRed">Überprüfen</span> können Sie überprüfen, ob Ihre Eingabe richtig ist. Erscheint kein roter Text und sind nur grüne Tasten zu sehen, ist Ihre Eingabe korrekt, Gratulation! Die Schaltfläche <span class="textButton textButtonBlue">Zurücksetzen</span> wird Ihre Eingabe zurücksetzen, aber keine neue Übung erstellen. Dadurch können richtige Eingaben in anderen Lagen ausprobiert und fehlerhafte Eingaben korrigiert werden. Mit der Schaltfläche <span class="textButton textButtonGreen">Neue Übung</span> erzeugen Sie eine neue Übung.
 </div>
-<hr>
+<hr> -->
+
+
 <script>
   var options = {
     'startMidiValue': 60,
@@ -135,8 +119,8 @@ abstract: In diesem Tutorial erhalten Sie Erklärungen sowie interaktive Übungs
     var button = $(elem);
     var annotationcontainer = $('#showScaleAnnotations');
     annotationcontainer.toggleClass('isNotVisible');
-    if (annotationcontainer.hasClass('isNotVisible')) button.text('Erklärungen zum Generalbass einblenden');
-    else button.text('Erklärungen zum Generalbass ausblenden');
+    if (annotationcontainer.hasClass('isNotVisible')) button.text('Erläuterungen zu den Tonleitern einblenden');
+    else button.text('Erläuterungen zu den Tonleitern ausblenden');
   }
 
   $(document).ready(function() {

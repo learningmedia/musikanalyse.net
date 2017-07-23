@@ -2,79 +2,74 @@
   "Works": [
     {
       "KV": "001e",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-mi",
           "Behavior": "modulierend",
           "Structure": "fa-mi",
           "Harmonies": "2t-2S-1T",
           "Measures": "5-6"
-        }
-      },
+        }],
       "Genre": "Klavierstück"
     },
     {
       "KV": "001f",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-mi",
           "Behavior": "modulierend",
           "Structure": "fa-mi",
           "Harmonies": "2G-2S-1T-1Q",
           "Measures": "4-6"
-        }
-      },
+        }],
       "Genre": "Klavierstück"
     },
     {
       "KV": "003",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2Q-1G",
           "Measures": "7-8"
-        }
-      },
+        }],
       "Genre": "Klavierstück"
     },
     {
       "KV": "004",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-mi",
           "Behavior": "modulierend",
           "Structure": "fa-mi",
           "Harmonies": "2S-1T",
           "Measures": "5-8"
-        }
-      },
+        }],
       "Genre": "Klavierstück"
     },
     {
       "KV": "005",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4S-3T-2Q-1G",
           "Measures": "5-8"
-        }
-      },
+        }],
       "Genre": "Klavierstück"
     },
     {
       "KV": "005a (9a)",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": [
+      "Transitions": [
           {
             "Name": "Überleitung fa-ut mit Halbschluss",
             "Behavior": "nicht modulierend",
@@ -93,101 +88,94 @@
             "CadenceBass": "tenorisierend",
             "Measures": "9-14"
           }
-        ]
-      },
+        ],
       "Genre": "Klavierstück"
     },
     {
       "KV": "006",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Sequenz 3-8 aufwärts",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4t-4S-3T-2Q-1G-4t-4S-3T-2Q-1G",
           "Sequence": "3-8 aufwärts",
           "Measures": "7-14"
-        }
-      },
+        }],
       "Genre": "Violinsonate"
     },
     {
       "KV": "006",
+      "Composer": "Mozart",
       "MovementNumber": "2",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4t-4S-3T-2Q-1G",
           "Measures": "7-13"
-        }
-      },
+        }],
       "Genre": "Violinsonate"
     },
     {
       "KV": "006",
+      "Composer": "Mozart",
       "MovementNumber": "3",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-mi",
           "Behavior": "modulierend",
           "Structure": "fa-mi",
           "Harmonies": "2G-2S-1T",
           "Measures": "5-6"
-        }
-      },
+        }],
       "Genre": "Violinsonate"
     },
     {
       "KV": "006",
+      "Composer": "Mozart",
       "MovementNumber": "4",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-mi",
           "Behavior": "modulierend",
           "Structure": "fa-mi",
           "Harmonies": "2G-1T-2G-1T",
           "Measures": "5-8"
-        }
-      },
+        }],
       "Genre": "Violinsonate"
     },
     {
       "KV": "006",
+      "Composer": "Mozart",
       "MovementNumber": "5",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-4t-3g-3t-2g-2Q-1G",
           "Measures": "9-15"
-        }
-      },
+        }],
       "Genre": "Violinsonate"
     },
     {
       "KV": "007",
+      "Composer": "Mozart",
       "MovementNumber": "2",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Sequenz 3-8 aufwärts",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2G-2Q-1G-3T-2G-2Q-1G",
           "Sequence": "3-8 aufwärts",
           "Measures": "7-16"
-        }
-      },
+        }],
       "Genre": "Violinsonate"
     },
     {
       "KV": "008",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-mi mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "fa-mi",
@@ -195,44 +183,41 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "7-14"
-        }
-      },
+        }],
       "Genre": "Violinsonate"
     },
     {
       "KV": "009",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Sequenz 3-8 aufwärts",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2g-2Q-1G",
           "Sequence": "3-8 aufwärts",
           "Measures": "6-15"
-        }
-      },
+        }],
       "Genre": "Violinsonate"
     },
     {
       "KV": "009",
+      "Composer": "Mozart",
       "MovementNumber": "2",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2g-2Q-1G",
           "Measures": "9-12"
-        }
-      },
+        }],
       "Genre": "Violinsonate"
     },
     {
       "KV": "010",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -240,15 +225,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "9-14"
-        }
-      },
+        }],
       "Genre": "Klaviertrio"
     },
     {
       "KV": "011",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung re-ut mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "re-ut",
@@ -256,15 +240,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "7-10"
-        }
-      },
+        }],
       "Genre": "Klaviertrio"
     },
     {
       "KV": "011",
+      "Composer": "Mozart",
       "MovementNumber": "3",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-mi mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-mi",
@@ -272,15 +255,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "5-8"
-        }
-      },
+        }],
       "Genre": "Klaviertrio"
     },
     {
       "KV": "012",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-re mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "fa-re",
@@ -288,30 +270,28 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "5-8"
-        }
-      },
+        }],
       "Genre": "Klaviertrio"
     },
     {
       "KV": "013",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit I-IV-I-V-I-Pendelharmonik T. 13-16",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4S-3T-2Q-1G-4G-3T-2g-2Q-1G-4G-3T-2g-2Q-1G-2Q-1G-4G-3Q-2g-2Q-1G",
           "Other": "I-IV-I-V-I-Pendelharmonik T. 13-16",
           "Measures": "13-33"
-        }
-      },
+        }],
       "Genre": "Klaviertrio"
     },
     {
       "KV": "014",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -319,15 +299,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "metrisch",
           "Measures": "11-14"
-        }
-      },
+        }],
       "Genre": "Klaviertrio"
     },
     {
       "KV": "015",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-re mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-re",
@@ -335,15 +314,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "tenorisierend",
           "Measures": "9-16"
-        }
-      },
+        }],
       "Genre": "Klaviertrio"
     },
     {
       "KV": "016",
+      "Composer": "Mozart",
       "MovementNumber": "3",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -351,43 +329,40 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "unbestimmt",
           "Measures": "17-28"
-        }
-      },
+        }],
       "Genre": "Sinfonie"
     },
     {
       "KV": "020",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4t-4q-3G-3q-2Q-1G",
           "Measures": "4-9"
-        }
-      },
+        }],
       "Genre": "Chor"
     },
     {
       "KV": "022",
+      "Composer": "Mozart",
       "MovementNumber": "3",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-4t-3T-2Q-1G-4t-4S-3T-2Q-1G",
           "Measures": "21-24"
-        }
-      },
+        }],
       "Genre": "Sinfonie"
     },
     {
       "KV": "026",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-mi mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "fa-mi",
@@ -395,43 +370,40 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "11-18"
-        }
-      },
+        }],
       "Genre": "Violinsonate"
     },
     {
       "KV": "026",
+      "Composer": "Mozart",
       "MovementNumber": "3",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2Q-1G-2Q-1G",
           "Measures": "17-22"
-        }
-      },
+        }],
       "Genre": "Violinsonate"
     },
     {
       "KV": "027",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4t-3T-2g-2G-2Q-1G",
           "Measures": "7-12"
-        }
-      },
+        }],
       "Genre": "Violinsonate"
     },
     {
       "KV": "028",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-mi mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-mi",
@@ -439,15 +411,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "8-11"
-        }
-      },
+        }],
       "Genre": "Violinsonate"
     },
     {
       "KV": "028",
+      "Composer": "Mozart",
       "MovementNumber": "2",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -455,15 +426,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "9-18"
-        }
-      },
+        }],
       "Genre": "Violinsonate"
     },
     {
       "KV": "029",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -471,29 +441,27 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "9-15"
-        }
-      },
+        }],
       "Genre": "Violinsonate"
     },
     {
       "KV": "029",
+      "Composer": "Mozart",
       "MovementNumber": "2",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-mi",
           "Behavior": "modulierend",
           "Structure": "fa-mi",
           "Harmonies": "2G-1T",
           "Measures": "5-10"
-        }
-      },
+        }],
       "Genre": "Violinsonate"
     },
     {
       "KV": "030",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -501,15 +469,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "8-14"
-        }
-      },
+        }],
       "Genre": "Violinsonate"
     },
     {
       "KV": "031",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -517,15 +484,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "15-21"
-        }
-      },
+        }],
       "Genre": "Violinsonate"
     },
     {
       "KV": "038",
+      "Composer": "Mozart",
       "MovementNumber": "0",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -533,29 +499,27 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "10-18"
-        }
-      },
+        }],
       "Genre": "Singspiel"
     },
     {
       "KV": "038",
+      "Composer": "Mozart",
       "MovementNumber": "4",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3Q-4t-3T-2Q-3T-2Q-1G-2Q-1G",
           "Measures": "43-50"
-        }
-      },
+        }],
       "Genre": "Singspiel"
     },
     {
       "KV": "043",
+      "Composer": "Mozart",
       "MovementNumber": "5",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung ut-mi mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "ut-mi",
@@ -563,15 +527,14 @@
           "Cadence": "Halbschluss",
           "Other": "Halbschluss über eine metrisch schwer angehängte Dominante",
           "Measures": "9-16"
-        }
-      },
+        }],
       "Genre": "Sinfonie"
     },
     {
       "KV": "045",
+      "Composer": "Mozart",
       "MovementNumber": "5",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -579,15 +542,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "tenorisierend",
           "Measures": "17-24"
-        }
-      },
+        }],
       "Genre": "Sinfonie"
     },
     {
       "KV": "045b (Anh. 214)",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -595,15 +557,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "tenorisierend",
           "Measures": "17-24"
-        }
-      },
+        }],
       "Genre": "Sinfonie"
     },
     {
       "KV": "047a (139)",
+      "Composer": "Mozart",
       "MovementNumber": "3",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -611,15 +572,14 @@
           "Cadence": "Halbschluss",
           "Other": "Gloria (Allegro)",
           "Measures": "5-9"
-        }
-      },
+        }],
       "Genre": "Messe"
     },
     {
       "KV": "047a (139)",
+      "Composer": "Mozart",
       "MovementNumber": "8",
-      "Transitions": {
-        "Transition": [
+      "Transitions": [
           {
             "Name": "Überleitung fa-ut mit Halbschluss",
             "Behavior": "nicht modulierend",
@@ -639,15 +599,14 @@
             "CadenceBass": "diskantisierend",
             "Measures": "186-192"
           }
-        ]
-      },
+        ],
       "Genre": "Messe"
     },
     {
       "KV": "048",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-mi mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-mi",
@@ -655,15 +614,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "tenorisierend",
           "Measures": "9-13"
-        }
-      },
+        }],
       "Genre": "Sinfonie"
     },
     {
       "KV": "048",
+      "Composer": "Mozart",
       "MovementNumber": "5",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -671,15 +629,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "8-11"
-        }
-      },
+        }],
       "Genre": "Sinfonie"
     },
     {
       "KV": "073 (075a)",
+      "Composer": "Mozart",
       "MovementNumber": "5",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -687,15 +644,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "unbestimmt",
           "Measures": "17-20"
-        }
-      },
+        }],
       "Genre": "Sinfonie"
     },
     {
       "KV": "073c (88)",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-sol mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-sol",
@@ -703,15 +659,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "26-42"
-        }
-      },
+        }],
       "Genre": "Arie"
     },
     {
       "KV": "073d (79)",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": [
+      "Transitions": [
           {
             "Name": "Überleitung fa-ut mit Halbschluss",
             "Behavior": "nicht modulierend",
@@ -730,15 +685,14 @@
             "CadenceBass": "diskantisierend",
             "Measures": "47-56"
           }
-        ]
-      },
+        ],
       "Genre": "Arie"
     },
     {
       "KV": "073m (97)",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -746,15 +700,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "tenorisierend",
           "Measures": "16-20"
-        }
-      },
+        }],
       "Genre": "Sinfonie"
     },
     {
       "KV": "073n (95)",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -762,29 +715,27 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "unbestimmt",
           "Measures": "17-26"
-        }
-      },
+        }],
       "Genre": "Sinfonie"
     },
     {
       "KV": "073o (82)",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4S-3T-2Q-1G-4S-3T-2Q-1G-4S-3T-2g-2Q-1G",
           "Measures": "31-38"
-        }
-      },
+        }],
       "Genre": "Arie"
     },
     {
       "KV": "073q (84)",
+      "Composer": "Mozart",
       "MovementNumber": "3",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-mi mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-mi",
@@ -792,15 +743,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "tenorisierend",
           "Measures": "17-32"
-        }
-      },
+        }],
       "Genre": "Sinfonie"
     },
     {
       "KV": "074",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -809,15 +759,14 @@
           "CadenceBass": "unbestimmt",
           "Other": "I-V-I- u. I-IV-I-V-I-Pendelharmonik T. 9-17",
           "Measures": "9-26"
-        }
-      },
+        }],
       "Genre": "Sinfonie"
     },
     {
       "KV": "075b (110)",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -825,15 +774,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "17-36"
-        }
-      },
+        }],
       "Genre": "Sinfonie"
     },
     {
       "KV": "075b (110)",
+      "Composer": "Mozart",
       "MovementNumber": "5",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -841,15 +789,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "metrisch",
           "Measures": "17-20"
-        }
-      },
+        }],
       "Genre": "Sinfonie"
     },
     {
       "KV": "111a (120)",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -858,15 +805,14 @@
           "CadenceBass": "diskantisierend",
           "Other": "Orchesterwalze u. I-IV-I-V-Pendel T. 9-24",
           "Measures": "9-33"
-        }
-      },
+        }],
       "Genre": "Sinfonie"
     },
     {
       "KV": "112",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -875,29 +821,27 @@
           "CadenceBass": "diskantisierend",
           "Other": "I-V-Pendelharmonik T. 10-15",
           "Measures": "10-23"
-        }
-      },
+        }],
       "Genre": "Sinfonie"
     },
     {
       "KV": "112",
+      "Composer": "Mozart",
       "MovementNumber": "5",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4t-3Q-2g-3T-2Q-1G",
           "Measures": "17-24"
-        }
-      },
+        }],
       "Genre": "Sinfonie"
     },
     {
       "KV": "114",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -905,15 +849,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "18-36"
-        }
-      },
+        }],
       "Genre": "Sinfonie"
     },
     {
       "KV": "114",
+      "Composer": "Mozart",
       "MovementNumber": "2",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -921,29 +864,27 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "metrisch",
           "Measures": "17-24"
-        }
-      },
+        }],
       "Genre": "Sinfonie"
     },
     {
       "KV": "124",
+      "Composer": "Mozart",
       "MovementNumber": "5",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung mi-ut",
           "Behavior": "modulierend",
           "Structure": "mi-ut",
           "Harmonies": "3Q-2g-3Q-2g-2Q-1G-2Q-1G-2g-2Q-1G",
           "Measures": "21-28"
-        }
-      },
+        }],
       "Genre": "Sinfonie"
     },
     {
       "KV": "134",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung ut-mi mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "ut-mi",
@@ -951,15 +892,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "bassierend",
           "Measures": "17-26"
-        }
-      },
+        }],
       "Genre": "Sinfonie"
     },
     {
       "KV": "134a (155)",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -967,15 +907,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "13-20"
-        }
-      },
+        }],
       "Genre": "Quartett"
     },
     {
       "KV": "134a (155)",
+      "Composer": "Mozart",
       "MovementNumber": "3",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -983,29 +922,27 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "metrisch",
           "Measures": "17-20"
-        }
-      },
+        }],
       "Genre": "Quartett"
     },
     {
       "KV": "134b (156)",
+      "Composer": "Mozart",
       "MovementNumber": "3",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-4S-3T-4S-3T-2g-2Q-1G",
           "Measures": "8-13"
-        }
-      },
+        }],
       "Genre": "Quartett"
     },
     {
       "KV": "157",
+      "Composer": "Mozart",
       "MovementNumber": "2",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung ut-mi mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "ut-mi",
@@ -1014,15 +951,14 @@
           "CadenceBass": "tenorisierend",
           "Other": "Wendung in die Nebentonart T. 12-13",
           "Measures": "14-21"
-        }
-      },
+        }],
       "Genre": "Quartett"
     },
     {
       "KV": "158",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "fa-ut",
@@ -1031,15 +967,14 @@
           "CadenceBass": "diskantisierend",
           "Other": "1-7-2-1-Schema T. 12-19",
           "Measures": "12-31"
-        }
-      },
+        }],
       "Genre": "Quartett"
     },
     {
       "KV": "158",
+      "Composer": "Mozart",
       "MovementNumber": "2",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "fa-ut",
@@ -1048,15 +983,14 @@
           "CadenceBass": "metrisch",
           "Other": "I-V-I-Pendel T. 7-9",
           "Measures": "7-10"
-        }
-      },
+        }],
       "Genre": "Quartett"
     },
     {
       "KV": "159",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -1065,15 +999,14 @@
           "CadenceBass": "diskantisierend",
           "Other": "I-IV-I-V-I-Pendel T.12-15",
           "Measures": "9-16"
-        }
-      },
+        }],
       "Genre": "Quartett"
     },
     {
       "KV": "159a (160)",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-re mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-re",
@@ -1081,15 +1014,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "tenorisierend",
           "Measures": "12-15"
-        }
-      },
+        }],
       "Genre": "Quartett"
     },
     {
       "KV": "168",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-mi mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "fa-mi",
@@ -1097,15 +1029,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "tenorisierend",
           "Measures": "13-18"
-        }
-      },
+        }],
       "Genre": "Quartett"
     },
     {
       "KV": "169",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "fa-ut",
@@ -1114,29 +1045,27 @@
           "CadenceBass": "metrisch",
           "Other": "I-V-I-Eröffnung 12-16",
           "Measures": "12-19"
-        }
-      },
+        }],
       "Genre": "Quartett"
     },
     {
       "KV": "169",
+      "Composer": "Mozart",
       "MovementNumber": "5",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-4S-3T-2Q-1G-4G-4S-3T-2Q-1G",
           "Measures": "8-12"
-        }
-      },
+        }],
       "Genre": "Quartett"
     },
     {
       "KV": "171",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -1145,15 +1074,14 @@
           "CadenceBass": "diskantisierend",
           "Other": "Phrasenverschränkung T. 28-29",
           "Measures": "30-35"
-        }
-      },
+        }],
       "Genre": "Quartett"
     },
     {
       "KV": "173",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -1161,15 +1089,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "10-16"
-        }
-      },
+        }],
       "Genre": "Quartett"
     },
     {
       "KV": "173",
+      "Composer": "Mozart",
       "MovementNumber": "2",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "fa-ut",
@@ -1178,15 +1105,14 @@
           "CadenceBass": "metrisch",
           "Other": "V-I-Pendel T. 9-10 und Terzfallunisono T. 13-16",
           "Measures": "9-16"
-        }
-      },
+        }],
       "Genre": "Quartett"
     },
     {
       "KV": "186a (201)",
+      "Composer": "Mozart",
       "MovementNumber": "5",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -1194,15 +1120,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "22-33"
-        }
-      },
+        }],
       "Genre": "Sinfonie"
     },
     {
       "KV": "186b (202)",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -1210,30 +1135,28 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "12-26"
-        }
-      },
+        }],
       "Genre": "Sinfonie"
     },
     {
       "KV": "186b (202)",
+      "Composer": "Mozart",
       "MovementNumber": "2",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Trugschlusskadenz T. 11-14",
           "Behavior": "nicht modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4S-3T-2g-2Q-1G-2Q-1G-3T-2Q-1G-3T-2Q-1G",
           "Other": "Trugschlusskadenz T. 11-14",
           "Measures": "11-21"
-        }
-      },
+        }],
       "Genre": "Sinfonie"
     },
     {
       "KV": "189d (279)",
+      "Composer": "Mozart",
       "MovementNumber": "3",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -1241,15 +1164,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "11-22"
-        }
-      },
+        }],
       "Genre": "Klaviersonate"
     },
     {
       "KV": "189e (280)",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung ut-mi mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "ut-mi",
@@ -1258,15 +1180,14 @@
           "CadenceBass": "diskantisierend",
           "Sequence": "I-V-Pendel T. 13-17",
           "Measures": "13-26"
-        }
-      },
+        }],
       "Genre": "Klaviersonate"
     },
     {
       "KV": "189e (280)",
+      "Composer": "Mozart",
       "MovementNumber": "3",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -1274,15 +1195,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "25-37"
-        }
-      },
+        }],
       "Genre": "Klaviersonate"
     },
     {
       "KV": "189f (281)",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "fa-ut",
@@ -1290,15 +1210,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "9-17"
-        }
-      },
+        }],
       "Genre": "Klaviersonate"
     },
     {
       "KV": "189f (281)",
+      "Composer": "Mozart",
       "MovementNumber": "3",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -1306,15 +1225,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "18-27"
-        }
-      },
+        }],
       "Genre": "Klaviersonate"
     },
     {
       "KV": "189h (283)",
+      "Composer": "Mozart",
       "MovementNumber": "2",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -1322,15 +1240,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "5-8"
-        }
-      },
+        }],
       "Genre": "Klaviersonate"
     },
     {
       "KV": "189k (200)",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-mi mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-mi",
@@ -1339,15 +1256,14 @@
           "CadenceBass": "diskantisierend",
           "Other": "Kadenzmodell im forte T. 13-19",
           "Measures": "13-32"
-        }
-      },
+        }],
       "Genre": "Sinfonie"
     },
     {
       "KV": "189k (200)",
+      "Composer": "Mozart",
       "MovementNumber": "2",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -1355,15 +1271,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "11-21"
-        }
-      },
+        }],
       "Genre": "Sinfonie"
     },
     {
       "KV": "189k (200)",
+      "Composer": "Mozart",
       "MovementNumber": "5",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -1371,29 +1286,27 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "tenorisierend",
           "Measures": "17-32"
-        }
-      },
+        }],
       "Genre": "Sinfonie"
     },
     {
       "KV": "207",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2g-2Q-1G-4G-3Q-4t-3T-2Q-3T-2G-2Q-1G",
           "Measures": "32-43"
-        }
-      },
+        }],
       "Genre": "Konzert"
     },
     {
       "KV": "211",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "fa-ut",
@@ -1402,15 +1315,14 @@
           "CadenceBass": "diskantisierend",
           "Other": "syntaktisch wie eine \"Periodennachsatz\"",
           "Measures": "25-29"
-        }
-      },
+        }],
       "Genre": "Konzert"
     },
     {
       "KV": "211",
+      "Composer": "Mozart",
       "MovementNumber": "2",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "fa-ut",
@@ -1419,15 +1331,14 @@
           "CadenceBass": "tenorisierend",
           "Other": "einleitender dominantischer Takt",
           "Measures": "17-24"
-        }
-      },
+        }],
       "Genre": "Konzert"
     },
     {
       "KV": "211",
+      "Composer": "Mozart",
       "MovementNumber": "3",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-mi mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-mi",
@@ -1436,15 +1347,14 @@
           "CadenceBass": "diskantisierend",
           "Other": "Pendelharmonik T. 17-20",
           "Measures": "21-24"
-        }
-      },
+        }],
       "Genre": "Konzert"
     },
     {
       "KV": "216",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -1452,15 +1362,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "51-64"
-        }
-      },
+        }],
       "Genre": "Konzert"
     },
     {
       "KV": "216",
+      "Composer": "Mozart",
       "MovementNumber": "2",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -1468,15 +1377,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "metrisch",
           "Measures": "9-12"
-        }
-      },
+        }],
       "Genre": "Konzert"
     },
     {
       "KV": "216",
+      "Composer": "Mozart",
       "MovementNumber": "3",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung re-ut mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "re-ut",
@@ -1485,15 +1393,14 @@
           "CadenceBass": "diskantisierend",
           "Other": "I-IV-I-Pendel T. 57-64",
           "Measures": "57-71"
-        }
-      },
+        }],
       "Genre": "Konzert"
     },
     {
       "KV": "218",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-re mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-re",
@@ -1501,15 +1408,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "58-65"
-        }
-      },
+        }],
       "Genre": "Konzert"
     },
     {
       "KV": "218",
+      "Composer": "Mozart",
       "MovementNumber": "2",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -1518,15 +1424,14 @@
           "CadenceBass": "diskantisierend",
           "Other": "T. 18-20 Gs (Koch 1) und Hs (Koch 2), Modell startet auf V  ",
           "Measures": "21-30"
-        }
-      },
+        }],
       "Genre": "Konzert"
     },
     {
       "KV": "254",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung ut-ut mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "ut-ut",
@@ -1535,15 +1440,14 @@
           "CadenceBass": "diskantisierend",
           "Other": "I-V-I-Pendelmodell T. 17-20",
           "Measures": "17-32"
-        }
-      },
+        }],
       "Genre": "Divertimento"
     },
     {
       "KV": "284b (309)",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -1551,15 +1455,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "tenorisierend",
           "Measures": "21-32"
-        }
-      },
+        }],
       "Genre": "Klaviersonate"
     },
     {
       "KV": "284c (311)",
+      "Composer": "Mozart",
       "MovementNumber": "2",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -1567,15 +1470,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "tenorisierend",
           "Measures": "12-16"
-        }
-      },
+        }],
       "Genre": "Klavierstück"
     },
     {
       "KV": "284c (311)",
+      "Composer": "Mozart",
       "MovementNumber": "3",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -1583,15 +1485,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "27-40"
-        }
-      },
+        }],
       "Genre": "Klaviersonate"
     },
     {
       "KV": "293a (301)",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -1599,15 +1500,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "28-43"
-        }
-      },
+        }],
       "Genre": "Violinsonate"
     },
     {
       "KV": "293a (301)",
+      "Composer": "Mozart",
       "MovementNumber": "2",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -1615,15 +1515,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "17-24"
-        }
-      },
+        }],
       "Genre": "Violinsonate"
     },
     {
       "KV": "293b (302)",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -1631,15 +1530,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "tenorisierend",
           "Measures": "33-40"
-        }
-      },
+        }],
       "Genre": "Violinsonate"
     },
     {
       "KV": "293c (303)",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -1647,15 +1545,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "11-18"
-        }
-      },
+        }],
       "Genre": "Violinsonate"
     },
     {
       "KV": "293c (303)",
+      "Composer": "Mozart",
       "MovementNumber": "2",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "fa-ut",
@@ -1663,15 +1560,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "5-12"
-        }
-      },
+        }],
       "Genre": "Violinsonate"
     },
     {
       "KV": "296",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -1680,15 +1576,14 @@
           "CadenceBass": "diskantisierend",
           "Other": "Pendelmodell T. 22-25",
           "Measures": "22-42"
-        }
-      },
+        }],
       "Genre": "Violinsonate"
     },
     {
       "KV": "296",
+      "Composer": "Mozart",
       "MovementNumber": "3",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -1696,15 +1591,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "17-24"
-        }
-      },
+        }],
       "Genre": "Violinsonate"
     },
     {
       "KV": "300a (297)",
+      "Composer": "Mozart",
       "MovementNumber": "2",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -1712,15 +1606,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "17-22"
-        }
-      },
+        }],
       "Genre": "Sinfonie"
     },
     {
       "KV": "300d (310)",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung la-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "la-ut",
@@ -1729,15 +1622,14 @@
           "CadenceBass": "diskantisierend",
           "Other": "I-V-Pendelharmonik T. 9-10",
           "Measures": "9-22"
-        }
-      },
+        }],
       "Genre": "Klaviersonate"
     },
     {
       "KV": "300h (330)",
+      "Composer": "Mozart",
       "MovementNumber": "3",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -1746,15 +1638,14 @@
           "CadenceBass": "metrisch",
           "Other": "3-2-4-3-Schema T. 21-28",
           "Measures": "21-32"
-        }
-      },
+        }],
       "Genre": "Klaviersonate"
     },
     {
       "KV": "300k (332)",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -1762,15 +1653,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "tenorisierend",
           "Measures": "22-40"
-        }
-      },
+        }],
       "Genre": "Klaviersonate"
     },
     {
       "KV": "300l (306)",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung ut-fa mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "ut-fa",
@@ -1779,15 +1669,14 @@
           "CadenceBass": "diskantisierend",
           "Other": "I-V-I-Pendelharmonik T. 12-17",
           "Measures": "12-25"
-        }
-      },
+        }],
       "Genre": "Violinsonate"
     },
     {
       "KV": "300l (306)",
+      "Composer": "Mozart",
       "MovementNumber": "2",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -1795,15 +1684,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "tenorisierend",
           "Measures": "14-17"
-        }
-      },
+        }],
       "Genre": "Violinsonate"
     },
     {
       "KV": "300l (306)",
+      "Composer": "Mozart",
       "MovementNumber": "3",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "fa-ut",
@@ -1812,15 +1700,14 @@
           "CadenceBass": "diskantisierend",
           "Other": "1-2-2-3-Schema T. 42-45",
           "Measures": "42-49"
-        }
-      },
+        }],
       "Genre": "Violinsonate"
     },
     {
       "KV": "315c (333)",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -1828,15 +1715,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "11-22"
-        }
-      },
+        }],
       "Genre": "Klaviersonate"
     },
     {
       "KV": "315c (333)",
+      "Composer": "Mozart",
       "MovementNumber": "3",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -1845,15 +1731,14 @@
           "CadenceBass": "metrisch",
           "Other": "3-2-4-3-Schema T. 17-20",
           "Measures": "17-24"
-        }
-      },
+        }],
       "Genre": "Klaviersonate"
     },
     {
       "KV": "317d (378)",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung ut-re mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "ut-re",
@@ -1862,15 +1747,14 @@
           "CadenceBass": "diskantisierend",
           "Other": "I-V-Pendel T. 16-19",
           "Measures": "16-28"
-        }
-      },
+        }],
       "Genre": "Violinsonate"
     },
     {
       "KV": "317d (378)",
+      "Composer": "Mozart",
       "MovementNumber": "3",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung ut-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "ut-ut",
@@ -1878,15 +1762,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "17-24"
-        }
-      },
+        }],
       "Genre": "Violinsonate"
     },
     {
       "KV": "319",
+      "Composer": "Mozart",
       "MovementNumber": "2",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -1894,15 +1777,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "19-26"
-        }
-      },
+        }],
       "Genre": "Sinfonie"
     },
     {
       "KV": "319",
+      "Composer": "Mozart",
       "MovementNumber": "5",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -1910,15 +1792,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "32-81"
-        }
-      },
+        }],
       "Genre": "Sinfonie"
     },
     {
       "KV": "338",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -1927,15 +1808,14 @@
           "CadenceBass": "tenorisierend",
           "Other": "I-V-Pendel T. 16-19",
           "Measures": "16-40"
-        }
-      },
+        }],
       "Genre": "Sinfonie"
     },
     {
       "KV": "338",
+      "Composer": "Mozart",
       "MovementNumber": "3",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung ut-fa mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "ut-fa",
@@ -1944,15 +1824,14 @@
           "CadenceBass": "diskantisierend",
           "Sequence": "I-V- Pendel T. 17-25 u. T. 25-29 Tonleiter in Terzen",
           "Measures": "17-42"
-        }
-      },
+        }],
       "Genre": "Sinfonie"
     },
     {
       "KV": "372",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung ut-re mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "ut-re",
@@ -1961,15 +1840,14 @@
           "CadenceBass": "diskantisierend",
           "Other": "Generalbassmodell T. 13-20",
           "Measures": "13-29"
-        }
-      },
+        }],
       "Genre": "Violinsonate"
     },
     {
       "KV": "374d (376)",
+      "Composer": "Mozart",
       "MovementNumber": "3",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -1977,30 +1855,28 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "37-44"
-        }
-      },
+        }],
       "Genre": "Violinsonate"
     },
     {
       "KV": "374f (380)",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Sequenz 4-8 aufwärts",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3Q-2g-2Q-1G",
           "Sequence": "4-8 aufwärts",
           "Measures": "13-23"
-        }
-      },
+        }],
       "Genre": "Violinsonate"
     },
     {
       "KV": "374f (380)",
+      "Composer": "Mozart",
       "MovementNumber": "3",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -2008,15 +1884,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "48-53"
-        }
-      },
+        }],
       "Genre": "Violinsonate"
     },
     {
       "KV": "385",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": [
+      "Transitions": [
           {
             "Name": "Überleitung ut-ut mit Halbschluss",
             "Behavior": "nicht modulierend",
@@ -2035,15 +1910,14 @@
             "CadenceBass": "tenorisierend",
             "Measures": "41-48"
           }
-        ]
-      },
+        ],
       "Genre": "Sinfonie"
     },
     {
       "KV": "449",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -2051,15 +1925,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "17-31"
-        }
-      },
+        }],
       "Genre": "Konzert"
     },
     {
       "KV": "450",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -2068,15 +1941,14 @@
           "CadenceBass": "diskantisierend",
           "Other": "(Kadenzwdhg. tenorisierend)",
           "Measures": "87-103"
-        }
-      },
+        }],
       "Genre": "Konzert"
     },
     {
       "KV": "454",
+      "Composer": "Mozart",
       "MovementNumber": "2",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -2084,15 +1956,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "21-29"
-        }
-      },
+        }],
       "Genre": "Violinsonate"
     },
     {
       "KV": "454",
+      "Composer": "Mozart",
       "MovementNumber": "3",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "fa-ut",
@@ -2101,15 +1972,14 @@
           "CadenceBass": "unbestimmt",
           "Other": "Seitensatz T. 31-36 und Terzunisono T. 40-41",
           "Measures": "37-49"
-        }
-      },
+        }],
       "Genre": "Violinsonate"
     },
     {
       "KV": "481",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -2117,15 +1987,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "tenorisierend",
           "Measures": "25-36"
-        }
-      },
+        }],
       "Genre": "Violinsonate"
     },
     {
       "KV": "496",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-mi mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "fa-mi",
@@ -2133,15 +2002,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "22-36"
-        }
-      },
+        }],
       "Genre": "Trio"
     },
     {
       "KV": "499",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -2149,15 +2017,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "24-40"
-        }
-      },
+        }],
       "Genre": "Quartett"
     },
     {
       "KV": "502",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -2165,15 +2032,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "13-30"
-        }
-      },
+        }],
       "Genre": "Trio"
     },
     {
       "KV": "526",
+      "Composer": "Mozart",
       "MovementNumber": "3",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -2181,15 +2047,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "metrisch",
           "Measures": "8-12"
-        }
-      },
+        }],
       "Genre": "Violinsonate"
     },
     {
       "KV": "533",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -2197,15 +2062,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "tenorisierend",
           "Measures": "31-41"
-        }
-      },
+        }],
       "Genre": "Klaviersonate"
     },
     {
       "KV": "543",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-mi mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-mi",
@@ -2214,29 +2078,27 @@
           "CadenceBass": "tenorisierend",
           "Other": "Taktgruppe im Forte T. 54-71",
           "Measures": "54-96"
-        }
-      },
+        }],
       "Genre": "Sinfonie"
     },
     {
       "KV": "543",
+      "Composer": "Mozart",
       "MovementNumber": "3",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut",
           "Behavior": "nicht modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4S-3T-4S-3T-2g-2Q-1G",
           "Measures": "9-12"
-        }
-      },
+        }],
       "Genre": "Sinfonie"
     },
     {
       "KV": "543",
+      "Composer": "Mozart",
       "MovementNumber": "5",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-mi mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-mi",
@@ -2244,15 +2106,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "tenorisierend",
           "Measures": "16-41"
-        }
-      },
+        }],
       "Genre": "Sinfonie"
     },
     {
       "KV": "545",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "fa-ut",
@@ -2260,15 +2121,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "5-12"
-        }
-      },
+        }],
       "Genre": "Klaviersonate"
     },
     {
       "KV": "545",
+      "Composer": "Mozart",
       "MovementNumber": "3",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -2276,15 +2136,14 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "9-12"
-        }
-      },
+        }],
       "Genre": "Klaviersonate"
     },
     {
       "KV": "547",
+      "Composer": "Mozart",
       "MovementNumber": "2",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung ut-mi mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "ut-mi",
@@ -2293,15 +2152,14 @@
           "CadenceBass": "tenorisierend",
           "Other": "I-V-V-I-Schema (vor)",
           "Measures": "16-31"
-        }
-      },
+        }],
       "Genre": "Violinsonate"
     },
     {
       "KV": "550",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung ut-mi mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "ut-mi",
@@ -2310,15 +2168,14 @@
           "CadenceBass": "bassierend",
           "Other": "modulierende Themenwdhg. T. 22-27",
           "Measures": "22-42"
-        }
-      },
+        }],
       "Genre": "Sinfonie"
     },
     {
       "KV": "550",
+      "Composer": "Mozart",
       "MovementNumber": "2",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung mi-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "mi-ut",
@@ -2327,15 +2184,14 @@
           "CadenceBass": "tenorisierend",
           "Other": "1-7-2-1-Schema T. 20-23",
           "Measures": "20-27"
-        }
-      },
+        }],
       "Genre": "Sinfonie"
     },
     {
       "KV": "551",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": [
+      "Transitions": [
           {
             "Name": "Überleitung fa-ut mit Halbschluss",
             "Behavior": "nicht modulierend",
@@ -2354,15 +2210,14 @@
             "CadenceBass": "diskantisierend",
             "Measures": "47"
           }
-        ]
-      },
+        ],
       "Genre": "Sinfonie"
     },
     {
       "KV": "563",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -2371,15 +2226,14 @@
           "CadenceBass": "diskantisierend",
           "Other": "einleitende T-D-Pendelharmonik",
           "Measures": "15-26"
-        }
-      },
+        }],
       "Genre": "Klavierstück"
     },
     {
       "KV": "570",
+      "Composer": "Mozart",
       "MovementNumber": "1",
-      "Transitions": {
-        "Transition": {
+      "Transitions": [{
           "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
@@ -2387,8 +2241,7 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "bassierend",
           "Measures": "21-40"
-        }
-      },
+        }],
       "Genre": "Klaviersonate"
     }
   ]

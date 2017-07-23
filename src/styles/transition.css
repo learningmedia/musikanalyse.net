@@ -1,0 +1,31 @@
+table.transitionTable {
+	border: 1px solid white;
+}
+
+table.transitionTable tr.firstRow {
+	margin-bottom: 6px;
+}
+
+table.transitionTable tr.firstRow th {
+	box-sizing: border-box;
+	border-bottom: 1px solid gray;
+	padding: 0 0 6px 2px;
+}
+
+table.transitionTable tr {
+	background-color: white;
+	border: 0;
+}
+
+table.transitionTable tr td {
+	margin: 0;
+	border: 0;
+	margin-top: 6px;
+	padding: 0;
+	padding-left: 2px;
+}
+
+.green-btn {
+	background: #49BF4C none repeat scroll 0 0;
+	border: 0;
+}

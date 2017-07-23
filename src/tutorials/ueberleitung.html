@@ -5,15 +5,45 @@ date: 2017-03-13
 modified: 2017-03-13
 layout: tutorial.ejs
 category: Terminologie, Form
-abstract: In diesem Tutorial wird ein Modell zur Analyse des Formteils ›Überleitung‹ in Sonatensätzen vorgestellt. Das Tutorial dient zur Veranschaulichung der Ergebnisse des Beitrags <a href="http://www.gmth.de/zeitschrift/artikel/448.aspx">»Der Begriff der ›Überleitung‹ und die Musik Mozarts«</a>, der 2009 in der Zeitschrift der Gesellschaft für Musiktheorie erschienen ist.
+abstract: In diesem Tutorial wird ein Modell zur Analyse des Formteils ›Überleitung‹ in Sonatensätzen vorgestellt. Das Tutorial dient zur Veranschaulichung der Ergebnisse des Beitrags <a href="http://www.gmth.de/zeitschrift/artikel/448.aspx">»Der Begriff der ›Überleitung‹ und die Musik Mozarts«</a>, der 2009 in der Zeitschrift der Gesellschaft für Musiktheorie erschienen ist. 
 ---
 
+<link rel="stylesheet" href="/styles/transition.css" />
 <script src="/scripts/transition.js"></script>
-
-<div class="transitionData">
-	
-</div>
 
 
 <p>Bitte haben Sie einen Moment Geduld, hier entsteht in Kürze ein neues Tutorial...</p>
 <img src="http://animationswelt.de/images/baustelle/_baustelle-018.gif" />
+
+
+
+<button class="button green-btn" onclick="toggleTable(this)">Tabelle ausblenden</button>
+<br><br>
+<div id="transitionData"></div>
+
+
+<script>
+  function toggleTable(elem) {
+    var elem = jQuery(elem);
+    if(elem.html() == "Tabelle ausblenden") {
+        elem.html("Tabelle einblenden");
+        jQuery("#transitionData").hide();
+      }
+      else {
+        elem.html("Tabelle ausblenden");
+        jQuery("#transitionData").show();
+      }
+  }
+  function showDetails(id) {
+      var elem = jQuery("a[data-linkId=" + id + "]");
+      if (elem.html() == "Vollanzeige") {
+          elem.html("reduzieren");
+          jQuery("#" + id).show();
+      }
+      else {
+          elem.html("Vollanzeige");
+          jQuery("#" + id).hide();
+      }
+  }
+</script>
+<script type="text/javascript" src="/scripts/sorttable.js"></script>
