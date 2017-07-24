@@ -19,31 +19,34 @@ abstract: In diesem Tutorial wird ein Modell zur Analyse des Formteils ›Überl
 
 <button class="button green-btn" onclick="toggleTable(this)">Tabelle ausblenden</button>
 <br><br>
-<div id="transitionData"></div>
+<div id="transitionData" data-transitions=""></div>
 
 
 <script>
+
   function toggleTable(elem) {
-    var elem = jQuery(elem);
+    var elem = $(elem);
     if(elem.html() == "Tabelle ausblenden") {
-        elem.html("Tabelle einblenden");
-        jQuery("#transitionData").hide();
-      }
-      else {
-        elem.html("Tabelle ausblenden");
-        jQuery("#transitionData").show();
-      }
+      elem.html("Tabelle einblenden");
+      $("#transitionData").hide();
+    }
+    else {
+      elem.html("Tabelle ausblenden");
+      $("#transitionData").show();
+    }
   }
+
   function showDetails(id) {
-      var elem = jQuery("a[data-linkId=" + id + "]");
+      var elem = $("a[data-linkId=" + id + "]");
       if (elem.html() == "Vollanzeige") {
           elem.html("reduzieren");
-          jQuery("#" + id).show();
+          $("#" + id).show();
       }
       else {
           elem.html("Vollanzeige");
-          jQuery("#" + id).hide();
+          $("#" + id).hide();
       }
   }
+
 </script>
 <script type="text/javascript" src="/scripts/sorttable.js"></script>

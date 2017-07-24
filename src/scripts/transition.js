@@ -22,7 +22,7 @@ function Work(id, movementNumber, transitions, genre, composer) {
   this.composer = composer;
 }
 
-var works = loadJSON('/content/tutorials/ueberleitung/json-data/transitions.json', function(data) {
+loadJSON('/content/tutorials/ueberleitung/json-data/transitions.json', function(data) {
     //Hier werden die Daten geholt
     var works = data.Works;
     var worksArr = [];
@@ -35,20 +35,34 @@ var works = loadJSON('/content/tutorials/ueberleitung/json-data/transitions.json
       var work = new Work(kv, mn, tr, ge, cp);
       worksArr.push(work);
     }
-
-    //Hier wird das HTML zusammengesetzt
-    var html = "";
-    for (var i = 0; i < worksArr.length; i++) {
-      html += getWorkMarkup(i + 1, worksArr[i]);
-    }
-
-    //Hier wird das HTML in den Container gesetzt
-    $("#transitionData").append(getTable(html));
+    //Hier wird die JSON-Objekte an den Container gehängt
+    $("#transitionData").data('transitions', worksArr);
+    //Hier wird das HTML der Tabelle erstellt
+    $("#transitionData").append(createTable(worksArr));
   },
   function(xhr) {
     console.error(xhr);
   }
 );
+
+function createTable(transitions) {
+  var html = "";
+  for (var i = 0; i < transitions.length; i++) {
+    html += getWorkMarkup(i + 1, transitions[i]);
+  }
+  return getTableMarkup(html);
+}
+
+function getTableMarkup(worksHtml) {
+  return '<table class="transitionTable">' +
+    '<tr class="firstRow">' +
+      '<th style="width: 25%;">Werk</th>' +
+      '<th style="width: 400px">Modell</th>' +
+      '<th>Anzeige</th>' +
+    '</tr>' +
+    worksHtml +
+  '</table>';
+}
 
 function getWorkMarkup(counter, work) {
   var html = "";
@@ -89,15 +103,4 @@ function getTransitionTrMarkup(work, id, transitionCounter, transition) {
     '</td>' +
   '</tr>';
   return html;
-}
-
-function getTable(worksHtml) {
-  return '<table class="transitionTable">' +
-    '<tr class="firstRow">' +
-      '<th style="width: 25%;">Werk</th>' +
-      '<th style="width: 400px">Modell</th>' +
-      '<th>Anzeige</th>' +
-    '</tr>' +
-    worksHtml +
-  '</table>';
 }
