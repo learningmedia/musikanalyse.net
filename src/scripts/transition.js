@@ -39,10 +39,6 @@ loadJSON('/content/tutorials/ueberleitung/json-data/transitions.json', function(
     $("#transitionData").data('transitions', worksArr);
     //Hier wird das HTML der Tabelle erstellt
     $("#transitionData").append(createTable(worksArr));
-    ClearHarmonyFields();
-    HideDetails();
-    $("#noMatchContainer").hide();
-    $("#resultTable").hide();
   },
   function(xhr) {
     console.error(xhr);
@@ -58,7 +54,7 @@ function createTable(transitions) {
 }
 
 function getTableMarkup(worksHtml) {
-  return '<table id="resultTable">' +
+  return '<table id="resultTable" style="display:none;">' +
     '<tr class="firstRow">' +
       '<th style="width: 25%;">Werk</th>' +
       '<th style="width: 400px">Modell</th>' +
@@ -77,7 +73,7 @@ function getWorkMarkup(counter, work) {
 
   for (var i = 0; i < work.transitions.length; i++) {
     var id = countStr + i.toString();
-    var snippet = '<tr class="item">' +
+    var snippet = '<tr class="item" style="display: none;">' +
     '<td>' + (workIdType + work.id) + '</td>' +
     '<td>' + work.transitions[i].Structure + '</td>' +
     '<td><a data-linkId="' + id + '" onclick="showDetails(' + id + ')" class="cp">Vollanzeige</a></td>' +
@@ -90,7 +86,7 @@ function getWorkMarkup(counter, work) {
 }
 
 function getTransitionTrMarkup(work, id, transitionCounter, transition) {  
-  var html = '<tr id="' + id + '" class="details">' +
+  var html = '<tr id="' + id + '" class="details" style="display:none;">' +
     '<td colspan="3">' +
       '<fieldset>' +
         '<legend>KV ' + work.id + ', ' + work.movementNumber + '. Satz</legend>' +

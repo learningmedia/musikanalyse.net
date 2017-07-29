@@ -1,40 +1,33 @@
-// Funktionalität zur clientseitigen Suche in den Überleitungen Mozarts
+// Functionality for searching in transitions of Mozarts, Haydns and...
 // Ulrich Kaiser, 2011 
-// Aktualisiert am 11.02.2013
+// prorting to musikanalyse.net at 07/29/2017 
 
-function OnSelectionClick() {
-  LoadSearch($('#searchSelector').val());
+function onSelectionChange() {
+  loadSearch($('#searchSelector').val());
 }
 
 // Methode für die Auswahl der Art der Suche
 
-function LoadSearch(name) {
+function loadSearch(name) {
   $(".fieldSets").hide();
   if (name != "none") {
     $("#" + name).show();
   } else {
-    Reset()
+    reset()
   }
-}
-
-// Allgemeine Funktionalität zum Einstellung der Sichtbarkeit
-
-function ClearHarmonyFields() {
-  $(".fieldSets").hide();
-  $("#bassSelelectorField").hide();
 }
 
 // Methoden für die Sichtbarkeit der Elemente auf dem Suchformular
 // Setzt die Visibility aller Einträge auf "collapsed"
 
-function HideDetails() {
+function hideDetails() {
   $(".item").hide();
   $(".details").hide();
 }
 
 // Zeigt entweder den No-Match-Container an oder die Tabelle mit den Ergebnissen
 
-function SetVisibilityOfResults(value) {
+function setVisibilityOfResults(value) {
   if (value) {
     $("#noMatchContainer").hide();
     $("#resultTable").show();
@@ -42,7 +35,7 @@ function SetVisibilityOfResults(value) {
   else {
     $("#noMatchContainer").show();
     $("#resultTable").hide();
-    HideDetails();
+    hideDetails();
   }
 }
 
@@ -61,15 +54,15 @@ function showDetails(id) {
   }
 }
 
-function Reset() {
+function reset() {
   $(".item").hide();
   $(".details").hide();
   $("#noMatchContainer").hide();
   $("#resultTable").hide();
-  OnHarmoniesResetClick();
+  onHarmoniesResetClick();
 }
 
-function OnHarmonyDeleteClick() {
+function onHarmonyDeleteClick() {
   var number = $("#ddl_number").val();
   var harmony = $("#ddl_harmony").val();
 
@@ -92,14 +85,14 @@ function OnHarmonyDeleteClick() {
   }
 }
 
-function OnHarmoniesResetClick() {
+function onHarmoniesResetClick() {
   $("#searchPattern").attr("value", "");
   $("#harmoniesContainer").html("");
 }
 
 // Funktionsbereich für die Harmoniesuche
 
-function OnNextHarmonyShowClick() {
+function onNextHarmonyShowClick() {
   var number = $("#ddl_number").val();
   var harmony = $("#ddl_harmony").val().split("-");
   var lastValue = $("#searchPattern").attr("value");
@@ -114,28 +107,28 @@ function OnNextHarmonyShowClick() {
   image.appendTo("#harmoniesContainer");
 }
 
-function Search() {
+function search() {
   var searchPattern = $("#searchPattern").attr("value");
   var value = false;
   $(".details div.harmonies:contains('" + searchPattern + "')").each(function (i, elem) {
     $(this).parent().parent().parent().prev().show();
     value = true;
   });
-  SetVisibilityOfResults(value);
+  setVisibilityOfResults(value);
 }
 
 // Funktionsbereich für die Kadenzsuche
 
-function ShowCadenceBass() {
+function showCadenceBass() {
   $("#bassSelelectorField").toggle();
 }
 
-function HideCadenceBass() {
+function hideCadenceBass() {
   $("#bassSelelectorField").toggle();
 }
 
-function OnCadenceSearchClick() {
-  HideDetails();
+function onCadenceSearchClick() {
+  hideDetails();
   var value = false;
   var bassSelectorFieldIsVisible = $("#bassSelelectorField").is(":visible");
 
@@ -153,19 +146,20 @@ function OnCadenceSearchClick() {
   }
   else {
     $("div.cadence").each(function (i, elem) {
-      if ($(elem).html().length == 102) {
-        $(elem).parent().parent().parent().prev().show();
+      var jqobj = $(elem);
+      if (jqobj.html().length === 8) {
+        jqobj.parent().parent().parent().prev().show();
         value = true;
       };
     });
   }
 
-  SetVisibilityOfResults(value);
+  setVisibilityOfResults(value);
 }
 
 // Funktionsbereich für die professionelle Suche
 
-function OnProfessionalSearchClick() {
+function onProfessionalSearchClick() {
   var searchPattern = $("#professionalSearchTermLabel1").val();
   if (searchPattern != "") {
     var value = false;
@@ -173,14 +167,14 @@ function OnProfessionalSearchClick() {
       $(this).parent().parent().parent().prev().show();
       value = true;
     });
-    SetVisibilityOfResults(value);
+    setVisibilityOfResults(value);
   }
 }
 
 // Funktionsbereich für die Behavior-Suche
 
-function OnBehaviorSearchClick() {
-    HideDetails();
+function onBehaviorSearchClick() {
+    hideDetails();
     var value = $("#behaviorSelector2").is(":checked");
     if (value) {
         $("div.behavior:contains('nicht')").each(function(i, elem) {
@@ -193,5 +187,5 @@ function OnBehaviorSearchClick() {
             value = true;
         });
     }
-    SetVisibilityOfResults(value);
+    setVisibilityOfResults(value);
 }
