@@ -1,23 +1,42 @@
-table.transitionTable {
+fieldset {
+	border: 0 !important;
+}
+
+/* Anzeige der Harmonien */
+
+#harmoniesContainer img {
+	margin: 0 !important;
+	margin-top: 30px !important;
+	float: left !important;
+}
+
+/* Anzeige der Tabelle */
+
+.green-btn {
+	background: #49BF4C none repeat scroll 0 0;
+	border: 0;
+}
+
+table#resultTable {
 	border: 1px solid white;
 }
 
-table.transitionTable tr.firstRow {
+table#resultTable tr.firstRow {
 	margin-bottom: 6px;
 }
 
-table.transitionTable tr.firstRow th {
+table#resultTable tr.firstRow th {
 	box-sizing: border-box;
 	border-bottom: 1px solid gray;
 	padding: 0 0 6px 2px;
 }
 
-table.transitionTable tr {
+table#resultTable tr {
 	background-color: white;
 	border: 0;
 }
 
-table.transitionTable tr td {
+table#resultTable tr td {
 	margin: 0;
 	border: 0;
 	margin-top: 6px;
@@ -25,7 +44,10 @@ table.transitionTable tr td {
 	padding-left: 2px;
 }
 
-.green-btn {
-	background: #49BF4C none repeat scroll 0 0;
-	border: 0;
+table#resultTable tr.details {
+	border: 1px solid silver;
+}
+
+table#resultTable tr.details td {
+		background-color: #e5e5e5;
 }

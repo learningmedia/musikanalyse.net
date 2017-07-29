@@ -39,6 +39,10 @@ loadJSON('/content/tutorials/ueberleitung/json-data/transitions.json', function(
     $("#transitionData").data('transitions', worksArr);
     //Hier wird das HTML der Tabelle erstellt
     $("#transitionData").append(createTable(worksArr));
+    ClearHarmonyFields();
+    HideDetails();
+    $("#noMatchContainer").hide();
+    $("#resultTable").hide();
   },
   function(xhr) {
     console.error(xhr);
@@ -54,7 +58,7 @@ function createTable(transitions) {
 }
 
 function getTableMarkup(worksHtml) {
-  return '<table class="transitionTable">' +
+  return '<table id="resultTable">' +
     '<tr class="firstRow">' +
       '<th style="width: 25%;">Werk</th>' +
       '<th style="width: 400px">Modell</th>' +
@@ -73,7 +77,7 @@ function getWorkMarkup(counter, work) {
 
   for (var i = 0; i < work.transitions.length; i++) {
     var id = countStr + i.toString();
-    var snippet = '<tr>' +
+    var snippet = '<tr class="item">' +
     '<td>' + (workIdType + work.id) + '</td>' +
     '<td>' + work.transitions[i].Structure + '</td>' +
     '<td><a data-linkId="' + id + '" onclick="showDetails(' + id + ')" class="cp">Vollanzeige</a></td>' +
@@ -86,16 +90,16 @@ function getWorkMarkup(counter, work) {
 }
 
 function getTransitionTrMarkup(work, id, transitionCounter, transition) {  
-  var html = '<tr id="' + id + '" class="details" style="display: none;">' +
+  var html = '<tr id="' + id + '" class="details">' +
     '<td colspan="3">' +
       '<fieldset>' +
         '<legend>KV ' + work.id + ', ' + work.movementNumber + '. Satz</legend>' +
         '<div><span class="bold">Überleitung: ' + transitionCounter + '</span></div>' +
         '<div>Name: ' + (transition.Structure || 'keine Angabe') + '</div>' +
-        '<div>Harmoniefolge: ' + (transition.Harmonies || 'keine Angabe') + '</div>' +
-        '<div>Wirkung: ' + (transition.Behavior || 'keine Angabe') + '</div>' +
-        '<div>Kadenz: ' + (transition.Cadence || '') + '</div>' +
-        '<div>Kadenzart: ' + (transition.CadenceBass || '') + '</div>' +
+        '<div class="harmonies">Harmoniefolge: ' + (transition.Harmonies || 'keine Angabe') + '</div>' +
+        '<div class="behavior">Wirkung: ' + (transition.Behavior || 'keine Angabe') + '</div>' +
+        '<div class="cadence">Kadenz: ' + (transition.Cadence || '') + '</div>' +
+        '<div class="cadenceBass">Kadenzart: ' + (transition.CadenceBass || '') + '</div>' +
         '<div>Bemerkungen: ' + (transition.Other || '') + '</div>' +
         '<div>Takt: ' + (transition.Measures || 'keine Angabe') + '</div>' +
         '<div>Gattung: ' + (work.genre || 'keine Angabe') + '</div>' +

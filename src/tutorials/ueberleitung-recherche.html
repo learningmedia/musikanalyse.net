@@ -1,0 +1,145 @@
+---
+title: Die ›Überleitung‹ (Recherchen)
+author: Ulrich Kaiser
+date: 2017-07-28
+modified: 2017-07-28
+layout: tutorial.ejs
+category: Terminologie, Form
+abstract: In diesem Tutorial gibt es die Möglichkeiten zur Recherche in einer Datgenbank zum Formteil ›Überleitung‹.
+---
+
+<link rel="stylesheet" href="/styles/transition.css" />
+
+<section>
+  <h3>Suche</h3>
+  <fieldset>
+      <legend style="margin-bottom: 10px;">Suchen Sie im vorhandenen Datenbestand</legend>
+      <select id="searchSelector">
+          <option value="none">-- Wählen Sie einen Filter aus --</option>
+          <option value="harmoniesSearchFormular">Harmoniefolgen in Überleitungen</option>
+          <option value="cadenceSearchFormular">Kadenzabschlüsse von Überleitungen</option>
+          <option value="behaviorSearchFormular">modulierende oder nicht-modulierende Überleitungen</option>
+          <option value="professionalSearchFormular">mit einem freien Suchausdruck</option>
+      </select>
+      <input id="selectButton" type="button" onclick="OnSelectionClick()" style="margin: 0 10px 10px 0;" value="auswählen" />
+  </fieldset>
+
+  <div id="harmoniesSearchFormular" class="fieldSets">
+    <fieldset>
+      <legend style="margin-bottom: 10px;">Suchfilter</legend>
+      <p>
+         Geben Sie Akkordsymbole für eine Harmoniefolge ein (Erklärungen zu den Akkordsymbolen finden sie <a href="/wissenschaft/mozartprojekt">hier</a>):
+      </p>
+      <div class="editor-field">
+        <select id="ddl_number" style="width: 75px;">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4" selected="selected">4</option>
+        </select>
+        <select id="ddl_harmony" style="width: 75px;">
+          <option value="g-G" selected="selected">G</option>
+          <option value="k-g">g</option>
+          <option value="g-T">T</option>
+          <option value="k-t">t</option>
+          <option value="g-Q">Q</option>
+          <option value="k-q">q</option>
+          <option value="g-S">S</option>
+          <option value="k-s">s</option>
+          <option value="g-n">N</option>
+        </select>
+        <input type="button" style="width: 200px; margin-top: -10px;" onclick="OnNextHarmonyShowClick()" value="Harmonie übernehmen" />&nbsp;
+        <input type="button" style="width: 200px; margin-top: -10px;" onclick="OnHarmonyDeleteClick()" value="Harmonie löschen" />&nbsp;
+        <input type="button" style="width: 200px; margin-top: -10px;" onclick="OnHarmoniesResetClick()" value="Alle Harmonien löschen" />
+      </div>
+      <br style="clear: left;" />
+      <div id="clef" style="float: left;">
+          <img src="/img/mozartHarmonies/clef.png" alt="Violinschlüssel" />
+      </div>
+      <div id="harmoniesContainer">
+      </div>
+      <div style="clear: left;">
+          <input type="text" id="searchPattern" readonly="readonly" />
+          <input type="button" onclick="Search()" value="Suche im Datenbestand" style="width: 200px; margin-top: -10px;" />&nbsp;
+          <input type="button" onclick="Reset()" value="Reset" style="width: 100px; margin-top: -10px;" />
+      </div>
+    </fieldset>
+  </div>
+
+  <div id="cadenceSearchFormular" class="fieldSets">
+    <fieldset>
+      <legend style="margin-bottom: 10px;">Suchfilter</legend>
+      <p>
+         Suche nach Überleitungen
+      </p>
+      <div>
+         <input id="cadenceSelector1" type="radio" name="cadenceSelector" onchange="ShowCadenceBass()" checked="checked" style="margin-top: -4px;" />&nbsp;&nbsp;&nbsp;ohne Halbschluss
+      </div>
+      <div style="margin-top: 10px;">
+         <input id="cadenceSelector2" type="radio" name="cadenceSelector" style="margin-top: -4px;" onchange="HideCadenceBass()" style="margin-top: -4px;" />&nbsp;&nbsp;&nbsp;mit Halbschluss
+      </div>
+      <div id="bassSelelectorField">
+         <hr style="width: 200px; margin-left: 0; margin-right: auto;" />
+         <div>
+            <input id="bassSelector1" type="radio" name="bassSelector" checked="checked" value="diskantisierend" style="margin-top: -4px;" />&nbsp;&nbsp;&nbsp;und einer diskantisierender Basswendendung
+         </div>
+         <div style="margin-top: 10px;">
+            <input id="bassSelector2" type="radio" name="bassSelector" value="tenorisierend" style="margin-top: -4px;" />&nbsp;&nbsp;&nbsp;und einer tenorisierender Basswendung
+         </div>
+         <div style="margin-top: 10px;">
+            <input id="bassSelector3" type="radio" name="bassSelector" value="bassierend" style="margin-top: -4px;" />&nbsp;&nbsp;&nbsp;und einer bassierender Basswendung
+         </div>
+      </div>
+      <input type="button" onclick="OnCadenceSearchClick()" value="Suche" style="margin-top: 30px; width: 100px;" />&nbsp;
+      <input type="button" onclick="Reset()" value="Reset" style="margin-top: 30px; width: 100px;" />
+    </fieldset>
+  </div>
+
+  <div id="behaviorSearchFormular" class="fieldSets">
+    <fieldset>
+      <legend style="margin-bottom: 10px;">Suchfilter</legend>
+      <p>
+        Suche nach Überleitungen, die
+      </p>
+      <div>
+        <input id="behaviorSelector1" type="radio" name="behaviorSelector" style="margin-top: -4px;" value="modulierend" />&nbsp;&nbsp;&nbsp;modulieren
+      </div>
+      <div style="margin-top: 10px;">
+        <input id="behaviorSelector2" type="radio" name="behaviorSelector" style="margin-top: -4px;" value="nicht modulierende" />&nbsp;&nbsp;&nbsp;nicht modulieren
+      </div>
+      <input type="button" onclick="OnBehaviorSearchClick()" value="Suche" style="margin-top: 30px; width: 100px;" />&nbsp;
+      <input type="button" onclick="Reset()" value="Reset" style="margin-top: 30px; width: 100px;" />
+    </fieldset>
+  </div>
+
+  <div id="professionalSearchFormular" class="fieldSets">
+    <fieldset>
+      <legend style="margin-bottom: 10px;">Suchfilter</legend>
+      <div style="margin-bottom: 10px;">
+          Einfache Suche nach einem Wort oder einem im Datenbestand verwendeten Symbol in
+          allen Feldern:
+      </div>
+      <input id="professionalSearchTermLabel1" type="text" name="behaviorSelector" style="margin: 0 10px 10px 0;" /><br />
+      <input type="button" onclick="OnProfessionalSearchClick()" value="Suche" style="margin-top: 30px; width: 100px;" />&nbsp;
+      <input type="button" onclick="Reset()" value="Reset" style="margin-top: 30px; width: 100px;" />
+    </fieldset>
+  </div>
+</section>
+<section>
+  <p>
+      Ergebnisse:
+  </p>
+  <div id="noMatchContainer">
+      <p style="color: Red;">
+          Im derzeitigen Datenbestand wurden keine Übereinstimmungen gefunden.
+      </p>
+  </div>
+</section>
+
+
+<!-- <button class="button green-btn" onclick="toggleTable(this)">Alle Überleitungen einblenden</button> -->
+<br><br>
+<div id="transitionData" data-transitions=""></div>
+
+<script src="/scripts/transition.js"></script>
+<script src="/scripts/transition-search.js"></script>
