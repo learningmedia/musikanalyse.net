@@ -22,17 +22,17 @@ function Work(id, movementNumber, transitions, genre, composer) {
   this.composer = composer;
 }
 
-loadJSON('/content/tutorials/ueberleitung/json-data/transitions.json', function(data) {
+loadJSON('/content/tutorials/ueberleitung-recherche/json-data/transitions.json', function(data) {
     //Hier werden die Daten geholt
     var works = data.Works;
     var worksArr = [];
     for (var i = 0; i < works.length; i++) {
-      var kv = works[i]['KV'];
+      var id = works[i]['Id'];
       var mn = works[i]['MovementNumber'];
       var tr = works[i]['Transitions'];
       var ge = works[i]['Genre'];
       var cp = works[i]['Composer'];
-      var work = new Work(kv, mn, tr, ge, cp);
+      var work = new Work(id, mn, tr, ge, cp);
       worksArr.push(work);
     }
     //Hier wird die JSON-Objekte an den Container gehängt
@@ -67,10 +67,18 @@ function getTableMarkup(worksHtml) {
 function getWorkMarkup(counter, work) {
   var html = "";
   var countStr = counter.toString();
-  var workIdType = "KV ";
-  if (work.composer === "Beethoven") workIdType = "Op. ";
-  if (work.composer === "Haydn") workIdType = "Hob.";
-
+  var workIdType = "Id ";
+  switch(work.composer){
+   case "Mozart":
+     workIdType = "KV ";
+     break;
+   case "Haydn":
+     workIdType = "Hob. ";
+     break;
+   case "Beethoven":
+     workIdType = "Op. ";
+     break;
+  }
   for (var i = 0; i < work.transitions.length; i++) {
     var id = countStr + i.toString();
     var snippet = '<tr class="item" style="display: none;">' +
@@ -79,17 +87,17 @@ function getWorkMarkup(counter, work) {
     '<td><a data-linkId="' + id + '" onclick="showDetails(' + id + ')" class="cp">Vollanzeige</a></td>' +
     '</tr>';
     html += snippet;
-    var trData = getTransitionTrMarkup(work, id, i + 1, work.transitions[i]);
+    var trData = getTransitionTrMarkup(work, id, workIdType, i + 1, work.transitions[i]);
     html += trData;
   }
   return html;
 }
 
-function getTransitionTrMarkup(work, id, transitionCounter, transition) {  
+function getTransitionTrMarkup(work, id, workIdType, transitionCounter, transition) {  
   var html = '<tr id="' + id + '" class="details" style="display:none;">' +
     '<td colspan="3">' +
       '<fieldset>' +
-        '<legend>KV ' + work.id + ', ' + work.movementNumber + '. Satz</legend>' +
+        '<legend>' + workIdType + ' ' + work.id + ', ' + work.movementNumber + '. Satz</legend>' +
         '<div><span class="bold">Überleitung: ' + transitionCounter + '</span></div>' +
         '<div>Name: ' + (transition.Structure || 'keine Angabe') + '</div>' +
         '<div class="harmonies">Harmoniefolge: ' + (transition.Harmonies || 'keine Angabe') + '</div>' +

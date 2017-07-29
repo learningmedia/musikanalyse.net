@@ -20,9 +20,15 @@ function loadSearch(name) {
 // Methoden für die Sichtbarkeit der Elemente auf dem Suchformular
 // Setzt die Visibility aller Einträge auf "collapsed"
 
-function hideDetails() {
+function showTable() {
+  $(".item").show();
+  $("#resultTable").show();
+}
+
+function hideTable() {
   $(".item").hide();
   $(".details").hide();
+  $("#resultTable").hide();
 }
 
 // Zeigt entweder den No-Match-Container an oder die Tabelle mit den Ergebnissen
@@ -35,7 +41,7 @@ function setVisibilityOfResults(value) {
   else {
     $("#noMatchContainer").show();
     $("#resultTable").hide();
-    hideDetails();
+    hideTable();
   }
 }
 
@@ -128,7 +134,7 @@ function hideCadenceBass() {
 }
 
 function onCadenceSearchClick() {
-  hideDetails();
+  hideTable();
   var value = false;
   var bassSelectorFieldIsVisible = $("#bassSelelectorField").is(":visible");
 
@@ -174,7 +180,7 @@ function onProfessionalSearchClick() {
 // Funktionsbereich für die Behavior-Suche
 
 function onBehaviorSearchClick() {
-    hideDetails();
+    hideTable();
     var value = $("#behaviorSelector2").is(":checked");
     if (value) {
         $("div.behavior:contains('nicht')").each(function(i, elem) {

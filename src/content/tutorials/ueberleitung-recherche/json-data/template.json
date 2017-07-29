@@ -1,0 +1,16 @@
+{
+  "Id": "XVI:3",
+  "Composer": "Haydn",
+  "MovementNumber": "1",
+  "Transitions": [{
+      "Name": "Überleitung fa-ut",
+      "Behavior": "modulierend",
+      "Structure": "fa-ut",
+      "Harmonies": "4G-3T-2Q-1G",
+      "Cadence": "Halbschluss",
+      "CadenceBass": "diskantisierend",
+      "Other": "",
+      "Measures": "13-24"
+    }],
+  "Genre": "Klaviersonate"
+},

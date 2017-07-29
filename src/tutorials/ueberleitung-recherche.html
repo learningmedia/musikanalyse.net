@@ -1,5 +1,5 @@
 ---
-title: Die ›Überleitung‹ (Recherchen)
+title: Die ›Überleitung‹ (Recherche)
 author: Ulrich Kaiser
 date: 2017-07-28
 modified: 2017-07-28
@@ -10,6 +10,47 @@ abstract: In diesem Tutorial gibt es die Möglichkeiten zur Recherche in einer D
 
 <link rel="stylesheet" href="/styles/transition.css" />
 
+<button class="button green-btn" id="toggleCommentBtn" onclick="toggleComment(this)">Erläuterungen zum Projekt einblenden</button>
+<button class="button green-btn" onclick="toggleTable(this)">Alle Überleitungen einblenden</button>
+<div id="einfuehrung" style="display: none; padding-top: 20px;"> 
+  <h4 id="datenbank-projekt">Hilfe zur Recherche</h4>
+  <h5>Zur Chiffrierung</h5>
+  <ul>
+    <li class="lineHight">
+      Die Länge der Tonleiter, an der sich eine charakteristische Überleitungsharmonik erkennen lässt, wird über Zahlen angegeben, z.B. 4–1&nbsp;=&nbsp;vier Töne oder 5-1&nbsp;=&nbsp;5 Töne. Die Struktur der Tonleiter wird durch Solmisationssilben gekennzeichnet, z.B. 4-1 fa-ut&nbsp;=&nbsp;f-e-d-c oder 5-1 sol-ut&nbsp;=&nbsp;g-f-e-d-c usw.
+    </li>
+    <li class="lineHight">
+      Die Harmonisierung der Töne des Tonleiterausschnitts einer Überleitung zeigt ein Buchstabe an: ›G‹ steht für eine Harmonisierung als Grundton, ›T‹ für eine Harmonisierung als Terzton, ›Q‹ als Quintton, ›S‹ als Septimton und ›N‹ als Nonenton. Große Buchstaben zeigen an, dass die Terz über dem Akkordgrundton groß ist, kleine Buchstaben kennzeichnen eine kleine Terz über dem Grundton. Im Falle der nachstehenden Abbildung stände ›4G‹ demnach für eine Harmonisierung des vierten Tons ›f‹ als F-Dur (›f‹ als Grundton), ›4t‹ chiffriert hingegen einen D-Moll-Akkord (›f‹ als Terzton). ›2Q‹ der Tabelle kennzeichnet den zweiten Ton ›d‹ des Tetrachords, als Quinte eines G-Dur-Dreiklangs oder -Septakkords usw.
+    </li>
+    <li class="lineHight">
+     Ein ganzverminderter Sepakkord (z.B. <i>gis</i>-<i>h</i>-<i>d</i>-<i>f</i>) wird als dominantischer Akkord gedeutet, sein Grundton wie in der Funktionstheorie über Terzsubstruktion ermittelt (Grundton des verminderten Septakkords <i>gis</i>-<i>h</i>-<i>d</i>-<i>f</i> wäre <i>e</i>). Diese Chiffrierung ist lediglich als eine Möglichkeit der Kennzeichnung zu verstehen, die Datenbankabfragen ermöglicht. Mit ihr verbinden sich keine Aussage zur Bedeutung bzw. Auffassung verminderter Septakkorde im 18. Jahrhundert.   
+    </li>
+  </ul>
+  <img src="/content/tutorials/ueberleitung/mozartChiffrierungen.jpg" alt="Tabelle zur Chiffrierung von Überleitungen" />
+  <br />
+  <p>
+    Ein hypothetisches Chiffrierungsbeispiel mit Erläuterungen zu dem oben abgebildeten Tetrachord:<br>
+    Tetrachord fa-ut mit <strong>4N-3q-2g-2Q-1G</strong>
+  </p>
+  <p>
+      <strong>4N</strong>&nbsp;=&nbsp;›f‹ als None über ›e‹, z.B. als verm. Septakkord (gis-h-d-f)<br />
+      <strong>3q</strong>&nbsp;=&nbsp;›e‹ als Quinte (a-c-e)<br />
+      <strong>2g</strong>&nbsp;=&nbsp;›d‹ als Grundton (d-f-a)<br />
+      <strong>2Q</strong>&nbsp;=&nbsp;›d‹ als Quintton (g-h-d)<br />
+      <strong>1G</strong>&nbsp;=&nbsp;›c‹ als Grundton (c-e-g)<br />
+  </p>
+  <p>
+    Wie aus dem Beispiel ersichtlich, erscheinen verminderte und halbverminderte Septakkorde mit dominantischer Funktion (im Sinne der Funktionstheorie) in der Systematik als ›verkürzte Dominantseptnonakkorde‹, werden also auf die Terz unter dem tiefsten Ton der Terzenschichtung bezogen (4N&nbsp;=&nbsp;großes N für die große Terz e-gis des verminderten Septakkores gis-h-d-f). Halbverminderte Septakkorde oder verminderte Dreiklänge ohne dominantische Funktion im Sinne der Funktionstheorie&nbsp;&minus;&nbsp;z.B. im Rahmen einer Quintfallsequenz&nbsp;&minus;&nbsp;werden dagegen nicht auf substruierte Fundamente bezogen. Diese Chiffrierung ist aus systematischen und pragmatischen Gründen gewählt worden, mit ihr verbindet sich keine Aussage zur Bedeutung bzw. Auffassung verminderter Septakkorde im 18.&nbsp;Jahrhundert.<br />
+    &nbsp;&nbsp;&nbsp;Chromatisierung einzelner Skalentöne eines idealtypischen Verlaufs können unter besonderen Umständen als akzidentielle (und nicht als substantielle) Veränderung verstanden werden (vgl. hierzu die Ausführungen am Ende meines <a href="/ueberleitungenmozarts/index">Aufsatzes</a>).  idealtypische Tetrachord f-es-d-c ließe sich also unter spezifischen Umständen als chromatische Variante des Tetrachords f-e-d-c auffassen also als farbliche Variante der Struktur fa-mi-re-ut und nicht als eigenständige Struktur sol-fa-mi-re).<br />
+    &nbsp;&nbsp;&nbsp;Die Außenstimmensätze, durch welche sich die Harmonik vermittelt, sind variabel und werden durch Harmoniefolgen nicht festgelegt. In der folgenden Abbildung repräsentieren z.B. die abgebildeten Außenstimmensätze das gleiche Harmoniemodell ›4G-3T-2Q-1G‹, die schwarzen Noten ohne Hals veranschaulichen den Idealtyp bzw. einen Tonleiterausschnitt fa–ut:
+  </p>
+  <img src="/content/tutorials/ueberleitung/mozartAussenstimmensaetze.jpg" alt="Außenstimmensätze zur Überleitung" />
+  <p>
+   Ob sich durch einen idealtypischen Tonleiterausschnitt referenzierte Überleitungen ›modulierend‹ oder ›nicht modulierend‹ verhalten, lässt sich nur über den Kontext bestimmen. Überleitungen wirken in der Regel modulierend, wenn Sie in Dur mit einem <a href="/tutorials/formanalyse-nach-h-chr-koch/" target="_blank">Halbschluss in der Nebentonart (3.&nbsp;Absatz nach Heinrich Christoph Koch)</a> enden.
+  </p>
+  <button class="button green-btn" onclick="closeComment(this)">Erläuterungen zum Projekt ausblenden</button>
+</div>
+<hr>
 <section>
   <h3>Suche</h3>
   <fieldset>
@@ -25,7 +66,7 @@ abstract: In diesem Tutorial gibt es die Möglichkeiten zur Recherche in einer D
   <div id="harmoniesSearchFormular" class="fieldSets">
     <fieldset>
       <p>
-         Geben Sie Akkordsymbole für eine Harmoniefolge ein (Erklärungen zu den Akkordsymbolen finden sie <a href="/wissenschaft/mozartprojekt">hier</a>):
+         Geben Sie Akkordsymbole für eine Harmoniefolge ein (Erklärungen zu den Akkordsymbolen finden sie <a href="/tutorials/ueberleitung#datenbank-projekt">hier</a>):
       </p>
       <div class="editor-field">
         <select id="ddl_number" style="width: 75px;">
@@ -120,20 +161,58 @@ abstract: In diesem Tutorial gibt es die Möglichkeiten zur Recherche in einer D
   </div>
 </section>
 <section>
-  <p>
-      Ergebnisse:
-  </p>
   <div id="noMatchContainer" style="display:none;">
-      <p style="color: Red;">
+      <p style="color: red;">
           Im derzeitigen Datenbestand wurden keine Übereinstimmungen gefunden.
       </p>
   </div>
 </section>
 
+<div style="margin-top: 30px; margin-bottom: 30px; border-top: 1px solid gray; padding-top: 30px;">
+  
+</div>
 
-<!-- <button class="button green-btn" onclick="toggleTable(this)">Alle Überleitungen einblenden</button> -->
-<br><br>
 <div id="transitionData" data-transitions=""></div>
 
 <script src="/scripts/transition.js"></script>
 <script src="/scripts/transition-search.js"></script>
+
+<script>
+  function toggleComment(elem) {
+    var elem = $(elem);
+    if(elem.html() == "Erläuterungen zum Projekt einblenden") {
+      elem.html("Erläuterungen zum Projekt ausblenden");
+      $("#einfuehrung").show();
+    }
+    else {
+      elem.html("Erläuterungen zum Projekt einblenden");
+      $("#einfuehrung").hide();
+    }
+  }
+  function closeComment() {
+    $("#einfuehrung").hide();
+    $("#toggleCommentBtn").html("Erläuterungen zum Projekt einblenden");
+  }
+  function toggleTable(elem) {
+    var elem = $(elem);
+    if(elem.html() == "Alle Überleitungen einblenden") {
+      elem.html("Alle Überleitungen ausblenden");
+      showTable();
+    }
+    else {
+      elem.html("Alle Überleitungen einblenden");
+      hideTable();
+    }
+  }
+  function showDetails(id) {
+      var elem = $("a[data-linkId=" + id + "]");
+      if (elem.html() == "Vollanzeige") {
+          elem.html("reduzieren");
+          $("#" + id).show();
+      }
+      else {
+          elem.html("Vollanzeige");
+          $("#" + id).hide();
+      }
+  }
+</script>
