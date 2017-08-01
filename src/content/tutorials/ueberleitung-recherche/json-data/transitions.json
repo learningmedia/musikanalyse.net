@@ -32,6 +32,64 @@
       "Genre": "Klaviersonate"
     },
     {
+      "Id": "XVI:5",
+      "Composer": "Haydn",
+      "MovementNumber": "1",
+      "Transitions": [{
+          "Name": "Überleitung fa-ut",
+          "Behavior": "modulierend",
+          "Structure": "fa-ut",
+          "Harmonies": "4S-3T-4S-3T-4G-3T-2Q-1G",
+          "Cadence": "",
+          "CadenceBass": "",
+          "Other": "",
+          "Measures": "7-9"
+        },
+        {
+          "Name": "Überleitung fa-ut",
+          "Behavior": "modulierend",
+          "Structure": "fa-ut",
+          "Harmonies": "4G-3T-2Q-1G-4G-3T-2Q-1G",
+          "Cadence": "",
+          "CadenceBass": "",
+          "Other": "",
+          "Measures": "22-25"
+        }],
+      "Genre": "Klaviersonate"
+    },
+    {
+      "Id": "XVI:7",
+      "Composer": "Haydn",
+      "MovementNumber": "1",
+      "Transitions": [{
+          "Name": "Überleitung fa-ut",
+          "Behavior": "modulierend",
+          "Structure": "fa-ut",
+          "Harmonies": "4G-3T-2Q-1G",
+          "Cadence": "",
+          "CadenceBass": "",
+          "Other": "kein Seitensatz",
+          "Measures": "5-6"
+        }],
+      "Genre": "Klaviersonate"
+    },
+    {
+      "Id": "XVI:8",
+      "Composer": "Haydn",
+      "MovementNumber": "1",
+      "Transitions": [{
+          "Name": "Überleitung fa-ut",
+          "Behavior": "nicht modulierend",
+          "Structure": "fa-ut",
+          "Harmonies": "4G-3T-2Q-1G",
+          "Cadence": "Halbschluss",
+          "CadenceBass": "diskantisierend",
+          "Other": "Verschmelzung von Seitensatz und Schlussgruppe",
+          "Measures": "5-8"
+        }],
+      "Genre": "Klaviersonate"
+    },
+    {
       "Id": "001e",
       "Composer": "Mozart",
       "MovementNumber": "1",
