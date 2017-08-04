@@ -23,11 +23,11 @@
 .createExercise {
 	margin-bottom: 6px;
 }
-.attantionText { 
+.attantionText {
 	margin-top: 20px;
 }
 #exercise-unplayable, #exercise-doubleLeadingTone, #exercise-incomplete {
-	color: red; 
+	color: red;
 	font-weight: bold;
 	display: none;
 }
@@ -40,7 +40,7 @@
 	background-color: lightgreen;
 }
 .flexContainer {
-	display: flex; 
+	display: flex;
 }
 .flexItem {
 	margin-right: 10px;
@@ -51,11 +51,11 @@
 
 
 .textButton {
-	font-size: 10px; 
-	font-weight: bold; 
-	border: 1px solid gray; 
-	padding: 1px; 
-	display: inline-block; 
+	font-size: 10px;
+	font-weight: bold;
+	border: 1px solid gray;
+	padding: 1px;
+	display: inline-block;
 	background-color: lightgray;
 }
 .textButtonRed {
