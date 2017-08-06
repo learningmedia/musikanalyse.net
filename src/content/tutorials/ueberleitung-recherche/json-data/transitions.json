@@ -90,6 +90,86 @@
       "Genre": "Klaviersonate"
     },
     {
+      "Id": "XVI:12",
+      "Composer": "Haydn",
+      "MovementNumber": "1",
+      "Transitions": [{
+          "Name": "Überleitung fa-ut",
+          "Behavior": "modulierend",
+          "Structure": "fa-ut",
+          "Harmonies": "4G-3T-2Q-1G",
+          "Cadence": "Halbschluss",
+          "CadenceBass": "diskantisierend",
+          "Other": "vorangestelltes V-I-Pendelmodell",
+          "Measures": "5-11"
+        }],
+      "Genre": "Klaviersonate"
+    },
+    {
+      "Id": "XVI:18",
+      "Composer": "Haydn",
+      "MovementNumber": "1",
+      "Transitions": [{
+          "Name": "Überleitung fa-mi",
+          "Behavior": "modulierend",
+          "Structure": "fa-ut",
+          "Harmonies": "4g-3Q-2g-3T-2Q-1G",
+          "Cadence": "",
+          "CadenceBass": "",
+          "Other": "",
+          "Measures": "9-12"
+        }],
+      "Genre": "Klaviersonate"
+    },
+     {
+      "Id": "XVI:18",
+      "Composer": "Haydn",
+      "MovementNumber": "2",
+      "Transitions": [{
+          "Name": "Überleitung fa-ut",
+          "Behavior": "nicht modulierend",
+          "Structure": "fa-ut",
+          "Harmonies": "4G-3T-2Q-1G",
+          "Cadence": "Halbschluss",
+          "CadenceBass": "metrisch",
+          "Other": "Vorangestellter Beginn wie Hauptsatz (mit Chromatisierung, fa-ut-Modell auch im Hauptsatz)",
+          "Measures": "9-12"
+        }],
+      "Genre": "Klaviersonate"
+    },
+    {
+      "Id": "XVI:19",
+      "Composer": "Haydn",
+      "MovementNumber": "1",
+      "Transitions": [{
+          "Name": "Überleitung fa-ut",
+          "Behavior": "nicht modulierend",
+          "Structure": "fa-ut",
+          "Harmonies": "4G-4S-3T-2Q-1g",
+          "Cadence": "Halbschluss",
+          "CadenceBass": "tenorisierend",
+          "Other": "in zweiter Überleitung vor dem Halbschluss der Nebentonart (daher nicht modulierend)",
+          "Measures": "21-23"
+        }],
+      "Genre": "Klaviersonate"
+    },
+    {
+      "Id": "XVI:21",
+      "Composer": "Haydn",
+      "MovementNumber": "1",
+      "Transitions": [{
+          "Name": "Überleitung fa-ut",
+          "Behavior": "nicht modulierend",
+          "Structure": "fa-ut",
+          "Harmonies": "4G-4t-3g-3q-2g-2Q-1G",
+          "Cadence": "Halbschluss",
+          "CadenceBass": "diskantisierend",
+          "Other": "in zweiter Überleitung vor dem Halbschluss der Nebentonart (daher nicht modulierend)",
+          "Measures": "24-27"
+        }],
+      "Genre": "Klaviersonate"
+    },
+    {
       "Id": "001e",
       "Composer": "Mozart",
       "MovementNumber": "1",
