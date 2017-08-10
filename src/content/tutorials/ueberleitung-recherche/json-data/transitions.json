@@ -4,7 +4,6 @@
       "Composer": "Haydn",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2Q-1G",
@@ -20,7 +19,6 @@
       "Composer": "Haydn",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2Q-1G",
@@ -36,7 +34,6 @@
       "Composer": "Haydn",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4S-3T-4S-3T-4G-3T-2Q-1G",
@@ -46,7 +43,6 @@
           "Measures": "7-9"
         },
         {
-          "Name": "Überleitung fa-ut",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2Q-1G-4G-3T-2Q-1G",
@@ -62,7 +58,6 @@
       "Composer": "Haydn",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2Q-1G",
@@ -78,7 +73,6 @@
       "Composer": "Haydn",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut",
           "Behavior": "nicht modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2Q-1G",
@@ -94,7 +88,6 @@
       "Composer": "Haydn",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2Q-1G",
@@ -110,7 +103,6 @@
       "Composer": "Haydn",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-mi",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4g-3Q-2g-3T-2Q-1G",
@@ -121,12 +113,11 @@
         }],
       "Genre": "Klaviersonate"
     },
-     {
+    {
       "Id": "XVI:18",
       "Composer": "Haydn",
       "MovementNumber": "2",
       "Transitions": [{
-          "Name": "Überleitung fa-ut",
           "Behavior": "nicht modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2Q-1G",
@@ -142,7 +133,6 @@
       "Composer": "Haydn",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut",
           "Behavior": "nicht modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-4S-3T-2Q-1g",
@@ -158,7 +148,6 @@
       "Composer": "Haydn",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut",
           "Behavior": "nicht modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-4t-3g-3q-2g-2Q-1G",
@@ -170,11 +159,100 @@
       "Genre": "Klaviersonate"
     },
     {
+      "Id": "XVI:23",
+      "Composer": "Haydn",
+      "MovementNumber": "1",
+      "Transitions": [{
+          "Behavior": "modulierend",
+          "Structure": "fa-ut",
+          "Harmonies": "4G-4t-3Q-2g-2Q-1G",
+          "Cadence": "Halbschluss",
+          "CadenceBass": "diskantisierend",
+          "Other": "",
+          "Measures": "13-20"
+        }],
+      "Genre": "Klaviersonate"
+    },
+    {
+      "Id": "XVI:28",
+      "Composer": "Haydn",
+      "MovementNumber": "1",
+      "Transitions": [{
+          "Behavior": "modulierend",
+          "Structure": "fa-ut",
+          "Harmonies": "3Q-2g-2Q-1G",
+          "Cadence": "Halbschluss",
+          "CadenceBass": "diskantisierend",
+          "Other": "",
+          "Measures": "17-24"
+        }],
+      "Genre": "Klaviersonate"
+    },
+    {
+      "Id": "XVI:28",
+      "Composer": "Haydn",
+      "MovementNumber": "2",
+      "Transitions": [{
+          "Behavior": "modulierend",
+          "Structure": "fa-ut",
+          "Harmonies": "4G-3T-2G-2Q-1G",
+          "Cadence": "",
+          "CadenceBass": "",
+          "Other": "es folgt direkt der Ganzschluss der Nebentonart (Menuett)",
+          "Measures": "4-7"
+        }],
+      "Genre": "Klaviersonate"
+    },
+    {
+      "Id": "XVI:29",
+      "Composer": "Haydn",
+      "MovementNumber": "1",
+      "Transitions": [{
+          "Behavior": "modulierend",
+          "Structure": "fa-ut",
+          "Harmonies": "4G-3Q-2g-3Q-2g-2Q-1G-2Q-1G",
+          "Cadence": "Halbschluss",
+          "CadenceBass": "diskantisierend",
+          "Other": "",
+          "Measures": "7-14"
+        }],
+      "Genre": "Klaviersonate"
+    },
+    {
+      "Id": "XVI:29",
+      "Composer": "Haydn",
+      "MovementNumber": "2",
+      "Transitions": [{
+          "Behavior": "modulierend",
+          "Structure": "fa-ut",
+          "Harmonies": "4G-3T-2g-2Q-1G",
+          "Cadence": "Halbschluss",
+          "CadenceBass": "diskantisierend",
+          "Other": "",
+          "Measures": "6-8"
+        }],
+      "Genre": "Klaviersonate"
+    },
+    {
+      "Id": "XVI:30",
+      "Composer": "Haydn",
+      "MovementNumber": "2",
+      "Transitions": [{
+          "Behavior": "nicht modulierend",
+          "Structure": "fa-ut",
+          "Harmonies": "4G-4S-3T-4S-3T-2Q-1G",
+          "Cadence": "Halbschluss",
+          "CadenceBass": "metrisch",
+          "Other": "",
+          "Measures": "5-8"
+        }],
+      "Genre": "Klaviersonate"
+    },
+    {
       "Id": "001e",
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-mi",
           "Behavior": "modulierend",
           "Structure": "fa-mi",
           "Harmonies": "2t-2S-1T",
@@ -187,7 +265,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-mi",
           "Behavior": "modulierend",
           "Structure": "fa-mi",
           "Harmonies": "2G-2S-1T-1Q",
@@ -200,7 +277,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2Q-1G",
@@ -213,7 +289,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-mi",
           "Behavior": "modulierend",
           "Structure": "fa-mi",
           "Harmonies": "2S-1T",
@@ -226,7 +301,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4S-3T-2Q-1G",
@@ -240,7 +314,6 @@
       "MovementNumber": "1",
       "Transitions": [
           {
-            "Name": "Überleitung fa-ut mit Halbschluss",
             "Behavior": "nicht modulierend",
             "Structure": "fa-ut",
             "Harmonies": "4G-3T-2Q-1G",
@@ -249,7 +322,6 @@
             "Measures": "3-8"
           },
           {
-            "Name": "Überleitung fa-ut mit Halbschluss",
             "Behavior": "nicht modulierend",
             "Structure": "fa-ut",
             "Harmonies": "4G-4q-3g-3q-2g-2Q-1G-2Q-1G",
@@ -265,7 +337,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Sequenz 3-8 aufwärts",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4t-4S-3T-2Q-1G-4t-4S-3T-2Q-1G",
@@ -279,7 +350,6 @@
       "Composer": "Mozart",
       "MovementNumber": "2",
       "Transitions": [{
-          "Name": "Überleitung fa-ut",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4t-4S-3T-2Q-1G",
@@ -292,7 +362,6 @@
       "Composer": "Mozart",
       "MovementNumber": "3",
       "Transitions": [{
-          "Name": "Überleitung fa-mi",
           "Behavior": "modulierend",
           "Structure": "fa-mi",
           "Harmonies": "2G-2S-1T",
@@ -305,7 +374,6 @@
       "Composer": "Mozart",
       "MovementNumber": "4",
       "Transitions": [{
-          "Name": "Überleitung fa-mi",
           "Behavior": "modulierend",
           "Structure": "fa-mi",
           "Harmonies": "2G-1T-2G-1T",
@@ -318,7 +386,6 @@
       "Composer": "Mozart",
       "MovementNumber": "5",
       "Transitions": [{
-          "Name": "Überleitung fa-ut",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-4t-3g-3t-2g-2Q-1G",
@@ -331,7 +398,6 @@
       "Composer": "Mozart",
       "MovementNumber": "2",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Sequenz 3-8 aufwärts",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2G-2Q-1G-3T-2G-2Q-1G",
@@ -345,7 +411,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-mi mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "fa-mi",
           "Harmonies": "2G-1T",
@@ -360,7 +425,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Sequenz 3-8 aufwärts",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2g-2Q-1G",
@@ -374,7 +438,6 @@
       "Composer": "Mozart",
       "MovementNumber": "2",
       "Transitions": [{
-          "Name": "Überleitung fa-ut",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2g-2Q-1G",
@@ -387,7 +450,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2Q-1G",
@@ -402,7 +464,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung re-ut mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "re-ut",
           "Harmonies": "2Q-1G",
@@ -417,7 +478,6 @@
       "Composer": "Mozart",
       "MovementNumber": "3",
       "Transitions": [{
-          "Name": "Überleitung fa-mi mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-mi",
           "Harmonies": "2g-2t-1G-1t",
@@ -432,7 +492,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-re mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "fa-re",
           "Harmonies": "3G-2T-1g",
@@ -447,7 +506,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit I-IV-I-V-I-Pendelharmonik T. 13-16",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4S-3T-2Q-1G-4G-3T-2g-2Q-1G-4G-3T-2g-2Q-1G-2Q-1G-4G-3Q-2g-2Q-1G",
@@ -461,7 +519,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2Q-1G",
@@ -476,7 +533,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-re mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-re",
           "Harmonies": "3S-3N-3S-2T-2Q-1g",
@@ -491,7 +547,6 @@
       "Composer": "Mozart",
       "MovementNumber": "3",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2Q-1G",
@@ -506,7 +561,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4t-4q-3G-3q-2Q-1G",
@@ -519,7 +573,6 @@
       "Composer": "Mozart",
       "MovementNumber": "3",
       "Transitions": [{
-          "Name": "Überleitung fa-ut",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-4t-3T-2Q-1G-4t-4S-3T-2Q-1G",
@@ -532,7 +585,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-mi mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "fa-mi",
           "Harmonies": "2G-1T",
@@ -547,7 +599,6 @@
       "Composer": "Mozart",
       "MovementNumber": "3",
       "Transitions": [{
-          "Name": "Überleitung fa-ut",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2Q-1G-2Q-1G",
@@ -560,7 +611,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4t-3T-2g-2G-2Q-1G",
@@ -573,7 +623,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-mi mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-mi",
           "Harmonies": "2G-2t-2S-1T",
@@ -588,7 +637,6 @@
       "Composer": "Mozart",
       "MovementNumber": "2",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2g-2Q-1G-4G-3T-2g-2Q-1G",
@@ -603,7 +651,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2G-2Q-1G-3T-2G-2Q-1G",
@@ -618,7 +665,6 @@
       "Composer": "Mozart",
       "MovementNumber": "2",
       "Transitions": [{
-          "Name": "Überleitung fa-mi",
           "Behavior": "modulierend",
           "Structure": "fa-mi",
           "Harmonies": "2G-1T",
@@ -631,7 +677,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2g-2Q-1G-3T-2g-2Q-1G",
@@ -646,7 +691,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2Q-1G-2Q-1G",
@@ -661,7 +705,6 @@
       "Composer": "Mozart",
       "MovementNumber": "0",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2g-2Q-1G",
@@ -676,7 +719,6 @@
       "Composer": "Mozart",
       "MovementNumber": "4",
       "Transitions": [{
-          "Name": "Überleitung fa-ut",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3Q-4t-3T-2Q-3T-2Q-1G-2Q-1G",
@@ -689,7 +731,6 @@
       "Composer": "Mozart",
       "MovementNumber": "5",
       "Transitions": [{
-          "Name": "Überleitung ut-mi mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "ut-mi",
           "Harmonies": "6G-5T-4g-3t-2G-1T",
@@ -704,7 +745,6 @@
       "Composer": "Mozart",
       "MovementNumber": "5",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-4S-3T-2Q-1G-4G-4S-3T-2Q-1G",
@@ -719,7 +759,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2Q-1G-2Q-1G-2Q-1G",
@@ -734,7 +773,6 @@
       "Composer": "Mozart",
       "MovementNumber": "3",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3Q-2G-2Q-1G",
@@ -750,7 +788,6 @@
       "MovementNumber": "8",
       "Transitions": [
           {
-            "Name": "Überleitung fa-ut mit Halbschluss",
             "Behavior": "nicht modulierend",
             "Structure": "fa-ut",
             "Harmonies": "4G-4S-3T-2s-1G",
@@ -760,7 +797,6 @@
             "Measures": "181-184"
           },
           {
-            "Name": "Überleitung fa-ut mit Halbschluss",
             "Behavior": "modulierend",
             "Structure": "fa-ut",
             "Harmonies": "4S-3T-2Q-1G",
@@ -776,7 +812,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-mi mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-mi",
           "Harmonies": "2G-2S-1T",
@@ -791,7 +826,6 @@
       "Composer": "Mozart",
       "MovementNumber": "5",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-4q-3g-3T-2g-2Q-1G-1t",
@@ -806,7 +840,6 @@
       "Composer": "Mozart",
       "MovementNumber": "5",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-4S-3T-2Q-1G-4G-4S-3T-2Q-1G",
@@ -821,7 +854,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-sol mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-sol",
           "Harmonies": "7G-6T-7G-6T-7G-6T-5Q-4G-5Q-4G-5Q-4G-5Q-4G-3T-2Q-1G",
@@ -837,7 +869,6 @@
       "MovementNumber": "1",
       "Transitions": [
           {
-            "Name": "Überleitung fa-ut mit Halbschluss",
             "Behavior": "nicht modulierend",
             "Structure": "fa-ut",
             "Harmonies": "4S-3Q-2g-2Q-1G",
@@ -846,7 +877,6 @@
             "Measures": "35-41"
           },
           {
-            "Name": "Überleitung fa-ut mit Halbschluss",
             "Behavior": "modulierend",
             "Structure": "fa-ut",
             "Harmonies": "4G-3T-2g-2Q-1G",
@@ -862,7 +892,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-4t-4G-4S-3T-2Q-1G",
@@ -877,7 +906,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2Q-1G",
@@ -892,7 +920,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4S-3T-2Q-1G-4S-3T-2Q-1G-4S-3T-2g-2Q-1G",
@@ -905,7 +932,6 @@
       "Composer": "Mozart",
       "MovementNumber": "3",
       "Transitions": [{
-          "Name": "Überleitung fa-mi mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-mi",
           "Harmonies": "2G-2S-1T",
@@ -920,7 +946,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2Q-1G",
@@ -936,7 +961,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4t-4S-3T-3bS-2T-1G-1Q-1G-1Q-2Q-1G-2Q-1G",
@@ -951,7 +975,6 @@
       "Composer": "Mozart",
       "MovementNumber": "5",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4t-3T-2Q-1G",
@@ -966,7 +989,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-4S-3T-2Q-1G",
@@ -982,7 +1004,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-4S-3T-2Q-1G",
@@ -998,7 +1019,6 @@
       "Composer": "Mozart",
       "MovementNumber": "5",
       "Transitions": [{
-          "Name": "Überleitung fa-ut",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4t-3Q-2g-3T-2Q-1G",
@@ -1011,7 +1031,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-4S-3T-2Q-1G",
@@ -1026,7 +1045,6 @@
       "Composer": "Mozart",
       "MovementNumber": "2",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2Q-1G",
@@ -1041,7 +1059,6 @@
       "Composer": "Mozart",
       "MovementNumber": "5",
       "Transitions": [{
-          "Name": "Überleitung mi-ut",
           "Behavior": "modulierend",
           "Structure": "mi-ut",
           "Harmonies": "3Q-2g-3Q-2g-2Q-1G-2Q-1G-2g-2Q-1G",
@@ -1054,7 +1071,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung ut-mi mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "ut-mi",
           "Harmonies": "6G-5T-4g-3t-2G-1T",
@@ -1069,7 +1085,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4t-4S-3T-2Q-1G",
@@ -1084,7 +1099,6 @@
       "Composer": "Mozart",
       "MovementNumber": "3",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2Q-1G",
@@ -1099,7 +1113,6 @@
       "Composer": "Mozart",
       "MovementNumber": "3",
       "Transitions": [{
-          "Name": "Überleitung fa-ut",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-4S-3T-4S-3T-2g-2Q-1G",
@@ -1112,7 +1125,6 @@
       "Composer": "Mozart",
       "MovementNumber": "2",
       "Transitions": [{
-          "Name": "Überleitung ut-mi mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "ut-mi",
           "Harmonies": "6G-5T-4g-3Q-2Q-1G",
@@ -1128,7 +1140,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2Q-1G-4G-3T-2Q-1G",
@@ -1144,7 +1155,6 @@
       "Composer": "Mozart",
       "MovementNumber": "2",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4S-3T-2Q-1G",
@@ -1160,7 +1170,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2Q-1G",
@@ -1176,7 +1185,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-re mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-re",
           "Harmonies": "3G-2T-1g",
@@ -1191,7 +1199,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-mi mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "fa-mi",
           "Harmonies": "2G-2Q-2S-1T-2G-1T",
@@ -1206,7 +1213,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2Q-1G",
@@ -1222,7 +1228,6 @@
       "Composer": "Mozart",
       "MovementNumber": "5",
       "Transitions": [{
-          "Name": "Überleitung fa-ut",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-4S-3T-2Q-1G-4G-4S-3T-2Q-1G",
@@ -1235,7 +1240,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4t-4S-3T-2Q-1G",
@@ -1251,7 +1255,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4g-4S-3t-2Q-1g-2Q-1T-2Q-1g",
@@ -1266,7 +1269,6 @@
       "Composer": "Mozart",
       "MovementNumber": "2",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4S-3T-2Q-1G",
@@ -1282,7 +1284,6 @@
       "Composer": "Mozart",
       "MovementNumber": "5",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2Q-1G",
@@ -1297,7 +1298,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2Q-1G",
@@ -1312,7 +1312,6 @@
       "Composer": "Mozart",
       "MovementNumber": "2",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Trugschlusskadenz T. 11-14",
           "Behavior": "nicht modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4S-3T-2g-2Q-1G-2Q-1G-3T-2Q-1G-3T-2Q-1G",
@@ -1326,7 +1325,6 @@
       "Composer": "Mozart",
       "MovementNumber": "3",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2Q-1t",
@@ -1341,7 +1339,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung ut-mi mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "ut-mi",
           "Harmonies": "6S-5T-5t-5bS-4T-4S-3#T-3t-3S-2T-2t-2S-1T",
@@ -1357,7 +1354,6 @@
       "Composer": "Mozart",
       "MovementNumber": "3",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4t-3T-2Q-1G",
@@ -1372,7 +1368,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-4G-3T-2Q-1G",
@@ -1387,7 +1382,6 @@
       "Composer": "Mozart",
       "MovementNumber": "3",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2Q-1G-2Q-1G-2Q-1G-2Q-1G",
@@ -1402,7 +1396,6 @@
       "Composer": "Mozart",
       "MovementNumber": "2",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-4G-3T-4G-3T-2Q-3T-2Q-1G",
@@ -1417,7 +1410,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-mi mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-mi",
           "Harmonies": "2G-1T-2G-2S-1T",
@@ -1433,7 +1425,6 @@
       "Composer": "Mozart",
       "MovementNumber": "2",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2Q-1T",
@@ -1448,7 +1439,6 @@
       "Composer": "Mozart",
       "MovementNumber": "5",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-4G-4S-3g-3q-2g-2Q-1G",
@@ -1463,7 +1453,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2g-2Q-1G-4G-3Q-4t-3T-2Q-3T-2G-2Q-1G",
@@ -1476,7 +1465,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2Q-1G-2Q-1G-2Q-1G",
@@ -1492,7 +1480,6 @@
       "Composer": "Mozart",
       "MovementNumber": "2",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4S-3T-4S-3T-2G-2Q-1G-4t-3T-2Q-1G",
@@ -1508,7 +1495,6 @@
       "Composer": "Mozart",
       "MovementNumber": "3",
       "Transitions": [{
-          "Name": "Überleitung fa-mi mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-mi",
           "Harmonies": "2G-2S-1q-2S-1T-1q",
@@ -1524,7 +1510,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-4G-3T-2g-2Q-1G",
@@ -1539,7 +1524,6 @@
       "Composer": "Mozart",
       "MovementNumber": "2",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2Q-1G-4G-3Q-2G-2Q-1G",
@@ -1554,7 +1538,6 @@
       "Composer": "Mozart",
       "MovementNumber": "3",
       "Transitions": [{
-          "Name": "Überleitung re-ut mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "re-ut",
           "Harmonies": "2g-2Q-1G-1t",
@@ -1570,7 +1553,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-re mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-re",
           "Harmonies": "4G-3T-3Q-2g-1S",
@@ -1585,7 +1567,6 @@
       "Composer": "Mozart",
       "MovementNumber": "2",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3Q-2g-2Q-1G-4G-3Q-2g-2Q-1G",
@@ -1601,7 +1582,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung ut-ut mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "ut-ut",
           "Harmonies": "8G-7Q-6g-5Q-4G-3Q-2g-1G",
@@ -1617,7 +1597,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2Q-1G-2Q-1G-2Q-1G",
@@ -1632,7 +1611,6 @@
       "Composer": "Mozart",
       "MovementNumber": "2",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3Q-2g-2Q-1G",
@@ -1647,7 +1625,6 @@
       "Composer": "Mozart",
       "MovementNumber": "3",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2g-2Q-1G-2Q-1G-2Q-1G",
@@ -1662,7 +1639,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-4t-3T-2Q-1G-2Q-1G",
@@ -1677,7 +1653,6 @@
       "Composer": "Mozart",
       "MovementNumber": "2",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2Q-1G",
@@ -1692,7 +1667,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-4t-3Q-2g-2Q-1g",
@@ -1707,7 +1681,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-4t-4S-3T-3S-2Q-1G",
@@ -1722,7 +1695,6 @@
       "Composer": "Mozart",
       "MovementNumber": "2",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-4G-3T-4G-3T-2G-2Q-1G",
@@ -1737,7 +1709,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2Q-1G",
@@ -1753,7 +1724,6 @@
       "Composer": "Mozart",
       "MovementNumber": "3",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2Q-1G",
@@ -1768,7 +1738,6 @@
       "Composer": "Mozart",
       "MovementNumber": "2",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2Q-1G-4G-3T-2Q-1G",
@@ -1783,7 +1752,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung la-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "la-ut",
           "Harmonies": "6g-5Q-4G-4t-3Q-2G-2Q-1G",
@@ -1799,7 +1767,6 @@
       "Composer": "Mozart",
       "MovementNumber": "3",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4t-3T-2Q-1G",
@@ -1815,7 +1782,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4t-3Q-2g-2Q-1g",
@@ -1830,7 +1796,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung ut-fa mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "ut-fa",
           "Harmonies": "5G-4Q-3g-2Q-1G",
@@ -1846,7 +1811,6 @@
       "Composer": "Mozart",
       "MovementNumber": "2",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2g-2Q-1G",
@@ -1861,7 +1825,6 @@
       "Composer": "Mozart",
       "MovementNumber": "3",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2Q-1G",
@@ -1877,7 +1840,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-4S-3T-2Q-1G-2Q-1G",
@@ -1892,7 +1854,6 @@
       "Composer": "Mozart",
       "MovementNumber": "3",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2Q-1G",
@@ -1908,7 +1869,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung ut-re mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "ut-re",
           "Harmonies": "7G-6Q-5T-4S-3t-2Q-1t",
@@ -1924,7 +1884,6 @@
       "Composer": "Mozart",
       "MovementNumber": "3",
       "Transitions": [{
-          "Name": "Überleitung ut-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "ut-ut",
           "Harmonies": "8G-7T-6g-5t-4G-3T-2Q-1G",
@@ -1939,7 +1898,6 @@
       "Composer": "Mozart",
       "MovementNumber": "2",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3Q-2g-2Q-1G-2S-1t",
@@ -1954,7 +1912,6 @@
       "Composer": "Mozart",
       "MovementNumber": "5",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3Q-2g-3Q-2g-3Q-2g-3Q-2g-2G-2Q-1G-2Q-1G-2Q-1G-2Q-1G",
@@ -1969,7 +1926,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-4S-3G-2Q-1g-2Q-1g",
@@ -1985,7 +1941,6 @@
       "Composer": "Mozart",
       "MovementNumber": "3",
       "Transitions": [{
-          "Name": "Überleitung ut-fa mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "ut-fa",
           "Harmonies": "5G-4S-3g-2Q-1G",
@@ -2001,7 +1956,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung ut-re mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "ut-re",
           "Harmonies": "7G-6Q-5g-4Q-3G-2Q-1g",
@@ -2017,7 +1971,6 @@
       "Composer": "Mozart",
       "MovementNumber": "3",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4t-3g-3Q-2g-2Q-1G",
@@ -2032,7 +1985,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Sequenz 4-8 aufwärts",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3Q-2g-2Q-1G",
@@ -2046,7 +1998,6 @@
       "Composer": "Mozart",
       "MovementNumber": "3",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2Q-1G",
@@ -2062,7 +2013,6 @@
       "MovementNumber": "1",
       "Transitions": [
           {
-            "Name": "Überleitung ut-ut mit Halbschluss",
             "Behavior": "nicht modulierend",
             "Structure": "ut-ut",
             "Harmonies": "8G-7S-6t-5Q-4G-3T-2Q-1G-2Q-1G",
@@ -2071,7 +2021,6 @@
             "Measures": "13-35"
           },
           {
-            "Name": "Überleitung fa-si mit Halbschluss",
             "Behavior": "modulierend",
             "Structure": "fa-si",
             "Harmonies": "5G-4T-3g-3t-2G-2t-1g-1T",
@@ -2087,7 +2036,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4t-3s-3Q-2g-2s-2Q-1G",
@@ -2102,7 +2050,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4t-3Q-2g-3T-2Q-1G",
@@ -2118,7 +2065,6 @@
       "Composer": "Mozart",
       "MovementNumber": "2",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3Q-2g-2Q-1G",
@@ -2133,7 +2079,6 @@
       "Composer": "Mozart",
       "MovementNumber": "3",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-4t-3g-3t-2g-2t-1G",
@@ -2149,7 +2094,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4t-3Q-2g-2Q-1G",
@@ -2164,7 +2108,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-mi mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "fa-mi",
           "Harmonies": "2S-1T-2S-1T",
@@ -2179,7 +2122,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4T-3Q-4t-3Q-2g-2Q-1G",
@@ -2194,7 +2136,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3Q-2g-3Q-2g-2Q-1G-2Q-1g-2Q-1g",
@@ -2209,7 +2150,6 @@
       "Composer": "Mozart",
       "MovementNumber": "3",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2Q-1G-3T-2Q-1G",
@@ -2224,7 +2164,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3Q-4t-3Q-2g-2Q-1G-2Q-1g",
@@ -2239,7 +2178,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-mi mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-mi",
           "Harmonies": "2G-1Q-2t-2S-1T",
@@ -2255,7 +2193,6 @@
       "Composer": "Mozart",
       "MovementNumber": "3",
       "Transitions": [{
-          "Name": "Überleitung fa-ut",
           "Behavior": "nicht modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4S-3T-4S-3T-2g-2Q-1G",
@@ -2268,7 +2205,6 @@
       "Composer": "Mozart",
       "MovementNumber": "5",
       "Transitions": [{
-          "Name": "Überleitung fa-mi mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-mi",
           "Harmonies": "2G-2s-1T-2G-2S-1T",
@@ -2283,7 +2219,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2Q-1G",
@@ -2298,7 +2233,6 @@
       "Composer": "Mozart",
       "MovementNumber": "3",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3T-2Q-1G",
@@ -2313,7 +2247,6 @@
       "Composer": "Mozart",
       "MovementNumber": "2",
       "Transitions": [{
-          "Name": "Überleitung ut-mi mit Halbschluss",
           "Behavior": "nicht modulierend",
           "Structure": "ut-mi",
           "Harmonies": "6G-5T-4g-3t-2G-1T",
@@ -2329,7 +2262,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung ut-mi mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "ut-mi",
           "Harmonies": "6G-5T-4T-3Q-2t-1T",
@@ -2345,7 +2277,6 @@
       "Composer": "Mozart",
       "MovementNumber": "2",
       "Transitions": [{
-          "Name": "Überleitung mi-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "mi-ut",
           "Harmonies": "3Q-2gQ-1G",
@@ -2362,7 +2293,6 @@
       "MovementNumber": "1",
       "Transitions": [
           {
-            "Name": "Überleitung fa-ut mit Halbschluss",
             "Behavior": "nicht modulierend",
             "Structure": "fa-ut",
             "Harmonies": "4G-3T-2q-2G-2q-2G-2Q-1G",
@@ -2371,7 +2301,6 @@
             "Measures": "24-37"
           },
           {
-            "Name": "Überleitung fa-mi mit Halbschluss",
             "Behavior": "nicht modulierend",
             "Structure": "fa-mi",
             "Harmonies": "2t-1Q",
@@ -2387,7 +2316,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4G-3Q-2g-3Q-2g-2Q-1G-2Q-1G",
@@ -2403,7 +2331,6 @@
       "Composer": "Mozart",
       "MovementNumber": "1",
       "Transitions": [{
-          "Name": "Überleitung fa-ut mit Halbschluss",
           "Behavior": "modulierend",
           "Structure": "fa-ut",
           "Harmonies": "4t-3Q-2T-3bS-2T-3bS-2T-3bN-2q-1G-1Q-2Q-1t",

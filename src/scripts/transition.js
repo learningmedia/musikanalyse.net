@@ -93,13 +93,15 @@ function getWorkMarkup(counter, work) {
   return html;
 }
 
-function getTransitionTrMarkup(work, id, workIdType, transitionCounter, transition) {  
+function getTransitionTrMarkup(work, id, workIdType, transitionCounter, transition) {
+  var hasHalfCadence = false;
+  if(transition.Cadence) hasHalfCadence = true;
   var html = '<tr id="' + id + '" class="details" style="display:none;">' +
     '<td colspan="3">' +
       '<fieldset>' +
         '<legend>' + workIdType + ' ' + work.id + ', ' + work.movementNumber + '. Satz</legend>' +
         '<div><span class="bold">Überleitung: ' + transitionCounter + '</span></div>' +
-        '<div>Name: ' + (transition.Structure || 'keine Angabe') + '</div>' +
+        '<div>Name: Überleitung ' + (transition.Structure || 'keine Angabe') + (hasHalfCadence ? " mit Halbschluss" : "") + '</div>' +
         '<div class="harmonies">Harmoniefolge: ' + (transition.Harmonies || 'keine Angabe') + '</div>' +
         '<div class="behavior">Wirkung: ' + (transition.Behavior || 'keine Angabe') + '</div>' +
         '<div class="cadence">Kadenz: ' + (transition.Cadence || '') + '</div>' +
