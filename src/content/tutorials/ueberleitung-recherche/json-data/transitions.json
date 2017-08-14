@@ -1,5 +1,35 @@
 {
   "Works": [{
+      "Id": "XVI:deest",
+      "Composer": "Haydn",
+      "MovementNumber": "1",
+      "Transitions": [{
+          "Behavior": "modulierend",
+          "Structure": "fa-ut",
+          "Harmonies": "4G-3T-2g-2Q-1G-4G-3T-2g-2Q-1G",
+          "Cadence": "Halbschluss",
+          "CadenceBass": "diskantisierend",
+          "Other": "Tonart Es-Dur, Satzüberschrift 'Moderato'",
+          "Measures": "12-17"
+        }],
+      "Genre": "Klaviersonate"
+    },
+    {
+      "Id": "XVI:deest",
+      "Composer": "Haydn",
+      "MovementNumber": "1",
+      "Transitions": [{
+          "Behavior": "nicht modulierend",
+          "Structure": "fa-ut",
+          "Harmonies": "4G-3T-4G-3T-2Q-1G-2Q-1G",
+          "Cadence": "Halbschluss",
+          "CadenceBass": "diskantisierend",
+          "Other": "Tonart Es-Dur, Satzüberschrift 'Allegro pietoso'",
+          "Measures": "13-20"
+        }],
+      "Genre": "Klaviersonate"
+    },
+    {
       "Id": "XVI:3",
       "Composer": "Haydn",
       "MovementNumber": "1",
@@ -25,7 +55,7 @@
           "Cadence": "",
           "CadenceBass": "",
           "Other": "danach Pendelharmonik und Gs der Nebentonart",
-          "Measures": "8-10"
+          "Measures": "8-11"
         }],
       "Genre": "Klaviersonate"
     },
@@ -245,6 +275,51 @@
           "CadenceBass": "metrisch",
           "Other": "",
           "Measures": "5-8"
+        }],
+      "Genre": "Klaviersonate"
+    },
+    {
+      "Id": "XVI:45",
+      "Composer": "Haydn",
+      "MovementNumber": "1",
+      "Transitions": [{
+          "Behavior": "modulierend",
+          "Structure": "fa-ut",
+          "Harmonies": "4G-3Q-2g-2Q-1G",
+          "Cadence": "Halbschluss",
+          "CadenceBass": "diskantisierend",
+          "Other": "einleitende I-V-Pendelharmonik",
+          "Measures": "12-18"
+        }],
+      "Genre": "Klaviersonate"
+    },
+    {
+      "Id": "XVI:45",
+      "Composer": "Haydn",
+      "MovementNumber": "2",
+      "Transitions": [{
+          "Behavior": "nicht modulierend",
+          "Structure": "fa-ut",
+          "Harmonies": "4G-3T-2Q-1G",
+          "Cadence": "Halbschluss",
+          "CadenceBass": "diskantisierend",
+          "Other": "",
+          "Measures": "11-13"
+        }],
+      "Genre": "Klaviersonate"
+    },
+    {
+      "Id": "XVI:46",
+      "Composer": "Haydn",
+      "MovementNumber": "1",
+      "Transitions": [{
+          "Behavior": "modulierend",
+          "Structure": "fa-ut",
+          "Harmonies": "4G-3Q-2g-2Q-1G",
+          "Cadence": "Halbschluss",
+          "CadenceBass": "diskantisierend",
+          "Other": "",
+          "Measures": "9-17"
         }],
       "Genre": "Klaviersonate"
     },
