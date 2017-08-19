@@ -89,6 +89,7 @@ function createExercise(id, options) {
 	exercises.push(exercise);
 	resetColors();
 	isFirstTry = true;
+  $('#attantionText').text('');
 	return exercise;
 }
 
@@ -108,6 +109,7 @@ function showValue() {
 
 	// delete the bass tone from the structure
   var values = exercise.values.slice(1);
+
   // delete the selected (root)key
   var index = selectedKeys.indexOf(exercise.scaleRoot);
   if (index >= 0) selectedKeys.splice(index, 1);
@@ -125,14 +127,28 @@ function showValue() {
 	exercise.rightValues = rightValues;
 	exercise.wrongValues = wrongValues;
 
-	if (exercise.wrongValues.length === 0 && isFirstTry) {
+  var attantionText = getInputNumberFeedBack(exercise.rightValues.length);
+  $('#attantionText').text(attantionText);
+	if (exercise.wrongValues.length === 0 && isFirstTry && attantionText.length === 0) {
 		rightAnswers++;
 	}
-
   $('#statistic').text(getFeedBack(rightAnswers, exercises));
+
 	// set colors for right and wrong keys
 	setColors(exercise);
 	setButtonsVisibility(false, true, true);
+}
+
+function getInputNumberFeedBack(number) {
+  debugger;
+  var value = 7 - number;
+  if (value === 1)  {
+    return "Sie haben leider einen Ton zu wenig angegeben.";
+  }
+  if (value > 1)  {
+    return `Ihre Eingabe ist unvollständig, Sie haben ${value} Töne zu wenig angegeben.`;
+  }
+  return '';
 }
 
 function getFeedBack(rightAnswers, exercises) {
