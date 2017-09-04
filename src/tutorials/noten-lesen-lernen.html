@@ -1,0 +1,109 @@
+---
+title: Noten lesen lernen
+author: Ulrich Kaiser
+date: 2017-09-04
+modified: 2017-09-04
+layout: tutorial.ejs
+category: Grundlagen
+abstract: In diesem Tutorial können Sie das Lesen von Noten im Violin- und Bassschlüssel üben.
+---
+
+<script src='/scripts/jquery.klavier.js'></script>
+<script src='/scripts/cleffExercises.js'></script>
+<link rel="stylesheet" href="/styles/cleffs.css">
+
+<button onclick="onAnnotationsClick(this)">Erläuterungen zu den Notenschlüsseln ausblenden</button>
+<br><br>
+<div id="scaleAnnotationContainer">
+  <p>
+    Bette haben Sie noch ein wenig Geduld.
+  </p>
+
+  <!-- Vorläufiges Ende des Tutorials -->
+  <img src="http://animationswelt.de/images/baustelle/_baustelle-018.gif" />
+
+    Schauen Sie mir doch beim Arbeiten zu, schon bald wird es hier ein neues Tutorial geben...
+  <hr>
+  <hr style="margin-top: -18px;">
+</div>
+
+<!--<div>
+    <img style="margin-left: auto;n margischritt-right: auto; margin-bottom: 0;" src="/content/tutorials/generalbass/2_d.png">
+    <img style="margin: 0 auto; padding-left: 6px;" src="/content/tutorials/generalbass/flat.png">
+  </div> -->
+<!-- Tonleiterspiel  -->
+
+<h3 id="tonleiterTrainer" style="float: left;">Testen Sie Ihr Wissen zum&nbsp;</h3>
+<select id="cleff" onchange="selectCleff()" style="width: 200px; height: 30px;">
+  <option value="violin">Violinschlüssel</option>
+<!--   <option value="bass">Bassschlüssel</option>
+  <option value="all">Violin- und Bassschlüssel</option> -->
+</select>
+<div style="height: 340px; clear: left;" id="exercise-container">
+  <span>Geben Sie den Ton <span id="name"></span> auf der Klaviatur an.</span>
+  <div style="height: 120px; margin-left: 40%; margin-top: 20px;">
+    <image style="margin: 0;" id="imageNote">
+  </div>
+  <div>
+    <div class="pianoContainer" id="exercise"></div>
+    <div class="flexContainer">
+      <button id="check" class="flexItem" style="border: 1px solid maroon;" onclick="show()">Überprüfen</button>
+      <button id="reset" class="flexItem" style="border: 1px solid navy;" onclick="reset()">Zurücksetzen</button>
+      <button id="new" class="flexItem" style="border: 1px solid green;" onclick="createNewExercise()">Neue Aufgabe</button>
+    </div>
+     <div id="attantionText" style="margin-top: 15px; color: maroon; font-weight: bold;" >
+    </div>
+  </div>
+</div>
+<div id="statistic" style="margin: 200px 0;"></div>
+<div class="smalltext" style="margin-top: 30px;">
+  <b>Anmerkungen:</b><br>
+  Mit der Schaltfläche <span class="textButton textButtonRed">Überprüfen</span> können Sie überprüfen, ob Ihre Eingabe richtig ist.
+  Sind nur grüne Tasten zu sehen, ist Ihre Eingabe korrekt, Gratulation! Die Schaltfläche <span class="textButton textButtonBlue">Zurücksetzen</span> wird Ihre Eingabe zurücksetzen, aber keine neue Aufgabe erstellen. Dadurch können fehlerhafte Eingaben korrigiert werden. Mit der Schaltfläche <span class="textButton textButtonGreen">Neue Aufgabe</span> erzeugen Sie eine neue Aufgabe.
+</div>
+<p>ton
+  <a href="#tutorialTitle">Zurück zum Imhaltsverzeichnis</a>
+</p>
+<hr>
+
+<script>
+  var options = {
+    'startMidiValue': 60,
+    'cleff': 'violin',
+    'folderName': '/content/tutorials/noten-lesen-lernen/',
+    'images': ['0_c_b.png', '1_cis_b.png', '1_des_b.png', '2_d_b.png', '3_dis_b.png', '3_es_b.png', '4_e_b.png', '4_fes_b.png', '5_f_b.png', '6_fis_b.png', '7_g_b.png', '8_as_b.png', '8_gis_b.png', '9_a_b.png', '10_b_b.png', '11_h_b.png', '11_ces_b.png', '6_ges_b.png', '10_ais_b.png', '0_c_v.png', '1_cis_v.png', '1_des_v.png', '2_d_v.png', '3_dis_v.png', '3_es_v.png', '4_e_v.png', '4_fes_v.png', '5_f_v.png', '6_fis_v.png', '7_g_v.png', '8_as_v.png', '8_gis_v.png', '9_a_v.png', '10_v_v.png', '11_h_v.png', '11_ces_v.png', '6_ges_v.png', '10_ais_v.png', ]
+  }
+
+  function selectCleff() {
+    var elem = document.getElementById("cleff");
+    options.cleff = elem.options[elem.selectedIndex].value;
+    alert(options.cleff);     
+  }
+
+  function onAnnotationsClick(elem) {
+    var button = $(elem);
+    var annotationcontainer = $('#scaleAnnotationContainer');
+    annotationcontainer.toggleClass('isNotVisible');
+    if (annotationcontainer.hasClass('isNotVisible')) button.text('Erläuterungen zu den Notenschlüsseln einblenden');
+    else button.text('Erläuterungen zu den Notenschlüsseln ausblenden');
+  }
+
+  $(document).ready(function() {
+    var exercise = createExercise('#exercise', options);
+    $("#imageNote").attr("src", exercise.currentNotePath);
+  });
+
+  function createNewExercise() {
+    $('#exercise').klavier('destroy');
+    var exercise = createExercise('#exercise', options);
+    $("#imageNote").attr("src", exercise.currentNotePath);
+  }
+
+  function show() {
+    showValue();
+  }
+
+  function reset() {
+    resetColors();
+  }
+</script>

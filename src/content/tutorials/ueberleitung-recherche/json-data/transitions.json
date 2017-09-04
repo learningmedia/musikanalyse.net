@@ -2199,10 +2199,10 @@
       "Transitions": [{
           "Behavior": "modulierend",
           "Structure": "fa-ut",
-          "Harmonies": "4T-3Q-4t-3Q-2g-2Q-1G",
+          "Harmonies": "4T-4S-3Q-2g-3Q-2g-3Q-2g-2Q-1G",
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
-          "Measures": "24-40"
+          "Measures": "23-40"
         }],
       "Genre": "Quartett"
     },
@@ -2241,7 +2241,7 @@
       "Transitions": [{
           "Behavior": "modulierend",
           "Structure": "fa-ut",
-          "Harmonies": "4G-3Q-4t-3Q-2g-2Q-1G-2Q-1g",
+          "Harmonies": "4G-4t-3Q-2g-3Q-2g-2Q-1G-2Q-1g",
           "Cadence": "Halbschluss",
           "CadenceBass": "tenorisierend",
           "Measures": "31-41"

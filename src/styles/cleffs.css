@@ -1,0 +1,70 @@
+.pianoContainer {
+  height: 250px;
+  width: 600px;
+  margin-bottom: 20px;
+  margin-left: 20%;
+}
+.klavier-key {
+    border: 1px solid black;
+}
+.klavier-black-key {
+    background-color:  black;
+}
+.klavier-white-key {
+    background-color:  white;
+}
+.klavier-white-key.klavier-selected-key {
+	background-color:  #CCCCCC;
+}
+.klavier-black-key.klavier-selected-key {
+	background-color:  #CCCCCC;
+}
+
+
+.createExercise {
+	margin-bottom: 6px;
+}
+.attantionText {
+	margin-top: 20px;
+}
+#exercise-unplayable, #exercise-doubleLeadingTone, #exercise-incomplete {
+	color: red;
+	font-weight: bold;
+	display: none;
+}
+.containerIsVisible {
+}
+.wrongColor {
+	background-color: #FF3C3C;
+}
+.rightColor {
+	background-color: lightgreen;
+}
+.flexContainer {
+	display: flex;
+}
+.flexItem {
+	margin-right: 10px;
+}
+.isNotVisible {
+    display: none;
+}
+
+
+.textButton {
+	font-size: 10px;
+	font-weight: bold;
+	border: 1px solid gray;
+	padding: 1px;
+	display: inline-block;
+	background-color: lightgray;
+}
+.textButtonRed {
+	color: maroon;
+}
+.textButtonBlue {
+	color: navy;
+}
+.textButtonGreen {
+	color: green;
+}
