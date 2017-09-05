@@ -3,44 +3,46 @@ var exercises = [];
 var rightAnswers = 0;
 var isFirstTry;
 
-function Exercise(id, startMidiValue, pc, name, folderName, noteImageName) {
+function Exercise(id, startKey, midiNote, range, name, folderName, noteImageName) {
   this.id = id;
-  this.startMidiValue = startMidiValue;
-  this.pc = pc;
+  this.midiNote = midiNote;
+  this.range = range;
   this.name = name;
   this.folderName = folderName;
   this.currentNotePath = this.folderName + noteImageName;
-  this.startKey = this.startMidiValue;
+  this.startKey = startKey;
   this.rightValues = [];
   this.wrongValues = [];
 }
 
 function createExercise(id, options) {
-  hideAttentions();  
+  hideAttentions();
   cleff = options.cleff;
-
+  var number;
   if (cleff === 'violin') {
     images = options.images.filter(function(name) {
-      return name.split('_')[2] === 'v.png';
+      number = parseInt(name.split('_')[1].replace('.png'));
+      return number >= 60;
     });
   } else if (cleff === 'bass'){
     images = options.images.filter(function(name) {
-      return name.split('_')[2] === 'b.pmg';
+      number = parseInt(name.split('_')[1].replace('.png'));
+      return number < 60;
     });
   } else {
     images = options.images;
   }
-  
+
   var randomImageNumber = createRandomNumber(images.length);
   var noteImageName = images[randomImageNumber];
 
   var noteImageNameParts = noteImageName.split("_");
-  var pc = parseInt(noteImageNameParts[0], 10);
-  var name = noteImageNameParts[1];
+  var midiNote = parseInt(noteImageNameParts[1].replace('.png'));
+  var name = noteImageNameParts[0];
 
-  var exercise = new Exercise(id, options.startMidiValue, pc, name, options.folderName, noteImageName);
+  var exercise = new Exercise(id, options.startKey, midiNote, options.range, name, options.folderName, noteImageName);
 
-  createPiano(id, exercise.startKey)
+  createPiano(id, exercise.startKey, exercise.range)
   exercises.push(exercise);
   resetColors();
   isFirstTry = true;
@@ -51,8 +53,18 @@ function createRandomNumber(number) {
   return Math.floor((Math.random() * number));
 }
 
-function createPiano(id, startKey) {
-  $(id).klavier({ startKey: startKey, endKey: startKey + 23 });
+function createPiano(id, startKey, range) {
+  var elem = $(id);
+  if (range <= 23) {
+    elem.width(600);
+    elem.height(250);
+  }
+  else {
+    elem.width(800);
+    elem.height(200);
+/*    elem.attr('margin-left', 0);*/
+  }
+  elem.klavier({ startKey: startKey, endKey: startKey + range });
 }
 
 // evaluate the right keys
@@ -64,7 +76,7 @@ function showValue() {
   var rightValues = [];
   var wrongValues = [];
   for (var i = 0; i < selectedKeys.length; i++) {
-    if(selectedKeys[i] === exercise.startMidiValue + exercise.pc){
+    if(selectedKeys[i] === exercise.midiNote){
       rightValues.push(selectedKeys[i]);
     } else {
       wrongValues.push(selectedKeys[i]);

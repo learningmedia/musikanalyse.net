@@ -1,8 +1,5 @@
 .pianoContainer {
-  height: 250px;
-  width: 600px;
   margin-bottom: 20px;
-  margin-left: 20%;
 }
 .klavier-key {
     border: 1px solid black;
@@ -67,4 +64,15 @@
 }
 .textButtonGreen {
 	color: green;
+}
+
+#attantionText {
+  padding-top: 20px;
+  text-align: center;
+  color: maroon;
+  font-weight: bold;
+}
+
+#statistic {
+  margin: 250px 0;
 }

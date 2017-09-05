@@ -36,27 +36,27 @@ abstract: In diesem Tutorial können Sie das Lesen von Noten im Violin- und Bass
 <h3 id="tonleiterTrainer" style="float: left;">Testen Sie Ihr Wissen zum&nbsp;</h3>
 <select id="cleff" onchange="selectCleff()" style="width: 200px; height: 30px;">
   <option value="violin">Violinschlüssel</option>
-<!--   <option value="bass">Bassschlüssel</option>
-  <option value="all">Violin- und Bassschlüssel</option> -->
+  <option value="bass">Bassschlüssel</option>
+  <option value="all">Violin- und Bassschlüssel</option>
 </select>
 <div style="height: 340px; clear: left;" id="exercise-container">
   <span>Geben Sie den Ton <span id="name"></span> auf der Klaviatur an.</span>
-  <div style="height: 120px; margin-left: 40%; margin-top: 20px;">
+  <div id="imageNoteContainer" style="height: 120px; margin-top: 20px;">
     <image style="margin: 0;" id="imageNote">
   </div>
   <div>
+    <p id="octave" style="width: 100%; display: block; font-weight: bold;">eingestrichene Oktave</p>
     <div class="pianoContainer" id="exercise"></div>
     <div class="flexContainer">
       <button id="check" class="flexItem" style="border: 1px solid maroon;" onclick="show()">Überprüfen</button>
       <button id="reset" class="flexItem" style="border: 1px solid navy;" onclick="reset()">Zurücksetzen</button>
       <button id="new" class="flexItem" style="border: 1px solid green;" onclick="createNewExercise()">Neue Aufgabe</button>
     </div>
-     <div id="attantionText" style="margin-top: 15px; color: maroon; font-weight: bold;" >
-    </div>
+     <div id="attantionText"></div>
   </div>
 </div>
-<div id="statistic" style="margin: 200px 0;"></div>
-<div class="smalltext" style="margin-top: 30px;">
+<div id="statistic"></div>
+<div class="smalltext">
   <b>Anmerkungen:</b><br>
   Mit der Schaltfläche <span class="textButton textButtonRed">Überprüfen</span> können Sie überprüfen, ob Ihre Eingabe richtig ist.
   Sind nur grüne Tasten zu sehen, ist Ihre Eingabe korrekt, Gratulation! Die Schaltfläche <span class="textButton textButtonBlue">Zurücksetzen</span> wird Ihre Eingabe zurücksetzen, aber keine neue Aufgabe erstellen. Dadurch können fehlerhafte Eingaben korrigiert werden. Mit der Schaltfläche <span class="textButton textButtonGreen">Neue Aufgabe</span> erzeugen Sie eine neue Aufgabe.
@@ -68,16 +68,34 @@ abstract: In diesem Tutorial können Sie das Lesen von Noten im Violin- und Bass
 
 <script>
   var options = {
-    'startMidiValue': 60,
+    'startKey': 60,
     'cleff': 'violin',
-    'folderName': '/content/tutorials/noten-lesen-lernen/',
-    'images': ['0_c_b.png', '1_cis_b.png', '1_des_b.png', '2_d_b.png', '3_dis_b.png', '3_es_b.png', '4_e_b.png', '4_fes_b.png', '5_f_b.png', '6_fis_b.png', '7_g_b.png', '8_as_b.png', '8_gis_b.png', '9_a_b.png', '10_b_b.png', '11_h_b.png', '11_ces_b.png', '6_ges_b.png', '10_ais_b.png', '0_c_v.png', '1_cis_v.png', '1_des_v.png', '2_d_v.png', '3_dis_v.png', '3_es_v.png', '4_e_v.png', '4_fes_v.png', '5_f_v.png', '6_fis_v.png', '7_g_v.png', '8_as_v.png', '8_gis_v.png', '9_a_v.png', '10_v_v.png', '11_h_v.png', '11_ces_v.png', '6_ges_v.png', '10_ais_v.png', ]
+    'range': 23,
+    'folderName': '/img/midinotes/',
+    'images': ['ais_58.png', 'ais_70.png', 'as_56_B.png', 'as_68.png', 'a_57.png', 'a_69.png', 'b_58.png', 'b_70.png', 'ces_59.png', 'ces_71.png', 'cis_49.png', 'cis_61.png', 'c_48.png', 'c_60.png', 'des_49.png', 'des_61.png', 'dis_51.png', 'dis_63.png', 'd_50.png', 'd_62.png', 'es_51.png', 'es_63.png', 'e_52.png', 'e_64.png', 'fes_52.png', 'fes_64.png', 'fis_54.png', 'fis_66.png', 'f_53.png', 'f_65.png', 'ges_54.png', 'ges_66.png', 'gis_56.png', 'gis_68.png', 'g_55.png', 'g_67.png', 'h_59.png', 'h_71.png']
   }
 
   function selectCleff() {
     var elem = document.getElementById("cleff");
-    options.cleff = elem.options[elem.selectedIndex].value;
-    alert(options.cleff);     
+    var cleff = elem.options[elem.selectedIndex].value;
+    var range = 23;   
+    if (cleff === 'violin') {
+      options.startKey = 60;
+      $('#imageNoteContainer').css('margin-left', 20 + '%');
+      $('#octave').css('padding-left', 0 + '');
+    } else if (cleff === 'bass') {
+      options.startKey = 36;
+      range = 35;
+      $('#octave').css('padding-left', 560 + 'px');
+    } else {
+      options.startKey = 36;
+      range = 47;
+      $('#imageNoteContainer').css('margin-left', 30 + '%');
+      $('#octave').css('padding-left', 400 + 'px');
+    }
+    options.range = range;
+    options.cleff = cleff;
+    createNewExercise();
   }
 
   function onAnnotationsClick(elem) {
