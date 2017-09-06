@@ -89,7 +89,7 @@ function createExercise(id, options) {
 	exercises.push(exercise);
 	resetColors();
 	isFirstTry = true;
-  $('#attantionText').text('');
+  $('#attentionText').text('');
 	return exercise;
 }
 
@@ -127,9 +127,9 @@ function showValue() {
 	exercise.rightValues = rightValues;
 	exercise.wrongValues = wrongValues;
 
-  var attantionText = getInputNumberFeedBack(exercise.rightValues.length);
-  $('#attantionText').text(attantionText);
-	if (exercise.wrongValues.length === 0 && isFirstTry && attantionText.length === 0) {
+  var attentionText = getInputNumberFeedBack(exercise.rightValues.length);
+  $('#attentionText').text(attentionText);
+	if (exercise.wrongValues.length === 0 && isFirstTry && attentionText.length === 0) {
 		rightAnswers++;
 	}
   $('#statistic').text(getFeedBack(rightAnswers, exercises));

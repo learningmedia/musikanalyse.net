@@ -2,10 +2,12 @@ var v_images, b_images, cleff, currentNotePath;
 var exercises = [];
 var rightAnswers = 0;
 var isFirstTry;
+var counter = 0;
 
 function Exercise(id, startKey, midiNote, range, name, folderName, noteImageName) {
   this.id = id;
   this.midiNote = midiNote;
+  this.octave = setOctave(midiNote);
   this.range = range;
   this.name = name;
   this.folderName = folderName;
@@ -13,6 +15,7 @@ function Exercise(id, startKey, midiNote, range, name, folderName, noteImageName
   this.startKey = startKey;
   this.rightValues = [];
   this.wrongValues = [];
+  this.isEvaluated = false;
 }
 
 function createExercise(id, options) {
@@ -69,10 +72,13 @@ function createPiano(id, startKey, range) {
 
 // evaluate the right keys
 function showValue() {
-  var exercise = exercises[exercises.length -1];
-  var selectedKeys = $(exercise.id).klavier('getSelectedValues');
-
+  exercises[exercises.length - 1].isEvaluated = true;
+  exercises = exercises.filter(function(exercise) {
+    return exercise.isEvaluated;
+  })
   // detect the right and wrong keys
+  var exercise = exercises[exercises.length - 1];
+  var selectedKeys = $(exercise.id).klavier('getSelectedValues');
   var rightValues = [];
   var wrongValues = [];
   for (var i = 0; i < selectedKeys.length; i++) {
@@ -136,9 +142,6 @@ function resetColors() {
 }
 
 function hideAttentions() {
-  $('#exercise-doubleLeadingTone').hide();
-  $('#exercise-unplayable').hide();
-  $('#exercise-incomplete').hide();
   setButtonsVisibility(true, true, true);
 }
 
@@ -149,4 +152,12 @@ function setButtonsVisibility(buttonCheck, buttonReset, buttonNew) {
   else $('#reset').hide();
   if (buttonNew) $('#new').show();
   else $('#new').hide();
+}
+
+function setOctave(midiNote) {
+  if (midiNote >= 36 && midiNote < 48) { return "große "; }
+  if (midiNote >= 48 && midiNote < 60) { return "kleine "; }
+  if (midiNote >= 60 && midiNote < 72) { return "eingestrichene "; }
+  if (midiNote >= 72 && midiNote < 94) { return "zweigestrichene "; }
+  return "";
 }

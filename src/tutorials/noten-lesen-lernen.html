@@ -2,7 +2,7 @@
 title: Noten lesen lernen
 author: Ulrich Kaiser
 date: 2017-09-04
-modified: 2017-09-04
+modified: 2017-09-06
 layout: tutorial.ejs
 category: Grundlagen
 abstract: In diesem Tutorial können Sie das Lesen von Noten im Violin- und Bassschlüssel üben.
@@ -15,22 +15,53 @@ abstract: In diesem Tutorial können Sie das Lesen von Noten im Violin- und Bass
 <button onclick="onAnnotationsClick(this)">Erläuterungen zu den Notenschlüsseln ausblenden</button>
 <br><br>
 <div id="scaleAnnotationContainer">
+  <h4>Wie schreibt man heute Noten?</h4>
   <p>
-    Bette haben Sie noch ein wenig Geduld.
+    Die meisten Noten, die heute geschrieben werden, werden in zwei Schlüsseln notiert: Für hohe Stimmen und Instrumente im Violinschlüssel oder g-Schlüssel, für tiefe Stimmen oder Instrumente im Basschlüssel (warum der Violinschlüssel nicht Sopranschlüssel und der Bassschlüssel nicht Celloschlüssel heißt, weiß wahrscheinlich kein Mensch, ist aber eigentlich auch nur unlogisch und nicht wirklich wichtig).<br>
+    Wenn du dir die Tasten an einem Klavier anschaust, liegt das sogenannte <b>eingestrichene c</b> etwas links von der Mitte (wenn du das nächste Bild berührst, kannst du die wichtigen töne auf der Tastatur sehen). Als Faustregel kann man sich merken, dass die Noten rechts von eingestrichenen c am besten mit dem Violinschlüssel (g-Schlüssel), die Noten links davon mit dem Basschlüssel (f-Schlüssel) notiert werden können. :
+  </p>
+  <a class="imageChange">
+    <img class="image-on" src="/content/tutorials/noten-lesen-lernen/piano.png" alt="Lamentobass chromatisiert" />
+    <img class="image-off" src="/content/tutorials/noten-lesen-lernen/piano-layer.png" />
+  </a>
+  <p>
+    Hier geht es demnächst weiter...
   </p>
 
-  <!-- Vorläufiges Ende des Tutorials -->
-  <img src="http://animationswelt.de/images/baustelle/_baustelle-018.gif" />
+  <h4>Der Violinschlüssel für hohe Stimmen</h4>
+  <p>
+    Hier kommt eine Erklärung zum Violinschlüssel hin...
+  </p>
 
-    Schauen Sie mir doch beim Arbeiten zu, schon bald wird es hier ein neues Tutorial geben...
-  <hr>
-  <hr style="margin-top: -18px;">
+  <h4>Der Basschlüssel für tiefe Stimmen</h4>
+  <p>
+    Hier kommt eine Erklärung zum Basschlüssel hin...
+  </p>
+
+   
+  <img src="http://animationswelt.de/images/baustelle/_baustelle-018.gif" />
+  <p>Schauen Sie mir doch beim Arbeiten zu, schon bald wird es hier ein neues Tutorial geben...</p>
+
+  <h4>Weißt du, wie Noten vor langer Zeit ausgesehen haben?</h4>
+  <p>
+    Unsere Notenschrift hat bis zum heutigen Aussehen eine lange Entwicklung durchgemacht. Zum Aufschreiben von einstimmiger Musik (z.B. von Musik, die von Mönchen in Kirchen gesungen wurde) war kein großer Umfang erforderlich. Man benötigte noch nicht einmal fünf Linien, um die Töne, die man singen konnte, zu notieren. Die folgende Abbildung zeigt sogenannte Neumen, eine für uns heute schwer zu lesende Notenschreibweise auf vier Linien, die schon über 600 Jahre alt ist:  
+  </p>
+  <img src="/content/tutorials/noten-lesen-lernen/Tinctoris-Noten.png" />
+  <p>
+    Das nächste Beispiel stammt aus einem Buch von <a>Michael Praetorius</a>. Er schreibt in diesem Buch über den Stimmumfang von <a href="https://de.wikipedia.org/wiki/Laute" target="_blank">Lauten-Instrumenten</a> und da diese einen sehr großen Umfang haben bzw. man mit diesem Instrument sehr viele Töne spielen kann, hat Prätorius das im Jahre 1619 wie folgt notiert (beim Berühren der Abbildung findest du einige Erklärungen):
+  </p>
+  <a class="imageChange">
+    <img class="image-on" src="/content/tutorials/noten-lesen-lernen/LautenNoten.png" alt="Lamentobass chromatisiert" />
+    <img class="image-off" src="/content/tutorials/noten-lesen-lernen/LautenNoten-layer.png" />
+  </a>
+  <p>
+  <a href="#tutorialTitle">Zurück zum Anfang</a>
+  </p>
 </div>
 
-<!--<div>
-    <img style="margin-left: auto;n margischritt-right: auto; margin-bottom: 0;" src="/content/tutorials/generalbass/2_d.png">
-    <img style="margin: 0 auto; padding-left: 6px;" src="/content/tutorials/generalbass/flat.png">
-  </div> -->
+<hr>
+<hr style="margin-top: -18px;">
+
 <!-- Tonleiterspiel  -->
 
 <h3 id="tonleiterTrainer" style="float: left;">Testen Sie Ihr Wissen zum&nbsp;</h3>
@@ -40,8 +71,8 @@ abstract: In diesem Tutorial können Sie das Lesen von Noten im Violin- und Bass
   <option value="all">Violin- und Bassschlüssel</option>
 </select>
 <div style="height: 340px; clear: left;" id="exercise-container">
-  <span>Geben Sie den Ton <span id="name"></span> auf der Klaviatur an.</span>
-  <div id="imageNoteContainer" style="height: 120px; margin-top: 20px;">
+  <span>Geben Sie das <span id="noteName" style="color: #00AD00; font-weight: bold;"></span> auf der Klaviatur an.</span>
+  <div id="imageNoteContainer" style="height: 120px; margin-top: 20px; margin-left: 20%;">
     <image style="margin: 0;" id="imageNote">
   </div>
   <div>
@@ -52,7 +83,7 @@ abstract: In diesem Tutorial können Sie das Lesen von Noten im Violin- und Bass
       <button id="reset" class="flexItem" style="border: 1px solid navy;" onclick="reset()">Zurücksetzen</button>
       <button id="new" class="flexItem" style="border: 1px solid green;" onclick="createNewExercise()">Neue Aufgabe</button>
     </div>
-     <div id="attantionText"></div>
+     <div id="attentionText"></div>
   </div>
 </div>
 <div id="statistic"></div>
@@ -61,9 +92,6 @@ abstract: In diesem Tutorial können Sie das Lesen von Noten im Violin- und Bass
   Mit der Schaltfläche <span class="textButton textButtonRed">Überprüfen</span> können Sie überprüfen, ob Ihre Eingabe richtig ist.
   Sind nur grüne Tasten zu sehen, ist Ihre Eingabe korrekt, Gratulation! Die Schaltfläche <span class="textButton textButtonBlue">Zurücksetzen</span> wird Ihre Eingabe zurücksetzen, aber keine neue Aufgabe erstellen. Dadurch können fehlerhafte Eingaben korrigiert werden. Mit der Schaltfläche <span class="textButton textButtonGreen">Neue Aufgabe</span> erzeugen Sie eine neue Aufgabe.
 </div>
-<p>ton
-  <a href="#tutorialTitle">Zurück zum Imhaltsverzeichnis</a>
-</p>
 <hr>
 
 <script>
@@ -71,8 +99,8 @@ abstract: In diesem Tutorial können Sie das Lesen von Noten im Violin- und Bass
     'startKey': 60,
     'cleff': 'violin',
     'range': 23,
-    'folderName': '/img/midinotes/',
-    'images': ['ais_58.png', 'ais_70.png', 'as_56_B.png', 'as_68.png', 'a_57.png', 'a_69.png', 'b_58.png', 'b_70.png', 'ces_59.png', 'ces_71.png', 'cis_49.png', 'cis_61.png', 'c_48.png', 'c_60.png', 'des_49.png', 'des_61.png', 'dis_51.png', 'dis_63.png', 'd_50.png', 'd_62.png', 'es_51.png', 'es_63.png', 'e_52.png', 'e_64.png', 'fes_52.png', 'fes_64.png', 'fis_54.png', 'fis_66.png', 'f_53.png', 'f_65.png', 'ges_54.png', 'ges_66.png', 'gis_56.png', 'gis_68.png', 'g_55.png', 'g_67.png', 'h_59.png', 'h_71.png']
+    'folderName': '/content/tutorials/noten-lesen-lernen/midiNotes/',
+    'images': ['Ais_46.png', 'ais_58.png', 'ais_70.png', 'ais_82.png', 'As_44.png', 'as_56.png', 'as_68.png', 'as_80.png', 'A_45.png', 'a_57.png', 'a_69.png', 'a_81.png', 'B_46.png', 'b_58.png', 'b_70.png', 'b_82.png', 'Ces_47.png', 'ces_59.png', 'ces_71.png', 'ces_83.png', 'Cis_37.png', 'cis_49.png', 'cis_61.png', 'cis_73.png', 'C_36.png', 'c_48.png', 'c_60.png', 'c_72.png', 'Des_37.png', 'des_49.png', 'des_61.png', 'des_73.png', 'Dis_39.png', 'dis_51.png', 'dis_63.png', 'dis_75.png', 'D_38.png', 'd_50.png', 'd_62.png', 'd_74.png', 'Es_39.png', 'es_51.png', 'es_63.png', 'es_75.png', 'E_40.png', 'e_52.png', 'e_64.png', 'e_76.png', 'Fes_40.png', 'fes_52.png', 'fes_64.png', 'fes_76.png', 'Fis_42.png', 'fis_54.png', 'fis_66.png', 'fis_78.png', 'F_41.png', 'f_53.png', 'f_65.png', 'f_77.png', 'Ges_42.png', 'ges_54.png', 'ges_66.png', 'ges_78.png', 'Gis_44.png', 'gis_56.png', 'gis_68.png', 'gis_80.png', 'G_43.png', 'g_55.png', 'g_67.png', 'g_79.png', 'H_47.png', 'h_59.png', 'h_71.png', 'h_83.png']
   }
 
   function selectCleff() {
@@ -108,13 +136,15 @@ abstract: In diesem Tutorial können Sie das Lesen von Noten im Violin- und Bass
 
   $(document).ready(function() {
     var exercise = createExercise('#exercise', options);
-    $("#imageNote").attr("src", exercise.currentNotePath);
+    $('#imageNote').attr('src', exercise.currentNotePath);
+    $('#noteName').text(exercise.octave + " " + exercise.name);
   });
 
   function createNewExercise() {
     $('#exercise').klavier('destroy');
     var exercise = createExercise('#exercise', options);
-    $("#imageNote").attr("src", exercise.currentNotePath);
+    $('#imageNote').attr('src', exercise.currentNotePath);
+    $('#noteName').text(exercise.octave + " " + exercise.name);
   }
 
   function show() {
