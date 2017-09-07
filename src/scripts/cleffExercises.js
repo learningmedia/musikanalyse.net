@@ -131,6 +131,10 @@ function setColors(exercise) {
     rightKey.removeClass('klavier-selected-key');
     rightKey.addClass('rightColor');
   });
+
+  if (exercise.rightValues.length + exercise.wrongValues.length > 1) {
+    $('#attentionText').show();
+  }  
 }
 
 // reset right and false colors
@@ -143,6 +147,7 @@ function resetColors() {
 
 function hideAttentions() {
   setButtonsVisibility(true, true, true);
+  $('#attentionText').hide();
 }
 
 function setButtonsVisibility(buttonCheck, buttonReset, buttonNew) {

@@ -71,6 +71,7 @@
   text-align: center;
   color: maroon;
   font-weight: bold;
+  display: none;
 }
 
 #statistic {
