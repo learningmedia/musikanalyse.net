@@ -109,11 +109,11 @@ function getFeedBack(rightAnswers, exercises) {
   var question = number === 1 ? "Aufgabe" : "Aufgaben";
   var evaluation;
   if(percent >= 80) evaluation = "Gratulation!";
-  else if (percent < 80 && percent >= 60 && exercises.length > 5) evaluation = "Üben Sie lieber noch ein bisschen!";
-  else if (percent < 60 && percent >= 40 && exercises.length > 5) evaluation = "Sie haben noch einiges zu tun!";
-  else if (percent < 40 && exercises.length === 1) evaluation = "Kann mal passieren. Probieren Sie es einfach noch einmal!";
-  else if(percent < 40 && exercises.length > 5) evaluation = "Ich glaube, Sie sollten lieber die Anleitung oben noch einmal lesen :)";
-  else evaluation = "Versuchen Sie es noch einmal...";
+  else if (percent < 80 && percent >= 60 && exercises.length > 5) evaluation = "Übe lieber noch ein bisschen!";
+  else if (percent < 60 && percent >= 40 && exercises.length > 5) evaluation = "Du hast noch einiges zu tun!";
+  else if (percent < 40 && exercises.length === 1) evaluation = "Kann mal passieren. Probiere es einfach noch einmal!";
+  else if(percent < 40 && exercises.length > 5) evaluation = "Ich glaube, Du solltest lieber die Anleitung oben noch einmal lesen :)";
+  else evaluation = "Versuche es noch einmal...";
   return percent + "% richtig von " + number + " " + question + ": " + evaluation;
 }
 
