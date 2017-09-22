@@ -1,0 +1,80 @@
+---
+title: Das berühmte Erinnerungs-Kartenspiel zu Fachbegriffen einer Sonatenanalyse 
+date: 2016-04-30
+layout: cardGames.ejs
+---
+
+<div class="gameOptions">
+  <select onchange="createTextInputs(this)">
+    <option value="1" selected>alleine</option>
+    <option value="2">zu zweit</option>
+    <option value="3">zu dritt</option>
+    <option value="4">zu viert</option>
+  </select>
+  <span id="textfields"><input type="text" placeholder="1. <Name>"></input></span>
+  <select onchange="setTimespan(this)">
+    <option value="4.5">leicht</option>
+    <option value="3">mittel</option>
+    <option value="1.5" selected>schwer</option>
+  </select>
+  <select onchange="setLanguage(this)">
+    <option value="en">Englisch</option>
+    <option value="de" selected>Deutsch</option>
+  </select>
+  <input type="button" onclick="onBeginClick()" value="Anfangen"></input>
+  <input type="button" onclick="onResetClick()" value="Nochmal?"></input>
+</div>
+<div class="container">
+ <ul id="memory">
+     <li>
+       <img src="/img/games/karten-begriffe-sonate/Sonatenbegriffe-Memory-01.png">
+     </li>
+     <li>
+       <img src="/img/games/karten-begriffe-sonate/Sonatenbegriffe-Memory-02.png">
+     </li>
+     <li>
+       <img src="/img/games/karten-begriffe-sonate/Sonatenbegriffe-Memory-03.png">
+     </li>
+     <li>
+       <img src="/img/games/karten-begriffe-sonate/Sonatenbegriffe-Memory-04.png">
+     </li>
+     <li>
+       <img src="/img/games/karten-begriffe-sonate/Sonatenbegriffe-Memory-05.png">
+     </li>
+     <li>
+       <img src="/img/games/karten-begriffe-sonate/Sonatenbegriffe-Memory-06.png">
+     </li>
+     <li>
+       <img src="/img/games/karten-begriffe-sonate/Sonatenbegriffe-Memory-07.png">
+     </li>
+     <li>
+       <img src="/img/games/karten-begriffe-sonate/Sonatenbegriffe-Memory-08.png">
+     </li>
+     <li>
+       <img src="/img/games/karten-begriffe-sonate/Sonatenbegriffe-Memory-09.png">
+     </li>
+     <li>
+       <img src="/img/games/karten-begriffe-sonate/Sonatenbegriffe-Memory-10.png">
+     </li>
+     <li>
+       <img src="/img/games/karten-begriffe-sonate/Sonatenbegriffe-Memory-11.png">
+     </li>
+     <li>
+       <img src="/img/games/karten-begriffe-sonate/Sonatenbegriffe-Memory-12.png">
+     </li>
+     <li>
+       <img src="/img/games/karten-begriffe-sonate/Sonatenbegriffe-Memory-13.png">
+     </li>
+     <li>
+       <img src="/img/games/karten-begriffe-sonate/Sonatenbegriffe-Memory-14.png">
+     </li>
+     <li>
+       <img src="/img/games/karten-begriffe-sonate/Sonatenbegriffe-Memory-15.png">
+     </li>
+     <li>
+       <img src="/img/games/karten-begriffe-sonate/Sonatenbegriffe-Memory-16.png">
+     </li>
+  </ul>
+</div>
+
+
