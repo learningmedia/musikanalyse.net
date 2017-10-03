@@ -279,16 +279,76 @@
       "Genre": "Klaviersonate"
     },
     {
+      "Id": "XVI:31",
+      "Composer": "Haydn",
+      "MovementNumber": "1",
+      "Transitions": [{
+          "Behavior": "modulierend",
+          "Structure": "fa-ut",
+          "Harmonies": "42-3Q-2g-3g-3Q-2g-2Q-1G",
+          "Cadence": "Halbschluss",
+          "CadenceBass": "diskantisierend",
+          "Other": "(kadenzielle Festigung von 2g)",
+          "Measures": "9-12"
+        }],
+      "Genre": "Klaviersonate"
+    },
+    {
+      "Id": "XVI:35",
+      "Composer": "Haydn",
+      "MovementNumber": "1",
+      "Transitions": [{
+          "Behavior": "modulierend",
+          "Structure": "fa-ut",
+          "Harmonies": "4G-4S-3T-2Q-1G-2Q-1G-2Q-1G-4S-3T-2Q-1G-4S-3T",
+          "Cadence": "Halbschluss",
+          "CadenceBass": "diskantisierend",
+          "Other": "einleitende Pendelharmonik",
+          "Measures": "20-35"
+        }],
+      "Genre": "Klaviersonate"
+    },
+    {
+      "Id": "XVI:38",
+      "Composer": "Haydn",
+      "MovementNumber": "1",
+      "Transitions": [{
+          "Behavior": "modulierend",
+          "Structure": "fa-re",
+          "Harmonies": "3S-2T-1G-1Q",
+          "Cadence": "Halbschluss",
+          "CadenceBass": "diskantisierend",
+          "Other": "einleitende Pendelharmonik",
+          "Measures": "14-18"
+        }],
+      "Genre": "Klaviersonate"
+    },
+    {
+      "Id": "XVI:43",
+      "Composer": "Haydn",
+      "MovementNumber": "1",
+      "Transitions": [{
+          "Behavior": "modulierend",
+          "Structure": "fa-ut",
+          "Harmonies": "4G-4S-3T-2G-1G",
+          "Cadence": "Halbschluss",
+          "CadenceBass": "metrisch",
+          "Other": "einleitende Pendelharmonik",
+          "Measures": "12-20"
+        }],
+      "Genre": "Klaviersonate"
+    },
+    {
       "Id": "XVI:45",
       "Composer": "Haydn",
       "MovementNumber": "1",
       "Transitions": [{
           "Behavior": "modulierend",
           "Structure": "fa-ut",
-          "Harmonies": "4G-3Q-2g-2Q-1G",
+          "Harmonies": "4t-3Q-2g-2Q-1G",
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
-          "Other": "einleitende I-V-Pendelharmonik",
+          "Other": "einleitende Pendelharmonik",
           "Measures": "12-18"
         }],
       "Genre": "Klaviersonate"
@@ -305,6 +365,21 @@
           "CadenceBass": "diskantisierend",
           "Other": "",
           "Measures": "11-13"
+        }],
+      "Genre": "Klaviersonate"
+    },
+    {
+      "Id": "XVI:45",
+      "Composer": "Haydn",
+      "MovementNumber": "3",
+      "Transitions": [{
+          "Behavior": "modulierend",
+          "Structure": "fa-ut",
+          "Harmonies": "4G-4t-3T-2Q-1G-2Q-1G-2Q-1G",
+          "Cadence": "Halbschluss",
+          "CadenceBass": "metrisch",
+          "Other": "",
+          "Measures": "12-18"
         }],
       "Genre": "Klaviersonate"
     },
@@ -1084,7 +1159,7 @@
           "Harmonies": "4G-4S-3T-2Q-1G",
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
-          "Other": "I-V-Pendelharmonik T. 10-15",
+          "Other": "Pendelharmonik T. 10-15",
           "Measures": "10-23"
         }],
       "Genre": "Sinfonie"
@@ -1832,7 +1907,7 @@
           "Harmonies": "6g-5Q-4G-4t-3Q-2G-2Q-1G",
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
-          "Other": "I-V-Pendelharmonik T. 9-10",
+          "Other": "Pendelharmonik T. 9-10",
           "Measures": "9-22"
         }],
       "Genre": "Klaviersonate"
