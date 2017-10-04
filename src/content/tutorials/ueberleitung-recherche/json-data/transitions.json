@@ -399,6 +399,74 @@
       "Genre": "Klaviersonate"
     },
     {
+      "Id": "XVI:47",
+      "Composer": "Haydn",
+      "MovementNumber": "2",
+      "Transitions": [{
+          "Behavior": "nicht modulierend",
+          "Structure": "fa-ut",
+          "Harmonies": "4G-3T-2Q-1G",
+          "Cadence": "Halbschluss",
+          "CadenceBass": "metrisch",
+          "Other": "einleitende Pendelharmonik",
+          "Measures": "9-18"
+        }],
+      "Genre": "Klaviersonate"
+    },
+    {
+      "Id": "XVI:47",
+      "Composer": "Haydn",
+      "MovementNumber": "3",
+      "Transitions": [{
+          "Behavior": "nicht modulierend",
+          "Structure": "fa-ut",
+          "Harmonies": "4G-4S-3T-2Q-1G",
+          "Cadence": "Halbschluss",
+          "CadenceBass": "metrisch",
+          "Other": "",
+          "Measures": "7-10"
+        },{
+          "Behavior": "nicht modulierend",
+          "Structure": "mi-ut",
+          "Harmonies": "3T-2g-2Q-1G",
+          "Cadence": "Halbschluss",
+          "CadenceBass": "diskantisierend",
+          "Other": "",
+          "Measures": "11-14"
+        }],
+      "Genre": "Klaviersonate"
+    },
+    {
+      "Id": "XVI:51",
+      "Composer": "Haydn",
+      "MovementNumber": "1",
+      "Transitions": [{
+          "Behavior": "modulierend",
+          "Structure": "mi-ut",
+          "Harmonies": "3G-2T-3G-2Q-1g-2Q-1g",
+          "Cadence": "Halbschluss",
+          "CadenceBass": "diskantisierend",
+          "Other": "einleitende Pendelharmonik",
+          "Measures": "20-25"
+        }],
+      "Genre": "Klaviersonate"
+    },
+    {
+      "Id": "XVI:52",
+      "Composer": "Haydn",
+      "MovementNumber": "3",
+      "Transitions": [{
+          "Behavior": "modulierend",
+          "Structure": "fa-ut",
+          "Harmonies": "4t-3Q-2g-2Q-1G",
+          "Cadence": "Halbschluss",
+          "CadenceBass": "diskantisierend",
+          "Other": "",
+          "Measures": "30-44"
+        }],
+      "Genre": "Klaviersonate"
+    },
+    {
       "Id": "001e",
       "Composer": "Mozart",
       "MovementNumber": "1",
