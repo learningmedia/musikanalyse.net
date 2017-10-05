@@ -1,0 +1,15 @@
+{
+  "Name": "Erste Übung",
+  "audioFilePath": "/content/tutorials/stimmungen/sound/exercises/uebungen-pythargoraeisch/",
+  "exercises": [{
+    "firstFileName": "a.mp3",
+    "secondFileName": "a1.mp3",
+    "question": "Wieviel Cent ist das zweite Hörbeispiel tiefer als das erst?",
+    "answer": "Der zweite Ton war 23 Cent tiefer als der zweite."
+  }, {
+    "firstFileName": "b.mp3",
+    "secondFileName": "b1.mp3",
+    "question": "Wieviel Cent zu hoch?",
+    "answer": "Der erste Ton war 50 Cent höher als der erste."
+  }]
+ }

@@ -7,6 +7,7 @@ layout: tutorial.ejs
 category: Grundlagen, Terminologie
 abstract: In diesem Tutorial finden Sie grundlegende Informationen zu den Themen Intonation und historische Stimmungen.
 ---
+<script src='/scripts/tester.js'></script>
 
 <p>
   Wenn es um Intonation geht, geht es zunächst grob gesagt um feine Tonhöhenunterschiede. Diese feinen Unterschiede lassen sich bestimmen und in der Einheit <i>Cent</i> angeben. Alexander John Ellis hat diese Einheit 1875 zum ersten Mal verwendet und folgendermaßen definiert: 1 Cent ist der hundertste Teil eines Halbtonschrittes der gleichstufig temperierten Stimmung (also der heute üblichen Stimmung des Klaviers).
@@ -204,8 +205,35 @@ abstract: In diesem Tutorial finden Sie grundlegende Informationen zu den Themen
     <small>Hörbeispiel 10: Durtonleiter und Dreiklänge ›mitteltönig‹ gestimmt</small>
   </p>
 </div>
+  
+<div class="trainerContainer">
+  <div id="training"></div>
+  <button onclick="javascript:nextFirst();">Nächste Übung</button>
+</div>
 
+<!-- <div id="test" style="width: 600px; margin: auto; padding: 20px; border: 1px solid gray;"></div>
+ -->
 <!-- <img src="/content/tutorials/stimmungen/#.png" />
 <audio controls src="/content/tutorials/stimmungen/sound/#.mp3" preload="auto"></audio> -->
 <p>Bitte haben Sie einen Moment Geduld, hier geht es in Kürze weiter...</p>
 <img src="http://animationswelt.de/images/baustelle/_baustelle-018.gif" />
+
+<script>
+  var first;
+  $(document).ready(function() {
+    //Laden der ersten Übung
+    loadJSON('/content/tutorials/stimmungen/data/stimmungen.json',
+     function(data) { 
+       var options = data; 
+       first = new Tester(document.getElementById("training"), options);
+     },
+     function(xhr) { 
+       console.error(xhr); 
+     });
+    //Hier können  weiterer Übungen geladen werden
+  });
+
+  function nextFirst() {
+    first.getNewExercise();
+  }
+</script>
