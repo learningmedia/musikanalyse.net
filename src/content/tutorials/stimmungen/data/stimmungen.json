@@ -1,15 +1,110 @@
 {
-  "Name": "Erste Übung",
-  "audioFilePath": "/content/tutorials/stimmungen/sound/exercises/uebungen-pythargoraeisch/",
+  "Name": "Übungen zum Intonationshören",
+  "audioFilePath": "/content/tutorials/stimmungen/sound/exercises/",
   "exercises": [{
-    "firstFileName": "a.mp3",
-    "secondFileName": "a1.mp3",
-    "question": "Wieviel Cent ist das zweite Hörbeispiel tiefer als das erst?",
-    "answer": "Der zweite Ton war 23 Cent tiefer als der zweite."
+    "firstFileName": "ave maria null.mp3",
+    "secondFileName": "",
+    "question": "Passt die Melodie zur Begleitung? Schätzen Sie die Abweichung in der Intonation in Cent.",
+    "answer": "Die Melodie passt zur Begleitung (Abweichung 0 Cent)."
   }, {
-    "firstFileName": "b.mp3",
-    "secondFileName": "b1.mp3",
-    "question": "Wieviel Cent zu hoch?",
-    "answer": "Der erste Ton war 50 Cent höher als der erste."
+    "firstFileName": "ave maria minus 10.mp3",
+    "secondFileName": "",
+    "question": "Passt die Melodie zur Begleitung? Schätzen Sie die Abweichung in der Intonation in Cent.",
+    "answer": "Die Melodie ist zu tief (Abweichung -10 Cent)."
+  }, {
+    "firstFileName": "ave maria minus 15.mp3",
+    "secondFileName": "",
+    "question": "Passt die Melodie zur Begleitung? Schätzen Sie die Abweichung in der Intonation in Cent.",
+    "answer": "Die Melodie ist zu tief (Abweichung -15 Cent)."
+  }, {
+    "firstFileName": "ave maria minus 5.mp3",
+    "secondFileName": "",
+    "question": "Passt die Melodie zur Begleitung? Schätzen Sie die Abweichung in der Intonation in Cent.",
+    "answer": "Die Melodie ist zu tief (Abweichung -5 Cent)."
+  }, {
+    "firstFileName": "ave maria plus 10.mp3",
+    "secondFileName": "",
+    "question": "Passt die Melodie zur Begleitung? Schätzen Sie die Abweichung in der Intonation in Cent.",
+    "answer": "Die Melodie ist zu hoch (Abweichung 10 Cent)."
+  }, {
+    "firstFileName": "ave maria plus 15.mp3",
+    "secondFileName": "",
+    "question": "Passt die Melodie zur Begleitung? Schätzen Sie die Abweichung in der Intonation in Cent.",
+    "answer": "Die Melodie ist zu hoch (Abweichung 15 Cent)."
+  }, {
+    "firstFileName": "ave maria plus 5.mp3",
+    "secondFileName": "",
+    "question": "Passt die Melodie zur Begleitung? Schätzen Sie die Abweichung in der Intonation in Cent.",
+    "answer": "Die Melodie ist zu hoch (Abweichung 5 Cent)."
+  }, {
+    "firstFileName": "bach flöte null.mp3",
+    "secondFileName": "",
+    "question": "Passt die Melodie zur Begleitung? Schätzen Sie die Abweichung in der Intonation in Cent.",
+    "answer": "Die Melodie passt zur Begleitung (Abweichung 0 Cent)."
+  }, {
+    "firstFileName": "bach flöte minus 10.mp3",
+    "secondFileName": "",
+    "question": "Passt die Melodie zur Begleitung? Schätzen Sie die Abweichung in der Intonation in Cent.",
+    "answer": "Die Melodie ist zu tief (Abweichung -10 Cent)."
+  }, {
+    "firstFileName": "bach flöte minus 15.mp3",
+    "secondFileName": "",
+    "question": "Passt die Melodie zur Begleitung? Schätzen Sie die Abweichung in der Intonation in Cent.",
+    "answer": "Die Melodie ist zu tief (Abweichung -15 Cent)."
+  }, {
+    "firstFileName": "bach flöte minus 5.mp3",
+    "secondFileName": "",
+    "question": "Passt die Melodie zur Begleitung? Schätzen Sie die Abweichung in der Intonation in Cent.",
+    "answer": "Die Melodie ist zu tief (Abweichung -5 Cent)."
+  }, {
+    "firstFileName": "bach flöte plus 10.mp3",
+    "secondFileName": "",
+    "question": "Passt die Melodie zur Begleitung? Schätzen Sie die Abweichung in der Intonation in Cent.",
+    "answer": "Die Melodie ist zu hoch (Abweichung 10 Cent)."
+  }, {
+    "firstFileName": "bach flöte plus 15.mp3",
+    "secondFileName": "",
+    "question": "Passt die Melodie zur Begleitung? Schätzen Sie die Abweichung in der Intonation in Cent.",
+    "answer": "Die Melodie ist zu hoch (Abweichung 15 Cent)."
+  }, {
+    "firstFileName": "bach flöte plus 5.mp3",
+    "secondFileName": "",
+    "question": "Passt die Melodie zur Begleitung? Schätzen Sie die Abweichung in der Intonation in Cent.",
+    "answer": "Die Melodie ist zu hoch (Abweichung 5 Cent)."
+  }, {
+    "firstFileName": "EH minus 10.mp3",
+    "secondFileName": "",
+    "question": "Ein Blasinstrument soll zum Klavier gestimmt werden. Ist es momentan zu hoch oder zu tief?",
+    "answer": "Es ist zu tief (Abweichung -10 Cent)."
+  }, {
+    "firstFileName": "EH minus 10.mp3",
+    "secondFileName": "",
+    "question": "Ein Blasinstrument soll zum Klavier gestimmt werden. Ist es momentan zu hoch oder zu tief?",
+    "answer": "Es ist zu tief (Abweichung -10 Cent)."
+  }, {
+    "firstFileName": "EH minus 15.mp3",
+    "secondFileName": "",
+    "question": "Ein Blasinstrument soll zum Klavier gestimmt werden. Ist es momentan zu hoch oder zu tief?",
+    "answer": "Es ist zu tief (Abweichung -15 Cent)."
+  }, {
+    "firstFileName": "EH minus 5.mp3",
+    "secondFileName": "",
+    "question": "Ein Blasinstrument soll zum Klavier gestimmt werden. Ist es momentan zu hoch oder zu tief?",
+    "answer": "Es ist zu tief (Abweichung -5 Cent)."
+  }, {
+    "firstFileName": "EH plus 10.mp3",
+    "secondFileName": "",
+    "question": "Ein Blasinstrument soll zum Klavier gestimmt werden. Ist es momentan zu hoch oder zu tief?",
+    "answer": "Es ist zu tief (Abweichung 10 Cent)."
+  }, {
+    "firstFileName": "EH plus 15.mp3",
+    "secondFileName": "",
+    "question": "Ein Blasinstrument soll zum Klavier gestimmt werden. Ist es momentan zu hoch oder zu tief?",
+    "answer": "Es ist zu tief (Abweichung 15 Cent)."
+  }, {
+    "firstFileName": "EH plus 5.mp3",
+    "secondFileName": "",
+    "question": "Ein Blasinstrument soll zum Klavier gestimmt werden. Ist es momentan zu hoch oder zu tief?",
+    "answer": "Es ist zu tief (Abweichung 5 Cent)."
   }]
  }

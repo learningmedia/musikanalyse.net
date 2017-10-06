@@ -53,21 +53,25 @@ Tester.prototype._createNewExerciseContainer = function(questionContainer, curre
   counter.innerHTML = "Aufgabe " + index + '';
   questionContainer.appendChild(counter);
 
-  var child1 = document.createElement('span');
-  child1.setAttribute('style', 'display: block; float: left; margin-right: 10px;');
-  child1.innerHTML = "Erstes Hörbeispiel:";
-  questionContainer.appendChild(child1);
-  questionContainer.appendChild(this._getAudioElement(audioFilePath + currentExercise.firstFileName));
+  if (audioFilePath && currentExercise.firstFileName) {
+    var child1 = document.createElement('span');
+    child1.setAttribute('style', 'display: block; float: left; margin-right: 10px;');
+    child1.innerHTML = "Erstes Hörbeispiel:";
+    questionContainer.appendChild(child1);
+    questionContainer.appendChild(this._getAudioElement(audioFilePath + currentExercise.firstFileName));
+  }
 
-  var br = document.createElement('br'); 
-  br.setAttribute('style', 'clear: left;');
-  questionContainer.appendChild(br);
+  if (audioFilePath && currentExercise.secondFileName) {
+    var br = document.createElement('br'); 
+    br.setAttribute('style', 'clear: left;');
+    questionContainer.appendChild(br);
 
-  child2 = document.createElement('span');
-  child2.setAttribute('style', 'display: block; float: left; margin-right: 10px;');
-  child2.innerHTML = "Zweites Hörbeispiel:";
-  questionContainer.appendChild(child2);
-  questionContainer.appendChild(this._getAudioElement(audioFilePath + currentExercise.secondFileName));
+    child2 = document.createElement('span');
+    child2.setAttribute('style', 'display: block; float: left; margin-right: 10px;');
+    child2.innerHTML = "Zweites Hörbeispiel:";
+    questionContainer.appendChild(child2);
+    questionContainer.appendChild(this._getAudioElement(audioFilePath + currentExercise.secondFileName));
+  }
 
   var question = document.createElement('p'); 
   question.innerHTML = currentExercise.question;
