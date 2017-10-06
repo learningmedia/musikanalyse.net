@@ -87,16 +87,31 @@
     font-weight: bold;
   }
 
-  .maxWith100 {
+  .originalWidth {
     max-width: 100%;
   }
-  .maxWith75 {
+  .smallWidth {
     max-width: 75%;
   }
-  .maxWith50 {
+  .smallerWidth {
     max-width: 50%;
+  }  
+  .miniWidth {
+    max-width: 25%;
   }
-
+  .originalHeight {
+    max-height: 100%;
+  }
+  .smallHeight {
+    max-height: 75%;
+  }
+  .smallerHeight {
+    max-height: 50%;
+  }
+  .miniHeight {
+    max-height: 25%;
+  }
+  
   .table-80 {
     width: 80%;
     margin-left: auto;
@@ -186,10 +201,12 @@
   }
 
   @media(max-width:480px) {
-    .maxWith75 {
+    .smallWidth
+ {
       width: 100% !important;
     }
-    .maxWith50 {
+    .smallerWidth
+ {
       width: 100% !important;
     }
 
