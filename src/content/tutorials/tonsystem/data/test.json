@@ -1,0 +1,55 @@
+{
+  "Name": "Fragen zum Tonsystem",
+  "audioFilePath": "/content/tutorials/stimmungen/sound/exercises/",
+  "exercises": [{
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Wofür steht der Ausdruck ›una nota‹",
+    "answer": "Um einen Hexachordwechsel zu vermeiden, wurde der Ton über dem 6. Ton eines Hexachords als <i>fa</i> gesungen (erniedrigt). Einiges spricht dafür, dass diese Regel in der Gesangspraxis angewendet worden ist, so dass Kompositionen gegebenenfalls anders klingen können als wenn man sie so aufführen würde, wie sie der Komponist notiert hat. Zum Nachlesen: <a href='#unaNota'>Una nota...</a>."
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Wurden früher Leittöne in Kadenzen notiert?",
+    "answer": "Nein, Leittöne wurde von Sängerinnen und Sängern improvisiert. Insbesondere dann, wenn in den Noten eine Sopranklausel mit einer Finalis d, g oder a zu sehen war. Die sich dadurch ergebenen chromatischen Töne lauten cis, fis und gis. Zum Nachlesen: <a href='#leitton'>Leittöne</a>."
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Wie lauten einer frühen chromatische Tonleiter?",
+    "answer": "Stammtöne: c, d, e, f, g, a, h/b.<br>Improvisierte Leittöne: cis, fis, gis.<br>Töne durch ›una super la‹: es (und b).<br>Chromatische Skala: <b>c, cis, d, es, e, f, fis, g, gis, a, b und h</b>."
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Wie lauteten früher die Solmisationssylben?",
+    "answer": "ut, re, mi, fa, sol, la. Die Anfangssilben des Merkspruches: <b>Ut</b> queant laxis <b>re</b>sonare fibris <b>mi</b>ra gestorum <b>fa</b>muli tuorum <b>sol</b>ve polluti <b>la</b>bii reatum Sancte Iohannes."
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Was steckt hinter dem Spruch: mi contra fa, diabolus in musica?",
+    "answer": "Durch die Töne mi und fa in verschiedenen Hexachorden ergeben sich dissonante Intervalle:<br>1.) mi (naturale) contra fa (mollis) oder mi (durus) contra fa (naturale) = verminderte Quinte oder übermäßige Quarte.<br>2.) mi (durus) und fa (mollis) = übermäßige oder verminderte Oktave."
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Wie hießen die drei ursprünglichen Hexachorde?",
+    "answer": "Hexachord naturale (das natürliche), Hexachord durus (das harte), Hexachord mollis (das weiche)."
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Wie lauten die Töne des Hexachord naturale?",
+    "answer": "c, d, e, f, g, a."
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Wie lauten die Töne des Hexachord durus?",
+    "answer": "g, a, h, c, d, e."
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Wie lauten die Töne des Hexachord mollis?",
+    "answer": "f, g, a, b, c, d."
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Welche Ganz-Halbtonstruktur hat ein Hexachord?",
+    "answer": "Ganzton - Ganzton - <b>Halbton</b> - Ganzton - Ganzton"
+  }]
+ }

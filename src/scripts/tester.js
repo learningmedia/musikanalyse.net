@@ -18,15 +18,14 @@ function loadJSON(path, success, error) {
   xhr.send();
 }
 
-var index = 0;
+var count = 0;
 
 function Tester(elem, options) {
   this.container = elem;
   this.containerId = elem.id;
   this.options = options;
   this.answerContainerId = this.containerId + 'answer';
-  this.exercises = options.exercises;
-  this.currentExercise;
+  this.exercises = this._shuffle(options.exercises);
   this.recentExercises = [];
   this.audioFilePath = options.audioFilePath;
   this.questionContainer = document.createElement('div');
@@ -34,13 +33,17 @@ function Tester(elem, options) {
 }
 
 Tester.prototype.getNewExercise = function() {
-  var randomNumber = Math.floor((Math.random() * this.exercises.length));
-    this.currentExercise = this.exercises[randomNumber];
-    this.container.appendChild(this._createNewExerciseContainer(this.questionContainer, this.currentExercise, this.audioFilePath, this.answerContainerId));
+  count++;
+  var index = count - 1;
+  var currentExercise = this.exercises[index];
+  this.container.appendChild(this._createNewExerciseContainer(this.questionContainer, currentExercise, this.audioFilePath, this.answerContainerId));
+  if (this.exercises.length === count) {
+    this._shuffle(this.exercises);
+    count = 0;
+  }
 };
 
 Tester.prototype._createNewExerciseContainer = function(questionContainer, currentExercise, audioFilePath, answerContainerId) {
-  index++;
   while (questionContainer.firstChild) {
     questionContainer.removeChild(questionContainer.firstChild);
   }
@@ -50,7 +53,7 @@ Tester.prototype._createNewExerciseContainer = function(questionContainer, curre
   questionContainer.appendChild(header);
   var counter = document.createElement('p');
   counter.setAttribute('style', 'padding-top: 3px;');
-  counter.innerHTML = "Aufgabe " + index + '';
+  counter.innerHTML = "Aufgabe " + count + '';
   questionContainer.appendChild(counter);
 
   if (audioFilePath && currentExercise.firstFileName) {
@@ -100,6 +103,20 @@ Tester.prototype._getAudioElement = function(filename) {
   sound.src = filename;
   sound.type = 'audio/mpeg';
   return sound;
+}
+
+Tester.prototype._shuffle = function(array) {
+  var currentIndex = array.length;
+  var temporaryValue;
+  var randomIndex;
+  while (0 !== currentIndex) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+  return array;
 }
 
 var toggleAnswer = function(id) {
