@@ -1,0 +1,105 @@
+{
+  "Name": "Fragen zum Nepolitaner",
+  "audioFilePath": "/content/tutorials/nepolitaner/sound/exercises/",
+  "exercises": [{
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Bestimme den Neapolitaner in c-Moll.",
+    "answer": "Der Neapolitaner in c-Moll ist ein Des-Dur-Sextakkord (zum <a href='#rechenweg'>Rechenweg</a>)."
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Bestimme den Neapolitaner in D-Dur.",
+    "answer": "Der Neapolitaner in D-Dur ist ein Es-Dur-Sextakkord (zum <a href='#rechenweg'>Rechenweg</a>)."
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Bestimme den Neapolitaner in e-Moll.",
+    "answer": "Der Neapolitaner in e-Moll ist ein F-Dur-Sextakkord (zum <a href='#rechenweg'>Rechenweg</a>)."
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Bestimme den Neapolitaner in F-Dur.",
+    "answer": "Der Neapolitaner in F-Dur ist ein Ges-Dur-Sextakkord (zum <a href='#rechenweg'>Rechenweg</a>)."
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Bestimme den Neapolitaner in g-Moll.",
+    "answer": "Der Neapolitaner in g-Moll ist ein As-Dur-Sextakkord (zum <a href='#rechenweg'>Rechenweg</a>)."
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Bestimme den Neapolitaner in A-Dur.",
+    "answer": "Der Neapolitaner in A-Dur ist ein B-Dur-Sextakkord (zum <a href='#rechenweg'>Rechenweg</a>)."
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Bestimme den Neapolitaner in h-Moll.",
+    "answer": "Der Neapolitaner in h-Moll ist ein C-Dur-Sextakkord (zum <a href='#rechenweg'>Rechenweg</a>)."
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Bestimme den Neapolitaner in cis-Moll.",
+    "answer": "Der Neapolitaner in cis-Moll ist ein D-Dur-Sextakkord (zum <a href='#rechenweg'>Rechenweg</a>)."
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Bestimme den Neapolitaner in Es-Dur.",
+    "answer": "Der Neapolitaner in Es-Dur ist ein Fes-Dur-Sextakkord (zum <a href='#rechenweg'>Rechenweg</a>)."
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Bestimme den Neapolitaner in fis-Moll.",
+    "answer": "Der Neapolitaner in fis-Moll ist ein G-Dur-Sextakkord (zum <a href='#rechenweg'>Rechenweg</a>)."
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Bestimme den Neapolitaner in gis-Moll.",
+    "answer": "Der Neapolitaner in gis-Moll ist ein A-Dur-Sextakkord (zum <a href='#rechenweg'>Rechenweg</a>)."
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Bestimme den Neapolitaner in b-Moll.",
+    "answer": "Der Neapolitaner in b-Moll ist ein Ces-Dur-Sextakkord (zum <a href='#rechenweg'>Rechenweg</a>)."
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Nennen Sie mindestens vier allgemeine Funktionen für die Verwendung eines Neapolitaners.",
+    "answer": "1. Als Ausdruck für <a href='#pathopoeia'>›Leid‹ und ›Schmerz‹ (Pathopoeia)</a><br>2. Als <a href='#subdominante'>Subdominante einer Kadenz</a><br>3. Als <a href='#signal'>Signal für den Schluss</a><br>4. Als <a href='#region'>besondere Klangfläche (Region)</a><br>5. Als <a href='#modulation'>Mittel zur Modulation</a>"
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Definieren Sie den Begriff ›Neapolitaner‹ harmonisch.",
+    "answer": "Aus harmonischer Sicht ist der Neapolitaner die erste Umkehrung (Sextakkord) der tiefalterierten zweiten Stufe in Moll."
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Definieren Sie den Begriff ›Neapolitaner‹ kontrapunktisch.",
+    "answer": "Aus kontrapunktischer Sicht ist der Neapolitaner ein kleiner Sextvorhalt vor der Quinte über dem vierten Skalenton, wobei die Auflösung zur Quinte übersprungen werden kann."
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Welches Intervall erklingt zwischen der Neapolitanischen Sexte und der Terz der Dominante?",
+    "answer": "Eine verminderte Terz"
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Welche Funktion hat der Neapolitaner im Sinne der Funktionstheorie?",
+    "answer": "Der Neapolitaner hat die Funktion einer Subdominante."
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Wie lautet das Funktionszeichen für den Neapolitanischen Sextakkord: S<sup>N</sup>, D<sup>v</sup> oder N?",
+    "answer": "Das Funktionszeichen für den Neapolitanischen Sextakkord lautet S<sup>N</sup>."
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Nennen Sie ein Werk, in dem der Neapolitaner auf eine seltene Art eingesetzt wird.",
+    "answer": "Im Kopfsatz der Sonate ›facile‹ KV 545 wird der Neapolitaner zur Modulation von a-Moll nach F-Dur eingesetzt."
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Woher hat der Neapolitaner seinen Namen erhalten?",
+    "answer": "Durch die häufige Verwendung in der neapolitanischen Oper (."
+  }]
+ }
