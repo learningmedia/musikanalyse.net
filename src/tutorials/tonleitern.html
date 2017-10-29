@@ -59,33 +59,38 @@ abstract: In diesem Tutorial erhalten Sie Erklärungen sowie interaktive Übungs
     <li><a href="#tonleiterTrainer">Tool zum Tonleiter-Training</a></li>
   </ul>
   <br>
-  <h4 id="tetra"><a href="#tutorialTitle">Tetrachorde</a></h4>
-  <p>
-    Als Tetrachord (von τετρα = vier und chorda = Saite) wird eine Tonleiter aus nur vier Tönen bezeichnet. Am gebräuchlichsten sind heute Tetrachorde, in denen nur Ganz- und Halbtonschritte vorkommen:
-  </p>
-  <p>
-    <b>1. Halbtonschritt an letzter Stelle</b>
-  </p>
-  <p>
-    Der Tetrachord mit der Struktur Ganzton (= 2 Halbtonschritte) - Ganzton (2) - Halbton (= 1 Halbtonschritt) wird auch als Dur-Tetrachord bezeichnet, weil mit ihm die Durtonleiter beginnt:
-  </p>
-  <img src="/content/tutorials/tonleitern/Strukturen-Seite001.png" /><p>
-  <b>2. Halbtonschritt in der Mitte</b>
-  </p>
-  <p>
-    Der Tetrachord mit der Struktur Ganzton (2) - Halbton (1) - Ganzton (2) wird auch als Moll-Tetrachord (oder auch: dorisches Tetrachord) bezeichnet, weil mit ihm die Molltonleiter (bzw. die dorische Tonleiter) beginnt:
-  </p>
-  <img src="/content/tutorials/tonleitern/Strukturen-Seite002.png" /><p>
-  <b>3. Halbtonschritt an erster Stelle</b>
-  </p>
-  <p>
-    Der Tetrachord mit der Struktur Halbton (1) - Ganzton (2) - Ganzton (2)  wird auch als Phrygisches-Tetrachord bezeichnet, weil mit ihm die phrygische Tonleiter beginnt:
-  </p>
-  <img src="/content/tutorials/tonleitern/Strukturen-Seite003.png" />
-  <p>
-    <span style="font-size: 0.8em;"><a href="#tutorialTitle">zurück zum Inhaltsverzeichnis</a></span>
-  </p>
 
+
+  <h4 id="tetra"><a href="#tutorialTitle">Tetrachorde</a></h4>
+  <button class="foldable-01" onclick="foldableClick(this);">Erläuterungen verbergen</button>
+  <div id="foldable-01">
+    <p>
+      Als Tetrachord (von τετρα = vier und chorda = Saite) wird eine Tonleiter aus nur vier Tönen bezeichnet. Am gebräuchlichsten sind heute Tetrachorde, in denen nur Ganz- und Halbtonschritte vorkommen:
+    </p>
+    <p>
+      <b>1. Halbtonschritt an letzter Stelle</b>
+    </p>
+    <p>
+      Der Tetrachord mit der Struktur Ganzton (= 2 Halbtonschritte) - Ganzton (2) - Halbton (= 1 Halbtonschritt) wird auch als Dur-Tetrachord bezeichnet, weil mit ihm die Durtonleiter beginnt:
+    </p>
+    <img src="/content/tutorials/tonleitern/Strukturen-Seite001.png" /><p>
+    <b>2. Halbtonschritt in der Mitte</b>
+    </p>
+    <p>
+      Der Tetrachord mit der Struktur Ganzton (2) - Halbton (1) - Ganzton (2) wird auch als Moll-Tetrachord (oder auch: dorisches Tetrachord) bezeichnet, weil mit ihm die Molltonleiter (bzw. die dorische Tonleiter) beginnt:
+    </p>
+    <img src="/content/tutorials/tonleitern/Strukturen-Seite002.png" /><p>
+    <b>3. Halbtonschritt an erster Stelle</b>
+    </p>
+    <p>
+      Der Tetrachord mit der Struktur Halbton (1) - Ganzton (2) - Ganzton (2)  wird auch als Phrygisches-Tetrachord bezeichnet, weil mit ihm die phrygische Tonleiter beginnt:
+    </p>
+    <img src="/content/tutorials/tonleitern/Strukturen-Seite003.png" />
+    <p>
+      <span style="font-size: 0.8em;"><a href="#tutorialTitle">zurück zum Inhaltsverzeichnis</a></span>
+    </p>
+  </div>
+  <br><br>
   <!-- Dur -->
   <h4 id="dur"><a href="#tutorialTitle">Dur-Tonleiter</a></h4>
   <p>
@@ -451,6 +456,7 @@ abstract: In diesem Tutorial erhalten Sie Erklärungen sowie interaktive Übungs
 </p>
 <hr>
 
+<!-- <script src='/scripts/foldable.js'></script> -->
 <script>
   var options = {
     'scales': [
@@ -519,4 +525,20 @@ abstract: In diesem Tutorial erhalten Sie Erklärungen sowie interaktive Übungs
   function reset() {
     resetColors();
   }
+
+  function foldableClick(elem) {
+    var elem = elem;
+    var cssClass = elem.classList[0];
+    var container = document.getElementById(cssClass);
+    if (container) {
+      if (container.style.display === 'none') {
+        container.style.display = 'block';
+        elem.value = "Erläuterungen verbergen";
+      } else {
+        container.style.display = 'none';
+        elem.value = "Erläuterungen anzeigen";
+      }
+    }  
+  }
 </script>
+
