@@ -62,8 +62,7 @@ abstract: In diesem Tutorial erhalten Sie Erklärungen sowie interaktive Übungs
 
 
   <h4 id="tetra"><a href="#tutorialTitle">Tetrachorde</a></h4>
-  <button class="foldable-01" onclick="foldableClick(this);">Erläuterungen verbergen</button>
-  <div id="foldable-01">
+  <div class="foldable">
     <p>
       Als Tetrachord (von τετρα = vier und chorda = Saite) wird eine Tonleiter aus nur vier Tönen bezeichnet. Am gebräuchlichsten sind heute Tetrachorde, in denen nur Ganz- und Halbtonschritte vorkommen:
     </p>
@@ -525,20 +524,6 @@ abstract: In diesem Tutorial erhalten Sie Erklärungen sowie interaktive Übungs
   function reset() {
     resetColors();
   }
-
-  function foldableClick(elem) {
-    var elem = elem;
-    var cssClass = elem.classList[0];
-    var container = document.getElementById(cssClass);
-    if (container) {
-      if (container.style.display === 'none') {
-        container.style.display = 'block';
-        elem.value = "Erläuterungen verbergen";
-      } else {
-        container.style.display = 'none';
-        elem.value = "Erläuterungen anzeigen";
-      }
-    }  
-  }
 </script>
+<script src='/scripts/foldable.js'></script>
 
