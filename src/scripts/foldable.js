@@ -5,27 +5,33 @@ for (var i = 0; i < elements.length; i++) {
   var btn = document.createElement("BUTTON");
   var link = 'toggleId-' + i;
   btn.classList.add(link);
-  var text = document.createTextNode("Erläuterungen verbergen");
+  var text = document.createTextNode("Weitere Erläuterungen anzeigen");
   btn.appendChild(text);
   btn.addEventListener('click', foldableClick);
+  btn.classList.add('foldable-collapsed');
 
   element = elements[i];
   element.id = link;
   element.parentNode.insertBefore(btn, element);
+  element.style.display = 'none';
 }
 
 function foldableClick(event) {
   var elem = event.target;
   var cssClass = elem.classList[0];
-  debugger;
+  console.log(cssClass);
   var container = document.getElementById(cssClass);
   if (container) {
     if (container.style.display === 'none') {
       container.style.display = 'block';
-      elem.value = "Erläuterungen verbergen";
+      elem.firstChild.data = "Erläuterungen verbergen";
+      elem.classList.remove('foldable-collapsed');
+      elem.classList.add('foldable-block');
     } else {
       container.style.display = 'none';
-      elem.value = "Erläuterungen anzeigen";
+      elem.firstChild.data = "Weitere Erläuterungen anzeigen";
+      elem.classList.remove('foldable-block');
+      elem.classList.add('foldable-collapsed');
     }
   }
 }  
