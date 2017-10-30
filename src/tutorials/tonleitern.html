@@ -12,13 +12,13 @@ abstract: In diesem Tutorial erhalten Sie Erklärungen sowie interaktive Übungs
 <script src='/scripts/scaleExercises.js'></script>
 <link rel="stylesheet" href="/styles/scale.css">
 
-<button onclick="onAnnotationsClick(this)">Erläuterungen zu den Tonleitern ausblenden</button>
+<button onclick="onAnnotationsClick(this)">Zum Test (Text ausblenden)</button>
 <br><br>
 <div id="scaleAnnotationContainer">
   <p>
     In Musiklehren findet man die häufig die folgenden Bezeichnungen für Tonleitern und Skalen. Klicken Sie auf einen Namen, um weitere Informationen zum Aufbau und zur Besonderheit der jeweiligen Tonfolge zu erhalten:
   </p>
-  <ul>
+  <!-- <ul>
     <li><a href="#tetra">Tetrachorde</a></li>
     <li><a href="#dur">Dur-Tonleiter</a></li>
     <li>Moll-Tonleitern
@@ -34,8 +34,7 @@ abstract: In diesem Tutorial erhalten Sie Erklärungen sowie interaktive Übungs
         <li><a href="#phyrgisch">phrygische Tonleiter</a></li>
         <li><a href="#lydisch">lydische Tonleiter</a></li>
         <li><a href="#mixolydisch">mixolydische Tonleiter</a></li>
-        <li><a href="#äolisch">äolische Tonleiter</a></li>
-        <li><a href="#ionisch">ionische Tonleiter</a></li>
+        <li><a href="#äolischIonisch">äolische und ionische Tonleiter</a></li>
         <li><a href="#lokrisch">lokrische Tonleiter</a></li>
       </ul>
     </li>
@@ -58,349 +57,354 @@ abstract: In diesem Tutorial erhalten Sie Erklärungen sowie interaktive Übungs
     </li>
     <li><a href="#tonleiterTrainer">Tool zum Tonleiter-Training</a></li>
   </ul>
-  <br>
+  <br> -->
+
   <h4 id="tetra"><a href="#tutorialTitle">Tetrachorde</a></h4>
-  <p>
-    Als Tetrachord (von τετρα = vier und chorda = Saite) wird eine Tonleiter aus nur vier Tönen bezeichnet. Am gebräuchlichsten sind heute Tetrachorde, in denen nur Ganz- und Halbtonschritte vorkommen:
-  </p>
-  <p>
-    <b>1. Halbtonschritt an letzter Stelle</b>
-  </p>
-  <p>
-    Der Tetrachord mit der Struktur Ganzton (= 2 Halbtonschritte) - Ganzton (2) - Halbton (= 1 Halbtonschritt) wird auch als Dur-Tetrachord bezeichnet, weil mit ihm die Durtonleiter beginnt:
-  </p>
-  <img src="/content/tutorials/tonleitern/Strukturen-Seite001.png" /><p>
-  <b>2. Halbtonschritt in der Mitte</b>
-  </p>
-  <p>
-    Der Tetrachord mit der Struktur Ganzton (2) - Halbton (1) - Ganzton (2) wird auch als Moll-Tetrachord (oder auch: dorisches Tetrachord) bezeichnet, weil mit ihm die Molltonleiter (bzw. die dorische Tonleiter) beginnt:
-  </p>
-  <img src="/content/tutorials/tonleitern/Strukturen-Seite002.png" /><p>
-  <b>3. Halbtonschritt an erster Stelle</b>
-  </p>
-  <p>
-    Der Tetrachord mit der Struktur Halbton (1) - Ganzton (2) - Ganzton (2)  wird auch als Phrygisches-Tetrachord bezeichnet, weil mit ihm die phrygische Tonleiter beginnt:
-  </p>
-  <img src="/content/tutorials/tonleitern/Strukturen-Seite003.png" />
-  <p>
-    <span style="font-size: 0.8em;"><a href="#tutorialTitle">zurück zum Inhaltsverzeichnis</a></span>
-  </p>
+  <div class="foldable">
+    <p>
+      Als Tetrachord (von τετρα = vier und chorda = Saite) wird eine Tonleiter aus nur vier Tönen bezeichnet. Am gebräuchlichsten sind heute Tetrachorde, in denen nur Ganz- und Halbtonschritte vorkommen:
+    </p>
+    <p>
+      <b>1. Halbtonschritt an letzter Stelle</b>
+    </p>
+    <p>
+      Der Tetrachord mit der Struktur Ganzton (= 2 Halbtonschritte) - Ganzton (2) - Halbton (= 1 Halbtonschritt) wird auch als Dur-Tetrachord bezeichnet, weil mit ihm die Durtonleiter beginnt:
+    </p>
+    <img src="/content/tutorials/tonleitern/Strukturen-Seite001.png" /><p>
+    <b>2. Halbtonschritt in der Mitte</b>
+    </p>
+    <p>
+      Der Tetrachord mit der Struktur Ganzton (2) - Halbton (1) - Ganzton (2) wird auch als Moll-Tetrachord (oder auch: dorisches Tetrachord) bezeichnet, weil mit ihm die Molltonleiter (bzw. die dorische Tonleiter) beginnt:
+    </p>
+    <img src="/content/tutorials/tonleitern/Strukturen-Seite002.png" /><p>
+    <b>3. Halbtonschritt an erster Stelle</b>
+    </p>
+    <p>
+      Der Tetrachord mit der Struktur Halbton (1) - Ganzton (2) - Ganzton (2)  wird auch als Phrygisches-Tetrachord bezeichnet, weil mit ihm die phrygische Tonleiter beginnt:
+    </p>
+    <img src="/content/tutorials/tonleitern/Strukturen-Seite003.png" />
+  </div>
+  <hr class="foldable-separator">
 
   <!-- Dur -->
   <h4 id="dur"><a href="#tutorialTitle">Dur-Tonleiter</a></h4>
-  <p>
-    Die <b>Durtonleiter</b> lässt sich als Zusammensetzung aus zwei Dur-Tetrachorden verstehen:
-  </p>
-  <img src="/content/tutorials/tonleitern/TonleiternAusTetrachorden_0001.png" />
-  <audio controls src="/content/tutorials/tonleitern/sound/dur.mp3" preload="auto"></audio>
-  <p>
-    Oft wird die Durtonleiter auch als Auschnitt (= 6 Quinten) aus der <a href="/tutorials/quintenzirkel#quintenkette">Quintenkette</a> bzw. aus dem <a href="/tutorials/quintenzirkel#quintenturm">Quintenturm</a> erklärt. Eine weitere Erklärung ergibt sich aus ihrer Intervallstruktur bzw. der Folge Ganzton - Ganzton - Halbton - Ganzton - Ganzton - Ganzton - Halbton bzw. in Kurzschreibweise 2-2-1-2-2-2-1 (2 = Ganzton und 1 = Halbton). Der erste bzw. tiefste Ton der Durtonleiter wird als Grundton bezeichnet:
-  </p>
-  <img src="/content/tutorials/tonleitern/Strukturen-Seite004.png" />
-  <p>
-    Diese Struktur findet sich auf dem Klavier zwischen den weiße Tasten vom Ton <i>c</i> aus:
-  </p>
-  <img style="width: 200px; max-height: 100px;" src="/content/tutorials/tonleitern/tasten-dur.png" />
-  <p>
-    Wenn Sie die Töne der Durtonleiter von einem gegebenen Ton aus bestimmen möchten, notieren Sie hierzu am besten in einem ersten Schritt acht Stammtöne (ohne Vorzeichen) von dem gegebenen Ton aus. Für den Ton <i>d</i> lauten diese Stammtöne zum Beispiel: <i>d</i>-<i>e</i>-<i>f</i>-<i>g</i>-<i>a</i>-<i>h</i>-<i>c</i>-<i>d</i> (untere Ebene in der nachstehenden Abbildung). Überprüfen Sie anschließend, an welchen Stellen die Struktur der Durtonleiter von der Struktur der Stammtöne abweicht:
-  </p>
-  <img src="/content/tutorials/tonleitern/Tonleitern-Seite001.png" />
-  <p>
-    Der zweite Tonschritt auf der Ebene der Stammtöne ist beispielsweise ein Halbtonschritt (1), der zweite Tonschritt für die Durtonleiter muss jedoch ein Ganztonschritt sein (2). Um diese Struktur herzustellen, müssen Sie das <i>f</i> um einen halben Ton erhöhen, dass heißt zu <i>fis</i> alterieren (= chromatisch verändert werden). Aus dem gleichen Grund muss auch das <i>c</i> zu <i>cis</i> alteriert werden. Die Notation der D-Dur Tonleiter in einem Notensystem sieht wie folgt aus:
-  </p>
-  <img src="/content/tutorials/tonleitern/D-Dur_0001.png" />
-  <img src="/content/tutorials/tonleitern/D-Dur_0002.png" />
-  <img src="/content/tutorials/tonleitern/D-Dur_0003.png" />
-  <img src="/content/tutorials/tonleitern/D-Dur_0004.png" />
-  <p>
-    <span style="font-size: 0.8em;"><a href="#tutorialTitle">zurück zum Inhaltsverzeichnis</a></span>
-  </p>
+  <div class="foldable">
+    <p>
+      Die <b>Durtonleiter</b> lässt sich als Zusammensetzung aus zwei Dur-Tetrachorden verstehen:
+    </p>
+    <img src="/content/tutorials/tonleitern/TonleiternAusTetrachorden_0001.png" />
+    <audio controls src="/content/tutorials/tonleitern/sound/dur.mp3" preload="auto"></audio>
+    <p>
+      Oft wird die Durtonleiter auch als Auschnitt (= 6 Quinten) aus der <a href="/tutorials/quintenzirkel#quintenkette">Quintenkette</a> bzw. aus dem <a href="/tutorials/quintenzirkel#quintenturm">Quintenturm</a> erklärt. Eine weitere Erklärung ergibt sich aus ihrer Intervallstruktur bzw. der Folge Ganzton - Ganzton - Halbton - Ganzton - Ganzton - Ganzton - Halbton bzw. in Kurzschreibweise 2-2-1-2-2-2-1 (2 = Ganzton und 1 = Halbton). Der erste bzw. tiefste Ton der Durtonleiter wird als Grundton bezeichnet:
+    </p>
+    <img src="/content/tutorials/tonleitern/Strukturen-Seite004.png" />
+    <p>
+      Diese Struktur findet sich auf dem Klavier zwischen den weiße Tasten vom Ton <i>c</i> aus:
+    </p>
+    <img style="width: 200px; max-height: 100px;" src="/content/tutorials/tonleitern/tasten-dur.png" />
+    <p>
+      Wenn Sie die Töne der Durtonleiter von einem gegebenen Ton aus bestimmen möchten, notieren Sie hierzu am besten in einem ersten Schritt acht Stammtöne (ohne Vorzeichen) von dem gegebenen Ton aus. Für den Ton <i>d</i> lauten diese Stammtöne zum Beispiel: <i>d</i>-<i>e</i>-<i>f</i>-<i>g</i>-<i>a</i>-<i>h</i>-<i>c</i>-<i>d</i> (untere Ebene in der nachstehenden Abbildung). Überprüfen Sie anschließend, an welchen Stellen die Struktur der Durtonleiter von der Struktur der Stammtöne abweicht:
+    </p>
+    <img src="/content/tutorials/tonleitern/Tonleitern-Seite001.png" />
+    <p>
+      Der zweite Tonschritt auf der Ebene der Stammtöne ist beispielsweise ein Halbtonschritt (1), der zweite Tonschritt für die Durtonleiter muss jedoch ein Ganztonschritt sein (2). Um diese Struktur herzustellen, müssen Sie das <i>f</i> um einen halben Ton erhöhen, dass heißt zu <i>fis</i> alterieren (= chromatisch verändert werden). Aus dem gleichen Grund muss auch das <i>c</i> zu <i>cis</i> alteriert werden. Die Notation der D-Dur Tonleiter in einem Notensystem sieht wie folgt aus:
+    </p>
+    <img src="/content/tutorials/tonleitern/D-Dur_0001.png" />
+    <img src="/content/tutorials/tonleitern/D-Dur_0002.png" />
+    <img src="/content/tutorials/tonleitern/D-Dur_0003.png" />
+    <img src="/content/tutorials/tonleitern/D-Dur_0004.png" />
+  </div>
+  <hr class="foldable-separator-collapsed">
 
   <!-- Moll -->
   <h4 id="natMoll"><a href="#tutorialTitle">Moll-Tonleitern</a></h4>
-  <p>
-    Die <b>natürliche Molltonleiter</b> (oder auch nur <b>Molltonleiter</b>) lässt sich als Zusammensetzung aus dem Moll-Tetrachord (unten) und dem Phrygischen-Tetrachord (oben) verstehen:
-  </p>
-  <img src="/content/tutorials/tonleitern/TonleiternAusTetrachorden_0002.png" />
-  <audio controls src="/content/tutorials/tonleitern/sound/natMoll.mp3" preload="auto"></audio>
-  <p>
-    Auch die natürliche Molltonleiter lässt sich als Auschnitt (= 6 Quinten) aus der <a href="/tutorials/quintenzirkel#quintenkette">Quintenkette</a> bzw. aus dem <a href="/tutorials/quintenzirkel#quintenturm">Quintenturm</a> verstehen. Als Intervallstruktur der Tonleiter ergibt sich die Folge Ganzton - Halbton - Ganzton - Ganzton - Halbton - Ganzton - Ganzton bzw. in Kurzschreibweise 2-1-2-2-1-2-2. Der erste bzw. tiefste Ton der Molltonleiter ist der Grundton:
-  </p>
-  <img src="/content/tutorials/tonleitern/Strukturen-Seite005.png" />
-  <p>
-    Diese Struktur findet sich auf dem Klavier zwischen den weiße Tasten vom Ton <i>a</i> aus:
-  </p>
-  <img style="width: 200px; max-height: 100px;" src="/content/tutorials/tonleitern/tasten-moll.png" />
-  <p>
-    Wenn Sie die Töne der Molltonleiter von einem gegebenen Ton aus bestimmen möchten, notieren Sie hierzu am besten in einem ersten Schritt acht Stammtöne (ohne Vorzeichen) von dem gegebenen Ton aus. Für den Ton <i>d</i> lauten diese Stammtöne beispielsweise: <i>d</i>-<i>e</i>-<i>f</i>-<i>g</i>-<i>a</i>-<i>h</i>-<i>c</i>-<i>d</i> (untere Ebene in der nachstehenden Abbildung). Überprüfen Sie anschließend, an welchen Stellen die Struktur der Molltonleiter von der Struktur der Stammtöne abweicht:
-  </p>
-  <img src="/content/tutorials/tonleitern/Tonleitern-Seite002.png" />
-  <p>
-    Der fünfte Tonschritt muss in der natürlichen Molltonleiter beispielsweise ein Halbtonschritt (1) sein, auf der Ebene der Stammtöne findet sich an dieser Setlle jedoch Ganztonschritt (2). Das heißt, dass für die Struktur der natürlichen Molltonleiter das <i>h</i> um einen halben Ton erniedrigt, also zu <i>b</i> alteriert (= chromatisch verändert) werden muss. Die Notation einer d-Moll Tonleiter im Notensystem sieht wie folgt aus:
-  </p>
-  <img src="/content/tutorials/tonleitern/d-Moll_0001.png" />
-  <img src="/content/tutorials/tonleitern/d-Moll_0002.png" />
-  <img src="/content/tutorials/tonleitern/d-Moll_0003.png" />
-  <img src="/content/tutorials/tonleitern/d-Moll_0004.png" />
+  <div class="foldable">
+    <p>
+      Die <b>natürliche Molltonleiter</b> (oder auch nur <b>Molltonleiter</b>) lässt sich als Zusammensetzung aus dem Moll-Tetrachord (unten) und dem Phrygischen-Tetrachord (oben) verstehen:
+    </p>
+    <img src="/content/tutorials/tonleitern/TonleiternAusTetrachorden_0002.png" />
+    <audio controls src="/content/tutorials/tonleitern/sound/natMoll.mp3" preload="auto"></audio>
+    <p>
+      Auch die natürliche Molltonleiter lässt sich als Auschnitt (= 6 Quinten) aus der <a href="/tutorials/quintenzirkel#quintenkette">Quintenkette</a> bzw. aus dem <a href="/tutorials/quintenzirkel#quintenturm">Quintenturm</a> verstehen. Als Intervallstruktur der Tonleiter ergibt sich die Folge Ganzton - Halbton - Ganzton - Ganzton - Halbton - Ganzton - Ganzton bzw. in Kurzschreibweise 2-1-2-2-1-2-2. Der erste bzw. tiefste Ton der Molltonleiter ist der Grundton:
+    </p>
+    <img src="/content/tutorials/tonleitern/Strukturen-Seite005.png" />
+    <p>
+      Diese Struktur findet sich auf dem Klavier zwischen den weiße Tasten vom Ton <i>a</i> aus:
+    </p>
+    <img style="width: 200px; max-height: 100px;" src="/content/tutorials/tonleitern/tasten-moll.png" />
+    <p>
+      Wenn Sie die Töne der Molltonleiter von einem gegebenen Ton aus bestimmen möchten, notieren Sie hierzu am besten in einem ersten Schritt acht Stammtöne (ohne Vorzeichen) von dem gegebenen Ton aus. Für den Ton <i>d</i> lauten diese Stammtöne beispielsweise: <i>d</i>-<i>e</i>-<i>f</i>-<i>g</i>-<i>a</i>-<i>h</i>-<i>c</i>-<i>d</i> (untere Ebene in der nachstehenden Abbildung). Überprüfen Sie anschließend, an welchen Stellen die Struktur der Molltonleiter von der Struktur der Stammtöne abweicht:
+    </p>
+    <img src="/content/tutorials/tonleitern/Tonleitern-Seite002.png" />
+    <p>
+      Der fünfte Tonschritt muss in der natürlichen Molltonleiter beispielsweise ein Halbtonschritt (1) sein, auf der Ebene der Stammtöne findet sich an dieser Setlle jedoch Ganztonschritt (2). Das heißt, dass für die Struktur der natürlichen Molltonleiter das <i>h</i> um einen halben Ton erniedrigt, also zu <i>b</i> alteriert (= chromatisch verändert) werden muss. Die Notation einer d-Moll Tonleiter im Notensystem sieht wie folgt aus:
+    </p>
+    <img src="/content/tutorials/tonleitern/d-Moll_0001.png" />
+    <img src="/content/tutorials/tonleitern/d-Moll_0002.png" />
+    <img src="/content/tutorials/tonleitern/d-Moll_0003.png" />
+    <img src="/content/tutorials/tonleitern/d-Moll_0004.png" />
 
-  <p id="melMoll">
-    Die <b>melodische Molltonleiter</b> ist ein Hilfsmittel, um sich bestimmte Vorzeichen in sehr typischen melodischen Wendungen erklären zu können. Das folgende Notenbeispiel zeigt links den Anfang der zweistimmigen Invention in e-Moll BWV 778 von <a href="https://de.wikipedia.org/wiki/Johann_Sebastian_Bach" target="_blank">Johann Sebastian Bach</a>, rechts wurden alle Töne des Beispiels zu einer Tonleiter geordnet. In dieser sogenannten melodischen Molltonleiter werden die Vorzeichen <i>cis</i> und <i>dis</i> berücksichtigt, die Bach am Anfang seiner e-Moll-Invention aus melodischen Gründen verwendet hat:
-  </p>
-  <img src="/content/tutorials/tonleitern/e-Moll.png" />
-  <audio controls src="/content/tutorials/tonleitern/sound/ivention-e-moll.mp3" preload="auto"></audio>
-  <p>
-    Die melodische Molltonleiter lässt sich als Zusammensetzung aus dem Moll-Tetrachord (unten) und dem Dur-Tetrachord (oben) verstehen, auch in der melodischen Molltonleiter ist der erste bzw. tiefste Ton der Grundton:
-  </p>
-  <img src="/content/tutorials/tonleitern/TonleiternAusTetrachorden_0003.png" />
-  <audio controls src="/content/tutorials/tonleitern/sound/melMoll.mp3" preload="auto"></audio>
-  <p>
-    Da die melodische Molltonleiter nur ein Hilfsmittel zur Erklärung bestimmter Vorzeichen ist, verbindet sich mit dieser Tonleiter &minus; anders als zum Beispiel die <a href="#natMoll">natürliche Molltonleiter</a> &minus; nicht eine eigenständige Tonart (Sie können beispielsweise ein melodisches e-Moll nicht durch eine Generalvorzeichnung vorgeben). Möchten Sie die Töne dieser Skala bestimmen, errechnen Sie zuerst die Töne der <a href="#natMoll">natürlichen Molltonleiter</a> und erhöhen Sie anschließend die VI. und VII. Tonleiterstufe (also zum Beispiel in e-Moll die Töne <i>c</i> und <i>d</i> zu <i>cis</i> und <i>dis</i>).
-  </p>
+    <p id="melMoll">
+      Die <b>melodische Molltonleiter</b> ist ein Hilfsmittel, um sich bestimmte Vorzeichen in sehr typischen melodischen Wendungen erklären zu können. Das folgende Notenbeispiel zeigt links den Anfang der zweistimmigen Invention in e-Moll BWV 778 von <a href="https://de.wikipedia.org/wiki/Johann_Sebastian_Bach" target="_blank">Johann Sebastian Bach</a>, rechts wurden alle Töne des Beispiels zu einer Tonleiter geordnet. In dieser sogenannten melodischen Molltonleiter werden die Vorzeichen <i>cis</i> und <i>dis</i> berücksichtigt, die Bach am Anfang seiner e-Moll-Invention aus melodischen Gründen verwendet hat:
+    </p>
+    <img src="/content/tutorials/tonleitern/e-Moll.png" />
+    <audio controls src="/content/tutorials/tonleitern/sound/ivention-e-moll.mp3" preload="auto"></audio>
+    <p>
+      Die melodische Molltonleiter lässt sich als Zusammensetzung aus dem Moll-Tetrachord (unten) und dem Dur-Tetrachord (oben) verstehen, auch in der melodischen Molltonleiter ist der erste bzw. tiefste Ton der Grundton:
+    </p>
+    <img src="/content/tutorials/tonleitern/TonleiternAusTetrachorden_0003.png" />
+    <audio controls src="/content/tutorials/tonleitern/sound/melMoll.mp3" preload="auto"></audio>
+    <p>
+      Da die melodische Molltonleiter nur ein Hilfsmittel zur Erklärung bestimmter Vorzeichen ist, verbindet sich mit dieser Tonleiter &minus; anders als zum Beispiel die <a href="#natMoll">natürliche Molltonleiter</a> &minus; nicht eine eigenständige Tonart (Sie können beispielsweise ein melodisches e-Moll nicht durch eine Generalvorzeichnung vorgeben). Möchten Sie die Töne dieser Skala bestimmen, errechnen Sie zuerst die Töne der <a href="#natMoll">natürlichen Molltonleiter</a> und erhöhen Sie anschließend die VI. und VII. Tonleiterstufe (also zum Beispiel in e-Moll die Töne <i>c</i> und <i>d</i> zu <i>cis</i> und <i>dis</i>).
+    </p>
 
-  <p id="harmMoll">
-    Die <b>harmonische Molltonleiter</b> ist &minus; wie die melodische Molltonleiter &minus; eine Hilfskonstruktion, um sich den künstlich erhöhten Leitung in einer Kadenz über eine Tonleiter erklären zu können:
-  </p>
-  <img src="/content/tutorials/tonleitern/TonleiternAusTetrachorden_0004.png" />
-  <audio controls src="/content/tutorials/tonleitern/sound/harmMoll.mp3" preload="auto"></audio>
-  <p>
-    Das folgende Beispiel zeigt eine Kadenz. Die Terz der Subdominante d-Moll <i>f</i> (6. Ton der Tonleiter) und die Terz der Dominante E-Dur <i>gis</i> (= Leitton bzw. erhöhter 7. Ton der Tonleiter) wurden rot markiert. Diese beiden Töne ergeben als Tonleiter notiert (im Beispeil oben) zwischen dem 6. und 7. Ton eine übermäßigen Sekundschritt (= 3 Halbtonschritte):
-  </p>
-  <img src="/content/tutorials/tonleitern/harmMollKadenz.png" />
-  <audio controls src="/content/tutorials/tonleitern/sound/harmMollKadenz.mp3" preload="auto"></audio>
-  <p>
-    Da auch die harmonische Molltonleiter nur ein Hilfsmittel zur Erklärung des Leittons ist, verbindet sich auch mit dieser Tonleiter keine eigenständige Tonart (Sie können beispielsweise ein harmonisches a-Moll nicht durch eine Generalvorzeichnung vorgeben). Möchten Sie die Töne dieser Skala bestimmen, errechnen Sie zuerst die Töne der <a href="#natMoll">natürlichen Molltonleiter</a> und erhöhen Sie anschließend die VII. Tonleiterstufe (bzw. erzeugen Sie durch Vorzeichen einen künstlichen Leitton, also zum Beispiel in a-Moll durch Erhöhung des Tons <i>g</i> zu <i>gis</i>).
-  </p>
-  <p>
-    <span style="font-size: 0.8em;"><a href="#tutorialTitle">zurück zum Inhaltsverzeichnis</a></span>
-  </p>
+    <p id="harmMoll">
+      Die <b>harmonische Molltonleiter</b> ist &minus; wie die melodische Molltonleiter &minus; eine Hilfskonstruktion, um sich den künstlich erhöhten Leitung in einer Kadenz über eine Tonleiter erklären zu können:
+    </p>
+    <img src="/content/tutorials/tonleitern/TonleiternAusTetrachorden_0004.png" />
+    <audio controls src="/content/tutorials/tonleitern/sound/harmMoll.mp3" preload="auto"></audio>
+    <p>
+      Das folgende Beispiel zeigt eine Kadenz. Die Terz der Subdominante d-Moll <i>f</i> (6. Ton der Tonleiter) und die Terz der Dominante E-Dur <i>gis</i> (= Leitton bzw. erhöhter 7. Ton der Tonleiter) wurden rot markiert. Diese beiden Töne ergeben als Tonleiter notiert (im Beispeil oben) zwischen dem 6. und 7. Ton eine übermäßigen Sekundschritt (= 3 Halbtonschritte):
+    </p>
+    <img src="/content/tutorials/tonleitern/harmMollKadenz.png" />
+    <audio controls src="/content/tutorials/tonleitern/sound/harmMollKadenz.mp3" preload="auto"></audio>
+    <p>
+      Da auch die harmonische Molltonleiter nur ein Hilfsmittel zur Erklärung des Leittons ist, verbindet sich auch mit dieser Tonleiter keine eigenständige Tonart (Sie können beispielsweise ein harmonisches a-Moll nicht durch eine Generalvorzeichnung vorgeben). Möchten Sie die Töne dieser Skala bestimmen, errechnen Sie zuerst die Töne der <a href="#natMoll">natürlichen Molltonleiter</a> und erhöhen Sie anschließend die VII. Tonleiterstufe (bzw. erzeugen Sie durch Vorzeichen einen künstlichen Leitton, also zum Beispiel in a-Moll durch Erhöhung des Tons <i>g</i> zu <i>gis</i>).
+    </p>
+  </div>
+  <hr class="foldable-separator">
 
   <!-- Dorisch -->
   <h4><a href="#tutorialTitle">Kirchentonleitern</a></h4>
-  <p>
-    Die <b id="dorisch">dorische Tonleiter</b> lässt sich als Zusammensetzung aus zwei Moll-Tetrachorden verstehen:
-  </p>
-  <img src="/content/tutorials/tonleitern/TonleiternAusTetrachorden_0005.png" />
-  <audio controls src="/content/tutorials/tonleitern/sound/dorisch.mp3" preload="auto"></audio>
-  <p>
-    Auch die dorische Tonleiter lässt sich als Auschnitt (= 6 Quinten) aus der <a href="/tutorials/quintenzirkel#quintenkette">Quintenkette</a> bzw. aus dem <a href="/tutorials/quintenzirkel#quintenturm">Quintenturm</a> verstehen. Als Intervallstruktur der Tonleiter ergibt sich die Folge Ganzton - Halbton - Ganzton - Ganzton - Ganzton - Halbton - Ganzton bzw. in Kurzschreibweise 2-1-2-2-2-1-2.
-  </p>
-  <img src="/content/tutorials/tonleitern/Strukturen-Seite008.png" />
-  <p>
-    Diese Struktur findet sich auf dem Klavier zwischen den weiße Tasten vom Ton d aus:
-  </p>
-  <img style="width: 200px; max-height: 100px;" src="/content/tutorials/tonleitern/tasten-dorisch.png" />
-  <p>
-    Wenn Sie Dorisch von einem gegebenen Ton aus bestimmen möchten, notieren Sie hierzu am besten in einem ersten Schritt acht Stammtöne (ohne Vorzeichen) von dem gegebenen Ton aus. Für den Ton <i>e</i> lauten diese Stammtöne zum Beispiel: <i>e</i>-<i>f</i>-<i>g</i>-<i>a</i>-<i>h</i>-<i>c</i>-<i>d</i>-<i>e</i> (untere Ebene in der nachstehenden Abbildung). Überprüfen Sie anschließend, an welchen Stellen die Struktur Dorisch von der Struktur der Stammtöne abweicht:
-  </p>
-  <img src="/content/tutorials/tonleitern/Tonleitern-Seite003.png" />
-  <p>
-    Der erste Tonschritt auf der Ebene der Stammtöne ist beispielsweise ein Halbtonschritt (1), für die dorische Tonleiter wird hier jedoch ein Ganztonschritt (2) benötigt. Um diese Struktur herzustellen, müssen Sie das <i>f</i> um einen halben Ton erhöhen, dass heißt zu <i>fis</i> alterieren (= chromatisch verändern). Aus dem gleichen Grund muss auch das <i>c</i> zu <i>cis</i> erhöht werden. Die phrygische Tonleiter von dem Ton <i>e</i> aus lautet: <i>e</i>-<i>fis</i>-<i>g</i>-<i>a</i>-<i>h</i>-<i>cis</i>-<i>d</i>-<i>e</i>
-  </p>
-  <p>
-    Die Notation der e-dorischen Tonleiter in einem Notensystem sieht wie folgt aus:
-  </p>
-  <img src="/content/tutorials/tonleitern/e-dorisch_0001.png" />
-  <img src="/content/tutorials/tonleitern/e-dorisch_0002.png" />
-  <img src="/content/tutorials/tonleitern/e-dorisch_0003.png" />
-  <img src="/content/tutorials/tonleitern/e-dorisch_0004.png" />
-  <p id="tonartenHistorisch">
-    Im Hinblick auf <i>alte Tonarten</i> wurde zwischen <i>authentischen</i> und <i>plagalen</i> Tonarten unterschieden. Das Thema <i>alte Tonarten</i> ist allerdings sehr viel komplexer, als die Angabe einer Tonleiter und wird daher in einem eigenen Tutorial besprochen. Wird für eine Kirchentonarten eine Tonleiter angegeben, ist fast immer ein neuers Verständnis von Kirchentonarten gemeint, dass sich lediglich auf die Töne einer Skala bezieht (und das mit dem Tonartverständnis alter Musik nicht viele Gemeinsamkeiten hat). Ein solches Verständnis ist typisch für den Jazz und beispielsweise auch für die Musik von <a href="https://de.wikipedia.org/wiki/B%C3%A9la_Bart%C3%B3k" target="_blank">Bela Bartóks</a>. Das folgende Stück aus Bartóks Mikrokosmos trägt die Titel »Dór hangsor« (Dorische Tonart) und verwendet &minus; mit Ausnahme des <i>fis</i> im Schlussakkord, das auch als »picardische Terz« bezeichnet wird &minus; nur Töne der dorischen Tonleiter von <i>d</i> aus:
-  </p>
-  <img src="/content/tutorials/tonleitern/bartok.png" />
-  <audio controls src="/content/tutorials/tonleitern/sound/bartok-dorisch.mp3" preload="auto"></audio>
-  <p>
-    <span style="font-size: 0.8em;"><a href="#tutorialTitle">zurück zum Inhaltsverzeichnis</a></span>
-  </p>
+  <h5 id="dorisch">Dorisch</h5>
+  <div class="foldable">
+    <p>
+      Die <b>dorische Tonleiter</b> lässt sich als Zusammensetzung aus zwei Moll-Tetrachorden verstehen:
+    </p>
+    <img src="/content/tutorials/tonleitern/TonleiternAusTetrachorden_0005.png" />
+    <audio controls src="/content/tutorials/tonleitern/sound/dorisch.mp3" preload="auto"></audio>
+    <p>
+      Auch die dorische Tonleiter lässt sich als Auschnitt (= 6 Quinten) aus der <a href="/tutorials/quintenzirkel#quintenkette">Quintenkette</a> bzw. aus dem <a href="/tutorials/quintenzirkel#quintenturm">Quintenturm</a> verstehen. Als Intervallstruktur der Tonleiter ergibt sich die Folge Ganzton - Halbton - Ganzton - Ganzton - Ganzton - Halbton - Ganzton bzw. in Kurzschreibweise 2-1-2-2-2-1-2.
+    </p>
+    <img src="/content/tutorials/tonleitern/Strukturen-Seite008.png" />
+    <p>
+      Diese Struktur findet sich auf dem Klavier zwischen den weiße Tasten vom Ton d aus:
+    </p>
+    <img style="width: 200px; max-height: 100px;" src="/content/tutorials/tonleitern/tasten-dorisch.png" />
+    <p>
+      Wenn Sie Dorisch von einem gegebenen Ton aus bestimmen möchten, notieren Sie hierzu am besten in einem ersten Schritt acht Stammtöne (ohne Vorzeichen) von dem gegebenen Ton aus. Für den Ton <i>e</i> lauten diese Stammtöne zum Beispiel: <i>e</i>-<i>f</i>-<i>g</i>-<i>a</i>-<i>h</i>-<i>c</i>-<i>d</i>-<i>e</i> (untere Ebene in der nachstehenden Abbildung). Überprüfen Sie anschließend, an welchen Stellen die Struktur Dorisch von der Struktur der Stammtöne abweicht:
+    </p>
+    <img src="/content/tutorials/tonleitern/Tonleitern-Seite003.png" />
+    <p>
+      Der erste Tonschritt auf der Ebene der Stammtöne ist beispielsweise ein Halbtonschritt (1), für die dorische Tonleiter wird hier jedoch ein Ganztonschritt (2) benötigt. Um diese Struktur herzustellen, müssen Sie das <i>f</i> um einen halben Ton erhöhen, dass heißt zu <i>fis</i> alterieren (= chromatisch verändern). Aus dem gleichen Grund muss auch das <i>c</i> zu <i>cis</i> erhöht werden. Die phrygische Tonleiter von dem Ton <i>e</i> aus lautet: <i>e</i>-<i>fis</i>-<i>g</i>-<i>a</i>-<i>h</i>-<i>cis</i>-<i>d</i>-<i>e</i>
+    </p>
+    <p>
+      Die Notation der e-dorischen Tonleiter in einem Notensystem sieht wie folgt aus:
+    </p>
+    <img src="/content/tutorials/tonleitern/e-dorisch_0001.png" />
+    <img src="/content/tutorials/tonleitern/e-dorisch_0002.png" />
+    <img src="/content/tutorials/tonleitern/e-dorisch_0003.png" />
+    <img src="/content/tutorials/tonleitern/e-dorisch_0004.png" />
+    <p id="tonartenHistorisch">
+      Im Hinblick auf <i>alte Tonarten</i> wurde zwischen <i>authentischen</i> und <i>plagalen</i> Tonarten unterschieden. Das Thema <i>alte Tonarten</i> ist allerdings sehr viel komplexer, als die Angabe einer Tonleiter und wird daher in einem eigenen Tutorial besprochen. Wird für eine Kirchentonarten eine Tonleiter angegeben, ist fast immer ein neuers Verständnis von Kirchentonarten gemeint, dass sich lediglich auf die Töne einer Skala bezieht (und das mit dem Tonartverständnis alter Musik nicht viele Gemeinsamkeiten hat). Ein solches Verständnis ist typisch für den Jazz und beispielsweise auch für die Musik von <a href="https://de.wikipedia.org/wiki/B%C3%A9la_Bart%C3%B3k" target="_blank">Bela Bartóks</a>. Das folgende Stück aus Bartóks Mikrokosmos trägt die Titel »Dór hangsor« (Dorische Tonart) und verwendet &minus; mit Ausnahme des <i>fis</i> im Schlussakkord, das auch als »picardische Terz« bezeichnet wird &minus; nur Töne der dorischen Tonleiter von <i>d</i> aus:
+    </p>
+    <img src="/content/tutorials/tonleitern/bartok.png" />
+    <audio controls src="/content/tutorials/tonleitern/sound/bartok-dorisch.mp3" preload="auto"></audio>
+  </div>
+  <hr class="foldable-separator-collapsed">
 
   <!-- Phrygisch -->
-  <p>
-    Die <b id="phyrgisch">phrygische Tonleiter</b> lässt sich als Zusammensetzung aus zwei phrygischen Tetrachorden verstehen:
-  </p>
-  <img src="/content/tutorials/tonleitern/TonleiternAusTetrachorden_0006.png" />
-  <audio controls src="/content/tutorials/tonleitern/sound/phrygisch.mp3" preload="auto"></audio>
-  <p>
-    Die phrygische Tonleiter lässt sich gleichzeitig als Auschnitt (= 6 Quinten) aus der <a href="/tutorials/quintenzirkel#quintenkette">Quintenkette</a> bzw. aus dem <a href="/tutorials/quintenzirkel#quintenturm">Quintenturm</a> verstehen. Als Intervallstruktur der Tonleiter ergibt sich die Folge Halbton - Ganzton - Ganzton - Ganzton - Halbton - Ganzton - Ganzton bzw. in Kurzschreibweise 1-2-2-2-1-2-2.
-  </p>
-  <img src="/content/tutorials/tonleitern/Strukturen-Seite009.png" />
-  <p>
-    Diese Struktur findet sich auf dem Klavier zwischen den weiße Tasten vom Ton e aus:
-  </p>
-  <img style="width: 200px; max-height: 100px;" src="/content/tutorials/tonleitern/tasten-phrygisch.png" />
-  <p>
-    Wenn Sie Phrygisch von einem gegebenen Ton aus bestimmen möchten, notieren Sie hierzu am besten in einem ersten Schritt acht Stammtöne (ohne Vorzeichen) von dem gegebenen Ton aus. Für den Ton <i>d</i> lauten diese Stammtöne zum Beispiel: <i>d</i>-<i>e</i>-<i>f</i>-<i>g</i>-<i>a</i>-<i>h</i>-<i>c</i>-<i>d</i> (untere Ebene in der nachstehenden Abbildung). Überprüfen Sie anschließend, an welchen Stellen die Struktur Phrygisch von der Struktur der Stammtöne abweicht:
-  </p>
-  <img src="/content/tutorials/tonleitern/Tonleitern-Seite004.png" />
-  <p>
-    Der erste Tonschritt auf der Ebene der Stammtöne ist ein Ganztonschritt (2), für die phrygische Tonleiter wird hier jedoch ein Halbtonschritt (1) benötigt. Um diese Struktur herzustellen, müssen Sie das <i>e</i> um einen halben Ton erniedrigen, dass heißt zu <i>es</i> alterieren (= chromatisch verändern). Aus dem gleichen Grund muss auch das <i>h</i> zu <i>b</i> erniedrigt werden. Die phrygische Tonleiter von dem Ton <i>d</i> aus lautet also: <i>d</i>-<i>es</i>-<i>f</i>-<i>g</i>-<i>a</i>-<i>b</i>-<i>c</i>-<i>d</i></i>
-  </p>
-  <p>
-    Die Notation der d-phrygischen Tonleiter in einem Notensystem sieht wie folgt aus:
-  </p>
-  <img src="/content/tutorials/tonleitern/d-phrygisch_0001.png" />
-  <img src="/content/tutorials/tonleitern/d-phrygisch_0002.png" />
-  <img src="/content/tutorials/tonleitern/d-phrygisch_0003.png" />
-  <img src="/content/tutorials/tonleitern/d-phrygisch_0004.png" />
-  <p>
-    Im Hinblick auf die das Thema ›Phrygisch/alte Tonarten‹ gilt das im Zusammenhang mit dem Dorischen <a href="#tonartenHistorisch">Gesagte</a>.
-  </p>
-  <p>
-    <span style="font-size: 0.8em;"><a href="#tutorialTitle">zurück zum Inhaltsverzeichnis</a></span>
-  </p>
-
-  <!-- Lydisch -->
-  <p>
-    Die <b id="lydisch">lydische Tonleiter</b> lässt sich als Zusammensetzung aus drei Ganztonschritten und einem Dur-Tetrachord verstehen:
-  </p>
-  <img src="/content/tutorials/tonleitern/TonleiternAusTetrachorden_0007.png" />
-  <audio controls src="/content/tutorials/tonleitern/sound/lydisch.mp3" preload="auto"></audio>
-  <p>
-    Die lydische Tonleiter lässt sich auch als Auschnitt (= 6 Quinten) aus der <a href="/tutorials/quintenzirkel#quintenkette">Quintenkette</a> bzw. aus dem <a href="/tutorials/quintenzirkel#quintenturm">Quintenturm</a> verstehen. Als Intervallstruktur der Tonleiter ergibt sich die Folge Ganzton - Ganzton - Ganzton - Halbton - Ganzton - Ganzton - Halbton bzw. in Kurzschreibweise 2-2-2-1-2-2-1.
-  </p>
-  <img src="/content/tutorials/tonleitern/Strukturen-Seite010.png" />
-  <p>
-    Diese Struktur findet sich auf dem Klavier zwischen den weiße Tasten vom Ton f aus:
-  </p>
-  <img style="width: 200px; max-height: 100px;" src="/content/tutorials/tonleitern/tasten-lydisch.png" />
-  <p>
-    Wenn Sie Lydisch von einem gegebenen Ton aus bestimmen möchten, notieren Sie hierzu am besten in einem ersten Schritt acht Stammtöne (ohne Vorzeichen) von dem gegebenen Ton aus. Für den Ton <i>d</i> lauten diese Stammtöne zum Beispiel: <i>d</i>-<i>e</i>-<i>f</i>-<i>g</i>-<i>a</i>-<i>h</i>-<i>c</i>-<i>d</i> (untere Ebene in der nachstehenden Abbildung). Überprüfen Sie anschließend, an welchen Stellen die Struktur Lydisch von der Struktur der Stammtöne abweicht:
-  </p>
-  <img src="/content/tutorials/tonleitern/Tonleitern-Seite005.png" />
-  <p>
-    Der zweite Tonschritt auf der Ebene der Stammtöne ist ein Halbtonschritt (1), für die lydische Tonleiter wird hier jedoch ein Ganztonschritt (2) benötigt. Um diese Struktur herzustellen, müssen Sie das <i>f</i> um einen halben Ton erhöhen, dass heißt zu <i>fis</i> alterieren (= chromatisch verändern). Und auch das <i>g</i> muss noch erhöht werden, damit vom d aus die drei benötigten Ganztonschritte erklingen. Abschließend wird die Erhöhung des <i>c</i> zu <i>cis</i> benötigt, um den Halbtonschritt zwischen der siebten und achten Tonleiterstufe herzustellen. Die lydische Tonleiter von dem Ton <i>d</i> aus lautet: <i>d</i>-<i>e</i>-<i>fis</i>-<i>gis</i>-<i>a</i>-<i>h</i>-<i>cis</i>-<i>d</i></i>
-  </p>
-  <p>
-    Die Notation der d-lydischen Tonleiter in einem Notensystem sieht wie folgt aus:
-  </p>
-  <img src="/content/tutorials/tonleitern/d-lydisch_0001.png" />
-  <img src="/content/tutorials/tonleitern/d-lydisch_0002.png" />
-  <img src="/content/tutorials/tonleitern/d-lydisch_0003.png" />
-  <img src="/content/tutorials/tonleitern/d-lydisch_0004.png" />
-  <p>
-    Im Hinblick auf die das Thema ›Lydisch/alte Tonarten‹ gilt das im Zusammenhang mit dem Dorischen <a href="#tonartenHistorisch">Gesagte</a>.
-  </p>
-  <p>
-    <span style="font-size: 0.8em;"><a href="#tutorialTitle">zurück zum Inhaltsverzeichnis</a></span>
-  </p>
-
-  <!-- Mixolydisch -->
-  <p>
-    Die <b id="mixolydisch">mixolydische Tonleiter</b> lässt sich als Zusammensetzung aus einem Dur-Tetrachord und einem Moll-Tetrachord verstehen:
-  </p>
-  <img src="/content/tutorials/tonleitern/TonleiternAusTetrachorden_0008.png" />
-  <audio controls src="/content/tutorials/tonleitern/sound/mixolydisch.mp3" preload="auto"></audio>
-  <p>
-    Die mixolydische Tonleiter lässt sich zudem als Auschnitt (= 6 Quinten) aus der <a href="/tutorials/quintenzirkel#quintenkette">Quintenkette</a> bzw. aus dem <a href="/tutorials/quintenzirkel#quintenturm">Quintenturm</a> verstehen. Als Intervallstruktur der Tonleiter ergibt sich die Folge Ganzton - Ganzton - Halbton - Ganzton - Ganzton - Halbton - Ganzton bzw. in Kurzschreibweise 2-2-1-2-2-1-2.
-  </p>
-  <img src="/content/tutorials/tonleitern/Strukturen-Seite011.png" />
-  <p>
-    Diese Struktur findet sich auf dem Klavier zwischen den weiße Tasten vom Ton g aus:
-  </p>
-  <img style="width: 200px; max-height: 100px;" src="/content/tutorials/tonleitern/tasten-mixolydisch.png" />
-  <p>
-    Wenn Sie Mixolydisch von einem gegebenen Ton aus bestimmen möchten, notieren Sie hierzu am besten in einem ersten Schritt acht Stammtöne (ohne Vorzeichen) von dem gegebenen Ton aus. Für den Ton <i>d</i> lauten diese Stammtöne zum Beispiel: <i>d</i>-<i>e</i>-<i>f</i>-<i>g</i>-<i>a</i>-<i>h</i>-<i>c</i>-<i>d</i> (untere Ebene in der nachstehenden Abbildung). Überprüfen Sie anschließend, an welchen Stellen die Struktur Mixolydisch von der Struktur der Stammtöne abweicht:
-  </p>
-  <img src="/content/tutorials/tonleitern/Tonleitern-Seite006.png" />
-  <p>
-    Der zweite Tonschritt auf der Ebene der Stammtöne ist ein Halbtonschritt (1), für die mixolydische Tonleiter wird hier jedoch ein Ganztonschritt (2) benötigt. Um diese Struktur herzustellen, müssen Sie das <i>f</i> um einen halben Ton erhöhen, dass heißt zu <i>fis</i> alterieren (= chromatisch verändern). Die mixolydische Tonleiter von dem Ton <i>d</i> aus lautet: <i>d</i>-<i>e</i>-<i>fis</i>-<i>g</i>-<i>a</i>-<i>h</i>-<i>c</i>-<i>d</i></i>
-  </p>
-  <p>
-    Die Notation der d-lydischen Tonleiter in einem Notensystem sieht wie folgt aus:
-  </p>
-  <img src="/content/tutorials/tonleitern/d-mixolydisch_0001.png" />
-  <img src="/content/tutorials/tonleitern/d-mixolydisch_0002.png" />
-  <img src="/content/tutorials/tonleitern/d-mixolydisch_0003.png" />
-  <img src="/content/tutorials/tonleitern/d-mixolydisch_0004.png" />
-  <p>
-    Im Hinblick auf die das Thema ›Mixolydisch/alte Tonarten‹ gilt das im Zusammenhang mit dem Dorischen <a href="#tonartenHistorisch">Gesagte</a>.
-  </p>
-  <p>
-    <span style="font-size: 0.8em;"><a href="#tutorialTitle">zurück zum Inhaltsverzeichnis</a></span>
-  </p>
-
-  <!-- Äolisch -->
-  <p>
-    Die <b id="aeolisch">äolische Tonleiter</b> weist die gleiche Struktur auf wie die <a href="#natMoll">natürliche Molltonleiter</a>. Im Hinblick auf die das Thema ›Äolisch/alte Tonarten‹ gilt das im Zusammenhang mit dem Dorischen <a href="#tonartenHistorisch">Gesagte</a>.
-  </p>
-
-  <!-- Ionisch -->
-  <p>
-    Die <b id="ionisch">ionische Tonleiter</b> weist die gleiche Struktur auf wie die <a href="#dur">Durtonleiter</a>. Im Hinblick auf die das Thema ›Ionisch/alte Tonarten‹ gilt das im Zusammenhang mit dem Dorischen <a href="#tonartenHistorisch">Gesagte</a>.
-  </p>
-  <p>
-    <span style="font-size: 0.8em;"><a href="#tutorialTitle">zurück zum Inhaltsverzeichnis</a></span>
-  </p>
-
-
-   <!-- Lokrisch -->
-  <p>
-    Die <b id="lokrisch">lokrische Tonleiter</b> lässt sich als Zusammensetzung aus einem phrygischen-Tetrachord und einem lydischen-Tetrachord (drei Ganztonschritte) verstehen:
-  </p>
-  <img src="/content/tutorials/tonleitern/TonleiternAusTetrachorden_0009.png" />
-  <audio controls src="/content/tutorials/tonleitern/sound/lokrisch.mp3" preload="auto"></audio>
-  <p>
-    Die lokrische Tonleiter lässt sich zudem als Auschnitt (= 6 Quinten) aus der <a href="/tutorials/quintenzirkel#quintenkette">Quintenkette</a> bzw. aus dem <a href="/tutorials/quintenzirkel#quintenturm">Quintenturm</a> verstehen. Als Intervallstruktur der Tonleiter ergibt sich die Folge Halbton - Ganzton - Ganzton - Halbton - Ganzton - Ganzton - Ganzton bzw. in Kurzschreibweise 1-2-2-1-2-2-2.
-  </p>
-  <img src="/content/tutorials/tonleitern/Strukturen-Seite012.png" />
-  <p>
-    Diese Struktur findet sich auf dem Klavier zwischen den weiße Tasten vom Ton h aus:
-  </p>
-  <img style="width: 200px; max-height: 100px;" src="/content/tutorials/tonleitern/tasten-lokrisch.png" />
-  <p>
-    Wenn Sie Lokrisch von einem gegebenen Ton aus bestimmen möchten, notieren Sie hierzu am besten in einem ersten Schritt acht Stammtöne (ohne Vorzeichen) von dem gegebenen Ton aus. Für den Ton <i>d</i> lauten diese Stammtöne zum Beispiel: <i>d</i>-<i>e</i>-<i>f</i>-<i>g</i>-<i>a</i>-<i>h</i>-<i>c</i>-<i>d</i> (untere Ebene in der nachstehenden Abbildung). Überprüfen Sie anschließend, an welchen Stellen die Struktur Lokrisch von der Struktur der Stammtöne abweicht:
-  </p>
-  <img src="/content/tutorials/tonleitern/Tonleitern-Seite007.png" />
-  <p>
-    Der erste Tonschritt auf der Ebene der Stammtöne ist ein Ganztoschritt (2), für die lokrische Tonleiter wird hier jedoch ein Halbtonschritt (1) benötigt. Um diese Struktur herzustellen, müssen Sie das <i>e</i> um einen halben Ton erniedrigen, dass heißt zu <i>es</i> alterieren (= chromatisch verändern). Auch die Töne <i>a</i> und <i>h</i> müssen tiefalteriert werden, so dass die lokrische Tonleiter lautet: <i>d</i>-<i>es</i>-<i>f</i>-<i>g</i>-<i>as</i>-<i>b</i>-<i>c</i>-<i>d</i></i>
-  </p>
-  <p>
-    Die Notation der d-lokrischen Tonleiter in einem Notensystem sieht wie folgt aus:
-  </p>
-  <img src="/content/tutorials/tonleitern/d-lokrisch_0001.png" />
-  <img src="/content/tutorials/tonleitern/d-lokrisch_0002.png" />
-  <img src="/content/tutorials/tonleitern/d-lokrisch_0003.png" />
-  <img src="/content/tutorials/tonleitern/d-lokrisch_0004.png" />
-  <p>
-    Wegen der verminderten Quinte <i>h</i>&minus;<i>f</i> wurde der Ton <i>h</i> als Finalis nicht verwendet, eine ›alte‹ Tonart lokrisch gibt es daher nicht.
-  </p>
-  <p>
-    <span style="font-size: 0.8em;"><a href="#tutorialTitle">zurück zum Inhaltsverzeichnis</a></span>
-  </p>
-
-  <!-- Zigeuner Dur/Moll -->
-  <p>
-    In der sogenannten <b id="zigMoll">Zigeuner-Molltonleiter</b> spiegelt sich eine Vorstellung des 19. Jahrhunderts, welches Tonmaterial für die Musik der <a href="https://de.wikipedia.org/wiki/Musiken_der_Roma" target="_blank">Roma</a> typisch sei. Diese Skala kommt in sogenannter Kunstmusik nicht sehr häufig vor und wenn, dann meist nur als eine ›exotische‹ Farbe. Die Zigeuner-Molltonleiter ist bis auf einen Ton identisch mit der <a href="#harmMoll">harmonischen Molltonleiter</a>. Lediglich der vierte Ton dieser Skala muss noch zum Leitton (zur Quinte) erhöht werden. Damit hat diese Tonleiter drei Halbton- und zwei übermäßige Sekundschritte. 
-  </p>
-    <img src="/content/tutorials/tonleitern/TonleiternAusTetrachorden_0010.png" />
-    <audio controls src="/content/tutorials/tonleitern/sound/zigMoll.mp3" preload="auto"></audio>
-  <p>
-    Wenn Sie diese Skala notieren müssen, gehen Sie wie bei der <a href="#harmMoll">harmonischen Molltonleiter</a> vor und alterieren zum Schluss den vierten Ton zu einem Leitton zur Quinte. 
-  </p>
-
+  <h5 id="phyrgisch">Phrygisch</h5>
+  <div class="foldable">
     <p>
-    Für die sogenannte <b id="zigDur">Zigeuner-Durtonleiter</b> gilt das zum Zigeuner-Moll Gesagte. Diese Tonleiter ist symmetrisch und besteht aus der zweimaligen Verwendung des oberen Tetrachords der <a href="#harmMoll">harmonischen Molltonleiter</a>. Auch diese Tonleiter hat drei Halbton- und zwei übermäßige Sekundschritte. 
-  </p>
-  <img src="/content/tutorials/tonleitern/TonleiternAusTetrachorden_0011.png" />
-  <audio controls src="/content/tutorials/tonleitern/sound/zigDur.mp3" preload="auto"></audio>
-  <p>
-    Wenn Sie diese Skala notieren wollen, notieren Sie am besten zuerst eine <a href="#dur">Durtonleiter</a> und erniedrigen im Anschluss daran den zweiten Ton der Skala zu einem <a href="#phyrgisch">phrygischen</a> Leitton. 
-  </p>
-  <p>
-    Die folgenden Tonhöhenfolge lässt sich als Mischung aus Zigeuner-Moll und Zigeuner-Dur verstehen:
-  </p>
-  <img src="/content/tutorials/tonleitern/carmen.png" />
-  <audio controls src="/content/tutorials/tonleitern/sound/carmen.mp3" preload="auto"></audio>
-  <p>
-    Und George Bizet hat diese exotische Tonfolge für das Schicksalsmotiv der ›Zigeunerin‹ Carmen in seiner gleichnamigen Oper gewählt (eine Quinte tiefer in Zigeuner d/D). Viellleicht ist es der einzige Sinn der Zigeuner-Moll- und -Durtonleiter, den Reiz dieser wunderschöne Melodie etwas besser verstehen zu können:  
-  </p>
-  <audio controls src="/content/tutorials/tonleitern/sound/schicksalsmotiv.mp3" preload="auto"></audio>
-  <div class="copyright">
+      Die <b>phrygische Tonleiter</b> lässt sich als Zusammensetzung aus zwei phrygischen Tetrachorden verstehen:
+    </p>
+    <img src="/content/tutorials/tonleitern/TonleiternAusTetrachorden_0006.png" />
+    <audio controls src="/content/tutorials/tonleitern/sound/phrygisch.mp3" preload="auto"></audio>
     <p>
-      <small>Copyright Info: Geroge Bizet - Carmen. Victoria de los Ángeles, Nicolai Gedda, Ernest Blanc, Janine Micheau, Orchestre Radio-Symphonique de Paris, Sir Thomas Beecham, Label: Angel 3613, Deutschland 1961, Quelle: <a href="http://www.cc0.musik-openbooks.de/" target="_blank">Public Domain Musik</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.de" target="_blank">CCO - Public Domain</a>.</small>
+      Die phrygische Tonleiter lässt sich gleichzeitig als Auschnitt (= 6 Quinten) aus der <a href="/tutorials/quintenzirkel#quintenkette">Quintenkette</a> bzw. aus dem <a href="/tutorials/quintenzirkel#quintenturm">Quintenturm</a> verstehen. Als Intervallstruktur der Tonleiter ergibt sich die Folge Halbton - Ganzton - Ganzton - Ganzton - Halbton - Ganzton - Ganzton bzw. in Kurzschreibweise 1-2-2-2-1-2-2.
+    </p>
+    <img src="/content/tutorials/tonleitern/Strukturen-Seite009.png" />
+    <p>
+      Diese Struktur findet sich auf dem Klavier zwischen den weiße Tasten vom Ton e aus:
+    </p>
+    <img style="width: 200px; max-height: 100px;" src="/content/tutorials/tonleitern/tasten-phrygisch.png" />
+    <p>
+      Wenn Sie Phrygisch von einem gegebenen Ton aus bestimmen möchten, notieren Sie hierzu am besten in einem ersten Schritt acht Stammtöne (ohne Vorzeichen) von dem gegebenen Ton aus. Für den Ton <i>d</i> lauten diese Stammtöne zum Beispiel: <i>d</i>-<i>e</i>-<i>f</i>-<i>g</i>-<i>a</i>-<i>h</i>-<i>c</i>-<i>d</i> (untere Ebene in der nachstehenden Abbildung). Überprüfen Sie anschließend, an welchen Stellen die Struktur Phrygisch von der Struktur der Stammtöne abweicht:
+    </p>
+    <img src="/content/tutorials/tonleitern/Tonleitern-Seite004.png" />
+    <p>
+      Der erste Tonschritt auf der Ebene der Stammtöne ist ein Ganztonschritt (2), für die phrygische Tonleiter wird hier jedoch ein Halbtonschritt (1) benötigt. Um diese Struktur herzustellen, müssen Sie das <i>e</i> um einen halben Ton erniedrigen, dass heißt zu <i>es</i> alterieren (= chromatisch verändern). Aus dem gleichen Grund muss auch das <i>h</i> zu <i>b</i> erniedrigt werden. Die phrygische Tonleiter von dem Ton <i>d</i> aus lautet also: <i>d</i>-<i>es</i>-<i>f</i>-<i>g</i>-<i>a</i>-<i>b</i>-<i>c</i>-<i>d</i></i>
+    </p>
+    <p>
+      Die Notation der d-phrygischen Tonleiter in einem Notensystem sieht wie folgt aus:
+    </p>
+    <img src="/content/tutorials/tonleitern/d-phrygisch_0001.png" />
+    <img src="/content/tutorials/tonleitern/d-phrygisch_0002.png" />
+    <img src="/content/tutorials/tonleitern/d-phrygisch_0003.png" />
+    <img src="/content/tutorials/tonleitern/d-phrygisch_0004.png" />
+    <p>
+      Im Hinblick auf die das Thema ›Phrygisch/alte Tonarten‹ gilt das im Zusammenhang mit dem Dorischen <a href="#tonartenHistorisch">Gesagte</a>.
     </p>
   </div>
-  <p>
-    <span style="font-size: 0.8em;"><a href="#tutorialTitle">zurück zum Inhaltsverzeichnis</a></span>
-  </p>
+  <hr class="foldable-separator-collapsed">
+
+  <!-- Lydisch -->
+  <h5 id="lydisch">Lydisch</h5>
+  <div class="foldable">
+    <p>
+      Die <b>lydische Tonleiter</b> lässt sich als Zusammensetzung aus drei Ganztonschritten und einem Dur-Tetrachord verstehen:
+    </p>
+    <img src="/content/tutorials/tonleitern/TonleiternAusTetrachorden_0007.png" />
+    <audio controls src="/content/tutorials/tonleitern/sound/lydisch.mp3" preload="auto"></audio>
+    <p>
+      Die lydische Tonleiter lässt sich auch als Auschnitt (= 6 Quinten) aus der <a href="/tutorials/quintenzirkel#quintenkette">Quintenkette</a> bzw. aus dem <a href="/tutorials/quintenzirkel#quintenturm">Quintenturm</a> verstehen. Als Intervallstruktur der Tonleiter ergibt sich die Folge Ganzton - Ganzton - Ganzton - Halbton - Ganzton - Ganzton - Halbton bzw. in Kurzschreibweise 2-2-2-1-2-2-1.
+    </p>
+    <img src="/content/tutorials/tonleitern/Strukturen-Seite010.png" />
+    <p>
+      Diese Struktur findet sich auf dem Klavier zwischen den weiße Tasten vom Ton f aus:
+    </p>
+    <img style="width: 200px; max-height: 100px;" src="/content/tutorials/tonleitern/tasten-lydisch.png" />
+    <p>
+      Wenn Sie Lydisch von einem gegebenen Ton aus bestimmen möchten, notieren Sie hierzu am besten in einem ersten Schritt acht Stammtöne (ohne Vorzeichen) von dem gegebenen Ton aus. Für den Ton <i>d</i> lauten diese Stammtöne zum Beispiel: <i>d</i>-<i>e</i>-<i>f</i>-<i>g</i>-<i>a</i>-<i>h</i>-<i>c</i>-<i>d</i> (untere Ebene in der nachstehenden Abbildung). Überprüfen Sie anschließend, an welchen Stellen die Struktur Lydisch von der Struktur der Stammtöne abweicht:
+    </p>
+    <img src="/content/tutorials/tonleitern/Tonleitern-Seite005.png" />
+    <p>
+      Der zweite Tonschritt auf der Ebene der Stammtöne ist ein Halbtonschritt (1), für die lydische Tonleiter wird hier jedoch ein Ganztonschritt (2) benötigt. Um diese Struktur herzustellen, müssen Sie das <i>f</i> um einen halben Ton erhöhen, dass heißt zu <i>fis</i> alterieren (= chromatisch verändern). Und auch das <i>g</i> muss noch erhöht werden, damit vom d aus die drei benötigten Ganztonschritte erklingen. Abschließend wird die Erhöhung des <i>c</i> zu <i>cis</i> benötigt, um den Halbtonschritt zwischen der siebten und achten Tonleiterstufe herzustellen. Die lydische Tonleiter von dem Ton <i>d</i> aus lautet: <i>d</i>-<i>e</i>-<i>fis</i>-<i>gis</i>-<i>a</i>-<i>h</i>-<i>cis</i>-<i>d</i></i>
+    </p>
+    <p>
+      Die Notation der d-lydischen Tonleiter in einem Notensystem sieht wie folgt aus:
+    </p>
+    <img src="/content/tutorials/tonleitern/d-lydisch_0001.png" />
+    <img src="/content/tutorials/tonleitern/d-lydisch_0002.png" />
+    <img src="/content/tutorials/tonleitern/d-lydisch_0003.png" />
+    <img src="/content/tutorials/tonleitern/d-lydisch_0004.png" />
+    <p>
+      Im Hinblick auf die das Thema ›Lydisch/alte Tonarten‹ gilt das im Zusammenhang mit dem Dorischen <a href="#tonartenHistorisch">Gesagte</a>.
+    </p>
+  </div>
+  <hr class="foldable-separator-collapsed">
+
+  <!-- Mixolydisch -->
+  <h5 id="mixolydisch">Mixolydisch</h5>
+  <div class="foldable">
+    <p>
+      Die <b>mixolydische Tonleiter</b> lässt sich als Zusammensetzung aus einem Dur-Tetrachord und einem Moll-Tetrachord verstehen:
+    </p>
+    <img src="/content/tutorials/tonleitern/TonleiternAusTetrachorden_0008.png" />
+    <audio controls src="/content/tutorials/tonleitern/sound/mixolydisch.mp3" preload="auto"></audio>
+    <p>
+      Die mixolydische Tonleiter lässt sich zudem als Auschnitt (= 6 Quinten) aus der <a href="/tutorials/quintenzirkel#quintenkette">Quintenkette</a> bzw. aus dem <a href="/tutorials/quintenzirkel#quintenturm">Quintenturm</a> verstehen. Als Intervallstruktur der Tonleiter ergibt sich die Folge Ganzton - Ganzton - Halbton - Ganzton - Ganzton - Halbton - Ganzton bzw. in Kurzschreibweise 2-2-1-2-2-1-2.
+    </p>
+    <img src="/content/tutorials/tonleitern/Strukturen-Seite011.png" />
+    <p>
+      Diese Struktur findet sich auf dem Klavier zwischen den weiße Tasten vom Ton g aus:
+    </p>
+    <img style="width: 200px; max-height: 100px;" src="/content/tutorials/tonleitern/tasten-mixolydisch.png" />
+    <p>
+      Wenn Sie Mixolydisch von einem gegebenen Ton aus bestimmen möchten, notieren Sie hierzu am besten in einem ersten Schritt acht Stammtöne (ohne Vorzeichen) von dem gegebenen Ton aus. Für den Ton <i>d</i> lauten diese Stammtöne zum Beispiel: <i>d</i>-<i>e</i>-<i>f</i>-<i>g</i>-<i>a</i>-<i>h</i>-<i>c</i>-<i>d</i> (untere Ebene in der nachstehenden Abbildung). Überprüfen Sie anschließend, an welchen Stellen die Struktur Mixolydisch von der Struktur der Stammtöne abweicht:
+    </p>
+    <img src="/content/tutorials/tonleitern/Tonleitern-Seite006.png" />
+    <p>
+      Der zweite Tonschritt auf der Ebene der Stammtöne ist ein Halbtonschritt (1), für die mixolydische Tonleiter wird hier jedoch ein Ganztonschritt (2) benötigt. Um diese Struktur herzustellen, müssen Sie das <i>f</i> um einen halben Ton erhöhen, dass heißt zu <i>fis</i> alterieren (= chromatisch verändern). Die mixolydische Tonleiter von dem Ton <i>d</i> aus lautet: <i>d</i>-<i>e</i>-<i>fis</i>-<i>g</i>-<i>a</i>-<i>h</i>-<i>c</i>-<i>d</i></i>
+    </p>
+    <p>
+      Die Notation der d-lydischen Tonleiter in einem Notensystem sieht wie folgt aus:
+    </p>
+    <img src="/content/tutorials/tonleitern/d-mixolydisch_0001.png" />
+    <img src="/content/tutorials/tonleitern/d-mixolydisch_0002.png" />
+    <img src="/content/tutorials/tonleitern/d-mixolydisch_0003.png" />
+    <img src="/content/tutorials/tonleitern/d-mixolydisch_0004.png" />
+    <p>
+      Im Hinblick auf die das Thema ›Mixolydisch/alte Tonarten‹ gilt das im Zusammenhang mit dem Dorischen <a href="#tonartenHistorisch">Gesagte</a>.
+    </p>
+  </div>
+  <hr class="foldable-separator-collapsed">
+
+  <!-- Äolisch -->
+  <h5 id="aeolischIonisch">Äolisch und Ionisch</h5>
+  <div class="foldable">
+    <p>
+      Die <b>äolische Tonleiter</b> weist die gleiche Struktur auf wie die <a href="#natMoll">natürliche Molltonleiter</a>. Im Hinblick auf die das Thema ›Äolisch/alte Tonarten‹ gilt das im Zusammenhang mit dem Dorischen <a href="#tonartenHistorisch">Gesagte</a>.
+    </p>
+    <p>
+      Die <b>ionische Tonleiter</b> weist die gleiche Struktur auf wie die <a href="#dur">Durtonleiter</a>. Im Hinblick auf die das Thema ›Ionisch/alte Tonarten‹ gilt das im Zusammenhang mit dem Dorischen <a href="#tonartenHistorisch">Gesagte</a>.
+    </p>
+  </div>
+  <hr class="foldable-separator-collapsed">
+
+   <!-- Lokrisch -->
+  <h5 id="lokrisch">Lokrisch</h5>
+  <div class="foldable">
+    <p>
+      Die <b>lokrische Tonleiter</b> lässt sich als Zusammensetzung aus einem phrygischen-Tetrachord und einem lydischen-Tetrachord (drei Ganztonschritte) verstehen:
+    </p>
+    <img src="/content/tutorials/tonleitern/TonleiternAusTetrachorden_0009.png" />
+    <audio controls src="/content/tutorials/tonleitern/sound/lokrisch.mp3" preload="auto"></audio>
+    <p>
+      Die lokrische Tonleiter lässt sich zudem als Auschnitt (= 6 Quinten) aus der <a href="/tutorials/quintenzirkel#quintenkette">Quintenkette</a> bzw. aus dem <a href="/tutorials/quintenzirkel#quintenturm">Quintenturm</a> verstehen. Als Intervallstruktur der Tonleiter ergibt sich die Folge Halbton - Ganzton - Ganzton - Halbton - Ganzton - Ganzton - Ganzton bzw. in Kurzschreibweise 1-2-2-1-2-2-2.
+    </p>
+    <img src="/content/tutorials/tonleitern/Strukturen-Seite012.png" />
+    <p>
+      Diese Struktur findet sich auf dem Klavier zwischen den weiße Tasten vom Ton h aus:
+    </p>
+    <img style="width: 200px; max-height: 100px;" src="/content/tutorials/tonleitern/tasten-lokrisch.png" />
+    <p>
+      Wenn Sie Lokrisch von einem gegebenen Ton aus bestimmen möchten, notieren Sie hierzu am besten in einem ersten Schritt acht Stammtöne (ohne Vorzeichen) von dem gegebenen Ton aus. Für den Ton <i>d</i> lauten diese Stammtöne zum Beispiel: <i>d</i>-<i>e</i>-<i>f</i>-<i>g</i>-<i>a</i>-<i>h</i>-<i>c</i>-<i>d</i> (untere Ebene in der nachstehenden Abbildung). Überprüfen Sie anschließend, an welchen Stellen die Struktur Lokrisch von der Struktur der Stammtöne abweicht:
+    </p>
+    <img src="/content/tutorials/tonleitern/Tonleitern-Seite007.png" />
+    <p>
+      Der erste Tonschritt auf der Ebene der Stammtöne ist ein Ganztoschritt (2), für die lokrische Tonleiter wird hier jedoch ein Halbtonschritt (1) benötigt. Um diese Struktur herzustellen, müssen Sie das <i>e</i> um einen halben Ton erniedrigen, dass heißt zu <i>es</i> alterieren (= chromatisch verändern). Auch die Töne <i>a</i> und <i>h</i> müssen tiefalteriert werden, so dass die lokrische Tonleiter lautet: <i>d</i>-<i>es</i>-<i>f</i>-<i>g</i>-<i>as</i>-<i>b</i>-<i>c</i>-<i>d</i></i>
+    </p>
+    <p>
+      Die Notation der d-lokrischen Tonleiter in einem Notensystem sieht wie folgt aus:
+    </p>
+    <img src="/content/tutorials/tonleitern/d-lokrisch_0001.png" />
+    <img src="/content/tutorials/tonleitern/d-lokrisch_0002.png" />
+    <img src="/content/tutorials/tonleitern/d-lokrisch_0003.png" />
+    <img src="/content/tutorials/tonleitern/d-lokrisch_0004.png" />
+    <p>
+      Wegen der verminderten Quinte <i>h</i>&minus;<i>f</i> wurde der Ton <i>h</i> als Finalis nicht verwendet, eine ›alte‹ Tonart lokrisch gibt es daher nicht.
+    </p>
+  </div>
+  <hr class="foldable-separator">
+
+  <!-- Zigeuner Dur/Moll -->
+  <h5>Zigeuner-Dur und Moll</h5>
+  <div class="foldable">
+    <p>
+      In der sogenannten <b id="zigMoll">Zigeuner-Molltonleiter</b> spiegelt sich eine Vorstellung des 19. Jahrhunderts, welches Tonmaterial für die Musik der <a href="https://de.wikipedia.org/wiki/Musiken_der_Roma" target="_blank">Roma</a> typisch sei. Diese Skala kommt in sogenannter Kunstmusik nicht sehr häufig vor und wenn, dann meist nur als eine ›exotische‹ Farbe. Die Zigeuner-Molltonleiter ist bis auf einen Ton identisch mit der <a href="#harmMoll">harmonischen Molltonleiter</a>. Lediglich der vierte Ton dieser Skala muss noch zum Leitton (zur Quinte) erhöht werden. Damit hat diese Tonleiter drei Halbton- und zwei übermäßige Sekundschritte. 
+    </p>
+      <img src="/content/tutorials/tonleitern/TonleiternAusTetrachorden_0010.png" />
+      <audio controls src="/content/tutorials/tonleitern/sound/zigMoll.mp3" preload="auto"></audio>
+    <p>
+      Wenn Sie diese Skala notieren müssen, gehen Sie wie bei der <a href="#harmMoll">harmonischen Molltonleiter</a> vor und alterieren zum Schluss den vierten Ton zu einem Leitton zur Quinte. 
+    </p>
+
+      <p>
+      Für die sogenannte <b id="zigDur">Zigeuner-Durtonleiter</b> gilt das zum Zigeuner-Moll Gesagte. Diese Tonleiter ist symmetrisch und besteht aus der zweimaligen Verwendung des oberen Tetrachords der <a href="#harmMoll">harmonischen Molltonleiter</a>. Auch diese Tonleiter hat drei Halbton- und zwei übermäßige Sekundschritte. 
+    </p>
+    <img src="/content/tutorials/tonleitern/TonleiternAusTetrachorden_0011.png" />
+    <audio controls src="/content/tutorials/tonleitern/sound/zigDur.mp3" preload="auto"></audio>
+    <p>
+      Wenn Sie diese Skala notieren wollen, notieren Sie am besten zuerst eine <a href="#dur">Durtonleiter</a> und erniedrigen im Anschluss daran den zweiten Ton der Skala zu einem <a href="#phyrgisch">phrygischen</a> Leitton. 
+    </p>
+    <p>
+      Die folgenden Tonhöhenfolge lässt sich als Mischung aus Zigeuner-Moll und Zigeuner-Dur verstehen:
+    </p>
+    <img src="/content/tutorials/tonleitern/carmen.png" />
+    <audio controls src="/content/tutorials/tonleitern/sound/carmen.mp3" preload="auto"></audio>
+    <p>
+      Und George Bizet hat diese exotische Tonfolge für das Schicksalsmotiv der ›Zigeunerin‹ Carmen in seiner gleichnamigen Oper gewählt (eine Quinte tiefer in Zigeuner d/D). Viellleicht ist es der einzige Sinn der Zigeuner-Moll- und -Durtonleiter, den Reiz dieser wunderschöne Melodie etwas besser verstehen zu können:  
+    </p>
+    <audio controls src="/content/tutorials/tonleitern/sound/schicksalsmotiv.mp3" preload="auto"></audio>
+    <div class="copyright">
+      <p>
+        <small>Copyright Info: Geroge Bizet - Carmen. Victoria de los Ángeles, Nicolai Gedda, Ernest Blanc, Janine Micheau, Orchestre Radio-Symphonique de Paris, Sir Thomas Beecham, Label: Angel 3613, Deutschland 1961, Quelle: <a href="http://www.cc0.musik-openbooks.de/" target="_blank">Public Domain Musik</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.de" target="_blank">CCO - Public Domain</a>.</small>
+      </p>
+    </div>
+  </div>
+  <hr class="foldable-separator">
 
   <!-- Pentatonik -->
   <p>
@@ -447,10 +451,11 @@ abstract: In diesem Tutorial erhalten Sie Erklärungen sowie interaktive Übungs
   Sind nur grüne Tasten zu sehen, ist Ihre Eingabe korrekt, Gratulation! Die Schaltfläche <span class="textButton textButtonBlue">Zurücksetzen</span> wird Ihre Eingabe zurücksetzen, aber keine neue Aufgabe erstellen. Dadurch können fehlerhafte Eingaben korrigiert werden. Mit der Schaltfläche <span class="textButton textButtonGreen">Neue Aufgabe</span> erzeugen Sie eine neue Aufgabe.
 </div>
 <p>ton
-  <a href="#tutorialTitle">Zurück zum Imhaltsverzeichnis</a>
+  <a href="#tutorialTitle">Zurück zum Anfang</a>
 </p>
 <hr>
 
+<!-- <script src='/scripts/foldable.js'></script> -->
 <script>
   var options = {
     'scales': [
@@ -497,8 +502,8 @@ abstract: In diesem Tutorial erhalten Sie Erklärungen sowie interaktive Übungs
     var button = $(elem);
     var annotationcontainer = $('#scaleAnnotationContainer');
     annotationcontainer.toggleClass('isNotVisible');
-    if (annotationcontainer.hasClass('isNotVisible')) button.text('Erläuterungen zu den Tonleitern einblenden');
-    else button.text('Erläuterungen zu den Tonleitern ausblenden');
+    if (annotationcontainer.hasClass('isNotVisible')) button.text('Erklärungen wieder einblenden');
+    else button.text('Zum Test (Text ausblenden)');
   }
 
   $(document).ready(function() {
@@ -520,3 +525,5 @@ abstract: In diesem Tutorial erhalten Sie Erklärungen sowie interaktive Übungs
     resetColors();
   }
 </script>
+<script src='/scripts/foldable.js'></script>
+
