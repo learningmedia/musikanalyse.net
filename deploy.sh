@@ -6,10 +6,19 @@ envsubst < ./build/web.config.template > ./build/web.config
 
 rm ./build/web.config.template
 
-ftpsync -h $FTP_HOST -u $FTP_USER -s $FTP_PASS -l ./build -r / -c 4
+mkdir -p ~/.lftp
+echo "set ssl:verify-certificate no" > ~/.lftp/rc
 
-if [ $? -ne 0 ]
-then
-  echo "FTP sync failed, trying again..."
-  ftpsync -h $FTP_HOST -u $FTP_USER -s $FTP_PASS -l ./build -r / -c 4
-fi
+FTP_URL="ftp://$FTP_USER:$FTP_PASS@$FTP_HOST"
+LCD="./build"
+RCD="/$FTP_USER"
+
+lftp -c "
+  set ftp:list-options -a;
+  open '$FTP_URL';
+  lcd $LCD;
+  cd $RCD;
+  mirror --reverse \
+         --delete \
+         --exclude-glob .git* \
+"
