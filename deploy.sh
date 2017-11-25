@@ -20,5 +20,6 @@ lftp -c "
   cd $RCD;
   mirror --reverse \
          --delete \
+         --ignore-time \
          --exclude-glob .git* \
 "
