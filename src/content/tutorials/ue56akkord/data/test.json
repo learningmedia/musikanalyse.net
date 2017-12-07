@@ -1,0 +1,15 @@
+{
+  "Name": "Fragen zum übermäßigen Sext-/Quintsextakkord",
+  "audioFilePath": "/content/tutorials/ue56akkord/sound/exercises/",
+  "exercises": [{
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Wie heißen die Töne des übermäßigen Quintsextakkords in c-Moll?",
+    "answer": "<i>as</i>-<i>c</i>-<i>es</i>-<i>fis</i>.<br>Zum Nachlesen: <a href='#Brahms-doppeldominante'>J. Brahms, Op. 104, Nr. 5, »Im Hebst«</a>."
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Wohin löst sich der übermäßige Quintsextakkord <i>as</i>-<i>c</i>-<i>es</i>-<i>fis</i> als Sixte ajoutée auf?",
+    "answer": "Es-Dur.<br>Zum Nachlesen: <a href='#Brahms-plagal'>J. Brahms, Op. 104, Nr. 5, »Im Hebst«</a>."
+  }]
+ }
