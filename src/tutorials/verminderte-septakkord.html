@@ -1,0 +1,111 @@
+---
+title: Der verminderte Septakkord
+author: Ulrich Kaiser
+date: 2017-12-09
+modified: 2017-12-09
+layout: tutorial.ejs
+category: Grundlagen
+abstract: Der verminderte Septakkord gehört zu den ›symmetrischen Klängen‹ (Erpf 1927), d.h. zu den Akkorden, deren Töne auf dem Klavier in gleichem Abstand stehen (bzw. zu stehen scheinen). Diese besondere Struktur mag dafür verantwortlich sein, dass der verminderte Septklang im Laufe der Geschichte tatsächlich für sehr vielfältige und musikalische attraktive Gestaltungen verwendet worden ist. In diesem Tutorial können Sie Gestalt und Verwendungsweisen des verminderten Septklangs kennenlernen und üben.   
+---
+<script src='/scripts/tester.js'></script>
+
+<ul>
+  <li><a href="#klang">Klang und Akkord</a></li>
+  <li><a href="#symbol">Der verminderte Septakkord als Symbol</a></li>
+  <li><a href="#signal">Der verminderte Septakkord als Signalakkord</a></li>
+  <li><a href="#hilfe">Hilfe zum Errechnen</a></li>
+  <li><a href="#besonderes">Besondere Auflösungsmöglichkeiten</a></li>
+  <li><a href="#beispiele">Beispiele</a></li>
+</ul>
+<br>
+
+<p>
+  Der verminderte Septakkord gehört zu den ›symmetrischen Klängen‹ (Erpf 1927), d.h. zu den Akkorden, deren Töne auf dem Klavier in gleichem Abstand stehen (bzw. zu stehen scheinen). Diese besondere Struktur mag dafür verantwortlich sein, dass der verminderte Septklang im Laufe der Geschichte tatsächlich für sehr vielfältige und musikalische attraktive Gestaltungen verwendet worden ist. In diesem Tutorial können Sie Gestalt und Verwendungsweisen des verminderten Septklangs kennenlernen und üben.
+</p>
+
+<h4 id="klang">Klang und Akkord</h4>
+<p>
+  Hier kommt eine unterscheidung von Klang und Akkord hin.
+</p>
+<p>
+  Beispiel Madrigal
+</p>
+<p>
+  <span style="font-size: 0.8em;"><a href="#tutorialTitle">zurück zum Inhaltsverzeichnis</a></span>
+</p>
+
+<h4 id="klang">Der verminderte Septakkord als Symbol</h4>
+<p>
+  Erklärung
+</p>
+<div class="citation">
+  <p>
+    Der verminderte Septakkord – so die elementare Akkordlehre – ist aufgebaut aus drei kleinen Terzen, klanglich identisch mit seinen Umkehrungen, technisch gut geeignet für Modulationen. Wirklich wesentlich aber ist demgegenüber sein Rang als ein Akkord, der bestimmte Ausdrucksbereiche umschließt. Der wuchtige »Barrabam«-Schrei der Matthäus-Passion ist ein Verminderter. Wo bei Bach von Kreuz, Sünde, Welt, Plage, Tod gesprochen wird, hat bevorzugt dieser Akkord seinen Platz [...]
+  </p>
+</div>
+<p class="reference">Kühn 1994.</p>
+<p>
+  <span style="font-size: 0.8em;"><a href="#tutorialTitle">zurück zum Inhaltsverzeichnis</a></span>
+</p>
+
+
+<!-- <img src="/content/tutorials/ue56akkord/02_zuBeethoven.png" alt="Abbildung Kadenzen mit dem übermäßigen Quintsextakkord" />
+<audio controls src="/content/tutorials/ue56akkord/sound/02_ZuBeethoven.mp3" preload="auto"></audio> -->
+
+<!-- <a class="imageChange">
+  <img class="image-on" src="/content/tutorials/ue56akkord/01_Beethoven_Op67-1-1.jpg" alt="" />
+  <img class="image-off" src="/content/tutorials/ue56akkord/01_Beethoven_Op67-1-2.jpg" alt="" />
+</a>
+<audio controls src="/content/tutorials/kadenz-signalakkorde/sound/004304-G2-AndanteConMoto.mp3" preload="auto"></audio>
+<div class="copyright">
+  <p>
+    <small>Copyright Info: Ludwig v. Beethoven, Sinfonie in c-Moll Op. 67, 2. Satz, T. 23&minus;36, aus: Ludwig v. Beethoven, 9 Symphonien, Berliner Philharmoniker, Dirigent: Herbert v. Karajan, Aufnahme: 1962, CC0 <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.de">Public Domain</a>, Quelle: <a href="http://www.cc0.musik-openbooks.de/" target="_blank">cc0.musik-openbooks.de/</a>.</small>
+  </p>
+</div> -->
+
+
+<!-- gaming section -->
+<hr>
+<h4 id="test">Testen Sie Ihr Wissen</h4>
+<br>
+<div class="trainerContainer">
+  <div id="training"></div>
+  <button onclick="javascript:nextFirst();">Nächste Übung</button>
+</div>
+<br><br>
+<hr>
+<h4 id="literatur">Literatur (zu Brahms)</h4>
+<ul>
+  <li>
+    Clemens Kühn, Art. Akkord, III., in: MGG<sup>2</sup>, Kassel, Stuttgart u.a. 1994, Sp. xy.
+  </li>
+</ul>
+
+
+<script>
+ function onAnnotationsClick(elem) {
+    var button = $(elem);
+    var annotationcontainer = $('#showAnnotations');
+    annotationcontainer.toggleClass('isNotVisible');
+    if (annotationcontainer.hasClass('isNotVisible')) button.text('Hilfe zum Errechnen des übermäßigen Quintsextakkordes einblenden');
+    else button.text('Hilfe zum Errechnen des übermäßigen Quintsextakkordes ausblenden');
+  }
+
+  var first;
+  $(document).ready(function() {
+    //Laden der ersten Übung
+    loadJSON('/content/tutorials/verminderte-septakkord/data/test.json',
+     function(data) { 
+       var options = data; 
+       first = new Tester(document.getElementById("training"), options);
+     },
+     function(xhr) { 
+       console.error(xhr); 
+     });
+    //Hier können  weiterer Übungen geladen werden
+  });
+
+  function nextFirst() {
+    first.getNewExercise();
+  }
+</script>
