@@ -7,7 +7,7 @@ layout: tutorial.ejs
 category: Grundlagen
 abstract: Arnold Schönberg nannte Akkorde wie z.B. den verminderten Septakkord oder den übermäßigen Sextakkord ›vagierende Akkorde‹, wobei einige dieser Akkorde ›symmetrische Klänge‹ sind. Diese Klänge bzw. Akkorde können Sie in diesem Tutorial kennen lernen. 
 ---
-
+<script src='/scripts/tester.js'></script>
 
 <ul>
   <li><a href="#uebermaesigeDreiklang">Der übermäßige Dreiklang</a></li>
@@ -40,7 +40,7 @@ abstract: Arnold Schönberg nannte Akkorde wie z.B. den verminderten Septakkord 
 
 <h4 id="uebermaesigeDreiklang">Der übermäßige Dreiklang</h4>
 <p>
-	Der übermäßige Dreiklang besteht aus zwei großen Terzen (z.B. <i>c</i>-<i>e</i>-<i>gis</i>) und gehört damit auch zu den symmetrischen Akkorden, was sich mithilfe des <a href="/tutorials/quintenzirkel/" target="_blank">Quintenzirkels</a> veranschaulichen lässt: 
+	Der übermäßige Dreiklang besteht aus zwei großen Terzen (z.B. <i>c</i>-<i>e</i>-<i>gis</i>) und gehört damit nicht nur zu den vagierenden, sondern auch zu den symmetrischen Akkorden, was sich mithilfe des <a href="/tutorials/quintenzirkel/" target="_blank">Quintenzirkels</a> veranschaulichen lässt: 
 </p>
 <img src="/content/tutorials/vagierende-akkorde/uebermaessigerDreiklang.jpg" alt="übermäßiger Dreiklang c, e, gis (Quintenzirkel)" />
 <p>
@@ -117,16 +117,22 @@ abstract: Arnold Schönberg nannte Akkorde wie z.B. den verminderten Septakkord 
 </p>
 <img src="/content/tutorials/vagierende-akkorde/dominanteMitUebermaessigerQuinte.jpg" alt="übermäßiger Quintsextakkord" />
 <p>
-  Diesen Akkord gibt es in verschiedenen Akkordgestalten, wobei zwei davon am häufigsten anzutreffen sein dürften. Im Chorlied »Im Herbst« Op. 104, Nr. 5 von Johannes Brahms und in dem Chorlied »Wenn ich ein Vöglein wär« von Max Reger verleihen diese Akkordgestalten einer Wendung zur Subdominante nachdruck:
+  Im Chorlied »Im Herbst« Op. 104, Nr. 5 von Johannes Brahms ist diese Form der Dominante zu hören:
 </p>
 <a class="imageChange">
-  <img class="image-on" src="/content/tutorials/vagierende-akkorde/#" alt="J. Brahms, Op. 104, Nr. 5, »Im Herbst" />
-  <img class="image-off" src="/content/tutorials/vagierende-akkorde/#" alt="J. Brahms, Op. 104, Nr. 5, »Im Herbst" />
+  <img class="image-on" src="/content/tutorials/vagierende-akkorde/brahms-1.jpg" alt="J. Brahms, Op. 104, Nr. 5, »Im Herbst" />
+  <img class="image-off" src="/content/tutorials/vagierende-akkorde/brahms-2.jpg" alt="J. Brahms, Op. 104, Nr. 5, »Im Herbst" />
 </a>
-<a class="imageChange">
-  <img class="image-on" src="/content/tutorials/vagierende-akkorde/#" alt="M. Reger, »Wenn ich ein Vöglein wär«" />
-  <img class="image-off" src="/content/tutorials/vagierende-akkorde/#" alt="M. Reger, »Wenn ich ein Vöglein wär«" />
-</a>
+<audio controls preload="auto" src="/content/tutorials/vagierende-akkorde/sound/brahms.mp3"></audio>
+<div class="copyright">
+  <p>
+    <small>Copyright Info: <a href="http://kaiser-ulrich.de/publikationen/audio" target="_blank">J. Brahms, Op. 104, Nr. 5, »Im Herbst«</a><br>
+    Chor: Ensemberlino Vocale, Ltg: Ulrich Kaiser. Lizenz: CC BY-NC-SA.</small>
+  </p>
+</div>
+<p>
+  Den Dominantseptakkord mit übermäßiger Quinte gibt es in verschiedenen Akkordgestalten, wobei die oben Gezeigte am häufigsten anzutreffen sein dürfte. In dem dem Chorlied »Wenn ich ein Vöglein wär« von Max Reger verleiht in der Vertonung der ersten Strophe eine Umkehrung des Akkordes (mit der Terz im Bass) einer Wendung in die Subdominante Nachdruck.
+</p>
 <p>
   <span style="font-size: 0.8em;"><a href="#tutorialTitle">zurück zum Inhaltsverzeichnis</a></span>
 </p>
@@ -141,14 +147,14 @@ abstract: Arnold Schönberg nannte Akkorde wie z.B. den verminderten Septakkord 
 </p>
 
 <!-- gaming section -->
-<!-- <hr>
+<hr>
 <h4 id="test">Testen Sie Ihr Wissen</h4>
 <br>
 <div class="trainerContainer">
   <div id="training"></div>
   <button onclick="javascript:nextFirst();">Nächste Übung</button>
 </div>
-<br><br> -->
+<br><br>
 
 
 <hr>
@@ -165,20 +171,13 @@ abstract: Arnold Schönberg nannte Akkorde wie z.B. den verminderten Septakkord 
   </li>  
 </ul>
 
-<!-- 
+
 <script>
- function onAnnotationsClick(elem) {
-    var button = $(elem);
-    var annotationcontainer = $('#showAnnotations');
-    annotationcontainer.toggleClass('isNotVisible');
-    if (annotationcontainer.hasClass('isNotVisible')) button.text('Hilfe zum Errechnen des übermäßigen Quintsextakkordes einblenden');
-    else button.text('Hilfe zum Errechnen des übermäßigen Quintsextakkordes ausblenden');
-  }
 
   var first;
   $(document).ready(function() {
     //Laden der ersten Übung
-    loadJSON('/content/tutorials/verminderte-septakkord/data/test.json',
+    loadJSON('/content/tutorials/vagierende-akkorde/data/test.json',
      function(data) { 
        var options = data; 
        first = new Tester(document.getElementById("training"), options);
@@ -192,4 +191,4 @@ abstract: Arnold Schönberg nannte Akkorde wie z.B. den verminderten Septakkord 
   function nextFirst() {
     first.getNewExercise();
   }
-</script> -->
+</script>

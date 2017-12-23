@@ -1,0 +1,80 @@
+{
+  "Name": "Fragen zum Thema ›vagierende Akkorde‹",
+  "audioFilePath": "/content/tutorials/ue56akkord/sound/exercises/",
+  "exercises": [{
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Wie heißen die Töne des übermäßigen Dreiklangs auf c?",
+    "answer": "<i>c</i>-<i>e</i>-<i>gis</i>."
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Wie heißt der verminderte Septakkord über fis?",
+    "answer": "<i>fis</i>-<i>a</i>-<i>c</i>-<i>es</i>"
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Wie heißen die Töne der Dominante mit übermäßiger Quinte in C-Dur?",
+    "answer": "<i>g</i>-<i>h</i>-<i>dis</i>-<i>f</i>"
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Wie heißen die Töne ener Dominante mit übermäßiger Quinte von b aus?",
+    "answer": "<i>b</i>-<i>d</i>-<i>fis</i>-<i>as</i>"
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Wie heißen die Töne des verminderten Septakkords von cis aus?",
+    "answer": "<i>cis</i>-<i>e</i>-<i>g</i>-<i>b</i>"
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Wie heißen die Töne des übermäßigen Terzquartakkordes von des aus?",
+    "answer": "<i>des</i>-<i>f</i>-<i>g</i>-<i>h</i>"
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Wie heißen die Töne des übermäßigen Quintsextakkordes von as aus?",
+    "answer": "<i>as</i>-<i>c</i>-<i>es</i>-<i>fis</i>"
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Wie heißen die Töne des übermäßigen Quintsextakkordes von f aus?",
+    "answer": "<i>f</i>-<i>a</i>-<i>c</i>-<i>dis</i>"
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Wie heißen die Töne der ersten Umkehrung des übermäßigen Dreiklangs von as aus?",
+    "answer": "<i>as</i>-<i>c</i>-<i>e</i>"
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Wie heißen die Töne des übermäßigen Terzquartakkordes von b aus?",
+    "answer": "<i>b</i>-<i>d</i>-<i>e</i>-<i>gis</i>"
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Wie heißen die Töne des übermäßigen Quintsextakkordes von b aus?",
+    "answer": "<i>b</i>-<i>d</i>-<i>f</i>-<i>gis</i>"
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Wie heißen die Töne des doppelt-übermäßigen Terzquartakkordes von b aus?",
+    "answer": "<i>b</i>-<i>d</i>-<i>eis</i>-<i>gis</i>"
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Wie heißen die Töne des doppelt-übermäßigen Terzquartakkordes von c aus?",
+    "answer": "<i>c</i>-<i>e</i>-<i>fisis</i>-<i>ais</i>"
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Wie heißen die Töne des übermäßigen Dreiklangs von f aus?",
+    "answer": "<i>f</i>-<i>a</i>-<i>dis</i>"
+  }, {
+    "firstFileName": "",
+    "secondFileName": "",
+    "question": "Wie heißen die Töne des übermäßigen Quintsextakkordes von fis aus?",
+    "answer": "<i>fis</i>-<i>ais</i>-<i>cis</i>-<i>e</i>"
+  }]
+ }
