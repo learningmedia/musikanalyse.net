@@ -1,11 +1,11 @@
 ---
 title: Improvisieren kleinerer Formen mit Satzmodellen
 author: Ulrich Kaiser
-date: 2014-05-29
-modified: 2014-06-10
+date: 2017-12-30
+modified: 2017-12-31
 layout: tutorial.ejs
 category: Improvisation, Form
-abstract: 'Mit Satzmodellen lassen sich recht einfach typische Harmonieverläufe tonaler Musik darstellen (z.B. in Dur I -> V :||: V -> vi -> I :|| oder in Moll und i -> iii -> v -> iv -> i).'
+abstract: 'Mit Satzmodellen lassen sich recht einfach typische Harmonieverläufe tonaler Musik darstellen (z.B. in Dur I -> V :||: V -> vi -> I :|| oder in Moll und i -> iii -> v -> iv -> i). In diesem Tutorial lernen Sie, wie sie Satzmodelle zum Improvisieren kleiner Formverläufe verwenden können.'
 ---
 <script src='/scripts/satzmodelle-impro.js'></script>
 
@@ -14,7 +14,7 @@ abstract: 'Mit Satzmodellen lassen sich recht einfach typische Harmonieverläufe
 <div class="m-12">
 	<div class="margin">
 	<div class="s-2 m-2 l-2">
-		1. Satzmodell
+		1. Typ
 	</div>
 	<div class="s-10 m-10 l-10">
 		<select id="s1" class="impro-Selector" onchange="onModelSelect(this);"></select>
@@ -23,7 +23,7 @@ abstract: 'Mit Satzmodellen lassen sich recht einfach typische Harmonieverläufe
 <div class="m-12">
 	<div class="margin">
 	<div class="s-2 m-2 l-2">
-		2. Satzmodell
+		2. Typ
 	</div>
 	<div class="s-10 m-10 l-10">
 		<select id="s2" class="impro-Selector" onchange="onModelSelect(this);"></select>
@@ -32,7 +32,7 @@ abstract: 'Mit Satzmodellen lassen sich recht einfach typische Harmonieverläufe
 <div class="m-12">
 	<div class="margin">
 	<div class="s-2 m-2 l-2">
-		3. Satzmodell
+		3. Typ
 	</div>
 	<div class="s-10 m-10 l-10">
 		<select id="s3" class="impro-Selector" onchange="onModelSelect(this);"></select>
@@ -41,7 +41,7 @@ abstract: 'Mit Satzmodellen lassen sich recht einfach typische Harmonieverläufe
 <div class="m-12">
 	<div class="margin">
 	<div class="s-2 m-2 l-2">
-		4. Satzmodell
+		4. Typ
 	</div>
 	<div class="s-10 m-10 l-10">
 		<select id="s4" class="impro-Selector" onchange="onModelSelect(this);"></select>
@@ -50,7 +50,7 @@ abstract: 'Mit Satzmodellen lassen sich recht einfach typische Harmonieverläufe
 <div class="m-12">
 	<div class="margin">
 	<div class="s-2 m-2 l-2">
-		5. Satzmodell
+		5. Typ
 	</div>
 	<div class="s-10 m-10 l-10">
 		<select id="s5" class="impro-Selector" onchange="onModelSelect(this);"></select>
@@ -59,13 +59,15 @@ abstract: 'Mit Satzmodellen lassen sich recht einfach typische Harmonieverläufe
 <div class="m-12">
 	<div class="margin">
 	<div class="s-2 m-2 l-2">
-		6. Satzmodell
+		6. Typ
 	</div>
 	<div class="s-10 m-10 l-10">
 		<select id="s6" class="impro-Selector" onchange="onModelSelect(this);"></select>
 	</div>
 </div>
-<br><hr />
+<br><br>
+<!-- <button onclick="onPlayAllClick();">Die ganze Impro abspielen</button> -->
+<br>
 
 <div id="impro-dur"></div>
 
@@ -75,6 +77,10 @@ abstract: 'Mit Satzmodellen lassen sich recht einfach typische Harmonieverläufe
 <script>
   var impro;
 
+  function onPlayAllClick() {
+  	impro.playAll();
+  }
+
   function onModelSelect(elem) {
   	var id = elem.id;
   	var key = elem.value;
@@ -82,6 +88,7 @@ abstract: 'Mit Satzmodellen lassen sich recht einfach typische Harmonieverläufe
   		return;
   	}
   	impro.getNewModule(id, key);
+  	elem.selectedIndex = 0;
   }
 
   $(document).ready(function() {

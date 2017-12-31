@@ -43,6 +43,15 @@ SatzmodellImpro.prototype.getNewModule = function(id, key) {
   }  
 }
 
+SatzmodellImpro.prototype.playAll = function() {
+  var players = document.getElementsByClassName('improPlayer');
+}
+
+SatzmodellImpro.prototype._playNext = function(players, nextPlayerIndex) {
+  players[nextPlayerIndex].play();
+  window.setTimeout(this._playNext(players, nextPlayerIndex + 1), players[nextPlayerIndex].duration);
+} 
+
 SatzmodellImpro.prototype._fillSelectorsWithData = function() {
   for (var i = 0; i < this.selectors.length; i++) {
     var selector = this.selectors[i];
@@ -98,6 +107,7 @@ SatzmodellImpro.prototype._getImageElement = function(filename) {
 SatzmodellImpro.prototype._getAudioElement = function(filename) {
   var sound = document.createElement('audio');
   sound.controls = 'controls';
+  sound.classList.add('improPlayer');
   sound.src = filename + ".mp3";
   sound.type = 'audio/mpeg';
   return sound;

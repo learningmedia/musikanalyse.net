@@ -6,7 +6,8 @@
     {"Wählen Sie ein Satzmodell in C-Dur": ""},
     {"Initialkadenz in C-Dur": "impro_0001"},
     {"Quintfallsequenz grundstellig in C-Dur": "impro_0002"},
-    {"Finalkadenz in C-Dur": "impro_0010"},
+    {"Finalkadenz in C-Dur (Beginn grundstellig)": "impro_0010"},
+    {"Finalkadenz in C-Dur (Beginn mit Sextakkord)": "impro_0030"},
     {"Arie di fiorenza in C-Dur": "impro_0014"},
     {"Kadenzen und Quintfall grundstellig in C-Dur": "impro_0022"},
     {"Parallelismus und Quintfall grundstellig in C-Dur": "impro_0023"}
@@ -15,7 +16,8 @@
     {"Wählen Sie ein modulierendes Satzmodell": ""},
     {"Oberquintmodulation von C-Dur nach G-Dur": "impro_0003"},
     {"Parallelismus und Quintfall grundstellig von C-Dur nach G-Dur": "impro_0011"},
-    {"Quintfall grundstellig und Unterquintmodulation von C-Dur nach G-Dur": "impro_0021"}
+    {"Quintfall grundstellig und Unterquintmodulation von C-Dur nach G-Dur": "impro_0021"},
+    {"Oberquintmodulation von C-Dur nach G-Dur (mit 5-6-Konsekutive)": "impro_0029"}
   ],
   "3": [
     {"Wählen Sie ein Satzmodell in G-Dur": ""},
