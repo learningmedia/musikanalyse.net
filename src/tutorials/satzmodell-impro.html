@@ -13,60 +13,60 @@ abstract: 'Mit Satzmodellen lassen sich recht einfach typische Harmonieverläufe
 
 <div class="m-12">
 	<div class="margin">
-	<div class="s-2 m-2 l-2">
+	<div class="s-1 m-1 l-1">
 		1. Typ
 	</div>
-	<div class="s-10 m-10 l-10">
+	<div class="s-6 m-6 l-6">
 		<select id="s1" class="impro-Selector" onchange="onModelSelect(this);"></select>
 	</div>
 </div>
 <div class="m-12">
 	<div class="margin">
-	<div class="s-2 m-2 l-2">
+	<div class="s-1 m-1 l-1">
 		2. Typ
 	</div>
-	<div class="s-10 m-10 l-10">
+	<div class="s-6 m-6 l-6">
 		<select id="s2" class="impro-Selector" onchange="onModelSelect(this);"></select>
 	</div>
 </div>
 <div class="m-12">
 	<div class="margin">
-	<div class="s-2 m-2 l-2">
+	<div class="s-1 m-1 l-1">
 		3. Typ
 	</div>
-	<div class="s-10 m-10 l-10">
+	<div class="s-6 m-6 l-6">
 		<select id="s3" class="impro-Selector" onchange="onModelSelect(this);"></select>
 	</div>
 </div>
 <div class="m-12">
 	<div class="margin">
-	<div class="s-2 m-2 l-2">
+	<div class="s-1 m-1 l-1">
 		4. Typ
 	</div>
-	<div class="s-10 m-10 l-10">
+	<div class="s-6 m-6 l-6">
 		<select id="s4" class="impro-Selector" onchange="onModelSelect(this);"></select>
 	</div>
 </div>
 <div class="m-12">
 	<div class="margin">
-	<div class="s-2 m-2 l-2">
+	<div class="s-1 m-1 l-1">
 		5. Typ
 	</div>
-	<div class="s-10 m-10 l-10">
+	<div class="s-6 m-6 l-6">
 		<select id="s5" class="impro-Selector" onchange="onModelSelect(this);"></select>
 	</div>
 </div>
 <div class="m-12">
 	<div class="margin">
-	<div class="s-2 m-2 l-2">
+	<div class="s-1 m-1 l-1">
 		6. Typ
 	</div>
-	<div class="s-10 m-10 l-10">
+	<div class="s-6 m-6 l-6">
 		<select id="s6" class="impro-Selector" onchange="onModelSelect(this);"></select>
 	</div>
 </div>
 <br><br>
-<!-- <button onclick="onPlayAllClick();">Die ganze Impro abspielen</button> -->
+<button onclick="onPlayAllClick();" style="margin-right: 10px;">Impro abspielen</button><button onclick="reset();">Neue Impro</button>
 <br>
 
 <div id="impro-dur"></div>
@@ -79,6 +79,10 @@ abstract: 'Mit Satzmodellen lassen sich recht einfach typische Harmonieverläufe
 
   function onPlayAllClick() {
   	impro.playAll();
+  }  
+
+  function reset() {
+  	impro.reset();
   }
 
   function onModelSelect(elem) {

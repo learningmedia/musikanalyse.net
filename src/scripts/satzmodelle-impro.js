@@ -18,8 +18,6 @@ function loadJSON(path, success, error) {
   xhr.send();
 }
 
-var count = 0;
-
 function SatzmodellImpro(elemId, selectorId, data) {
   this.container = document.getElementById(elemId);
   this.selectors = document.getElementsByClassName(selectorId);
@@ -28,6 +26,19 @@ function SatzmodellImpro(elemId, selectorId, data) {
   this.audioFilePath = data.audioFilePath;
   this._fillSelectorsWithData();
 }
+
+/* Funktionen zum Vorspielen und löschen von Satzmodellen */
+
+SatzmodellImpro.prototype.playAll = function() {
+  var players = document.getElementsByClassName('improPlayer');
+  
+}
+
+SatzmodellImpro.prototype.reset = function() {
+  this.container.innerHTML = '';
+}
+
+/* Logik zum Einfügen eines neuen Satzmodells in die Impro */
 
 SatzmodellImpro.prototype.getNewModule = function(id, key) {
   id = id[1];
@@ -41,42 +52,6 @@ SatzmodellImpro.prototype.getNewModule = function(id, key) {
       }
     }
   }  
-}
-
-SatzmodellImpro.prototype.playAll = function() {
-  var players = document.getElementsByClassName('improPlayer');
-}
-
-SatzmodellImpro.prototype._playNext = function(players, nextPlayerIndex) {
-  players[nextPlayerIndex].play();
-  window.setTimeout(this._playNext(players, nextPlayerIndex + 1), players[nextPlayerIndex].duration);
-} 
-
-SatzmodellImpro.prototype._fillSelectorsWithData = function() {
-  for (var i = 0; i < this.selectors.length; i++) {
-    var selector = this.selectors[i];
-    var key = (i + 1).toString();
-    var childs = this._getOptions(this.data[key]);
-    for (var y = 0; y < childs.length; y++) {
-      selector.appendChild(childs[y]);
-    }
-  }
-}
-
-SatzmodellImpro.prototype._getOptions = function(optionsData) {
-  var options = [];
-  for (var i = 0; i < optionsData.length; i++) {
-    var optiondata = optionsData[i]
-    for (var key in optiondata) {
-      var k = key;
-      var value = optionsData[key];
-      var option = document.createElement('option');
-      option.value = key;
-      option.innerHTML = key;
-      options.push(option);
-    }
-  }
-  return options;
 }
 
 SatzmodellImpro.prototype._getNextModule = function(key, value) {
@@ -111,4 +86,33 @@ SatzmodellImpro.prototype._getAudioElement = function(filename) {
   sound.src = filename + ".mp3";
   sound.type = 'audio/mpeg';
   return sound;
+}
+
+/* Hier werden die Select-Elemente mit Daten gefüllt */
+
+SatzmodellImpro.prototype._fillSelectorsWithData = function() {
+  for (var i = 0; i < this.selectors.length; i++) {
+    var selector = this.selectors[i];
+    var key = (i + 1).toString();
+    var childs = this._getOptions(this.data[key]);
+    for (var y = 0; y < childs.length; y++) {
+      selector.appendChild(childs[y]);
+    }
+  }
+}
+
+SatzmodellImpro.prototype._getOptions = function(optionsData) {
+  var options = [];
+  for (var i = 0; i < optionsData.length; i++) {
+    var optiondata = optionsData[i]
+    for (var key in optiondata) {
+      var k = key;
+      var value = optionsData[key];
+      var option = document.createElement('option');
+      option.value = key;
+      option.innerHTML = key;
+      options.push(option);
+    }
+  }
+  return options;
 }
