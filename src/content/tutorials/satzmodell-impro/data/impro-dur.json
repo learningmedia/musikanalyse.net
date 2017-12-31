@@ -1,0 +1,51 @@
+{
+  "Name": "Improvisation mit Satzmodellen",
+  "imageFilePath": "/content/tutorials/satzmodell-impro/dur/",  
+  "audioFilePath": "/content/tutorials/satzmodell-impro/sound/dur/",
+  "1": [
+    {"Wählen Sie ein Satzmodell in C-Dur": ""},
+    {"Initialkadenz in C-Dur": "impro_0001"},
+    {"Quintfallsequenz grundstellig in C-Dur": "impro_0002"},
+    {"Finalkadenz in C-Dur": "impro_0010"},
+    {"Arie di fiorenza in C-Dur": "impro_0014"},
+    {"Kadenzen und Quintfall grundstellig in C-Dur": "impro_0022"},
+    {"Parallelismus und Quintfall grundstellig in C-Dur": "impro_0023"}
+  ],
+  "2": [
+    {"Wählen Sie ein modulierendes Satzmodell": ""},
+    {"Oberquintmodulation von C-Dur nach G-Dur": "impro_0003"},
+    {"Parallelismus und Quintfall grundstellig von C-Dur nach G-Dur": "impro_0011"},
+    {"Quintfall grundstellig und Unterquintmodulation von C-Dur nach G-Dur": "impro_0021"}
+  ],
+  "3": [
+    {"Wählen Sie ein Satzmodell in G-Dur": ""},
+    {"Finalkadenz in G-Dur": "impro_0004"},
+    {"Initialkadenz in G-Dur": "impro_0005"},
+    {"Arie di fiorenza in G-Dur": "impro_0015"},
+    {"Quintfallsequenz mit Unkehrungen in G-Dur": "impro_0025"},
+    {"Quintfallsequenz grundstellig in G-Dur": "impro_0026"}
+  ],
+  "4": [
+    {"Wählen Sie ein modulierendes Satzmodell": ""},
+    {"Parallelismus von G-Dur nach a-Moll": "impro_0006"},
+    {"Quintfallsequenz grunstellig von G-Dur nach a-Moll": "impro_0012"},
+    {"Quintfallsequenz mit Umkehrungen von G-Dur nach a-Moll": "impro_0018"},
+    {"Quintfall grundstellig und Unterquintmodulation von G-Dur nach a-Moll": "impro_0019"}
+  ],
+  "5": [
+    {"Wählen Sie ein Satzmodell in a-Moll": ""},
+    {"Finalkadenz in a-Moll": "impro_0007"},
+    {"Initialkadenz in a-Moll": "impro_0008"},
+    {"Arie di fiorenza in a-Moll": "impro_0016"},
+    {"Quintfallsequenz mit Umkehrungen in a-Moll mit Unkehrungen": "impro_0027"},
+    {"Quintfallsequenz grundstellig in a-Moll grundstellig": "impro_0028"}
+  ],
+  "6": [
+    {"Wählen Sie ein modulierendes Satzmodell": ""},
+    {"Quintfall mit Umkehrungen und Oberquintmodulation von a-Moll nach C-Dur": "impro_0009"},
+    {"Parallelismus und Oberquintmodulation von a-Moll nach C-Dur": "impro_0013"},
+    {"Finalkadenzen und Oberquintmodulation von a-Moll nach C-Dur": "impro_0017"},
+    {"Quintfall mit Umkehrungen von a-Moll nach C-Dur": "impro_0020"},
+    {"Quintfall grundstellig und Unterquintmodulation von a-Moll nach C-Dur": "impro_0024"}
+  ]
+}

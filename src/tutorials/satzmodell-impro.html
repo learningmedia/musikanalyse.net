@@ -1,14 +1,100 @@
 ---
-title: Improvisieren kleinerer Formen mithilfe von Satzmodellen
+title: Improvisieren kleinerer Formen mit Satzmodellen
 author: Ulrich Kaiser
 date: 2014-05-29
 modified: 2014-06-10
 layout: tutorial.ejs
-category: Form
-abstract: 'Mit Satzmodellen lassen sich recht einfach typische Harmonieverläufe tonaler Musik darstellen (z.B. in Dur I -> V :||: V -> vi -> IV -> I :|| oder in Moll und i -> iii -> v -> VI -> iv -> i). In Verbindung mit typischen Satzbildern (z.B. Walzer, Ragtime, Präludium etc.) lässt sich das Improvisieren tonaler Kleinformen alleine oder zu zweit üben.'
+category: Improvisation, Form
+abstract: 'Mit Satzmodellen lassen sich recht einfach typische Harmonieverläufe tonaler Musik darstellen (z.B. in Dur I -> V :||: V -> vi -> I :|| oder in Moll und i -> iii -> v -> iv -> i).'
 ---
+<script src='/scripts/satzmodelle-impro.js'></script>
 
-<p>In diesem Tutorial lernen Sie mithilfe von Satzmodellen typische Harmonieverläufe tonaler Musik auszuarbeiten. Grundlage dieses Tutorials sind die Satzmodelle  <a href="http://www.musikanalyse.net/tutorials/kadenz">Kadenz</a>, <a href="http://www.musikanalyse.net/tutorials/quintfallsequenz">Quintfallsequenz</a>, <a href="http://www.musikanalyse.net/tutorials/oberquintmodulation">Oberquintmodulationsmodell</a> und <a href="http://www.musikanalyse.net/tutorials/parallelismus">Parallelismus</a>. Sollten Ihnen diese Satzmodelle nicht vertraut sein, können Sie in den entsprechenden Tutorials zu diesen Satzmodellen mehr erfahren. </p>
+<p>In diesem Tutorial lernen Sie mithilfe von Satzmodellen typische Harmonieverläufe tonaler Musik auszuarbeiten. Grundlage dieses Tutorials sind die Satzmodelle  <a href="http://www.musikanalyse.net/tutorials/kadenz">Kadenz</a>, <a href="http://www.musikanalyse.net/tutorials/quintfallsequenz">Quintfallsequenz</a>, <a href="http://www.musikanalyse.net/tutorials/oberquintmodulation">Oberquintmodulationsmodell</a>, <a href="http://www.musikanalyse.net/tutorials/parallelismus">Parallelismus</a> und <a href="/tutorials/motivo-di-cadenza/" target="_blank">Unterquintmodulationsmodell</a>. Sollten Ihnen diese Satzmodelle nicht vertraut sein, können Sie in den entsprechenden Tutorials zu diesen Satzmodellen mehr erfahren. </p>
+
+<div class="m-12">
+	<div class="margin">
+	<div class="s-2 m-2 l-2">
+		1. Satzmodell
+	</div>
+	<div class="s-10 m-10 l-10">
+		<select id="s1" class="impro-Selector" onchange="onModelSelect(this);"></select>
+	</div>
+</div>
+<div class="m-12">
+	<div class="margin">
+	<div class="s-2 m-2 l-2">
+		2. Satzmodell
+	</div>
+	<div class="s-10 m-10 l-10">
+		<select id="s2" class="impro-Selector" onchange="onModelSelect(this);"></select>
+	</div>
+</div>
+<div class="m-12">
+	<div class="margin">
+	<div class="s-2 m-2 l-2">
+		3. Satzmodell
+	</div>
+	<div class="s-10 m-10 l-10">
+		<select id="s3" class="impro-Selector" onchange="onModelSelect(this);"></select>
+	</div>
+</div>
+<div class="m-12">
+	<div class="margin">
+	<div class="s-2 m-2 l-2">
+		4. Satzmodell
+	</div>
+	<div class="s-10 m-10 l-10">
+		<select id="s4" class="impro-Selector" onchange="onModelSelect(this);"></select>
+	</div>
+</div>
+<div class="m-12">
+	<div class="margin">
+	<div class="s-2 m-2 l-2">
+		5. Satzmodell
+	</div>
+	<div class="s-10 m-10 l-10">
+		<select id="s5" class="impro-Selector" onchange="onModelSelect(this);"></select>
+	</div>
+</div>
+<div class="m-12">
+	<div class="margin">
+	<div class="s-2 m-2 l-2">
+		6. Satzmodell
+	</div>
+	<div class="s-10 m-10 l-10">
+		<select id="s6" class="impro-Selector" onchange="onModelSelect(this);"></select>
+	</div>
+</div>
+<br><hr />
+
+<div id="impro-dur"></div>
+
 <hr />
 <p>Weiter geht's in Kürze. Bitte haben Sie ein klein wenig Geduld...</p>
+
+<script>
+  var impro;
+
+  function onModelSelect(elem) {
+  	var id = elem.id;
+  	var key = elem.value;
+  	if (key.startsWith('Wählen')) {
+  		return;
+  	}
+  	impro.getNewModule(id, key);
+  }
+
+  $(document).ready(function() {
+    //Laden der ersten Übung
+    loadJSON('/content/tutorials/satzmodell-impro/data/impro-dur.json',
+     function(data) { 
+       impro = new SatzmodellImpro('impro-dur', 'impro-Selector', data);
+     },
+     function(xhr) { 
+       console.error(xhr); 
+     });
+    //Hier können  weiterer Übungen geladen werden
+  });
+
+</script>
 
