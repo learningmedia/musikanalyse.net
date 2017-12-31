@@ -30,8 +30,15 @@ function SatzmodellImpro(elemId, selectorId, data) {
 /* Funktionen zum Vorspielen und löschen von Satzmodellen */
 
 SatzmodellImpro.prototype.playAll = function() {
-  var players = document.getElementsByClassName('improPlayer');
-  
+  var elements = document.getElementsByClassName('improPlayer');
+  var players = Array.prototype.slice.call(elements);
+  players.reduce(function(prev, next) {
+    prev.addEventListener('ended', function() {
+      next.play();
+    });
+    return next;
+  });
+  players[0].play();
 }
 
 SatzmodellImpro.prototype.reset = function() {

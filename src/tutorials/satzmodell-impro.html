@@ -5,18 +5,34 @@ date: 2017-12-30
 modified: 2017-12-31
 layout: tutorial.ejs
 category: Improvisation, Form
-abstract: 'Mit Satzmodellen lassen sich recht einfach typische Harmonieverläufe tonaler Musik darstellen (z.B. in Dur I -> V :||: V -> vi -> I :|| oder in Moll und i -> iii -> v -> iv -> i). In diesem Tutorial lernen Sie, wie sie Satzmodelle zum Improvisieren kleiner Formverläufe verwenden können.'
+abstract: 'Mit Satzmodellen lassen sich recht einfach typische Harmonieverläufe tonaler Musik darstellen (z.B. in Dur I -> V :||: V -> vi -> I :|| oder in Moll und i -> iii :||: iii -> v -> i :||). In diesem Tutorial lernen Sie, wie sie Satzmodelle zum Improvisieren kleiner Formverläufe verwenden können.'
 ---
 <script src='/scripts/satzmodelle-impro.js'></script>
 
-<p>In diesem Tutorial lernen Sie mithilfe von Satzmodellen typische Harmonieverläufe tonaler Musik auszuarbeiten. Grundlage dieses Tutorials sind die Satzmodelle  <a href="http://www.musikanalyse.net/tutorials/kadenz">Kadenz</a>, <a href="http://www.musikanalyse.net/tutorials/quintfallsequenz">Quintfallsequenz</a>, <a href="http://www.musikanalyse.net/tutorials/oberquintmodulation">Oberquintmodulationsmodell</a>, <a href="http://www.musikanalyse.net/tutorials/parallelismus">Parallelismus</a> und <a href="/tutorials/motivo-di-cadenza/" target="_blank">Unterquintmodulationsmodell</a>. Sollten Ihnen diese Satzmodelle nicht vertraut sein, können Sie in den entsprechenden Tutorials zu diesen Satzmodellen mehr erfahren. </p>
+<p>
+	In diesem Tutorial lernen Sie, mithilfe von Satzmodellen typische Harmonieverläufe tonaler Musik zu improvisieren oder auszuarbeiten. Voraussetzung hierfür sind <a href="/tutorials/satzmodelle/">Satzmodelle</a>, die Sie in ihren Grundformen sicher spielen können sollten. Der Standardverlauf einer Komposition in Dur im 17. und 18. Jahrhundert lautet:</p>
+<p>
+	<b>I -> V :||: V -> vi -> I :||</b>
+</p>
+<p>
+	Ein Standardverlauf einer Komposition in Moll lautet hingegen:
+</p> 
+<p>
+	<b>i -> iii :||: iii -> v -> i :||</b>
+</p>
+<p> 
+	In den Auswahlboxen können Sie Modelle und auch einige Modellkombinationen finden, mit denen Sie einen typischen Formverlauf in Dur gestalten können. Mit der Schaltfläche <i>Impro anspielen</i> können Sie sich den komponierten Verlauf anhören, mit der Schaltfläche <i>Neue Impro</i> werden alls Gestaltungsversuche gelöscht.   
+</p>
+<p>
+	Gestalten Sie nun einen Fromverlauf einer Komposition in Dur:
+</p>
 
 <div class="m-12">
 	<div class="margin">
 	<div class="s-1 m-1 l-1">
 		1. Typ
 	</div>
-	<div class="s-6 m-6 l-6">
+	<div class="s-8 m-8 l-8">
 		<select id="s1" class="impro-Selector" onchange="onModelSelect(this);"></select>
 	</div>
 </div>
@@ -25,7 +41,7 @@ abstract: 'Mit Satzmodellen lassen sich recht einfach typische Harmonieverläufe
 	<div class="s-1 m-1 l-1">
 		2. Typ
 	</div>
-	<div class="s-6 m-6 l-6">
+	<div class="s-8 m-8 l-8">
 		<select id="s2" class="impro-Selector" onchange="onModelSelect(this);"></select>
 	</div>
 </div>
@@ -34,7 +50,7 @@ abstract: 'Mit Satzmodellen lassen sich recht einfach typische Harmonieverläufe
 	<div class="s-1 m-1 l-1">
 		3. Typ
 	</div>
-	<div class="s-6 m-6 l-6">
+	<div class="s-8 m-8 l-8">
 		<select id="s3" class="impro-Selector" onchange="onModelSelect(this);"></select>
 	</div>
 </div>
@@ -43,7 +59,7 @@ abstract: 'Mit Satzmodellen lassen sich recht einfach typische Harmonieverläufe
 	<div class="s-1 m-1 l-1">
 		4. Typ
 	</div>
-	<div class="s-6 m-6 l-6">
+	<div class="s-8 m-8 l-8">
 		<select id="s4" class="impro-Selector" onchange="onModelSelect(this);"></select>
 	</div>
 </div>
@@ -52,7 +68,7 @@ abstract: 'Mit Satzmodellen lassen sich recht einfach typische Harmonieverläufe
 	<div class="s-1 m-1 l-1">
 		5. Typ
 	</div>
-	<div class="s-6 m-6 l-6">
+	<div class="s-8 m-8 l-8">
 		<select id="s5" class="impro-Selector" onchange="onModelSelect(this);"></select>
 	</div>
 </div>
@@ -61,7 +77,7 @@ abstract: 'Mit Satzmodellen lassen sich recht einfach typische Harmonieverläufe
 	<div class="s-1 m-1 l-1">
 		6. Typ
 	</div>
-	<div class="s-6 m-6 l-6">
+	<div class="s-8 m-8 l-8">
 		<select id="s6" class="impro-Selector" onchange="onModelSelect(this);"></select>
 	</div>
 </div>
@@ -72,7 +88,6 @@ abstract: 'Mit Satzmodellen lassen sich recht einfach typische Harmonieverläufe
 <div id="impro-dur"></div>
 
 <hr />
-<p>Weiter geht's in Kürze. Bitte haben Sie ein klein wenig Geduld...</p>
 
 <script>
   var impro;
