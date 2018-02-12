@@ -1645,7 +1645,7 @@
       "Transitions": [{
           "Behavior": "modulierend",
           "Structure": "fa-ut",
-          "Harmonies": "4G-3T-2Q-1T",
+          "Harmonies": "4G-3T-2Q-1G",
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Measures": "11-21"
@@ -1785,9 +1785,9 @@
       "Composer": "Mozart",
       "MovementNumber": "2",
       "Transitions": [{
-          "Behavior": "modulierend",
+          "Behavior": "nicht modulierend",
           "Structure": "fa-ut",
-          "Harmonies": "4G-3Q-2g-2Q-1G-4G-3Q-2g-2Q-1G",
+          "Harmonies": "4G-3T-2g-2Q-1G-4G-3T-2g-2Q-1G",
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
           "Other": "T. 18-20 Gs (Koch 1) und Hs (Koch 2), Modell startet auf V  ",
@@ -2248,6 +2248,62 @@
           }
         ],
       "Genre": "Sinfonie"
+    },
+    {
+      "Id": "416",
+      "Composer": "Mozart",
+      "MovementNumber": "1",
+      "Transitions": [{
+          "Behavior": "modulierend",
+          "Structure": "fa-ut",
+          "Harmonies": "4G-3Q-2g-2Q-1T",
+          "Cadence": "Halbschluss",
+          "CadenceBass": "tenorisierend",
+          "Measures": "23-30"
+        }],
+      "Genre": "Arie"
+    },
+    {
+      "Id": "418",
+      "Composer": "Mozart",
+      "MovementNumber": "1",
+      "Transitions": [{
+          "Behavior": "nicht modulierend",
+          "Structure": "mi-ut",
+          "Harmonies": "3Q-2g-2Q-1T",
+          "Cadence": "Halbschluss",
+          "CadenceBass": "tenorisierend",
+          "Measures": "21-26"
+        }],
+      "Genre": "Arie"
+    },
+    {
+      "Id": "419",
+      "Composer": "Mozart",
+      "MovementNumber": "1",
+      "Transitions": [{
+          "Behavior": "modulierend",
+          "Structure": "fa-ut",
+          "Harmonies": "4G-3T-2Q-1T",
+          "Cadence": "Halbschluss",
+          "CadenceBass": "diskantisierend",
+          "Measures": "18-24"
+        }],
+      "Genre": "Arie"
+    },
+    {
+      "Id": "420",
+      "Composer": "Mozart",
+      "MovementNumber": "1",
+      "Transitions": [{
+          "Behavior": "modulierend",
+          "Structure": "fa-mi",
+          "Harmonies": "2G-2t-2S-1T",
+          "Cadence": "Halbschluss",
+          "CadenceBass": "tenorisierend",
+          "Measures": "29-36"
+        }],
+      "Genre": "Arie"
     },
     {
       "Id": "449",
