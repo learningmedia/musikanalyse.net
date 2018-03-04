@@ -19,7 +19,7 @@ abstract: In diesem Tutorial werden grundlegende Informationen zur Beschaffenhei
 <p>
 	Die Anfänge der griechischen Musiktheorie werden dem Philosophen <a href="http://de.wikipedia.org/wiki/Pythagoras">Pythagoras</a> zugeschrieben. Nach einer Legende kam er an einer Schmiede vorbei und fand heraus, dass der Zusammenklang der Schmiedehämmer von ihrem Gewicht abhing. Durch Experimente mit gleich langen und gewichteten Saiten soll er zu der Erkenntnis gekommen sein, dass sich für Intervalle (wie zum Beispiel die Oktave, Quinte und Quarte) messbare Proportionen nachweisen lassen. Die Proportionen wurden in mittelalterlichen Schriften am Monochord oder Polychord veranschaulicht:
 </p>
-<img src="/content/tutorials/tonsystem/Polychord.png" alt="Intervalle - Beispiel 1" />
+<img src="/content/tutorials/tonsystem/polychord-Seite001.png" alt="Intervalle - Beispiel 1" />
 <p>
 	Das Notenbeispiel unten zeigt anhand der Zahlen 6, 8, 9 und 12 die Proportionen der Intervalle Oktave (2 : 1 bzw. 12 : 6), Quinte (3 : 2 bzw. 9 : 6 oder 12 : 8) und Quarte (4 : 3 bzw. 8 : 6 oder 12 : 9). Als Restintervall einer durch Quarte und Quinte geteilten Oktave ergibt sich ein Tonus (Ganztonschritt mit der Proportion 9 : 8).
 </p>
@@ -43,7 +43,7 @@ abstract: In diesem Tutorial werden grundlegende Informationen zur Beschaffenhei
 <p>
 	2/1 : 4/3 = 2/1 * 3/4 = 6/4 = 3/2.
 </p>
-<p>	
+<p>
 	Das spätantike Doppeloktavsystem (<em>systema teleion</em>) der Griechen wies eine besondere innere Struktur auf: Von dem Ton <em>a</em> aus (Nete) wurde durch zwei ›verbundene‹ Tetrachorde (<em>a-g-f-e</em> und <em>e-d-c-h<em>) eine siebenstufige Skala gebildet (</em>a-h</em>, zu sehen in der nachstehenden Abbildung auf der linken Seite). Die Wiederholung dieser Skala sowie der Ton G (Gamma) ergaben einen Tonvorrat aus 15 Tönen, der durch den Ton <em>b</em> erweitert wurde. Das <em>b</em> war Bestandteil eines weiteren Tetrachords <em>synemenon</em> (<em>d-c-b-a<em>) und wies die gleiche Halbton-Ganzton-Struktur auf wie alle übrigen Tetrachorde (von oben nach unten: Ganzton-Ganzton-Halbton). Es bildet gewissermaßen eine Klammer um die ›unverbundenen‹ Tetrachorde (</em>e-d-c-h</em> und <em>a-g-f-e</em>) an der sogenannten <em>Diazeuxis</em> in der Mitte des Tonsystems. Über <a href="http://de.wikipedia.org/wiki/Boethius">Boethius</a> und die Rezeption des antiken Tonsystems erhielt der Ton <em>b</em> Eingang in das mittelalterliche Tonsystem. Das <em>b</em> wurde ursprünglich also nicht als Verfärbung des Tones <em>h</em>, sondern als eine (gleichwertige) Variante zu diesem Ton angesehen (weswegen wir <em>b</em> und nicht <em>hes</em> sagen, im Angloamerikanischen wird übrigens heute noch der Ton <em>h</em> als <em>b</em> bezeichnet, während der Ton <em>b</em> durch einen Namenszusatz als <em>b-flat</em> gekennzeichnet wird). Die mittleren Spalte der nachstehenden Tabelle zeigt den mittelalterlichen Tonvorrat mit der Doppelstufe <em>h/b</em>:
 </p>
 <img id="tonsystem" src="/content/tutorials/tonsystem/Tonsystem.png" alt="Intervalle - Beispiel 4" />
@@ -89,12 +89,12 @@ abstract: In diesem Tutorial werden grundlegende Informationen zur Beschaffenhei
   $(document).ready(function() {
     //Laden der ersten Übung
     loadJSON('/content/tutorials/tonsystem/data/test.json',
-     function(data) { 
-       var options = data; 
+     function(data) {
+       var options = data;
        first = new Tester(document.getElementById("training"), options);
      },
-     function(xhr) { 
-       console.error(xhr); 
+     function(xhr) {
+       console.error(xhr);
      });
     //Hier können  weiterer Übungen geladen werden
   });
