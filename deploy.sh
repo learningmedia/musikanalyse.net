@@ -5,7 +5,9 @@ envsubst < ./build/web.config.template > ./build/web.config
 rm ./build/web.config.template
 
 mkdir -p ~/.lftp
-echo "set ssl:verify-certificate no" > ~/.lftp/rc
+echo "set dns:order inet" >> ~/.lftp/rc
+echo "set ssl:check-hostname no" >> ~/.lftp/rc
+echo "set ssl:verify-certificate no" >> ~/.lftp/rc
 
 FTP_URL="ftp://$FTP_USER:$FTP_PASS@$FTP_HOST"
 LCD="./build"

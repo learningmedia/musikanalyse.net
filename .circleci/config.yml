@@ -2,12 +2,12 @@ version: 2
 
 defaults: &defaults
   working_directory: ~/musikanalyse.net
-  docker:
-    - image: circleci/node:4.8.2
 
 jobs:
   build:
     <<: *defaults
+    docker:
+      - image: circleci/node:4.8.2
     environment:
       - NODE_ENV: development
       - YARN_CACHE_FOLDER: ~/.cache/yarn
@@ -38,6 +38,8 @@ jobs:
             - deploy.sh
   deploy:
     <<: *defaults
+    docker:
+      - image: circleci/buildpack-deps:artful
     steps:
       - attach_workspace:
           at: "."
