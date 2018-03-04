@@ -1,7 +1,5 @@
 #!/bin/sh
 
-PATH=$(npm bin):$PATH
-
 envsubst < ./build/web.config.template > ./build/web.config
 
 rm ./build/web.config.template

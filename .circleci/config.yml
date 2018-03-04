@@ -1,0 +1,67 @@
+version: 2
+
+defaults: &defaults
+  working_directory: ~/musikanalyse.net
+  docker:
+    - image: circleci/node:4.8.2
+
+jobs:
+  build:
+    <<: *defaults
+    environment:
+      - NODE_ENV: development
+      - YARN_CACHE_FOLDER: ~/.cache/yarn
+    steps:
+      - checkout
+      - run:
+          name: Sync Submodules
+          command: git submodule sync
+      - run:
+          name: Update Submodules
+          command: git submodule update --init
+      - restore_cache:
+          key: yarn-cache-{{ checksum "yarn.lock" }}
+      - run:
+          name: Install Node Modules
+          command: yarn install --non-interactive --check-files --frozen-lockfile
+      - save_cache:
+          key: yarn-cache-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
+      - run:
+          name: Build
+          command: ./node_modules/.bin/gulp build
+      - persist_to_workspace:
+          root: "."
+          paths:
+            - build
+            - deploy.sh
+  deploy:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: "."
+      - run:
+          name: Update APT Cache
+          command: sudo apt-get update
+      - run:
+          name: Install lftp
+          command: sudo apt-get install lftp
+      - run:
+          name: Install gettext
+          command: sudo apt-get install gettext
+      - run:
+          name: Deploy
+          command: ./deploy.sh
+
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master

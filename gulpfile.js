@@ -60,6 +60,4 @@ gulp.task('watch', ['build'], function () {
   gulp.watch(['src/**', 'layouts/**'], ['reload']);
 });
 
-gulp.task('test', function () {});
-
 gulp.task('default', ['watch']);
