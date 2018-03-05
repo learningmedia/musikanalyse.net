@@ -12,7 +12,11 @@ abstract: In diesem Tutorial lernen Sie, wie Sie eine Bassstimme aus der ersten 
 <h3 id="hinweise">Allgemeine Hinweise</h3>
 <p>
 	Das Schreiben einer barocken Passacaglia dürfte wohl nur noch an den professionellen Musikausbildungsstätten seinen Platz haben. Sich mit dieser Aufgabe zu beschäftigen hat Vor- und Nachteile: Ein Vorteil liegt sicherlich darin, dass &minus; gemessen an einer komplexen Partitur &minus; man an einem relativ einfachen Notentext grundlegende musikalisch-satztechnische Kompetenzen erlernen kann (z.B. das Fähigkeit, eine Bassvorgabe zu harmonisieren, einen gut klingenden Außenstimmensatz einrichten und einen Klangraum sinnvoll gestalten zu können usw.). Der größte Nachteil dürfte in der lebensweltlichen Relevanz liegen, da man (nach einer erfolgreichen Prüfung im Fach Musiktheorie) wohl nur noch selten vor der Aufgabe stehen wird, eine Passacaglia für ein Tasteninstrument auszuarbeiten.<br>
+<<<<<<< HEAD
 	Wenn Sie sich entschieden haben, das Schreiben einer Passacaglia (oder eines Variationssatzes im Stile des 18. Jahrhunderts) zu üben, können Sie wie folgt vorgehen: 
+=======
+	Wenn Sie sich entschieden haben, das Schreiben einer Passacaglia (oder eines Variationssatzes im Stile des 18. Jahrhunderts) zu üben, können Sie wie folgt vorgehen:
+>>>>>>> 6a0d7e3c6c59369f86050625f7be8961f4e8d798
 </p>
 <ol>
   <li><a href="#harmonisierungen">Harmonisierungen einer Bassvorgabe</a></li>
@@ -23,7 +27,7 @@ abstract: In diesem Tutorial lernen Sie, wie Sie eine Bassstimme aus der ersten 
 
 <h3 id="harmonisierungen">Harmonisierungen einer Bassvorgabe</h3>
 <p>
-	Im Folgenden können Sie die exemplarische Vorgehensweise anhand einer Bassstimme üben, mithilfe der viele große Komponisten des 18. Jahrhunderts mindestens ein größeres Stück komponiert haben (z.B. <a href="https://de.wikipedia.org/wiki/Georg_Friedrich_H%C3%A4ndel" target="_blank">G. F. Händel</a> eine Passacaglia, <a href="https://de.wikipedia.org/wiki/Johann_Sebastian_Bach" target="_blank">J. S. Bach</a> die <a href="https://de.wikipedia.org/wiki/Goldberg-Variationen" target="_blank">Goldberg-Variationen</a> u.v.a.):  
+	Im Folgenden können Sie die exemplarische Vorgehensweise anhand einer Bassstimme üben, mithilfe der viele große Komponisten des 18. Jahrhunderts mindestens ein größeres Stück komponiert haben (z.B. <a href="https://de.wikipedia.org/wiki/Georg_Friedrich_H%C3%A4ndel" target="_blank">G. F. Händel</a> eine Passacaglia, <a href="https://de.wikipedia.org/wiki/Johann_Sebastian_Bach" target="_blank">J. S. Bach</a> die <a href="https://de.wikipedia.org/wiki/Goldberg-Variationen" target="_blank">Goldberg-Variationen</a> u.v.a.):
 </p>
 <img src="/content/tutorials/passacaglia-1/bassvorgabe.png" alt="Bassvorgabe nach G. F. Händel" />
 <audio controls src="/content/tutorials/passacaglia-1/sound/bass.mp3" preload="auto"></audio>
@@ -33,7 +37,7 @@ abstract: In diesem Tutorial lernen Sie, wie Sie eine Bassstimme aus der ersten 
 <img src="/content/tutorials/passacaglia-1/Harmonisierung-1.png" alt="Harmonisierung 1" />
 <audio controls src="/content/tutorials/passacaglia-1/sound/Harmonisierung-1.mp3" preload="auto"></audio>
 <p>
-  Doch eine stiltypische Harmonisierung allein ist noch kein Garant für eine gut klingende Ausarbeitung einer Passacagliavariation. Mindestens genauso wichtig für ein gut klingendes Ergebnis ist der Außenstimmensatz. 
+  Doch eine stiltypische Harmonisierung allein ist noch kein Garant für eine gut klingende Ausarbeitung einer Passacagliavariation. Mindestens genauso wichtig für ein gut klingendes Ergebnis ist der Außenstimmensatz.
 </p>
 <p>
   <span style="font-size: 0.8em;"><a href="#tutorialTitle">zurück zum Anfang</a></span>
@@ -43,16 +47,20 @@ abstract: In diesem Tutorial lernen Sie, wie Sie eine Bassstimme aus der ersten 
 <h3 id="aussenstimmen">Erstellen von Außenstimmensätzen</h3>
 <p>
   Wenn man fein hinhört, hat Musik des 18. Jahrhundert einen grundlegend anderen Klang als Musik aus dem frühen 17. Jahrhundert. Das liegt daran, dass in Außenstimmensätzen von Musik aus dem frühen 17. Jahrhundert im Verlauf von Phrasen oftmals auch perfekte Konsonanzen &minus; also Quinten und Oktaven &minus; erklingen, während für Musik aus dem 18. Jahrhundert im Verlauf von Phrasen die imperfekten Konsonanzen &minus; also Terzen und Sexten &minus; besonders wichtig sind. Die Oktave und die Quinte haben eine besondere Funktion und erscheinen meist in Verbindung mit einer Halb- oder Glanzschlusswirkung.<br>
+<<<<<<< HEAD
   Wenn Sie einen Außenstimmensatz erstellen wollen, müssen die Töne der Ober- und Unterstimme     
+=======
+  Wenn Sie einen Außenstimmensatz erstellen wollen, müssen die Töne der Ober- und Unterstimme
+>>>>>>> 6a0d7e3c6c59369f86050625f7be8961f4e8d798
 </p>
 <ol>
-  <li>zu der gewählten Harmonie passen</li>  
+  <li>zu der gewählten Harmonie passen</li>
   <li>möglichst ein Terz- oder Sextintervall bilden.</li>
   <li>Die Quinte kann gut klingen für eine Halbschlusswirkung,</li>
   <li>die Oktave empfiehlt sich für einen vollkommenen Ganzschluss.</li>
 </ol>
 <p>
-  Für die oben harmonisierte Bassstimme ergeben z.B. die folgenden Außenstimmensätze einen charakteristischen Klang:
+  Für die oben Harmonisierte Bassstimme ergeben z.B. die folgenden Außenstimmensätze einen charakteristischen Klang:
 </p>
 <img src="/content/tutorials/passacaglia-1/Aussenstimmensaetze_0001.png" alt="Außenstimmensatz 1" />
 <img src="/content/tutorials/passacaglia-1/Aussenstimmensaetze_0002.png" alt="Außenstimmensatz 2" />
@@ -67,7 +75,11 @@ abstract: In diesem Tutorial lernen Sie, wie Sie eine Bassstimme aus der ersten 
 <audio controls src="/content/tutorials/passacaglia-1/sound/As-Beispiel-4.mp3" preload="auto"></audio>
 <p>
   Veranschaulichen Sie sich, dass im Außenstimmensatz Terz und Sexte möglich sind, wenn sich im Bass die Terz oder der Quintton der Harmonie befindet. Liegt der Grundton der Harmonie im Bass, ist in der Oberstimme nur die Terz möglich (eine Sexte würde die Harmonisierung verändern).<br>
+<<<<<<< HEAD
   Liegt die Quinte einer Harmonie im Bass, beachten Sie bitte: <b>Quartsextakkorde klingen im 18. Jahrhundert fast immer fehlerhaft</b>. Ausnahme: der sogenannte <i>Vorhaltsquartsextakkord</i> in einer Kadenz (wie im vorletzten Takt der Beispiele oben).   
+=======
+  Liegt die Quinte einer Harmonie im Bass, beachten Sie bitte: <b>Quartsextakkorde klingen im 18. Jahrhundert fast immer fehlerhaft</b>. Ausnahme: der sogenannte <i>Vorhaltsquartsextakkord</i> in einer Kadenz (wie im vorletzten Takt der Beispiele oben).
+>>>>>>> 6a0d7e3c6c59369f86050625f7be8961f4e8d798
 </p>
 <p>
   <span style="font-size: 0.8em;"><a href="#tutorialTitle">zurück zum Anfang</a></span>
@@ -76,7 +88,11 @@ abstract: In diesem Tutorial lernen Sie, wie Sie eine Bassstimme aus der ersten 
 
 <h3 id="diminutionen">Motivische Ausarbeitungen (Diminutionen)</h3>
 <p>
+<<<<<<< HEAD
   Im Folgenden soll eine Passacaglia für ein Tasteninstrument ausgearbeitet werden. Eine Schwierigkeit bildet gleich der Anfang. Ist er zu einfach gehalten, um den anschließenden Variationen nichts wegzunehmen, dann gerät der erste Bassdurchgang meist sehr langweilig. Deswegen ist es gut, in auf eine besondere Weise zu gestalten, z.B. im Stil einer französischen Ouvertüre. Hierzu können wir uns einen typischen Rhythmus einer französischen Ouvertüre z.B. von J. S. Bach ›borgen‹: 
+=======
+  Im Folgenden soll eine Passacaglia für ein Tasteninstrument ausgearbeitet werden. Eine Schwierigkeit bildet gleich der Anfang. Ist er zu einfach gehalten, um den anschließenden Variationen nichts wegzunehmen, dann gerät der erste Bassdurchgang meist sehr langweilig. Deswegen ist es gut, in auf eine besondere Weise zu gestalten, z.B. im Stil einer französischen Ouvertüre. Hierzu können wir uns einen typischen Rhythmus einer französischen Ouvertüre z.B. von J. S. Bach ›borgen‹:
+>>>>>>> 6a0d7e3c6c59369f86050625f7be8961f4e8d798
 </p>
 <a class="imageChange">
   <img class="image-on" src="/content/tutorials/passacaglia-1/Bach-Ouvertüre-1.png" alt="" />
@@ -92,7 +108,11 @@ abstract: In diesem Tutorial lernen Sie, wie Sie eine Bassstimme aus der ersten 
 </div>
 <br>
 <p>
+<<<<<<< HEAD
   Natürlich müssen wir diesen Rhythmus noch dem 3/4-Takt einer Passacaglia anpassen (wenn Sie die Abbildung berühren, können Sie sehen, welche Teile der Rhythmik ich mir für die folgende kleine Ausarbeitung von Bach geborgt habe).  
+=======
+  Natürlich müssen wir diesen Rhythmus noch dem 3/4-Takt einer Passacaglia anpassen (wenn Sie die Abbildung berühren, können Sie sehen, welche Teile der Rhythmik ich mir für die folgende kleine Ausarbeitung von Bach geborgt habe).
+>>>>>>> 6a0d7e3c6c59369f86050625f7be8961f4e8d798
 </p>
 <a class="imageChange">
   <img class="image-on" src="/content/tutorials/passacaglia-1/Variation-1-franz.png" alt="" />
@@ -100,7 +120,11 @@ abstract: In diesem Tutorial lernen Sie, wie Sie eine Bassstimme aus der ersten 
 </a>
 <audio controls src="/content/tutorials/passacaglia-1/sound/thema(französisch).mp3" preload="auto"></audio>
 <p>
+<<<<<<< HEAD
   Den Rhythmus des Basses (beim Berühren der Noten oben und unten gelb markiert) habe ich mir übrigens aus einer anderen (französischen) Ouvertüre Bachs (Anfang der h-Moll-) ›geborgt‹ und dem Dreivierteltakt der Passacaglia angepasst: 
+=======
+  Den Rhythmus des Basses (beim Berühren der Noten oben und unten gelb markiert) habe ich mir übrigens aus einer anderen (französischen) Ouvertüre Bachs (Anfang der h-Moll-) ›geborgt‹ und dem Dreivierteltakt der Passacaglia angepasst:
+>>>>>>> 6a0d7e3c6c59369f86050625f7be8961f4e8d798
 </p>
 <a class="imageChange">
   <img class="image-on" src="/content/tutorials/passacaglia-1/Bach-Partita-1.png" alt="" />
@@ -124,7 +148,11 @@ abstract: In diesem Tutorial lernen Sie, wie Sie eine Bassstimme aus der ersten 
 </div>
 <p class="reference">Mattheson 1739, S. 131.</p>
 <p>
+<<<<<<< HEAD
   Die nächste Variation ist gegenüber der ouvertürenhaften Vorstellung des Themas relativ einfach. Das folgende Beispiel zeigt den Gerüstsatz und beim Berühren der Abbildung eine einfache Ausarbeitung der linken (Viertel) und rechten (Achtel) Hand:   
+=======
+  Die nächste Variation ist gegenüber der ouvertürenhaften Vorstellung des Themas relativ einfach. Das folgende Beispiel zeigt den Gerüstsatz und beim Berühren der Abbildung eine einfache Ausarbeitung der linken (Viertel) und rechten (Achtel) Hand:
+>>>>>>> 6a0d7e3c6c59369f86050625f7be8961f4e8d798
 </p>
 <a class="imageChange">
   <img class="image-on" src="/content/tutorials/passacaglia-1/Diminution-2_0001.png" alt="" />
@@ -132,7 +160,11 @@ abstract: In diesem Tutorial lernen Sie, wie Sie eine Bassstimme aus der ersten 
 </a>
 <audio controls src="/content/tutorials/passacaglia-1/sound/variation-1.mp3" preload="auto"></audio>
 <p>
+<<<<<<< HEAD
   Über verschiedenen Möglichkeiten der Diminution, über polyphone Inszenierungen und die Dramaturgie (Kontraste, ritardierende Momente etc.) können Sie mehr in dem Tutorial <a href="/tutorials/passacaglia-2" target="_blank">Passacaglia 2 (Ausarbeitungen und Form)</a> zu Passacaglia erfahren. 
+=======
+  Über verschiedenen Möglichkeiten der Diminution, über polyphone Inszenierungen und die Dramaturgie (Kontraste, ritardierende Momente etc.) können Sie mehr in dem Tutorial <a href="/tutorials/passacaglia-2" target="_blank">Passacaglia 2 (Ausarbeitungen und Form)</a> zu Passacaglia erfahren.
+>>>>>>> 6a0d7e3c6c59369f86050625f7be8961f4e8d798
 </p>
 
 <p>
@@ -149,4 +181,8 @@ abstract: In diesem Tutorial lernen Sie, wie Sie eine Bassstimme aus der ersten 
   <li>
     Johann Mattheson, <i>Der vollkommene Capellmeister</i>, Hamburg 1739.
   </li>
+<<<<<<< HEAD
 </ul>
+=======
+</ul>
+>>>>>>> 6a0d7e3c6c59369f86050625f7be8961f4e8d798
