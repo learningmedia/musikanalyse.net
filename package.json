@@ -9,9 +9,12 @@
     "url": "https://github.com/learningmedia/musikanalyse.net.git"
   },
   "private": true,
+  "engines": {
+    "node": ">=8.0.0"
+  },
   "devDependencies": {
     "browser-sync": "~2.9.8",
-    "ejs": "^2.5.7",
+    "ejs": "~2.5.7",
     "gulp": "~3.9.0",
     "metalsmith": "~2.1.0",
     "metalsmith-autoprefixer": "~1.1.0",
