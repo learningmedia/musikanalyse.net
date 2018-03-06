@@ -7,7 +7,7 @@ jobs:
   build:
     <<: *defaults
     docker:
-      - image: circleci/node:4.8.2
+      - image: circleci/node:8.9.4
     environment:
       - NODE_ENV: development
       - YARN_CACHE_FOLDER: ~/.cache/yarn
