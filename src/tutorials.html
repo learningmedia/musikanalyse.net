@@ -12,100 +12,89 @@ layout: wide.ejs
   </h1>
   <noscript>Diese Seite funktioniert nicht ohne Javascript.</noscript>
   <section class="margin-top-20">
+    <input type="search" id="tutorials-filter" placeholder="Suchbegriff eingeben">
+  </section>
+  <section data-role="tutorial-section" class="margin-top-20">
     <h2>Grundlagen</h2>
-    <div class="foldable" data-text="Tutorials ›Grundlagen‹" style="padding-top: 20px;">
-      <ul>
-        <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Grundlagen') > -1; }).forEach(function (tutorial) { %>
-        <li>
-          <a href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
-        </li>
-        <% }); %>
-      </ul>
-   </div>
+    <ul>
+      <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Grundlagen') > -1; }).forEach(function (tutorial) { %>
+      <li data-role="tutorial-item">
+        <a data-role="tutorial-link" href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
+      </li>
+      <% }); %>
+    </ul>
   </section>
-  <section class="margin-top-20">
+  <section data-role="tutorial-section" class="margin-top-20">
     <h2>Form</h2>
-    <div class="foldable" data-text="Tutorials ›Form‹" style="padding-top: 20px;">
-      <ul>
-        <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Form') > -1; }).forEach(function (tutorial) { %>
-        <li>
-          <a href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
-        </li>
-        <% }); %>
-      </ul>
-    </div>
+    <ul>
+      <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Form') > -1; }).forEach(function (tutorial) { %>
+      <li data-role="tutorial-item">
+        <a data-role="tutorial-link" href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
+      </li>
+      <% }); %>
+    </ul>
   </section>
-  <section class="margin-top-20">
+  <section data-role="tutorial-section" class="margin-top-20">
     <h2>Stilübungen &amp; Improvisation</h2>
-    <div class="foldable" data-text="Tutorials ›Stilübung und Improvisation‹" style="padding-top: 20px;">
-      <ul>
-        <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Stilübungen (Tonsatz)') > -1 || tutorial.category.indexOf('Improvisation') > -1; }).forEach(function (tutorial) { %>
-        <li>
-          <a href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
-        </li>
-        <% }); %>
-      </ul>
-    </div>
+    <ul>
+      <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Stilübungen (Tonsatz)') > -1 || tutorial.category.indexOf('Improvisation') > -1; }).forEach(function (tutorial) { %>
+      <li data-role="tutorial-item">
+        <a data-role="tutorial-link" href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
+      </li>
+      <% }); %>
+    </ul>
   </section>
-  <section class="margin-top-20">
+  <section data-role="tutorial-section" class="margin-top-20">
     <h2>Satzmodelle</h2>
-    <div class="foldable" data-text="Tutorials ›Satzmodelle‹" style="padding-top: 20px;">
-      <ul>
-        <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Satzmodelle') > -1; }).forEach(function (tutorial) { %>
-        <li>
-          <a href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
-        </li>
-        <% }); %>
-      </ul>
-    </div>
+    <ul>
+      <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Satzmodelle') > -1; }).forEach(function (tutorial) { %>
+      <li data-role="tutorial-item">
+        <a data-role="tutorial-link" href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
+      </li>
+      <% }); %>
+    </ul>
   </section>
-  <section class="margin-top-20">
+  <section data-role="tutorial-section" class="margin-top-20">
     <h2>Musik und Kontext</h2>
-    <div class="foldable" data-text="Tutorials ›Musik und Kontext‹" style="padding-top: 20px;">
-      <ul>
-        <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Musikgeschichte') > -1; }).forEach(function (tutorial) { %>
-        <li>
-          <a href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
-        </li>
-        <% }); %>
-      </ul>
-    </div>
+    <ul>
+      <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Musikgeschichte') > -1; }).forEach(function (tutorial) { %>
+      <li data-role="tutorial-item">
+        <a data-role="tutorial-link" href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
+      </li>
+      <% }); %>
+    </ul>
   </section>
-  <section class="margin-top-20">
+  <section data-role="tutorial-section" class="margin-top-20">
     <h2>Methoden</h2>
-    <div class="foldable" data-text="Tutorials ›Methoden‹" style="padding-top: 20px;">
-      <ul>
-        <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Methoden') > -1; }).forEach(function (tutorial) { %>
-        <li>
-          <a href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
-        </li>
-        <% }); %>
-      </ul>
-    </div>
+    <ul>
+      <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Methoden') > -1; }).forEach(function (tutorial) { %>
+      <li data-role="tutorial-item">
+        <a data-role="tutorial-link" href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
+      </li>
+      <% }); %>
+    </ul>
   </section>
-  <section class="margin-top-20">
+  <section data-role="tutorial-section" class="margin-top-20">
     <h2>Terminologie</h2>
-    <div class="foldable" data-text="Tutorials ›Terminologie‹" style="padding-top: 20px;">
-      <ul>
-        <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Terminologie') > -1; }).forEach(function (tutorial) { %>
-        <li>
-          <a href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
-        </li>
-        <% }); %>
-      </ul>
-    </div>
+    <ul>
+      <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Terminologie') > -1; }).forEach(function (tutorial) { %>
+      <li data-role="tutorial-item">
+        <a data-role="tutorial-link" href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
+      </li>
+      <% }); %>
+    </ul>
   </section>
-  <section class="margin-top-20">
+  <section data-role="tutorial-section" class="margin-top-20">
     <h2>Pop &amp; Rock</h2>
-    <div class="foldable" data-text="Tutorials ›Pop und Rock" style="padding-top: 20px;">
-      <ul>
-        <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Popularmusik') > -1; }).forEach(function (tutorial) { %>
-        <li>
-          <a href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
-        </li>
-        <% }); %>
-      </ul>
-    </div>
+    <ul>
+      <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Popularmusik') > -1; }).forEach(function (tutorial) { %>
+      <li data-role="tutorial-item">
+        <a data-role="tutorial-link" href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
+      </li>
+      <% }); %>
+    </ul>
   </section>
   </div>
 </div>
+
+<script src="/scripts/tutorials.js"></script>
