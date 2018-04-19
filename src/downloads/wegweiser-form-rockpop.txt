@@ -1,5 +1,5 @@
 ---
-title: Wegweiser zur Formanalyse von Rock- und Pomusik
+title: Wegweiser zur Formanalyse von Rock- und Popmusik
 author: Ulrich Kaiser
 category: themen
 subCategory: form, popRock
