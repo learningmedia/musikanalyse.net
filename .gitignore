@@ -3,4 +3,4 @@ build/
 assets/*.xcf
 assets/*.sla*
 assets/*.psd
-./vscode
+.vscode/
