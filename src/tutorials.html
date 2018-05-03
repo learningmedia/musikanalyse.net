@@ -65,6 +65,16 @@ layout: wide.ejs
     </ul>
   </section>
   <section data-role="tutorial-section" class="margin-top-20">
+    <h2>Analysen und Werkeinführungen</h2>
+    <ul>
+      <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Analysen') > -1; }).forEach(function (tutorial) { %>
+      <li data-role="tutorial-item">
+        <a data-role="tutorial-link" href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
+      </li>
+      <% }); %>
+    </ul>
+  </section>
+  <section data-role="tutorial-section" class="margin-top-20">
     <h2>Methoden</h2>
     <ul>
       <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Methoden') > -1; }).forEach(function (tutorial) { %>
