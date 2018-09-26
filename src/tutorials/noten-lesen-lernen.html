@@ -8,10 +8,6 @@ category: Grundlagen
 abstract: In diesem Tutorial können Sie das Lesen von Noten im Violin- und Bassschlüssel üben.
 ---
 
-<script src='/scripts/jquery.klavier.js'></script>
-<script src='/scripts/cleffExercises.js'></script>
-<link rel="stylesheet" href="/styles/cleffs.css">
-
 <button onclick="onAnnotationsClick(this)">Erläuterungen zu den Notenschlüsseln ausblenden</button>
 <br><br>
 <div id="scaleAnnotationContainer">
@@ -165,96 +161,5 @@ abstract: In diesem Tutorial können Sie das Lesen von Noten im Violin- und Bass
 <hr>
 <hr style="margin-top: -18px;">
 
-<!-- Tonleiterspiel  -->
-
-<h3 id="notenleseTrainer" style="float: left;">Testen Sie Ihr Wissen zum&nbsp;</h3>
-<select id="cleff" onchange="selectCleff()" style="width: 200px; height: 30px;">
-  <option value="violin">Violinschlüssel</option>
-  <option value="bass">Bassschlüssel</option>
-  <option value="all">Violin- und Bassschlüssel</option>
-</select>
-<div style="height: 340px; clear: left;" id="exercise-container">
-  <span>Geben Sie das <span id="noteName" style="color: #00AD00; font-weight: bold;"></span> auf der Klaviatur an.</span>
-  <div id="imageNoteContainer" style="height: 120px; margin-top: 20px; margin-left: 20%;">
-    <image style="margin: 0;" id="imageNote">
-  </div>
-  <div>
-    <p id="octave" style="width: 100%; display: block; font-weight: bold;">eingestrichene Oktave</p>
-    <div class="pianoContainer" id="exercise"></div>
-    <div class="flexContainer">
-      <button id="check" class="flexItem" style="border: 1px solid maroon;" onclick="show()">Überprüfen</button>
-      <button id="reset" class="flexItem" style="border: 1px solid navy;" onclick="reset()">Zurücksetzen</button>
-      <button id="new" class="flexItem" style="border: 1px solid green;" onclick="createNewExercise()">Neue Aufgabe</button>
-    </div>
-     <div id="attentionText">Du hast geschummelt und zu viele Töne angegeben!</div>
-  </div>
-</div>
-<div id="statistic"></div>
-<div class="smalltext">
-  <b>Anmerkungen:</b><br>
-  Mit der Schaltfläche <span class="textButton textButtonRed">Überprüfen</span> können Sie überprüfen, ob Ihre Eingabe richtig ist.
-  Sind nur grüne Tasten zu sehen, ist Ihre Eingabe korrekt, Gratulation! Die Schaltfläche <span class="textButton textButtonBlue">Zurücksetzen</span> wird Ihre Eingabe zurücksetzen, aber keine neue Aufgabe erstellen. Dadurch können fehlerhafte Eingaben korrigiert werden. Mit der Schaltfläche <span class="textButton textButtonGreen">Neue Aufgabe</span> erzeugen Sie eine neue Aufgabe.
-</div>
-<hr>
-
-<script>
-  var options = {
-    'startKey': 60,
-    'cleff': 'violin',
-    'range': 23,
-    'folderName': '/content/tutorials/noten-lesen-lernen/midiNotes/',
-    'images': ['Ais_46.png', 'ais_58.png', 'ais_70.png', 'ais_82.png', 'As_44.png', 'as_56.png', 'as_68.png', 'as_80.png', 'A_45.png', 'a_57.png', 'a_69.png', 'a_81.png', 'B_46.png', 'b_58.png', 'b_70.png', 'b_82.png', 'Ces_47.png', 'ces_59.png', 'ces_71.png', 'ces_83.png', 'Cis_37.png', 'cis_49.png', 'cis_61.png', 'cis_73.png', 'C_36.png', 'c_48.png', 'c_60.png', 'c_72.png', 'Des_37.png', 'des_49.png', 'des_61.png', 'des_73.png', 'Dis_39.png', 'dis_51.png', 'dis_63.png', 'dis_75.png', 'D_38.png', 'd_50.png', 'd_62.png', 'd_74.png', 'Es_39.png', 'es_51.png', 'es_63.png', 'es_75.png', 'E_40.png', 'e_52.png', 'e_64.png', 'e_76.png', 'Fes_40.png', 'fes_52.png', 'fes_64.png', 'fes_76.png', 'Fis_42.png', 'fis_54.png', 'fis_66.png', 'fis_78.png', 'F_41.png', 'f_53.png', 'f_65.png', 'f_77.png', 'Ges_42.png', 'ges_54.png', 'ges_66.png', 'ges_78.png', 'Gis_44.png', 'gis_56.png', 'gis_68.png', 'gis_80.png', 'G_43.png', 'g_55.png', 'g_67.png', 'g_79.png', 'H_47.png', 'h_59.png', 'h_71.png', 'h_83.png']
-  }
-
-  function selectCleff() {
-    var elem = document.getElementById("cleff");
-    var cleff = elem.options[elem.selectedIndex].value;
-    var range = 23;
-    if (cleff === 'violin') {
-      options.startKey = 60;
-      $('#imageNoteContainer').css('margin-left', 20 + '%');
-      $('#octave').css('padding-left', 0 + '');
-    } else if (cleff === 'bass') {
-      options.startKey = 36;
-      range = 35;
-      $('#octave').css('padding-left', 560 + 'px');
-    } else {
-      options.startKey = 36;
-      range = 47;
-      $('#imageNoteContainer').css('margin-left', 30 + '%');
-      $('#octave').css('padding-left', 400 + 'px');
-    }
-    options.range = range;
-    options.cleff = cleff;
-    createNewExercise();
-  }
-
-  function onAnnotationsClick(elem) {
-    var button = $(elem);
-    var annotationcontainer = $('#scaleAnnotationContainer');
-    annotationcontainer.toggleClass('isNotVisible');
-    if (annotationcontainer.hasClass('isNotVisible')) button.text('Erläuterungen zu den Notenschlüsseln einblenden');
-    else button.text('Erläuterungen zu den Notenschlüsseln ausblenden');
-  }
-
-  $(document).ready(function() {
-    var exercise = createExercise('#exercise', options);
-    $('#imageNote').attr('src', exercise.currentNotePath);
-    $('#noteName').text(exercise.octave + " " + exercise.name);
-  });
-
-  function createNewExercise() {
-    $('#exercise').klavier('destroy');
-    var exercise = createExercise('#exercise', options);
-    $('#imageNote').attr('src', exercise.currentNotePath);
-    $('#noteName').text(exercise.octave + " " + exercise.name);
-  }
-
-  function show() {
-    showValue();
-  }
-
-  function reset() {
-    resetColors();
-  }
-</script>
+<iframe style="width: 100%;" scrolling="no" src="/tutorials/noten-lesen-lernen-tool"></iframe>
+<br><br><br>
