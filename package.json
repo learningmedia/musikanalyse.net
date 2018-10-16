@@ -2,8 +2,8 @@
   "name": "musikanalyse.net",
   "version": "1.0.0",
   "description": "Profiwissen zur Musiktheorie und zur musikalischen Analyse",
-  "author": "Andreas Helmberger and Ulrich Kaiser",
-  "license": "CC BY-NC-ND",
+  "author": "Ulrich Kaiser",
+  "license": "CC BY 2.0 DE",
   "repository": {
     "type": "git",
     "url": "https://github.com/learningmedia/musikanalyse.net.git"
