@@ -4,3 +4,4 @@ assets/*.xcf
 assets/*.sla*
 assets/*.psd
 .vscode/
+*.mp4
