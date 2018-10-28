@@ -53,7 +53,7 @@ gulp.task('build', function (done) {
 
 gulp.task('reload', ['build'], function () {
   browserSync.reload();
-})
+});
 
 gulp.task('watch', ['build'], function () {
   browserSync({ server: { baseDir: 'build' }, port: 3000 });
