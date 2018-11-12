@@ -29,31 +29,5 @@ window.addEventListener('DOMContentLoaded', function () {
     if (accepted === 'true') return;
     accepted = confirm(copyrightNote);
     Cookies.set('copyright-note-accepted', accepted ? 'true' : 'false');
-  });
-
-  var firstValue = Math.floor((Math.random() * 10) + 1);
-  var secondValue = Math.floor((Math.random() * 10) + 1);
-  var first = window.document.getElementById('first');
-  var second = window.document.getElementById('second');
-  first.value = firstValue;
-  second.value = secondValue;
-  $('#contact-form').on('submit', function (event) {
-    $('#contact-button').attr('disabled', true);
-    $.ajax({
-      url: this.action,
-      type: 'POST',
-      dataType: 'text',
-      data: $(this).serialize(),
-      success: function (text) {
-        $('#contact-button').text('Vielen Dank!')
-        alert(text);
-      },
-      error: function (error) {
-        alert(error.responseText || error.statusText || error.message || error);
-        $('#contact-button').attr('disabled', null);
-      }
-    });
-    event.preventDefault();
-  });
-  
+  });  
 });
