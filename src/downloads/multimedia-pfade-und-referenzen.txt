@@ -1,0 +1,9 @@
+---
+title: Pfade und Referenzen
+author: Ulrich Kaiser
+category: themen
+subCategory: multimedia
+abstract: Grundlegende Informationen zu Pfaden und Referenzen.
+thumbnail: /img/thumbnails/multimedia-pfade-und-referenzen.jpg
+link: /downloadfiles/Multimedia-Pfade-und-Referenzen.pdf
+---
