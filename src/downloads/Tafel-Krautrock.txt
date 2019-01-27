@@ -2,7 +2,7 @@
 title: Übersichtstafel - Krautrock
 author: Ulrich Kaiser
 category: themen
-subCategory: popRock
+subCategory: Musikgeschichte
 abstract: Übersichtstafel über Krautrockbands (z.B. Birth Control, Lucifer's Friend, Eloy, Jane u.a.)
 thumbnail: /img/thumbnails/Tafel-Krautrock.jpg
 link: /downloadfiles/Tafel-Krautrock.pdf

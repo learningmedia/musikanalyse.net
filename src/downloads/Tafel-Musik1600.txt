@@ -1,0 +1,9 @@
+---
+title: Übersichtstafel - Musik um 1600
+author: Ulrich Kaiser
+category: themen
+subCategory: Musikgeschichte
+abstract: Übersichtstafel zur Musik um 1600
+thumbnail: /img/thumbnails/Tafel-Musik1600.jpg
+link: /downloadfiles/Tafel-Musik1600.pdf
+---

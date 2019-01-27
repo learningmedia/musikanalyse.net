@@ -64,33 +64,6 @@ layout: material.ejs
   <% }); %>
 
   <section class="margin-top-20">
-    <h2>Pop- und Rock</h2>
-    <div class="foldable" data-text="Materialien ›Pop und Rock‹" style="padding-top: 20px;">
-      <ul>
-         <% collections.downloads.filter(function (downloadfile) { return downloadfile.category.indexOf('themen') > -1 && downloadfile.subCategory.indexOf('popRock') > -1; }).forEach(function (downloadfile) { %>
-        <li>
-          <a title="<%= downloadfile.abstract %>" data-toggle="<%= downloadfile.title %>"><%= downloadfile.title %></a>
-        </li>
-        <% }); %>
-      </ul>
-    </div>
-  </section>
-  <hr class="margin-top-20" />
-  <% collections.downloads.filter(function (downloadfile) { return downloadfile.category.indexOf('themen') > -1 && downloadfile.subCategory.indexOf('popRock') > -1; }).forEach(function (downloadfile) { %>
-  <div id="<%= downloadfile.title %>" class="line margin-top-bottom-20" style="border-bottom: 1px solid gray; padding-bottom: 20px; display: none;">
-    <div class="s-12 m-2 l-2 ">
-      <a href="<%= downloadfile.link %>"><img src="<%= downloadfile.thumbnail %>" class="shadow" /></a>
-    </div>
-    <div class="s-12 m-10 l-10">
-      <a data-toggle="<%= downloadfile.title %>" class="Material-closeLink"><img src="/img/cross.png"></a>
-      <h3 class="beforeSmalltext"><%= downloadfile.title %></h3>
-      <span class="smalltext">von <%= downloadfile.author %></span>
-      <p><%= downloadfile.abstract %></p>
-    </div>
-  </div>
-  <% }); %>
-
-  <section class="margin-top-20">
     <h2>Zu Methoden der musikalischen Analyse</h2>
     <div class="foldable" data-text="Materialien zu ›Methoden der musikalischen Analyse‹" style="padding-top: 20px;">
       <ul>
@@ -158,33 +131,6 @@ layout: material.ejs
   </section>
   <hr class="margin-top-20" />
   <% collections.downloads.filter(function (downloadfile) { return downloadfile.category.indexOf('themen') > -1 && downloadfile.subCategory.indexOf('Musikgeschichte') > -1; }).forEach(function (downloadfile) { %>
-  <div id="<%= downloadfile.title %>" class="line margin-top-bottom-20" style="border-bottom: 1px solid gray; padding-bottom: 20px; display: none;">
-    <div class="s-12 m-2 l-2 ">
-      <a href="<%= downloadfile.link %>"><img src="<%= downloadfile.thumbnail %>" class="shadow" /></a>
-    </div>
-    <div class="s-12 m-10 l-10">
-      <a data-toggle="<%= downloadfile.title %>" class="Material-closeLink"><img src="/img/cross.png"></a>
-      <h3 class="beforeSmalltext"><%= downloadfile.title %></h3>
-      <span class="smalltext">von <%= downloadfile.author %></span>
-      <p><%= downloadfile.abstract %></p>
-    </div>
-  </div>
-  <% }); %>
-
- <section class="margin-top-40">
-    <h2>Multimedia</h2>
-    <div class="foldable" data-text="Materialien ›Multimedia‹" style="padding-top: 20px;">
-      <ul>
-         <% collections.downloads.filter(function (downloadfile) { return downloadfile.category.indexOf('themen') > -1 && downloadfile.subCategory.indexOf('multimedia') > -1; }).forEach(function (downloadfile) { %>
-        <li>
-          <a title="<%= downloadfile.abstract %>" data-toggle="<%= downloadfile.title %>"><%= downloadfile.title %></a>
-        </li>
-        <% }); %>
-      </ul>
-    </div>
-  </section>
-  <hr class="margin-top-20" />
-  <% collections.downloads.filter(function (downloadfile) { return downloadfile.category.indexOf('themen') > -1 && downloadfile.subCategory.indexOf('multimedia') > -1; }).forEach(function (downloadfile) { %>
   <div id="<%= downloadfile.title %>" class="line margin-top-bottom-20" style="border-bottom: 1px solid gray; padding-bottom: 20px; display: none;">
     <div class="s-12 m-2 l-2 ">
       <a href="<%= downloadfile.link %>"><img src="<%= downloadfile.thumbnail %>" class="shadow" /></a>
