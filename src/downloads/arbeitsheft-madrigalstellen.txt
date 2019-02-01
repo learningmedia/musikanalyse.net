@@ -1,0 +1,9 @@
+---
+title: Arbeitsheft Madrigalstellen
+author: Ulrich Kaiser
+category: themen
+subCategory: gattungen
+abstract: Dieses Arbeitsheft enthält außergewöhnliche Wendungen aus der englischen und italienischen Madrigalmusik um 1600 zur Anlayse.
+thumbnail: /img/thumbnails/arbeitsheft-madrigalstellen.png
+link: /downloadfiles/arbeitsheft-madrigalstellen.pdf
+---
