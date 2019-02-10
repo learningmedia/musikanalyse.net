@@ -53,42 +53,6 @@
     margin-left: 36px;
   }
 
-  .citation {
-    width: 80%;
-    font-size: 90%;
-    font-style: italic;
-    margin-right: auto;
-    margin-left: auto;
-    text-align: left;
-    padding: 10px 20px !important;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
-    background-color: #E6E6E6;
-    border: 1px solid silver;
-    color: black;
-  }
-  .citation > p > span.anm {
-    font-style: normal;
-  }
-  .reference {
-    width: 100%;
-    padding-right: 10%;
-    margin-top: 10px !important;
-    text-align: right;
-    .smalltext;
-  }
-
-  .board {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    border:1px solid black;
-    background-color:#DBDBDB;
-    color:maroon; padding:10px;
-    font-weight: bold;
-  }
-
   .originalWidth {
     max-width: 100%;
   }
@@ -266,6 +230,95 @@
 
   .color-blue {
     color: blue;
+  }
+
+  .blockquote {
+    display:block;
+    padding: 15px 20px 15px 45px;
+    margin: 40px 80px;
+    position: relative;
+
+    @media only screen and (max-width: 576px) {
+      margin: 40px 0;
+    }
+
+    /*Borders - (Optional) orange = #d46b08 / darkblue = #002633 */
+    border-left: 15px solid #49BF4C;
+    border-right: 2px solid #49BF4C;
+
+    /*Box Shadow - (Optional)*/
+    box-shadow: 2px 2px 15px #bfbfbf;
+
+    p {
+      margin: 2px 4px !important;
+    }
+    ul, ol {
+      margin: 2px 4px !important;
+      padding-left: 20px;
+    }
+  }
+
+  .blockquote::before{
+    content: "\201C"; /*Unicode for Left Double Quote*/
+
+    /*Font*/
+    line-height: 60px;
+    font-family: Georgia, serif;
+    font-size: 60px;
+    font-weight: bold;
+    color: #8c8c8c;
+
+    /*Positioning*/
+    position: absolute;
+    left: 10px;
+    top:5px;
+  }
+
+  .blockquote::after{
+    /*Reset to make sure*/
+    content: "";
+  }
+
+  .blockquote > *:last-child {
+    margin-bottom: 0;
+  }
+
+  .attention {
+    display:block;
+    padding: 15px 20px;
+    margin: 40px 80px;
+    position: relative;
+
+    @media only screen and (max-width: 576px) {
+      margin: 40px 0;
+    }
+
+    /*Borders - (Optional) orange = #d46b08 / darkblue = #002633 */
+    border-left: 15px solid maroon;
+    border-right: 2px solid maroon;
+
+    /*Box Shadow - (Optional)*/
+    box-shadow: 2px 2px 15px #bfbfbf;
+
+    p {
+      margin: 2px 4px !important;
+    }
+  }
+
+  .attention > *:last-child {
+    margin-bottom: 0;
+  }
+
+  .blockquote > p > span.anm, .attention > p > span.anm {
+    font-style: normal;
+  }
+  
+  .reference {
+    width: 100%;
+    padding-left: 40%;
+    padding-top: 10px;
+    text-align: right;
+    .smalltext;
   }
 
   @media(max-width:770px) {
