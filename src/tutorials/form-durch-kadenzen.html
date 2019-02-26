@@ -5,7 +5,7 @@ date: 2019-02-25
 modified: 2019-02-25
 layout: tutorial.ejs
 category: Form
-abstract: In diesem Tutorial wird die Formwahrnehmung durch Kadenzen veranschaulicht.
+abstract: In diesem Tutorial wird die Formwahrnehmung durch Kadenzen veranschaulicht, es hat Kommentarfunktion und stellt die Hörbeispiele bereit für das OpenBook »Formenlehre der Musik« von Ulrich Kaiser. 
 ---
 
 <p>
@@ -109,9 +109,74 @@ abstract: In diesem Tutorial wird die Formwahrnehmung durch Kadenzen veranschaul
 
 <h4 id="corelli">Hörbeispiel 23 und 24<br>Arcangelo Corelli, Triosonate Op. 1, Nr. 1, 1. Satz</h4>
 <p>
-  Schon in einpaar Stunden geht es hier weiter...
+  <a href="https://de.wikipedia.org/wiki/Arcangelo_Corelli" target="_blank">Arcangelo Corelli</a>, der von 1653 bis 1713 lebte, war ein Komponist und hervorragender Violinist. Bekannt geworden sind seine Kirchen- und Kammersonate Op. 1&minus;4, seine Violinsonaten Op. 5 sowie seine Concerti grossi. Seine Hauptwirkungsstätte war Rom unter verschiedenen Arbeitgebern (Christina von Schweden, Benedetto Pamphili und Pietro Ottoboni).<br>
+  Das Grave der Triosonate Op. 1, Nr. 1 enthält fünf (nit Wiederholung sieben) Kadenzen, deren Abfolge für tonale Werke zwischen 1650 und 1850 sehr charakteristisch ist: 
 </p>
+<ol>
+  <li>die erste Phase endet mit einem Ganzschluss der Ausgangstonart (entspricht in Sonaten dem Ende des Hauptsatzes)</li>
+  <li>die zweite Phase endet mit einem Ganzschluss der Nebentonart (entspricht in Sonaten dem Ende der Exposition)</li>
+  <li>die dritte Phase endet mit einem Ganzschluss in der Paralleltonart (entspricht in Sonaten dem harmonischen Ziel der Durchführung in Dur-Kompositionen)</li>
+  <li>die vierte Phase führt über einen Halbschluss zurück in die Ausgangstonart (entspricht in Sonaten der Rückführungsdominante vor der Rerpise)</li>
+  <li>die fünfte Phase endet mit einen Ganzschluss in der Ausgangstonart (entspricht in Sonaten dem Ende der Rerpise)</li>
+</ol>
+<p>
+  Die folgende Abbildung zeigt die vier bzw. fünf Ganzschlusskadenzen des Satzes:
+</p>
+<img src="/content/tutorials/form-durch-kadenzen/corelli-kadenzen.png" alt="Abbildung Corelli Op. 1, Nr. 1, Kadenzen" />
+<audio controls src="/content/tutorials/form-durch-kadenzen/sound/Corelli-Kadenzen.mp3" preload="auto"></audio>
+<div class="copyright">
+  <p>
+    <small>
+      Violine 1: Nina Meinhof, Violine 2: Annemarie Berkel<br>
+      Violoncello: Julian Weiß, Generalbass: Cube Steinberg<br>
+      Lizenz: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a>
+    </small>
+  </p>
+</div>
+<p>
+  Das folgende Mixing-Projekt erlaubt das Anhören des Satzes (mit und ohne Generalbass) sowie der Einzelstimmen: 
+</p>
+<a class="imageChange">
+  <img class="image-on" src="/content/tutorials/form-durch-kadenzen/corelli-partitur.png" alt="Abbildung Corelli Op. 1, Nr. 1, Grave" />
+  <img class="image-off" src="/content/tutorials/form-durch-kadenzen/corelli-partitur-mKommentar.png" alt="Abbildung Corelli Op. 1, Nr. 1, Grave mit Kadenzen" />
+</a>
+<audio class="corelli" controls src="/content/tutorials/form-durch-kadenzen/sound/Corelli-Violine-1.mp3" mediagroup="master" preload="auto"></audio>
+<audio class="corelli" controls src="/content/tutorials/form-durch-kadenzen/sound/Corelli-Violine-2.mp3" mediagroup="master" preload="auto"></audio>
+<audio class="corelli" controls src="/content/tutorials/form-durch-kadenzen/sound/Corelli-Violoncello.mp3" mediagroup="master" preload="auto"></audio>
+<audio class="corelli" controls src="/content/tutorials/form-durch-kadenzen/sound/Corelli-Generalbass.mp3" mediagroup="master" preload="auto"></audio>
+<div class="copyright">
+  <p>
+    <small>
+      Violine 1: Nina Meinhof, Violine 2: Annemarie Berkel<br>
+      Violoncello: Julian Weiß, Generalbass: Cube Steinberg<br>
+      Lizenz: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a>
+    </small>
+  </p>
+</div>
+<div style="display: flex; justify-content: center;">
+  <a class="Button Button--green" onclick="playPause();" style="width: 200px;">Start & Stopp</a>
+  <div style="width: 20px;"></div>
+  <a class="Button Button--red" onclick="reset();" style="width: 200px;">Reset</a>  
+</div>
 
 
 
+ <script>
+  var audios = document.getElementsByClassName('corelli');
+  function playPause() {
+      for (var i = 0; i < audios.length; i++) {
+          if (audios[i].paused) {
+              audios[i].play();
+          }
+          else {
+              audios[i].pause();
+          }
+      }
+  }
+  function reset() {
+      for (var i = 0; i < audios.length; i++) {
+          audios[i].currentTime = 0;
+      }
+  } 
+ </script>
  <script src='/scripts/foldable.js'></script>
