@@ -3,5 +3,6 @@ build/
 assets/*.xcf
 assets/*.sla*
 assets/*.psd
+assets/*.wav
 .vscode/
 *.mp4
