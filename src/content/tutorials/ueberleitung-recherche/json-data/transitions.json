@@ -1299,6 +1299,20 @@
       "Genre": "Sinfonie"
     },
     {
+      "Id": "130",
+      "Composer": "Mozart",
+      "MovementNumber": "1",
+      "Transitions": [{
+          "Behavior": "modulierend",
+          "Structure": "fa-ut",
+          "Harmonies": "4G-3T-2Q-1G",
+          "Cadence": "Halbschluss",
+          "CadenceBass": "diskantisierend",
+          "Measures": "18-29"
+        }],
+      "Genre": "Sinfonie"
+    },
+    {
       "Id": "134",
       "Composer": "Mozart",
       "MovementNumber": "1",
@@ -1374,10 +1388,10 @@
       "Transitions": [{
           "Behavior": "nicht modulierend",
           "Structure": "fa-ut",
-          "Harmonies": "4G-3T-2Q-1G-4G-3T-2Q-1G",
+          "Harmonies": "4G-4S-3T-2Q-1G-4G-3T-2Q-1G-4G-3T-2Q-1G",
           "Cadence": "Halbschluss",
           "CadenceBass": "diskantisierend",
-          "Other": "1-7-2-1-Schema T. 12-19",
+          "Other": "1-7-2-1-Schema als 3T-2Q-1G in T. 12-19",
           "Measures": "12-31"
         }],
       "Genre": "Quartett"
@@ -2458,6 +2472,21 @@
           "Cadence": "Halbschluss",
           "CadenceBass": "tenorisierend",
           "Measures": "31-41"
+        }],
+      "Genre": "Klaviersonate"
+    },
+    {
+      "Id": "538",
+      "Composer": "Mozart",
+      "MovementNumber": "1",
+      "Transitions": [{
+          "Behavior": "modulierend",
+          "Structure": "fa-ut",
+          "Harmonies": "4G-3T-3Q-2g-2Q-1G",
+          "Cadence": "Halbschluss",
+          "CadenceBass": "diskantisierend",
+          "Other": "2Q erklingt nur über ein Durchgangsachtel, 1G fällt mit Kadenzvorbereitung zusammmen",
+          "Measures": "37-43"
         }],
       "Genre": "Klaviersonate"
     },
