@@ -1,0 +1,9 @@
+---
+title: Modelle zur Analyse der Formfunktionen einer Sonatenhauptastzform (in Sonaten, Arien, Sinfonien etc.) 
+author: Ulrich Kaiser
+category: themen
+subCategory: methoden
+abstract: In diesem Heft finden Sie extrinsische und intrinsische Definitionen der Formfunktion einer Sonatenhauptsatzform (Exposition, Durchführung, Reprise; Hauptsatz, Überleitung, Seitensatz und Schlussgruppe).
+thumbnail: /img/thumbnails/Idealtypen-de.png
+link: /downloadfiles/Idealtypen-de.pdf
+---
