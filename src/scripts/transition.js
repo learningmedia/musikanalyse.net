@@ -22,7 +22,7 @@ function Work(id, movementNumber, transitions, genre, composer) {
   this.composer = composer;
 }
 
-loadJSON('/content/tutorials/ueberleitung-recherche/json-data/transitions.json', function(data) {
+loadJSON('/content/tutorials/sonate-ueberleitung-recherche/json-data/transitions.json', function(data) {
     //Hier werden die Daten geholt
     var works = data.Works;
     var worksArr = [];
