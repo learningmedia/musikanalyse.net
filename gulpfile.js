@@ -1,17 +1,17 @@
-var gulp         = require('gulp');
-var browserSync  = require('browser-sync');
-var metalsmith   = require('metalsmith');
-var collections  = require('metalsmith-collections');
-var permalinks   = require('metalsmith-permalinks');
-var layouts      = require('metalsmith-layouts');
-var inPlace      = require('metalsmith-in-place');
-var less         = require('metalsmith-less');
-var autoprefixer = require('metalsmith-autoprefixer');
-var ignore       = require('metalsmith-ignore');
-var concat       = require('metalsmith-concat');
-var static       = require('metalsmith-static');
+const less = require('metalsmith-less');
+const metalsmith = require('metalsmith');
+const { watch, series } = require('gulp');
+const concat = require('metalsmith-concat');
+const ignore = require('metalsmith-ignore');
+const browserSync = require('browser-sync');
+const mstatic = require('metalsmith-static');
+const layouts = require('metalsmith-layouts');
+const inPlace = require('metalsmith-in-place');
+const permalinks = require('metalsmith-permalinks');
+const collections = require('metalsmith-collections');
+const autoprefixer = require('metalsmith-autoprefixer');
 
-gulp.task('build', function (done) {
+function build(done) {
   metalsmith(__dirname)
     .use(collections({
       tutorials: { pattern: 'tutorials/**', sortBy: 'title' },
@@ -44,20 +44,21 @@ gulp.task('build', function (done) {
       output: 'scripts/notelex-bundle.js',
       searchPaths: ['node_modules']
     }))
-    .use(static({ src: 'node_modules/video.js/dist', dest: 'vendor/video.js' }))
-    .use(static({ src: 'node_modules/videojs-youtube/dist', dest: 'vendor/videojs-youtube' }))
-    .use(static({ src: 'scripts/jquery.klavier.js', dest: 'scripts/jquery.klavier.js' }))
-    .use(static({ src: 'scripts/gbExercises.js', dest: 'scripts/gbExercises.js' }))
+    .use(mstatic({ src: 'node_modules/video.js/dist', dest: 'vendor/video.js' }))
+    .use(mstatic({ src: 'node_modules/videojs-youtube/dist', dest: 'vendor/videojs-youtube' }))
+    .use(mstatic({ src: 'scripts/jquery.klavier.js', dest: 'scripts/jquery.klavier.js' }))
+    .use(mstatic({ src: 'scripts/gbExercises.js', dest: 'scripts/gbExercises.js' }))
     .build(done);
-});
+}
 
-gulp.task('reload', ['build'], function () {
+function reload() {
   browserSync.reload();
-});
+}
 
-gulp.task('watch', ['build'], function () {
+function startWatch() {
   browserSync({ server: { baseDir: 'build' }, port: 3000 });
-  gulp.watch(['src/**', 'layouts/**'], ['reload']);
-});
+  watch(['src/**', 'layouts/**'], series(build, reload));
+}
 
-gulp.task('default', ['watch']);
+exports.build = build;
+exports.default = series(build, startWatch);
