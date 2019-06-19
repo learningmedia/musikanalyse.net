@@ -8,103 +8,105 @@ layout: wide.ejs
   <div class="s12 m-2 l-2">&nbsp;</div>
   <div class="s12 m-10 l-10">
     <div id="babsBsb-tutorials">
-      <a href="https://opacplus.bsb-muenchen.de/metaopac/search?&query=musikanalyse.net"><img src="/img/BABS-BSB-Logo.png" alt="" /></a>
+      <a href="https://opacplus.bsb-muenchen.de/metaopac/search?&query=musikanalyse.net">
+        <img src="/img/BABS-BSB-Logo.png" alt="" />
+      </a>
     </div>
     <h1 class="text-size-40">Tutorials</h1>
-  <noscript>Diese Seite funktioniert nicht ohne Javascript.</noscript>
-  <section class="margin-top-20">
-    <input type="search" id="tutorials-filter" placeholder="Suchbegriff eingeben">
-  </section>
-  <section data-role="tutorial-section" class="margin-top-20">
-    <h2>Grundlagen</h2>
-    <ul>
-      <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Grundlagen') > -1; }).forEach(function (tutorial) { %>
-      <li data-role="tutorial-item">
-        <a data-role="tutorial-link" href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
-      </li>
-      <% }); %>
-    </ul>
-  </section>
-  <section data-role="tutorial-section" class="margin-top-20">
-    <h2>Form</h2>
-    <ul>
-      <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Form') > -1; }).forEach(function (tutorial) { %>
-      <li data-role="tutorial-item">
-        <a data-role="tutorial-link" href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
-      </li>
-      <% }); %>
-    </ul>
-  </section>
-  <section data-role="tutorial-section" class="margin-top-20">
-    <h2>Stilübungen &amp; Improvisation</h2>
-    <ul>
-      <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Stilübungen (Tonsatz)') > -1 || tutorial.category.indexOf('Improvisation') > -1; }).forEach(function (tutorial) { %>
-      <li data-role="tutorial-item">
-        <a data-role="tutorial-link" href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
-      </li>
-      <% }); %>
-    </ul>
-  </section>
-  <section data-role="tutorial-section" class="margin-top-20">
-    <h2>Satzmodelle</h2>
-    <ul>
-      <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Satzmodelle') > -1; }).forEach(function (tutorial) { %>
-      <li data-role="tutorial-item">
-        <a data-role="tutorial-link" href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
-      </li>
-      <% }); %>
-    </ul>
-  </section>
-  <section data-role="tutorial-section" class="margin-top-20">
-    <h2>Musik und Kontext</h2>
-    <ul>
-      <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Musikgeschichte') > -1; }).forEach(function (tutorial) { %>
-      <li data-role="tutorial-item">
-        <a data-role="tutorial-link" href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
-      </li>
-      <% }); %>
-    </ul>
-  </section>
-  <section data-role="tutorial-section" class="margin-top-20">
-    <h2>Analysen und Werkeinführungen</h2>
-    <ul>
-      <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Analysen') > -1; }).forEach(function (tutorial) { %>
-      <li data-role="tutorial-item">
-        <a data-role="tutorial-link" href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
-      </li>
-      <% }); %>
-    </ul>
-  </section>
-  <section data-role="tutorial-section" class="margin-top-20">
-    <h2>Methoden</h2>
-    <ul>
-      <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Methoden') > -1; }).forEach(function (tutorial) { %>
-      <li data-role="tutorial-item">
-        <a data-role="tutorial-link" href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
-      </li>
-      <% }); %>
-    </ul>
-  </section>
-  <section data-role="tutorial-section" class="margin-top-20">
-    <h2>Terminologie</h2>
-    <ul>
-      <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Terminologie') > -1; }).forEach(function (tutorial) { %>
-      <li data-role="tutorial-item">
-        <a data-role="tutorial-link" href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
-      </li>
-      <% }); %>
-    </ul>
-  </section>
-  <section data-role="tutorial-section" class="margin-top-20">
-    <h2>Pop &amp; Rock</h2>
-    <ul>
-      <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Popularmusik') > -1; }).forEach(function (tutorial) { %>
-      <li data-role="tutorial-item">
-        <a data-role="tutorial-link" href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
-      </li>
-      <% }); %>
-    </ul>
-  </section>
+    <noscript>Diese Seite funktioniert nicht ohne Javascript.</noscript>
+    <section class="margin-top-20">
+      <input type="search" id="tutorials-filter" placeholder="Suchbegriff eingeben">
+    </section>
+    <section data-role="tutorial-section" class="margin-top-20">
+      <h2>Grundlagen</h2>
+      <ul>
+        <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Grundlagen') > -1; }).forEach(function (tutorial) { %>
+        <li data-role="tutorial-item">
+          <a data-role="tutorial-link" href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
+        </li>
+        <% }); %>
+      </ul>
+    </section>
+    <section data-role="tutorial-section" class="margin-top-20">
+      <h2>Form</h2>
+      <ul>
+        <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Form') > -1; }).forEach(function (tutorial) { %>
+        <li data-role="tutorial-item">
+          <a data-role="tutorial-link" href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
+        </li>
+        <% }); %>
+      </ul>
+    </section>
+    <section data-role="tutorial-section" class="margin-top-20">
+      <h2>Stilübungen &amp; Improvisation</h2>
+      <ul>
+        <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Stilübungen (Tonsatz)') > -1 || tutorial.category.indexOf('Improvisation') > -1; }).forEach(function (tutorial) { %>
+        <li data-role="tutorial-item">
+          <a data-role="tutorial-link" href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
+        </li>
+        <% }); %>
+      </ul>
+    </section>
+    <section data-role="tutorial-section" class="margin-top-20">
+      <h2>Satzmodelle</h2>
+      <ul>
+        <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Satzmodelle') > -1; }).forEach(function (tutorial) { %>
+        <li data-role="tutorial-item">
+          <a data-role="tutorial-link" href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
+        </li>
+        <% }); %>
+      </ul>
+    </section>
+    <section data-role="tutorial-section" class="margin-top-20">
+      <h2>Musik und Kontext</h2>
+      <ul>
+        <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Musikgeschichte') > -1; }).forEach(function (tutorial) { %>
+        <li data-role="tutorial-item">
+          <a data-role="tutorial-link" href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
+        </li>
+        <% }); %>
+      </ul>
+    </section>
+    <section data-role="tutorial-section" class="margin-top-20">
+      <h2>Analysen und Werkeinführungen</h2>
+      <ul>
+        <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Analysen') > -1; }).forEach(function (tutorial) { %>
+        <li data-role="tutorial-item">
+          <a data-role="tutorial-link" href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
+        </li>
+        <% }); %>
+      </ul>
+    </section>
+    <section data-role="tutorial-section" class="margin-top-20">
+      <h2>Methoden</h2>
+      <ul>
+        <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Methoden') > -1; }).forEach(function (tutorial) { %>
+        <li data-role="tutorial-item">
+          <a data-role="tutorial-link" href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
+        </li>
+        <% }); %>
+      </ul>
+    </section>
+    <section data-role="tutorial-section" class="margin-top-20">
+      <h2>Terminologie</h2>
+      <ul>
+        <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Terminologie') > -1; }).forEach(function (tutorial) { %>
+        <li data-role="tutorial-item">
+          <a data-role="tutorial-link" href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
+        </li>
+        <% }); %>
+      </ul>
+    </section>
+    <section data-role="tutorial-section" class="margin-top-20">
+      <h2>Pop &amp; Rock</h2>
+      <ul>
+        <% collections.tutorials.filter(function (tutorial) { return tutorial.category.indexOf('Popularmusik') > -1; }).forEach(function (tutorial) { %>
+        <li data-role="tutorial-item">
+          <a data-role="tutorial-link" href="/<%= tutorial.path %>" title="<%= tutorial.abstract %>"><%= tutorial.title %></a>
+        </li>
+        <% }); %>
+      </ul>
+    </section>
   </div>
 </div>
 
