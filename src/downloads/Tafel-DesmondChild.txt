@@ -1,0 +1,9 @@
+---
+title: The artists behind - Desmond Child
+author: Ulrich Kaiser
+category: themen
+subCategory: Musikgeschichte
+abstract: Infos zum Sonwriter und Produzenten Desmond Child
+thumbnail: /img/thumbnails/Tafel-DesmondChild.jpg
+link: /downloadfiles/Tafel-DesmondChild.pdf
+---
