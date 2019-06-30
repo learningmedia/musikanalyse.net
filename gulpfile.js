@@ -6,7 +6,6 @@ const ignore = require('metalsmith-ignore');
 const browserSync = require('browser-sync');
 const mstatic = require('metalsmith-static');
 const layouts = require('metalsmith-layouts');
-const inPlace = require('metalsmith-in-place');
 const permalinks = require('metalsmith-permalinks');
 const collections = require('metalsmith-collections');
 const autoprefixer = require('metalsmith-autoprefixer');
@@ -19,7 +18,6 @@ function build(done) {
     }))
     .use(permalinks({ pattern: ':slug', relative: false }))
     .use(layouts({ engine: 'ejs' }))
-    .use(inPlace({ engine: 'ejs', pattern: '**/*.html' }))
     .use(less({ pattern: 'styles/main.less', render: { paths: ['src/styles'] } }))
     .use(autoprefixer())
     .use(ignore('**/*.less'))
