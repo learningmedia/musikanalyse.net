@@ -1,8 +1,7 @@
 ---
 title: Kontrapunkt. Aufgaben und Materialien
 author: Ulrich Kaiser
-category: themen
-subCategory: gattungen
+category: gattungen
 abstract: Hier finden Sie umfangreiche Materialien zur Thema Kontrapunkt (Stilübung und Analyse).
 thumbnail: /img/thumbnails/Kontrapunkt.png
 link: /downloadfiles/Kontrapunkt.pdf

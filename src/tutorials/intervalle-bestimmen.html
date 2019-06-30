@@ -3,7 +3,7 @@ title: Intervalle bestimmen
 author: Ulrich Kaiser
 date: 2018-11-12
 modified: 2018-11-12
-layout: tutorial.ejs
+layout: tutorial.nunjucks
 category: Grundlagen
 abstract: In diesem Tutorial lernen Sie, Intervalle zwischen den Stammtönen (weißen Tasten) zu bestimmen.
 ---
@@ -80,8 +80,8 @@ abstract: In diesem Tutorial lernen Sie, Intervalle zwischen den Stammtönen (we
 </table>
 <p>
 	In der Tabelle ist zu sehen, dass sich mit den weißen Tasten nur drei <b>reine Intervalle</b> spielen lassen: <b>Prime</b>, <b>Quarte</b> und <b>Quinte</b>.<br>
-	Acht Möglichkeiten gibt es hingegen für <b>große und kleine Intervalle</b>: kleine und große <b>Sekunde</b>, kleine und große <b>Terz</b>, kleine und große <b>Sexte</b> sowie kleine und große <b>Septime</b>.<br> 
-	Jeweils einmal gibt es nur ein <b>vermindertes</b> oder <b>übermäßiges Intervall</b>: die <b>verminderte Quinte</b> und die <b>übermäßige Quarte</b>. 
+	Acht Möglichkeiten gibt es hingegen für <b>große und kleine Intervalle</b>: kleine und große <b>Sekunde</b>, kleine und große <b>Terz</b>, kleine und große <b>Sexte</b> sowie kleine und große <b>Septime</b>.<br>
+	Jeweils einmal gibt es nur ein <b>vermindertes</b> oder <b>übermäßiges Intervall</b>: die <b>verminderte Quinte</b> und die <b>übermäßige Quarte</b>.
 </p>
 <p>
 	Das Ausrechnen von Primen, Quarten, Quinten, Sekunden und Septimen ist dabei recht einfach:
@@ -91,7 +91,7 @@ abstract: In diesem Tutorial lernen Sie, Intervalle zwischen den Stammtönen (we
 		Von allen Stufen der Tonleiter aus (<i>c</i>, <i>d</i>, <i>e</i>, <i>f</i>, <i>g</i>, <i>a</i> und <i>h</i>) sind Primen, Quarten und Quinten rein. <b>Ausnahme bilden die Quarte über sowie die Quinte unter f</b> (also die Quarte über und die Quinte unter der vierten Tonleiterstufe).
 	</li>
 	<li>
-		Von allen Stufen der Tonleiter aus sind Sekunden groß und Septimen klein. <b>Ausnahmen bilden Sekunden und Septimen, die sich mit den Tönen <i>e</i>-<i>f</i> und <i>h</i>-<i>c</i>, also mit den ›natürlichen‹ Halbtonschritten bilden lassen</b> (das sind die Tonleiterstufen 3-4 und 7-8 in Dur bzw. 2-3 und 5-6 in Moll). Die durch natürliche Halbtonschritte gebildete Sekunden sind klein, Septimen sind groß. 
+		Von allen Stufen der Tonleiter aus sind Sekunden groß und Septimen klein. <b>Ausnahmen bilden Sekunden und Septimen, die sich mit den Tönen <i>e</i>-<i>f</i> und <i>h</i>-<i>c</i>, also mit den ›natürlichen‹ Halbtonschritten bilden lassen</b> (das sind die Tonleiterstufen 3-4 und 7-8 in Dur bzw. 2-3 und 5-6 in Moll). Die durch natürliche Halbtonschritte gebildete Sekunden sind klein, Septimen sind groß.
 	</li>
 </ul>
 <p>
@@ -102,21 +102,21 @@ abstract: In diesem Tutorial lernen Sie, Intervalle zwischen den Stammtönen (we
 <ul>
 	<li>Von den Tönen <i>f</i>, <i>g</i> und <i>c</i> aus (= 1., 4. und 5. Tonleiterstufe) sind alle Terzen und Sexten aufwärts groß.</li>
 	<li>Von den Tönen <i>e</i>, <i>a</i> und <i>h</i> aus sind alle Terzen und Sexten aufwärts klein.</li>
-	<li>Vom Ton <i>d</i> aus ist die Sexte aufwärts groß und die Terz aufwärts klein.</li>	
+	<li>Vom Ton <i>d</i> aus ist die Sexte aufwärts groß und die Terz aufwärts klein.</li>
 </ul>
 <p>
-	Und was muss man machen, wenn man Terzen oder Sexte abwärts bestimmen möchte? Dann hilft das Wissen um die sogenannten <b>Komplementärintervalle</b>. Als Komplementärintervalle werden zwei Intervalle bezeichnet, die sich zu einer Oktave ergänzen wie zum Beispiel Quinte und Quarte, kleine Terz und große Sexte oder kleine Sexte und große Terz. Das folgende Diagramm veranschaulicht den Sachverhalt:  
+	Und was muss man machen, wenn man Terzen oder Sexte abwärts bestimmen möchte? Dann hilft das Wissen um die sogenannten <b>Komplementärintervalle</b>. Als Komplementärintervalle werden zwei Intervalle bezeichnet, die sich zu einer Oktave ergänzen wie zum Beispiel Quinte und Quarte, kleine Terz und große Sexte oder kleine Sexte und große Terz. Das folgende Diagramm veranschaulicht den Sachverhalt:
 </p>
 <img src="/content/tutorials/intervalle-bestimmen/Komplementärintervalle.png" />
 <p>
 	Will man also die Sexte unter <i>e</i> wissen, rechnet man einfach die Terz über <i>e</i>. Mithilfe des Intervall-Käfers weiß man, dass diese Terz klein ist (rechte Käferseite) und kann daraus schließen, dass die Sexte unter <i>e</i> groß ist.<br>
-	Oder man möchte die Terz unter <i>f</i> wissen. Dann bestimmt man einfach die Sexte über <i>f</i>, die groß ist (linke Käferseite) und weiß anschließend, dass die Terz unter <i>f</i> klein ist.  
+	Oder man möchte die Terz unter <i>f</i> wissen. Dann bestimmt man einfach die Sexte über <i>f</i>, die groß ist (linke Käferseite) und weiß anschließend, dass die Terz unter <i>f</i> klein ist.
 </p>
 
 
 <h3 id="zusammenfassung">Zusammenfassung</h3>
 <p>
-	Der folgende Diagramm fasst die Vorgehensweise zur Bestimmung diatonischer Intervalle (also der Intervalle, die sich mit den weißen Tasten bzw. den Tönen einer Tonleiter bilden lassen) zusammen: 
+	Der folgende Diagramm fasst die Vorgehensweise zur Bestimmung diatonischer Intervalle (also der Intervalle, die sich mit den weißen Tasten bzw. den Tönen einer Tonleiter bilden lassen) zusammen:
 </p>
 <img src="/content/tutorials/intervalle-bestimmen/Vorgehensweise.png" />
 <p>

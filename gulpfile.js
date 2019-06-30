@@ -1,3 +1,4 @@
+const moment = require('moment');
 const less = require('metalsmith-less');
 const metalsmith = require('metalsmith');
 const { watch, series } = require('gulp');
@@ -10,6 +11,55 @@ const permalinks = require('metalsmith-permalinks');
 const collections = require('metalsmith-collections');
 const autoprefixer = require('metalsmith-autoprefixer');
 
+const downloadInfos = [{
+  title: 'Grundlagen',
+  categories: ['grundlagen']
+}, {
+  title: 'Musik und Form',
+  categories: ['form']
+}, {
+  title: 'Zu Methoden der musikalischen Analyse',
+  categories: ['methoden']
+}, {
+  title: 'Gattungen (Fuge, Sonate etc.)',
+  categories: ['gattungen']
+}, {
+  title: 'Musik und Kontext (Musikgeschichte)',
+  categories: ['Musikgeschichte']
+}, {
+  title: 'Arbeitsbögen',
+  categories: ['aufgaben']
+}];
+
+const tutorialInfos = [{
+  title: 'Grundlagen',
+  categories: ['Grundlagen']
+}, {
+  title: 'Form',
+  categories: ['Form']
+}, {
+  title: 'Stilübungen & Improvisation',
+  categories: ['Stilübungen (Tonsatz)', 'Improvisation']
+}, {
+  title: 'Satzmodelle',
+  categories: ['Satzmodelle']
+}, {
+  title: 'Musik und Kontext',
+  categories: ['Musikgeschichte']
+}, {
+  title: 'Analysen und Werkeinführungen',
+  categories: ['Analysen']
+}, {
+  title: 'Methoden',
+  categories: ['Methoden']
+}, {
+  title: 'Terminologie',
+  categories: ['Terminologie']
+}, {
+  title: 'Pop & Rock',
+  categories: ['Popularmusik']
+}];
+
 function build(done) {
   metalsmith(__dirname)
     .use(collections({
@@ -17,7 +67,18 @@ function build(done) {
       downloads: { pattern: 'downloads/**', sortBy: 'title' }
     }))
     .use(permalinks({ pattern: ':slug', relative: false }))
-    .use(layouts({ engine: 'ejs' }))
+    .use(layouts({
+      engineOptions: {
+        globals: {
+          downloadInfos,
+          tutorialInfos
+        },
+        filters: {
+          formatDate: date => moment(date).locale('de-DE').format('LL'),
+          categories: (coll, cats) => coll.filter(item => cats.some(x => item.category.includes(x)))
+        }
+      }
+    }))
     .use(less({ pattern: 'styles/main.less', render: { paths: ['src/styles'] } }))
     .use(autoprefixer())
     .use(ignore('**/*.less'))
@@ -60,3 +121,4 @@ function startWatch() {
 
 exports.build = build;
 exports.default = series(build, startWatch);
+

@@ -1,19 +1,13 @@
-<%
-  const monthNames = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
-  const formatDate = date => `${date.getDate()}. ${monthNames[date.getMonth()]} ${date.getFullYear()}`;
-%>
 <!DOCTYPE html>
 <html lang="de-DE">
   <head>
-    <title><%= title %></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/vendor/video.js/video-js.min.css" />
+    <title>{{ title }}</title>
     <link rel="stylesheet" href="/styles/main.css" />
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800&subset=latin,latin-ext" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800&subset=latin,latin-ext">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <meta name="google-site-verification" content="lOM0lvh98IKEzkw8sy76ToxfvvINhoD-SliLyUaKrr8" />
-    <!--<script src="js/responsee.js"></script>-->
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
@@ -23,45 +17,30 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png" />
     <link rel="manifest" href="/img/favicon/site.webmanifest" />
   </head>
-
-
   <body class="size-960">
-    <!-- HEADER -->
-    <% include partials/header %>
 
     <!-- MAIN -->
     <main role="main">
 
     <!-- Backbutton -->
-      <div class="line margin-top-bottom-40">
-       <div class="s-12 m-8 l-10">
-         &nbsp;
-       </div>
-       <div class="s-12 m-4 l-2">
-         <a class="Button Button--red" onclick="javascript:history.back();" style="width: auto;">Zurück...</a>
-       </div>
+    <div class="line margin-top-bottom-40">
+      <div class="s-12 m-8 l-10">
+        &nbsp;
       </div>
+      <div class="s-12 m-4 l-2">
+        <a class="Button Button--red" onclick="javascript:window.print();" style="width: auto;">Drucken</a>
+      </div>
+    </div>
 
       <!-- Content -->
       <div class="line">
         <div class="s-12 m-12 center margin-m-bottom-30">
           <article class="Tutorial">
-            <h1 class="Tutorial-title" id="tutorialTitle"><%= title %></h1>
-            <p class="Tutorial-author">von <%= author %></p>
-            <%- contents %>
-            <div class="copyright">
-              <p>
-                <small>Erstellung des Beitrags: <%= formatDate(date) %><br>
-                Letzte Änderung des Beitrags am <%= formatDate(modified) %></small>
-              </p>
-            </div>      
-          </article>    
+            {{ contents | safe }}
+          </article>
         </div>
       </div>
     </main>
-
-    <!-- FOOTER -->
-    <% include partials/footer %>
 
     <script src="/scripts/main.js"></script>
     <script src="/vendor/video.js/video.min.js"></script>

@@ -3,7 +3,7 @@ title: Die Kadenz (als Formmodell)
 author: Ulrich Kaiser
 date: 2018-01-16
 modified: 2018-01-16
-layout: tutorial.ejs
+layout: tutorial.nunjucks
 category: Form
 abstract: In dieser Anleitung finden Sie grundlegende Erläuterungen zur Kadenz als Formmodell, das heißt, als ein Modell (im Sinne eines Idealtypus von Max Weber) zur Analyse tonaler Musik.
 ---
@@ -11,7 +11,7 @@ abstract: In dieser Anleitung finden Sie grundlegende Erläuterungen zur Kadenz 
 
 <h4>Inhalt</h4>
 <ul>
-  <li><a href="#einfuehrung">Einführung</a></li>  
+  <li><a href="#einfuehrung">Einführung</a></li>
   <li><a href="#taktgruppe">Taktgruppe als Kadenz</a></li>
   <li><a href="#formfunktion">Formfunktion als Kadenz</a></li>
   <li><a href="#virtuos">Kadenzen als virtuose Geste</a></li>
@@ -21,8 +21,8 @@ abstract: In dieser Anleitung finden Sie grundlegende Erläuterungen zur Kadenz 
 
 <h4 id="einfuehrung">Einführung</h4>
 <p>
-  Unter Kadenz wird in der Regel eine musikalische Schlussformel in modaler oder tonaler Musik verstanden. Analysiert man beispielsweise Musik des 18. und 19. Jahrhunderts, müssen in der Regel viele Töne (sogenannte <i>Diminutionen</i>) auf einige wenige Töne reduziert werden, um das Satzmodell der Kadenz überhaupt erkennen zu können. Vor dem Hintergrund des Kadenzmodells erweisen sich dabei bestimmte Noten als wesentlich für die Schlusswirkung einer Kadenz (Gerüstsatz), andere hingegen nur als Verzierung des Gerüstsatzes. Die Art der Verzierungen wiederum geben uns Auskunft über einen Zeitstil (z.B. Generalbasszeitalter bzw. ›Barock‹) oder einen Personalstil (z.B. W. A. Mozart). Als erstes Beispiel sehen Sie eine Kadenz am Schluss der ersten zweistimmigen Invention in C-Dur BWV 772 von Johann Sebastian Bach (mit Soundbeispielen für den diminuierten Satz und den Gerüstsatz, den Gerüstsatz wird beim Berühren des Notenbeispiels sichtbar): 
-</p> 
+  Unter Kadenz wird in der Regel eine musikalische Schlussformel in modaler oder tonaler Musik verstanden. Analysiert man beispielsweise Musik des 18. und 19. Jahrhunderts, müssen in der Regel viele Töne (sogenannte <i>Diminutionen</i>) auf einige wenige Töne reduziert werden, um das Satzmodell der Kadenz überhaupt erkennen zu können. Vor dem Hintergrund des Kadenzmodells erweisen sich dabei bestimmte Noten als wesentlich für die Schlusswirkung einer Kadenz (Gerüstsatz), andere hingegen nur als Verzierung des Gerüstsatzes. Die Art der Verzierungen wiederum geben uns Auskunft über einen Zeitstil (z.B. Generalbasszeitalter bzw. ›Barock‹) oder einen Personalstil (z.B. W. A. Mozart). Als erstes Beispiel sehen Sie eine Kadenz am Schluss der ersten zweistimmigen Invention in C-Dur BWV 772 von Johann Sebastian Bach (mit Soundbeispielen für den diminuierten Satz und den Gerüstsatz, den Gerüstsatz wird beim Berühren des Notenbeispiels sichtbar):
+</p>
 <a class="imageChange">
   <img class="image-on" src="/content/tutorials/kadenz-als-formmodell/Kadenzbeispiele-Wendung_0001.png" alt="" />
   <img class="image-off" src="/content/tutorials/kadenz-als-formmodell/Kadenzbeispiele-Wendung_0002.png" alt="" />
@@ -31,7 +31,7 @@ abstract: In dieser Anleitung finden Sie grundlegende Erläuterungen zur Kadenz 
 <audio controls src="/content/tutorials/kadenz-als-formmodell/sound/01b_bach.mp3" preload="auto"></audio>
 
 <p>
-  Als nächstes ist die Kadenz am Ende des Hauptsatzes der Klaviersonate in C-Dur KV 309 von <a href="https://de.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart" target="_blank">Wolfgang Amadé Mozart</a> zu sehen. Wenn Sie in diesem Fall die Diminutionen mit dem Modell vergleichen, können Sie erkennen, dass Mozart die Stimmführung des Modells variiert, bzw. die Oberstimmen in der Kadenz vertauscht (den Quartvorhalt der Dominante, der im Gerüstsatz in der Mittelstimme liegt, erklingt bei Mozart vor dem Schlusston in der Melodie):  
+  Als nächstes ist die Kadenz am Ende des Hauptsatzes der Klaviersonate in C-Dur KV 309 von <a href="https://de.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart" target="_blank">Wolfgang Amadé Mozart</a> zu sehen. Wenn Sie in diesem Fall die Diminutionen mit dem Modell vergleichen, können Sie erkennen, dass Mozart die Stimmführung des Modells variiert, bzw. die Oberstimmen in der Kadenz vertauscht (den Quartvorhalt der Dominante, der im Gerüstsatz in der Mittelstimme liegt, erklingt bei Mozart vor dem Schlusston in der Melodie):
 </p>
 <a class="imageChange">
   <img class="image-on" src="/content/tutorials/kadenz-als-formmodell/Kadenzbeispiele-Wendung_0003.png" alt="" />
@@ -50,7 +50,7 @@ abstract: In dieser Anleitung finden Sie grundlegende Erläuterungen zur Kadenz 
 <audio controls src="/content/tutorials/kadenz-als-formmodell/sound/03b_schumann.mp3" preload="auto"></audio>
 
 <p>
-  Ausführliche Erläuterungen zur Satztechnik des Gerüstsatzes von Kadenzen bzw. Schlusswendungen finden sie in dem Tutorial <a href="/tutorials/kadenz" target="_blank">Die Kadenz (als Schlusswendung)</a>. Im Gegensatz dazu geht es in dem folgenden Tutorial um ein anderes <i>Kadenz</i>-Verständnis. Nach diesem Verständnis ist die Kadenz ein Modell der musikalischen Analyse (im Sinne eines Idealtypus von Max Weber, mehr dazu diesem Thema finden Sie <a href="http://musikanalyse.net/tutorials/hermeneutik-funktionaleanalyse/" target="_blank">hier</a>). Das Modell erlaubt es, auch größere Zusammenhänge tonaler Musik als Kadenz verstehen zu können.  
+  Ausführliche Erläuterungen zur Satztechnik des Gerüstsatzes von Kadenzen bzw. Schlusswendungen finden sie in dem Tutorial <a href="/tutorials/kadenz" target="_blank">Die Kadenz (als Schlusswendung)</a>. Im Gegensatz dazu geht es in dem folgenden Tutorial um ein anderes <i>Kadenz</i>-Verständnis. Nach diesem Verständnis ist die Kadenz ein Modell der musikalischen Analyse (im Sinne eines Idealtypus von Max Weber, mehr dazu diesem Thema finden Sie <a href="http://musikanalyse.net/tutorials/hermeneutik-funktionaleanalyse/" target="_blank">hier</a>). Das Modell erlaubt es, auch größere Zusammenhänge tonaler Musik als Kadenz verstehen zu können.
 </p>
 <p>
   <span style="font-size: 0.8em;"><a href="#tutorialTitle">zurück zum Inhaltsverzeichnis</a></span>
@@ -72,7 +72,7 @@ abstract: In dieser Anleitung finden Sie grundlegende Erläuterungen zur Kadenz 
   </p>
 </div>
 <p>
-  Die ersten vier Takte, die auch als Ausprägung einer spezifischen Form des <a href="http://musikanalyse.net/tutorials/i-x-v-i-schema/" target="_blank">I-x-V-I-Modells</a> bezeichnet werden könnten, lassen sich als Kadenz auf der Ebene einer Taktgruppen bezeichnen. Dass die Kadenzwirkung dieser Takte in dem gezeigten Beispiel nur unvollkommen ist, liegt z.B. am Bass im vierten Takt, der eine Sequenz des zweiten Taktes darstellt und an der Terzlage der ersten Violinen. Die Kadenz in den Takten 5&minus;6 wirkt demgegenüber schließend, z.B. weil im Bass der Grundton auf der Takteins erklingt und auch die ersten Violinen über das <i>d</i> in den Grundton geführt werden (Oktavlagenschluss in den Streichern).   
+  Die ersten vier Takte, die auch als Ausprägung einer spezifischen Form des <a href="http://musikanalyse.net/tutorials/i-x-v-i-schema/" target="_blank">I-x-V-I-Modells</a> bezeichnet werden könnten, lassen sich als Kadenz auf der Ebene einer Taktgruppen bezeichnen. Dass die Kadenzwirkung dieser Takte in dem gezeigten Beispiel nur unvollkommen ist, liegt z.B. am Bass im vierten Takt, der eine Sequenz des zweiten Taktes darstellt und an der Terzlage der ersten Violinen. Die Kadenz in den Takten 5&minus;6 wirkt demgegenüber schließend, z.B. weil im Bass der Grundton auf der Takteins erklingt und auch die ersten Violinen über das <i>d</i> in den Grundton geführt werden (Oktavlagenschluss in den Streichern).
 </p>
 <p>
   <span style="font-size: 0.8em;"><a href="#tutorialTitle">zurück zum Inhaltsverzeichnis</a></span>
@@ -81,7 +81,7 @@ abstract: In dieser Anleitung finden Sie grundlegende Erläuterungen zur Kadenz 
 
 <h4 id="formfunktion">Formfunktion als Kadenz</h4>
 <p>
-  Begriffe der Sonatenhauptsatzform wie <i>Hauptsatz</i>, <i>Überleitung</i>, <i>Seitensatz</i> und <i>Schlussgruppe</i> sind Funktionsbegriffe, die auf sehr unterschiedliche Art und Weise komponiert werden können. Im Kopfsatz der Sonate in D-Dur KV 284 lässt sich die <i>Überleitung</i> (Beginn T. 9, das Ende in T. 20 ist nicht mehr abgebildet) als Halbschlusskadenz verstehen. Im Folgenden sehen Sie (über der Linie) den Gerüstsatz der Halbschlusskadenz, darunter den entsprechenden Ausschnitt aus der Sonate Mozarts (beim Berühren dieser Abbildung werden die wichtigen Stationen farbig markiert): 
+  Begriffe der Sonatenhauptsatzform wie <i>Hauptsatz</i>, <i>Überleitung</i>, <i>Seitensatz</i> und <i>Schlussgruppe</i> sind Funktionsbegriffe, die auf sehr unterschiedliche Art und Weise komponiert werden können. Im Kopfsatz der Sonate in D-Dur KV 284 lässt sich die <i>Überleitung</i> (Beginn T. 9, das Ende in T. 20 ist nicht mehr abgebildet) als Halbschlusskadenz verstehen. Im Folgenden sehen Sie (über der Linie) den Gerüstsatz der Halbschlusskadenz, darunter den entsprechenden Ausschnitt aus der Sonate Mozarts (beim Berühren dieser Abbildung werden die wichtigen Stationen farbig markiert):
 </p>
 <img class="image-on smallWidth" src="/content/tutorials/kadenz-als-formmodell/Kadenz-284.png" alt="" />
 <audio controls src="/content/tutorials/kadenz-als-formmodell/sound/Kadenz-284.mp3" preload="auto"></audio>
@@ -97,7 +97,7 @@ abstract: In dieser Anleitung finden Sie grundlegende Erläuterungen zur Kadenz 
   </p>
 </div>
 <p>
-  Als eine Ganzschlusskadenz in der Formfunktion <i>Schlussgruppe</i> lassen sich sogar 23 Takte im Kopfsatz der C-Dur Sonate Op. 53 (›Waldstein‹) von <a href="https://de.wikipedia.org/wiki/Ludwig_van_Beethoven" target="_blank">L. v. Beethoven</a> verstehen. In der Abbildung über der Linie sehen Sie den Gerüstsatz einer Ganzschlusskadenz in E-Dur (d.h. in der Seitensatztonart der Waldstein-Sonate), darunter die Schlussgruppenausarbeitung Beethovens (die Übereinstimmungen mit den Basstönen des Kadenzmodells werden beim Berühren der Noten farbig markiert): 
+  Als eine Ganzschlusskadenz in der Formfunktion <i>Schlussgruppe</i> lassen sich sogar 23 Takte im Kopfsatz der C-Dur Sonate Op. 53 (›Waldstein‹) von <a href="https://de.wikipedia.org/wiki/Ludwig_van_Beethoven" target="_blank">L. v. Beethoven</a> verstehen. In der Abbildung über der Linie sehen Sie den Gerüstsatz einer Ganzschlusskadenz in E-Dur (d.h. in der Seitensatztonart der Waldstein-Sonate), darunter die Schlussgruppenausarbeitung Beethovens (die Übereinstimmungen mit den Basstönen des Kadenzmodells werden beim Berühren der Noten farbig markiert):
 </p>
 <img class="image-on smallWidth" src="/content/tutorials/kadenz-als-formmodell/Kadenz-op53.png" alt="" />
 <audio controls src="/content/tutorials/kadenz-als-formmodell/sound/Kadenz-op53.mp3" preload="auto"></audio>
@@ -119,7 +119,7 @@ abstract: In dieser Anleitung finden Sie grundlegende Erläuterungen zur Kadenz 
 
 <h4 id="virtuos">Kadenzen als virtuose Geste</h4>
 <p>
-  Formteile, die eine Schlussfunktion haben, sind im ausgehenden 18. und frühen 19. Jahrhundert oftmals von großer Virtuosität geprägt. Eine großangelegte, virtuose Kadenz findet sich zum Beispiel am Ende der Sonate in f-Moll Op. 57 (›Appassionata‹) von L. v. Beethoven. Über der Linie sehen Sie wieder das Kadenzmodell (dieses Mal in f-Moll), unter der Linie die Schlussgestaltung der Klaviersonate Beethovens:  
+  Formteile, die eine Schlussfunktion haben, sind im ausgehenden 18. und frühen 19. Jahrhundert oftmals von großer Virtuosität geprägt. Eine großangelegte, virtuose Kadenz findet sich zum Beispiel am Ende der Sonate in f-Moll Op. 57 (›Appassionata‹) von L. v. Beethoven. Über der Linie sehen Sie wieder das Kadenzmodell (dieses Mal in f-Moll), unter der Linie die Schlussgestaltung der Klaviersonate Beethovens:
 </p>
 <img class="image-on smallWidth" src="/content/tutorials/kadenz-als-formmodell/Kadenz-op57.png" alt="" />
 <audio controls src="/content/tutorials/kadenz-als-formmodell/sound/Kadenz-op57.mp3" preload="auto"></audio>
@@ -136,15 +136,15 @@ abstract: In dieser Anleitung finden Sie grundlegende Erläuterungen zur Kadenz 
 </div>
 <p>
   Die Passage beginnt mit virtuosen Arpeggien (= grüne und gelbe Markierungen, die beim Berühren der Abbildung sichtbar werden), erfährt dann eine starke Beschleunigung (= rote Markierungen), die in die Dominante der Tonart führt (= grüne ff-Markierungen). Mit Arpeggien, die sechs Oktaven umfassen, wird das harmonische Tempo wieder verlangsamt und anschließend der Satz bis zu einem einstimmigen <i>des</i>-<i>c</i> in tiefer Lage auflöst. Diese Entschleunigung sowie die Repetition des Achtelmotivs bewirken eine große Spannungszunahme, die ihren Höhepunkt im Adagio findet. Die Spannung zerreißt das Achtelmotiv im Fortissimo, das eine Art Stretta (›Piu Allegro‹) einleitet, die den Sonatensatz beendet.<br>
-  Die brilliante und ästhetisch reizvolle Außenseite dieser Passage verschleiert allerdings die einfache Kadenzstruktur, über die sich auch dieser Abschnitt verstehen lässt. Sie tritt hervor, wenn man zum Beispiel die Beschleunigung entfernt, die erheblich zum Spannunsgaufbau beiträgt (Abschnitt mit den roten Markierungen). 
+  Die brilliante und ästhetisch reizvolle Außenseite dieser Passage verschleiert allerdings die einfache Kadenzstruktur, über die sich auch dieser Abschnitt verstehen lässt. Sie tritt hervor, wenn man zum Beispiel die Beschleunigung entfernt, die erheblich zum Spannunsgaufbau beiträgt (Abschnitt mit den roten Markierungen).
 </p>
 <audio controls src="/content/tutorials/kadenz-als-formmodell/sound/Beethoven-Op57-Kadenz-2.mp3" preload="auto"></audio>
 <p>
-  Die Reduktion kann man noch weiter führen, indem man die einleitende Bewegung von der Tonika zum <a href="http://musikanalyse.net/tutorials/neapolitaner/" target="_blank">Neapolitaner</a> direkt mit der Dominantgestaltung verbindet sowie die sich anschließende Spannungszunahme durch einen direkten Anschluss der Stretta unterbindet. 
+  Die Reduktion kann man noch weiter führen, indem man die einleitende Bewegung von der Tonika zum <a href="http://musikanalyse.net/tutorials/neapolitaner/" target="_blank">Neapolitaner</a> direkt mit der Dominantgestaltung verbindet sowie die sich anschließende Spannungszunahme durch einen direkten Anschluss der Stretta unterbindet.
 </p>
 <audio controls src="/content/tutorials/kadenz-als-formmodell/sound/Beethoven-Op57-Kadenz-3.mp3" preload="auto"></audio>
 <p>
-  Das Experiment verdeutlicht: auch die reduzierte Passage ist syntaktisch vollkommen korrekt. Allerdings hat sie ihren ästhetischer Reiz in der Rediktion größtenteils eingebüßt. Gleichzeitig zeigt das Experiment, dass die Kadenz im Sinne eines <a href="/tutorials/hermeneutik-funktionaleanalyse/" target="_blank">Idealtypus</a> es ermöglicht, in der Differenz von Modell und Gestaltung die Individualität Beethovens in den Blick zu nehmen und zum Gegenstand einer <a href="/tutorials/hermeneutik-funktionaleanalyse/" target="_blank">hermeneutischen Analyse</a> zu machen. 
+  Das Experiment verdeutlicht: auch die reduzierte Passage ist syntaktisch vollkommen korrekt. Allerdings hat sie ihren ästhetischer Reiz in der Rediktion größtenteils eingebüßt. Gleichzeitig zeigt das Experiment, dass die Kadenz im Sinne eines <a href="/tutorials/hermeneutik-funktionaleanalyse/" target="_blank">Idealtypus</a> es ermöglicht, in der Differenz von Modell und Gestaltung die Individualität Beethovens in den Blick zu nehmen und zum Gegenstand einer <a href="/tutorials/hermeneutik-funktionaleanalyse/" target="_blank">hermeneutischen Analyse</a> zu machen.
 </p>
 <p>
   <span style="font-size: 0.8em;"><a href="#tutorialTitle">zurück zum Inhaltsverzeichnis</a></span>

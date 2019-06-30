@@ -1,9 +1,9 @@
 ---
-title: Satzmodelle - Improvisieren kleinerer Formen 
+title: Satzmodelle - Improvisieren kleinerer Formen
 author: Ulrich Kaiser
 date: 2017-12-30
 modified: 2017-12-31
-layout: tutorial.ejs
+layout: tutorial.nunjucks
 category: Improvisation, Satzmodelle, Form
 abstract: 'Mit Satzmodellen lassen sich recht einfach typische Harmonieverläufe tonaler Musik darstellen (z.B. in Dur I -> V :||: V -> vi -> I :|| oder in Moll und i -> iii :||: iii -> v -> i :||). In diesem Tutorial lernen Sie, wie sie Satzmodelle zum Improvisieren kleiner Formverläufe verwenden können.'
 ---
@@ -16,12 +16,12 @@ abstract: 'Mit Satzmodellen lassen sich recht einfach typische Harmonieverläufe
 </p>
 <p>
 	Ein Standardverlauf einer Komposition in Moll hingegen lautet:
-</p> 
+</p>
 <p>
 	<b style="color:maroon;">i -> iii :||: iii -> v -> i :||</b>
 </p>
-<p> 
-	In den Auswahlboxen können Sie Modelle und auch einige Modellkombinationen finden, mit denen Sie einen typischen Formverlauf in Dur gestalten können. Mit der Schaltfläche <i>Impro anspielen</i> können Sie sich den komponierten Verlauf anhören, mit der Schaltfläche <i>Neue Impro</i> werden alle Gestaltungsversuche gelöscht.   
+<p>
+	In den Auswahlboxen können Sie Modelle und auch einige Modellkombinationen finden, mit denen Sie einen typischen Formverlauf in Dur gestalten können. Mit der Schaltfläche <i>Impro anspielen</i> können Sie sich den komponierten Verlauf anhören, mit der Schaltfläche <i>Neue Impro</i> werden alle Gestaltungsversuche gelöscht.
 </p>
 <p>
 	Gestalten Sie nun einen Formverlauf einer Komposition in C-Dur:
@@ -94,7 +94,7 @@ abstract: 'Mit Satzmodellen lassen sich recht einfach typische Harmonieverläufe
 
   function onPlayAllClick() {
   	impro.playAll();
-  }  
+  }
 
   function reset() {
   	impro.reset();
@@ -113,11 +113,11 @@ abstract: 'Mit Satzmodellen lassen sich recht einfach typische Harmonieverläufe
   $(document).ready(function() {
     //Laden der ersten Übung
     loadJSON('/content/tutorials/satzmodell-impro/data/impro-dur.json',
-     function(data) { 
+     function(data) {
        impro = new SatzmodellImpro('impro-dur', 'impro-Selector', data);
      },
-     function(xhr) { 
-       console.error(xhr); 
+     function(xhr) {
+       console.error(xhr);
      });
     //Hier können  weiterer Übungen geladen werden
   });

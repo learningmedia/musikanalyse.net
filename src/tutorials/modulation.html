@@ -3,7 +3,7 @@ title: Was ist eine Modulation?
 author: Ulrich Kaiser
 date: 2017-03-06
 modified: 2017-03-13
-layout: tutorial.ejs
+layout: tutorial.nunjucks
 category: Terminologie
 abstract: In diesem Tutorial wird der Frage nachgegangen, was in der Musik als Modulation bezeichnet wird. Veranschaulicht werden die Ausführungen durch eine einfache Modulation in die Oberquinte anhand des Kopfsatzes der Sonate in B-Dur von Fulgentino Peroti.
 ---
@@ -34,7 +34,7 @@ abstract: In diesem Tutorial wird der Frage nachgegangen, was in der Musik als M
 	<p class="reference">Rummenhöller 1996, Sp. 147.</p>
 </div>
 <p>
-	Diesen Definitionen können wir entnehmen, dass der Begriff Modulation auf durmoll-tonale Musik zielt und in dieser Musik den Übergang von einer Tonart in eine andere bezeichnet. Angenommen also, wir haben ein Stück, dessen erster Hauptabschnitt in der Tonart der I. Stufe steht und am Doppelstrich mit einer Kadenz in der Tonart der V. Stufe endet (das dürfte in den meisten Dur-Kompositionen des 18. Jahrhunderts wie z.B. Suitensätze, Sonaten usw. der Fall sein), dann hätten wir in diesem Stück eine Modulation von der I. zur V. Stufe. Für eine B-Dur Sonate hieße das, dass sie in B-Dur beginnen und nach F-Dur modulieren müsste. 
+	Diesen Definitionen können wir entnehmen, dass der Begriff Modulation auf durmoll-tonale Musik zielt und in dieser Musik den Übergang von einer Tonart in eine andere bezeichnet. Angenommen also, wir haben ein Stück, dessen erster Hauptabschnitt in der Tonart der I. Stufe steht und am Doppelstrich mit einer Kadenz in der Tonart der V. Stufe endet (das dürfte in den meisten Dur-Kompositionen des 18. Jahrhunderts wie z.B. Suitensätze, Sonaten usw. der Fall sein), dann hätten wir in diesem Stück eine Modulation von der I. zur V. Stufe. Für eine B-Dur Sonate hieße das, dass sie in B-Dur beginnen und nach F-Dur modulieren müsste.
 </p>
 <p class="smalltext"><a href="#tutorialTitle"">zurück zum Anfang</a></p>
 
@@ -86,12 +86,12 @@ abstract: In diesem Tutorial wird der Frage nachgegangen, was in der Musik als M
   </p>
 </div>
 <p>
-	Mozart dürfte die Peroti-Sonate sogar gekannt und in seiner Kindheit vielleicht gespielt haben (die Noten befanden sich in der Bibliothek seines Vaters). Ob er sich aber beim Komponieren der Facile-Sonate gut 30 Jahre später noch an Peroti-Sonate erinnert hat, dürfte zumindest fraglich sein. 
+	Mozart dürfte die Peroti-Sonate sogar gekannt und in seiner Kindheit vielleicht gespielt haben (die Noten befanden sich in der Bibliothek seines Vaters). Ob er sich aber beim Komponieren der Facile-Sonate gut 30 Jahre später noch an Peroti-Sonate erinnert hat, dürfte zumindest fraglich sein.
 </p>
 
 <h4 id="experiment"><a href="#tutorialTitle">3. Ein Experiment</a></h4>
 <p>
-	Schauen wir uns in der Peroti-Sonate die zweite und dritte Taktgruppe genauer an, also jene Taktgruppen, mit der die Ausgangstonart bestätigt und die Modulation in die Tonart der Oberquinte vollzogen wird. Es fällt auf, dass in beiden Taktgruppen jeweils auf der Takteins Dezimenparallelen erklingen, die stufenweise abwärts führen. Wenn Sie die Abbildung berühren, werden die Dezimen farbig markiert: 
+	Schauen wir uns in der Peroti-Sonate die zweite und dritte Taktgruppe genauer an, also jene Taktgruppen, mit der die Ausgangstonart bestätigt und die Modulation in die Tonart der Oberquinte vollzogen wird. Es fällt auf, dass in beiden Taktgruppen jeweils auf der Takteins Dezimenparallelen erklingen, die stufenweise abwärts führen. Wenn Sie die Abbildung berühren, werden die Dezimen farbig markiert:
 </p>
 <a class="imageChange">
 	<img class="image-on" src="/content/tutorials/modulation/Peroti-mittlereTaktgruppen-oFarben.png" alt="modulation chromatisiert" />
@@ -107,7 +107,7 @@ abstract: In diesem Tutorial wird der Frage nachgegangen, was in der Musik als M
 <p>
 	Es ist erstaunlich, dass die beiden Gerüstsätze identisch sind, das heißt, der Gerüstsatz g/es bis b/d ist eine Transposition des Gerüstsatzes b/d bis f/a oder umgekehrt. Das Modell entspricht übrigens einem I-V-Abschnitt oder einem IV-I-Abschnitt der Regola del'ottava (mehr zur Oktavregel erfahren Sie <a href="/tutorials/regola/" target="_blank">hier</a>).<br>
 	Durch die Identität der Taktgruppen ist es für eine der beiden Taktgruppen aber auch möglich, die Funktion der jeweils anderen zu übernehmen, wenn sie nur entsprechend transponiert wird. Der Tonleiter-Abschnitt wird daher modulierend klingen, wenn wir ihn einem B-Dur-Kontext auf <i>b</i> beginnen lassen und der im Original modulierende Abschnitt wird tonart-bestätigend wirken, wenn wir ihn auf der Subdominante <i>es</i> anfangen lassen.<br>
-	Hören Sie sich hierzu das folgende Experiment an und vergleichen Sie die Manipulation mit dem Original (die Noten des Originals können Sie noch einmal sehen, wenn Sie die Abbildung berühren). Die tonart-bestätigende Taktgruppe wurde jeweils grün, die modulierend wirkende Taktgruppe jeweils gelb markiert: 
+	Hören Sie sich hierzu das folgende Experiment an und vergleichen Sie die Manipulation mit dem Original (die Noten des Originals können Sie noch einmal sehen, wenn Sie die Abbildung berühren). Die tonart-bestätigende Taktgruppe wurde jeweils grün, die modulierend wirkende Taktgruppe jeweils gelb markiert:
 </p>
 <a class="imageChange">
 	<img class="image-on" src="/content/tutorials/modulation/Peroti_0001.png" alt="modulation chromatisiert" />
@@ -118,7 +118,7 @@ abstract: In diesem Tutorial wird der Frage nachgegangen, was in der Musik als M
 <div class="copyright">
   <p>
     <small>
-    	Manipulierte Abfolge der Taktgruppen (oben) und originale Abfolge der Taktgruppe (unten). 
+    	Manipulierte Abfolge der Taktgruppen (oben) und originale Abfolge der Taktgruppe (unten).
     	Copyright Info: Klavier: Kilian Sprau, <a href="https://creativecommons.org/licenses/by-sa/3.0/de/" target="_blank">CC BY-SA 3.0 DE</a>
     </small>
   </p>
@@ -130,14 +130,14 @@ abstract: In diesem Tutorial wird der Frage nachgegangen, was in der Musik als M
 </p>
 <div class="blockquote">
   <p>
-    Das Wort <b>Modulation</b> hat, ausser der alten, bey den neuern nicht weniger, als vier Bedeutungen: 1.) Im Modo oder in der Tonart bleiben. 2.) Aus demselben heraus, und füglich wieder hineingehen. 3.) Eine Melodie figürlich, zierlich und nachdrücklich setzen. 4.) Ein ich weiß nicht was angenehmes und anständiges seinem Satze beilegen. Die alte Bedeutung gehet eigentlich nur auf die Art und Weise, oder die Manier, womit ein Sänger oder Instrumentalist die vorgeschriebene Melodie herausbringet. 
+    Das Wort <b>Modulation</b> hat, ausser der alten, bey den neuern nicht weniger, als vier Bedeutungen: 1.) Im Modo oder in der Tonart bleiben. 2.) Aus demselben heraus, und füglich wieder hineingehen. 3.) Eine Melodie figürlich, zierlich und nachdrücklich setzen. 4.) Ein ich weiß nicht was angenehmes und anständiges seinem Satze beilegen. Die alte Bedeutung gehet eigentlich nur auf die Art und Weise, oder die Manier, womit ein Sänger oder Instrumentalist die vorgeschriebene Melodie herausbringet.
   </p>
 	<p class="reference">Mattheson 1739, S. 293 f., Fn.</p>
 </div>
-<p> 
+<p>
 	Matthesons Definition verwundert aus heutiger Sicht, da er nicht nur das Verlassen und wieder Erreichen einer Tonart, sondern auch das In-einer-Tonart-Bleiben als Modulation bezeichnet hat. Auch das Setzen einer Melodie sowie der seltsam anmutende 4. Punkt trifft unsere heutigen Vorstellung einer Modulation nicht.<br>
-	Etwas verständlicher werden die beiden ersten Punkte der Definitionen Matthesons, wenn man bedenkt, dass im 18. Jahrhundert sowohl das In-der-Tonart-Bleiben als auch ein Wechsel der Tonart anhand der Oktavregel gelehrt und gelernt worden ist (mehr zur Oktavregel erfahren Sie <a href="/tutorials/regola/" target="_blank">hier</a>). Der Sinn der Oktavregel war es zu wissen, welche Stufe der Tonleiter mit welcher Harmonie (oder maximal zwei Harmonien) harmonisiert werden muss. Konnte man die Oktavregel, war es beispielsweise nöglich, einen unbezifferten Bass in B-Dur mithilfe der Griffe der Oktavregel in B-Dur, einen Bass in F-Dur mithilfe der Griffe der Oktavregel in F-Dur usw. harmonisieren zu können. <a href="https://de.wikipedia.org/wiki/Johann_David_Heinichen" target="_blank">Johann David Heinichen</a> schreibt zum Wechsel der Oktave in seiner großen Generalbaß- und Kompositionsanleitung: 
-</p> 
+	Etwas verständlicher werden die beiden ersten Punkte der Definitionen Matthesons, wenn man bedenkt, dass im 18. Jahrhundert sowohl das In-der-Tonart-Bleiben als auch ein Wechsel der Tonart anhand der Oktavregel gelehrt und gelernt worden ist (mehr zur Oktavregel erfahren Sie <a href="/tutorials/regola/" target="_blank">hier</a>). Der Sinn der Oktavregel war es zu wissen, welche Stufe der Tonleiter mit welcher Harmonie (oder maximal zwei Harmonien) harmonisiert werden muss. Konnte man die Oktavregel, war es beispielsweise nöglich, einen unbezifferten Bass in B-Dur mithilfe der Griffe der Oktavregel in B-Dur, einen Bass in F-Dur mithilfe der Griffe der Oktavregel in F-Dur usw. harmonisieren zu können. <a href="https://de.wikipedia.org/wiki/Johann_David_Heinichen" target="_blank">Johann David Heinichen</a> schreibt zum Wechsel der Oktave in seiner großen Generalbaß- und Kompositionsanleitung:
+</p>
 <div class="blockquote">
   <p>
     Dieses Exempel gehet aus dem B dur. So lange nun der Ambitus Modi in diesem Tone bleibet, so lange seynd die Signaturen des obigen Schematis B-Dur zu appliciren [...]<br>
@@ -146,7 +146,7 @@ abstract: In diesem Tutorial wird der Frage nachgegangen, was in der Musik als M
 	<p class="reference">Heinichen 1728, S. 756 f.</p>
 </div>
 <p>
-	Heinichens Sprache wirkt heute etwas fremd, deshalb folgt eine ›Übersetzung‹ des Gemeinten in heutiges Deutsch: 
+	Heinichens Sprache wirkt heute etwas fremd, deshalb folgt eine ›Übersetzung‹ des Gemeinten in heutiges Deutsch:
 </p>
 <div class="blockquote">
   <p>
@@ -167,7 +167,7 @@ abstract: In diesem Tutorial wird der Frage nachgegangen, was in der Musik als M
 <audio controls src="/content/tutorials/modulation/sound/peroti_sonata-b_modulation.mp3" preload="auto"></audio>
 <p>
 	In den Takten 11 und 12 – also über den strukturellen Basstönen <i>b</i> und <i>a</i> sind die Leittöne jedoch nur Verzierungen (bzw. sogenannte Wechselnoten), mit denen die Töne <i>g</i> und <i>f</i> umspielt werden. In T. 13 jedoch ist das <i>e</i> eine zur Harmonie gehörige Note (<i>e</i>-<i>g</i>-<i>b</i> bzw. ein C-Dur-Dominantseptakkord), so dass hier – über dem Basston <i>g</i> – der Oktavwechsel stattfinden könnte.<br>
-	In dem Menuett Nr. 21 des Nannerl-Notenbuchs der Familie Mozart findet sich eine Modulation von B-Dur nach F-Dur über einen strukturell vergleichbaren Bass (<i>b</i>-<i>a</i>-<i>e</i>-<i>f</i> grüne Noten). Er unterscheidet sich strukturell nur an einer Stelle und hätte durchaus genauso wie im Peroti-Sonatensatz (<i>b</i>-<i>a</i>-<i>g</i>-<i>f</i>, sichtbar beim Berühren der Noten) gestaltet werden können. Entscheidend ist, dass hier der Wechsel der Oktave bereits über dem <i>b</i> im Bass stattfindet, denn das <i>e</i> in der Melodie weist das <i>b</i> als Septime eines C-Dur-Dominantseptakkordes aus.     
+	In dem Menuett Nr. 21 des Nannerl-Notenbuchs der Familie Mozart findet sich eine Modulation von B-Dur nach F-Dur über einen strukturell vergleichbaren Bass (<i>b</i>-<i>a</i>-<i>e</i>-<i>f</i> grüne Noten). Er unterscheidet sich strukturell nur an einer Stelle und hätte durchaus genauso wie im Peroti-Sonatensatz (<i>b</i>-<i>a</i>-<i>g</i>-<i>f</i>, sichtbar beim Berühren der Noten) gestaltet werden können. Entscheidend ist, dass hier der Wechsel der Oktave bereits über dem <i>b</i> im Bass stattfindet, denn das <i>e</i> in der Melodie weist das <i>b</i> als Septime eines C-Dur-Dominantseptakkordes aus.
 </p>
 <a class="imageChange">
 	<img class="image-on" src="/content/tutorials/modulation/Modulation_0002.png" alt="modulation chromatisiert" />

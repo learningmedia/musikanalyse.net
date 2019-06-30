@@ -3,14 +3,11 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= title %></title>
+    <title>{{ title }}</title>
     <link rel="stylesheet" href="/styles/main.css" />
-    <link rel="stylesheet" href="/styles/pairsgame/musikanalyse.net-games.css" />
-    <link rel="stylesheet" href="/styles/pairsgame/pairsgame.css" />
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800&subset=latin,latin-ext">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-<!--     <link rel="stylesheet" type="text/css" href="/styles/pairsgame/musikanalyse.net-games.css">
-    <link rel="stylesheet" type="text/css" href="/styles/pairsgame/pairsgame.css"> -->
+    <meta name="google-site-verification" content="lOM0lvh98IKEzkw8sy76ToxfvvINhoD-SliLyUaKrr8" />
     <!--<script src="js/responsee.js"></script>-->
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -23,38 +20,43 @@
   </head>
 
 
-  <body class="size-960">
+  <body class="size-1140">
 
     <!-- HEADER -->
-    <% include partials/header %>
+    {% include "partials/header.nunjucks" %}
 
     <!-- MAIN -->
     <main role="main">
-
-      <div class="line margin-top-40">
-         <div class="s-12 m-8 l-10">
-           &nbsp;
-         </div>
-         <div class="s-12 m-4 l-2">
-           <a class="Button Button--blue" onclick="javascript:history.back();" style="width: auto;">Zurück...</a>
-         </div>
-      </div>
-
       <!-- Content -->
       <div class="section-small-padding background-white">
         <div class="line">
-          <div class="s-12 m-12 center margin-m-bottom-30">
-            <%- contents %>
+          <div class="s-12 m-12 center margin-m-bottom-30 Material">
+            {% include "partials/materials.nunjucks" %}
+            {{ contents | safe }}
           </div>
         </div>
       </div>
     </main>
 
     <!-- FOOTER -->
-    <% include partials/footer %>
+    {% include "partials/footer.nunjucks" %}
 
     <script src="/scripts/main.js"></script>
-    <script src="/scripts/pairsgame/index.js"></script>
-    <script src="/scripts/pairsgame/pairsgame.js"></script>
-   </body>
+    <script src="/scripts/foldableWide.js"></script>
+    <script>
+      $("a[data-toggle]").on("click", function(event) {
+        event.preventDefault();
+        var title = $(this).attr("data-toggle");
+        var div = document.getElementById(title)
+        if (div.style.display == "none") {
+          div.style.display = "block";
+          $('html, body').animate({
+            scrollTop: $(div).offset().top
+          }, 500);
+        } else {
+          div.style.display = "none";
+        }
+      });
+    </script>
+  </body>
 </html>

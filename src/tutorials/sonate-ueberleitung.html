@@ -3,7 +3,7 @@ title: Die Überleitung
 author: Ulrich Kaiser
 date: 2017-03-13
 modified: 2019-05-05
-layout: tutorial.ejs
+layout: tutorial.nunjucks
 category: Terminologie, Form
 abstract: In diesem Tutorial wird ein Modell zur Analyse der Formfunktion ›Überleitung‹ in Sonatensätzen vorgestellt. Das Tutorial dient zur Veranschaulichung der Ergebnisse des Beitrags <a href="http://www.gmth.de/zeitschrift/artikel/448.aspx">»Der Begriff der ›Überleitung‹ und die Musik Mozarts«</a>, der 2009 in der Zeitschrift der Gesellschaft für Musiktheorie erschienen ist.
 ---
@@ -112,7 +112,7 @@ abstract: In diesem Tutorial wird ein Modell zur Analyse der Formfunktion ›Üb
 
 <h4 id="fa-ut">Generalisierung: das Modell »4&minus;1 ›fa&minus;ut‹</h4>
 <p>
-	Im Folgenden sehen Sie die drei oben erörterten Überleitungen aus KV 14, KV 31 und KV 281 (189f) in einer synoptischen Notenabbildung (Generalbassnotation), wobei jeweils eine Harmonie in einem Takte platziert worden ist. Das heißt, die Anzahl der Takte in der Notenabbildung unten entspricht nicht der Anzahl der entsprechenden Takte in der Partitur. Der in Achteln verlaufende harmonische Rhythmus in den Takten 20/21 der Sonate KV 31 zum Beispiel wird in der Abbildung unten in vier Takten wiedergegeben (mit den Harmonien F-Dur, g-Moll, halbverm. Septakkord über h und C-Dur):   
+	Im Folgenden sehen Sie die drei oben erörterten Überleitungen aus KV 14, KV 31 und KV 281 (189f) in einer synoptischen Notenabbildung (Generalbassnotation), wobei jeweils eine Harmonie in einem Takte platziert worden ist. Das heißt, die Anzahl der Takte in der Notenabbildung unten entspricht nicht der Anzahl der entsprechenden Takte in der Partitur. Der in Achteln verlaufende harmonische Rhythmus in den Takten 20/21 der Sonate KV 31 zum Beispiel wird in der Abbildung unten in vier Takten wiedergegeben (mit den Harmonien F-Dur, g-Moll, halbverm. Septakkord über h und C-Dur):
 </p>
 <a class="imageChange">
   <img class="image-on smallWidth" src="/content/tutorials/sonate-ueberleitung/generalbass_0001.png" alt="Abbildung" />
@@ -155,7 +155,7 @@ abstract: In diesem Tutorial wird ein Modell zur Analyse der Formfunktion ›Üb
   </p>
 </div>
 <p>
-  Die Vermutung liegt nahe, dass von Musikern im 18. Jahrhundert über die Oktavregel einerseits die grundlegende Harmonisierung von Basstufen und andererseits die Modulation in die Oberquinte geübt worden ist. Denn durch die 6#-Harmonisierung der sechsten Tonleiterstufe abwärts findet sich in der C-Dur-Oktavregel ein Ausschnitt aus der Oktavregel in G-Dur oder anders ausgedrückt: Die Harmonisierung der Bassstufen 8-7-6-5 der Oktavregel in C-Dur abwärts (mit der Harmonisierung 6#) ist identisch mit der Harmonisierung der Bassstufen 4-3-2-1 der Oktavregel in G-Dur.<br> 
+  Die Vermutung liegt nahe, dass von Musikern im 18. Jahrhundert über die Oktavregel einerseits die grundlegende Harmonisierung von Basstufen und andererseits die Modulation in die Oberquinte geübt worden ist. Denn durch die 6#-Harmonisierung der sechsten Tonleiterstufe abwärts findet sich in der C-Dur-Oktavregel ein Ausschnitt aus der Oktavregel in G-Dur oder anders ausgedrückt: Die Harmonisierung der Bassstufen 8-7-6-5 der Oktavregel in C-Dur abwärts (mit der Harmonisierung 6#) ist identisch mit der Harmonisierung der Bassstufen 4-3-2-1 der Oktavregel in G-Dur.<br>
   Im Folgenden wird daher die Harmonisierung der Oktavregel 8-7-6-5 in C-Dur als ein 4-3-2-1-Ausschnitt der Oktavregel in G-Dur interpretiert. Daraus folgt:
 </p>
 <ul>
@@ -171,7 +171,7 @@ abstract: In diesem Tutorial wird ein Modell zur Analyse der Formfunktion ›Üb
 </ul>
 <p>
   Die Beispiele zeigen, dass sich die Standardharmonisierung einer modulierenden Überleitung mithilfe der Oktavregel der Nebentonart, die Standardharmonisierung einer nicht-modulierenden Überleitung mithilfe der Oktavregel der Ausgangstonart beschreiben lässt.<br>
-  Die oben beschriebenen Harmoniefolgen lassen sich auf vier Töne der Oktavregel mit der Struktur ›fa&minus;ut‹ zurückführen. Die generalisierte Struktur, die im folgenden als Modell <b>4&minus;1 (fa&minus;ut)</b> bezeichnet wird, besteht also aus einer Tonleiterstruktur (wie zum Beispiel den Tönen <i>c-h-a-g</i>) und eine Harmonik, die sich durch dieses Modell referenzieren lässt (zum Beispie die Akkorde <i>C-Dur / G-Dur / D-Dur / G-Dur</i>).    
+  Die oben beschriebenen Harmoniefolgen lassen sich auf vier Töne der Oktavregel mit der Struktur ›fa&minus;ut‹ zurückführen. Die generalisierte Struktur, die im folgenden als Modell <b>4&minus;1 (fa&minus;ut)</b> bezeichnet wird, besteht also aus einer Tonleiterstruktur (wie zum Beispiel den Tönen <i>c-h-a-g</i>) und eine Harmonik, die sich durch dieses Modell referenzieren lässt (zum Beispie die Akkorde <i>C-Dur / G-Dur / D-Dur / G-Dur</i>).
 </p>
 <a class="imageChange">
   <img class="image-on smallWidth" src="/content/tutorials/sonate-ueberleitung/Modelldesign.png" alt="Abbildung" />
@@ -183,11 +183,11 @@ abstract: In diesem Tutorial wird ein Modell zur Analyse der Formfunktion ›Üb
 
 <h3 id="beispiele2">Beispiele</h3>
 <p>
-  Die beiden folgenden Beispiele sollen den Sachverhalt noch einmal verdeutlichen. Als charakteristische Überleitungsharmonik erklingt in beiden Beispielen die Harmoniefolge <span style="font-weight: bold; color: #A4A4A4;">C-Dur (= grau)</span> / <span style="font-weight: bold; color: #FACC2E;">G-Dur (= orange)</span> / <span style="font-weight: bold; color: #F5A9BC;">D-Dur (= rot)</span> / <span style="font-weight: bold; color: #FACC2E;">G-Dur (= orange)</span>. Im ersten Beispiel der Violinsoante von Mozart erklingt diese Harmoniefolge in einem Werk in C-Dur, wodurch die Überleitungsharmonik modulierende wirkt, im zweiten Beispiel der Klaviersonate von Joseph Haydn erklingt die Harmoniefolge in G-Dur, wodurch die Überleitung nicht-modulierend wirkt. In beiden Fällen folgt der Harmoniefolge ein diskantisierender <span style="font-weight: bold; color: #04B486;">Halbschluss (= grün)</span>, im Fall der Volinsonate in C-Dur erklingt D-Dur als Halbschluss in der Nebentonart (= <a href="/tutorials/formanalyse-nach-h-chr-koch#K134" target="_blank">3. Absatz nach H. Chr. Koch</a>), im Falle der G-Dur-Sonate erklingt das D-Dur als Halrbschluss der Ausgangstonart (= <a href="/tutorials/formanalyse-nach-h-chr-koch#K124" target="_blank">2. Absatz nach H. Chr. Koch</a>). 
+  Die beiden folgenden Beispiele sollen den Sachverhalt noch einmal verdeutlichen. Als charakteristische Überleitungsharmonik erklingt in beiden Beispielen die Harmoniefolge <span style="font-weight: bold; color: #A4A4A4;">C-Dur (= grau)</span> / <span style="font-weight: bold; color: #FACC2E;">G-Dur (= orange)</span> / <span style="font-weight: bold; color: #F5A9BC;">D-Dur (= rot)</span> / <span style="font-weight: bold; color: #FACC2E;">G-Dur (= orange)</span>. Im ersten Beispiel der Violinsoante von Mozart erklingt diese Harmoniefolge in einem Werk in C-Dur, wodurch die Überleitungsharmonik modulierende wirkt, im zweiten Beispiel der Klaviersonate von Joseph Haydn erklingt die Harmoniefolge in G-Dur, wodurch die Überleitung nicht-modulierend wirkt. In beiden Fällen folgt der Harmoniefolge ein diskantisierender <span style="font-weight: bold; color: #04B486;">Halbschluss (= grün)</span>, im Fall der Volinsonate in C-Dur erklingt D-Dur als Halbschluss in der Nebentonart (= <a href="/tutorials/formanalyse-nach-h-chr-koch#K134" target="_blank">3. Absatz nach H. Chr. Koch</a>), im Falle der G-Dur-Sonate erklingt das D-Dur als Halrbschluss der Ausgangstonart (= <a href="/tutorials/formanalyse-nach-h-chr-koch#K124" target="_blank">2. Absatz nach H. Chr. Koch</a>).
 </p>
 <h4 id="kv296">Wolfgang Amadé Mozart, Violinsonate in C-Dur KV 296, 3. Satz</h4>
 <p>
-  Anmerkungen: Die modulierende Überleitung (= grüne Klammern) lässt sich klar bestimmen: Sie folgt einem periodischen Hauptthema bzw. einem Ganzschluss der Ausgangstonart (a), sie endet mit einem Halbschluss der Nebentonart (e) und die Harmonik lässt sich über das Modell 4&minus;1 (fa&minus;ut) referenzieren (c-h-a-g = C-Dur/G-Dur/D-Dur/G-Dur).   
+  Anmerkungen: Die modulierende Überleitung (= grüne Klammern) lässt sich klar bestimmen: Sie folgt einem periodischen Hauptthema bzw. einem Ganzschluss der Ausgangstonart (a), sie endet mit einem Halbschluss der Nebentonart (e) und die Harmonik lässt sich über das Modell 4&minus;1 (fa&minus;ut) referenzieren (c-h-a-g = C-Dur/G-Dur/D-Dur/G-Dur).
 </p>
 <a class="imageChange">
   <img class="image-on smallWidth" src="/content/tutorials/sonate-ueberleitung/kv296-Sonate-C.png" alt="Abbildung" />
@@ -202,7 +202,7 @@ abstract: In diesem Tutorial wird ein Modell zur Analyse der Formfunktion ›Üb
 
 <h4 id="XVI27"></h4>
 <p>
-  Anmerkungen: Die nicht-modulierende Überleitung (= grüne Klammern) lässt sich klar bestimmen: Sie folgt einem nicht-periodischen Hauptsatz bzw. einem deutlichen Absatz (Kadenz) in der der Ausgangstonart (a), sie endet mit einem Halbschluss der Ausgangstonart (e) und die Harmonik lässt sich über das Modell 4&minus;1 (fa&minus;ut) referenzieren (c-h-a-g = C-Dur/G-Dur/D-Dur/G-Dur).   
+  Anmerkungen: Die nicht-modulierende Überleitung (= grüne Klammern) lässt sich klar bestimmen: Sie folgt einem nicht-periodischen Hauptsatz bzw. einem deutlichen Absatz (Kadenz) in der der Ausgangstonart (a), sie endet mit einem Halbschluss der Ausgangstonart (e) und die Harmonik lässt sich über das Modell 4&minus;1 (fa&minus;ut) referenzieren (c-h-a-g = C-Dur/G-Dur/D-Dur/G-Dur).
 </p>
 <a class="imageChange">
   <img class="image-on smallWidth" src="/content/tutorials/sonate-ueberleitung/Hob-XVI27.png" alt="Abbildung" />

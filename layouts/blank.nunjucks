@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= title %></title>
+    <title>{{ title }}</title>
     <link rel="stylesheet" href="/styles/main.css" />
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800&subset=latin,latin-ext" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
@@ -22,26 +22,18 @@
 
   <body class="size-1140">
 
-    <!-- HEADER -->
-    <% include partials/header %>
-
     <!-- MAIN -->
     <main role="main">
       <!-- Content -->
       <div class="section-small-padding background-white">
         <div class="line">
           <div class="s-12 m-12 center margin-m-bottom-30">
-            <% include partials/tutorials %>
-            <%- contents %>
+            {{ contents | safe }}
           </div>
         </div>
       </div>
     </main>
 
-    <!-- FOOTER -->
-    <% include partials/footer %>
-
     <script src="/scripts/main.js"></script>
-    <script src="/scripts/foldableWide.js"></script>
    </body>
 </html>

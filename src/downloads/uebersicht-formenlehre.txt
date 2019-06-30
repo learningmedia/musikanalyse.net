@@ -1,8 +1,7 @@
 ---
 title: Übersicht zur Formenlehre (Deutschland - USA)
 author: Ulrich Kaiser
-category: themen
-subCategory: form
+category: form
 abstract: Hier werden einige bekannte deutsche und amerikanische Autoren genannt und in Beziehung gesetzt, die für den aktuellen Diskurs zur Formenlehre von Bedeutung sind.
 thumbnail: /img/thumbnails/uebersicht-formenlehre.png
 link: /downloadfiles/Uebersicht-Formenlehre.pdf

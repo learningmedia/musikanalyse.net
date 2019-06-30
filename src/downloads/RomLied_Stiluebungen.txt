@@ -1,8 +1,7 @@
 ---
 title: Stilübungen zum romantischen Lied
 author: Ulrich Kaiser
-category: themen
-subCategory: gattungen
+category: gattungen
 abstract: Arbeitsheft für Stilübungen zum romantischen Lied.
 thumbnail: /img/thumbnails/RomLied_Stiluebungen.jpg
 link: /downloadfiles/RomLied_Stiluebungen.pdf
