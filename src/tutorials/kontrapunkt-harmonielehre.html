@@ -3,7 +3,7 @@ title: Kontrapunkt und Harmonielehre
 author: Ulrich Kaiser
 date: 2017-02-06
 modified: 2018-10-17
-layout: tutorial.ejs
+layout: tutorial.nunjucks
 category: Terminologie
 abstract: Kontrapunkt und Harmonielehre gelten traditionell als zwei verschiedene Disziplinen im Rahmen der Musikausbildung. In diesem Tutorial werden die Begriffe und deren (begrenzte) Reichweite an Beispielen dargelegt.
 ---
@@ -233,12 +233,12 @@ abstract: Kontrapunkt und Harmonielehre gelten traditionell als zwei verschieden
 <img class="image-on" src="/content/tutorials/kontrapunkt-harmonielehre/Vorhaltsquartsextakkord.png" alt="" style="" />
 <audio controls preload="auto" src="/content/tutorials/kontrapunkt-harmonielehre/sound/Vorhaltsquartsextakkord.mp3"></audio>
 <p>
-  Konsequenter Weise heißt das aber auch, dass verschiedene Menschen ein und dasselbe musikalische Ereignis verschieden wahrnehmen, also als Akkord oder als (kontrapunktischen) Zusammenklang auffassen können (je nachdem, ob ein Grundton gehört wird oder nicht). In der Musiktheorie ist es deshalb von Bedeutung, ob man von einem Akkord oder von einem Klang spricht, da die jeweilige Benennung Aufschluss über die individuelle Hörweise des Analysierenden gibt. 
+  Konsequenter Weise heißt das aber auch, dass verschiedene Menschen ein und dasselbe musikalische Ereignis verschieden wahrnehmen, also als Akkord oder als (kontrapunktischen) Zusammenklang auffassen können (je nachdem, ob ein Grundton gehört wird oder nicht). In der Musiktheorie ist es deshalb von Bedeutung, ob man von einem Akkord oder von einem Klang spricht, da die jeweilige Benennung Aufschluss über die individuelle Hörweise des Analysierenden gibt.
 </p>
 
 <h4><a id="h2" href="#tutorialTitle">Chiffrierungen</a></h4>
 <p>
-  »Harmonielehre ist die Lehre vom Aufbau und von der Bedeutung der Akkorde in der dur-moll-tonalen Musik«, die sich über Grundtonfortschreitungen beschreiben lässt. Im Laufe der Geschichte wurden zum besseren Erkennen von Grundtonfortschreitungen unterschiedliche Chiffrierungssysteme verwendet. Im 18. Jahrundert beispielsweise war ein didaktisches Hilfsmittel zur Beschreibung von Harmonieverläufen der <i>Basse fondamentale</i> bzw. <i>Fundamentalbass</i>. Dieser Begriff wurde von dem französischen Komponisten und Musiktheoretiker <a href="https://de.wikipedia.org/wiki/Jean-Philippe_Rameau" target="_blank">Jean-Philippe Rameau</a> geprägt, der damit eine gedachte Bassstimme bezeichnete, die aus den Grundtönen der jeweiligen Akkorde besteht. Die Rameaurezeption in Deutschland erfolgte in erster Linie über Kirnberger und Marpurg. Marpurg schreibt über die Basse fondamentale Rameaus: 
+  »Harmonielehre ist die Lehre vom Aufbau und von der Bedeutung der Akkorde in der dur-moll-tonalen Musik«, die sich über Grundtonfortschreitungen beschreiben lässt. Im Laufe der Geschichte wurden zum besseren Erkennen von Grundtonfortschreitungen unterschiedliche Chiffrierungssysteme verwendet. Im 18. Jahrundert beispielsweise war ein didaktisches Hilfsmittel zur Beschreibung von Harmonieverläufen der <i>Basse fondamentale</i> bzw. <i>Fundamentalbass</i>. Dieser Begriff wurde von dem französischen Komponisten und Musiktheoretiker <a href="https://de.wikipedia.org/wiki/Jean-Philippe_Rameau" target="_blank">Jean-Philippe Rameau</a> geprägt, der damit eine gedachte Bassstimme bezeichnete, die aus den Grundtönen der jeweiligen Akkorde besteht. Die Rameaurezeption in Deutschland erfolgte in erster Linie über Kirnberger und Marpurg. Marpurg schreibt über die Basse fondamentale Rameaus:
 </p>
 <div class="blockquote">
   <p>
@@ -247,7 +247,7 @@ abstract: Kontrapunkt und Harmonielehre gelten traditionell als zwei verschieden
   <p class="reference">Marpurg 1776, S. 232.</p>
 </div>
 <p>
-  Während Rameau mit dem Fundamentalbass noch eine Theorie verband, die regulierte, welche Harmonieverbindungen vorkommen dürfen und welche nicht, scheint sich im deutschsprachigen Raum der Fundamentalbass als didaktischen Hilfsmittels durchgesetzt zu haben, der Schülerinnen und Schülern lediglich ein Erkennen von Akkordgrundstellungen im Generalbass erleichtern sollte. In diesem Sinne hat Wolfgang Amadé Mozart in Kompositionsheften für seine Schülerin Barbara Ployer den Fundamentalbass verwendet. Im folgenden ist eine Melodiewendung (die an das »Benedictus‹ aus dem Requiem von Mozart erinnert) sowie ein Bass zu sehen. Der Fundamentalbass darunter war nicht zur Aufführung gedacht, sondern diente der Veranschaulichung, dass zur Harmonisierung nur die Akkorde mit den Grundtönen C und G verwendet worden sind:   
+  Während Rameau mit dem Fundamentalbass noch eine Theorie verband, die regulierte, welche Harmonieverbindungen vorkommen dürfen und welche nicht, scheint sich im deutschsprachigen Raum der Fundamentalbass als didaktischen Hilfsmittels durchgesetzt zu haben, der Schülerinnen und Schülern lediglich ein Erkennen von Akkordgrundstellungen im Generalbass erleichtern sollte. In diesem Sinne hat Wolfgang Amadé Mozart in Kompositionsheften für seine Schülerin Barbara Ployer den Fundamentalbass verwendet. Im folgenden ist eine Melodiewendung (die an das »Benedictus‹ aus dem Requiem von Mozart erinnert) sowie ein Bass zu sehen. Der Fundamentalbass darunter war nicht zur Aufführung gedacht, sondern diente der Veranschaulichung, dass zur Harmonisierung nur die Akkorde mit den Grundtönen C und G verwendet worden sind:
 </p>
 <img class="image-on" src="/content/tutorials/kontrapunkt-harmonielehre/Mozart-Fundamentalbass.jpg" alt="" style="" />
 <p>
@@ -276,7 +276,7 @@ abstract: Kontrapunkt und Harmonielehre gelten traditionell als zwei verschieden
   </tr>
 </table>
 <p>
-  Hugo Riemann wendete sich gegen Ende des 19. Jahrhundert aus didaktischen Gründen gegen die Generalbassbezeichnung. Ihn ärgerte, dass in C-Dur ein Dominantseptakkord bzw. G<sup>7</sup> im Generalbass je nach Akkordumkehrung eine andere Bezifferung erforderte (7, <span style="white-space: pre;"><sub>5</sub><sup style="margin: -8px;">6</sup>    , <sub>3</sub><sup style="margin: -8px;">4</sup>    , oder <sub>2</sub><sup style="margin: -8px;">4</sup>   )</span> und er schlug vor, anstelle der Generalbassziffern für den Dominantseptakkord unabhängig von der Umkehrung immer ein G<sup>+</sup> oder ein D zu verwenden. Neben den drei Hauptfunktionen T (= Tonika), D (= Dominante), S (= Subdominante, bei Weber I, IV, V) wurden Mollakkorde als sogenannte Auffassungsdissonanzen auf die Hauptdreiklänge bezogen und als Parallel- oder Leittonwechselklänge (heute auch Gegenklänge) bezeichnet. Daher kann in C-Dur der a-Moll Dreiklang entweder die Tonika C-Dur (= Tp bzw. Tonikaparallele) oder die Subdominante (= Sg bzw. Subdominantgegenklang) vertreten. Die folgende Tabelle zeigt heute gebräuchliche Funktionssymbole:     
+  Hugo Riemann wendete sich gegen Ende des 19. Jahrhundert aus didaktischen Gründen gegen die Generalbassbezeichnung. Ihn ärgerte, dass in C-Dur ein Dominantseptakkord bzw. G<sup>7</sup> im Generalbass je nach Akkordumkehrung eine andere Bezifferung erforderte (7, <span style="white-space: pre;"><sub>5</sub><sup style="margin: -8px;">6</sup>    , <sub>3</sub><sup style="margin: -8px;">4</sup>    , oder <sub>2</sub><sup style="margin: -8px;">4</sup>   )</span> und er schlug vor, anstelle der Generalbassziffern für den Dominantseptakkord unabhängig von der Umkehrung immer ein G<sup>+</sup> oder ein D zu verwenden. Neben den drei Hauptfunktionen T (= Tonika), D (= Dominante), S (= Subdominante, bei Weber I, IV, V) wurden Mollakkorde als sogenannte Auffassungsdissonanzen auf die Hauptdreiklänge bezogen und als Parallel- oder Leittonwechselklänge (heute auch Gegenklänge) bezeichnet. Daher kann in C-Dur der a-Moll Dreiklang entweder die Tonika C-Dur (= Tp bzw. Tonikaparallele) oder die Subdominante (= Sg bzw. Subdominantgegenklang) vertreten. Die folgende Tabelle zeigt heute gebräuchliche Funktionssymbole:
 </p>
 <table style="width: 70%; margin: auto; text-align: center;">
   <tr>
@@ -301,7 +301,7 @@ abstract: Kontrapunkt und Harmonielehre gelten traditionell als zwei verschieden
   </tr>
 </table>
 <p>
-  Doch mit diesen Zeichen werden heute häufig nur Akkorde symbolisiert. Damit wird zwar veranschaulicht, welchen Grundton man bei welchem Akkord hören sollte, aber das ist nicht viel mehr als das, was schon ein <i>Fundament</i> im 18. Jahrhundert geleistetet hat und weit weniger als zu beschreiben, »was im Akkord und zwischen den Akkorden Zusammenhang stiftet«. Aus diesem Grunde werden heute Stufen und Funktionssymbole in den professionellen Musikausbildungsstätten nicht unkritisch gesehen. Eine Alternative zu einer weitgehend getrennten Vermittlung von Kontrapunkt und Harmonielehre bilden beispielsweise <a href="/tutorials/satzmodelle">Satzmodelle</a>, da an ihnen sehr gut horizontale und vertikale Aspekte eines musikalischen Verlaufs sinnlich erfahren lassen. 
+  Doch mit diesen Zeichen werden heute häufig nur Akkorde symbolisiert. Damit wird zwar veranschaulicht, welchen Grundton man bei welchem Akkord hören sollte, aber das ist nicht viel mehr als das, was schon ein <i>Fundament</i> im 18. Jahrhundert geleistetet hat und weit weniger als zu beschreiben, »was im Akkord und zwischen den Akkorden Zusammenhang stiftet«. Aus diesem Grunde werden heute Stufen und Funktionssymbole in den professionellen Musikausbildungsstätten nicht unkritisch gesehen. Eine Alternative zu einer weitgehend getrennten Vermittlung von Kontrapunkt und Harmonielehre bilden beispielsweise <a href="/tutorials/satzmodelle">Satzmodelle</a>, da an ihnen sehr gut horizontale und vertikale Aspekte eines musikalischen Verlaufs sinnlich erfahren lassen.
 </p>
 
 <h4><a id="medaille" href="#tutorialTitle">Zwei Seiten einer Medaille</a></h4>

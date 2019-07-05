@@ -3,9 +3,9 @@ title: Kontrapunkt 6 (16. Jahrhundert) - Zur formalen Gestaltung
 author: Ulrich Kaiser
 date: 2018-11-03
 modified: 2018-12-01
-layout: tutorial.ejs
+layout: tutorial.nunjucks
 category: Stilübungen (Tonsatz)
-abstract: Im letzten Tutorial zum Kontrapunkt des 16. Jahrhunderts geht es darum, nach einer einstimmigen Vorlage eine kleine Form unter Berücksichtigung von Imitationen sowie einer in Bezug auf den Modus sinnvollen Kadenzdisposition auszuarbeiten. Eine Aufgabe für Fortgeschrittene! 
+abstract: Im letzten Tutorial zum Kontrapunkt des 16. Jahrhunderts geht es darum, nach einer einstimmigen Vorlage eine kleine Form unter Berücksichtigung von Imitationen sowie einer in Bezug auf den Modus sinnvollen Kadenzdisposition auszuarbeiten. Eine Aufgabe für Fortgeschrittene!
 ---
 
 <ul>
@@ -21,7 +21,7 @@ abstract: Im letzten Tutorial zum Kontrapunkt des 16. Jahrhunderts geht es darum
 <br><br>
 
 
-<h3 id="vorgabe">Vorgabe und Vorüberlegung I: Modus</h3> 
+<h3 id="vorgabe">Vorgabe und Vorüberlegung I: Modus</h3>
 <p>
   In dem letzten Tutorial zum Kontrapunkt des 16. Jahrhunderts geht es um die Ausarbeitung einer kontrapunktischen Vorlage in einer Stilistik des 16. Jahrhunderts unter Berücksichtigung von Imitationen sowie einer (in Bezug auf den Modus sinnvollen) Kadenzdisposition. Als Vorlage für diese Aufgabe für Fortgeschrittene dient eine Aufgabenstellung, die im Rahmen einer ersten Staatsprüfung im Lehramt am Gymnasium in München in der Vergangenheit einmal gestellt worden ist:
 </p>
@@ -29,7 +29,7 @@ abstract: Im letzten Tutorial zum Kontrapunkt des 16. Jahrhunderts geht es darum
 <audio controls preload="auto" src="/content/tutorials/kontrapunkt-form/sound/Vorgabe.mp3"></audio>
 <p>
   Die Aufgabe bestand seinerzeit darin, unter Verwendung der oben abgebildeten Vorgabe sowie des Textes »Kyrie eleison« einen kompletten kontrapunktisch Satz auszuarbeiten. Die Vorgabe durfte hierzu transponiert, unterteilt und auf verschiedene Stimmen verteilt werden, kurz: Es gab kaum Restriktionen bis auf die Tatsache, dass alle Töne der Vorgabe in der kontrapunktischen Ausarbeitung in irgend einer Weise sinnvoll vorkommen sollten.<br>
-  Eine Vorüberlegung besteht darin, einen Modus bzw. eine alte Tonart zu bestimmen, in dem sich die Vorgabe sinnvoll ausarbeiten lässt. Die Vorgabe oben endet mit einer phrygischen Klausel und beginnt mit <i>e</i>, so dass sich eine Ausarbeitung im phrygischen Modus anbietet. Gut zu wissen ist es zudem, dass in phrygischen Kompositionen in <i>e</i> nicht selten an formal entscheidenden Punkten wie z.B. Anfang und Schluss a-Moll-Klänge zu hören sind.   
+  Eine Vorüberlegung besteht darin, einen Modus bzw. eine alte Tonart zu bestimmen, in dem sich die Vorgabe sinnvoll ausarbeiten lässt. Die Vorgabe oben endet mit einer phrygischen Klausel und beginnt mit <i>e</i>, so dass sich eine Ausarbeitung im phrygischen Modus anbietet. Gut zu wissen ist es zudem, dass in phrygischen Kompositionen in <i>e</i> nicht selten an formal entscheidenden Punkten wie z.B. Anfang und Schluss a-Moll-Klänge zu hören sind.
 </p>
 <p>
   <span style="font-size: 0.8em;"><a href="#tutorialTitle">zurück zum Inhaltsverzeichnis</a></span>
@@ -47,9 +47,9 @@ abstract: Im letzten Tutorial zum Kontrapunkt des 16. Jahrhunderts geht es darum
 </p>
 
 
-<h3 id="kadenzdisposition">Vorüberlegung III: Kadenzen und Kadenzdisposition</h3> 
+<h3 id="kadenzdisposition">Vorüberlegung III: Kadenzen und Kadenzdisposition</h3>
 <p>
-  Ein wichtiges Moment, eine Tonart im 16. Jahrhundert auszudrücken, lag in der Disposition der Kadenzen. <a href="https://en.wikipedia.org/wiki/Pietro_Pontio" target="_blank">Pietro Pontio</a> (1588) gibt für die acht Modi die folgenden Kadenzorte an:   
+  Ein wichtiges Moment, eine Tonart im 16. Jahrhundert auszudrücken, lag in der Disposition der Kadenzen. <a href="https://en.wikipedia.org/wiki/Pietro_Pontio" target="_blank">Pietro Pontio</a> (1588) gibt für die acht Modi die folgenden Kadenzorte an:
 </p>
 <table id="unterquart-oberquint" class="table-80">
   <tr>
@@ -105,24 +105,24 @@ abstract: Im letzten Tutorial zum Kontrapunkt des 16. Jahrhunderts geht es darum
     <td>g, c, d</td>
     <td></td>
     <td>f, a</td>
-  </tr>  
+  </tr>
 </table>
 <p>
-  Übertragen auf eine Stilübung besteht die Aufgabe darin, primär Kadenzen auf <i>e</i>, <i>a</i> und <i>c</i> zu verwenden, Kadenzen auf <i>g</i> und <i>h</i> sind möglich, sollten jedoch untergeordnete Bedeutung haben.  
+  Übertragen auf eine Stilübung besteht die Aufgabe darin, primär Kadenzen auf <i>e</i>, <i>a</i> und <i>c</i> zu verwenden, Kadenzen auf <i>g</i> und <i>h</i> sind möglich, sollten jedoch untergeordnete Bedeutung haben.
 </p>
 <p>
   <span style="font-size: 0.8em;"><a href="#tutorialTitle">zurück zum Inhaltsverzeichnis</a></span>
 </p>
 
 
-<h3 id="ausarbeitung">Ausarbeitung einzelner Abschnitte</h3> 
+<h3 id="ausarbeitung">Ausarbeitung einzelner Abschnitte</h3>
 <p id="harmonien">
-  Wie bereits erwähnt, lässt der Anfang der Vorgabe eine Imitation kaum zu. Einfacher ist es, den Beginn der Vorgabe als homophonen Satz zu gestalten. Unter der Voraussetzung, dass jeder Ton der Vorgabe Grundton, Terzton oder Quintton sein kann, könnte ein erster Arbeitsschritt darin bestehen, sich mögliche Harmonien für den Anfang zu überlegen:  
+  Wie bereits erwähnt, lässt der Anfang der Vorgabe eine Imitation kaum zu. Einfacher ist es, den Beginn der Vorgabe als homophonen Satz zu gestalten. Unter der Voraussetzung, dass jeder Ton der Vorgabe Grundton, Terzton oder Quintton sein kann, könnte ein erster Arbeitsschritt darin bestehen, sich mögliche Harmonien für den Anfang zu überlegen:
 </p>
 <img class="smallWidth" src="/content/tutorials/kontrapunkt-form/Anfang_0001.png" alt="">
 <audio controls preload="auto" src="/content/tutorials/kontrapunkt-form/sound/Anfang-einstimmig.mp3"></audio>
 <p>
-  Für dieses Tutorial wurde aus den oben angegebenen möglichen Harmonien die folgende Auswahl getroffen: 
+  Für dieses Tutorial wurde aus den oben angegebenen möglichen Harmonien die folgende Auswahl getroffen:
 </p>
 <img class="smallWidth" src="/content/tutorials/kontrapunkt-form/Anfang_0002.png" alt="">
 <audio controls preload="auto" src="/content/tutorials/kontrapunkt-form/sound/Anfang-mehrstimmig.mp3"></audio>
@@ -134,7 +134,7 @@ abstract: Im letzten Tutorial zum Kontrapunkt des 16. Jahrhunderts geht es darum
     Verbindungen mit terzweise fallendem Fundament (z.B. a-Moll -> F-Dur -> d-Moll) schnell nach Musik späterer Zeiten klingen können, während der Fundamentschritt terzweise aufwärts (z.B. d-Moll -> F-Dur) für ältere Musik (und übrigens auch für Popmusik) typisch ist,
   </li>
   <li>
-    mehrere grundstellige Klänge sekundweise in einer Richtung steigend oder fallend ohne fehlerhafte Parallelbewegungen in der Vierstimmigkeit kaum zu realisieren sind, 
+    mehrere grundstellige Klänge sekundweise in einer Richtung steigend oder fallend ohne fehlerhafte Parallelbewegungen in der Vierstimmigkeit kaum zu realisieren sind,
   </li>
   <li>
     Töne, die länger sind als eine ganze Note, harmonisch eine klangliche Abwechslung benötigen und dass
@@ -144,10 +144,10 @@ abstract: Im letzten Tutorial zum Kontrapunkt des 16. Jahrhunderts geht es darum
   </li>
 </ul>
 <p>
-  Die Musteraussetzung zeigt am Anfang eine klangliche Abwechslung durch den vorgezogenen Einsatz des Soprans, bei der punktierten ganzen Note <i>g</i> in T. 3 wurde diese durch den harmonischen Wechsel C-G-C realisiert, bei dem das <i>g</i> einen Liegeton bildet (durch die Punktierung im Tenor wirkt der C-G-C-Wechsel sogar wie eine kleine Binnenkadenz auf <i>c</i>). Auch die Harmoniefolge C-e-G wäre an dieser Stelle gut möglich gewesen, jedoch hätte der G-Dur-Klang am Ende die dominantische Wirkung der folgenden C-Kadenz vorweggenommen. Insgesamt sind nur grundstellige Akkorde gewählt worden, lediglich der Sextakkord am Ende verdankt sich dem Bemühen, unmittelbar vor der Kadenz eine G-Dur-Klang zu vermeiden. Ein eigenständiger h-Moll-Klang hätte übrigens im 16. Jahrhundert aufgrund des benötigten <i>fis</i> nicht zur Disposition gestanden.  
+  Die Musteraussetzung zeigt am Anfang eine klangliche Abwechslung durch den vorgezogenen Einsatz des Soprans, bei der punktierten ganzen Note <i>g</i> in T. 3 wurde diese durch den harmonischen Wechsel C-G-C realisiert, bei dem das <i>g</i> einen Liegeton bildet (durch die Punktierung im Tenor wirkt der C-G-C-Wechsel sogar wie eine kleine Binnenkadenz auf <i>c</i>). Auch die Harmoniefolge C-e-G wäre an dieser Stelle gut möglich gewesen, jedoch hätte der G-Dur-Klang am Ende die dominantische Wirkung der folgenden C-Kadenz vorweggenommen. Insgesamt sind nur grundstellige Akkorde gewählt worden, lediglich der Sextakkord am Ende verdankt sich dem Bemühen, unmittelbar vor der Kadenz eine G-Dur-Klang zu vermeiden. Ein eigenständiger h-Moll-Klang hätte übrigens im 16. Jahrhundert aufgrund des benötigten <i>fis</i> nicht zur Disposition gestanden.
 </p>
 <p>
-  Der erste Melodieabschluss der Vorgabe und der Kadenzplan Pontios legen in T. 5 eine <i>c</i>-Kadenz nahe. Dabei ergibt sich allerdings das folgende Problem: 
+  Der erste Melodieabschluss der Vorgabe und der Kadenzplan Pontios legen in T. 5 eine <i>c</i>-Kadenz nahe. Dabei ergibt sich allerdings das folgende Problem:
 </p>
 <img class="smallWidth" src="/content/tutorials/kontrapunkt-form/Kadenzen_0001.png" alt="">
 <audio controls preload="auto" src="/content/tutorials/kontrapunkt-form/sound/Kadenzen-0001.mp3"></audio>
@@ -156,14 +156,14 @@ abstract: Im letzten Tutorial zum Kontrapunkt des 16. Jahrhunderts geht es darum
     Es wäre fehlerhaft, eine reguläre Sopranklausel gegen die Tenorklausel zu schreiben (a), da eine korrekte (konsonante) Vorbereitung nicht möglich ist.
   </li>
   <li>
-    Modellhaft hat die Vorbereitung einer Dissonanz die gleiche Länge wie die folgende Dissonanz. In der Literatur lassen sich zu diesem Problem Beispiele finden, wo die Vorbereitungen nur halb so lang ist wie die regulär folgende Dissonanz. In solchen Fällen wird üblicher Weise die Auflösung verziert (b), wodurch Vorbereitung und real erklingende Dissonanz wieder gleich lang erscheinen.  
+    Modellhaft hat die Vorbereitung einer Dissonanz die gleiche Länge wie die folgende Dissonanz. In der Literatur lassen sich zu diesem Problem Beispiele finden, wo die Vorbereitungen nur halb so lang ist wie die regulär folgende Dissonanz. In solchen Fällen wird üblicher Weise die Auflösung verziert (b), wodurch Vorbereitung und real erklingende Dissonanz wieder gleich lang erscheinen.
   </li>
   <li>
-    Verzichtet man wegen der genannten Schwierigkeiten auf eine Synkopendissonanz, lässt sich eine Kadenzwirkung auch dur eine <i>5-6-8</i>-Bewegung erzeugen (c). Diese Kadenz gilt allerdings aufgrund der fehlenden Synkopendissonanz nur als ›schwache‹ Kadenz.  
+    Verzichtet man wegen der genannten Schwierigkeiten auf eine Synkopendissonanz, lässt sich eine Kadenzwirkung auch dur eine <i>5-6-8</i>-Bewegung erzeugen (c). Diese Kadenz gilt allerdings aufgrund der fehlenden Synkopendissonanz nur als ›schwache‹ Kadenz.
   </li>
 </ul>
 <p>
-  In dem folgenden Beispiel wurde für den Abschluss des ersten Abschnitts die Möglichkeit c) mit der <i>5-6-8</i>-Intervallfolge verwendet. Hierzu wurden die Töne <i>d-c</i> (punktierte Halbe und Viertel) der Vorlage in den Alt gesetzt, und die sich anschließende Tenorklausel <i>d-c</i> (ganz und halbe Note) in den Bass gelegt. In der vierstimmigen Ausarbeitung entsteht durch diese Disposition eine schwache Kadenz auf <i>c</i> (wegen der Tenorklausel im Bass und der fehlenden Synkopendissonanz). Um einen starken Abschluss zu erreichen, wurde anschließend eine weitere Kadenz ergänzt (beim Berühren der Abbildung grüne Aussetzung mit Sopranklausel im Tenor und Bassklausel im Bass). Diese Kadenz ergab sich nicht aus der Vorlage, sondern wurde frei ergänzt, um die erste formbildende Kadenz der Stilübung nach dem Kadenzplan Pontios (<i>c</i> = »quasi prinicipalis«) als starke Kadenz ausarbeiten zu können.  
+  In dem folgenden Beispiel wurde für den Abschluss des ersten Abschnitts die Möglichkeit c) mit der <i>5-6-8</i>-Intervallfolge verwendet. Hierzu wurden die Töne <i>d-c</i> (punktierte Halbe und Viertel) der Vorlage in den Alt gesetzt, und die sich anschließende Tenorklausel <i>d-c</i> (ganz und halbe Note) in den Bass gelegt. In der vierstimmigen Ausarbeitung entsteht durch diese Disposition eine schwache Kadenz auf <i>c</i> (wegen der Tenorklausel im Bass und der fehlenden Synkopendissonanz). Um einen starken Abschluss zu erreichen, wurde anschließend eine weitere Kadenz ergänzt (beim Berühren der Abbildung grüne Aussetzung mit Sopranklausel im Tenor und Bassklausel im Bass). Diese Kadenz ergab sich nicht aus der Vorlage, sondern wurde frei ergänzt, um die erste formbildende Kadenz der Stilübung nach dem Kadenzplan Pontios (<i>c</i> = »quasi prinicipalis«) als starke Kadenz ausarbeiten zu können.
 </p>
 <a class="imageChange">
   <img class="image-on originalWidth" src="/content/tutorials/kontrapunkt-form/Stiluebung-1a.png" alt="" />
@@ -181,7 +181,7 @@ abstract: Im letzten Tutorial zum Kontrapunkt des 16. Jahrhunderts geht es darum
 <audio controls preload="auto" src="/content/tutorials/kontrapunkt-form/sound/Stiluebung-2a.mp3"></audio>
 <audio controls preload="auto" src="/content/tutorials/kontrapunkt-form/sound/Stiluebung-2b.mp3"></audio>
 <p>
-  Grundlage der vierstimmigen Aussetzung war der Dezimen-Außenstimmensatz, der <a href="/tutorials/kontrapunkt-mehrstimmig/#dreistimmig">an anderer Stelle</a> bereits eingehend erörtert worden ist. Allerdings wurde der Dezimensatz auf unterschiedliche Stimmen verteilt: Er beginnt zwischen Sopran und Tenor (in der Abbildung oben am Ende des zweiten Taktes), der Bass übernimmt im vierten Takt des Beispiels und führt ihn bis zur Kadenz weiter. Auch in diesem Fall wird am Endes des Abschnitts noch eine Kadenz ergänzt.  
+  Grundlage der vierstimmigen Aussetzung war der Dezimen-Außenstimmensatz, der <a href="/tutorials/kontrapunkt-mehrstimmig/#dreistimmig">an anderer Stelle</a> bereits eingehend erörtert worden ist. Allerdings wurde der Dezimensatz auf unterschiedliche Stimmen verteilt: Er beginnt zwischen Sopran und Tenor (in der Abbildung oben am Ende des zweiten Taktes), der Bass übernimmt im vierten Takt des Beispiels und führt ihn bis zur Kadenz weiter. Auch in diesem Fall wird am Endes des Abschnitts noch eine Kadenz ergänzt.
 </p>
 <img class="originalWidth" src="/content/tutorials/kontrapunkt-form/Stiluebung-2c.png" alt="" />
 <audio controls preload="auto" src="/content/tutorials/kontrapunkt-form/sound/Stiluebung-2c.mp3"></audio>
@@ -201,9 +201,9 @@ abstract: Im letzten Tutorial zum Kontrapunkt des 16. Jahrhunderts geht es darum
 </p>
 
 
-<h3 id="freieGestaltungen">Freie Gestaltungen</h3> 
+<h3 id="freieGestaltungen">Freie Gestaltungen</h3>
 <p>
-  Für den nächsten Abschnitt gibt es in der Vorgabe keine Entsprechung. Er wurde eingefügt und frei gestaltet, um einerseits einen mehrstimmig polyphonen Abschnitt auszuarbeiten, andererseits eine ›cadenza doppia‹ in <i>a</i> (»principale«) zu platzieren. Das nächste Beispiel zeigt die fertige Ausarbeitung dieses Abschnitts, der wieder über den Alt per Kadenzflucht (›fuggir la cadenza‹) verbunden worden ist (beim Berühren der Abbildung wird die Kadenz in <i>a</i> grün eingefärbt). 
+  Für den nächsten Abschnitt gibt es in der Vorgabe keine Entsprechung. Er wurde eingefügt und frei gestaltet, um einerseits einen mehrstimmig polyphonen Abschnitt auszuarbeiten, andererseits eine ›cadenza doppia‹ in <i>a</i> (»principale«) zu platzieren. Das nächste Beispiel zeigt die fertige Ausarbeitung dieses Abschnitts, der wieder über den Alt per Kadenzflucht (›fuggir la cadenza‹) verbunden worden ist (beim Berühren der Abbildung wird die Kadenz in <i>a</i> grün eingefärbt).
 </p>
 <a class="imageChange">
   <img class="image-on originalWidth" src="/content/tutorials/kontrapunkt-form/Stiluebung-5a_0001.png" alt="" />
@@ -219,7 +219,7 @@ abstract: Im letzten Tutorial zum Kontrapunkt des 16. Jahrhunderts geht es darum
 </a>
 <audio controls preload="auto" src="/content/tutorials/kontrapunkt-form/sound/Stiluebung-5b.mp3"></audio>
 <p>
-  Der vorletzte Abschnitt der Vorgabe ist insofern problematisch, als er prinzipiell wie eine Sopranklausel einer <i>a</i>-Kadenz aussieht, die rhythmische Gestaltung für eine einfach Kadenz oder eine ›cadenza doppia‹ ungeeignet. Aus diesem Grund wurde eine Kadenz nach <i>a</i> nur angedeutet (mit der korrespondierenden Tenorklausel im Bass), die Dehnung der Sopranklausel für ein <i>fuggir la cadenza</i> genutzt und an diese geflohenen Kadenz dann jenseits der Vorgabe eine <i>cadenza doppia</i> auf <i>a</i> angehängt (grün beim Berühren der Abbildung). 
+  Der vorletzte Abschnitt der Vorgabe ist insofern problematisch, als er prinzipiell wie eine Sopranklausel einer <i>a</i>-Kadenz aussieht, die rhythmische Gestaltung für eine einfach Kadenz oder eine ›cadenza doppia‹ ungeeignet. Aus diesem Grund wurde eine Kadenz nach <i>a</i> nur angedeutet (mit der korrespondierenden Tenorklausel im Bass), die Dehnung der Sopranklausel für ein <i>fuggir la cadenza</i> genutzt und an diese geflohenen Kadenz dann jenseits der Vorgabe eine <i>cadenza doppia</i> auf <i>a</i> angehängt (grün beim Berühren der Abbildung).
 </p>
 <a class="imageChange">
   <img class="image-on originalWidth" src="/content/tutorials/kontrapunkt-form/Stiluebung-6_0001.png" alt="" />
@@ -233,8 +233,8 @@ abstract: Im letzten Tutorial zum Kontrapunkt des 16. Jahrhunderts geht es darum
 
 <h3 id="schluss">Der Schluss</h3>
 <p>
-  In den ersten Takten des folgenden Beispiels ist zu sehen, dass die Vorgabe aufgrund der tiefen Lage in den Alt gelegt worden ist. Zu ihr bildet der Sopran mit einer 6-5-Seitenbewegung einen einfachen und regulären Kontrapunkt. Unter dem langen Schlusston des Altes ließ sich die Imitation weiterführen, anschließend wurde eine <a href="/tutorials/kadenz/#doppia">cadenza doppia</a> ergänzt. Diese Kadenz beginnt mit einer klanglichen Attraktion, einem übermäßigen Klang <i>e-g#-c</i>, der als madrigaleske Figur im frühen 17. Jahrhundert sehr beliebt war. 
-</p> 
+  In den ersten Takten des folgenden Beispiels ist zu sehen, dass die Vorgabe aufgrund der tiefen Lage in den Alt gelegt worden ist. Zu ihr bildet der Sopran mit einer 6-5-Seitenbewegung einen einfachen und regulären Kontrapunkt. Unter dem langen Schlusston des Altes ließ sich die Imitation weiterführen, anschließend wurde eine <a href="/tutorials/kadenz/#doppia">cadenza doppia</a> ergänzt. Diese Kadenz beginnt mit einer klanglichen Attraktion, einem übermäßigen Klang <i>e-g#-c</i>, der als madrigaleske Figur im frühen 17. Jahrhundert sehr beliebt war.
+</p>
 <a class="imageChange">
   <img class="image-on originalWidth" src="/content/tutorials/kontrapunkt-form/Stiluebung-7a.png" alt="" />
   <img class="image-off originalWidth" src="/content/tutorials/kontrapunkt-form/Stiluebung-7b.png" alt="" />
@@ -251,8 +251,8 @@ abstract: Im letzten Tutorial zum Kontrapunkt des 16. Jahrhunderts geht es darum
 
 <h3 id="ergebnis">Das Ergebnis</h3>
 <p>
-  Im Folgenden finden Sie das Ergebnis der oben beschriebenen Arbeitsschritte. Beim Berühren der Abbildungen wird die eingangs gegebene <a href="#vorgabe">Vorgabe</a> sichtbar bzw. farbig markiert: 
-</p> 
+  Im Folgenden finden Sie das Ergebnis der oben beschriebenen Arbeitsschritte. Beim Berühren der Abbildungen wird die eingangs gegebene <a href="#vorgabe">Vorgabe</a> sichtbar bzw. farbig markiert:
+</p>
 <a class="imageChange">
   <img class="image-on originalWidth" src="/content/tutorials/kontrapunkt-form/Aufgabenloesung-3_0001.png" alt="" />
   <img class="image-off originalWidth" src="/content/tutorials/kontrapunkt-form/Aufgabenloesung-3-farbe_0001.png" alt="" />
@@ -283,7 +283,7 @@ abstract: Im letzten Tutorial zum Kontrapunkt des 16. Jahrhunderts geht es darum
 
 <h3 id="video">Vorgehensweise bei einer nicht-rhythmisierten Vorgabe</h3>
 <p>
-  Das folgende Video zeigt die Vorgehensweise bei einer nicht-rhythmisierten Vorgabe. Die in dem Video gegebene Kadenzordnung ist dabei eine pragmatische Schnittmenge verschiedener Quellen (<a href="https://de.wikipedia.org/wiki/Pietro_Aron" target="_blank">Aaron</a>, <a href="https://de.wikipedia.org/wiki/Gallus_Dre%C3%9Fler" target="_blank">Dressler</a> und <a href="https://en.wikipedia.org/wiki/Pietro_Pontio" target="_blank">Pontius</a>), eignet sich gut als Merkhilfe für die Kadenzdisposition in einer Stilübung und unterscheidet sich geringfügig von der <a href="#kadenzdisposition">oben gegebenen Übersicht</a>.   
+  Das folgende Video zeigt die Vorgehensweise bei einer nicht-rhythmisierten Vorgabe. Die in dem Video gegebene Kadenzordnung ist dabei eine pragmatische Schnittmenge verschiedener Quellen (<a href="https://de.wikipedia.org/wiki/Pietro_Aron" target="_blank">Aaron</a>, <a href="https://de.wikipedia.org/wiki/Gallus_Dre%C3%9Fler" target="_blank">Dressler</a> und <a href="https://en.wikipedia.org/wiki/Pietro_Pontio" target="_blank">Pontius</a>), eignet sich gut als Merkhilfe für die Kadenzdisposition in einer Stilübung und unterscheidet sich geringfügig von der <a href="#kadenzdisposition">oben gegebenen Übersicht</a>.
 </p>
 <video class ="video100" src="http://digi-learn.de/data/videos/Kp-Kadenzorte-zur-Darstellung-eines-Modus~CC BY-SA~.mp4" controls></video>
 <p>

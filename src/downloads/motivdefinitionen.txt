@@ -1,8 +1,7 @@
 ---
 title: Definitionen zum musikalischen ›Motiv‹
 author: Ulrich Kaiser
-category: themen
-subCategory: grundlagen
+category: grundlagen
 abstract: Definitionen zu einem Grundbegriff der Formenlehre und musikalischen Analyse von Adolf Bernhard Marx, Johann Christian Lobe, Hugo Riemann, Siegfried Garibaldi Kallenberg, Hugo Leichtentritt, Theodor Wiehmeyer und Hermann Erpf.
 thumbnail: /img/thumbnails/formenlehre-motivdefinitionen.png
 link: /downloadfiles/Formenlehre-Motivdefinitionen.pdf

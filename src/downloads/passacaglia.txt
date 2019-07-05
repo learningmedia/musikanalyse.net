@@ -1,8 +1,7 @@
 ---
 title: Materialien zur Passacaglia
 author: Ulrich Kaiser
-category: themen
-subCategory: gattungen
+category: gattungen
 abstract: Hier finden Sie Materialien zur Passacaglia und zu passacaglia-nahen Kompositionen und Beispiele von Philipps, Biber, Monteverdi, Bach, Mozart und Brahms.
 thumbnail: /img/thumbnails/passacaglia.jpg
 link: /downloadfiles/passacaglia.pdf

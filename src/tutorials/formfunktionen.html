@@ -3,7 +3,7 @@ title: Was ist eine Formfunktion?
 author: Ulrich Kaiser
 date: 2017-07-29
 modified: 2017-05-01
-layout: tutorial.ejs
+layout: tutorial.nunjucks
 category: Form, Terminologie
 abstract: In diesem Tutorial wird der Begriff ›Formfunktion‹ erklärt.
 ---
@@ -17,7 +17,7 @@ abstract: In diesem Tutorial wird der Begriff ›Formfunktion‹ erklärt.
   <li><a href="#literatur">Nachweise und Literatur</a></li>
 </ol>
 <p>
-  In den letzten Jahren hat der Begriff der <i>Formfunktion</i> für die musikalische Analyse immer mehr an Bedeutung gewonnen. Diese Entwicklung lässt sich als Kritik an musikalischen Analysen verstehen, die lediglich bestimmte Details benennen, ohne deren Bedeutung für das Ganze (also ohne die Bedeutung eines Details für die musikalische Form) zu untersuchen. Eine <a href="/tutorials/kadenz/" target="_blank">Kadenz</a> beispielsweise ist ein bekanntes Modell zur Analyse von modaler oder tonaler Musik. Am Anfang einer Komposition hat eine Kadenz jedoch eine ganz andere Bedeutung (oder auch: eine ganz andere Formfunktion) als am Ende eines Stücks. In dem folgenden Tutorial werden die Verwendungsweise des Begriffs <i>Formfunktion</i> sowie einige gebräuchliche Formfunktionen veranschaulicht.            
+  In den letzten Jahren hat der Begriff der <i>Formfunktion</i> für die musikalische Analyse immer mehr an Bedeutung gewonnen. Diese Entwicklung lässt sich als Kritik an musikalischen Analysen verstehen, die lediglich bestimmte Details benennen, ohne deren Bedeutung für das Ganze (also ohne die Bedeutung eines Details für die musikalische Form) zu untersuchen. Eine <a href="/tutorials/kadenz/" target="_blank">Kadenz</a> beispielsweise ist ein bekanntes Modell zur Analyse von modaler oder tonaler Musik. Am Anfang einer Komposition hat eine Kadenz jedoch eine ganz andere Bedeutung (oder auch: eine ganz andere Formfunktion) als am Ende eines Stücks. In dem folgenden Tutorial werden die Verwendungsweise des Begriffs <i>Formfunktion</i> sowie einige gebräuchliche Formfunktionen veranschaulicht.
 </p>
 <p>
   <span style="font-size: 0.8em;"><a href="#tutorialTitle">zurück zum Inhaltsverzeichnis</a></span>
@@ -30,12 +30,12 @@ abstract: In diesem Tutorial wird der Begriff ›Formfunktion‹ erklärt.
 </p>
   <pre>
     <code>
-      "x = 5"<br> 
+      "x = 5"<br>
       "x ist laut"
     </code>
   </pre>
  <p>
-   Für die Gleichung wären für x z.B. "2 + 3" oder "5 x 5 / 5" als Einsatzwerte möglich, der Satz hingegen könnte durch "Musik" oder "Der Motor" vervollständigt werden. "Musik" und "Der Motor" sind daher funktional gleichwertige (äquivalente) Möglichkeiten, um die Satzfunktion richtig zu vervollständigen. Anhand der Beispiele ist jedoch auch klar, dass nicht alle Einsatzwerte eine richtige Aussage ermöglichen: In der mathematischen Funktion wären beispielsweise die Einsatzwerte "3" oder auch "6 &minus; 2" ausgeschlossen. Überträgt man dieses Verständnis auf die musikalische Analyse, könnte eine Formfunktion zum Beispiel lauten "x = Anfang". Und eine Untersuchung könnte sich an diese Aussage anschließend, die ermittelt, auf welche Weise Komponisten z.B. in Sonaten oder Fugen Anfänge gestaltet haben. Für die Formfunktion <i>Anfang</i> könnten dann die verschiedenen Lösungsmöglichkeiten der Komponisten als funktional äquivalent betrachtet werden.   
+   Für die Gleichung wären für x z.B. "2 + 3" oder "5 x 5 / 5" als Einsatzwerte möglich, der Satz hingegen könnte durch "Musik" oder "Der Motor" vervollständigt werden. "Musik" und "Der Motor" sind daher funktional gleichwertige (äquivalente) Möglichkeiten, um die Satzfunktion richtig zu vervollständigen. Anhand der Beispiele ist jedoch auch klar, dass nicht alle Einsatzwerte eine richtige Aussage ermöglichen: In der mathematischen Funktion wären beispielsweise die Einsatzwerte "3" oder auch "6 &minus; 2" ausgeschlossen. Überträgt man dieses Verständnis auf die musikalische Analyse, könnte eine Formfunktion zum Beispiel lauten "x = Anfang". Und eine Untersuchung könnte sich an diese Aussage anschließend, die ermittelt, auf welche Weise Komponisten z.B. in Sonaten oder Fugen Anfänge gestaltet haben. Für die Formfunktion <i>Anfang</i> könnten dann die verschiedenen Lösungsmöglichkeiten der Komponisten als funktional äquivalent betrachtet werden.
 </p>
 <p>
   <span style="font-size: 0.8em;"><a href="#tutorialTitle">zurück zum Inhaltsverzeichnis</a></span>
@@ -44,7 +44,7 @@ abstract: In diesem Tutorial wird der Begriff ›Formfunktion‹ erklärt.
 
 <h3 id="extrinsisch">Besonderheit von Formfunktionen: extrinsische Bestimmung</h3>
 <p>
-  Ein Formmodell wie das Modell der Periode oder ein Harmoniemodell wie eine Quintfallsequenz sind durch Eigenschaften gekennzeichnet sind, die fest mit dem Modell verbunden sind. Solche Eigenschaften werden als <b>innere Eigenschaften</b> oder <b>intrinsische Eigenschaften</b> bezeichnet. Auch eine Formfunktion kann durch innere Eigenschaften charakterisiert sein, sie muss es jedoch nicht. Denken sie z.B. an den Begriff <i>Frühling</i>: Sie können sich diesen Begriff rein zeitlich vorstellen, ohne dabei an irgendwelche konkreten Eigenschaften des Frühlings zu denken. In diesem Sinne ist der Frühling die Jahreszeit zwischen dem Winter und dem Sommer und wird von diesen beiden Jahreszeiten quasi von außen, also <i>extrinsisch</i> bestimmt. 
+  Ein Formmodell wie das Modell der Periode oder ein Harmoniemodell wie eine Quintfallsequenz sind durch Eigenschaften gekennzeichnet sind, die fest mit dem Modell verbunden sind. Solche Eigenschaften werden als <b>innere Eigenschaften</b> oder <b>intrinsische Eigenschaften</b> bezeichnet. Auch eine Formfunktion kann durch innere Eigenschaften charakterisiert sein, sie muss es jedoch nicht. Denken sie z.B. an den Begriff <i>Frühling</i>: Sie können sich diesen Begriff rein zeitlich vorstellen, ohne dabei an irgendwelche konkreten Eigenschaften des Frühlings zu denken. In diesem Sinne ist der Frühling die Jahreszeit zwischen dem Winter und dem Sommer und wird von diesen beiden Jahreszeiten quasi von außen, also <i>extrinsisch</i> bestimmt.
 </p>
 <img src="/content/tutorials/formfunktionen/wfs-extrinsisch.png" alt="Abbildung extrinsische Definition" />
 <p>
@@ -100,7 +100,7 @@ abstract: In diesem Tutorial wird der Begriff ›Formfunktion‹ erklärt.
 </table>
 <br>
 <p class="lineHeight">
-  Vergegenwärtigt man sich, dass jede Komposition irgend einen Anfang und ein Ende hat, die durch eine Mitte verbunden sind, dürfte das Interesse an gerade diesen Begriffen unmittelbar einleuchtend sein. Auch auf der Ebene von Taktgruppen zeigt die Erfahrung, dass sich diese meist in einen Anfang, ein Ende sowie eine Verbindung (zum Beispiel eine Modulation) gliedern lassen. Ein Verständnis dieser drei Formfunktionen ist dabei so weit verbreitet, dass V. Kofi Agawu für die klassische Musik von einem Beginning-Middle-End Paradigm<a class="fnNumber" id="fnz2" href="#fn2">[2]</a> gesprochen hat.<br> 
+  Vergegenwärtigt man sich, dass jede Komposition irgend einen Anfang und ein Ende hat, die durch eine Mitte verbunden sind, dürfte das Interesse an gerade diesen Begriffen unmittelbar einleuchtend sein. Auch auf der Ebene von Taktgruppen zeigt die Erfahrung, dass sich diese meist in einen Anfang, ein Ende sowie eine Verbindung (zum Beispiel eine Modulation) gliedern lassen. Ein Verständnis dieser drei Formfunktionen ist dabei so weit verbreitet, dass V. Kofi Agawu für die klassische Musik von einem Beginning-Middle-End Paradigm<a class="fnNumber" id="fnz2" href="#fn2">[2]</a> gesprochen hat.<br>
 </p>
 <p>
   <span style="font-size: 0.8em;"><a href="#tutorialTitle">zurück zum Inhaltsverzeichnis</a></span>
@@ -109,7 +109,7 @@ abstract: In diesem Tutorial wird der Begriff ›Formfunktion‹ erklärt.
 
 <h3 id="gattungsspezifischeFormfunktionen">Gattungsspezifische Formfunktionen</h3>
 <p>
-  Insbesondere für die Gattungen Sonate und Sinfonie haben sich einige Formfunktionen etabliert: 
+  Insbesondere für die Gattungen Sonate und Sinfonie haben sich einige Formfunktionen etabliert:
 </p>
 <ol start="1">
   <li><b>Exposition</b>

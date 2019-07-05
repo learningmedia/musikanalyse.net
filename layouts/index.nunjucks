@@ -1,0 +1,5 @@
+{% extends "base.nunjucks" %}
+
+{% block content %}
+{{ contents | safe }}
+{% endblock %}

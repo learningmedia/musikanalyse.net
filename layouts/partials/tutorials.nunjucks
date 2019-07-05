@@ -1,0 +1,30 @@
+<div class="line">
+  <div class="s12 m-2 l-2">&nbsp;</div>
+  <div class="s12 m-10 l-10">
+    <div id="babsBsb-tutorials">
+      <a href="https://opacplus.bsb-muenchen.de/metaopac/search?&query=musikanalyse.net">
+        <img src="/img/BABS-BSB-Logo.png" alt="" />
+      </a>
+    </div>
+    <h1 class="text-size-40">Tutorials</h1>
+    <noscript>Diese Seite funktioniert nicht ohne Javascript.</noscript>
+    <section class="margin-top-20">
+      <input type="search" id="tutorials-filter" placeholder="Suchbegriff eingeben">
+    </section>
+
+    {% for info in tutorialInfos %}
+    <section data-role="tutorial-section" class="margin-top-20">
+      <h2>{{ info.title }}</h2>
+      <ul>
+        {% for tutorial in collections.tutorials | categories(info.categories) %}
+        <li data-role="tutorial-item">
+          <a data-role="tutorial-link" href="/{{ tutorial.path }}" title="{{ tutorial.abstract }}">{{ tutorial.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endfor %}
+
+  </div>
+</div>
+<script src="/scripts/tutorials.js"></script>

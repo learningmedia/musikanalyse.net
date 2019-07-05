@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+    {% block styles %}
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800&subset=latin,latin-ext" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    {% endblock %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="/img/favicon/site.webmanifest" />
+  </head>
+
+
+  <body class="{{ "size-1140" if wide else "size-960" }}">
+
+    {% block header %}
+    {% include "partials/header.nunjucks" %}
+    {% endblock %}
+
+    <main role="main">
+
+      {% if backButton %}
+      <div class="line margin-top-40">
+        <div class="s-12 m-8 l-10">
+          &nbsp;
+        </div>
+        <div class="s-12 m-4 l-2">
+          <a class="Button Button--blue" onclick="javascript:history.back();" style="width: auto;">Zurück...</a>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if printButton %}
+      <div class="line margin-top-bottom-40">
+        <div class="s-12 m-8 l-10">
+          &nbsp;
+        </div>
+        <div class="s-12 m-4 l-2">
+          <a class="Button Button--red" onclick="javascript:window.print();" style="width: auto;">Drucken</a>
+        </div>
+      </div>
+      {% endif %}
+
+      <!-- Content -->
+      {% block content %}
+      <div class="section-small-padding background-white">
+        <div class="line">
+          <div class="s-12 m-12 center margin-m-bottom-30">
+            {% block beforeContent %}{% endblock %}
+            {{ contents | safe }}
+          </div>
+        </div>
+      </div>
+      {% endblock %}
+
+    </main>
+
+    {% block footer %}
+    {% include "partials/footer.nunjucks" %}
+    {% endblock %}
+
+    {% block scripts %}
+    <script src="/scripts/main.js"></script>
+    {% endblock %}
+  </body>
+</html>

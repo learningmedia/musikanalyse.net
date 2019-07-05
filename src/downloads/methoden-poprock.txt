@@ -1,8 +1,7 @@
 ---
 title: Methoden der musikalischen Analyse. Ein Überblick über die Ansätze zur Analyse von Pop- und Rockmusik
 author: Ulrich Kaiser
-category: themen
-subCategory: methoden
+category: methoden
 abstract: Die hier zusammengestellten Materialien zu Methoden der musikalischen Analyse sollen veranschaulichen helfen, dass es nicht ›die‹ richtige Analyse gibt, sondern dass verschiedene, angemessene Sichtweisen auf Musik nebeneinander existieren können. Dabei stellen sich die Fragen, warum man welche Methode zur Beschreibung von Pop- und Rockmusik wählt.
 thumbnail: /img/thumbnails/methoden_analyse-pop-rock.jpg
 link: /downloadfiles/methoden_analyse-pop-rock.pdf

@@ -1,8 +1,7 @@
 ---
 title: Fugen schreiben und verstehen
 author: Ulrich Kaiser
-category: themen
-subCategory: gattungen
+category: gattungen
 abstract: Hier finden Sie Materialien zum Verständnis der Form und Satztechnik von Fugen aus der ersten Hälfte des 18. Jahrhunderts, Erklärungen zum Aufbau von Epositionen, zum mehrfachen Kontrapunkt, zur Themenbeantwortung und Diminutionstechnik, Erläuterungen einer Formkonzeption mithilfe von Satzmodellen, Hilfen zum satztechnischen ›Design‹ sowie zwei Beispielfugen von Johnann Sebastian Bach.
 thumbnail: /img/thumbnails/fuge.jpg
 link: /downloadfiles/Fuge.pdf

@@ -1,5 +1,7 @@
 window.addEventListener('DOMContentLoaded', function () {
 
+  // EXECISES /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
   [].slice.call(window.document.querySelectorAll('.exercise')).forEach(function (exercise) {
     var link = document.createElement('a');
     link.classList.add('exercise-link');
@@ -17,6 +19,10 @@ window.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+
+
+  // COPYRIGHTS /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
   var copyrightNote = [
     'Zitatrecht nach § 51 S. 2 Nr. 1 UrhG',
     'Für das Angebot von musikanalyse.net gilt das Zitatrecht § 51 S. 2 Nr. 1 UrhG, weil die Beiträge ›wissenschaftliche Werke‹ sind, deren Inhalt der Vermittlung von Erkenntnissen dient bzw. bei denen das Vorliegen eines Erkenntnisbezuges gegeben ist. Nach der seit 2008 gültigen Neufassung des § 51 erstreckt sich das Zitatrecht auch auf Multimediawerke.',
@@ -29,5 +35,68 @@ window.addEventListener('DOMContentLoaded', function () {
     if (accepted === 'true') return;
     accepted = confirm(copyrightNote);
     Cookies.set('copyright-note-accepted', accepted ? 'true' : 'false');
-  });  
+  });
+
+
+
+  // FOLDABLE ELEMENTS /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  var element;
+  var elements = document.getElementsByClassName("foldable");
+
+  for (var i = 0; i < elements.length; i++) {
+    element = elements[i];
+    var expanded = element.getAttribute("data-initial-state") === 'expanded';
+    var dataText = element.getAttribute("data-text");
+    var anchor = document.createElement("a");
+    var link = 'toggleId-' + i;
+    anchor.classList.add(link);
+    var textElement = document.createTextNode(dataText + (expanded ? " - verbergen" : " - anzeigen"));
+    anchor.appendChild(textElement);
+    anchor.addEventListener('click', foldableClick);
+    anchor.classList.add(expanded ? 'foldable-block' : 'foldable-collapsed');
+    anchor.classList.add('clickable');
+
+    element.id = link;
+    element.parentNode.insertBefore(anchor, element);
+    element.style.display = expanded ? 'block' : 'none';
+  }
+
+  function foldableClick(event) {
+    var elem = event.target;
+    var text = elem.innerHTML;
+    var cssClass = elem.classList[0];
+    var container = document.getElementById(cssClass);
+    if (container) {
+      if (container.style.display === 'none') {
+        container.style.display = 'block';
+        elem.textContent = text.replace('anzeigen', 'verbergen');
+        elem.classList.remove('foldable-collapsed');
+        elem.classList.add('foldable-block');
+      } else {
+        container.style.display = 'none';
+        elem.textContent = text.replace('verbergen', 'anzeigen');
+        elem.classList.remove('foldable-block');
+        elem.classList.add('foldable-collapsed');
+      }
+    }
+  }
+
+
+  // TOGGLE MATERIALS /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  $("a[data-toggle]").on("click", function(event) {
+    event.preventDefault();
+    var title = $(this).attr("data-toggle");
+    var div = document.getElementById(title)
+    if (div.style.display == "none") {
+      div.style.display = "block";
+      $('html, body').animate({
+        scrollTop: $(div).offset().top
+      }, 500);
+    } else {
+      div.style.display = "none";
+    }
+  });
+
 });
