@@ -1,0 +1,13 @@
+{% extends "base.nunjucks" %}
+
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" href="/styles/pairsgame/musikanalyse.net-games.css" />
+<link rel="stylesheet" href="/styles/pairsgame/pairsgame.css" />
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script src="/scripts/pairsgame/index.js"></script>
+<script src="/scripts/pairsgame/pairsgame.js"></script>
+{% endblock %}

@@ -6,7 +6,7 @@
   {% for info in downloadInfos %}
   <section class="margin-top-20">
     <h2>{{ info.title }}</h2>
-    <div class="foldable" data-text="Materialien ›{{ info.title }}‹" style="padding-top: 20px;">
+    <div class="foldable" data-initial-state="expanded" data-text="Materialien ›{{ info.title }}‹" style="padding-top: 20px;">
       <ul>
         {% for downloadfile in collections.downloads | categories(info.categories) %}
         <li>

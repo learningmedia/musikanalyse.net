@@ -1,5 +1,5 @@
 {% extends "base.nunjucks" %}
 
 {% block beforeContent %}
-{% include "partials/materials.nunjucks" %}
+{% include "partials/tutorials.nunjucks" %}
 {% endblock %}

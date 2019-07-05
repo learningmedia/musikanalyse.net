@@ -10,6 +10,7 @@ const layouts = require('metalsmith-layouts');
 const permalinks = require('metalsmith-permalinks');
 const collections = require('metalsmith-collections');
 const autoprefixer = require('metalsmith-autoprefixer');
+const metadata = require('metalsmith-collection-metadata');
 
 const downloadInfos = [{
   title: 'Grundlagen',
@@ -65,6 +66,11 @@ function build(done) {
     .use(collections({
       tutorials: { pattern: 'tutorials/**', sortBy: 'title' },
       downloads: { pattern: 'downloads/**', sortBy: 'title' }
+    }))
+    .use(metadata({
+      'collections.tutorials': {
+        backButton: true
+      }
     }))
     .use(permalinks({ pattern: ':slug', relative: false }))
     .use(layouts({

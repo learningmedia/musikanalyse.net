@@ -1021,6 +1021,11 @@ component-inherit@0.0.3:
   resolved "https://registry.yarnpkg.com/component-inherit/-/component-inherit-0.0.3.tgz#645fc4adf58b72b649d5cae65135619db26ff143"
   integrity sha1-ZF/ErfWLcrZJ1crmUTVhnbJv8UM=
 
+component-props@*:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/component-props/-/component-props-1.1.1.tgz#f9b7df9b9927b6e6d97c9bd272aa867670f34944"
+  integrity sha1-+bffm5kntubZfJvScqqGdnDzSUQ=
+
 concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
@@ -3428,6 +3433,14 @@ metalsmith-autoprefixer@~1.1.2:
     minimatch "^3.0.4"
     postcss "^4.1.16"
 
+metalsmith-collection-metadata@~0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/metalsmith-collection-metadata/-/metalsmith-collection-metadata-0.1.0.tgz#622e968c5751ffb50ba830f670431faf3132ef00"
+  integrity sha1-Yi6WjFdR/7ULqDD2cEMfrzEy7wA=
+  dependencies:
+    object-assign "~4.1.0"
+    to-function "~2.0.6"
+
 metalsmith-collections@~0.9.0:
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/metalsmith-collections/-/metalsmith-collections-0.9.0.tgz#a0d19347a51d5fbd026899dfc1f4d68af50e0e17"
@@ -4112,7 +4125,7 @@ oauth-sign@~0.9.0:
   resolved "https://registry.yarnpkg.com/oauth-sign/-/oauth-sign-0.9.0.tgz#47a7b016baa68b5fa0ecf3dee08a85c679ac6455"
   integrity sha512-fexhUFFPTGV8ybAtSIGbV6gOkSv8UtRbDBnAyLQw4QPKkgNlsH2ByPGtMUqdWkos6YCRmAqViwgZrJc/mRDzZQ==
 
-object-assign@^4.1.0:
+object-assign@^4.1.0, object-assign@~4.1.0:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
   integrity sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=
@@ -5797,6 +5810,13 @@ to-array@0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/to-array/-/to-array-0.1.4.tgz#17e6c11f73dd4f3d74cda7a4ff3238e9ad9bf890"
   integrity sha1-F+bBH3PdTz10zaek/zI46a2b+JA=
+
+to-function@~2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/to-function/-/to-function-2.0.6.tgz#7d56cd9c3b92fa8dbd7b22e83d51924de740ebc5"
+  integrity sha1-fVbNnDuS+o29eyLoPVGSTedA68U=
+  dependencies:
+    component-props "*"
 
 to-object-path@^0.3.0:
   version "0.3.0"
