@@ -127,4 +127,3 @@ function startWatch() {
 
 exports.build = build;
 exports.default = series(build, startWatch);
-
