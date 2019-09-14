@@ -59,6 +59,9 @@ const tutorialInfos = [{
 }, {
   title: 'Pop & Rock',
   categories: ['Popularmusik']
+}, {
+  title: 'Film & Filmanalyse',
+  categories: ['Film']
 }];
 
 function build(done) {
