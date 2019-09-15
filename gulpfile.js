@@ -119,8 +119,9 @@ function build(done) {
     .build(done);
 }
 
-function reload() {
+function reload(done) {
   browserSync.reload();
+  done();
 }
 
 function startWatch() {
