@@ -116,6 +116,7 @@ function build(done) {
     .use(mstatic({ src: 'node_modules/videojs-youtube/dist', dest: 'vendor/videojs-youtube' }))
     .use(mstatic({ src: 'scripts/jquery.klavier.js', dest: 'scripts/jquery.klavier.js' }))
     .use(mstatic({ src: 'scripts/gbExercises.js', dest: 'scripts/gbExercises.js' }))
+    .use(mstatic({ src: '.htacaccess', dest: '/' }))
     .build(done);
 }
 
