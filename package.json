@@ -35,7 +35,7 @@
     "normalize.css": "~8.0.1",
     "notelex": "~2.1.0",
     "vexflow": "~1.2.89",
-    "video.js": "~7.6.5",
-    "videojs-youtube": "~2.6.0"
+    "video.js": "~7.7.5",
+    "videojs-youtube": "~2.6.1"
   }
 }
