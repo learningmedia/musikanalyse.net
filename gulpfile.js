@@ -64,6 +64,35 @@ const tutorialInfos = [{
   categories: ['Film']
 }];
 
+function summary({ dest }) {
+  return function (files, metalsmith) {
+    const summaryCollections = {
+      tutorials: metalsmith._metadata.tutorials.map(tut => ({
+        title: tut.title,
+        author: tut.author,
+        date: tut.date.toISOString(),
+        modified: tut.modified.toISOString(),
+        categories: tut.category.split(',').map(x => x.trim()),
+        abstract: tut.abstract,
+        link: `/${tut.path}`
+      })),
+      downloads: metalsmith._metadata.downloads.map(dl => ({
+        title: dl.title,
+        author: dl.author,
+        categories: dl.category.split(',').map(x => x.trim()),
+        abstract: dl.abstract,
+        thumbnail: dl.thumbnail,
+        link: dl.link
+      }))
+    };
+
+    files[dest] = {
+      contents: JSON.stringify(summaryCollections, null, 2),
+      path: dest
+    };
+  }
+}
+
 function build(done) {
   metalsmith(__dirname)
     .use(collections({
@@ -117,6 +146,7 @@ function build(done) {
     .use(mstatic({ src: 'scripts/jquery.klavier.js', dest: 'scripts/jquery.klavier.js' }))
     .use(mstatic({ src: 'scripts/gbExercises.js', dest: 'scripts/gbExercises.js' }))
     .use(mstatic({ src: '.htacaccess', dest: '/' }))
+    .use(summary({ dest: 'summary.json' }))
     .build(done);
 }
 
