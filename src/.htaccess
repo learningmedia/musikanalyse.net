@@ -1,5 +1,3 @@
 RewriteEngine On
 RewriteCond %{SERVER_PORT} !=443
 RewriteRule ^(.*)$ https://musikanalyse.net$1 [R=301,L]
-Header add Access-Control-Allow-Origin "*"
-Header add Access-Control-Allow-Methods: "GET,POST,OPTIONS,DELETE,PUT"
