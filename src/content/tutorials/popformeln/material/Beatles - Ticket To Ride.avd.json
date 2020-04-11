@@ -1,0 +1,72 @@
+{
+  "version": "2",
+  "id": "14313845-160e-4f30-8de2-5a9bbefd73b9",
+  "name": "Beatles - Ticket To Ride",
+  "parts": [
+    {
+      "id": "d4415c52-f29c-41f2-8a0e-1cede2ea1380",
+      "name": "Intro",
+      "color": "#4682B4",
+      "length": 82890832
+    },
+    {
+      "id": "e05d4226-d9c5-4db8-8dfa-9ec252f9f553",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 307553536
+    },
+    {
+      "id": "01fe0e79-39da-431a-8cd1-309076126418",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 310008536
+    },
+    {
+      "id": "d05125fa-3615-4e20-bdb3-7989850249b8",
+      "name": "Bridge",
+      "color": "#FF0000",
+      "length": 198245900
+    },
+    {
+      "id": "3a3fd768-4894-4548-a6ea-5ba2bc7ca3f3",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 310358327
+    },
+    {
+      "id": "e768cdf5-81b1-42ae-86ea-33f44cdad7a2",
+      "name": "Bridge",
+      "color": "#FF0000",
+      "length": 177956038
+    },
+    {
+      "id": "0d27af5e-ef1e-4100-997e-912ecc58f918",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 317526452
+    },
+    {
+      "id": "f944afce-6470-4fe3-95d1-252a00071b56",
+      "name": "Outro",
+      "color": "#4682B4",
+      "length": 192733848
+    }
+  ],
+  "annotations": [
+    {
+      "id": "c0073742-7909-4d45-a0b6-ae878b81a061",
+      "type": "lyrics",
+      "values": [
+        "",
+        " I think I'm gonna be sad,\r\nI think it's today, yeah!\r\nThe girl that's drivin' me mad, is goin' away. She's got a ticket to ride,\r\nShe's got a ticket to rihihihide\r\nShe's got a ticket to ride, but she don't care. ",
+        " She said that living with me,\r\nIs bringin' her down yeah!\r\nFor she would never be free when I was around. She's got a ticket to ride,\r\nShe's got a ticket to rihihihide,\r\nShe's got a ticket to ride, but she don't care. ",
+        "I don't know why she's ridin' so high,\r\nShe oughtta think twice,\r\nShe oughtta to do right by me.",
+        " I think I'm gonna be sad,\r\nI think it's today, yeah!\r\nThe girl that's drivin' me mad, Is goin' away. She's got a ticket to ride,\r\nShe's got a ticket to rihihihide,\r\nShe's got a ticket to ride, but she don't care. ",
+        "I don't know why she's ridin' so high,\r\nShe oughtta think twice,\r\nShe oughtta to do right by me.",
+        " She said that living with me,\r\nIs bringin' her down yeah!\r\nFor she would never be free when I was around. She's got a ticket to ride,\r\nShe's got a ticket to rihihihide,\r\nShe's got a ticket to ride, but she don't care.",
+        "My baby don't care, my baby don't care.\r\nMy baby don't care, my baby don't care. "
+      ]
+    }
+  ],
+  "sounds": []
+}

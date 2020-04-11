@@ -1,0 +1,70 @@
+{
+  "version": "2",
+  "id": "3cb41cb7-f029-4517-937f-3a40c5754ab1",
+  "name": "Arlen - Over The Rainbow (1955)",
+  "parts": [
+    {
+      "id": "0e0a1a97-8bd1-40ef-9cea-d7710421a4c2",
+      "name": "Intro",
+      "color": "#4682B4",
+      "length": 211053947
+    },
+    {
+      "id": "75838535-84c6-480d-ad58-5f6eed6a57dd",
+      "name": "A",
+      "color": "#FFD700",
+      "length": 313908976
+    },
+    {
+      "id": "9c600920-3671-4edc-af5c-6f35c9fa7dc9",
+      "name": "A",
+      "color": "#FFD700",
+      "length": 292278207
+    },
+    {
+      "id": "c8ab48a8-5dea-4e77-b224-ba823cdbcfd3",
+      "name": "B",
+      "color": "#FF0000",
+      "length": 379352483
+    },
+    {
+      "id": "f36533f8-cb39-411d-8a4a-2270ccf04290",
+      "name": "A",
+      "color": "#FFD700",
+      "length": 352697433
+    },
+    {
+      "id": "4a05f0d4-3e8d-46a6-be21-4690b1ce4d8d",
+      "name": "B",
+      "color": "#FF0000",
+      "length": 470822398
+    },
+    {
+      "id": "60f55182-c5bc-498f-830b-e3244616fd04",
+      "name": "Outro",
+      "color": "#4682B4",
+      "length": 97110722
+    }
+  ],
+  "annotations": [
+    {
+      "id": "67f36a20-f028-4f99-9e83-b5500ae37ceb",
+      "type": "lyrics",
+      "values": [
+        "",
+        "Somewhere over the rainbow\r\nWay up high,\r\nThere's a land that I heard of\r\nOnce in a lullaby. ",
+        "Somewhere over the rainbow\r\nSkies are blue,\r\nAnd the dreams that you dare to dream\r\nReally do come true.",
+        "Someday I'll wish upon a star\r\nAnd wake up where the clouds are far behind me.\r\nWhere troubles melt like lemon drops\r\nAway above the chimney tops that's where you'll find me.",
+        "Somewhere over the rainbow\r\nBluebirds fly.\r\nBirds fly over the rainbow.\r\nWhy then, oh why can't I?",
+        "If happy little bluebirds fly\r\nBeyond the rainbow\r\nWhy, oh why can't I? ",
+        ""
+      ]
+    }
+  ],
+  "sounds": [
+    {
+      "path": "C:\\Users\\Musik-PC\\Desktop\\material",
+      "embedded": false
+    }
+  ]
+}

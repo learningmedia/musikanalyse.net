@@ -1,0 +1,114 @@
+{
+  "version": "2",
+  "id": "ef83a190-9c05-44f2-a66d-3455a8b7349d",
+  "name": "Kiss - God Gave Rock'n Roll To You (1)",
+  "parts": [
+    {
+      "id": "261b1155-5be7-46e0-ba75-bff312f7c65f",
+      "name": "Intro",
+      "color": "#4682B4",
+      "length": 258199166
+    },
+    {
+      "id": "d6133988-f60a-42bf-bfaa-9cf017996c90",
+      "name": "Chorus",
+      "color": "#228B22",
+      "length": 201548131
+    },
+    {
+      "id": "47c41726-ada0-4a98-81e0-c706b923acab",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 164850665
+    },
+    {
+      "id": "d864d327-0c2b-436e-85b2-772a48ea2082",
+      "name": "Chorus",
+      "color": "#228B22",
+      "length": 178588948
+    },
+    {
+      "id": "88a05edd-543a-4c6a-8014-92fac3e9311f",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 168460831
+    },
+    {
+      "id": "815ac547-1a14-4b0d-baf3-19e329542714",
+      "name": "Modulation",
+      "color": "#001464",
+      "length": 20993289
+    },
+    {
+      "id": "e46c4dcb-17a8-47db-8b34-fda2d140ba41",
+      "name": "Chorus",
+      "color": "#228B22",
+      "length": 150836155
+    },
+    {
+      "id": "d94a8218-5af8-4fac-b3cc-f6b45313b906",
+      "name": "Bridge",
+      "color": "#FF0000",
+      "length": 188157653
+    },
+    {
+      "id": "b2992762-e1da-4627-8a75-29fc3a7d6b58",
+      "name": "Chorus",
+      "color": "#228B22",
+      "length": 214122558
+    },
+    {
+      "id": "7d2bde3d-0509-48a1-937f-fbccb0c8bafb",
+      "name": "Trans. Bridge",
+      "color": "#FF0000",
+      "length": 87080109
+    },
+    {
+      "id": "8f8a9b84-7da2-4686-8fbf-72557b425ce6",
+      "name": "Chorus",
+      "color": "#228B22",
+      "length": 156443101
+    },
+    {
+      "id": "26fe28cf-a148-4cd8-8a01-9babb71bb835",
+      "name": "Chorus",
+      "color": "#228B22",
+      "length": 136442083
+    },
+    {
+      "id": "add2ebe7-580e-4354-b30f-5ba8400786e4",
+      "name": "Chorus",
+      "color": "#228B22",
+      "length": 132569453
+    },
+    {
+      "id": "6738aa04-2957-4369-9e68-48e60f2a7511",
+      "name": "Chorus",
+      "color": "#228B22",
+      "length": 89191505
+    }
+  ],
+  "annotations": [
+    {
+      "id": "b281e6ab-990e-44da-aafa-5096f62af4cc",
+      "type": "lyrics",
+      "values": [
+        "",
+        "(instr.) God gave rock and roll to you, \r\ngave rock and roll to you \r\nPut it in the soul of everyone",
+        "Do you know what you want? You don't know for sure \r\nYou don't feel right, you can't find a cure \r\nAnd you're gettin' less than what you're lookin' for \r\nYou don't have money or a fancy car \r\nAnd you're tired of wishin' on a falling star \r\nYou gotta put your faith in a loud guitar",
+        "God gave rock and roll to you, \r\ngave rock and roll to you \r\nGave rock and roll to everyone \r\nGod gave rock and roll to you,\r\ngave rock and roll to you \r\nPut it in the soul of everyone",
+        "If you wanna be a singer, or play guitar Man, \r\nyou gotta sweat or you won't get far \r\nCause it's never too late to work nine-to-five \r\nYou can take a stand, or you can compromise \r\nYou can work real hard or just fantasize \r\nBut you don't start livin' till you realize (I gotta tell ya!)",
+        "",
+        "God gave rock and roll to you, \r\ngave rock and roll to you \r\nGave rock and roll to everyone \r\nGod gave rock and roll to you, \r\ngave rock and roll to you \r\nPut it in the soul",
+        "",
+        "God gave rock and roll to you (to everyone he gave the song to be sung) \r\nGave rock and roll to you, \r\ngave rock and roll to everyone \r\nGod gave rock and roll to you (to everyone he gave the song to be sung) \r\nGave rock and roll to you, \r\nsaved rock and roll for everyone Saved rock and roll",
+        "",
+        "God gave rock and roll to...",
+        "God gave rock and roll to...",
+        "(I know life sometimes can get tough! And I know life sometimes can be a drag! But people, we have been given a gift, we have been given a road And that road's name is... Rock and Roll!)",
+        ""
+      ]
+    }
+  ],
+  "sounds": []
+}

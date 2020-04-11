@@ -1,0 +1,65 @@
+{
+  "version": "2",
+  "id": "79fd49e8-9339-4b64-b014-a514f3bd9184",
+  "name": "MeredithWilson-TillThereWasYou",
+  "parts": [
+    {
+      "id": "2f2a197f-224c-4d6e-a555-8dd43dd21eec",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 245582419
+    },
+    {
+      "id": "1b74f810-b2d3-4e05-9f2b-83cae824f745",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 206404031
+    },
+    {
+      "id": "f59db894-7f82-41a6-8724-998bcd4436e1",
+      "name": "Bridge",
+      "color": "#FF0000",
+      "length": 198205924
+    },
+    {
+      "id": "6e71f02e-c90d-42e9-a777-8d08f225bf02",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 266081853
+    },
+    {
+      "id": "3df9610f-92f0-4fcf-b131-3c63ea94196f",
+      "name": "Bridge (instr.)",
+      "color": "#FF0000",
+      "length": 228222649
+    },
+    {
+      "id": "47af3346-e865-400a-9905-58ef07876321",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 322032038
+    },
+    {
+      "id": "8ba9f7dd-30e7-47a0-af7b-db4863f03b71",
+      "name": "Outro",
+      "color": "#4682B4",
+      "length": 104474419
+    }
+  ],
+  "annotations": [
+    {
+      "id": "654912d4-9d2f-4f21-9cd4-d7b1b34fd89b",
+      "type": "lyrics",
+      "values": [
+        "There were bells on the hill\r\nBut I never heard them ringing\r\nNo, I never heard them at all\r\nTill there was you\r\n(Marian)",
+        "There were birds in the sky\r\nBut I never saw them winging\r\nNo, I never saw them at all\r\nTill there was you",
+        "And there was music\r\nAnd there were wonderful roses they tell me\r\nIn sweet fragrant meadows\r\nOf dawn and dew",
+        "There was love all around\r\nBut I never heard it singing\r\nNo, I never heard it at all\r\nTill there was you",
+        "",
+        "There was love all around\r\nBut I never head it singing\r\nNo, I never heard it at all\r\nTill there was you \r\n(Marian and Harold)",
+        ""
+      ]
+    }
+  ],
+  "sounds": []
+}

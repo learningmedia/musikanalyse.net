@@ -1,0 +1,110 @@
+{
+  "version": "2",
+  "id": "74a14af5-a167-4304-a26d-acc9178071e1",
+  "name": "Big Joe Turner - Shake, Rattle & Roll",
+  "parts": [
+    {
+      "id": "dceb539b-8716-42c6-a78f-38349e928211",
+      "name": "Intro",
+      "color": "#4682B4",
+      "length": 67850417
+    },
+    {
+      "id": "18b060ad-50ff-43a4-9f9e-45db7861d96a",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 184505028
+    },
+    {
+      "id": "aba30261-da1a-4d3c-9ec7-6cfda6f7b5af",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 183901019
+    },
+    {
+      "id": "a8bd4172-0259-4aa4-96fd-e6550af9ce16",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 184700661
+    },
+    {
+      "id": "4689d900-2e38-4b3a-9a5d-0296da5c0762",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 186556942
+    },
+    {
+      "id": "d44e9710-1c17-4664-8801-6baa110b63ed",
+      "name": "Verse (instr.)",
+      "color": "#FFD700",
+      "length": 189314663
+    },
+    {
+      "id": "fee10027-7bdf-40d1-9abb-e2ba21aefc50",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 188731074
+    },
+    {
+      "id": "f8bbc574-cf66-4ed5-ba7c-a48826e69220",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 186991099
+    },
+    {
+      "id": "96a8a5a1-fdc7-4266-a9e7-dea0351b0ae0",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 189651929
+    },
+    {
+      "id": "d932e5e8-45a7-470c-b351-4041acbb67c6",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 173600259
+    },
+    {
+      "id": "d819a530-8099-480c-9d5b-4fd1fb5424dd",
+      "name": "Outro",
+      "color": "#4682B4",
+      "length": 85446909
+    }
+  ],
+  "annotations": [
+    {
+      "id": "3a64c215-d876-40bd-8348-3c85cb3ed956",
+      "type": "lyrics",
+      "values": [
+        "",
+        "Get outta that bed, wash your face and hands\r\nGet outta that bed, wash your face and hands\r\nWell, you get in that kitchen, make some noise with the pots 'n pans ",
+        "Way you wear those dresses, the sun comes shinin' through\r\nWay you wear those dresses, the sun comes shinin' through\r\nI can't believe my eyes, all that mess belongs to you",
+        "I believe to the soul you're the devil and now I know\r\nI believe to the soul you're the devil and now I know\r\nWell, the more I work, the faster my money goes",
+        "I said shake, rattle and roll, shake, rattle and roll\r\nShake, rattle and roll, shake, rattle and roll\r\nWell, you won't do right to save your doggone soul. Yeah, blow Joe!",
+        "",
+        "I'm like a one-eyed cat peepin' in a seafood store\r\nI'm like a one-eyed cat peepin' in a seafood store\r\nWell I can look at you till you ain't no child no more",
+        "Ah, shake, rattle and roll, shake, rattle and roll\r\nShake, rattle and roll, shake, rattle and roll\r\nWell, you won't do right to save your doggone soul",
+        "I get over the hill and way down underneath\r\nI get over the hill and way down underneath\r\nYou make me roll my eyes, even make me grit my teeth",
+        "I said shake, rattle and roll, shake, rattle and roll\r\nShake, rattle and roll, shake, rattle and roll\r\nWell, you won't do nothin' to save your doggone soul",
+        "Shake, rattle and roll! "
+      ]
+    },
+    {
+      "id": "510a21e5-c560-4ebe-9e22-003c60fe4575",
+      "type": "lyrics",
+      "values": [
+        "",
+        "Strophe ",
+        "Strophe",
+        "Strophe",
+        "Refrain",
+        "Strophe",
+        "Strophe",
+        "Refrain",
+        "Strophe",
+        "Refrain ",
+        ""
+      ]
+    }
+  ],
+  "sounds": []
+}

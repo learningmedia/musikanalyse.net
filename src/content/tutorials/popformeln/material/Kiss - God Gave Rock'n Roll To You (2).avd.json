@@ -1,0 +1,107 @@
+{
+  "version": "2",
+  "id": "9f475fc0-89cd-4764-a26f-fecf18b9d0b0",
+  "name": "Kiss - God Gave Rock'n Roll To You (2)",
+  "parts": [
+    {
+      "id": "9c29f73f-26e9-4b04-a07d-60b35b410a34",
+      "name": "Chorus",
+      "color": "#228B22",
+      "length": 162133190
+    },
+    {
+      "id": "66041403-7aaa-4b11-bc17-69a3679a39d3",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 151605895
+    },
+    {
+      "id": "eba75cb9-bd42-46b4-b611-a07850ad7500",
+      "name": "Chorus",
+      "color": "#228B22",
+      "length": 158042910
+    },
+    {
+      "id": "53061e76-0cc9-4976-866e-4605850f91a1",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 147253826
+    },
+    {
+      "id": "34944a6f-c1aa-4809-bb2f-dc76bec87acf",
+      "name": "Modulation",
+      "color": "#001464",
+      "length": 20934577
+    },
+    {
+      "id": "74882a64-37ea-4e3f-a0d1-e53c187b519f",
+      "name": "Chorus",
+      "color": "#228B22",
+      "length": 141095288
+    },
+    {
+      "id": "a6e76dfc-73be-4900-ba91-bc039838dcc8",
+      "name": "Bridge",
+      "color": "#FF0000",
+      "length": 169281640
+    },
+    {
+      "id": "2aefea28-0d02-4a35-bf22-200f1f76c8f0",
+      "name": "Chorus",
+      "color": "#228B22",
+      "length": 434533233
+    },
+    {
+      "id": "36cb6967-de81-4ab9-b76f-c692d1eb42b8",
+      "name": "Trans. Bridge",
+      "color": "#FF0000",
+      "length": 161940633
+    },
+    {
+      "id": "a072f7ce-a402-4229-a8d5-85bd3a7a34b2",
+      "name": "Chorus",
+      "color": "#228B22",
+      "length": 149932718
+    },
+    {
+      "id": "8d21de35-315a-44b6-aad1-2dbaa2319650",
+      "name": "Chorus",
+      "color": "#228B22",
+      "length": 114392753
+    },
+    {
+      "id": "c68a49ca-473a-4e8d-9b25-498c68f4cf7d",
+      "name": "Chorus",
+      "color": "#228B22",
+      "length": 151255909
+    },
+    {
+      "id": "9ba022aa-8961-4d9d-9217-35db8ec2a6d7",
+      "name": "Outro",
+      "color": "#4682B4",
+      "length": 185081075
+    }
+  ],
+  "annotations": [
+    {
+      "id": "7b289604-22ae-489f-8b3f-10377060f5f5",
+      "type": "lyrics",
+      "values": [
+        "instr./vokal",
+        "vokal",
+        "vokal",
+        "vokal",
+        "",
+        "vokal",
+        "instr.",
+        "vokal (mit Publikum)",
+        "",
+        "vokal",
+        "vokal",
+        "vokal",
+        ""
+      ]
+    }
+  ],
+  "sounds": []
+}

@@ -1,0 +1,72 @@
+{
+  "version": "2",
+  "id": "392daf87-beaf-4421-bb01-4a9f9853ecf1",
+  "name": "Beatles - Chains",
+  "parts": [
+    {
+      "id": "5aae6b0a-0484-4b40-9642-26c4e66f857a",
+      "name": "Intro",
+      "color": "#4682B4",
+      "length": 9527
+    },
+    {
+      "id": "1904d0ca-1b53-4d51-af01-b5b7473f2890",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 22007
+    },
+    {
+      "id": "9af9d974-3a27-41f0-bf76-f226b3cb5233",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 22324
+    },
+    {
+      "id": "c78d9fc7-7083-4d33-84e4-6aabc56c150f",
+      "name": "Bridge",
+      "color": "#FF0000",
+      "length": 14662
+    },
+    {
+      "id": "2cd62f94-eacc-464f-bcd1-88bf85777c8b",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 22240
+    },
+    {
+      "id": "23eb1e19-8dcc-4ef5-bd44-2ea9e5f1bd40",
+      "name": "Bridge",
+      "color": "#FF0000",
+      "length": 15237
+    },
+    {
+      "id": "e942a6c1-921c-43eb-87e7-703ac6075f3e",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 22199
+    },
+    {
+      "id": "445d6a2b-5a2a-4d3c-98bf-8075b207c3bc",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 16914
+    }
+  ],
+  "annotations": [
+    {
+      "id": "707bd1af-7d4e-4f51-88a2-f2efb2c71cd6",
+      "type": "lyrics",
+      "values": [
+        "",
+        "Chains, my baby's got me locked up in chains\r\nAnd they ain't the kind that you can see\r\nWoh, these chains of love got a hold on me yeah",
+        "Chains, well, I can't break away from these chains\r\nCan't run around 'cause I'm not free\r\nWoh, these chains of love won't let me be, yeah",
+        "I wanna tell you pretty baby I think you're fine\r\nI'd like to love you But, darling, I'm imprisoned by these",
+        "Chains My baby's got me locked up in chains \r\nAnd they ain't the kind that you can see\r\nWoh, it's chains of love got a hold on me, yeah",
+        "Please believe me when I tell you Your lips are sweet\r\nI'd like to kiss them But I can't break away from all these ",
+        "Chains, my baby's got me locked up in chains\r\nAnd they ain't the kind that you can see\r\nWoh, these chains of love got a hold on me, yeah",
+        "Chains, chains of love\r\nChains, chains of love, chains of love "
+      ]
+    }
+  ],
+  "sounds": []
+}

@@ -1,0 +1,79 @@
+{
+  "version": "2",
+  "id": "14412d14-09b0-42dd-adef-c9fbb6f3755c",
+  "name": "Beatles - Please Please Me",
+  "parts": [
+    {
+      "id": "dfc5f068-89d9-4c62-98eb-89d2a136cd3d",
+      "name": "Intro",
+      "color": "#4682B4",
+      "length": 93710538
+    },
+    {
+      "id": "771ca64c-296a-4748-88a4-58edc5e2fcbc",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 133949500
+    },
+    {
+      "id": "1d4c68ed-d091-4a91-81d6-7965d4ba8338",
+      "name": "Chorus",
+      "color": "#228B22",
+      "length": 142892088
+    },
+    {
+      "id": "10c28c7a-8849-4af1-8f40-32087eb7c7e1",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 136824615
+    },
+    {
+      "id": "02f28912-c6ac-4770-8a06-ce5900c690f9",
+      "name": "Chorus",
+      "color": "#228B22",
+      "length": 135451018
+    },
+    {
+      "id": "393b0393-2de0-443b-9428-8e97a78b7bbd",
+      "name": "Bridge",
+      "color": "#FF0000",
+      "length": 173436926
+    },
+    {
+      "id": "62c71454-41e4-4fd6-bdd8-d213cf6914f9",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 138494246
+    },
+    {
+      "id": "4131b43f-90fa-4ce9-87f0-6c7d05d529d7",
+      "name": "Chorus",
+      "color": "#228B22",
+      "length": 141873049
+    },
+    {
+      "id": "90a97109-0914-4736-b2b8-bc20d83c4261",
+      "name": "Outro",
+      "color": "#4682B4",
+      "length": 112314958
+    }
+  ],
+  "annotations": [
+    {
+      "id": "8caf7b85-94e9-4447-9c65-322873c8bc5f",
+      "type": "lyrics",
+      "values": [
+        "",
+        "Last night I said these words to my girl\r\nI know you never even try, girl",
+        "Come on, come on, come on, come on\r\nPlease, please me, wo yeah, like I please you ",
+        " You don't need me to show the way, love\r\nWhy do I always gave to sat, love",
+        "Come on, come on, come on, come on\r\nPlease, please me, wo yeah, like I please you",
+        "I don't want to sound complaining but you know there's always rain in my heart\r\nI do all the pleasing with you, it's so hard to reason with you wo yeah, why do you make me blue? ",
+        "Last night I said these words to my girl\r\nI know you never even try, girl ",
+        "Come on, come on, come on, come on\r\nPlease, please me, wo yeah, like I please you wo yeah, like I please you wo yeah, like I please you ",
+        ""
+      ]
+    }
+  ],
+  "sounds": []
+}

@@ -1,0 +1,77 @@
+{
+  "version": "2",
+  "id": "6123935e-21f2-4cce-b224-0c4bbdfd696b",
+  "name": "Arlen - I' ve Got The World On A String (Bennett)",
+  "parts": [
+    {
+      "id": "8a096605-62fd-4f55-85af-af7cab55ae11",
+      "name": "Sectional-Verse",
+      "color": "#FFA500",
+      "length": 524113731
+    },
+    {
+      "id": "6c20cf92-31d8-41f3-8c18-cf13d29f42ff",
+      "name": "A",
+      "color": "#FFD700",
+      "length": 278887778
+    },
+    {
+      "id": "7bc81398-57f1-4a81-9d15-ead27d1b4f90",
+      "name": "A",
+      "color": "#FFD700",
+      "length": 239951363
+    },
+    {
+      "id": "9a5c57d1-c2ae-452c-862b-59574d0ba7d1",
+      "name": "B",
+      "color": "#FF0000",
+      "length": 289580796
+    },
+    {
+      "id": "7669830d-5d95-4413-8c79-55ec45252a6d",
+      "name": "A",
+      "color": "#FFD700",
+      "length": 208849808
+    },
+    {
+      "id": "4639fa89-2960-49dd-96cf-ea16ad980b3a",
+      "name": "A (instr.)",
+      "color": "#FFD700",
+      "length": 234143879
+    },
+    {
+      "id": "f2aadafd-a3df-4f63-b891-242e84ff162f",
+      "name": "A",
+      "color": "#FFD700",
+      "length": 279427495
+    },
+    {
+      "id": "73d150f3-29c3-4508-924d-075de386f36e",
+      "name": "Coda",
+      "color": "#4682B4",
+      "length": 92528797
+    }
+  ],
+  "annotations": [
+    {
+      "id": "c801ffcd-bbc7-46de-b91b-73dfdd0e4584",
+      "type": "lyrics",
+      "values": [
+        "Merry month of May,\r\nSunny skies of blue,\r\nClouds have rolled away\r\nAnd the sun peeps through,\r\nMay express happiness,\r\nJoy you may define,\r\nIn a thousend ways,\r\nBut a case like mine\r\nNeeds a \"special phrase\"\r\nTo reveal how I feel.  ",
+        "I've got the world on a string,\r\nSittin' on a rainbow\r\nGot the string around my finger\r\nWhat a world, what a life\r\nI'm in love!",
+        "I've got a song that I sing\r\nI can make the rain go\r\nAny time I move my finger\r\nLucky me, can't you see\r\nI'm in love.",
+        "Life's is a wonderful thing\r\nAs long as I hold the string\r\nI'd be a silly so-and-so\r\nIf I should ever let you go",
+        "I've got the world on a string,\r\nSitting' on a rainbow.\r\nGot the string around my finger\r\nWhat a world, what a life\r\nI'm in love!",
+        "",
+        "I've got the world on a string,\r\nSitting' on a rainbow.\r\nGot the string around my finger\r\nWhat a world, what a life\r\nI'm in love! ",
+        ""
+      ]
+    }
+  ],
+  "sounds": [
+    {
+      "path": "C:\\Users\\Musik-PC\\Desktop\\material",
+      "embedded": false
+    }
+  ]
+}

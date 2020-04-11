@@ -1,0 +1,72 @@
+{
+  "version": "2",
+  "id": "6b8d10ee-4cd6-4e0e-9423-f42d10ee575c",
+  "name": "Beach Boys - California Girl",
+  "parts": [
+    {
+      "id": "8d71b889-34b2-4be6-98af-5691698d903f",
+      "name": "Intro",
+      "color": "#4682B4",
+      "length": 27502
+    },
+    {
+      "id": "27daae7d-a24f-449e-8883-5a8e53a07dfd",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 16546
+    },
+    {
+      "id": "af0a9d7a-d3a3-48fd-93ee-1aea70716b46",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 16636
+    },
+    {
+      "id": "33339473-cc97-473d-b314-08c83a4b3b2e",
+      "name": "Chorus",
+      "color": "#228B22",
+      "length": 17311
+    },
+    {
+      "id": "91c58d1b-dd5d-4381-be64-3e82977c24b5",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 16086
+    },
+    {
+      "id": "daa20a53-9952-4bf7-900b-92a281f71b6d",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 16631
+    },
+    {
+      "id": "b43d0b34-176b-4013-84ae-cd5ce47be968",
+      "name": "Chorus",
+      "color": "#228B22",
+      "length": 16233
+    },
+    {
+      "id": "c9bb0250-bdc8-4824-81a9-f7b4affed890",
+      "name": "Outro",
+      "color": "#4682B4",
+      "length": 31226
+    }
+  ],
+  "annotations": [
+    {
+      "id": "d245c94d-7839-4625-98ee-d5aa4548a835",
+      "type": "lyrics",
+      "values": [
+        "",
+        "Well east coast girls are hip I really dig those styles they wear\r\nAnd the southern girls with the way they talk They knock me out when Im down there",
+        "The mid-west farmers daughters really make you feel alright\r\nAnd the northern girls with the way they kiss They keep their boyfriends warm at night",
+        "I wish they all could be california girl,\r\nI wish they all could be california girl\r\nI wish they all could be california girl",
+        "The west coast has the sunshine And the girls all get so tanned\r\nI dig a french bikini on hawaii island Dolls by a palm tree in the sand",
+        "I been all around this great big world And I seen all kinds of girls\r\nYeah, but I couldnt wait to get back in the states Back to the cutest girls in the world",
+        "I wish they all could be california girl\r\nI wish they all could be california girl\r\nI wish they all could be california girl",
+        "I wish they all could be california\r\nI wish they all could be california\r\nI wish they all could be california girls "
+      ]
+    }
+  ],
+  "sounds": []
+}

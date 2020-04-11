@@ -1,0 +1,62 @@
+{
+  "version": "2",
+  "id": "508e1b74-5017-4f8d-9ae8-761ac27acd71",
+  "name": "Rare Bird - Sympathy",
+  "parts": [
+    {
+      "id": "e11dde13-1e4b-4dff-ba5c-a7804b43664c",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 32719
+    },
+    {
+      "id": "9eac6e66-1e84-4ec1-a262-3506d6b7a57e",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 38638
+    },
+    {
+      "id": "2bfe0703-42fb-4e04-8c75-e95bf9995382",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 32083
+    },
+    {
+      "id": "ed481870-0651-48fd-baa9-fe43097d2418",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 39317
+    },
+    {
+      "id": "f15c8f5e-5569-47e2-8c6f-81dcb969ac3d",
+      "name": "Outro",
+      "color": "#4682B4",
+      "length": 13272
+    }
+  ],
+  "annotations": [
+    {
+      "id": "35f69604-35e6-4360-9500-19f1b793e672",
+      "type": "lyrics",
+      "values": [
+        "And when you climb\r\ninto your bed tonight\r\nAnd when you lock...\r\nof the door\r\nJust think of those\r\nout in the cold and dark\r\n'cause there's not enough love to go round ",
+        "And sympathy is what we need my friend\r\nAnd sympathy is what we need\r\nAnd sympathy is what we need my friend\r\n'Cause there's not enough love to go round",
+        "Now half the world\r\nhates the other half\r\nAnd half the world\r\nhas all the food\r\nAnd half the world\r\nlies down and quietly starves\r\n'cause there's not enough love to go round",
+        "And sympathy is what we need my friend\r\nAnd sympathy is what we need\r\nAnd sympathy is what we need my friend\r\n'Cause there's not enough love to go round",
+        ""
+      ]
+    },
+    {
+      "id": "dd348507-fc5c-41f7-b6f5-8f1776a457bb",
+      "type": "remarks",
+      "values": [
+        "Sänger I ohne Drums",
+        "Sänger I mit Drums und Orgel\r\nsowie Erweiterung durch\r\nVerlängerung der Schlussnote",
+        "Sänger II mit Drums und Orgel",
+        "Sänger I + II mit Drums und Orgel\r\nsowie Erweiterung durch\r\nVerlängerung der Schlussnote",
+        ""
+      ]
+    }
+  ],
+  "sounds": []
+}

@@ -1,0 +1,79 @@
+{
+  "version": "2",
+  "id": "e61eadc1-edf4-4704-a635-fc520b6e7349",
+  "name": "Beatles - Till There Was You",
+  "parts": [
+    {
+      "id": "de1ce839-781c-4527-a6f3-6e0f1663ffa4",
+      "name": "Intro",
+      "color": "#4682B4",
+      "length": 84047499
+    },
+    {
+      "id": "c52d92a6-a66c-40c6-adf5-5cd540dc41ea",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 159092809
+    },
+    {
+      "id": "f7903442-3df3-4dab-8dfb-8331bdff11a5",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 157638285
+    },
+    {
+      "id": "87ca8324-e9e9-4902-b2a7-a0e41d859def",
+      "name": "Bridge",
+      "color": "#FF0000",
+      "length": 158766685
+    },
+    {
+      "id": "69b03759-8a11-4e13-86b8-fb82d752fb42",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 152198647
+    },
+    {
+      "id": "9c361a9a-5a39-48ab-ab31-91f3fb434a5b",
+      "name": "Verse (instr.)",
+      "color": "#FFD700",
+      "length": 160897722
+    },
+    {
+      "id": "5ddfe60a-6a93-49dd-acea-22535dbc26a1",
+      "name": "Bridge",
+      "color": "#FF0000",
+      "length": 154444338
+    },
+    {
+      "id": "cb156d6d-f054-4972-be3d-848c6c51f0a4",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 158032481
+    },
+    {
+      "id": "230eb79a-9451-4d7f-b11e-2bed27e55db2",
+      "name": "Outro",
+      "color": "#4682B4",
+      "length": 210864450
+    }
+  ],
+  "annotations": [
+    {
+      "id": "74f20d40-2ca9-493d-a46b-69461bd1aab6",
+      "type": "lyrics",
+      "values": [
+        "",
+        "There were bells on a hill\r\nBut I never heard them ringing\r\nNo, I never heard them at all\r\nTill there was you",
+        "There were birds in the sky\r\nBut I never saw them winging\r\nNo, I never saw them at all\r\nTill there was you",
+        "Then there was music and wonderful roses\r\nThey tell me in sweet fragrant meadows\r\nOf dawn and dew",
+        "There was love all around\r\nBut I never heard it singing\r\nNo, I never heard it at all\r\nTill there was you",
+        "",
+        "Then there was music and wonderful roses\r\nThey tell me in sweet fragrant meadows\r\nOf dawn and dew",
+        "There was love all around\r\nBut I never heard it singing\r\nNo, I never heard it at all\r\nTill there was you",
+        "Till there was you "
+      ]
+    }
+  ],
+  "sounds": []
+}

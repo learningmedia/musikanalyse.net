@@ -1,0 +1,149 @@
+{
+  "version": "2",
+  "id": "ee609aa4-bd86-4bb4-9402-f9f2d84b8332",
+  "name": "ABBA - The Winner Takes It All",
+  "parts": [
+    {
+      "id": "ec260136-d3ff-4acc-8f0a-2c1e4e6e23d8",
+      "name": "Chorus",
+      "color": "#228B22",
+      "length": 113118834
+    },
+    {
+      "id": "d5ee79f6-b4c0-4bd3-b8a9-1059252b91ec",
+      "name": "Chorus",
+      "color": "#228B22",
+      "length": 122651150
+    },
+    {
+      "id": "979e67b9-817f-48d2-882c-2a6bb9ca1df6",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 116961307
+    },
+    {
+      "id": "c02378ed-a98b-4a28-a26e-04d23533873c",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 109602515
+    },
+    {
+      "id": "473982c7-87ce-44bd-b023-8cf073163ebd",
+      "name": "Chorus",
+      "color": "#228B22",
+      "length": 115766191
+    },
+    {
+      "id": "d12a644e-7f18-4dd4-976d-9cea0060c796",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 104289821
+    },
+    {
+      "id": "9ebf13eb-4650-4a17-ad40-99793c641092",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 118041013
+    },
+    {
+      "id": "9f652e93-2237-4a8e-bcc2-203eaada2b49",
+      "name": "Chorus",
+      "color": "#228B22",
+      "length": 107831667
+    },
+    {
+      "id": "ffff5627-aba4-462b-9110-c833482905b3",
+      "name": "Chorus",
+      "color": "#228B22",
+      "length": 114134885
+    },
+    {
+      "id": "3bf85503-5e92-41b6-b80d-467277bcf625",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 106017397
+    },
+    {
+      "id": "0ea6ae7c-e3e6-48d9-8c6c-2b4d8e301caa",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 113650570
+    },
+    {
+      "id": "eeca81a0-a1af-4666-b8c0-2a07abcb3ca1",
+      "name": "Chorus",
+      "color": "#228B22",
+      "length": 111376799
+    },
+    {
+      "id": "22870cc8-81f3-4d79-b284-121663284487",
+      "name": "Chorus",
+      "color": "#228B22",
+      "length": 126388487
+    },
+    {
+      "id": "11e502b6-0509-45c1-9bc4-978427f03e48",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 108170788
+    },
+    {
+      "id": "74ee668d-02a3-465d-9c3a-0236015e61c5",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 112746346
+    },
+    {
+      "id": "619aaf73-0c1e-417d-b5c9-33c8ed926fbe",
+      "name": "Chorus",
+      "color": "#228B22",
+      "length": 110140193
+    },
+    {
+      "id": "3d91bdc8-d32f-464b-ad3a-906c0d54b368",
+      "name": "Chorus",
+      "color": "#228B22",
+      "length": 110295424
+    },
+    {
+      "id": "0bb3d494-3d90-4bf9-9d7f-def346e56e18",
+      "name": "Chorus",
+      "color": "#228B22",
+      "length": 105061000
+    },
+    {
+      "id": "822d870e-2fdb-4a53-bfc8-371efc117460",
+      "name": "Chorus",
+      "color": "#228B22",
+      "length": 121239260
+    }
+  ],
+  "annotations": [
+    {
+      "id": "8ecb8c07-ca7a-45b4-b0db-04b0a67af9de",
+      "type": "lyrics",
+      "values": [
+        "",
+        "",
+        "I don’t wanna talk\r\nabout the things we’ve gone through\r\nthough it’s hurting me\r\nnow it’s history",
+        "I’ve played all my cards\r\nand that’s what you’ve done too\r\nnothing more to say\r\nno more ace to play",
+        "The winner takes it all\r\nthe loser standing small\r\nbeside the victory\r\nthat’s her destiny",
+        "I was in your arms\r\nthinking I belonged there\r\nI figured it made sense\r\nbuilding me a fence",
+        "Building me a home\r\nthinking I’d be strong there\r\nbut I was a fool\r\nplaying by the rules",
+        "The gods may throw a dice\r\ntheir minds as cold as ice\r\nand someone way down here\r\nloses someone dear",
+        "The winner takes it all\r\nthe loser has to fall\r\nit’s simple and it’s plain\r\nwhy should I complain",
+        "But tell me does she kiss\r\nlike I used to kiss you\r\ndoes it feel the same\r\nwhen she calls your name",
+        "Somewhere deep inside\r\nyou must know I miss you\r\nbut what can I say\r\nrules must be obeyed",
+        "The judges will decide\r\nthe likes of me abide\r\nspectators of the show\r\nalways staying low",
+        "The game is on again\r\na lover or a friend\r\na big thing or a small\r\nthe winner takes it all",
+        "I don’t wanna talk\r\nif it makes you feel sad\r\nand I understand\r\nyou’ve come to shake my hand",
+        "I apologize\r\nif it makes you feel bad\r\nseeing me so tense\r\nno self-confidence",
+        "The winner takes it all, The winner takes it all ",
+        "",
+        "",
+        ""
+      ]
+    }
+  ],
+  "sounds": []
+}

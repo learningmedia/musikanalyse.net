@@ -1,0 +1,44 @@
+{
+  "version": "2",
+  "id": "04f7b959-7bd0-4dbe-b400-b17c9d0540b2",
+  "name": "Sayer - The Show Must Gon On",
+  "parts": [
+    {
+      "id": "feec744b-ced5-406a-8beb-fc7e9bdb1637",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 42672
+    },
+    {
+      "id": "85f8669a-a321-4925-b553-184dcbe429d1",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 40562
+    },
+    {
+      "id": "6b70a741-859e-484a-94ce-9dd4331ce1dc",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 40780
+    },
+    {
+      "id": "0d6aab8d-9115-4cd1-b980-ee84c5bbe6dc",
+      "name": "Verse",
+      "color": "#FFD700",
+      "length": 47923
+    }
+  ],
+  "annotations": [
+    {
+      "id": "2f1594f8-278c-4573-bbb1-3d83430123b6",
+      "type": "lyrics",
+      "values": [
+        "Baby, although I chose this lonely life\r\nIt seems it’s strangling me now\r\nAll the wild men, big cigars, gigantic cars\r\nThey’re all laughing at me now\r\nOh I’ve been used\r\nI’ve been taken for a fool, oh what a fool\r\nI broke all the rules\r\nBut I won’t let the show go on",
+        "Baby look there’s an enormous crowd of people\r\nAnd they’re all after my blood\r\nI wish maybe they’d tear down the walls\r\nOf this theatre and let me out, let me out\r\nOh I’ve been so blind\r\nI’ve wasted time, wasted, wasted, oh so much time\r\nWalking on the wire, high wire\r\nBut I won’t let the show go on",
+        "(Scat-Gesang)\r\n\r\nOh I’ve been so blind\r\nI’ve wasted time, wasted, wasted, oh so much time\r\nWalking on the wire, high wire\r\nBut I won’t let the show go on",
+        "Baby I wish you’d help me escape\r\nAnd help me get away\r\nLeave me outside my address\r\nFar away from this masquerade\r\nI’ve been so used, I’ve been so abused\r\nI’ve been a fool, I broke all the rules\r\nI’ve been so used, oh and abused\r\nBut I won’t let the show go\r\nI said I won’t let the show oh\r\nWon’t let the show go on"
+      ]
+    }
+  ],
+  "sounds": []
+}
