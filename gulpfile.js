@@ -62,6 +62,9 @@ const tutorialInfos = [{
 }, {
   title: 'Film & Filmanalyse',
   categories: ['Film']
+}, {
+  title: 'Didaktik (Schule)',
+  categories: ['Didaktik']
 }];
 
 function summary({ dest }) {
