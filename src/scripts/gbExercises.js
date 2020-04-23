@@ -123,7 +123,7 @@ Exercise.prototype._createSpecialArray = function(value) {
 			return this._setMidiValues([0, 3, 9])
 		case '3-4-6sharp':
       if(this._isKeyNameInCollection(['f'])) { this._setChiffreAndChiffreImagePath('3-4-6'); return this._setMidiValues([0, 4, 6, 9]); }
-      if(this._isKeyNameInCollection(['g'])) { this._setChiffreAndChiffreImagePath('3-4-6'); return this._setMidiValues([0, 4, 5, 9]); }
+      if(this._isKeyNameInCollection(['c', 'g'])) { this._setChiffreAndChiffreImagePath('3-4-6'); return this._setMidiValues([0, 4, 5, 9]); }
 			if(this._isKeyNameInCollection(['d'])) this._setChiffreAndChiffreImagePath('3-4-6');
 			return this._setMidiValues([0, 3, 5, 9])
 		case '2-4-7':
@@ -144,16 +144,15 @@ Exercise.prototype._createSpecialArray = function(value) {
 		case '5-7':
 		case '3-5-7':
 			if (this._isKeyNameInCollection(['c', 'f'])) return this._setMidiValues([0, 4, 7, 11]);
-			if (this._isKeyNameInCollection(['h'])) return this._setMidiValues([0, 3, 6, 10]);
 			if (this._isKeyNameInCollection(['g'])) return this._setMidiValues([0, 4, 7, 10]);
-			if (this._isKeyNameInCollection(['c', 'f'])) return this._setMidiValues([0, 2, 7, 11]);
+			if (this._isKeyNameInCollection(['h'])) return this._setMidiValues([0, 3, 6, 10]);
 			return this._setMidiValues([0, 3, 7, 10]);
 		case 'sharp-7':
 			if (this._isKeyNameInCollection(['c', 'f'])) { this._setChiffreAndChiffreImagePath('7'); return this._setMidiValues([0, 4, 7, 11]); }
 			if (this._isKeyNameInCollection(['h'])) { this._setChiffreAndChiffreImagePath('7'); return this._setMidiValues([0, 3, 6, 10]); }
 			return this._setMidiValues([0, 4, 7, 10]);
 		case 'flat-7':
-			if (this._isKeyNameInCollection(['c', 'f'])) { this._setChiffreAndChiffreImagePath('7'); return this._setMidiValues([0, 3, 7, 11]); }
+			if (this._isKeyNameInCollection(['c', 'f'])) { this._setChiffreAndChiffreImagePath('7'); return this._setMidiValues([0, 4, 7, 11]); }
 			if (this._isKeyNameInCollection(['h'])) { this._setChiffreAndChiffreImagePath('7'); return this._setMidiValues([0, 3, 6, 10]); }
 			return this._setMidiValues([0, 3, 7, 10]);
 		default:
@@ -239,6 +238,7 @@ Exercise.prototype._setChiffreAndChiffreImagePath = function(imageName) {
 	this.chiffreImagePath = this.folderName + imageName + '.png';
 };
 
+//Wird für jeden Klick 'neue Übung' aufgerufen
 function createExercise(id, options) {
 	hideAttentions();
 	images = options.images;
