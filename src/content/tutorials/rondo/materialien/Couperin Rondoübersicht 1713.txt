@@ -1,0 +1,12 @@
+﻿Francois Couperin, Pièces de clavecin, Paris 1713 (http://reader.digitale-sammlungen.de/de/fs1/object/display/bsb11134888_00005.html) 
+
+1713	Les Silvains 		8	ABACAPD		PO
+1713	Les Abeilles		10	ABA		PO
+1713	L'Enchanteresse		14	ABACADAEA	PO
+1713	La Voluptueuse		36	ABACADA		SO
+1713	La Favorite Chacone	48	ABACADAEAGA	TO
+1713	La Tendre Fanchon	63	ABACADA		CO
+1713	La Badine		64	ABACA		CO
+1713	La bandoline		64	ABACADA		CO
+1713	L'Angélique		67	ABAP(ABACA)	CO
+1713	Les vendangeuses	69	ABACA		CO
