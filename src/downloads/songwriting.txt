@@ -1,0 +1,8 @@
+---
+title: Songwriting – Ein Arbeitsheft zur Stilübung
+author: Ulrich Kaiser
+category: gattungen
+abstract: Hier können Sie Materialien zum Thema Songwriting herunterladen.
+thumbnail: /img/thumbnails/songwriting.png
+link: /downloadfiles/kaiser-songwriting.pdf
+---
