@@ -103,7 +103,7 @@ function build(done) {
       downloads: { pattern: 'downloads/**', sortBy: 'title' }
     }))
     .use(metadata({
-      'collections.tutorials': {
+      'tutorials': {
         backButton: true
       }
     }))
