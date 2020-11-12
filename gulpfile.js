@@ -67,6 +67,17 @@ const tutorialInfos = [{
   categories: ['Didaktik']
 }];
 
+const cardGameInfos = [{
+  title: 'Basics',
+  categories: ['basics']
+}, {
+  title: 'Formenlehre',
+  categories: ['formenlehre']
+}, {
+  title: 'Diverses',
+  categories: ['diverses']
+}];
+
 function summary({ dest }) {
   return function (files, metalsmith) {
     const summaryCollections = {
@@ -100,7 +111,8 @@ function build(done) {
   metalsmith(__dirname)
     .use(collections({
       tutorials: { pattern: 'tutorials/**', sortBy: 'title' },
-      downloads: { pattern: 'downloads/**', sortBy: 'title' }
+      downloads: { pattern: 'downloads/**', sortBy: 'title' },
+      cardgames: { pattern: 'spiele/kartenspiele/**', sortBy: 'title' }
     }))
     .use(metadata({
       'tutorials': {
@@ -112,7 +124,8 @@ function build(done) {
       engineOptions: {
         globals: {
           downloadInfos,
-          tutorialInfos
+          tutorialInfos,
+          cardGameInfos
         },
         filters: {
           formatDate: date => moment(date).locale('de-DE').format('LL'),
