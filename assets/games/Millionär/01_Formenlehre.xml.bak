@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<Game>
+  <Level Rank="0">
+    <Question>Was bezeichnet "Formenlehre"?</Question>
+    <Set>
+      <Answer>Eine dreijährige Ausbildung zum Formenmeister</Answer>
+      <Answer>Die Abwesenheit von Formen</Answer>
+      <Answer IsRight="true">Ein Unterrichtsfach an den Musikausbildungsstätten</Answer>
+      <Answer>Ein Messwerkzeug zum Erfassen und Einordnen von Formen</Answer>
+    </Set>
+  </Level>
+  <Level Rank="1">
+    <Question>Was ist eine Bedingung für eine musikalische Formenlehre?</Question>
+    <Set>
+      <Answer>Harmonik und Rhythmik</Answer>
+      <Answer IsRight="true">Eine bewusste Wahrnehmung von Musik</Answer>
+      <Answer>Kompositionen von Haydn, Mozart und Beethoven</Answer>
+      <Answer>Ein wirklich kluger Professor und lernwillige Studierende (= Kommunikation)</Answer>
+    </Set>
+  </Level>
+  <Level Rank="2">
+    <Question>Was versteht man unter einem Medium?</Question>
+    <Set>
+      <Answer>Die Terz eines Dreiklangs</Answer>
+      <Answer>Einen Studierenden mit durchschnittlichen Fähigkeiten</Answer>
+	  <Answer IsRight="true">Eine Bedingung für Form</Answer>
+      <Answer>Die mittlere Taktgruppe eines musikalischen Themas</Answer>
+    </Set>
+    </Level>
+	<Level Rank="3">
+      <Question>Was ist ein Liniennetzplan?</Question>
+      <Set>
+        <Answer>Ein Plan zur Herstellung von Liniennetzen</Answer>
+        <Answer>Vorüberlegung zur Simulation von Spinnennetzen und deren Belastbarkeit</Answer>
+        <Answer IsRight="true">Eine abstrakte Darstellung realer U-Bahn und S-Bahnverbindungen</Answer>
+        <Answer>Ein Gitter zur Platzierung musikalischer Kadenzwendungen</Answer>
+      </Set>
+    </Level>
+  <Level Rank="4">
+    <Question>Was ist ein Idealtyp?</Question>
+    <Set>
+	  <Answer IsRight="true">Eine gedankliche Einheit zum Sinnverständnis von Wirklichkeit</Answer>
+      <Answer>Ein passender Geschlechtspartner mit Idealmaßen</Answer>
+      <Answer>Ein genau acht Takte langes musikalisches Thema</Answer>
+      <Answer>Ein nach der EU-Norm 2764-3 komponierter Popsong</Answer>
+    </Set>
+  </Level>
+    <Level Rank="5">
+      <Question>Wozu dient Formanalyse?</Question>
+      <Set>
+        <Answer>Dem Auseinandernehmen von Musik</Answer>
+        <Answer>Dem Erkennen einer nicht richtig komponierten Form</Answer>
+        <Answer>Dem Erkennen von spezifischen Modulationsplänen und Harmonieverläufen</Answer>
+        <Answer IsRight="true">Dem Formverständnis und Entwickeln von Modellen</Answer>
+      </Set>
+    </Level>
+  <Level Rank="6">
+    <Question>Was ist ein Fraktal?</Question>
+    <Set>
+      <Answer>Ein einzelner Satz einer Satzfolge wie z.B. der Sonatensatzform (Allegro, Andante, Scherzo, Presto)</Answer>
+      <Answer IsRight="true">Ein geometrisches Muster, dessen Teile Selbstähnlichkeit aufweisen</Answer>
+        <Answer>Ein einzelner Takt aus einer musikalischen Sinneinheit von mehreren Takten Dauer (Taktgruppe)</Answer>
+        <Answer>Eine Ausbeulung in einem schwarzen Konzertanzug</Answer>
+    </Set>
+  </Level>
+  <Level Rank="7">
+    <Question>Welches Dynamikmodell charakterisiert die Exposition der Sinfonie in Es-Dur KV 132 (Mozart)?</Question>
+    <Set>
+      <Answer IsRight="true">p-f-p-f-</Answer>
+      <Answer>f-f-p-p</Answer>
+      <Answer>f-p-f-p</Answer>
+      <Answer>p-p-f-f</Answer>
+    </Set>
+  </Level>
+  <Level Rank="8">
+    <Question>Für welchen Formabschnitt in Kompositionen Mozart ist das p-f-p-f-Dynamikmodell noch typisch?</Question>
+    <Set>
+      <Answer>Für Durchführungen</Answer>
+	  <Answer IsRight="true">Für den Seitensatz</Answer>
+      <Answer>Für den Hauptsatz</Answer>
+      <Answer>Für langsame Einleitungen</Answer>
+    </Set>
+  </Level>
+  <Level Rank="9">
+    <Question>Welche Aussage definiert umfassend, was eine musikalische Struktur ist?</Question>
+    <Set>
+      <Answer>Strukturen sind formal wichtige Oberstimmenverläufe zur Veranschaulichung von Form</Answer>
+      <Answer>Strukturen sind Harmoniefolgen, die den formalen Verlauf verdeutlichen</Answer>
+      <Answer IsRight="true">Strukturen sind Formen im Medium der Komposition</Answer>
+	  <Answer>Als Strukturen werden die rhythmischen Gestaltungen von Musik bezeichnet</Answer>
+    </Set>
+  </Level>
+</Game>

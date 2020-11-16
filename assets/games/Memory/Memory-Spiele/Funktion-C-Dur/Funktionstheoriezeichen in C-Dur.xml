@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Memory DefaultPicturePath="Default.png" Name="Funktionstheoriezeichen in C-Dur">
+  <Karte Id="1" Path="Funktionstheoriezeichen in C-Dur/01-02.png">
+    <Match IdRef="2" />
+  </Karte>
+  <Karte Id="2" Path="Funktionstheoriezeichen in C-Dur/02-01.png">
+    <Match IdRef="1" />
+  </Karte>
+  <Karte Id="3" Path="Funktionstheoriezeichen in C-Dur/03-04.png">
+    <Match IdRef="4" />
+  </Karte>
+  <Karte Id="4" Path="Funktionstheoriezeichen in C-Dur/04-03.png">
+    <Match IdRef="3" />
+  </Karte>
+  <Karte Id="5" Path="Funktionstheoriezeichen in C-Dur/05-06.png">
+    <Match IdRef="6" />
+  </Karte>
+  <Karte Id="6" Path="Funktionstheoriezeichen in C-Dur/06-05.png">
+    <Match IdRef="5" />
+  </Karte>
+  <Karte Id="7" Path="Funktionstheoriezeichen in C-Dur/07-08.png">
+    <Match IdRef="8" />
+	<Match IdRef="12" />
+  </Karte>
+  <Karte Id="8" Path="Funktionstheoriezeichen in C-Dur/08-07.png">
+    <Match IdRef="7" />
+	<Match IdRef="11" />
+  </Karte>
+  <Karte Id="9" Path="Funktionstheoriezeichen in C-Dur/09-10.png">
+    <Match IdRef="10" />
+	<Match IdRef="16" />
+  </Karte>
+  <Karte Id="10" Path="Funktionstheoriezeichen in C-Dur/10-09.png">
+    <Match IdRef="9" />
+	<Match IdRef="15" />
+  </Karte>
+  <Karte Id="11" Path="Funktionstheoriezeichen in C-Dur/11-12.png">
+    <Match IdRef="12" />
+	<Match IdRef="8" />
+  </Karte>
+  <Karte Id="12" Path="Funktionstheoriezeichen in C-Dur/12-11.png">
+    <Match IdRef="11" />
+	<Match IdRef="7" />
+  </Karte>
+  <Karte Id="13" Path="Funktionstheoriezeichen in C-Dur/13-14.png">
+    <Match IdRef="14" />
+  </Karte>
+  <Karte Id="14" Path="Funktionstheoriezeichen in C-Dur/14-13.png">
+    <Match IdRef="13" />
+  </Karte>
+  <Karte Id="15" Path="Funktionstheoriezeichen in C-Dur/15-16.png">
+    <Match IdRef="16" />
+	<Match IdRef="10" />
+  </Karte>
+  <Karte Id="16" Path="Funktionstheoriezeichen in C-Dur/16-15.png">
+    <Match IdRef="15" />
+	<Match IdRef="9" />
+  </Karte>
+  <Karte Id="17" Path="Funktionstheoriezeichen in C-Dur/17-18.png">
+    <Match IdRef="18" />
+  </Karte>
+  <Karte Id="18" Path="Funktionstheoriezeichen in C-Dur/18-17.png">
+    <Match IdRef="17" />
+  </Karte>
+</Memory>

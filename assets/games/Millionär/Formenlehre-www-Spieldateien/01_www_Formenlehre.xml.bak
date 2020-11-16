@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<Game Name="Einführung">
+	<Level>
+		<Question>Was bezeichnet "Formenlehre"?</Question>
+		<Answers>
+			<Answer>Eine dreijährige Ausbildung zum Formenmeister</Answer>
+			<Answer>Die Abwesenheit von Formen</Answer>
+			<Answer IsRight="true">Ein Unterrichtsfach an den Musikausbildungsstätten</Answer>
+			<Answer>Ein Messwerkzeug zum Erfassen und Einordnen von Formen</Answer>
+		</Answers>
+	</Level>
+	<Level>
+		<Question>Was ist eine Bedingung für eine musikalische Formenlehre?</Question>
+		<Answers>
+			<Answer>Harmonik und Rhythmik</Answer>
+			<Answer IsRight="true">Eine bewusste Wahrnehmung von Musik</Answer>
+			<Answer>Kompositionen von Haydn, Mozart und Beethoven</Answer>
+			<Answer>Ein wirklich kluger Professor und lernwillige Studierende (= Kommunikation)</Answer>
+		</Answers>
+	</Level>
+	<Level>
+		<Question>Was versteht man unter einem Medium?</Question>
+		<Answers>
+			<Answer>Die Terz eines Dreiklangs</Answer>
+			<Answer>Einen Studierenden mit durchschnittlichen Fähigkeiten</Answer>
+			<Answer IsRight="true">Eine Bedingung für Form</Answer>
+			<Answer>Die mittlere Taktgruppe eines musikalischen Themas</Answer>
+		</Answers>
+	</Level>
+	<Level>
+		<Question>Was ist ein Liniennetzplan?</Question>
+		<Answers>
+			<Answer>Ein Plan zur Herstellung von Liniennetzen</Answer>
+			<Answer>Vorüberlegung zur Simulation von Spinnennetzen und deren Belastbarkeit</Answer>
+			<Answer IsRight="true">Eine abstrakte Darstellung realer U-Bahn und S-Bahnverbindungen</Answer>
+			<Answer>Ein Gitter zur Platzierung musikalischer Kadenzwendungen</Answer>
+		</Answers>
+	</Level>
+	<Level>
+		<Question>Was ist ein Idealtyp?</Question>
+		<Answers>
+			<Answer IsRight="true">Eine gedankliche Einheit zum Sinnverständnis von Wirklichkeit</Answer>
+			<Answer>Ein passender Geschlechtspartner mit Idealmaßen</Answer>
+			<Answer>Ein genau acht Takte langes musikalisches Thema</Answer>
+			<Answer>Ein nach der EU-Norm 2764-3 komponierter Popsong</Answer>
+		</Answers>
+	</Level>
+	<Level>
+		<Question>Wozu dient Formanalyse?</Question>
+		<Answers>
+			<Answer>Dem Auseinandernehmen von Musik</Answer>
+			<Answer>Dem Erkennen einer nicht richtig komponierten Form</Answer>
+			<Answer>Dem Erkennen von spezifischen Modulationsplänen und Harmonieverläufen</Answer>
+			<Answer IsRight="true">Dem Formverständnis und Entwickeln von Modellen</Answer>
+		</Answers>
+	</Level>
+	<Level>
+		<Question>Was ist ein Fraktal?</Question>
+		<Answers>
+			<Answer>Ein einzelner Satz einer Satzfolge wie z.B. der Sonatensatzform (Allegro, Andante, Scherzo, Presto)</Answer>
+			<Answer IsRight="true">Ein geometrisches Muster, dessen Teile Selbstähnlichkeit aufweisen</Answer>
+			<Answer>Ein einzelner Takt aus einer musikalischen Sinneinheit von mehreren Takten Dauer (Taktgruppe)</Answer>
+			<Answer>Eine Einbeulung in einem schwarzen Konzertanzug</Answer>
+		</Answers>
+	</Level>
+	<Level>
+		<Question>Welches Dynamikmodell charakterisiert die Exposition der Sinfonie in Es-Dur KV 132 (Mozart)?</Question>
+		<Answers>
+			<Answer IsRight="true">p-f-p-f</Answer>
+			<Answer>f-f-p-p</Answer>
+			<Answer>f-p-f-p</Answer>
+			<Answer>p-p-f-f</Answer>
+		</Answers>
+	</Level>
+	<Level>
+		<Question>Für welchen Formabschnitt in Kompositionen Mozart ist das p-f-p-f-Dynamikmodell noch typisch?</Question>
+		<Answers>
+			<Answer>Für die Durchführung</Answer>
+			<Answer IsRight="true">Für den Seitensatz</Answer>
+			<Answer>Für den Hauptsatz</Answer>
+			<Answer>Für die langsame Einleitung</Answer>
+		</Answers>
+	</Level>
+	<Level>
+		<Question>Welche Aussage definiert umfassend, was eine musikalische Struktur ist?</Question>
+		<Answers>
+			<Answer>Strukturen sind formal wichtige Oberstimmenverläufe zur Veranschaulichung von Form</Answer>
+			<Answer>Strukturen sind Harmoniefolgen, die den formalen Verlauf verdeutlichen</Answer>
+			<Answer IsRight="true">Strukturen sind Formen im Medium der Komposition</Answer>
+			<Answer>Als Strukturen werden die rhythmischen Gestaltungen von Musik bezeichnet</Answer>
+		</Answers>
+	</Level>
+</Game>

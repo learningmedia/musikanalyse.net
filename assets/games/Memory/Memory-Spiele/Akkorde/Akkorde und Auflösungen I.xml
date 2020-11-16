@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Memory DefaultPicturePath="Default.png" Name="Akkorde und Auflösungen I">
+  <Karte Id="1" Path="Akkorde und Auflösungen I/01_02.png">
+    <Match IdRef="2" />
+  </Karte>
+  <Karte Id="2" Path="Akkorde und Auflösungen I/02_01.png">
+    <Match IdRef="1" />
+  </Karte>
+  <Karte Id="3" Path="Akkorde und Auflösungen I/03_04.png">
+    <Match IdRef="4" />
+  </Karte>
+  <Karte Id="4" Path="Akkorde und Auflösungen I/04_03.png">
+    <Match IdRef="3" />
+  </Karte>
+  <Karte Id="5" Path="Akkorde und Auflösungen I/05_06.png">
+    <Match IdRef="6" />
+  </Karte>
+  <Karte Id="6" Path="Akkorde und Auflösungen I/06_05.png">
+    <Match IdRef="5" />
+  </Karte>
+  <Karte Id="7" Path="Akkorde und Auflösungen I/07_08.png">
+    <Match IdRef="8" />
+  </Karte>
+  <Karte Id="8" Path="Akkorde und Auflösungen I/08_07.png">
+    <Match IdRef="7" />
+  </Karte>
+  <Karte Id="9" Path="Akkorde und Auflösungen I/09_10.png">
+    <Match IdRef="10" />
+  </Karte>
+  <Karte Id="10" Path="Akkorde und Auflösungen I/10_09.png">
+    <Match IdRef="9" />
+  </Karte>
+  <Karte Id="11" Path="Akkorde und Auflösungen I/11_12.png">
+    <Match IdRef="12" />
+  </Karte>
+  <Karte Id="12" Path="Akkorde und Auflösungen I/12_11.png">
+    <Match IdRef="11" />
+  </Karte>
+  <Karte Id="13" Path="Akkorde und Auflösungen I/13_14.png">
+    <Match IdRef="14" />
+  </Karte>
+  <Karte Id="14" Path="Akkorde und Auflösungen I/14_13.png">
+    <Match IdRef="13" />
+  </Karte>
+  <Karte Id="15" Path="Akkorde und Auflösungen I/15_16.png">
+    <Match IdRef="16" />
+  </Karte>
+  <Karte Id="16" Path="Akkorde und Auflösungen I/16_15.png">
+    <Match IdRef="15" />
+  </Karte>
+  <Karte Id="17" Path="Akkorde und Auflösungen I/17_18.png">
+    <Match IdRef="18" />
+  </Karte>
+  <Karte Id="18" Path="Akkorde und Auflösungen I/18_17.png">
+    <Match IdRef="17" />
+  </Karte>
+</Memory>

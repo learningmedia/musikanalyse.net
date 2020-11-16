@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Memory DefaultPicturePath="Default.png" Name="Tänze der Suite">
+  <Karte Id="1" Path="Tänze der Suite/01-02.png">
+    <Match IdRef="2" />
+  </Karte>
+  <Karte Id="2" Path="Tänze der Suite/02-01.png">
+    <Match IdRef="1" />
+  </Karte>
+  <Karte Id="3" Path="Tänze der Suite/03-04.png">
+    <Match IdRef="4" />
+  </Karte>
+  <Karte Id="4" Path="Tänze der Suite/04-03.png">
+    <Match IdRef="3" />
+  </Karte>
+  <Karte Id="5" Path="Tänze der Suite/05-06.png">
+    <Match IdRef="6" />
+  </Karte>
+  <Karte Id="6" Path="Tänze der Suite/06-05.png">
+    <Match IdRef="5" />
+  </Karte>
+  <Karte Id="7" Path="Tänze der Suite/07-08.png">
+    <Match IdRef="8" />
+  </Karte>
+  <Karte Id="8" Path="Tänze der Suite/08-07.png">
+    <Match IdRef="7" />
+  </Karte>
+  <Karte Id="9" Path="Tänze der Suite/09-10.png">
+    <Match IdRef="10" />
+  </Karte>
+  <Karte Id="10" Path="Tänze der Suite/10-09.png">
+    <Match IdRef="9" />
+  </Karte>
+  <Karte Id="11" Path="Tänze der Suite/11-12.png">
+    <Match IdRef="12" />
+  </Karte>
+  <Karte Id="12" Path="Tänze der Suite/12-11.png">
+    <Match IdRef="11" />
+  </Karte>
+  <Karte Id="13" Path="Tänze der Suite/13-14.png">
+    <Match IdRef="14" />
+  </Karte>
+  <Karte Id="14" Path="Tänze der Suite/14-13.png">
+    <Match IdRef="13" />
+  </Karte>
+  <Karte Id="15" Path="Tänze der Suite/15-16.png">
+    <Match IdRef="16" />
+  </Karte>
+  <Karte Id="16" Path="Tänze der Suite/16-15.png">
+    <Match IdRef="15" />
+  </Karte>
+  <Karte Id="17" Path="Tänze der Suite/17-18.png">
+    <Match IdRef="18" />
+  </Karte>
+  <Karte Id="18" Path="Tänze der Suite/18-17.png">
+    <Match IdRef="17" />
+  </Karte>
+</Memory>

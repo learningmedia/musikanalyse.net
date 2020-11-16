@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Memory DefaultPicturePath="Default.png" Name="Grundbegriffe Formenlehre I">
+  <Karte Id="1" Path="Grundbegriffe Formenlehre I/01-02.png">
+    <Match IdRef="2" />
+  </Karte>
+  <Karte Id="2" Path="Grundbegriffe Formenlehre I/02-01.png">
+    <Match IdRef="1" />
+  </Karte>
+  <Karte Id="3" Path="Grundbegriffe Formenlehre I/03-04.png">
+    <Match IdRef="4" />
+  </Karte>
+  <Karte Id="4" Path="Grundbegriffe Formenlehre I/04-03.png">
+    <Match IdRef="3" />
+  </Karte>
+  <Karte Id="5" Path="Grundbegriffe Formenlehre I/05-06.png">
+    <Match IdRef="6" />
+  </Karte>
+  <Karte Id="6" Path="Grundbegriffe Formenlehre I/06-05.png">
+    <Match IdRef="5" />
+  </Karte>
+  <Karte Id="7" Path="Grundbegriffe Formenlehre I/07-08.png">
+    <Match IdRef="8" />
+  </Karte>
+  <Karte Id="8" Path="Grundbegriffe Formenlehre I/08-07.png">
+    <Match IdRef="7" />
+  </Karte>
+  <Karte Id="9" Path="Grundbegriffe Formenlehre I/09-10.png">
+    <Match IdRef="10" />
+  </Karte>
+  <Karte Id="10" Path="Grundbegriffe Formenlehre I/10-09.png">
+    <Match IdRef="9" />
+  </Karte>
+  <Karte Id="11" Path="Grundbegriffe Formenlehre I/11-12.png">
+    <Match IdRef="12" />
+  </Karte>
+  <Karte Id="12" Path="Grundbegriffe Formenlehre I/12-11.png">
+    <Match IdRef="11" />
+  </Karte>
+  <Karte Id="13" Path="Grundbegriffe Formenlehre I/13-14.png">
+    <Match IdRef="14" />
+  </Karte>
+  <Karte Id="14" Path="Grundbegriffe Formenlehre I/14-13.png">
+    <Match IdRef="13" />
+  </Karte>
+  <Karte Id="15" Path="Grundbegriffe Formenlehre I/15-16.png">
+    <Match IdRef="16" />
+  </Karte>
+  <Karte Id="16" Path="Grundbegriffe Formenlehre I/16-15.png">
+    <Match IdRef="15" />
+  </Karte>
+  <Karte Id="17" Path="Grundbegriffe Formenlehre I/17-18.png">
+    <Match IdRef="18" />
+  </Karte>
+  <Karte Id="18" Path="Grundbegriffe Formenlehre I/18-17.png">
+    <Match IdRef="17" />
+  </Karte>
+</Memory>

@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<Game Name="Kadenzen">
+<Level>
+      <Question>"Musik" wird oft mit "Sprache" verglichen. Worauf stützte sich dieser Vergleich? </Question>
+      <Answers>
+        <Answer>Auf die Analogie von Wortbedeutung und der Bedeutung musikalischer Modelle</Answer>
+        <Answer>Auf die Tatsache, dass Sprache und Musik Formen im Medium der Akustik sind</Answer>
+        <Answer IsRight="true">Auf die Entsprechung von Satzzeichen und Kadenzen</Answer>
+        <Answer>Auf die Analogie spezifischer Inhalte (z.B. fröhlich = Dur und traurig = Moll etc.)</Answer>
+      </Answers>
+    </Level>
+  <Level>
+    <Question>Welches Verständnis für den Begriff "Kadenz" ist hilfreich?</Question>
+    <Answers>
+      <Answer>Kadenz heißt der Quintfall im Bass (von lat. cadere = fallen)</Answer>
+      <Answer IsRight="true">Eine Kadenz ist eine musikalische Schlusswendung</Answer>
+      <Answer>Kadenz bezeichnet die Harmoniefolge T-S-D-T</Answer>
+      <Answer>Eine Kadenz ist ein Ganzschluss oder Halbschluss</Answer>
+    </Answers>
+  </Level>
+  <Level>
+    <Question>Welche Aussage ist nicht richtig?</Question>
+    <Answers>
+      <Answer>Kadenzen können aus nur zwei Akkorden bestehen</Answer>
+      <Answer IsRight="true">Kadenzen haben immmer drei Akkorde (IV-V-I)</Answer>
+      <Answer>Kadenzen können aus vielen Akkorden bestehen</Answer>
+      <Answer>Kadenzen lassen sich kontrapunktisch (ohne Akkorde) erklären</Answer>
+    </Answers>
+  </Level>
+  <Level>
+    <Question>Welches Stimmenpaar ist historisch gesehen am wichtigsten für Kadenzbildungen?</Question>
+    <Answers>
+      <Answer>Sopranklausel und Bassklausel</Answer>
+      <Answer>Altklausel und Bassklausel</Answer>
+      <Answer>Bassklausel und Tenorklausel</Answer>
+	  <Answer IsRight="true">Sopranklausel und Tenorklausel</Answer>
+    </Answers>
+  </Level>
+  <Level>
+    <Question>Welche Intervallfolge wird als kontrapunktisches Gerüst einer Kadenz bezeichnet?</Question>
+    <Answers>
+      <Answer>Sexte, Quinte, Oktave</Answer>
+      <Answer>Sekunde, Terz, Oktave</Answer>
+	  <Answer IsRight="true">Septime, Sexte, Oktave</Answer>
+      <Answer>Septime, Sexte, Einklang</Answer>
+    </Answers>
+    </Level>
+  <Level>
+    <Question>Was kann als Idealtyp der »phrygischen« Kadenz angesehen werden?</Question>
+    <Answers>
+	  <Answer IsRight="true">Die Intervallfolge 7-6-8 auf den Ton e</Answer>
+      <Answer>Die Intervallfolge 7-6-8 auf den Ton d</Answer>
+      <Answer>Die Intervallfolge 7-6-8 auf den Ton f</Answer>
+      <Answer>Die Intervallfolge 7-6-8 auf den Ton g</Answer>
+    </Answers>
+  </Level>
+    <Level>
+      <Question>Welcher Akkord signalisiert am wenigsten eindeutig ein bevorstehendes Kadenzgeschehen?</Question>
+      <Answers>
+        <Answer>Der »Übermäßige Quintsextakkord«</Answer>
+        <Answer>Der »Neapolitaner«</Answer>
+        <Answer>Der »ganzverminderte Septakkord«</Answer>
+        <Answer IsRight="true">Der Dreiklang der Subdominante</Answer>
+      </Answers>
+    </Level>
+  <Level>
+    <Question>Die Kadenz lässt sich als Modell für Formteile verstehen. Für welchen ist sie am wenigsten charakteristisch?</Question>
+    <Answers>
+      <Answer>Für Schlussabschnitte von Sonaten</Answer>
+      <Answer>Für den ersten Formteil von Kompositionen</Answer>
+      <Answer IsRight="true">Für mittlere Abschnitte eines Verlaufs</Answer>
+      <Answer>Für Schlussbereiche in Sinfonien und Arien</Answer>
+    </Answers>
+  </Level>
+  <Level>
+    <Question>Kadenzmodelle wurden zur Erklären ganzer Sätze herangezogen. Welche Aussage stimmt nicht?</Question>
+    <Answers>
+      <Answer>Heinrich Schenker hat einen Ursatz (I–V–I-Kadenz) zur Erklärung von Kompositionen herangezogen</Answer>
+        <Answer>Heinrich Christoph Koch hat Kadenzfolgen zur Erklärung ganzer Sätze verwendet</Answer>
+		<Answer>Hugo Riemann hat seine Erklärung von Kompositionen auf Grundfunktionen (T-S-D-T) gestützt</Answer>
+        <Answer IsRight="true">Heinrich Schenker hat die Urfunktionen T-D-T als Gerüst einer jeden tonalen Komposition bestimmt</Answer>
+    </Answers>
+  </Level>
+  <Level>
+    <Question>Mit welcher Kadenz ist kein Abschluss einer Komposition denkbar?</Question>
+    <Answers>
+      <Answer>Mit einem unvollkommenen Ganzschluss</Answer>
+	  <Answer IsRight="true">Mit einem Trugschluss</Answer>
+      <Answer>Mit einem vollkommenen Ganzschluss</Answer>
+      <Answer>Mit einem Halbschluss</Answer>
+    </Answers>
+  </Level>
+</Game>

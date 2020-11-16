@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<Game>
+<Level Rank="0">
+      <Question>Welcher Akkord ist Neapolitaner in g-Moll?</Question>
+      <Set>
+        <Answer>Des-Dur-Sextakkord</Answer>
+        <Answer IsRight="true">As-Dur-Sextakkord</Answer>
+        <Answer>Gis-Dur-Sextakkord</Answer>
+        <Answer>A-Dur-Sextakkord</Answer>
+      </Set>
+    </Level>
+  <Level Rank="1">
+    <Question>Wie heißen die Töne des übermäßigen Quintsextakkords in D-Dur?</Question>
+    <Set>
+      <Answer>B-D-F-As</Answer>
+      <Answer>A-Cis-E-Fisis</Answer>
+      <Answer IsRight="true">B-D-F-Gis</Answer>
+      <Answer>Es-G-B-Cis</Answer>
+    </Set>
+  </Level>
+  <Level Rank="2">
+    <Question>Wie heißen die Töne des doppeldominantischen verminderten Septakkords in G-Dur?</Question>
+    <Set>
+      <Answer>Des-E-G-B</Answer>
+      <Answer>Cis-E-G-Ais</Answer>
+      <Answer IsRight="true">Cis-E-G-B</Answer>
+      <Answer>Des-Fes-G-B</Answer>
+    </Set>
+  </Level>
+  <Level Rank="3">
+    <Question>Wie heißen die Töne des übermäßigen Quintsextakkords in Es-Dur?</Question>
+    <Set>
+      <Answer IsRight="true">Ces-Es-Ges-A</Answer>
+      <Answer>H-Dis-Fis-A</Answer>
+      <Answer>H-Dis-Fis-Gisis</Answer>
+	  <Answer>C-E-G-Ais</Answer>
+    </Set>
+  </Level>
+  <Level Rank="4">
+    <Question>Welcher Akkord ist Neapolitaner in Es-Moll?</Question>
+    <Set>
+      <Answer>E-Dur-Sextakkord</Answer>
+      <Answer>Ces-Dur-Sextakkord</Answer>
+	  <Answer IsRight="true">Fes-Dur-Sextakkord</Answer>
+      <Answer>As-Dur-Sextakkord</Answer>
+    </Set>
+    </Level>
+  <Level Rank="5">
+    <Question>Wie heißen die Töne des doppeldominantischen verminderten Septakkords in A-Dur?</Question>
+    <Set>
+	  <Answer IsRight="true">Dis-Fis-A-C</Answer>
+      <Answer>Dis-Fis-A-His</Answer>
+      <Answer>Es-Fis-A-C</Answer>
+      <Answer>Dis-Fis-A-Cis</Answer>
+    </Set>
+  </Level>
+    <Level Rank="6">
+      <Question>Wie heißen die Töne des übermäßigen Quintsextakkords in E-Dur?</Question>
+      <Set>
+        <Answer>C-E-G-B</Answer>
+        <Answer>Ais-Cis-E-G</Answer>
+        <Answer>C-Dis-Fis-A</Answer>
+        <Answer IsRight="true">C-E-G-Ais</Answer>
+      </Set>
+    </Level>
+  <Level Rank="7">
+    <Question>Welcher Akkord ist Neapolitaner in H-Dur?</Question>
+    <Set>
+      <Answer>G-Dur-Sextakkord</Answer>
+      <Answer>Cis-Dur-Sextakkord</Answer>
+      <Answer>E-Dur-Sextakkord</Answer>
+      <Answer IsRight="true">C-Dur-Sextakkord</Answer>
+    </Set>
+  </Level>
+  <Level Rank="8">
+    <Question>Wie heißen die Töne des übermäßigen Quintsextakkords in Fis-Dur?</Question>
+    <Set>
+      <Answer IsRight="true">D-Fis-A-His</Answer>
+        <Answer>G-H-D-F</Answer>
+		<Answer>D-Fis-A-C</Answer>
+        <Answer>G-H-D-Eis</Answer>
+    </Set>
+  </Level>
+  <Level Rank="9">
+    <Question>Wie heißen die Töne des dominantischen verminderten Septakkords in Ges-Dur?</Question>
+    <Set>
+      <Answer>F-Gis-H-E</Answer>
+	  <Answer IsRight="true">F-As-Ces-Feses</Answer>
+      <Answer>F-As-H-E</Answer>
+      <Answer>F-As-Ces-E</Answer>
+    </Set>
+  </Level>
+</Game>

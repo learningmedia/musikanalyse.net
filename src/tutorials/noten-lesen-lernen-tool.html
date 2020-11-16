@@ -2,7 +2,7 @@
 title: Noten lesen lernen
 author: Ulrich Kaiser
 date: 2017-09-04
-modified: 2017-09-12
+modified: 2020-11-16
 layout: blank.nunjucks
 category: doNotShow
 abstract: In diesem Tutorial können Sie das Lesen von Noten im Violin- und Bassschlüssel üben.
@@ -21,7 +21,9 @@ abstract: In diesem Tutorial können Sie das Lesen von Noten im Violin- und Bass
   <option value="all">Violin- und Bassschlüssel</option>
 </select>
 <div style="height: 340px; clear: left;" id="exercise-container">
-  <span>Gib das <span id="noteName" style="color: #00AD00; font-weight: bold;"></span> auf der Tastatur (Klaviatur) an.</span>
+  <input type="checkbox" name="namesCheck" onchange="toggleNoteNameVisibility(this);">&nbsp;<label for="namesCheck">Notennamen ausblenden</label>
+  <br><br>
+  <span id="noteNameDisplay">Gib das <span id="noteName" style="color: #00AD00; font-weight: bold;"></span> auf der Tastatur (Klaviatur) an.</span>
   <div id="imageNoteContainer" style="height: 120px; margin-top: 20px; margin-left: 20%;">
     <image style="margin: 0;" id="imageNote">
   </div>
@@ -102,5 +104,14 @@ abstract: In diesem Tutorial können Sie das Lesen von Noten im Violin- und Bass
 
   function reset() {
     resetColors();
+  }
+
+  function toggleNoteNameVisibility(elem) {
+    const noteNameDisplay = document.getElementById("noteNameDisplay");
+    if (elem.checked) {
+      noteNameDisplay.style.display = "none";
+    } else {
+      noteNameDisplay.style.display = "block";
+    }
   }
 </script>
