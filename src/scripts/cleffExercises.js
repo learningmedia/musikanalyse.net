@@ -112,7 +112,7 @@ function getFeedBack(rightAnswers, exercises) {
   else if (percent < 80 && percent >= 60 && exercises.length > 5) evaluation = "Übe lieber noch ein bisschen!";
   else if (percent < 60 && percent >= 40 && exercises.length > 5) evaluation = "Du hast noch einiges zu tun!";
   else if (percent < 40 && exercises.length === 1) evaluation = "Kann mal passieren. Probiere es einfach noch einmal!";
-  else if(percent < 40 && exercises.length > 5) evaluation = "Ich glaube, Du solltest lieber die Anleitung oben noch einmal lesen :)";
+  else if(percent < 40 && exercises.length > 5) evaluation = "Ich glaube, Du brauchst noch Hilfe. Suche dir eine Anleitung zum Notenlesen...";
   else evaluation = "Versuche es noch einmal...";
   return percent + "% richtig von " + number + " " + question + ": " + evaluation;
 }
