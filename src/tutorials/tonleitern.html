@@ -8,12 +8,8 @@ category: Grundlagen
 abstract: In diesem Tutorial erhalten Sie Erklärungen sowie interaktive Übungsmöglichkeiten zum Thema Tonleitern. Dieses Tutorial ist zur Vorbereitung auf die entsprechende Aufgabe in Klausuren (›Allgemeine Musiklehre‹ an Musikhochschulen) geeignet.
 ---
 
-<script src='/scripts/jquery.klavier.js'></script>
-<script src='/scripts/scaleExercises.js'></script>
-<link rel="stylesheet" href="/styles/scale.css">
-
 <button onclick="onAnnotationsClick(this)">Zum Test (Text ausblenden)</button>
-<br><br>
+<br>
 <div id="scaleAnnotationContainer">
   <p>
     In Musiklehren findet man die häufig die folgenden Bezeichnungen für Skalen und Tonleitern. Klicken Sie auf die jeweiligen Erläuterungen, um Informationen zum Aufbau und zur Besonderheit der jeweiligen Tonfolge zu erhalten oder schauen sie sich die praktische Vorgehensweise an, wenn Sie schnell die Vorzeichen von einer Tonleitern bestimmen möchten.
@@ -468,109 +464,25 @@ abstract: In diesem Tutorial erhalten Sie Erklärungen sowie interaktive Übungs
     Die <b id="#blues">Bluestonleiter</b> lässt sich als Ableitung aus der Pentatonik verstehen.<br>
     Und hier leider auch... :(
   </p>
-
   <p>
     <span style="font-size: 0.8em;"><a href="#tutorialTitle">zurück zum Inhaltsverzeichnis</a></span>
   </p>
-
-  <!-- Tonleiter-Trainer -->
-  <hr>
-  <hr style="margin-top: -18px;">
+  
 </div>
 
-<h3 id="tonleiterTrainer">Testen Sie Ihr Tonleiter-Wissen</h3>
-<div style="height: 340px;" id="exercise-container">
-  <span>Geben Sie die Töne der Tonleiter "<span id="name"></span>" an.</span>
-  <br><br>
-  <div>
-    <div class="pianoContainer" id="exercise"></div>
-    <div class="flexContainer">
-      <button id="check" class="flexItem" style="border: 1px solid maroon;" onclick="show()">Überprüfen</button>
-      <button id="reset" class="flexItem" style="border: 1px solid navy;" onclick="reset()">Zurücksetzen</button>
-      <button id="new" class="flexItem" style="border: 1px solid green;" onclick="createNewExercise()">Neue Aufgabe</button>
-    </div>
-     <div id="attentionText" style="margin-top: 15px; color: maroon; font-weight: bold;" >
-    </div>
-  </div>
-</div>
-<div id="statistic" style="margin: 50px 0;"></div>
-<div class="smalltext" style="margin-top: 10px;">
-  <b>Anmerkungen:</b><br>
-  Mit der Schaltfläche <span class="textButton textButtonRed">Überprüfen</span> können Sie überprüfen, ob Ihre Eingabe richtig ist.
-  Sind nur grüne Tasten zu sehen, ist Ihre Eingabe korrekt, Gratulation! Die Schaltfläche <span class="textButton textButtonBlue">Zurücksetzen</span> wird Ihre Eingabe zurücksetzen, aber keine neue Aufgabe erstellen. Dadurch können fehlerhafte Eingaben korrigiert werden. Mit der Schaltfläche <span class="textButton textButtonGreen">Neue Aufgabe</span> erzeugen Sie eine neue Aufgabe.
-</div>
-<p>
-  <a href="#tutorialTitle">Zurück zum Anfang</a>
-</p>
+<!-- Doppellinie -->
 <hr>
+<hr style="margin-top: -18px;">
 
-<!-- <script src='/scripts/foldable.js'></script> -->
+<!-- Tonleiter-Trainer -->
+<iframe style="width: 100%; border: none;" scrolling="no" src="/tutorials/tonleitern-bestimmen-tool"></iframe>
+
 <script>
-  var options = {
-    'scales': [
-      {
-        'name': 'dur',
-        'structure': [2, 2, 1, 2, 2, 2, 1]
-      },
-      {
-        'name': 'moll',
-        'structure': [2, 1, 2, 2, 1, 2, 2]
-      },
-      {
-        'name': 'moll (harmonisch)',
-        'structure': [2, 1, 2, 2, 1, 3, 1]
-      },
-      {
-        'name': 'moll (aufwärts melodisch)',
-        'structure': [2, 1, 2, 2, 2, 2, 1]
-      },
-      {
-        'name': 'moll (abwärts melodisch)',
-        'structure': [2, 1, 2, 2, 1, 2, 2]
-      },
-      {
-        'name': 'dorisch',
-        'structure': [2, 1, 2, 2, 2, 1, 2]
-      },
-      {
-        'name': 'phrygisch',
-        'structure': [1, 2, 2, 2, 1, 2, 2]
-      },
-      {
-        'name': 'lydisch',
-        'structure': [2, 2, 2, 1, 2, 2, 1]
-      },
-      {
-        'name': 'mixolydisch',
-        'structure': [2, 2, 1, 2, 2, 1, 2]
-      }
-    ]
-  }
-
   function onAnnotationsClick(elem) {
     var button = $(elem);
     var annotationcontainer = $('#scaleAnnotationContainer');
     annotationcontainer.toggleClass('isNotVisible');
     if (annotationcontainer.hasClass('isNotVisible')) button.text('Erklärungen wieder einblenden');
     else button.text('Zum Test (Text ausblenden)');
-  }
-
-  $(document).ready(function() {
-    var exercise = createExercise('#exercise', options);
-    $("#name").text(exercise.rootLetter + '-' + exercise.genus);
-  });
-
-  function createNewExercise() {
-    $('#exercise').klavier('destroy');
-    var exercise = createExercise('#exercise', options);
-    $("#name").text(exercise.rootLetter + '-' + exercise.genus);
-  }
-
-  function show() {
-    showValue();
-  }
-
-  function reset() {
-    resetColors();
   }
 </script>

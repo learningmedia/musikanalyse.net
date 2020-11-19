@@ -170,3 +170,13 @@ abstract: In diesem Tutorial können Sie das Lesen von Noten im Violin- und Bass
 
 <iframe style="width: 100%; border: none;" scrolling="no" src="/tutorials/noten-lesen-lernen-tool"></iframe>
 <br><br><br>
+
+<script>
+  function onAnnotationsClick(elem) {
+    var button = $(elem);
+    var annotationcontainer = $('#scaleAnnotationContainer');
+    annotationcontainer.toggleClass('isNotVisible');
+    if (annotationcontainer.hasClass('isNotVisible')) button.text('Erklärungen wieder einblenden');
+    else button.text('Zum Test (Text ausblenden)');
+  }
+</script>
