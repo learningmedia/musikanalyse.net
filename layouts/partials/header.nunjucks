@@ -8,11 +8,11 @@
       <div class="top-nav s-12 l-8">
         <p class="nav-text"></p>
         <ul class="right chevron">
-          <li><a href="/">Home</a></li>
           <li><a href="/tutorials/">Lesen</a></li>
           <li><a href="/spielen/">Spielen</a></li>
           <li><a href="/entdecken/">Entdecken</a></li>
           <li><a href="/materialien/">Materialien</a></li>
+          <li><a href="/feedback/">Feedback</a></li>
         </ul>
       </div>
     </div>
