@@ -6,3 +6,4 @@ assets/*.psd
 assets/*.wav
 .vscode/
 *.mp4
+.mscbackup/*
