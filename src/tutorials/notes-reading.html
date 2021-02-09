@@ -1,0 +1,112 @@
+---
+title: Learn to read notes
+author: Ulrich Kaiser
+date: 2017-09-04
+modified: 2020-11-16
+layout: blank.nunjucks
+category: doNotShow
+abstract: In this tutorial you can practice reading notes in treble and bass clef.
+---
+
+<script src='/scripts/jquery.klavier.js'></script>
+<script src='/scripts/cleffExercises-en.js'></script>
+<link rel="stylesheet" href="/styles/cleffs.css">
+
+<!-- Tonleiterspiel  -->
+
+<h3 id="notenleseTrainer" style="float: left;">Test your knowledge about&nbsp;</h3>
+<select id="cleff" onchange="selectCleff()" style="width: 200px; height: 30px;">
+  <option value="violin">treble clef</option>
+  <option value="bass">bass clef</option>
+  <option value="all">treble and bass clef</option>
+</select>
+<div style="height: 340px; clear: left;" id="exercise-container">
+  <input type="checkbox" name="namesCheck" onchange="toggleNoteNameVisibility(this);">&nbsp;<label for="namesCheck">hide Note names</label>
+  <br><br>
+  <span id="noteNameDisplay">Find <span id="noteName" style="color: #00AD00; font-weight: bold;"></span> on the keyboard.</span>
+  <div id="imageNoteContainer" style="height: 120px; margin-top: 20px; margin-left: 20%;">
+    <image style="margin: 0;" id="imageNote">
+  </div>
+  <div>
+    <p id="octave" style="width: 100%; display: block; font-weight: bold;">octave c4, c#4, Db4 ... B5, Cb6.</p>
+    <div class="pianoContainer" id="exercise"></div>
+    <div class="flexContainer">
+      <button id="check" class="flexItem" style="border: 1px solid maroon;" onclick="show()">check</button>
+      <button id="reset" class="flexItem" style="border: 1px solid navy;" onclick="reset()">reset</button>
+      <button id="new" class="flexItem" style="border: 1px solid green;" onclick="createNewExercise()">new task</button>
+    </div>
+     <div id="attentionText">You cheated and specified too many tones!</div>
+  </div>
+</div>
+<div id="statistic"></div>
+<div class="smalltext">
+  <b>Notes:</b><br>
+  With the <span class="textButton textButtonRed">check button</span> button you can check whether your answer is correct. If there are only green keys your answer is right. Congratulations! The <span class="textButton textButtonBlue">reset button</span> will reset your answer without changing the task so you can correct wrong answers. By clicking the <span class="textButton textButtonGreen">new task button</span> you can create a new task.
+</div>
+
+<script>
+  var options = {
+    'startKey': 60,
+    'cleff': 'violin',
+    'range': 23,
+    'folderName': '/content/tutorials/notes-reading/midiNotes/',
+    'images': ['Aplus_46.png', 'Aplus_58.png', 'Aplus_70.png', 'Aplus_82.png', 'Ab_44.png', 'Ab_56.png', 'Ab_68.png', 'Ab_80.png', 'A_45.png', 'A_57.png', 'A_69.png', 'A_81.png', 'Bb_46.png', 'Bb_58.png', 'Bb_70.png', 'Bb_82.png', 'Cb_47.png', 'Cb_59.png', 'Cb_71.png', 'Cb_83.png', 'Cplus_37.png', 'Cplus_49.png', 'Cplus_61.png', 'Cplus_73.png', 'C_36.png', 'C_48.png', 'C_60.png', 'C_72.png', 'Db_37.png', 'Db_49.png', 'Db_61.png', 'Db_73.png', 'Dplus_39.png', 'Dplus_51.png', 'Dplus_63.png', 'Dplus_75.png', 'D_38.png', 'D_50.png', 'D_62.png', 'D_74.png', 'Eb_39.png', 'Eb_51.png', 'Eb_63.png', 'Eb_75.png', 'E_40.png', 'E_52.png', 'E_64.png', 'E_76.png', 'Fb_40.png', 'Fb_52.png', 'Fb_64.png', 'Fb_76.png', 'Fplus_42.png', 'Fplus_54.png', 'Fplus_66.png', 'Fplus_78.png', 'F_41.png', 'F_53.png', 'F_65.png', 'F_77.png', 'Gb_42.png', 'Gb_54.png', 'Gb_66.png', 'Gb_78.png', 'Gplus_44.png', 'Gplus_56.png', 'Gplus_68.png', 'Gplus_80.png', 'G_43.png', 'G_55.png', 'G_67.png', 'G_79.png', 'B_47.png', 'B_59.png', 'B_71.png', 'B_83.png']
+  }
+
+  function selectCleff() {
+    var elem = document.getElementById("cleff");
+    var cleff = elem.options[elem.selectedIndex].value;
+    var range = 23;
+    if (cleff === 'violin') {
+      options.startKey = 60;
+      $('#imageNoteContainer').css('margin-left', 20 + '%');
+      $('#octave').css('padding-left', 0 + '');
+    } else if (cleff === 'bass') {
+      options.startKey = 36;
+      range = 35;
+      $('#octave').css('padding-left', 560 + 'px');
+    } else {
+      options.startKey = 36;
+      range = 47;
+      $('#imageNoteContainer').css('margin-left', 30 + '%');
+      $('#octave').css('padding-left', 400 + 'px');
+    }
+    options.range = range;
+    options.cleff = cleff;
+    createNewExercise();
+  }
+
+  $(document).ready(function() {
+    var exercise = createExercise('#exercise', options);
+    $('#imageNote').attr('src', exercise.currentNotePath);
+    $('#noteName').text(exercise.octave + " " + fixSharpNoteNames(exercise.name));
+  });
+
+  function createNewExercise() {
+    $('#exercise').klavier('destroy');
+    var exercise = createExercise('#exercise', options);
+    $('#imageNote').attr('src', exercise.currentNotePath);
+    $('#noteName').text(exercise.octave + " " + fixSharpNoteNames(exercise.name));
+  }
+
+  function show() {
+    showValue();
+  }
+
+  function reset() {
+    resetColors();
+  }
+
+  function toggleNoteNameVisibility(elem) {
+    const noteNameDisplay = document.getElementById("noteNameDisplay");
+    if (elem.checked) {
+      noteNameDisplay.style.display = "none";
+    } else {
+      noteNameDisplay.style.display = "block";
+    }
+  }
+
+  function fixSharpNoteNames(name) {
+    return name.replace('plus', '#');
+  }
+</script>
