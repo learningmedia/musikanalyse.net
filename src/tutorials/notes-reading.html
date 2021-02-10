@@ -21,14 +21,14 @@ abstract: In this tutorial you can practice reading notes in treble and bass cle
   <option value="all">treble and bass clef</option>
 </select>
 <div style="height: 340px; clear: left;" id="exercise-container">
-  <input type="checkbox" name="namesCheck" onchange="toggleNoteNameVisibility(this);">&nbsp;<label for="namesCheck">hide Note names</label>
+  <input type="checkbox" name="namesCheck" onchange="toggleNoteNameVisibility(this);">&nbsp;<label for="namesCheck">hide note names</label>
   <br><br>
   <span id="noteNameDisplay">Find <span id="noteName" style="color: #00AD00; font-weight: bold;"></span> on the keyboard.</span>
   <div id="imageNoteContainer" style="height: 120px; margin-top: 20px; margin-left: 20%;">
     <image style="margin: 0;" id="imageNote">
   </div>
   <div>
-    <p id="octave" style="width: 100%; display: block; font-weight: bold;">octave c4, c#4, Db4 ... B5, Cb6.</p>
+    <p id="octave" style="width: 100%; display: block; font-weight: bold;">fourth octave</p>
     <div class="pianoContainer" id="exercise"></div>
     <div class="flexContainer">
       <button id="check" class="flexItem" style="border: 1px solid maroon;" onclick="show()">check</button>
@@ -41,7 +41,7 @@ abstract: In this tutorial you can practice reading notes in treble and bass cle
 <div id="statistic"></div>
 <div class="smalltext">
   <b>Notes:</b><br>
-  With the <span class="textButton textButtonRed">check button</span> button you can check whether your answer is correct. If there are only green keys your answer is right. Congratulations! The <span class="textButton textButtonBlue">reset button</span> will reset your answer without changing the task so you can correct wrong answers. By clicking the <span class="textButton textButtonGreen">new task button</span> you can create a new task.
+  With the <span class="textButton textButtonRed">check</span> button you can check whether your answer is correct. If there are only green keys your answer is right. Congratulations! The <span class="textButton textButtonBlue">reset</span> button will reset your answer without changing the task so you can correct wrong answers. By clicking the <span class="textButton textButtonGreen">new task</span> button you can create a new task.
 </div>
 
 <script>
