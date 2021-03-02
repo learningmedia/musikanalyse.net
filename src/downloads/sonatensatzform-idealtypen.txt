@@ -1,0 +1,8 @@
+---
+title: Modelle zur Sonatenform
+author: Ulrich Kaiser
+category: gattungen
+abstract: Hier finden Sie Modelle zur Analyse einer klassischen Sonate (z.B. von Haydn, Mozart oder Beethoven).
+thumbnail: /img/thumbnails/ModelleZurSonatenform.png
+link: /downloadfiles/ModelleZurSonatenform.pdf
+---
