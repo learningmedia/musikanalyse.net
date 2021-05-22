@@ -1,10 +1,6 @@
-.Tutorial {
-}
-
 .Tutorial-title {
   margin-bottom: .25em;
 }
-
 .Tutorial-author {
   font-size: 90%;
   margin-bottom: 2.5em;
@@ -163,7 +159,6 @@
     .margin-top-bottom-20;
     line-height: 1.6em;
   }
-
   ul.innerList, ol.innerList {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
@@ -262,6 +257,11 @@
   .exercise {
     display: none;
   }
+  .task {
+    padding: 20px;
+    background-color: rgb(224, 224, 224);
+    border: maroon 1px solid;
+  }
 
   .Tutorial-youtube {
     width: 100%;
@@ -293,6 +293,9 @@
   button.foldable-collapsed {
     padding: 4px;
     color: green;
+  }
+  hr.separator {
+    margin: 48px 0;
   }
   hr.foldable-separator {
     margin-top: 20px;
@@ -340,7 +343,7 @@
     }
   }
 
-  .blockquote::before{
+  .blockquote::before {
     content: "\201C"; /*Unicode for Left Double Quote*/
 
     /*Font*/
@@ -356,7 +359,7 @@
     top:5px;
   }
 
-  .blockquote::after{
+  .blockquote::after {
     /*Reset to make sure*/
     content: "";
   }
