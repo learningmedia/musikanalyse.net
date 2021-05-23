@@ -15,11 +15,31 @@ category: doNotShow
     align-items: flex-start;
     padding-top: 32px;
   }
+  .flexRowContainer p {
+    margin-top: 16px; 
+  }
   .mixingAudio {
     margin: 0 16px 0 0 !important;
   }
+  hr {
+    margin: 36px 0;
+  }
 </style>
 
+<div class="flexRowContainer" style="padding-top: 0;">
+  <audio class="mixingAudio" controls>
+    <source src="/content/tutorials/songwriting-mit-schubert-tool/sound/song.mp3" type="audio/mpeg" />
+    <p>Ihr Browser ist veraltete und unterstützt nicht das HTML5 Audio-Element. Das tut mir leid....</p>
+  </audio>
+  <p class="audiotext">Der Schubert-Song (Mix)</p>
+</div>
+
+<hr>
+
+<p>
+  Mit den folgenden Einzelspuren können Sie das Arrangement durchhören lernen. Pegeln Sie hierzu die Gesamtlautstärke herunter und verstärken Sie dann erhöhen Sie dann die Lautstärke der einzelnen Spuren, um die Instrumente im Mix besser nachvollziehen zu können.  
+</p>
+<br><br>
 <div style="display: flex;">
   <button style="margin-right: 10px" id="startStoppButton" onClick="onStartStoppClick();">Start / Stopp</button>       
   <button style="margin-right: 10px" id="resetButton" onClick="onResetClick();">Reset</button>       
@@ -74,16 +94,6 @@ category: doNotShow
     <p>Ihr Browser ist veraltete und unterstützt nicht das HTML5 Audio-Element. Das tut mir leid....</p>
   </audio>
   <p class="audiotext">Drums</p>
-</div>
-<br><br>
-<hr>
-
-<div class="flexRowContainer">
-  <audio style="margin: 0 16px 0 0;" controls>
-    <source src="/content/tutorials/songwriting-mit-schubert-tool/sound/song.mp3" type="audio/mpeg" />
-    <p>Ihr Browser ist veraltete und unterstützt nicht das HTML5 Audio-Element. Das tut mir leid....</p>
-  </audio>
-  <p class="audiotext" style="padding-top: 12px;">Der Schubert-Song (Mix)</p>
 </div>
 
 <script>
