@@ -1,0 +1,99 @@
+---
+title: Songwriting mit Schubert (Mixing-Projekt)
+author: Ulrich Kaiser
+date: 2021-05-18
+modified: 2021-05-18
+layout: tutorial.nunjucks
+category: doNotShow
+---
+
+<div style="margin-top: 40px; display: flex;">
+  <button style="margin-right: 10px" id="startStoppButton" onClick="onStartStoppClick();">Start / Stopp</button>       
+  <button style="margin-right: 10px" id="resetButton" onClick="onResetClick();">Reset</button>       
+  <input style="margin-top: 4px" id="volumeButton" onChange="onVolumeChange();" type="range" step="1" />
+</div>
+
+<div class="flexRowContainer">
+  <audio class="mixingAudio" controls loop mediaGroup="master">
+    <source src="/content/tutorials/songwriting-mit-schubert-tool/sound/melody.mp3" type="audio/mpeg" />
+    <p>Ihr Browser ist veraltete und unterstützt nicht das HTML5 Audio-Element. Das tut mir leid....</p>
+  </audio>
+  <p class="audiotext">Schubert-Melodie</p>
+</div>
+<div class="flexRowContainer">
+  <audio class="mixingAudio" controls loop mediaGroup="master">
+    <source src="/content/tutorials/songwriting-mit-schubert-tool/sound/leadGuitar.mp3" type="audio/mpeg" />
+    <p>Ihr Browser ist veraltete und unterstützt nicht das HTML5 Audio-Element. Das tut mir leid....</p>
+  </audio>
+  <p class="audiotext">Lead-Guitar</p>
+</div>
+<div class="flexRowContainer">
+  <audio class="mixingAudio" controls loop mediaGroup="master">
+    <source src="/content/tutorials/songwriting-mit-schubert-tool/sound/rhythmGuitar.mp3" type="audio/mpeg" />
+    <p>Ihr Browser ist veraltete und unterstützt nicht das HTML5 Audio-Element. Das tut mir leid....</p>
+  </audio>
+  <p class="audiotext">Rhythm-Guitar</p>
+</div>
+<div class="flexRowContainer">
+  <audio class="mixingAudio" controls loop mediaGroup="master">
+    <source src="/content/tutorials/songwriting-mit-schubert-tool/sound/strummedGuitar.mp3" type="audio/mpeg" />
+    <p>Ihr Browser ist veraltete und unterstützt nicht das HTML5 Audio-Element. Das tut mir leid....</p>
+  </audio>
+  <p class="audiotext">Strummed-Guitar</p>
+</div>
+<div class="flexRowContainer">
+  <audio class="mixingAudio" controls loop mediaGroup="master">
+    <source src="/content/tutorials/songwriting-mit-schubert-tool/sound/strings.mp3" type="audio/mpeg" />
+    <p>Ihr Browser ist veraltete und unterstützt nicht das HTML5 Audio-Element. Das tut mir leid....</p>
+  </audio>
+  <p class="audiotext">Strings</p>
+</div>
+<div class="flexRowContainer">
+  <audio class="mixingAudio" controls loop mediaGroup="master">
+    <source src="/content/tutorials/songwriting-mit-schubert-tool/sound/bass.mp3" type="audio/mpeg" />
+    <p>Ihr Browser ist veraltete und unterstützt nicht das HTML5 Audio-Element. Das tut mir leid....</p>
+  </audio>
+  <p class="audiotext">E-Bass</p>
+</div>
+<div class="flexRowContainer">
+  <audio class="mixingAudio" controls loop mediaGroup="master">
+    <source src="/content/tutorials/songwriting-mit-schubert-tool/sound/drums.mp3" type="audio/mpeg" />
+    <p>Ihr Browser ist veraltete und unterstützt nicht das HTML5 Audio-Element. Das tut mir leid....</p>
+  </audio>
+  <p class="audiotext">Drums</p>
+</div>
+
+<hr>
+
+<div class="flexRowContainer">
+  <audio style="margin: 0 16px 0 0;" controls>
+    <source src="/content/tutorials/songwriting-mit-schubert-tool/sound/song.mp3" type="audio/mpeg" />
+    <p>Ihr Browser ist veraltete und unterstützt nicht das HTML5 Audio-Element. Das tut mir leid....</p>
+  </audio>
+  <p class="audiotext" style="padding-top: 12px;">Der Schubert-Song (Mix)</p>
+</div>
+
+<script>
+  const audios = document.getElementsByClassName('mixingAudio');
+  function onStartStoppClick() {
+    for (var i = 0; i < audios.length; i++) {
+      if (audios[i].paused) {
+        audios[i].play();
+      }
+      else {
+        audios[i].pause();
+      }
+    }
+  }
+  function onResetClick() {
+    for (var i = 0; i < audios.length; i++) {
+      audios[i].currentTime = 0;
+    }
+  }
+  function onVolumeChange() {
+    const vb = document.getElementById('volumeButton');
+    for (var i = 0; i < audios.length; i++) {
+      audios[i].volume = vb.value / 100;
+    }
+  }
+</script>
