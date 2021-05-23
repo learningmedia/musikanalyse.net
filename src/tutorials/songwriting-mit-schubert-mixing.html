@@ -3,11 +3,24 @@ title: Songwriting mit Schubert (Mixing-Projekt)
 author: Ulrich Kaiser
 date: 2021-05-18
 modified: 2021-05-18
-layout: tutorial.nunjucks
+layout: blank.nunjucks
 category: doNotShow
 ---
 
-<div style="margin-top: 40px; display: flex;">
+<style>
+  .flexRowContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: flex-start;
+    padding-top: 32px;
+  }
+  .mixingAudio {
+    margin: 0 16px 0 0 !important;
+  }
+</style>
+
+<div style="display: flex;">
   <button style="margin-right: 10px" id="startStoppButton" onClick="onStartStoppClick();">Start / Stopp</button>       
   <button style="margin-right: 10px" id="resetButton" onClick="onResetClick();">Reset</button>       
   <input style="margin-top: 4px" id="volumeButton" onChange="onVolumeChange();" type="range" step="1" />
@@ -62,7 +75,7 @@ category: doNotShow
   </audio>
   <p class="audiotext">Drums</p>
 </div>
-
+<br><br>
 <hr>
 
 <div class="flexRowContainer">
