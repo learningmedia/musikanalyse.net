@@ -10,6 +10,9 @@
 <div class="line">
   <div class="s-12 m-12 center margin-m-bottom-30">
     <article class="Tutorial">
+      {% if linkheader %}
+      <div class="linkheader">{{ linkheader | safe }}</div>
+      {% endif %}
       <h1 class="Tutorial-title" id="tutorialTitle">{{ title }}</h1>
       <p class="Tutorial-author">von {{ author }}</p>
       {{ contents | safe }}
