@@ -1,3 +1,17 @@
 RewriteEngine On
+
+# Spezifische Weiterleitung (funktioniert bei dir nur mit führendem Slash)
+RewriteRule /tutorials/akkorde-mit-drei-toenen/?$ https://openmusic.academy/docs/tXrRi9Am1sS7Ydvu8bfTLe/ [R=301,L]
+RewriteRule /tutorials/analyse-bohlen-bizet/?$ https://openmusic.academy/docs/nuNYFouvWiEh4QsSr9pUFZ/ [R=301,L]
+RewriteRule /tutorials/analyse-ein-prominentes-harmoniemodell/?$ https://openmusic.academy/docs/5Fp4yWd2utSz8RVfX68z1d/ [R=301,L]
+RewriteRule /tutorials/analyse-rainbow-crying-in-the-rain/?$ https://openmusic.academy/docs/mrArxaHb65eBNR2dZDhaEP/ [R=301,L]
+RewriteRule /tutorials/analyse-schubert-zwerg/?$ https://openmusic.academy/search?query=Zwerg [R=301,L]
+RewriteRule /tutorials/analysemethoden-pop-rock/?$ https://openmusic.academy/docs/DEbQsbeXoXk2DiRXzC2jfK/ [R=301,L]
+RewriteRule /tutorials/analysemethoden/?$ https://openmusic.academy/docs/DEbQsbeXoXk2DiRXzC2jfK/ [R=301,L]
+RewriteRule /tutorials/aria-di-fiorenza/?$ https://openmusic.academy/docs/89LBR33w9AfQdRUtJ5tFwb/ [R=301,L]
+RewriteRule /tutorials/beispiele-pop-rock/?$ https://openmusic.academy/docs/SJQ9zuqxZx9VKG3r5phEzo/ [R=301,L]
+RewriteRule /tutorials/cadentia-duriuscula/?$ https://openmusic.academy/docs/1J1NDi374pxLWc6m7fCUVm/ [R=301,L]
+
+# Allgemeine HTTPS-Weiterleitung
 RewriteCond %{SERVER_PORT} !=443
 RewriteRule ^(.*)$ https://musikanalyse.net$1 [R=301,L]
