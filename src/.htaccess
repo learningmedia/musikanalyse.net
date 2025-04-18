@@ -12,6 +12,20 @@ RewriteRule /tutorials/aria-di-fiorenza/?$ https://openmusic.academy/docs/89LBR3
 RewriteRule /tutorials/beispiele-pop-rock/?$ https://openmusic.academy/docs/SJQ9zuqxZx9VKG3r5phEzo/ [R=301,L]
 RewriteRule /tutorials/cadentia-duriuscula/?$ https://openmusic.academy/docs/1J1NDi374pxLWc6m7fCUVm/ [R=301,L]
 RewriteRule /tutorials/choralsatz-standardkadenzen/?$ https://openmusic.academy/docs/dCcgdBzmfB9Y11vGk5yb2K/ [R=301,L]
+RewriteRule /tutorials/choralsatz/?$ https://openmusic.academy/docs/sqQHQLBg3GKKuSwafSC8TJ/ [R=301,L]
+RewriteRule /tutorials/didaktik-musikhoeren-und-erwartung/?$ https://openmusic.academy/docs/i1YqyFYEVB4QBja7CEU3Qa/ [R=301,L]
+RewriteRule /tutorials/film-sample-library-cc0/?$ https://openmusic.academy/docs/5ovavZVW7cbzH7UvMtHz6b/ [R=301,L]
+RewriteRule /tutorials/formanalyse-am-beispiel-sonate/?$ https://openmusic.academy/search?query=formanalyse+sonate&tags=&type=document&text=&sorting=relevance&direction=desc&page=1&pageSize=10 [R=301,L]
+RewriteRule /tutorials/formanalyse-nach-h-chr-koch/?$ https://openmusic.academy/docs/bi4FnWGqhnu5U1S5eVnrH2/ [R=301,L]
+RewriteRule /tutorials/formfunktion-bridge/?$ https://openmusic.academy/docs/4X88w91K23fWJQwiSg3EL5/ [R=301,L]
+RewriteRule /tutorials/formfunktionen/?$ https://openmusic.academy/docs/tNi1HzFwYZUj8WEDGb9pqF/ [R=301,L]
+RewriteRule /tutorials/fortspinnungstypus/?$ https://openmusic.academy/docs/w1abvt9AMsSA1CVsQ86YXS/ [R=301,L]
+RewriteRule /tutorials/fuge-1/?$ https://openmusic.academy/docs/taE4TEQEAN5Htv2RdMrz9y/ [R=301,L]
+RewriteRule /tutorials/fuge-2/?$ https://openmusic.academy/docs/bBjbeWeRnw4tY4WBuSBfHW/ [R=301,L]
+RewriteRule /tutorials/fuge-3/?$ https://openmusic.academy/docs/gGrreqTKxQieQE2yozsdjf/ [R=301,L]
+RewriteRule /tutorials/fuge-4/?$ https://openmusic.academy/docs/iP3TUrqCSPK3e4ytqquLgr/ [R=301,L]
+RewriteRule /tutorials/fuge-5/?$ https://openmusic.academy/docs/4YAHSxMrTBSsKj6hhAYDns/ [R=301,L]
+RewriteRule /tutorials/funktion-und-sequenz/?$ https://openmusic.academy/docs/XD96NsZbNiLnpgk2TMKGtJ/ [R=301,L]
 
 # Allgemeine HTTPS-Weiterleitung
 RewriteCond %{SERVER_PORT} !=443
