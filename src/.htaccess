@@ -25,7 +25,12 @@ RewriteRule /tutorials/fuge-2/?$ https://openmusic.academy/docs/bBjbeWeRnw4tY4WB
 RewriteRule /tutorials/fuge-3/?$ https://openmusic.academy/docs/gGrreqTKxQieQE2yozsdjf/ [R=301,L]
 RewriteRule /tutorials/fuge-4/?$ https://openmusic.academy/docs/iP3TUrqCSPK3e4ytqquLgr/ [R=301,L]
 RewriteRule /tutorials/fuge-5/?$ https://openmusic.academy/docs/4YAHSxMrTBSsKj6hhAYDns/ [R=301,L]
+RewriteRule /tutorials/fuggir-la-cadenza/?$ https://openmusic.academy/docs/yMzaS2N5oy3u2xtCrB2PJT/ [R=301,L]
 RewriteRule /tutorials/funktion-und-sequenz/?$ https://openmusic.academy/docs/XD96NsZbNiLnpgk2TMKGtJ/ [R=301,L]
+RewriteRule /tutorials/i-x-v-i-schema/?$ https://openmusic.academy/docs/dMZYrRbvn9M89EQZJBh9jY/ [R=301,L]
+RewriteRule /tutorials/intervalle-bestimmen/?$ https://openmusic.academy/docs/pcgL954xmcp3nH3iMXmQ6D/ [R=301,L]
+RewriteRule /tutorials/intervalle/?$ https://openmusic.academy/docs/pcgL954xmcp3nH3iMXmQ6D/ [R=301,L]
+RewriteRule /tutorials/invention/?$ https://openmusic.academy/docs/w9NWKDfZPgMbVh5YUnPbk1/ [R=301,L]
 
 # Allgemeine HTTPS-Weiterleitung
 RewriteCond %{SERVER_PORT} !=443
