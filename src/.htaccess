@@ -33,6 +33,12 @@ RewriteRule /tutorials/intervalle/?$ https://openmusic.academy/docs/pcgL954xmcp3
 RewriteRule /tutorials/invention/?$ https://openmusic.academy/docs/w9NWKDfZPgMbVh5YUnPbk1/ [R=301,L]
 RewriteRule /tutorials/impro-kontrapunk-16jh/?$ https://openmusic.academy/docs/yUfdjkszEmoacvMzVyt62j/ [R=301,L]
 RewriteRule /tutorials/kadenz-als-Formmodell/?$ https://openmusic.academy/docs/nZC4Xw41AidnUVt7i15BVa/ [R=301,L]
+RewriteRule /tutorials/kadenz-kanon/?$ https://openmusic.academy/docs/nCYyrDBFMVZgAFqTB6izRT/ [R=301,L]
+RewriteRule /tutorials/kadenz-signalakkorde/?$ https://openmusic.academy/docs/oTDnEi5CWDmQrLT1vsYCAo/ [R=301,L]
+RewriteRule /tutorials/kadenz/?$ https://openmusic.academy/search?query=Kadenz+Schlusswendung&tags=&type=document&text=&sorting=relevance&direction=desc&page=1&pageSize=10 [R=301,L]
+RewriteRule /tutorials/kadenzspiel-stilistisch/?$ https://openmusic.academy/docs/3WALvKgtGPXqYYe1ouAMU1/ [R=301,L]
+RewriteRule /tutorials/kanonstrukturen/?$ https://openmusic.academy/docs/7nNYLdkpwLSi7i44qhBpqE/ [R=301,L]
+
 
 # Allgemeine HTTPS-Weiterleitung
 RewriteCond %{SERVER_PORT} !=443
