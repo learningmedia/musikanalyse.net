@@ -38,7 +38,17 @@ RewriteRule /tutorials/kadenz-signalakkorde/?$ https://openmusic.academy/docs/oT
 RewriteRule /tutorials/kadenz/?$ https://openmusic.academy/search?query=Kadenz+Schlusswendung&tags=&type=document&text=&sorting=relevance&direction=desc&page=1&pageSize=10 [R=301,L]
 RewriteRule /tutorials/kadenzspiel-stilistisch/?$ https://openmusic.academy/docs/3WALvKgtGPXqYYe1ouAMU1/ [R=301,L]
 RewriteRule /tutorials/kanonstrukturen/?$ https://openmusic.academy/docs/7nNYLdkpwLSi7i44qhBpqE/ [R=301,L]
+RewriteRule /tutorials/kanonstrukturen/?$ https://openmusic.academy/docs/7nNYLdkpwLSi7i44qhBpqE/ [R=301,L]
+RewriteRule /tutorials/kontrapunkt-einfuehrung/?$ https://openmusic.academy/search?query=Kontrapunkt [R=301,L]
+RewriteRule /tutorials/kontrapunkt-formale-gestaltung/?$ https://openmusic.academy/docs/AcJNeGTdm9F1gmU6ppMBvG/ [R=301,L]
+RewriteRule /tutorials/kontrapunkt-harmonielehre/?$ https://openmusic.academy/docs/qQ1oYUbXM8hLeiB23ZPVgG/ [R=301,L]
+# RewriteRule /tutorials/kontrapunkt-manieristisch/?$ https://openmusic.academy/docs/uURMfvbKUZFTtFiWNW5v5z/ [R=301,L]
+RewriteRule /tutorials/kontrapunkt-mehrstimmig/?$ https://openmusic.academy/docs/P1YtxJETXuPxiD4HMZUvuZ/ [R=301,L]
+RewriteRule /tutorials/kontrapunkt-synkopendissonanz/?$ https://openmusic.academy/docs/3xK9QwbiyGiqDoY5tyTCX/ [R=301,L]
+RewriteRule /tutorials/kontrapunkt-zweistimmig/?$ https://openmusic.academy/docs/fiEKifpS4phaDoaW8JszQN/ [R=301,L]
 
+RewriteRule /tutorials/hermeneutik-funktionaleanalyse/?$ https://openmusic.academy/docs/26FzDbZUGqUwoNbZUGLEWH/ [R=301,L]
+RewriteRule /tutorials/theorie-und-methode/?$ https://openmusic.academy/docs/nN4EhUhgmJbVjWxmLWTkQa/ [R=301,L]
 
 # Allgemeine HTTPS-Weiterleitung
 RewriteCond %{SERVER_PORT} !=443
