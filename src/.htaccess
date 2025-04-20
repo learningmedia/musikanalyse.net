@@ -27,10 +27,12 @@ RewriteRule /tutorials/fuge-4/?$ https://openmusic.academy/docs/iP3TUrqCSPK3e4yt
 RewriteRule /tutorials/fuge-5/?$ https://openmusic.academy/docs/4YAHSxMrTBSsKj6hhAYDns/ [R=301,L]
 RewriteRule /tutorials/fuggir-la-cadenza/?$ https://openmusic.academy/docs/yMzaS2N5oy3u2xtCrB2PJT/ [R=301,L]
 RewriteRule /tutorials/funktion-und-sequenz/?$ https://openmusic.academy/docs/XD96NsZbNiLnpgk2TMKGtJ/ [R=301,L]
-RewriteRule /tutorials/i-x-v-i-schema/?$ https://openmusic.academy/docs/dMZYrRbvn9M89EQZJBh9jY/ [R=301,L]
+RewriteRule /tutorials/i-x-v-i-schema/?$ https://openmusic.academy/docs/dzxpXwBRznE9gUPmPiVcRP/ [R=301,L]
 RewriteRule /tutorials/intervalle-bestimmen/?$ https://openmusic.academy/docs/pcgL954xmcp3nH3iMXmQ6D/ [R=301,L]
 RewriteRule /tutorials/intervalle/?$ https://openmusic.academy/docs/pcgL954xmcp3nH3iMXmQ6D/ [R=301,L]
 RewriteRule /tutorials/invention/?$ https://openmusic.academy/docs/w9NWKDfZPgMbVh5YUnPbk1/ [R=301,L]
+RewriteRule /tutorials/impro-kontrapunk-16jh/?$ https://openmusic.academy/docs/yUfdjkszEmoacvMzVyt62j/ [R=301,L]
+RewriteRule /tutorials/kadenz-als-Formmodell/?$ https://openmusic.academy/docs/nZC4Xw41AidnUVt7i15BVa/ [R=301,L]
 
 # Allgemeine HTTPS-Weiterleitung
 RewriteCond %{SERVER_PORT} !=443
