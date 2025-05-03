@@ -33,8 +33,8 @@ RewriteRule /tutorials/fuge-4/?$ https://openmusic.academy/docs/iP3TUrqCSPK3e4yt
 RewriteRule /tutorials/fuge-5/?$ https://openmusic.academy/docs/4YAHSxMrTBSsKj6hhAYDns/ [R=301,L]
 RewriteRule /tutorials/fuggir-la-cadenza/?$ https://openmusic.academy/docs/yMzaS2N5oy3u2xtCrB2PJT/ [R=301,L]
 RewriteRule /tutorials/funktion-und-sequenz/?$ https://openmusic.academy/docs/XD96NsZbNiLnpgk2TMKGtJ/ [R=301,L]
-# Funktionstheorie
-# Funktionstheorie T5
+RewriteRule /tutorials/funktionstheorie-t/?$ https://openmusic.academy/docs/DEbQsbeXoXk2DiRXzC2jfK/einfuehrung-methoden-der-musikalischen-analyse#die-funktionstheorie [R=301,L]
+RewriteRule /tutorials/funktionstheorie-t5/?$ https://openmusic.academy/docs/DEbQsbeXoXk2DiRXzC2jfK/einfuehrung-methoden-der-musikalischen-analyse#die-funktionstheorie [R=301,L]
 # Generalbass
 RewriteRule /tutorials/hermeneutik-funktionaleanalyse/?$ https://openmusic.academy/docs/26FzDbZUGqUwoNbZUGLEWH/ [R=301,L]
 RewriteRule /tutorials/i-x-v-i-schema/?$ https://openmusic.academy/docs/dzxpXwBRznE9gUPmPiVcRP/ [R=301,L]
@@ -90,9 +90,65 @@ RewriteRule /tutorials/popdidaktik-parallelismus/?$ https://openmusic.academy/do
 # popformel-literatur
 RewriteRule /tutorials/popformeln/?$ https://openmusic.academy/docs/5vYHdWJBcPpKdv2n83J1jf/ [R=301,L]
 RewriteRule /tutorials/prime-und-oktave/?$ https://openmusic.academy/docs/qhJrybuvVq4THcdwCnUYoo/ [R=301,L]
-
-
+RewriteRule /tutorials/quarte/?$ https://openmusic.academy/docs/nxic86Gr5sJVGJc2ue1wGL/ [R=301,L]
+RewriteRule /tutorials/quinte/?$ https://openmusic.academy/docs/kTx6ASHwL2v3kK5Y5z8NX1/ [R=301,L]
+RewriteRule /tutorials/quintenturm-und-mozart/?$ https://openmusic.academy/docs/x6MpCZRnV5F9pWzVMgpWYc/ [R=301,L]
+RewriteRule /tutorials/quintenzirkel/?$ https://openmusic.academy/docs/vcL1iZJnLGANWiCCWWWCis/ [R=301,L]
+RewriteRule /tutorials/quintfallsequenz-mit-synkopenkette/?$ https://openmusic.academy/docs/nKhQz1wswvjALNzXmNFVjb/ [R=301,L]
+RewriteRule /tutorials/quintfallsequenz/?$ https://openmusic.academy/docs/63cHjt3BAhGnNxzJGrTsN1/ [R=301,L]
+RewriteRule /tutorials/regola/?$ https://openmusic.academy/docs/ntfpjBGtw5ef4tjqXPCjKH/ [R=301,L]
+RewriteRule /tutorials/rondo/?$ https://openmusic.academy/docs/eBXrnvZ3CpghZQonmN66Ru/ [R=301,L]
+RewriteRule /tutorials/satzmodell-impro/?$ https://openmusic.academy/docs/yUfdjkszEmoacvMzVyt62j/ [R=301,L]
+RewriteRule /tutorials/satzmodelle/?$ https://openmusic.academy/docs/wRssGRrNehQQ6UvK3SHzUd/ [R=301,L]
+RewriteRule /tutorials/satztechnik-und-bedeutung-1/?$ https://openmusic.academy/search?query=winterreise [R=301,L]
+RewriteRule /tutorials/sekunden/?$ https://openmusic.academy/docs/hsBfE8gxSAfVQeGgAGGAX4/ [R=301,L]
+RewriteRule /tutorials/septakkorde/?$ https://openmusic.academy/search?query=septakkorde [R=301,L]
+RewriteRule /tutorials/septimen/?$ https://openmusic.academy/docs/fPnFsmxeFhvp9LD8ri5GpM/ [R=301,L]
+RewriteRule /tutorials/sexten/?$ https://openmusic.academy/docs/qjE8uRfGqvm5Cuue6oBUPs/ [R=301,L]
+RewriteRule /tutorials/sinfonische-welle/?$ https://openmusic.academy/docs/DEbQsbeXoXk2DiRXzC2jfK/einfuehrung-methoden-der-musikalischen-analyse#die-sinfonische-welle [R=301,L]
+RewriteRule /tutorials/sexten/?$ https://openmusic.academy/docs/qjE8uRfGqvm5Cuue6oBUPs/ [R=301,L]
+RewriteRule /tutorials/sinfonische-welle/?$ https://openmusic.academy/docs/DEbQsbeXoXk2DiRXzC2jfK/einfuehrung-methoden-der-musikalischen-analyse#die-sinfonische-welle [R=301,L]
+RewriteRule /tutorials/sixte-ajoutee/?$ https://openmusic.academy/docs/jPb3RJrQ2w4vHCLdGgu3Vx/ [R=301,L]
+# sonate-durchfuehrung
+# sonate-reprise
+RewriteRule /tutorials/sonate-stiluebung-1/?$ https://openmusic.academy/docs/4EBjvWEufifccdAvMAsSdP/ [R=301,L]
+RewriteRule /tutorials/sonate-stiluebung-2/?$ https://openmusic.academy/docs/4EBjvWEufifccdAvMAsSdP/ [R=301,L]
+RewriteRule /tutorials/sonate-stiluebung-3/?$ https://openmusic.academy/docs/4EBjvWEufifccdAvMAsSdP/ [R=301,L]
+RewriteRule /tutorials/sonate-stiluebung-4/?$ https://openmusic.academy/docs/4EBjvWEufifccdAvMAsSdP/ [R=301,L]
+RewriteRule /tutorials/sonate-stiluebung-5/?$ https://openmusic.academy/docs/4EBjvWEufifccdAvMAsSdP/ [R=301,L]
+RewriteRule /tutorials/sonate-ueberleitung-recherche/?$ https://openmusic.academy/docs/RZzDBYin6xbCy2PBevQ21q/ [R=301,L]
+# sonate-ueberleitung
+RewriteRule /tutorials/songwriting-1-drums/?$ https://openmusic.academy/docs/NqLXD6BYkvsxyJzdxHmbb5/ [R=301,L]
+RewriteRule /tutorials/songwriting-2-drums/?$ https://openmusic.academy/docs/NqLXD6BYkvsxyJzdxHmbb5/ [R=301,L]
+RewriteRule /tutorials/songwriting-3-drums/?$ https://openmusic.academy/docs/NqLXD6BYkvsxyJzdxHmbb5/ [R=301,L]
+RewriteRule /tutorials/songwriting-4-drums/?$ https://openmusic.academy/docs/NqLXD6BYkvsxyJzdxHmbb5/ [R=301,L]
+RewriteRule /tutorials/songwriting-5-drums/?$ https://openmusic.academy/docs/NqLXD6BYkvsxyJzdxHmbb5/ [R=301,L]
+RewriteRule /tutorials/songwriting-6-drums/?$ https://openmusic.academy/docs/NqLXD6BYkvsxyJzdxHmbb5/ [R=301,L]
+RewriteRule /tutorials/songwriting-7-drums/?$ https://openmusic.academy/docs/NqLXD6BYkvsxyJzdxHmbb5/ [R=301,L]
+RewriteRule /tutorials/songwriting-mit-beethoven-mixing/?$ https://openmusic.academy/docs/pScmHNXsj71SEx4VzUZD7V/ [R=301,L]
+RewriteRule /tutorials/songwriting-mit-beethoven/?$ https://openmusic.academy/docs/pScmHNXsj71SEx4VzUZD7V/ [R=301,L]
+RewriteRule /tutorials/songwriting-mit-schubert-mixing/?$ https://openmusic.academy/docs/tHgh7byqr46nFkTHjjnNn2/ [R=301,L]
+RewriteRule /tutorials/songwriting-mit-schubert/?$ https://openmusic.academy/docs/tHgh7byqr46nFkTHjjnNn2/ [R=301,L]
+RewriteRule /tutorials/srdc/?$ https://openmusic.academy/docs/sM3zivZ7MDf79SgU36Ckko/ [R=301,L]
+RewriteRule /tutorials/stimmungen/?$ https://openmusic.academy/docs/w6vHBG1vKvdQT23SjT8FVd/ [R=301,L]
+RewriteRule /tutorials/terzen/?$ https://openmusic.academy/docs/ifcvQKi1uqYodQPj8bo76u/ [R=301,L]
 RewriteRule /tutorials/theorie-und-methode/?$ https://openmusic.academy/docs/nN4EhUhgmJbVjWxmLWTkQa/ [R=301,L]
+RewriteRule /tutorials/theorie-und-praxis/?$ https://openmusic.academy/docs/nMtywpmi1PuGpyUtwXDA3x/ [R=301,L]
+# tonleitern-bestimmen-tool
+RewriteRule /tutorials/tonleitern/?$ https://openmusic.academy/docs/msP3AYzpXZRQ4si4Gs45Xr/ [R=301,L]
+RewriteRule /tutorials/tonsystem/?$ https://openmusic.academy/docs/nSGgqfJvphH5Y4ZHMSzfkj/ [R=301,L]
+RewriteRule /tutorials/topos/?$ https://openmusic.academy/docs/26FzDbZUGqUwoNbZUGLEWH/begriffe-zur-musikalischen-analyse#topos [R=301,L]
+RewriteRule /tutorials/tosca/?$ https://openmusic.academy/docs/7v83x52grFvTuTp6T8MjGY/ [R=301,L]
+RewriteRule /tutorials/tritonus/?$ https://openmusic.academy/docs/mDCkjepG3D61cX4FNBQxts/ [R=301,L]
+RewriteRule /tutorials/uebermaessiger56-akkord/?$ https://openmusic.academy/docs/x3ZtbzyLGrXvXAidJM8b9m/ [R=301,L]
+RewriteRule /tutorials/urheberrecht-frankfurter-fischer/?$ https://elmu.online/docs/ceH8pkD4QxotfpbCwnsKPi/ [R=301,L]
+RewriteRule /tutorials/vagierende-akkorde/?$ https://openmusic.academy/docs/5h6yeJH3xWLRf462vcnxpQ/ [R=301,L]
+RewriteRule /tutorials/verminderte-septakkord/?$ https://openmusic.academy/docs/oT1VY58KrfWC8fH2Zy9FS6/ [R=301,L]
+RewriteRule /tutorials/wiederholung-variante-kontrast/?$ https://openmusic.academy/docs/rebhjf4MLq7yjeoCnYfn7E/ [R=301,L]
+RewriteRule /tutorials/zirkelmodelle-omnibus-petrarca/?$ https://openmusic.academy/docs/vnXE9WjegtAZrGMdtMx4Yh/ [R=301,L]
+RewriteRule /tutorials/zirkelmodelle-wegweiser/?$ https://openmusic.academy/docs/o4GKsjbXs6UDD9vqmLPSLf/ [R=301,L]
+RewriteRule /tutorials/zur-stiluebung/?$ https://openmusic.academy/docs/R4cKXuaK9GxX17g2Q5L7dA/ [R=301,L]
+
 
 # Allgemeine HTTPS-Weiterleitung
 RewriteCond %{SERVER_PORT} !=443
