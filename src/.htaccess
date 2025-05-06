@@ -18,7 +18,7 @@ RewriteRule /tutorials/choralsatz-standardkadenzen/?$ https://openmusic.academy/
 RewriteRule /tutorials/choralsatz/?$ https://openmusic.academy/docs/sqQHQLBg3GKKuSwafSC8TJ/ [R=301,L]
 RewriteRule /tutorials/didaktik-musikhoeren-und-erwartung/?$ https://openmusic.academy/docs/i1YqyFYEVB4QBja7CEU3Qa/ [R=301,L]
 RewriteRule /tutorials/didaktik-musikhoeren-und-erwartung/?$ https://openmusic.academy/docs/in4gtdRDi53yUxucgqHmgs/ [R=301,L]
-RewriteRule /tutorials/erwin-ratz/?$ https://openmusic.academy/docs/5ovavZVW7cbzH7UvMtHz6b/ [R=301,L]
+RewriteRule /tutorials/erwin-ratz/?$ https://openmusic.academy/docs/in4gtdRDi53yUxucgqHmgs/ [R=301,L]
 # Film Terminologie
 # Form durch Kadenzen (OpenBook Formenlehre)
 RewriteRule /tutorials/formanalyse-am-beispiel-sonate/?$ https://openmusic.academy/search?query=formanalyse+sonate&tags=&type=document&text=&sorting=relevance&direction=desc&page=1&pageSize=10 [R=301,L]
