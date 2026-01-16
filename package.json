@@ -27,7 +27,7 @@
     "metalsmith-permalinks": "~2.2.0",
     "metalsmith-static": "~0.0.5",
     "moment": "~2.28.0",
-    "nunjucks": "~3.2.2"
+    "nunjucks": "~3.2.4"
   },
   "dependencies": {
     "jquery.klavier": "~1.1.1",
