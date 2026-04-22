@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>musikanalyse.net – Tutorials für Musiktheorie und Analyse</title>
+  <meta name="description" content="Archiv der Tutorials von musikanalyse.net. Alle Inhalte sind zur Open Music Academy (openmusic.academy) migriert worden.">
+  <style>
+    :root {
+      --dark:    #002633;
+      --red:     #510C02;
+      --teal:    #00506E;
+      --teal-lt: #006d96;
+      --bg:      #f8f7f4;
+      --surface: #ffffff;
+      --border:  #dedad3;
+      --text:    #1a1510;
+      --muted:   #6b6560;
+
+      /* Category colors — harmonized with the site palette */
+      --c-grundlagen:    #00506E;
+      --c-satzmodelle:   #005f85;
+      --c-form:          #1a6b50;
+      --c-stiluebungen:  #7a5400;
+      --c-analysen:      #7a1a0e;
+      --c-methoden:      #00384d;
+      --c-terminologie:  #445566;
+      --c-improvisation: #6e2040;
+      --c-didaktik:      #2e5c20;
+      --c-popularmusik:  #7a3500;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    /* ── HEADER ────────────────────────────────── */
+    header {
+      background: var(--dark);
+      color: #fff;
+    }
+    .header-top {
+      padding: 40px 24px 32px;
+      text-align: center;
+      position: relative;
+    }
+    .header-top::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg,
+        var(--red) 0%, var(--red) 33%,
+        #7a8c00 33%, #7a8c00 66%,
+        var(--teal) 66%, var(--teal) 100%
+      );
+      opacity: .5;
+    }
+    .site-title {
+      font-size: clamp(1.9rem, 5vw, 3.2rem);
+      font-weight: 800;
+      letter-spacing: -.02em;
+      line-height: 1.05;
+    }
+    .site-title span { color: #5bb8dc; }
+    .archive-note {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 5px 14px;
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 20px;
+      font-size: .78rem;
+      color: rgba(255,255,255,.7);
+      letter-spacing: .03em;
+    }
+    .archive-note a { color: #5bb8dc; text-decoration: none; }
+    .archive-note a:hover { text-decoration: underline; }
+
+    /* ── IMAGE TRIPTYCH ─────────────────────────── */
+    .image-strip {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      height: 200px;
+      overflow: hidden;
+    }
+    .image-strip figure {
+      position: relative;
+      overflow: hidden;
+    }
+    .image-strip figure + figure {
+      border-left: 1px solid rgba(255,255,255,.1);
+    }
+    .image-strip figure::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 38, 51, .45);
+      transition: background .3s;
+    }
+    .image-strip figure:hover::after {
+      background: rgba(0, 38, 51, .2);
+    }
+    .image-strip img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      display: block;
+      transition: transform .6s ease;
+    }
+    .image-strip figure:hover img {
+      transform: scale(1.03);
+    }
+
+    /* ── MAIN ───────────────────────────────────── */
+    .page-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+
+    /* ── INTRO ──────────────────────────────────── */
+    .intro {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--teal);
+      border-radius: 4px;
+      padding: 14px 18px;
+      margin-bottom: 26px;
+      font-size: .88rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .intro strong { color: var(--text); }
+    .intro a { color: var(--teal-lt); text-decoration: none; }
+    .intro a:hover { text-decoration: underline; }
+
+    /* ── SEARCH ─────────────────────────────────── */
+    .search-bar {
+      position: relative;
+      margin-bottom: 26px;
+    }
+    .search-bar input {
+      width: 100%;
+      padding: 10px 16px 10px 42px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--surface);
+      font-size: .95rem;
+      color: var(--text);
+      transition: border-color .15s, box-shadow .15s;
+    }
+    .search-bar input:focus {
+      outline: none;
+      border-color: var(--teal);
+      box-shadow: 0 0 0 3px rgba(0,80,110,.12);
+    }
+    .search-bar svg {
+      position: absolute;
+      left: 13px; top: 50%;
+      transform: translateY(-50%);
+      color: var(--muted);
+      pointer-events: none;
+    }
+    .search-count {
+      font-size: .78rem;
+      color: var(--muted);
+      margin-top: 6px;
+      min-height: 1.1em;
+    }
+
+    /* ── CATEGORY NAV ───────────────────────────── */
+    .cat-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 34px;
+    }
+    .cat-nav a {
+      padding: 4px 11px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-size: .76rem;
+      font-weight: 600;
+      border: 1.5px solid currentColor;
+      opacity: .7;
+      transition: opacity .15s, transform .1s, background .15s;
+    }
+    .cat-nav a:hover {
+      opacity: 1;
+      background: currentColor;
+      transform: translateY(-1px);
+    }
+    .cat-nav a:hover span { color: #fff; }
+    .cat-nav a span { transition: color .15s; }
+
+    /* ── CATEGORY SECTIONS ──────────────────────── */
+    .cat-section { margin-bottom: 38px; }
+    .cat-section.hidden { display: none; }
+
+    .cat-heading {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid currentColor;
+    }
+    .cat-heading h2 {
+      font-size: .9rem;
+      font-weight: 700;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+    .cat-count {
+      font-size: .72rem;
+      font-weight: 600;
+      opacity: .6;
+    }
+
+    /* ── TUTORIAL GRID ──────────────────────────── */
+    .tutorial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 6px;
+    }
+    .tutorial-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      transition: border-color .15s, box-shadow .15s, transform .1s;
+    }
+    .tutorial-item.hidden { display: none; }
+    .tutorial-item:hover {
+      border-color: currentColor;
+      box-shadow: 0 2px 6px rgba(0,0,0,.07);
+      transform: translateY(-1px);
+    }
+    .tutorial-item a {
+      display: block;
+      padding: 9px 13px;
+      text-decoration: none;
+      color: var(--text);
+      font-size: .86rem;
+      line-height: 1.4;
+    }
+    .tutorial-item:hover a {
+      color: currentColor;
+    }
+
+    /* ── NO RESULTS ─────────────────────────────── */
+    .no-results {
+      display: none;
+      text-align: center;
+      padding: 48px 0;
+      color: var(--muted);
+    }
+
+    /* ── FOOTER ─────────────────────────────────── */
+    footer {
+      background: var(--dark);
+      color: rgba(255,255,255,.55);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: .8rem;
+      line-height: 1.8;
+    }
+    footer strong { color: rgba(255,255,255,.85); }
+    footer a { color: #5bb8dc; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    /* ── RESPONSIVE ─────────────────────────────── */
+    @media (max-width: 600px) {
+      .header-top { padding: 28px 16px 24px; }
+      .image-strip { height: 130px; }
+      .page-wrap { padding: 20px 14px 48px; }
+      .tutorial-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 400px) {
+      .image-strip { display: none; }
+    }
+
+    /* ── DARK MODE ──────────────────────────────── */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg:      #081318;
+        --surface: #0d1f28;
+        --border:  #1a3040;
+        --text:    #ddd8d0;
+        --muted:   #7a9aaa;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-top">
+    <div class="site-title">musikanalyse<span>.net</span></div>
+    <div class="archive-note">
+      Archiv &mdash; Alle Inhalte jetzt auf
+      <a href="https://openmusic.academy" target="_blank" rel="noopener">openmusic.academy</a>
+    </div>
+  </div>
+  <div class="image-strip">
+    <figure><img src="img/01-boxed.jpg" alt="Notenmanuskript Präludium"></figure>
+    <figure><img src="img/02-boxed.jpg" alt="E-Gitarre mit Notenblatt"></figure>
+    <figure><img src="img/03-boxed.jpg" alt="Historisches Tasteninstrument – Von den Tonarten"></figure>
+  </div>
+</header>
+
+<div class="page-wrap">
+
+  <div class="intro">
+    <strong>Diese Seite ist ein Archiv.</strong>
+    musikanalyse.net war <a href="https://www.gmth.de/zeitschrift/artikel/1218.aspx" target="_blank" rel="noopener">die führende deutschsprachige Adresse für Musiktheorie und Analyse im Internet</a>.
+    Alle Tutorials wurden zur <a href="https://openmusic.academy" target="_blank" rel="noopener">Open Music Academy</a> migriert —
+    ein Klick auf einen Titel leitet Sie automatisch dorthin weiter.
+  </div>
+
+  <div class="search-bar">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+    </svg>
+    <input type="text" id="search" placeholder="Tutorial suchen …" autocomplete="off" spellcheck="false">
+    <div class="search-count" id="search-count"></div>
+  </div>
+
+  <nav class="cat-nav" aria-label="Kategorien">
+    <a href="#grundlagen"    style="color:var(--c-grundlagen)"><span>Grundlagen</span></a>
+    <a href="#satzmodelle"   style="color:var(--c-satzmodelle)"><span>Satzmodelle</span></a>
+    <a href="#form"          style="color:var(--c-form)"><span>Form</span></a>
+    <a href="#stiluebungen"  style="color:var(--c-stiluebungen)"><span>Stilübungen (Tonsatz)</span></a>
+    <a href="#analysen"      style="color:var(--c-analysen)"><span>Analysen</span></a>
+    <a href="#methoden"      style="color:var(--c-methoden)"><span>Methoden</span></a>
+    <a href="#terminologie"  style="color:var(--c-terminologie)"><span>Terminologie</span></a>
+    <a href="#improvisation" style="color:var(--c-improvisation)"><span>Improvisation</span></a>
+    <a href="#didaktik"      style="color:var(--c-didaktik)"><span>Didaktik</span></a>
+    <a href="#popularmusik"  style="color:var(--c-popularmusik)"><span>Popularmusik &amp; Geschichte</span></a>
+  </nav>
+
+  <div id="no-results" class="no-results">Kein Tutorial gefunden.</div>
+
+  <!-- ─────── GRUNDLAGEN ─────── -->
+  <section class="cat-section" id="grundlagen" style="color:var(--c-grundlagen)">
+    <div class="cat-heading">
+      <h2>Grundlagen</h2>
+      <span class="cat-count" id="cnt-grundlagen"></span>
+    </div>
+    <div class="tutorial-grid">
+      <div class="tutorial-item"><a href="/tutorials/akkorde-mit-drei-toenen/">Akkorde mit drei Tönen (Dreiklänge)</a></div>
+      <div class="tutorial-item"><a href="/tutorials/intervalle/">Die Größe und Qualität der Intervalle</a></div>
+      <div class="tutorial-item"><a href="/tutorials/intervalle-bestimmen/">Intervalle bestimmen</a></div>
+      <div class="tutorial-item"><a href="/tutorials/prime-und-oktave/">Die Prime und die Oktave</a></div>
+      <div class="tutorial-item"><a href="/tutorials/sekunden/">Sekunden</a></div>
+      <div class="tutorial-item"><a href="/tutorials/terzen/">Terzen</a></div>
+      <div class="tutorial-item"><a href="/tutorials/quarte/">Die Quarte</a></div>
+      <div class="tutorial-item"><a href="/tutorials/quinte/">Die Quinte</a></div>
+      <div class="tutorial-item"><a href="/tutorials/sexten/">Sexten</a></div>
+      <div class="tutorial-item"><a href="/tutorials/septimen/">Septimen</a></div>
+      <div class="tutorial-item"><a href="/tutorials/tritonus/">Übermäßige Quarte (Tritonus) und verminderte Quinte</a></div>
+      <div class="tutorial-item"><a href="/tutorials/tonsystem/">Das abendländische Tonsystem</a></div>
+      <div class="tutorial-item"><a href="/tutorials/tonleitern/">Tonleitern und Skalen</a></div>
+      <div class="tutorial-item"><a href="/tutorials/quintenzirkel/">Der Quintenzirkel und verwandte Vorstellungen</a></div>
+      <div class="tutorial-item"><a href="/tutorials/quintenturm-und-mozart/">Kann man mit dem Quintenzirkel Mozart verstehen?</a></div>
+      <div class="tutorial-item"><a href="/tutorials/noten-lesen-lernen/">Noten lesen lernen</a></div>
+      <div class="tutorial-item"><a href="/tutorials/kadenz/">Die Kadenz (als Schlusswendung)</a></div>
+      <div class="tutorial-item"><a href="/tutorials/kadenz-signalakkorde/">Signalakkorde der Kadenz</a></div>
+      <div class="tutorial-item"><a href="/tutorials/kadenzspiel-stilistisch/">Kadenzen üben (stilistisch)</a></div>
+      <div class="tutorial-item"><a href="/tutorials/septakkorde/">Septakkorde (diatonisch) und ihre Auflösungen</a></div>
+      <div class="tutorial-item"><a href="/tutorials/neapolitaner/">Der Neapolitaner</a></div>
+      <div class="tutorial-item"><a href="/tutorials/uebermaessiger56-akkord/">Der übermäßige Quintsextakkord</a></div>
+      <div class="tutorial-item"><a href="/tutorials/sixte-ajoutee/">Dominanten und die Sixte ajoutée</a></div>
+      <div class="tutorial-item"><a href="/tutorials/vagierende-akkorde/">Vagierende und symmetrische Akkorde</a></div>
+      <div class="tutorial-item"><a href="/tutorials/verminderte-septakkord/">Der verminderte Septklang bzw. Septakkord</a></div>
+      <div class="tutorial-item"><a href="/tutorials/funktionstheorie-t/">Die Tonika mit Grundton im Bass</a></div>
+      <div class="tutorial-item"><a href="/tutorials/funktionstheorie-t5/">Die Tonika mit Quinte im Bass und der Vorhalts-Quartsextakkord</a></div>
+      <div class="tutorial-item"><a href="/tutorials/kontrapunkt-einfuehrung/">Kontrapunkt 1 (16. Jahrhundert) – Eine Einführung</a></div>
+      <div class="tutorial-item"><a href="/tutorials/kontrapunkt-zweistimmig/">Kontrapunkt 3 (16. Jahrhundert) – Zum zweistimmigen Kontrapunkt</a></div>
+      <div class="tutorial-item"><a href="/tutorials/kontrapunkt-synkopendissonanz/">Kontrapunkt 2 (17. Jahrhundert) – Synkopendissonanz</a></div>
+      <div class="tutorial-item"><a href="/tutorials/stimmungen/">Intonation und historische Stimmungen</a></div>
+    </div>
+  </section>
+
+  <!-- ─────── SATZMODELLE ─────── -->
+  <section class="cat-section" id="satzmodelle" style="color:var(--c-satzmodelle)">
+    <div class="cat-heading">
+      <h2>Satzmodelle</h2>
+      <span class="cat-count" id="cnt-satzmodelle"></span>
+    </div>
+    <div class="tutorial-grid">
+      <div class="tutorial-item"><a href="/tutorials/satzmodelle/">Satzmodelle (Sequenzen)</a></div>
+      <div class="tutorial-item"><a href="/tutorials/regola/">Die Oktavregel (Regola dell'ottava)</a></div>
+      <div class="tutorial-item"><a href="/tutorials/quintfallsequenz/">Die Quintfallsequenz in der Zweistimmigkeit</a></div>
+      <div class="tutorial-item"><a href="/tutorials/quintfallsequenz-mit-synkopenkette/">Die Quintfallsequenz mit Synkopenkette</a></div>
+      <div class="tutorial-item"><a href="/tutorials/monte-fonte-ponte/">Monte – Fonte – Ponte</a></div>
+      <div class="tutorial-item"><a href="/tutorials/i-x-v-i-schema/">Das I-x-V-I-Modell</a></div>
+      <div class="tutorial-item"><a href="/tutorials/parallelismus/">Der Parallelismus (Pachelbel-Modell)</a></div>
+      <div class="tutorial-item"><a href="/tutorials/aria-di-fiorenza/">L'Aria di Fiorenza</a></div>
+      <div class="tutorial-item"><a href="/tutorials/lamentobass/">Der Lamentobass</a></div>
+      <div class="tutorial-item"><a href="/tutorials/cadentia-duriuscula/">Cadentia duriuscula</a></div>
+      <div class="tutorial-item"><a href="/tutorials/phrygische-wendung/">Die phrygische Wendung (Fragetopos)</a></div>
+      <div class="tutorial-item"><a href="/tutorials/motivo-di-cadenza/">Motivo di Cadenza (Unterquintmodulation)</a></div>
+      <div class="tutorial-item"><a href="/tutorials/oberquintmodulation/">Die Oberquintmodulation</a></div>
+      <div class="tutorial-item"><a href="/tutorials/zirkelmodelle-wegweiser/">Zirkelmodelle (1) – Das Wegweiser-Modell</a></div>
+      <div class="tutorial-item"><a href="/tutorials/zirkelmodelle-omnibus-petrarca/">Zirkelmodelle (2) – Modell ohne Namen (Omnibus)</a></div>
+    </div>
+  </section>
+
+  <!-- ─────── FORM ─────── -->
+  <section class="cat-section" id="form" style="color:var(--c-form)">
+    <div class="cat-heading">
+      <h2>Form</h2>
+      <span class="cat-count" id="cnt-form"></span>
+    </div>
+    <div class="tutorial-grid">
+      <div class="tutorial-item"><a href="/tutorials/wiederholung-variante-kontrast/">Formenlehre I – Wiederholung, Variante, Kontrast</a></div>
+      <div class="tutorial-item"><a href="/tutorials/periode-und-satz/">Formenlehre IV – Periode und Satz</a></div>
+      <div class="tutorial-item"><a href="/tutorials/lautstaerkemodelle-zur-sinfonie/">Formenlehre V – Lautstärkemodelle zur Sinfonie</a></div>
+      <div class="tutorial-item"><a href="/tutorials/beispiele-pop-rock/">Formenlehre VI – Beispiele der Pop- und Rockmusik</a></div>
+      <div class="tutorial-item"><a href="/tutorials/formfunktionen/">Was ist eine Formfunktion?</a></div>
+      <div class="tutorial-item"><a href="/tutorials/formfunktion-bridge/">Die Formfunktion Bridge</a></div>
+      <div class="tutorial-item"><a href="/tutorials/fortspinnungstypus/">Der Fortspinnungstypus</a></div>
+      <div class="tutorial-item"><a href="/tutorials/kadenz-als-Formmodell/">Die Kadenz (als Formmodell)</a></div>
+      <div class="tutorial-item"><a href="/tutorials/rondo/">Rondo</a></div>
+      <div class="tutorial-item"><a href="/tutorials/srdc/">Das SRDC-Schema</a></div>
+      <div class="tutorial-item"><a href="/tutorials/popformeln/">Formbegriffe der Pop- und Rockmusik</a></div>
+      <div class="tutorial-item"><a href="/tutorials/formanalyse-am-beispiel-sonate/">Einführung in die Formanalyse (am Beispiel Sonate)</a></div>
+      <div class="tutorial-item"><a href="/tutorials/formanalyse-nach-h-chr-koch/">Kadenzgliederung nach H. Chr. Koch als Methode der Formanalyse</a></div>
+      <div class="tutorial-item"><a href="/tutorials/erwin-ratz/">Erwin Ratz und die funktionelle Formenlehre</a></div>
+    </div>
+  </section>
+
+  <!-- ─────── STILÜBUNGEN ─────── -->
+  <section class="cat-section" id="stiluebungen" style="color:var(--c-stiluebungen)">
+    <div class="cat-heading">
+      <h2>Stilübungen (Tonsatz)</h2>
+      <span class="cat-count" id="cnt-stiluebungen"></span>
+    </div>
+    <div class="tutorial-grid">
+      <div class="tutorial-item"><a href="/tutorials/zur-stiluebung/">Stilübungen – Allgemeine Überlegungen</a></div>
+      <div class="tutorial-item"><a href="/tutorials/liedsatz-choralsatz-kantionalsatz/">Liedsatz, Choralsatz und Kantionalsatz</a></div>
+      <div class="tutorial-item"><a href="/tutorials/choralsatz-standardkadenzen/">Choralsatz 1 – Kadenzen schreiben</a></div>
+      <div class="tutorial-item"><a href="/tutorials/choralsatz/">Choralsatz 2 – Arbeitsschritte zur vierstimmigen Ausarbeitung</a></div>
+      <div class="tutorial-item"><a href="/tutorials/invention/">Invention – Stilübung und Analyse</a></div>
+      <div class="tutorial-item"><a href="/tutorials/kontrapunkt-mehrstimmig/">Kontrapunkt 4 (16. Jahrhundert) – Zum mehrstimmigen Kontrapunkt</a></div>
+      <div class="tutorial-item"><a href="/tutorials/fuggir-la-cadenza/">Kontrapunkt 5 (16. Jahrhundert) – Fuggir la cadenza</a></div>
+      <div class="tutorial-item"><a href="/tutorials/kontrapunkt-formale-gestaltung/">Kontrapunkt 7 (16. Jahrhundert) – Zur formalen Gestaltung</a></div>
+      <div class="tutorial-item"><a href="/tutorials/kanonstrukturen/">Kanonmodelle als Struktur</a></div>
+      <div class="tutorial-item"><a href="/tutorials/passacaglia-1/">Passacaglia 1 – Grundlagen</a></div>
+      <div class="tutorial-item"><a href="/tutorials/passacaglia-2/">Passacaglia 2 – Formale Gestaltungen</a></div>
+      <div class="tutorial-item"><a href="/tutorials/fuge-1/">Fuge 1 – Themenbeantwortungen</a></div>
+      <div class="tutorial-item"><a href="/tutorials/fuge-2/">Fuge 2 – Schreiben einer Exposition</a></div>
+      <div class="tutorial-item"><a href="/tutorials/fuge-3/">Fuge 3 – Zwischenspiele und formale Gestaltung</a></div>
+      <div class="tutorial-item"><a href="/tutorials/fuge-4/">Fuge 4 – Schlussgestaltungen</a></div>
+      <div class="tutorial-item"><a href="/tutorials/fuge-5/">Fuge 5 – Zusammenfassung der Arbeitsschritte</a></div>
+      <div class="tutorial-item"><a href="/tutorials/sonate-stiluebung-1/">Sonate 1 – Ausarbeitung von Hauptsatz und Überleitung</a></div>
+      <div class="tutorial-item"><a href="/tutorials/sonate-stiluebung-2/">Sonate 2 – Ausarbeitung von Seitensatz und Schlussgruppe</a></div>
+      <div class="tutorial-item"><a href="/tutorials/sonate-stiluebung-3/">Sonate 3 – Gestaltung einer Durchführung</a></div>
+      <div class="tutorial-item"><a href="/tutorials/sonate-stiluebung-4/">Sonate 4 – Ausarbeitung einer Reprise</a></div>
+      <div class="tutorial-item"><a href="/tutorials/sonate-stiluebung-5/">Sonate 5 – Zusammenfassung und Musterlösung</a></div>
+      <div class="tutorial-item"><a href="/tutorials/songwriting-1-drums/">Songwriting 1 – Die Drums</a></div>
+      <div class="tutorial-item"><a href="/tutorials/songwriting-mit-beethoven/">Songwriting mit Beethoven – Eine Anleitung</a></div>
+      <div class="tutorial-item"><a href="/tutorials/songwriting-mit-schubert/">Songwriting mit Schubert – Eine Anleitung</a></div>
+    </div>
+  </section>
+
+  <!-- ─────── ANALYSEN ─────── -->
+  <section class="cat-section" id="analysen" style="color:var(--c-analysen)">
+    <div class="cat-heading">
+      <h2>Analysen</h2>
+      <span class="cat-count" id="cnt-analysen"></span>
+    </div>
+    <div class="tutorial-grid">
+      <div class="tutorial-item"><a href="/tutorials/analyse-bohlen-bizet/">»Mein Herz« von Dieter Bohlen</a></div>
+      <div class="tutorial-item"><a href="/tutorials/analyse-rainbow-crying-in-the-rain/">»Crying in the Rain« (Whitesnake)</a></div>
+      <div class="tutorial-item"><a href="/tutorials/analyse-schubert-zwerg/">»Der Zwerg« von Franz Schubert</a></div>
+      <div class="tutorial-item"><a href="/tutorials/analyse-ein-prominentes-harmoniemodell/">Universale Harmoniemodelle abendländischer Tonalität</a></div>
+      <div class="tutorial-item"><a href="/tutorials/satztechnik-und-bedeutung-1/">Schuberts »Winterreise« – Satztechnik und Bedeutung (1)</a></div>
+      <div class="tutorial-item"><a href="/tutorials/tosca/">Tosca – Eine Einführung</a></div>
+      <div class="tutorial-item"><a href="/tutorials/kontrapunktische-modelle-zur-anlayse-tonaler-musik/">Kontrapunktische Modelle zur Analyse tonaler Musik</a></div>
+      <div class="tutorial-item"><a href="/tutorials/musikalischer-witz-bei-haydn/">Musikalischer Witz bei J. Haydn</a></div>
+    </div>
+  </section>
+
+  <!-- ─────── METHODEN ─────── -->
+  <section class="cat-section" id="methoden" style="color:var(--c-methoden)">
+    <div class="cat-heading">
+      <h2>Methoden</h2>
+      <span class="cat-count" id="cnt-methoden"></span>
+    </div>
+    <div class="tutorial-grid">
+      <div class="tutorial-item"><a href="/tutorials/methoden-der-musikalischen-analyse/">Zu Methoden der musikalischen Analyse</a></div>
+      <div class="tutorial-item"><a href="/tutorials/analysemethoden/">Analysemethoden – Ein Überblick</a></div>
+      <div class="tutorial-item"><a href="/tutorials/analysemethoden-pop-rock/">Analysemethoden (Pop/Rock) – Ein Überblick</a></div>
+      <div class="tutorial-item"><a href="/tutorials/sinfonische-welle/">Die »sinfonische Welle« als Methode der Analyse</a></div>
+      <div class="tutorial-item"><a href="/tutorials/methode-heinrich-schenkers-grafische-analyse/">Schenker reloaded – Graphische Analysen nach H. Schenker</a></div>
+      <div class="tutorial-item"><a href="/tutorials/funktion-und-sequenz/">Sequenzen und die Funktionstheorie</a></div>
+      <div class="tutorial-item"><a href="/tutorials/pc-set-analysis/">Zur Pc Set Analyse (Best Practice)</a></div>
+    </div>
+  </section>
+
+  <!-- ─────── TERMINOLOGIE ─────── -->
+  <section class="cat-section" id="terminologie" style="color:var(--c-terminologie)">
+    <div class="cat-heading">
+      <h2>Terminologie</h2>
+      <span class="cat-count" id="cnt-terminologie"></span>
+    </div>
+    <div class="tutorial-grid">
+      <div class="tutorial-item"><a href="/tutorials/modulation/">Was ist eine Modulation?</a></div>
+      <div class="tutorial-item"><a href="/tutorials/modus/">Alte Tonarten (Modi)</a></div>
+      <div class="tutorial-item"><a href="/tutorials/topos/">Was ist ein Topos?</a></div>
+      <div class="tutorial-item"><a href="/tutorials/manierismus-in-der-musik/">Manierismus in der Musik</a></div>
+      <div class="tutorial-item"><a href="/tutorials/hermeneutik-funktionaleanalyse/">Modell, Idealtypus, Hermeneutik und die Funktionale Analyse</a></div>
+      <div class="tutorial-item"><a href="/tutorials/kontrapunkt-harmonielehre/">Kontrapunkt und Harmonielehre</a></div>
+      <div class="tutorial-item"><a href="/tutorials/theorie-und-methode/">Theorie und Methode</a></div>
+      <div class="tutorial-item"><a href="/tutorials/theorie-und-praxis/">Theorie &amp; Praxis</a></div>
+      <div class="tutorial-item"><a href="/tutorials/sonate-ueberleitung-recherche/">Die Überleitung (Recherche)</a></div>
+    </div>
+  </section>
+
+  <!-- ─────── IMPROVISATION ─────── -->
+  <section class="cat-section" id="improvisation" style="color:var(--c-improvisation)">
+    <div class="cat-heading">
+      <h2>Improvisation</h2>
+      <span class="cat-count" id="cnt-improvisation"></span>
+    </div>
+    <div class="tutorial-grid">
+      <div class="tutorial-item"><a href="/tutorials/impro-kontrapunk-16jh/">Kontrapunkt 6 (16. Jahrhundert) – Improvisation zwei- und dreistimmiger Sätze</a></div>
+      <div class="tutorial-item"><a href="/tutorials/menuette-improvisieren/">Menuette improvisieren</a></div>
+      <div class="tutorial-item"><a href="/tutorials/satzmodell-impro/">Satzmodelle – Improvisieren kleinerer Formen</a></div>
+    </div>
+  </section>
+
+  <!-- ─────── DIDAKTIK ─────── -->
+  <section class="cat-section" id="didaktik" style="color:var(--c-didaktik)">
+    <div class="cat-heading">
+      <h2>Didaktik</h2>
+      <span class="cat-count" id="cnt-didaktik"></span>
+    </div>
+    <div class="tutorial-grid">
+      <div class="tutorial-item"><a href="/tutorials/didaktik-musikhoeren-und-erwartung/">Musikhören und Erwartung – Ein Modell zur Didaktik</a></div>
+      <div class="tutorial-item"><a href="/tutorials/kadenz-kanon/">Die Kadenz (als Kanon)</a></div>
+      <div class="tutorial-item"><a href="/tutorials/popdidaktik-parallelismus/">Didaktik der Popmusik am Beispiel des Parallelismus</a></div>
+      <div class="tutorial-item"><a href="/tutorials/urheberrecht-frankfurter-fischer/">Urheberrecht – Fischer ./. Frankfurter</a></div>
+    </div>
+  </section>
+
+  <!-- ─────── POPULARMUSIK & GESCHICHTE ─────── -->
+  <section class="cat-section" id="popularmusik" style="color:var(--c-popularmusik)">
+    <div class="cat-heading">
+      <h2>Popularmusik &amp; Geschichte</h2>
+      <span class="cat-count" id="cnt-popularmusik"></span>
+    </div>
+    <div class="tutorial-grid">
+      <div class="tutorial-item"><a href="/tutorials/pop-drums/">Das Schlagzeug</a></div>
+    </div>
+  </section>
+
+</div><!-- /page-wrap -->
+
+<footer>
+  <p>musikanalyse.net war eine Initiative von <strong>Ulrich Kaiser</strong>.</p>
+  <p>Alle Tutorials sind jetzt frei verfügbar auf
+    <a href="https://openmusic.academy" target="_blank" rel="noopener">openmusic.academy</a>.
+  </p>
+</footer>
+
+<script>
+  // Fill tutorial counts
+  document.querySelectorAll('.cat-section').forEach(sec => {
+    const cnt = document.getElementById('cnt-' + sec.id);
+    if (cnt) cnt.textContent = sec.querySelectorAll('.tutorial-item').length + ' Tutorials';
+  });
+
+  // Search
+  const input    = document.getElementById('search');
+  const countEl  = document.getElementById('search-count');
+  const noRes    = document.getElementById('no-results');
+  const allItems = document.querySelectorAll('.tutorial-item');
+  const allSecs  = document.querySelectorAll('.cat-section');
+
+  input.addEventListener('input', () => {
+    const q = input.value.toLowerCase().trim();
+    let n = 0;
+    allItems.forEach(item => {
+      const show = !q || item.textContent.toLowerCase().includes(q);
+      item.classList.toggle('hidden', !show);
+      if (show) n++;
+    });
+    allSecs.forEach(sec => {
+      sec.classList.toggle('hidden',
+        !Array.from(sec.querySelectorAll('.tutorial-item')).some(i => !i.classList.contains('hidden'))
+      );
+    });
+    if (q) {
+      countEl.textContent = n + (n === 1 ? ' Tutorial gefunden' : ' Tutorials gefunden');
+      noRes.style.display = n === 0 ? 'block' : 'none';
+    } else {
+      countEl.textContent = '';
+      noRes.style.display = 'none';
+    }
+  });
+</script>
+</body>
+</html>

@@ -1,5 +1,0 @@
-{% extends "base.nunjucks" %}
-
-{% block beforeContent %}
-{% include "partials/tutorials.nunjucks" %}
-{% endblock %}

@@ -1,8 +1,0 @@
----
-title: Periode und Satz
-author: Ulrich Kaiser
-category: form
-abstract: Erklärungen zu den Formbegriffen ›Periode‹ und ›Satz‹.
-thumbnail: /img/thumbnails/periode-satz.jpg
-link: /downloadfiles/periode-satz.pdf
----

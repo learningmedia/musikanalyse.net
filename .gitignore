@@ -7,3 +7,4 @@ assets/*.wav
 .vscode/
 *.mp4
 .mscbackup/*
+_status/

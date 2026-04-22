@@ -1,8 +1,0 @@
----
-title: Materialien zur Sonate
-author: Ulrich Kaiser
-category: gattungen
-abstract: Hier finden Sie Materialien zum Schreiben einer klassischen Sonate (Stilübungen zum Thema Haydn oder Mozart).
-thumbnail: /img/thumbnails/sonate.jpg
-link: /downloadfiles/sonate.pdf
----
